@@ -519,7 +519,7 @@ character_event = {
             is_capital = no
             location = {
                 NOT = { culture_group = cat_group }
-                num_of_empty_holdings = 1
+                # num_of_empty_holdings = 1
             }
         }
     }
@@ -560,28 +560,14 @@ character_event = {
         }
 
         FROMFROM = {
-            location = {
-                create_character = {
-                    fertility = 1.5
-                    female = no
-                    religion = FROM
-                    culture = FROM
-                    dynasty = none
+            
+            #hidden_tooltip = {
+                holder_scope = { culture = ROOT_FROM }
+                add_holding_modifier = {
+                    name = cat_controlled_holding
+                    years = 10
                 }
-                location = {
-                    show_scope_change = no
-                    build_holding = {
-                        type = tribal
-                        holder = new_character
-                    }
-                }
-                hidden_tooltip = {
-                    new_character = { set_defacto_liege = FROM }
-                    location = {
-                        cat_new_holding_created_by_cats_effect = yes
-                    }
-                }
-            }
+            #}
         }
     }
 }

@@ -1259,6 +1259,6 @@ cat_new_holding_created_by_cats_effect = {
         add_holding_modifier = {
             name = cat_controlled_holding
             years = 10
-        }       
+        }
     }
 }
