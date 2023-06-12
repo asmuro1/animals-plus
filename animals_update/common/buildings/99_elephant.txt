@@ -3,7 +3,7 @@
 hospital = {
 
     ho_eleph_reprod_lab = {
-        desc = ho_eleph_reprod_lab_desc
+       desc = ho_eleph_reprod_lab_desc
 
         potential = {
             has_dlc = "Reapers"
@@ -215,7 +215,7 @@ castle = {
             culture_group = elephant_group
             # has_building = ca_ani_castle_tower_1
         }
-        prerequisites = { ca_ani_castle_tower_1 }
+        prerequisites = { ca_ani_castle_tower_01 }
         # upgrades_from = BaseBuilding
 
         gold_cost = 90
@@ -238,9 +238,9 @@ castle = {
         }
         is_active_trigger = {
             culture_group = elephant_group
-            # has_building = ca_ani_castle_tower_2
+            # has_building = ca_ani_castle_tower_03
         }
-        prerequisites = { ca_ani_castle_tower_2 }
+        prerequisites = { ca_ani_castle_tower_03 }
         upgrades_from = ca_eleph_recruit_1
 
         gold_cost = 180
@@ -263,9 +263,9 @@ castle = {
         }
         is_active_trigger = {
             culture_group = elephant_group
-            # has_building = ca_ani_castle_tower_5_bis
+            # has_building = ca_ani_castle_tower_10
         }
-        prerequisites = { ca_ani_castle_tower_5_bis }
+        prerequisites = { ca_ani_castle_tower_10 }
         upgrades_from = ca_eleph_recruit_1
 
         gold_cost = 270
@@ -288,9 +288,9 @@ castle = {
         }
         is_active_trigger = {
             culture_group = elephant_group
-            # has_building = ca_ani_castle_tower_7
+            # has_building = ca_ani_castle_tower_13
         }
-        prerequisites = { ca_ani_castle_tower_7 }
+        prerequisites = { ca_ani_castle_tower_13 }
         upgrades_from = ca_eleph_recruit_3
 
         gold_cost = 360
@@ -315,7 +315,7 @@ castle = {
             culture_group = elephant_group
             # has_building = ca_ani_castle_tower_1
         }
-        prerequisites = { ca_ani_castle_tower_1 }
+        prerequisites = { ca_ani_castle_tower_01 }
         # upgrades_from = BaseBuilding
 
         gold_cost = 110
@@ -338,9 +338,9 @@ castle = {
         }
         is_active_trigger = {
             culture_group = elephant_group
-            # has_building = ca_ani_castle_tower_3
+            # has_building = ca_ani_castle_tower_05
         }
-        prerequisites = { ca_ani_castle_tower_3 }
+        prerequisites = { ca_ani_castle_tower_05 }
         upgrades_from = ca_eleph_human_merc_1
 
         gold_cost = 220
@@ -363,9 +363,9 @@ castle = {
         }
         is_active_trigger = {
             culture_group = elephant_group
-            # has_building = ca_ani_castle_tower_4
+            # has_building = ca_ani_castle_tower_07
         }
-        prerequisites = { ca_ani_castle_tower_4 }
+        prerequisites = { ca_ani_castle_tower_07 }
         upgrades_from = ca_eleph_human_merc_2
 
         gold_cost = 330
@@ -388,9 +388,9 @@ castle = {
         }
         is_active_trigger = {
             culture_group = elephant_group
-            # has_building = ca_ani_castle_tower_6
+            # has_building = ca_ani_castle_tower_11
         }
-        prerequisites = { ca_ani_castle_tower_6 }
+        prerequisites = { ca_ani_castle_tower_11 }
         upgrades_from = ca_eleph_human_merc_3
 
         gold_cost = 440
@@ -413,9 +413,9 @@ castle = {
         }
         is_active_trigger = {
             culture_group = elephant_group
-            # has_building = ca_ani_castle_tower_8
+            # has_building = ca_ani_castle_tower_15
         }
-        prerequisites = { ca_ani_castle_tower_8 }
+        prerequisites = { ca_ani_castle_tower_15 }
         upgrades_from = ca_eleph_human_merc_4
 
         gold_cost = 600
@@ -440,9 +440,9 @@ castle = {
         }
         is_active_trigger = {
             culture_group = elephant_group
-            # has_building = ca_ani_castle_tower_1_bis
+            # has_building = ca_ani_castle_tower_02
         }
-        prerequisites = { ca_ani_castle_tower_1_bis }
+        prerequisites = { ca_ani_castle_tower_02 }
         # upgrades_from = BaseBuilding
 
         gold_cost = 130
@@ -466,9 +466,9 @@ castle = {
         }
         is_active_trigger = {
             culture_group = elephant_group
-            # has_building = ca_ani_castle_tower_3_bis
+            # has_building = ca_ani_castle_tower_06
         }
-        prerequisites = { ca_ani_castle_tower_3_bis }
+        prerequisites = { ca_ani_castle_tower_06 }
         upgrades_from = ca_eleph_stables_1
 
         gold_cost = 360
@@ -492,9 +492,9 @@ castle = {
         }
         is_active_trigger = {
             culture_group = elephant_group
-            # has_building = ca_ani_castle_tower_6_bis
+            # has_building = ca_ani_castle_tower_12
         }
-        prerequisites = { ca_ani_castle_tower_6_bis }
+        prerequisites = { ca_ani_castle_tower_12 }
         upgrades_from = ca_eleph_stables_2
 
         gold_cost = 550
@@ -519,9 +519,9 @@ castle = {
         }
         is_active_trigger = {
             culture_group = elephant_group
-            # has_building = ca_ani_castle_tower_2_bis
+            # has_building = ca_ani_castle_tower_04
         }
-        prerequisites = { ca_ani_castle_tower_2_bis }
+        prerequisites = { ca_ani_castle_tower_04 }
         # upgrades_from = BaseBuilding
 
         gold_cost = 250
@@ -530,7 +530,7 @@ castle = {
         extra_tech_building_start = 1.0
 
         war_elephants = 20
-        retinuesize = 20
+        retinuesize = 25
         war_elephants_morale = 0.01
     }
     ca_eleph_retinue_2 = {
@@ -546,9 +546,9 @@ castle = {
         }
         is_active_trigger = {
             culture_group = elephant_group
-            # has_building = ca_ani_castle_tower_5
+            # has_building = ca_ani_castle_tower_09
         }
-        prerequisites = { ca_ani_castle_tower_5 }
+        prerequisites = { ca_ani_castle_tower_09 }
         upgrades_from = ca_eleph_retinue_1
 
         gold_cost = 500
@@ -557,7 +557,7 @@ castle = {
         extra_tech_building_start = 1.0
 
         war_elephants = 20
-        retinuesize = 20
+        retinuesize = 25
         war_elephants_morale = 0.01
     }
     ca_eleph_retinue_3 = {
@@ -573,9 +573,9 @@ castle = {
         }
         is_active_trigger = {
             culture_group = elephant_group
-            # has_building = ca_ani_castle_tower_7_bis
+            # has_building = ca_ani_castle_tower_14
         }
-        prerequisites = { ca_ani_castle_tower_7_bis }
+        prerequisites = { ca_ani_castle_tower_14 }
         upgrades_from = ca_eleph_retinue_2
 
         gold_cost = 800
@@ -584,7 +584,7 @@ castle = {
         extra_tech_building_start = 1.0
 
         war_elephants = 20
-        retinuesize = 20
+        retinuesize = 30
         war_elephants_morale = 0.01
     }
 
@@ -602,9 +602,9 @@ castle = {
         }
         is_active_trigger = {
             culture_group = elephant_group
-            # has_building = ca_ani_castle_tower_4_bis
+            # has_building = ca_ani_castle_tower_08
         }
-        prerequisites = { ca_ani_castle_tower_4_bis }
+        prerequisites = { ca_ani_castle_tower_08 }
         # upgrades_from = BaseBuilding
 
         gold_cost = 500
@@ -632,9 +632,9 @@ castle = {
         }
         is_active_trigger = {
             culture_group = elephant_group
-            # has_building = ca_ani_castle_tower_9
+            # has_building = ca_ani_castle_tower_16
         }
-        prerequisites = { ca_ani_castle_tower_9 }
+        prerequisites = { ca_ani_castle_tower_16 }
         upgrades_from = ca_hedge_speciality_01
 
         gold_cost = 1000

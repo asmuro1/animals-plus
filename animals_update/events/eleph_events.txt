@@ -35,8 +35,8 @@ province_event = {
         }
         Eleph_can_live_here_trigger = yes
         has_hospital = yes
-        NOT = { has_province_flag = eleph_herd_in_prov }
         is_capital = yes
+        NOT = { has_province_flag = eleph_herd_in_prov }
         holder_scope = {
             is_adult = yes
             is_incapable = no

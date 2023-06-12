@@ -597,3 +597,9 @@ eleph_climate_control_4 = {
 	local_tax_modifier = -0.5
 	local_revolt_risk = 0.2
 }
+
+cat_controlled_holding = {
+	icon = 46
+	garrison_size = 1.10
+	levy_size = 0.85
+}

@@ -11,9 +11,9 @@ castle = {
         }
         is_active_trigger = {
             culture_group = bear_group
-            has_building = ca_ani_castle_tower_1
+            has_building = ca_ani_castle_tower_01
         }
-        prerequisites = { ca_ani_castle_tower_1 }
+        prerequisites = { ca_ani_castle_tower_01 }
 
         gold_cost = 84
         build_time = 360
@@ -37,9 +37,9 @@ castle = {
         }
         is_active_trigger = {
             culture_group = bear_group
-            has_building = ca_ani_castle_tower_1_bis
+            has_building = ca_ani_castle_tower_02
         }
-        prerequisites = { ca_ani_castle_tower_1_bis }
+        prerequisites = { ca_ani_castle_tower_02 }
         upgrades_from	= ca_bear_regiment_1
 
         gold_cost = 100
@@ -64,9 +64,9 @@ castle = {
         }
         is_active_trigger = {
             culture_group = bear_group
-            has_building = ca_ani_castle_tower_3
+            has_building = ca_ani_castle_tower_05
         }
-        prerequisites = { ca_ani_castle_tower_3 }
+        prerequisites = { ca_ani_castle_tower_05 }
         upgrades_from	= ca_bear_regiment_2
 
         gold_cost = 217
@@ -91,9 +91,9 @@ castle = {
         }
         is_active_trigger = {
             culture_group = bear_group
-            has_building = ca_ani_castle_tower_6
+            has_building = ca_ani_castle_tower_11
         }
-        prerequisites = { ca_ani_castle_tower_6 }
+        prerequisites = { ca_ani_castle_tower_11 }
         upgrades_from	= ca_bear_regiment_2
 
         gold_cost = 570
@@ -118,9 +118,9 @@ castle = {
         }
         is_active_trigger = {
             culture_group = bear_group
-            has_building = ca_ani_castle_tower_1
+            has_building = ca_ani_castle_tower_01
         }
-        prerequisites = { ca_ani_castle_tower_1 }
+        prerequisites = { ca_ani_castle_tower_01 }
 
         gold_cost = 84
         build_time = 360
@@ -143,9 +143,9 @@ castle = {
         }
         is_active_trigger = {
             culture_group = bear_group
-            has_building = ca_ani_castle_tower_2
+            has_building = ca_ani_castle_tower_03
         }
-        prerequisites = { ca_ani_castle_tower_2 }
+        prerequisites = { ca_ani_castle_tower_03 }
         upgrades_from = ca_bear_armor_1
 
         gold_cost = 134
@@ -169,9 +169,9 @@ castle = {
         }
         is_active_trigger = {
             culture_group = bear_group
-            has_building = ca_ani_castle_tower_4
+            has_building = ca_ani_castle_tower_07
         }
-        prerequisites = { ca_ani_castle_tower_4 }
+        prerequisites = { ca_ani_castle_tower_07 }
         upgrades_from = ca_bear_armor_2
 
         gold_cost = 320
@@ -195,9 +195,9 @@ castle = {
         }
         is_active_trigger = {
             culture_group = bear_group
-            has_building = ca_ani_castle_tower_6_bis
+            has_building = ca_ani_castle_tower_12
         }
-        prerequisites = { ca_ani_castle_tower_6_bis }
+        prerequisites = { ca_ani_castle_tower_12 }
         upgrades_from = ca_bear_armor_2
 
         gold_cost = 575
@@ -221,9 +221,9 @@ castle = {
         }
         is_active_trigger = {
             culture_group = bear_group
-            has_building = ca_ani_castle_tower_1
+            has_building = ca_ani_castle_tower_01
         }
-        prerequisites = { ca_ani_castle_tower_1 }
+        prerequisites = { ca_ani_castle_tower_01 }
 
         gold_cost = 84
         build_time = 360
@@ -247,9 +247,9 @@ castle = {
         }
         is_active_trigger = {
             culture_group = bear_group
-            has_building = ca_ani_castle_tower_2_bis
+            has_building = ca_ani_castle_tower_04
         }
-        prerequisites = { ca_ani_castle_tower_2_bis }
+        prerequisites = { ca_ani_castle_tower_04 }
         upgrades_from = ca_bear_weapons_1
 
         gold_cost = 167
@@ -274,9 +274,9 @@ castle = {
         }
         is_active_trigger = {
             culture_group = bear_group
-            has_building = ca_ani_castle_tower_5
+            has_building = ca_ani_castle_tower_09
         }
-        prerequisites = {ca_ani_castle_tower_5}
+        prerequisites = {ca_ani_castle_tower_09}
         upgrades_from = ca_bear_weapons_2
 
         gold_cost = 440
@@ -301,9 +301,9 @@ castle = {
         }
         is_active_trigger = {
             culture_group = bear_group
-            has_building = ca_ani_castle_tower_7_bis
+            has_building = ca_ani_castle_tower_14
         }
-        prerequisites = {ca_ani_castle_tower_7_bis}
+        prerequisites = {ca_ani_castle_tower_14}
         upgrades_from = ca_bear_weapons_3
 
         gold_cost = 814
@@ -329,9 +329,9 @@ castle = {
         }
         is_active_trigger = {
             culture_group = bear_group
-            has_building = ca_ani_castle_tower_2
+            has_building = ca_ani_castle_tower_03
         }
-        prerequisites = { ca_ani_castle_tower_2 }
+        prerequisites = { ca_ani_castle_tower_03 }
 
         gold_cost = 134
         build_time = 365
@@ -340,7 +340,7 @@ castle = {
         extra_tech_building_start = 1.5
 
         heavy_infantry = 20
-        retinuesize = 20
+        retinuesize = 25
         heavy_infantry_morale = 0.025
     }
     ca_bear_retinue_2 = {
@@ -356,9 +356,9 @@ castle = {
         }
         is_active_trigger = {
             culture_group = bear_group
-            has_building = ca_ani_castle_tower_5_bis
+            has_building = ca_ani_castle_tower_10
         }
-        prerequisites = { ca_ani_castle_tower_5_bis }
+        prerequisites = { ca_ani_castle_tower_10 }
         upgrades_from	= ca_bear_retinue_1
 
         gold_cost = 500
@@ -368,7 +368,7 @@ castle = {
         extra_tech_building_start = 1.6
 
         heavy_infantry = 30
-        retinuesize = 30
+        retinuesize = 25
         heavy_infantry_defensive = 0.025
     }
     ca_bear_retinue_3 = {
@@ -384,9 +384,9 @@ castle = {
         }
         is_active_trigger = {
             culture_group = bear_group
-            has_building = ca_ani_castle_tower_8
+            has_building = ca_ani_castle_tower_15
         }
-        prerequisites = { ca_ani_castle_tower_8 }
+        prerequisites = { ca_ani_castle_tower_15 }
         upgrades_from	= ca_bear_retinue_1
 
         gold_cost = 1000
@@ -413,9 +413,9 @@ castle = {
         }
         is_active_trigger = {
             culture_group = bear_group
-            has_building = ca_ani_castle_tower_1_bis
+            has_building = ca_ani_castle_tower_02
         }
-        prerequisites = { ca_ani_castle_tower_1_bis }
+        prerequisites = { ca_ani_castle_tower_02 }
 
         gold_cost = 100
         build_time = 305
@@ -439,9 +439,9 @@ castle = {
         }
         is_active_trigger = {
             culture_group = bear_group
-            has_building = ca_ani_castle_tower_3_bis
+            has_building = ca_ani_castle_tower_06
         }
-        prerequisites = { ca_ani_castle_tower_3_bis }
+        prerequisites = { ca_ani_castle_tower_06 }
         upgrades_from	= ca_bear_stable_1
 
         gold_cost = 267
@@ -468,9 +468,9 @@ castle = {
         }
         is_active_trigger = {
             culture_group = bear_group
-            has_building = ca_ani_castle_tower_7
+            has_building = ca_ani_castle_tower_13
         }
-        prerequisites = { ca_ani_castle_tower_7 }
+        prerequisites = { ca_ani_castle_tower_13 }
         upgrades_from	= ca_bear_stable_2
 
         gold_cost = 770
@@ -499,9 +499,9 @@ castle = {
         is_active_trigger = {
             is_capital = yes
             culture_group = bear_group
-            has_building = ca_ani_castle_tower_4_bis
+            has_building = ca_ani_castle_tower_08
         }
-        prerequisites = { ca_ani_castle_tower_4_bis }
+        prerequisites = { ca_ani_castle_tower_08 }
 
         gold_cost = 370
         build_time = 750
@@ -528,10 +528,10 @@ castle = {
         is_active_trigger = {
             culture_group = bear_group
             is_capital = yes
-            has_building = ca_ani_castle_tower_9
+            has_building = ca_ani_castle_tower_16
         }
-        prerequisites = { ca_ani_castle_tower_9 }
-        upgrades_from	= ca_bear_stable_2
+        prerequisites = { ca_ani_castle_tower_16 }
+        upgrades_from	= ca_bear_speciality_1
 
         gold_cost = 1700
         build_time = 1750

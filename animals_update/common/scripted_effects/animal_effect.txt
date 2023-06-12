@@ -505,7 +505,7 @@ duck_calculate_max_dev_level_effect = {
             value = 1
         }
     }
-    #prosperity modifiers
+        #prosperity modifiers
     if = {
         limit = {
             has_province_modifier = prosperity_modifier_3
@@ -599,6 +599,176 @@ duck_calculate_max_dev_level_effect = {
         change_variable = {
             which = Max_duck_dev_level
             value = 1
+        }
+    }
+}
+#province scope
+duck_calculate_max_potential_dev_level_effect = {
+    set_variable = {
+        which = local_max_dev_potential_level
+        value = 1
+    }
+    #trade_post buildings
+    if = {
+        limit = {
+            trade_post_has_building = tr_duck_level_dev_1
+        }
+        change_variable = {
+            which = local_max_dev_potential_level
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            trade_post_has_building = tr_duck_level_dev_2
+        }
+        change_variable = {
+            which = local_max_dev_potential_level
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            trade_post_has_building = tr_duck_level_dev_3
+        }
+        change_variable = {
+            which = local_max_dev_potential_level
+            value = 1
+        }
+    }
+    #water bonuses
+    if = {
+        limit = {
+            OR = {
+                port = yes
+                borders_lake = yes
+                borders_major_river = yes
+            }
+        }
+        change_variable = {
+            which = local_max_dev_potential_level
+            value = 2
+        }
+    }
+    #all holding slot unlocked
+    if = {
+        limit = {
+            num_of_max_settlements = 7
+        }
+        change_variable = {
+            which = local_max_dev_potential_level
+            value = 1
+        }
+    }
+    #capital
+    if = {
+        limit = {
+            is_capital = yes
+        }
+        change_variable = {
+            which = local_max_dev_potential_level
+            value = 1
+        }
+    }
+    #terrain type
+    if = {
+        limit = {
+            OR = {
+                terrain = desert
+                terrain = mountain
+                terrain = arctic
+            }
+        }
+        subtract_variable = {
+            which = local_max_dev_potential_level
+            value = 2
+        }
+    }
+    if = {
+        limit = {
+            OR = {
+                terrain = mountain
+                terrain = arctic
+                terrain = plains
+                terrain = farmlands
+                terrain = inland_ocean
+                terrain = ocean
+                terrain = coastal_desert
+            }
+        }
+        change_variable = {
+            which = local_max_dev_potential_level
+            value = 1
+        }
+    }
+    #holder scope trigger
+    if = {
+        limit = {
+            holder_scope = { war = yes }
+        }
+        subtract_variable = {
+            which = local_max_dev_potential_level
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            holder_scope = { wealth < 0 }
+        }
+        subtract_variable = {
+            which = local_max_dev_potential_level
+            value = 1
+        }
+    }
+    #prosperity modifiers
+    if = {
+        limit = {
+            has_province_modifier = prosperity_modifier_3
+        }
+        change_variable = {
+            which = local_max_dev_potential_level
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            OR = {
+                has_province_modifier = depopulated_1
+                has_province_modifier = depopulated_2
+                has_province_modifier = depopulated_3
+            }
+        }
+        subtract_variable = {
+            which = local_max_dev_potential_level
+            value = 1
+        }
+    }
+    #investissment modifiers
+    if = {
+        limit = {
+            has_province_modifier = duck_province_invest_1
+        }
+        change_variable = {
+            which = local_max_dev_potential_level
+            value = 1
+        }
+    }
+    else_if = {
+        limit = {
+            has_province_modifier = duck_province_invest_2
+        }
+        change_variable = {
+            which = local_max_dev_potential_level
+            value = 2
+        }
+    }
+    else_if = {
+        limit = {
+            has_province_modifier = duck_province_invest_3
+        }
+        change_variable = {
+            which = local_max_dev_potential_level
+            value = 3
         }
     }
 }
@@ -704,7 +874,7 @@ duck_reduce_dev_effect = {
     else = {
         set_variable = {
             which = deck_dev_growth
-            value = 699
+            value = 690
         }
     }
 }
@@ -933,5 +1103,162 @@ eleph_start_epidemy_effect = {
         1 = { spawn_disease = measles       }
         1 = { spawn_disease = small_pox     }
         1 = { spawn_disease = syphilis      }
+    }
+}
+
+#holding scope or county scope
+cat_terrain_change_culture_effect = {
+    location = {
+        if = {
+            limit = { terrain = plains }
+            culture = black_cat
+        }
+        else_if = {
+            limit = { terrain = farmlands }
+            culture = white_cat
+        }
+        else_if = {
+            limit = { terrain = forest }
+            culture = cat
+        }
+    }
+}
+#province scope
+create_cat_terrain_character_effect = {
+    if = {
+        limit = {  terrain = plains }
+        create_character = {
+            fertility = 0.9
+            female = no
+            religion = location
+            culture = black_cat
+            dynasty = none
+        }
+    }
+    else_if = {
+        limit = { terrain = farmlands }
+        create_character = {
+            fertility = 0.9
+            female = no
+            religion = location
+            culture = white_cat
+            dynasty = none
+        }
+    }
+    else_if = {
+        limit = { terrain = forest }
+        create_character = {
+            fertility = 0.9
+            female = no
+            religion = location
+            culture = cat
+            dynasty = none
+        }
+    }
+}
+#holding scope
+cat_set_new_cat_owner_effect = {
+    location = {
+        create_cat_terrain_character_effect = yes
+    }
+    gain_title = {
+        target = new_character
+        type = host
+    }
+}
+# province scope
+# do not forget to create event_target:cat_war_goal
+cat_start_revolt_effect = {
+    county = {
+        save_event_target_as = cat_war_goal
+    }
+    create_cat_terrain_character_effect = yes
+    new_character = {
+        wealth = 250
+        create_title = {
+            tier = COUNT
+            landless = yes
+            temporary = yes
+            rebel = yes
+            holder = new_character
+        }
+    }
+    holder_scope = {
+        spawn_unit = {
+            province = PREV
+            home = PREV
+            owner = new_character
+            leader = none
+            # troops = {
+            #     light_infantry = { 200 200 }
+            # }
+            match_character = THIS
+            match_mult = 0.35
+            attrition = 0.9
+            disband_on_peace = no
+            reinforce_rate_multiplier = 0.25
+        }
+        spawn_unit = {
+            province = PREV
+            home = PREV
+            owner = new_character
+            leader = none
+            match_character = THIS
+            match_mult = 0.15
+            attrition = 0.9
+            disband_on_peace = yes
+            reinforce_rate_multiplier = 0.25
+        }
+        spawn_unit = {
+            province = PREV
+            home = PREV
+            owner = new_character
+            leader = none
+            match_character = THIS
+            match_mult = 0.15
+            attrition = 0.9
+            disband_on_peace = yes
+            reinforce_rate_multiplier = 0.25
+        }
+        spawn_unit = {
+            province = PREV
+            home = PREV
+            owner = new_character
+            leader = none
+            troops = { light_infantry = { 500 500 } }
+            attrition = 0.9
+            disband_on_peace = yes
+            reinforce_rate_multiplier = 0.25
+        }
+        spawn_unit = {
+            province = PREV
+            home = PREV
+            owner = new_character
+            leader = none
+            troops = { light_infantry = { 500 500 } }
+            attrition = 0.9
+            disband_on_peace = yes
+            reinforce_rate_multiplier = 0.25
+        }
+        new_character = {
+            war = {
+                target = PREV
+                casus_belli = cat_basic_revolt_cb
+                thirdparty_title = event_target:cat_war_goal
+            }
+        }
+    }
+}
+
+# province scope
+cat_new_holding_created_by_cats_effect = {
+    any_province_holding = {
+        limit = {
+            NOT = { settlement_age = 3 }
+        }
+        add_holding_modifier = {
+            name = cat_controlled_holding
+            years = 10
+        }       
     }
 }

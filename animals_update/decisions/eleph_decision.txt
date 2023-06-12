@@ -4,7 +4,7 @@ title_decisions = {
         is_high_prio = yes
         ai_check_interval = 40
 
-        filter = owned #filters dosn't seems to work, unlike what wiki said
+        filter = owned #titles filters dosn't seems to work, unlike what wiki said
         ai_target_filter = owned
 
         potential = {
@@ -554,14 +554,7 @@ title_decisions = {
 
                     custom_tooltip = {
                         text = ELEPH_TT_DISEASE_SPAWN
-                        random_list = {
-                            1 = { spawn_disease = tuberculosis  }
-                            1 = { spawn_disease = typhoid_fever }
-                            1 = { spawn_disease = typhus        }
-                            1 = { spawn_disease = measles       }
-                            1 = { spawn_disease = small_pox     }
-                            1 = { spawn_disease = syphilis      }
-                        }
+                        eleph_start_epidemy_effect = yes
                     }
                 }
             }

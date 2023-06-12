@@ -16,7 +16,7 @@ DESC_EVT_103_FREE_FROM_FOG;After some months, maybe years, the fog finally disap
 OPT_EVT_103_FINALLY_FREE;Why did so much thing happened?;Que s'est-til passé au juste?;;;;;;;;;;;;x
 DESC_EVT_104_DUCK_FOG;the fog is starting to lift in [This.GetName]. As a duck, you have to take this opportunity to make [This.GetName] inhabited by ducks, even if seen as aggressive;Un brouillard se lève en [This.GetName]. En tant que canard, je dois utiliser cette opportunité pour rendre [This.GetName] habité par des canards, même si c'est d'une manière qui semble aggressif.;;;;;;;;;;;;x
 OPT_EVT_103_FINALLY_DUCK;I have to do it!;Je dois le faire!;;;;;;;;;;;;x
-DESC_EVT_106_CHANGE_DEV;After times, the development level of [This.GetName] did changed.;Après suffisemment de temps, le niveau de développement de [This.GetName] vien de changer.;;;;;;;;;;;;x
+DESC_EVT_106_CHANGE_DEV;After times, the development level of [This.GetName] did changed.;Après suffisemment de temps, le niveau de développement de [This.GetName] vient de changer.;;;;;;;;;;;;x
 OPT1_EVT_106_DECREASE_DEV;Did it just decreased?!;Est-ce qu'il vient juste de diminuer?!;;;;;;;;;;;;x
 OPT2_EVT_106_INCREASE_DEV;Did it just increased?!;Est-ce qu'il vient juste d'augmenter?;;;;;;;;;;;;x
 DESC_EVT_109_START_INVESTISSMENT;As [This.GetName] start to weaken against potential enemy, it is time to make it shine!;Comme [This.GetName] commence à faiblir face aux différentes forces ennemis, il devient important d'investir pour faire briller la province à nouveau!;;;;;;;;;;;;x
@@ -79,3 +79,39 @@ OPT_EVT118_ELEPH_ILLNESS;Does that means that I will became an elephant?!;Je vai
 ##tooltip
 
 eleph_unlock_reprod_lab;Can construct a laboratory on hospital;Peut construire un laboratoire dans l'hôpital;;;;;;;;;;;;x
+
+
+#CAT UPDATE
+
+DESC_119_HIGH_CAT_NUMBER;It seems that a huge number of cat started to migrate in [This.GetName].;Il semblerai qu'un grand nombre de chats s'est installé dans la province de [This.GetName].;;;;;;;;;;;;x
+OPT1_119_OBSERVE_THEM;They are just cats.;Ce sont que des chats.;;;;;;;;;;;;x
+OPT2_119_CHASE_THEM;Kill them, they will start an epidemy!;Tuez-les, ils vont propager une épidémie!;;;;;;;;;;;;x
+DESC_120_CAT_START_RAMPAGE;The cats in [This.GetName] start to grow. They are going to threaten the peace;LEs chats de [This.GetName] commencent à devenir trop nombreux pour être ignorés;;;;;;;;;;;;x
+OPT_120_DO_NOTHING;Nothing can be done;Rien ne peut être fait;;;;;;;;;;;;x
+OPT2_120_START_A_HUNT;organize a massive hunt;Organiser une grande chasse aux chats;;;;;;;;;;;;x
+OPT3_120_TRY_SECLUSION;Try to isolate cats population from human population;Essayer d'isoler les chats des humains population;;;;;;;;;;;;x
+DESC_121_EPIDEMY_OUTBREAK;It seems that the cats living in [This.GetName] are dying.;Il semblerait que les chats de [This.GetName] sont en train de mourir;;;;;;;;;;;;x
+OPT_121_EPIDEMY;Is it because of an epidemy outbreak?;Est-ce à cause d'un foyer d'épidémie?;;;;;;;;;;;;x
+DESC_122_CAT_INVADE;The cats in [This.GetName] just take control of [Invasion_target.GetName].;Les chats de [This.GetName] ont pris le contrôle de [Invasion_target.GetName].;;;;;;;;;;;;x
+OPT_122_CAT_INVADE;We should do something;Nous devrions faire quelque chose;;;;;;;;;;;;x
+DESC_123_CREATE_TRIBE;The cat decided to settle in e new tribe;Les chats ont décidé de s'installer dans une nouvelle tribu;;;;;;;;;;;;x
+OPT_123_CREATE_TRIBE;How did they construct it?;Comment l'ont ils construite?;;;;;;;;;;;;x
+DESC_124_HOSTILITY;The cats in [This.GetName] are taking hostile actions against human;Les chats de [This.GetName] commencent à devenir aggressifs;;;;;;;;;;;;x
+OPT_124_HOSTILITY;Who's the hunter responsible?!;Où est le chasseur qui en est responçable?!;;;;;;;;;;;;x
+DESC_125_HOLDER_CHANGE;As the holder of [From.GetName] change, the cats living there are unhappy;Avec le changement de dirigeant en [From.GetName], les chats qui y vivent sont en colère;;;;;;;;;;;;x
+OPT_125_WAR;The extermination shall starts;L'extermination des chats est inévitable;;;;;;;;;;;;x
+DESC_126_CAT_INVADE;The cats of [This.GetName] did reproduce. At some point, they had to take control of another part of the county;Les chats de [This.GetName] se reproduisent énormément. Ils sont devenus tellement nombreux qu'ils ont réussi sans difficulté à envahir une nouvelle partie du comté;;;;;;;;;;;;x
+OPT_126_CAT_TARGET;Is this a new kind of plague?;Est-ce un nouveau fléau?;;;;;;;;;;;;x
+DESC_127_USURP_ID;
+OPT_127_USURP_ID;
+
+##tooltips
+
+CAT_TT_DIE_IN_EPIDEMY;The cats die in a new epidemy;Les chats meurent tous dans une nouvelle épidémie;;;;;;;;;;;;x
+CAT_TT_TAKE_UNFORTIFIED_HOLDING;The cats take control of an existiong holding;Les chats prennent le contre d'une possession;;;;;;;;;;;;x
+CAT_TT_TOO_LATE;The hunt started to late;La chasse a commencé trop tard
+CAT_TT_ARE_GONE;The cat are exterminated;Les chats sont exterminés;;;;;;;;;;;;x
+CAT_TT_RUN;The cats goes away;Les chats partent;;;;;;;;;;;;x
+CAT_TT_CONSTRUCT_THEIR_TRIBE;The cats build their own tribe;Les chats construisent leur propre tribu;;;;;;;;;;;;x
+CAT_TT_DECLARE_WAR;The cats start a revolt;Les chats se rebellent;;;;;;;;;;;;x
+CAT_TT_HUNTER_INJURED;Many adult are injured by ferocious cats;Beaucoup d'adulte sont blessés par des chats enragé;;;;;;;;;;;;x

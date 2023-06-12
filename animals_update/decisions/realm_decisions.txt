@@ -2653,6 +2653,20 @@ decisions = {
 			}
 			else_if = {
 				limit = {
+					religion = Eleph_religion
+					culture_group = elephant_group
+				}
+				set_government_type = Eleph_feudal_gov
+			}
+			else_if = {
+				limit = {
+					religion = Cat_religion
+					culture_group = cat_group
+				}
+				set_government_type = cat_feudal_gov
+			}
+			else_if = {
+				limit = {
 					religion_group = muslim
 				}
 

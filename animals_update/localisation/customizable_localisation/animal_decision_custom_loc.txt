@@ -66,6 +66,12 @@ defined_text = {
         }
         localisation_key = Eleph_religion
     }
+    text = {
+        trigger = {
+            FROM = { religion = Cat_religion }
+        }
+        localisation_key = Cat_religion
+    }
 }
 
 defined_text = {
@@ -105,5 +111,41 @@ defined_text = {
         }
 
         localisation_key = d_immortal_herd
+    }
+    text = {
+        trigger = {
+            FROM = { religion = Cat_religion }
+        }
+
+        localisation_key = d_Invasive_order
+    }
+}
+
+defined_text = {
+    name = GET_ANI_LIFESTYLE_TRAIT
+
+    text = {
+        trigger = { culture_group = bear_group }
+        localisation_key = mystic
+    }
+    text = {
+        trigger = { culture_group = hedgehog_group }
+        localisation_key = architect
+    }
+    text = {
+        trigger = { culture_group = panda_group }
+        localisation_key = hedonist
+    }
+    text = {
+        trigger = { culture_group = duck_group }
+        localisation_key = administrator
+    }
+    text = {
+        trigger = { culture_group = elephant_group }
+        localisation_key = scholar
+    }
+    text = {
+        trigger = { culture_group = cat_group }
+        localisation_key = schemer
     }
 }

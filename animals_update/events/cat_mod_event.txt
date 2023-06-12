@@ -1,0 +1,502 @@
+namespace = ani_plus
+
+###### cat update events
+### event 119 - 127?
+
+#### conversion quest:
+# event 119: launching quest by event rule
+#            cats start a province invasion
+# event 120: Cats start to harm human
+#           -> can do nothing (create an epidemy or take control of unfortified holdings)
+#           -> can start a hunt ( can start an epidemy (too late), do nothing or provoke an accident)
+#           -> start a seclusion ( can force cat to run away, take an unfortified holding or live on a new tribe)
+# event 121: cats die on an epidemic (notification)
+#           -> start an epidemy in the province
+# event 122: cats take control of an unfortified holding
+#           -> take control of a city, temple or tribe
+# event 123: cats create their own tribal settlement
+#           ->  create and control a new city
+# event 124: An accident happens with cat
+#           -> can lead to a war
+#           -> can kill many adults and add occupied holding
+# event 125: (on_action): a cat bastion (tribe or castle) loose its can owner
+#           -> high chance to lead to a war (if garrison is complete)
+# event 126: (MTTH) force a new holding to be a living place to cat - can transform its owner into a cat
+#           -> can be triggered only if an existing holding is controlled (assieged or controlled) by cats
+# event 127: (MTTH) transform a character into cat if province culture is cat
+
+
+#event 119
+province_event = {
+    id = ani_plus.119
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    trigger = {
+        has_game_rule = {
+            name = animals_conversion_ways
+            value = animal_events
+        }
+        Is_really_animal_trigger = no
+        holder_scope = {
+            Is_really_animal_trigger = no
+            OR = {
+                lifestyle_traits == 0
+                trait = schemer
+            }
+        }
+        Cat_can_live_here_trigger = yes
+        NOT = { has_province_flag = Cat_conv_quest_CD }
+        num_of_settlements = 2
+        NOT = {
+            any_province_holding = {
+                has_holding_modifier = cat_controlled_holding
+            }
+        }
+    }
+
+    mean_time_to_happen = {
+        years = 1500
+
+        modifier = {
+            factor = 0.04  # 60 years for players
+            holder_scope = { ai = no }
+        }
+    }
+
+    desc = DESC_119_HIGH_CAT_NUMBER
+
+    option = {
+        name = OPT1_119_OBSERVE_THEM
+
+        set_province_flag = Cat_conv_quest_CD
+        province_event = { id = ani_plus.120 days = 7 random = 17 }
+
+        ai_chance = {
+            factor = 2
+
+            modifier = {
+                factor = 10
+                OR = {
+                    trait = patient
+                    trait = content
+                }
+            }
+            modifier = {
+                factor = 0
+                OR = {
+                    trait = wroth
+                    trait = ambitious
+                }
+            }
+        }
+    }
+    option = {
+        name = OPT2_119_CHASE_THEM
+
+        ai_chance = {
+            factor = 8
+            modifier = {
+                factor = 0.625
+                OR = {
+                    trait = patient
+                    trait = content
+                }
+            }
+        }
+    }
+}
+
+#event 120
+province_event = {
+    id = ani_plus.120
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    is_triggered_only = yes
+
+    desc = DESC_120_CAT_START_RAMPAGE
+
+    option = {
+        name = OPT_120_DO_NOTHING
+
+        random_list = {
+            1 = {
+                custom_tooltip = {
+                    text = CAT_TT_DIE_IN_EPIDEMY
+                    province_event = { id = ani_plus.121 days = 1}
+                    # eleph_start_epidemy_effect = yes
+                }
+            }
+            2 = {
+                trigger = {
+                    OR = {
+                        has_city = yes
+                        has_temple = yes
+                        has_tribal = yes
+                    }
+                }
+                custom_tooltip = {
+                    text = CAT_TT_TAKE_UNFORTIFIED_HOLDING
+                    province_event = { id = ani_plus.122 days = 1}
+                }
+            }
+        }
+
+        ai_chance = { factor = 0 }
+    }
+    option = {
+        name = OPT2_120_START_A_HUNT
+
+        wealth = -50
+        random_list = {
+            1 = {
+                custom_tooltip = {
+                    text = CAT_TT_TOO_LATE
+                    province_event = { id = ani_plus.121 days = 1}
+                    # eleph_start_epidemy_effect = yes
+                }
+            }
+            3 = {
+                custom_tooltip = {
+                    text = CAT_TT_ARE_GONE
+                    clr_province_flag = Cat_conv_quest_CD
+                }
+            }
+            1 = {
+                custom_tooltip = {
+                    text = CAT_TT_HUNT_ACCIDENT
+                    province_event = { id = ani_plus.124 days = 1}
+                }
+            }
+        }
+        ai_chance = { factor = 5 }
+    }
+    option = {
+        name = OPT3_120_TRY_SECLUSION
+
+        random_list = {
+            4 = {
+                custom_tooltip = {
+                    text = CAT_TT_RUN
+                    clr_province_flag = Cat_conv_quest_CD
+                }
+            }
+            2 = {
+                trigger = {
+                    OR = {
+                        has_city = yes
+                        has_temple = yes
+                        has_tribal = yes
+                    }
+                }
+                custom_tooltip = {
+                    text = CAT_TT_TAKE_UNFORTIFIED_HOLDING
+                    province_event = { id = ani_plus.122 days = 1}
+                }
+            }
+            1 = {
+                trigger = {
+                    num_of_empty_holdings = 2
+                }
+                custom_tooltip = {
+                    text = CAT_TT_CONSTRUCT_THEIR_TRIBE
+                    province_event = { id = ani_plus.123 days = 1}
+                }
+            }
+        }
+
+        ai_chance = { factor = 1 }
+    }
+}
+
+#event 121
+province_event = {
+    id = ani_plus.121
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    is_triggered_only = yes
+
+    desc = DESC_121_EPIDEMY_OUTBREAK
+
+    option = {
+        name = OPT_121_EPIDEMY
+
+        custom_tooltip = {
+            text = ELEPH_TT_DISEASE_SPAWN
+            eleph_start_epidemy_effect = yes
+            clr_province_flag = Cat_conv_quest_CD
+        }
+    }
+}
+
+#event 122
+province_event = {
+    id = ani_plus.122
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    is_triggered_only = yes
+
+    immediate = {
+        random_province_holding = {
+            preferred_limit = {
+                holding_type = tribal
+                is_capital = no
+            }
+            preferred_limit = {
+                holding_type = temple
+                is_capital = no
+            }
+            preferred_limit = {
+                holding_type = city
+                is_capital = no
+            }
+            preferred_limit = {
+                holding_type = castle
+                is_capital = no
+            }
+
+            save_event_target_as = Invasion_target
+        }
+    }
+
+    desc = DESC_122_CAT_INVADE
+
+    option = {
+        name = OPT_122_CAT_INVADE
+
+        event_target:Invasion_target = {
+
+            # if = { #should not happens as one condition to start quest is having at least 2 holding
+            #     limit = {
+            #         is_capital = yes
+            #     }
+            #     cat_terrain_change_culture_effect = yes #character culture change by event 129
+            # }
+            # else = {
+                add_holding_modifier = {
+                    name = cat_controlled_holding
+                    years = 10
+                }
+                cat_set_new_cat_owner_effect = yes
+            # }
+        }
+        clr_province_flag = Cat_conv_quest_CD
+    }
+}
+
+#event 123
+province_event = {
+    id = ani_plus.123
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    is_triggered_only = yes
+
+    desc = DESC_123_CREATE_TRIBE
+
+    option = {
+        name = OPT_123_CREATE_TRIBE
+
+        create_cat_terrain_character_effect = yes
+        build_holding = {
+            type = city
+            holder = new_character
+        }
+        hidden_tooltip = {
+            cat_new_holding_created_by_cats_effect = yes
+        }
+
+        clr_province_flag = Cat_conv_quest_CD
+    }
+}
+
+#event 124
+province_event = {
+    id = ani_plus.124
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    is_triggered_only = yes
+
+    desc = DESC_124_HOSTILITY
+
+    option = {
+        name = OPT_124_HOSTILITY
+
+        random_list = {
+            4 = {
+                custom_tooltip = {
+                    text = CAT_TT_DECLARE_WAR
+                    cat_start_revolt_effect = yes
+                }
+            }
+            1 = {
+                custom_tooltip = {
+                    text = CAT_TT_HUNTER_INJURED
+                    any_province_character = {
+                        limit = { is_adult = yes is_female = no }
+                        random_list = {
+                            2 = {}
+                            3 = { add_trait = wounded }
+                            5 = { add_trait = severely_injured }
+                        }
+                    }
+                }
+            }
+        }
+
+        clr_province_flag = Cat_conv_quest_CD
+    }
+}
+
+#event 125
+character_event = {
+    id = ani_plus.125
+
+    is_triggered_only = yes
+
+    trigger = {
+        FROM = { has_holding_modifier = cat_controlled_holding }
+        FROMFROM = { culture_group = cat_group }
+        NOT = { ROOT = { culture_group = cat_group } }
+    }
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = DESC_125_HOLDER_CHANGE
+
+    option = {
+        name = OPT_125_WAR
+        hidden_tooltip = {
+            FROM = {
+                remove_holding_modifier = cat_controlled_holding
+                location = {
+                    cat_start_revolt_effect = yes
+                }
+            }
+        }
+    }
+}
+
+#event 126
+province_event = {
+    id = ani_plus.126
+
+    trigger = {
+        any_province_holding = {
+            has_holding_modifier = cat_controlled_holding
+        }
+    }
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    mean_time_to_happen = {
+        years = 5
+
+        modifier = {
+            factor = 0.5
+
+            any_province_holding = {
+                has_holding_modifier = cat_controlled_holding
+                holding_type = castle
+            }
+        }
+        modifier = {
+            factor = 0.5
+            any_province_holding = {
+                has_holding_modifier = cat_controlled_holding
+                OR = {
+                    holding_type = city
+                    holding_type = temple
+                }
+            }
+        }
+    }
+
+    desc = DESC_126_CAT_INVADE
+
+    option = {
+        name = OPT_126_CAT_TARGET
+
+        random_province_holding = {
+            limit = {
+                NOT = { has_province_modifier = cat_controlled_holding }
+            }
+            preferred_limit = {
+                is_capital = no
+                holding_type = tribal
+            }
+            preferred_limit = {
+                is_capital = no
+                NOT = { holding_type = castle }
+            }
+            preferred_limit = {
+                is_capital = no
+            }
+
+            hidden_tooltip = {
+                random_province_lord = {
+                    limit = {
+                        culture_group = cat_group
+                    }
+                    save_event_target_as = new_culture_save
+                }
+            }
+            if = {
+                limit = {
+                    is_capital = yes
+                }
+                culture = event_target:new_culture_save
+            }
+            else = {
+                add_holding_modifier = {
+                    name = cat_controlled_holding
+                    years = 10
+                }
+                cat_set_new_cat_owner_effect = yes
+                holder_scope = {
+                    culture = event_target:new_culture_save
+                }
+            }
+        }
+    }
+}
+
+#event 127
+character_event = {
+    id = ani_plus.127
+
+    war = no
+    trigger = {
+        location = { culture_group = cat_group }
+        NOT = { culture_group = cat_group }
+    }
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    mean_time_to_happen = {
+        years = 3
+    }
+
+    desc = DESC_127_USURP_ID
+
+    option = {
+        name = OPT_127_USURP_ID
+
+        culture = location
+    }
+}
+
+
+

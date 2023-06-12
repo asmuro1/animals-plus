@@ -28,6 +28,10 @@ Eleph_religion;Elephant;Éléphant;;;;;;;;;;;;x
 Eleph_religion_DESC;Elephant's religion;Religion des éléphants;;;;;;;;;;;;x
 Eleph_religion_full;Elephant;Éléphant;;;;;;;;;;;;x
 ELEPH_RELIGION_HIGH_GOD;Elepha;Élépha;;;;;;;;;;;;x
+Cat_religion;Cat;Chat;;;;;;;;;;;;x
+Cat_religion_DESC;Cat's religion;Religion des chats;;;;;;;;;;;;x
+Cat_religion_full;Cat;Chat;;;;;;;;;;;;x
+CAT_RELIGION_HIGH_GOD;Cat-iph;Le Chat perché;;;;;;;;;;;;x
 
 ###government localisation
 Bear_feudal_gov;Bears feodality;féodalité oursienne;;;;;;;;;;;;x
@@ -70,6 +74,8 @@ d_sea_master;Sea master;Maître des mer;;;;;;;;;;;;x
 d_sea_master_adj;animal;animale;;;;;;;;;;;;x
 d_immortal_herd;Immortals herds;Hordes immortelles;;;;;;;;;;;;x
 d_immortal_herd_adj;animal;animale;;;;;;;;;;;;x
+d_Invasive_order;The invasive order;L'ordre invasif;;;;;;;;;;;;x
+d_Invasive_order_adj;animal;animale;;;;;;;;;;;;x
 
 #job title names
 action_repress_vassal;Repress vassals;réprimer des vassaux;;;;;;;;;;;;x

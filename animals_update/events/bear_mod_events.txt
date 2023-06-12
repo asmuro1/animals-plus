@@ -154,9 +154,23 @@ character_event = {
         }
         else_if = {
             limit = {
-                culture = cat
+                culture_group = cat_group
             }
-            set_graphical_culture = cat
+            if = {
+                limit = {
+                    culture = cat
+                }
+                set_graphical_culture = cat
+            }
+            else_if = {
+                limit = {
+                    culture = white_cat
+                }
+                set_graphical_culture = white_cat
+            }
+            else = {
+                set_graphical_culture = black_cat
+            }
         }
         else_if = {
             limit = {
@@ -1544,24 +1558,22 @@ province_event = {
             limit = {
                 any_province_holding = {
                     is_capital = yes
-                    has_building = ca_ani_castle_tower_9
+                    has_building = ca_ani_castle_tower_16
                 }
             }
             any_province_holding = {
                 limit = {
                     is_capital = yes
                 }
-                remove_building = ca_ani_castle_tower_9
+                remove_building = ca_ani_castle_tower_16
                 remove_building = ca_ani_prest_4
                 remove_building = ca_ani_piety_4
                 remove_building = ca_ani_tech_4
 
                 remove_building = ca_horse_garrison_2
-                remove_building = ca_cat_armored_2
                 remove_building = ca_dog_garrison_2
                 remove_building = ca_dragon_archery_2
                 remove_building = ca_horse_speciality
-                remove_building = ca_cat_speciality
                 remove_building = ca_dog_speciality
                 remove_building = ca_dragon_speciality
             }
@@ -1570,21 +1582,19 @@ province_event = {
             limit = {
                 any_province_holding = {
                     is_capital = yes
-                    has_building = ca_ani_castle_tower_8
+                    has_building = ca_ani_castle_tower_15
                 }
             }
             any_province_holding = {
                 limit = {
                     is_capital = yes
                 }
-                remove_building = ca_ani_castle_tower_8
+                remove_building = ca_ani_castle_tower_15
 
                 remove_building = ca_horse_retinue_2
-                remove_building = ca_cat_retinue_2
                 remove_building = ca_dog_retinue_2
                 remove_building = ca_dragon_retinue_2
                 remove_building = ca_horse_garrison_1
-                remove_building = ca_cat_armored_1
                 remove_building = ca_dog_garrison_1
                 remove_building = ca_dragon_archery_1
             }
@@ -1593,14 +1603,14 @@ province_event = {
             limit = {
                 any_province_holding = {
                     is_capital = yes
-                    has_building = ca_ani_castle_tower_7_bis
+                    has_building = ca_ani_castle_tower_14
                 }
             }
             any_province_holding = {
                 limit = {
                     is_capital = yes
                 }
-                remove_building = ca_ani_castle_tower_7_bis
+                remove_building = ca_ani_castle_tower_14
                 remove_building = ca_ani_prest_3
                 remove_building = ca_ani_piety_3
                 remove_building = ca_ani_tech_3
@@ -1610,16 +1620,15 @@ province_event = {
             limit = {
                 any_province_holding = {
                     is_capital = yes
-                    has_building = ca_ani_castle_tower_7
+                    has_building = ca_ani_castle_tower_13
                 }
             }
             any_province_holding = {
                 limit = {
                     is_capital = yes
                 }
-                remove_building = ca_ani_castle_tower_7
+                remove_building = ca_ani_castle_tower_13
 
-                remove_building = ca_cat_retinue_1
                 remove_building = ca_horse_retinue_1
                 remove_building = ca_dog_retinue_1
                 remove_building = ca_dragon_retinue_1
@@ -1629,14 +1638,14 @@ province_event = {
             limit = {
                 any_province_holding = {
                     is_capital = yes
-                    has_building = ca_ani_castle_tower_6_bis
+                    has_building = ca_ani_castle_tower_12
                 }
             }
             any_province_holding = {
                 limit = {
                     is_capital = yes
                 }
-                remove_building = ca_ani_castle_tower_6_bis
+                remove_building = ca_ani_castle_tower_12
                 remove_building = ca_ani_trade_build_4
                 remove_building = ca_ani_build_cost_4
                 remove_building = ca_ani_desmene_4
@@ -1646,16 +1655,15 @@ province_event = {
             limit = {
                 any_province_holding = {
                     is_capital = yes
-                    has_building = ca_ani_castle_tower_6
+                    has_building = ca_ani_castle_tower_11
                 }
             }
             any_province_holding = {
                 limit = {
                     is_capital = yes
                 }
-                remove_building = ca_ani_castle_tower_6
+                remove_building = ca_ani_castle_tower_11
 
-                remove_building = ca_cat_stable_2
                 remove_building = ca_horse_armor_2
                 remove_building = ca_dog_stable_2
                 remove_building = ca_dragon_stable_2
@@ -1665,14 +1673,14 @@ province_event = {
             limit = {
                 any_province_holding = {
                     is_capital = yes
-                    has_building = ca_ani_castle_tower_5_bis
+                    has_building = ca_ani_castle_tower_10
                 }
             }
             any_province_holding = {
                 limit = {
                     is_capital = yes
                 }
-                remove_building = ca_ani_castle_tower_5_bis
+                remove_building = ca_ani_castle_tower_10
                 remove_building = ca_ani_fort_4
                 remove_building = ca_ani_siege_4
                 remove_building = ca_ani_garrison_4
@@ -1682,24 +1690,22 @@ province_event = {
             limit = {
                 any_province_holding = {
                     is_capital = yes
-                    has_building = ca_ani_castle_tower_5
+                    has_building = ca_ani_castle_tower_09
                 }
             }
             any_province_holding = {
                 limit = {
                     is_capital = yes
                 }
-                remove_building = ca_ani_castle_tower_5
+                remove_building = ca_ani_castle_tower_09
                 remove_building = ca_ani_prest_2
                 remove_building = ca_ani_piety_2
                 remove_building = ca_ani_tech_2
 
                 remove_building = ca_horse_archer_3
-                remove_building = ca_cat_influence_3
                 remove_building = ca_dog_weapons_3
                 remove_building = ca_dragon_treasury_3
                 remove_building = ca_horse_armor_1
-                remove_building = ca_cat_stable_1
                 remove_building = ca_dragon_stable_1
                 remove_building = ca_dog_stable_1
             }
@@ -1707,7 +1713,7 @@ province_event = {
         else_if = {
             limit = {
                 any_province_holding = {
-                    has_building = ca_ani_castle_tower_4_bis
+                    has_building = ca_ani_castle_tower_08
                     is_capital = yes
                 }
             }
@@ -1715,7 +1721,7 @@ province_event = {
                 limit = {
                     is_capital = yes
                 }
-                remove_building = ca_ani_castle_tower_4_bis
+                remove_building = ca_ani_castle_tower_08
                 remove_building = ca_ani_trade_build_3
                 remove_building = ca_ani_build_cost_3
                 remove_building = ca_ani_desmene_3
@@ -1724,7 +1730,7 @@ province_event = {
         else_if = {
             limit = {
                 any_province_holding = {
-                    has_building = ca_ani_castle_tower_4
+                    has_building = ca_ani_castle_tower_07
                     is_capital = yes
                 }
             }
@@ -1732,10 +1738,9 @@ province_event = {
                 limit = {
                     is_capital = yes
                 }
-                remove_building = ca_ani_castle_tower_4
+                remove_building = ca_ani_castle_tower_07
 
                 remove_building = ca_horse_archer_2
-                remove_building = ca_cat_influence_2
                 remove_building = ca_dog_weapons_2
                 remove_building = ca_dragon_treasury_2
             }
@@ -1744,14 +1749,14 @@ province_event = {
             limit = {
                 any_province_holding = {
                     is_capital = yes
-                    has_building = ca_ani_castle_tower_3_bis
+                    has_building = ca_ani_castle_tower_06
                 }
             }
             any_province_holding = {
                 limit = {
                     is_capital = yes
                 }
-                remove_building = ca_ani_castle_tower_3_bis
+                remove_building = ca_ani_castle_tower_06
                 remove_building = ca_ani_fort_3
                 remove_building = ca_ani_siege_3
                 remove_building = ca_ani_garrison_3
@@ -1760,7 +1765,7 @@ province_event = {
         else_if = {
             limit = {
                 any_province_holding = {
-                    has_building = ca_ani_castle_tower_3
+                    has_building = ca_ani_castle_tower_05
                     is_capital = yes
                 }
             }
@@ -1768,17 +1773,15 @@ province_event = {
                 limit = {
                     is_capital = yes
                 }
-                remove_building = ca_ani_castle_tower_3
+                remove_building = ca_ani_castle_tower_05
                 remove_building = ca_ani_trade_build_2
                 remove_building = ca_ani_build_cost_2
                 remove_building = ca_ani_desmene_2
 
                 remove_building = ca_horse_stable_3
-                remove_building = ca_cat_regiment_3
                 remove_building = ca_dragon_fortification_3
                 remove_building = ca_dog_infantery_3
                 remove_building = ca_horse_archer_1
-                remove_building = ca_cat_influence_1
                 remove_building = ca_dragon_treasury_1
                 remove_building = ca_dog_weapons_1
             }
@@ -1787,14 +1790,14 @@ province_event = {
             limit = {
                 any_province_holding = {
                     is_capital = yes
-                    has_building = ca_ani_castle_tower_2_bis
+                    has_building = ca_ani_castle_tower_04
                 }
             }
             any_province_holding = {
                 limit = {
                     is_capital = yes
                 }
-                remove_building = ca_ani_castle_tower_2_bis
+                remove_building = ca_ani_castle_tower_04
                 remove_building = ca_ani_prest_1
                 remove_building = ca_ani_piety_1
                 remove_building = ca_ani_tech_1
@@ -1804,20 +1807,19 @@ province_event = {
             limit = {
                 any_province_holding = {
                     is_capital = yes
-                    has_building = ca_ani_castle_tower_2
+                    has_building = ca_ani_castle_tower_03
                 }
             }
             any_province_holding = {
                 limit = {
                     is_capital = yes
                 }
-                remove_building = ca_ani_castle_tower_2
+                remove_building = ca_ani_castle_tower_03
                 remove_building = ca_ani_fort_2
                 remove_building = ca_ani_siege_2
                 remove_building = ca_ani_garrison_2
 
                 remove_building = ca_horse_stable_2
-                remove_building = ca_cat_regiment_2
                 remove_building = ca_dragon_fortification_2
                 remove_building = ca_dog_infantery_2
             }
@@ -1826,14 +1828,14 @@ province_event = {
             limit = {
                 any_province_holding = {
                     is_capital = yes
-                    has_building = ca_ani_castle_tower_1_bis
+                    has_building = ca_ani_castle_tower_02
                 }
             }
             any_province_holding = {
                 limit = {
                     is_capital = yes
                 }
-                remove_building = ca_ani_castle_tower_1_bis
+                remove_building = ca_ani_castle_tower_02
                 remove_building = ca_ani_trade_build_1
                 remove_building = ca_ani_build_cost_1
                 remove_building = ca_ani_desmene_1
@@ -1843,20 +1845,19 @@ province_event = {
             limit = {
                 any_province_holding = {
                     is_capital = yes
-                    has_building = ca_ani_castle_tower_1
+                    has_building = ca_ani_castle_tower_01
                 }
             }
             any_province_holding = {
                 limit = {
                     is_capital = yes
                 }
-                remove_building = ca_ani_castle_tower_1
+                remove_building = ca_ani_castle_tower_01
                 remove_building = ca_ani_fort_1
                 remove_building = ca_ani_siege_1
                 remove_building = ca_ani_garrison_1
 
                 remove_building = ca_horse_stable_1
-                remove_building = ca_cat_regiment_1
                 remove_building = ca_dragon_fortification_1
                 remove_building = ca_dog_infantery_1
             }
@@ -4320,6 +4321,14 @@ province_event = {
                     culture_group = elephant_group
                 }
             }
+            AND = {
+                culture_group = cat_group
+                NOT = { religion = Cat_religion }
+                holder_scope = {
+                    religion = Cat_religion
+                    culture_group = cat_group
+                }
+            }
         }
     }
 
@@ -4357,6 +4366,12 @@ province_event = {
                 culture_group = elephant_group
             }
             religion = Eleph_religion
+        }
+        else_if = {
+            limit = {
+                culture_group = cat_group
+            }
+            religion = Cat_religion
         }
     }
 }

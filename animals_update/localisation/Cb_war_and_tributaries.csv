@@ -29,3 +29,8 @@ WAR_NAME_HEDGE_INVASION;Hostility war;Guerre d'hostilité;;;;;;;;;;;;x
 
 #cb tooltip
 HEDGE_WON_HOSTILITY_WAR_TITLE_GAIN;[Root.GetTitledName] gain every allied territory;[Root.GetTitledName] prend toutes les terres alliés;;;;;;;;;;;;x
+
+
+#cat update
+CB_CAT_REVOLT;Cat revolt;Révolte de chats;;;;;;;;;;;;x
+CB_CAT_REVOLT_NAME;Revolt;Révolte;;;;;;;;;;;;x

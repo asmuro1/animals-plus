@@ -11,12 +11,12 @@ Is_really_animal_trigger = {
         culture = dragon_culture
         culture = horse
         culture = dog_culture
-        culture_group = cat_group
         culture_group = bear_group
         culture_group = hedgehog_group
         culture_group = panda_group
         culture_group = duck_group
         culture_group = elephant_group
+        culture_group = cat_group
     }
 }
 
@@ -657,5 +657,17 @@ Eleph_has_climat_control_trigger = {
         has_province_modifier = eleph_climate_control_2
         has_province_modifier = eleph_climate_control_3
         has_province_modifier = eleph_climate_control_4
+    }
+}
+
+
+## Cat update triggers
+
+#province scope
+Cat_can_live_here_trigger = {
+    OR = {
+        terrain = plains        # black cat
+        terrain = farmlands     # white cat
+        terrain = forest        # red cat
     }
 }

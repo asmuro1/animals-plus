@@ -178,3 +178,10 @@ eleph_climate_control_4;Very harsh climate;Climat très rude;;;;;;;;;;;;x
 
 #opinion modifier
 eleph_forced_conversion;Forced conversion;Conversion forcé;;;;;;;;;;;;x
+
+
+
+#### cat update
+
+#holding modifier
+cat_controlled_holding;Controlled by cats;Contrôlé par des chats;;;;;;;;;;;;x

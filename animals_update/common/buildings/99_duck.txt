@@ -185,13 +185,13 @@ castle = { # custom modifier loc are in duckevent file
         }
         is_active_trigger = {
             culture_group = duck_group
-            has_building = ca_ani_castle_tower_1_bis
+            has_building = ca_ani_castle_tower_02
             custom_tooltip = {
                 text = DUCK_DEV_LESS_4
                 NOT = { check_variable = { which=duck_dev_var value=5 } }
             }
         }
-        prerequisites = { ca_ani_castle_tower_1_bis }
+        prerequisites = { ca_ani_castle_tower_02 }
 
         gold_cost = 100
         build_time = 150
@@ -218,13 +218,13 @@ castle = { # custom modifier loc are in duckevent file
         }
         is_active_trigger = {
             culture_group = duck_group
-            has_building = ca_ani_castle_tower_2_bis
+            has_building = ca_ani_castle_tower_04
             custom_tooltip = {
                 text = DUCK_DEV_LESS_4
                 NOT = { check_variable = { which=duck_dev_var value=5 } }
             }
         }
-        prerequisites = { ca_ani_castle_tower_2_bis }
+        prerequisites = { ca_ani_castle_tower_04 }
         upgrades_from = ca_duck_fortification_01
 
         gold_cost = 120
@@ -252,13 +252,13 @@ castle = { # custom modifier loc are in duckevent file
         }
         is_active_trigger = {
             culture_group = duck_group
-            has_building = ca_ani_castle_tower_3_bis
+            has_building = ca_ani_castle_tower_06
             custom_tooltip = {
                 text = DUCK_DEV_LESS_4
                 NOT = { check_variable = { which=duck_dev_var value=5 } }
             }
         }
-        prerequisites = { ca_ani_castle_tower_3_bis }
+        prerequisites = { ca_ani_castle_tower_06 }
         upgrades_from = ca_duck_fortification_02
 
         gold_cost = 130
@@ -286,13 +286,13 @@ castle = { # custom modifier loc are in duckevent file
         }
         is_active_trigger = {
             culture_group = duck_group
-            has_building = ca_ani_castle_tower_4_bis
+            has_building = ca_ani_castle_tower_08
             custom_tooltip = {
                 text = DUCK_DEV_LESS_4
                 NOT = { check_variable = { which=duck_dev_var value=5 } }
             }
         }
-        prerequisites = { ca_ani_castle_tower_4_bis }
+        prerequisites = { ca_ani_castle_tower_08 }
         upgrades_from = ca_duck_fortification_03
 
         gold_cost = 140
@@ -320,13 +320,13 @@ castle = { # custom modifier loc are in duckevent file
         }
         is_active_trigger = {
             culture_group = duck_group
-            has_building = ca_ani_castle_tower_5_bis
+            has_building = ca_ani_castle_tower_10
             custom_tooltip = {
                 text = DUCK_DEV_LESS_4
                 NOT = { check_variable = { which=duck_dev_var value=5 } }
             }
         }
-        prerequisites = { ca_ani_castle_tower_5_bis }
+        prerequisites = { ca_ani_castle_tower_10 }
         upgrades_from = ca_duck_fortification_04
 
         gold_cost = 150
@@ -354,13 +354,13 @@ castle = { # custom modifier loc are in duckevent file
         }
         is_active_trigger = {
             culture_group = duck_group
-            has_building = ca_ani_castle_tower_6_bis
+            has_building = ca_ani_castle_tower_12
             custom_tooltip = {
                 text = DUCK_DEV_LESS_4
                 NOT = { check_variable = { which=duck_dev_var value=5 } }
             }
         }
-        prerequisites = { ca_ani_castle_tower_6_bis }
+        prerequisites = { ca_ani_castle_tower_12 }
         upgrades_from = ca_duck_fortification_05
 
         gold_cost = 160
@@ -388,13 +388,13 @@ castle = { # custom modifier loc are in duckevent file
         }
         is_active_trigger = {
             culture_group = duck_group
-            has_building = ca_ani_castle_tower_7_bis
+            has_building = ca_ani_castle_tower_14
             custom_tooltip = {
                 text = DUCK_DEV_LESS_4
                 NOT = { check_variable = { which=duck_dev_var value=5 } }
             }
         }
-        prerequisites = { ca_ani_castle_tower_7_bis }
+        prerequisites = { ca_ani_castle_tower_14 }
         upgrades_from = ca_duck_fortification_06
 
         gold_cost = 170
@@ -422,13 +422,13 @@ castle = { # custom modifier loc are in duckevent file
         }
         is_active_trigger = {
             culture_group = duck_group
-            has_building = ca_ani_castle_tower_9
+            has_building = ca_ani_castle_tower_16
             custom_tooltip = {
                 text = DUCK_DEV_LESS_4
                 NOT = { check_variable = { which=duck_dev_var value=5 } }
             }
         }
-        prerequisites = { ca_ani_castle_tower_9 }
+        prerequisites = { ca_ani_castle_tower_16 }
         upgrades_from = ca_duck_fortification_07
 
         gold_cost = 180
@@ -457,13 +457,13 @@ castle = { # custom modifier loc are in duckevent file
         }
         is_active_trigger = {
             culture_group = duck_group
-            has_building = ca_ani_castle_tower_1
+            has_building = ca_ani_castle_tower_01
             custom_tooltip = {
                 text = DUCK_DEV_MORE_2
                 check_variable = { which=duck_dev_var value=2 }
             }
         }
-        prerequisites = { ca_ani_castle_tower_1 }
+        prerequisites = { ca_ani_castle_tower_01 }
         # upgrades_from = BaseBuilding
 
         gold_cost = 150
@@ -492,13 +492,13 @@ castle = { # custom modifier loc are in duckevent file
         }
         is_active_trigger = {
             culture_group = duck_group
-            has_building = ca_ani_castle_tower_3
+            has_building = ca_ani_castle_tower_05
             custom_tooltip = {
                 text = DUCK_DEV_MORE_4
                 check_variable = { which=duck_dev_var value=4 }
             }
         }
-        prerequisites = { ca_ani_castle_tower_3 }
+        prerequisites = { ca_ani_castle_tower_05 }
         upgrades_from = ca_duck_quarters_1
 
         gold_cost = 250
@@ -527,13 +527,13 @@ castle = { # custom modifier loc are in duckevent file
         }
         is_active_trigger = {
             culture_group = duck_group
-            has_building = ca_ani_castle_tower_4_bis
+            has_building = ca_ani_castle_tower_08
             custom_tooltip = {
                 text = DUCK_DEV_MORE_6
                 check_variable = { which=duck_dev_var value=6 }
             }
         }
-        prerequisites = { ca_ani_castle_tower_4_bis }
+        prerequisites = { ca_ani_castle_tower_08 }
         upgrades_from = ca_duck_quarters_2
 
         gold_cost = 400
@@ -562,13 +562,13 @@ castle = { # custom modifier loc are in duckevent file
         }
         is_active_trigger = {
             culture_group = duck_group
-            has_building = ca_ani_castle_tower_8
+            has_building = ca_ani_castle_tower_15
             custom_tooltip = {
                 text = DUCK_DEV_MORE_8
                 check_variable = { which=duck_dev_var value=8 }
             }
         }
-        prerequisites = { ca_ani_castle_tower_8 }
+        prerequisites = { ca_ani_castle_tower_15 }
         upgrades_from = ca_duck_quarters_3
 
         gold_cost = 650
@@ -598,13 +598,13 @@ castle = { # custom modifier loc are in duckevent file
         }
         is_active_trigger = {
             culture_group = duck_group
-            has_building = ca_ani_castle_tower_1_bis
+            has_building = ca_ani_castle_tower_02
             custom_tooltip = {
                 text = DUCK_DEV_MORE_4
                 check_variable = { which=duck_dev_var value=4 }
             }
         }
-        prerequisites = { ca_ani_castle_tower_1_bis }
+        prerequisites = { ca_ani_castle_tower_02 }
         # upgrades_from = BaseBuilding
 
         gold_cost = 90
@@ -634,13 +634,13 @@ castle = { # custom modifier loc are in duckevent file
         }
         is_active_trigger = {
             culture_group = duck_group
-            has_building = ca_ani_castle_tower_4
+            has_building = ca_ani_castle_tower_07
             custom_tooltip = {
                 text = DUCK_DEV_MORE_7
                 check_variable = { which=duck_dev_var value=7 }
             }
         }
-        prerequisites = { ca_ani_castle_tower_4 }
+        prerequisites = { ca_ani_castle_tower_07 }
         upgrades_from = ca_duck_forge_1
 
         gold_cost = 130
@@ -670,13 +670,13 @@ castle = { # custom modifier loc are in duckevent file
         }
         is_active_trigger = {
             culture_group = duck_group
-            has_building = ca_ani_castle_tower_6_bis
+            has_building = ca_ani_castle_tower_12
             custom_tooltip = {
                 text = DUCK_DEV_MORE_9
                 check_variable = { which=duck_dev_var value=9 }
             }
         }
-        prerequisites = { ca_ani_castle_tower_6_bis }
+        prerequisites = { ca_ani_castle_tower_12 }
         upgrades_from = ca_duck_forge_2
 
         gold_cost = 230
@@ -707,13 +707,13 @@ castle = { # custom modifier loc are in duckevent file
         }
         is_active_trigger = {
             culture_group = duck_group
-            has_building = ca_ani_castle_tower_2_bis
+            has_building = ca_ani_castle_tower_04
             custom_tooltip = {
                 text = DUCK_DEV_MORE_5
                 check_variable = { which=duck_dev_var value=5 }
             }
         }
-        prerequisites = { ca_ani_castle_tower_2_bis }
+        prerequisites = { ca_ani_castle_tower_04 }
         # upgrades_from = BaseBuilding
 
         gold_cost = 180
@@ -742,13 +742,13 @@ castle = { # custom modifier loc are in duckevent file
         }
         is_active_trigger = {
             culture_group = duck_group
-            has_building = ca_ani_castle_tower_6
+            has_building = ca_ani_castle_tower_11
             custom_tooltip = {
                 text = DUCK_DEV_MORE_8
                 check_variable = { which=duck_dev_var value=8 }
             }
         }
-        prerequisites = { ca_ani_castle_tower_6 }
+        prerequisites = { ca_ani_castle_tower_11 }
         upgrades_from = ca_duck_stables_1
 
         gold_cost = 320
@@ -778,13 +778,13 @@ castle = { # custom modifier loc are in duckevent file
         }
         is_active_trigger = {
             culture_group = duck_group
-            has_building = ca_ani_castle_tower_2
+            has_building = ca_ani_castle_tower_03
             custom_tooltip = {
                 text = DUCK_DEV_MORE_6
                 check_variable = { which=duck_dev_var value=6 }
             }
         }
-        prerequisites = { ca_ani_castle_tower_2 }
+        prerequisites = { ca_ani_castle_tower_03 }
         # upgrades_from = BaseBuilding
 
         gold_cost = 90
@@ -794,7 +794,7 @@ castle = { # custom modifier loc are in duckevent file
         extra_tech_building_start = 1.0
 
         heavy_infantry = 25
-        retinuesize = 20
+        retinuesize = 25
         heavy_infantry_morale = 0.05
     }
     ca_duck_retinue_2 = {
@@ -814,13 +814,13 @@ castle = { # custom modifier loc are in duckevent file
         }
         is_active_trigger = {
             culture_group = duck_group
-            has_building = ca_ani_castle_tower_5
+            has_building = ca_ani_castle_tower_09
             custom_tooltip = {
                 text = DUCK_DEV_MORE_8
                 check_variable = { which=duck_dev_var value=8 }
             }
         }
-        prerequisites = { ca_ani_castle_tower_5 }
+        prerequisites = { ca_ani_castle_tower_09 }
         upgrades_from = ca_duck_retinue_1
 
         gold_cost = 130
@@ -830,7 +830,7 @@ castle = { # custom modifier loc are in duckevent file
         extra_tech_building_start = 1.0
 
         heavy_infantry = 65
-        retinuesize = 20
+        retinuesize = 25
         heavy_infantry_offensive = 0.05
     }
     ca_duck_retinue_3 = {
@@ -850,13 +850,13 @@ castle = { # custom modifier loc are in duckevent file
         }
         is_active_trigger = {
             culture_group = duck_group
-            has_building = ca_ani_castle_tower_7_bis
+            has_building = ca_ani_castle_tower_14
             custom_tooltip = {
                 text = DUCK_DEV_10
                 check_variable = { which=duck_dev_var value=10 }
             }
         }
-        prerequisites = { ca_ani_castle_tower_7_bis }
+        prerequisites = { ca_ani_castle_tower_14 }
         upgrades_from = ca_duck_retinue_2
 
         gold_cost = 230
@@ -866,7 +866,7 @@ castle = { # custom modifier loc are in duckevent file
         extra_tech_building_start = 1.0
 
         heavy_infantry = 110
-        retinuesize = 20
+        retinuesize = 30
         max_tradeposts = 1
     }
 }

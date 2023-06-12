@@ -1466,12 +1466,12 @@ title_decisions  = {
         potential = {
             tier = COUNT
             location = {
-                has_building = ca_ani_castle_tower_1
+                has_building = ca_ani_castle_tower_01
             }
             FROM = { NOT = { Is_really_animal_trigger = yes }}
         }
         allow = {
-            has_building = ca_ani_castle_tower_2_bis
+            has_building = ca_ani_castle_tower_04
             holder_scope = {
                 war = no
                 wealth = 1000
@@ -1516,12 +1516,12 @@ title_decisions  = {
         potential = {
             tier = COUNT
             location = {
-                has_building = ca_ani_castle_tower_1
+                has_building = ca_ani_castle_tower_01
             }
             FROM = { NOT = { Is_really_animal_trigger = yes }}
         }
         allow = {
-            has_building = ca_ani_castle_tower_4_bis
+            has_building = ca_ani_castle_tower_08
             holder_scope = {
                 war = no
                 wealth = 2000
@@ -1565,12 +1565,12 @@ title_decisions  = {
         potential = {
             tier = COUNT
             location = {
-                has_building = ca_ani_castle_tower_1
+                has_building = ca_ani_castle_tower_01
             }
             FROM = { NOT = { Is_really_animal_trigger = yes }}
         }
         allow = {
-            has_building = ca_ani_castle_tower_6_bis
+            has_building = ca_ani_castle_tower_12
             holder_scope = {
                 war = no
                 wealth = 3000
@@ -1614,12 +1614,12 @@ title_decisions  = {
         potential = {
             tier = COUNT
             location = {
-                has_building = ca_ani_castle_tower_1
+                has_building = ca_ani_castle_tower_01
             }
             FROM = { NOT = { Is_really_animal_trigger = yes }}
         }
         allow = {
-            has_building = ca_ani_castle_tower_9
+            has_building = ca_ani_castle_tower_16
             holder_scope = {
                 war = no
                 wealth = 4000

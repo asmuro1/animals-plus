@@ -14,27 +14,9 @@ ca_horse_retinue_2;Horse clan;Clan des chevaux;;;;;;;;;;;;;x
 ca_horse_garrison_1;Increased garrison;Garnison amélioré;;;;;;;;;;;;;x
 ca_horse_garrison_2;Increased garrison;Garnison amélioré;;;;;;;;;;;;;x
 ca_horse_speciality;Speed guild;Guilde de vitesse;;;;;;;;;;;;;x
-cat_curse;Allow cursing people;Permet de maudire des personnes;;;;;;;;;;;;;x
-cat_kills;Allow murder without plots;Permet d'assassiner sans complot;;;;;;;;;;;;;x
-cat_Use_money_favor;Allow exchange a favor for money;Permet d'échanger une faveur contre de l'argent;;;;;;;;;;;;x;
-cat_Favor_harasses;Allow to harass people using favors;Permet d'harceler des personnes en utilisant des faveurs;;;;;;;;;;;;;x
-cat_sabotage_action;Allow sabotage actions;Permet de faire des sabotages;;;;;;;;;;;;;x
-ca_cat_regiment_1;Training field;Camps d'entraînement;;;;;;;;;;;;;x
-ca_cat_regiment_2;Training field;Camps d'entraînement;;;;;;;;;;;;;x
-ca_cat_regiment_3;Training field;Camps d'entraînement;;;;;;;;;;;;;x
-ca_cat_influence_1;Delivrery zone;Zone de livraison;;;;;;;;;;;;;x
-ca_cat_influence_2;Delivrery zone;Zone de livraison;;;;;;;;;;;;;x
-ca_cat_influence_3;Delivrery zone;Zone de livraison;;;;;;;;;;;;;x
-ca_cat_stable_1;Barn;Étable;;;;;;;;;;;;;x
-ca_cat_stable_2;Barn;Étable;;;;;;;;;;;;;x
-ca_cat_retinue_1;Cat clan;Clan des chats;;;;;;;;;;;;;x
-ca_cat_retinue_2;Cat clan;Clan des chats;;;;;;;;;;;;;x
-ca_cat_armored_1;Armory;Armurerie;;;;;;;;;;;;;x
-ca_cat_armored_2;Armory;Armurerie;;;;;;;;;;;;;x
-ca_cat_speciality;Spy guild;Guilde des espions;;;;;;;;;;;;;x
-ca_dog_infantery_1;Infantry legion;Légion d'infanterie;;;;;;;;;;;;;x
-ca_dog_infantery_2;Infantry legion;Légion d'infanterie;;;;;;;;;;;;;x
-ca_dog_infantery_3;Infantry legion;Légion d'infanterie;;;;;;;;;;;;;x
+ca_dog_infantery_1;Infantry legion;Légion d’infanterie;;;;;;;;;;;;;x
+ca_dog_infantery_2;Infantry legion;Légion d’infanterie;;;;;;;;;;;;;x
+ca_dog_infantery_3;Infantry legion;Légion d’infanterie;;;;;;;;;;;;;x
 ca_dog_weapons_1;Weapons storage;Entrepôt d'armes;;;;;;;;;;;;x;
 ca_dog_weapons_2;Weapons storage;Entrepôt d'armes;;;;;;;;;;;;;x
 ca_dog_weapons_3;Weapons storage;Entrepôt d'armes;;;;;;;;;;;;;x
@@ -61,22 +43,22 @@ ca_dragon_speciality;Treasury's guilde;Guilde du trésor;;;;;;;;;;;;;x
 
 
 ####Bear update building
-ca_ani_castle_tower_1;Animal central tower I;Tour centrale animalière I;;;;;;;;;;;;;x
-ca_ani_castle_tower_1_bis;Animal central tower II;Tour centrale animalière II;;;;;;;;;;;;;x
-ca_ani_castle_tower_2;Animal central tower III;Tour centrale animalière III;;;;;;;;;;;;;x
-ca_ani_castle_tower_2_bis;Animal central tower IV;Tour centrale animalière IV;;;;;;;;;;;;;x
-ca_ani_castle_tower_3;Animal central tower V;Tour centrale animalière V;;;;;;;;;;;;;x
-ca_ani_castle_tower_3_bis;Animal central tower VI;Tour centrale animalière VI;;;;;;;;;;;;;x
-ca_ani_castle_tower_4;Animal central tower VII;Tour centrale animalière VII;;;;;;;;;;;;;x
-ca_ani_castle_tower_4_bis;Animal central tower VIII;Tour centrale animalière VIII;;;;;;;;;;;;;x
-ca_ani_castle_tower_5;Animal central tower IX;Tour centrale animalière IX;;;;;;;;;;;;;x
-ca_ani_castle_tower_5_bis;Animal central tower X;Tour centrale animalière X;;;;;;;;;;;;;x
-ca_ani_castle_tower_6;Animal central tower XI;Tour centrale animalière XI;;;;;;;;;;;;;x
-ca_ani_castle_tower_6_bis;Animal central tower XII;Tour centrale animalière XII;;;;;;;;;;;;;x
-ca_ani_castle_tower_7;Animal central tower XIII;Tour centrale animalière XIII;;;;;;;;;;;;;x
-ca_ani_castle_tower_7_bis;Animal central tower XIV;Tour centrale animalière XIV;;;;;;;;;;;;;x
-ca_ani_castle_tower_8;Animal central tower XV;Tour centrale animalière XV;;;;;;;;;;;;;x
-ca_ani_castle_tower_9;Animal central tower XVI;Tour centrale animalière XVI;;;;;;;;;;;;;x
+ca_ani_castle_tower_01;Animal central tower I;Tour centrale animalière I;;;;;;;;;;;;;x
+ca_ani_castle_tower_02;Animal central tower II;Tour centrale animalière II;;;;;;;;;;;;;x
+ca_ani_castle_tower_03;Animal central tower III;Tour centrale animalière III;;;;;;;;;;;;;x
+ca_ani_castle_tower_04;Animal central tower IV;Tour centrale animalière IV;;;;;;;;;;;;;x
+ca_ani_castle_tower_05;Animal central tower V;Tour centrale animalière V;;;;;;;;;;;;;x
+ca_ani_castle_tower_06;Animal central tower VI;Tour centrale animalière VI;;;;;;;;;;;;;x
+ca_ani_castle_tower_07;Animal central tower VII;Tour centrale animalière VII;;;;;;;;;;;;;x
+ca_ani_castle_tower_08;Animal central tower VIII;Tour centrale animalière VIII;;;;;;;;;;;;;x
+ca_ani_castle_tower_09;Animal central tower IX;Tour centrale animalière IX;;;;;;;;;;;;;x
+ca_ani_castle_tower_10;Animal central tower X;Tour centrale animalière X;;;;;;;;;;;;;x
+ca_ani_castle_tower_11;Animal central tower XI;Tour centrale animalière XI;;;;;;;;;;;;;x
+ca_ani_castle_tower_12;Animal central tower XII;Tour centrale animalière XII;;;;;;;;;;;;;x
+ca_ani_castle_tower_13;Animal central tower XIII;Tour centrale animalière XIII;;;;;;;;;;;;;x
+ca_ani_castle_tower_14;Animal central tower XIV;Tour centrale animalière XIV;;;;;;;;;;;;;x
+ca_ani_castle_tower_15;Animal central tower XV;Tour centrale animalière XV;;;;;;;;;;;;;x
+ca_ani_castle_tower_16;Animal central tower XVI;Tour centrale animalière XVI;;;;;;;;;;;;;x
 ca_ani_fort_1;Defensives walls;Murs défensifs;;;;;;;;;;;;;x
 ca_ani_fort_2;Defensives walls;Murs défensifs;;;;;;;;;;;;;x
 ca_ani_fort_3;Defensives walls;Murs défensifs;;;;;;;;;;;;;x
@@ -113,10 +95,10 @@ ca_ani_tech_1;Big library;Grande Bibliothèque;;;;;;;;;;;;;x
 ca_ani_tech_2;Ducal library;Bibliothèque ducale;;;;;;;;;;;;;x
 ca_ani_tech_3;Royal library;Bibliothèque royale;;;;;;;;;;;;;x
 ca_ani_tech_4;Imperial library;Bibliothèque impériale;;;;;;;;;;;;;x
-ca_bear_regiment_1;Training field;Salles d'entraînement;;;;;;;;;;;;;x
-ca_bear_regiment_2;Training field;Salles d'entraînement;;;;;;;;;;;;;x
-ca_bear_regiment_3;Training field;Salles d'entraînement;;;;;;;;;;;;;x
-ca_bear_regiment_4;Training field;Salles d'entraînement;;;;;;;;;;;;;x
+ca_bear_regiment_1;Training field;Salles d’entraînement;;;;;;;;;;;;;x
+ca_bear_regiment_2;Training field;Salles d’entraînement;;;;;;;;;;;;;x
+ca_bear_regiment_3;Training field;Salles d’entraînement;;;;;;;;;;;;;x
+ca_bear_regiment_4;Training field;Salles d’entraînement;;;;;;;;;;;;;x
 ca_bear_armor_1;Armory;Armurerie;;;;;;;;;;;;;x
 ca_bear_armor_2;Armory;Armurerie;;;;;;;;;;;;;x
 ca_bear_armor_3;Armory;Armurerie;;;;;;;;;;;;;x
@@ -384,6 +366,35 @@ ho_eleph_techno_lab_desc;Laboratory where technology are researched; laboratoire
 ho_eleph_climat_lab_desc;Laboratory allowing climate change to reduce the province supply and taxs;Laboratoire permettant de réduire l'approvisionnement de la province;;;;;;;;;;;;x
 ho_eleph_disease_lab_desc;Laboratory creating epidemies;Laboratoire qui crée des épidémies;;;;;;;;;;;;x
 
-### tooltips
 
-ELEPH_TT_STARTED_ELEPH_STUDY;Has an elephant herd;A accueilli un troupeau d'éléphant;;;;;;;;;;;;x
+### cat update
+ca_cat_army_1;Barraks;Casernes;;;;;;;;;;;;x
+ca_cat_army_2;Barraks;Casernes;;;;;;;;;;;;x
+ca_cat_army_3;Barraks;Casernes;;;;;;;;;;;;x
+ca_cat_army_4;Barraks;Casernes;;;;;;;;;;;;x
+ca_cat_archery_1;Archery area;Zone de tir à l'arc;;;;;;;;;;;;x
+ca_cat_archery_2;Archery area;Zone de tir à l'arc;;;;;;;;;;;;x
+ca_cat_archery_3;Archery area;Zone de tir à l'arc;;;;;;;;;;;;x
+ca_cat_stable_1;Stables;Étable;;;;;;;;;;;;x
+ca_cat_stable_2;Stables;Étable;;;;;;;;;;;;x
+ca_cat_stable_3;Stables;Étable;;;;;;;;;;;;x
+ca_cat_forge_1;Forge;Forge;;;;;;;;;;;;;x
+ca_cat_forge_2;Forge;Forge;;;;;;;;;;;;;x
+ca_cat_retinue_1;Cats clan;Clan des chats;;;;;;;;;;;;x
+ca_cat_retinue_2;Cats clan;Clan des chats;;;;;;;;;;;;x
+ca_cat_retinue_3;Cats clan;Clan des chats;;;;;;;;;;;;x
+ca_cat_retinue_4;Cats clan;Clan des chats;;;;;;;;;;;;x
+ca_cat_speciality_1;Adventurer guild;Guilde des aventuriers;;;;;;;;;;;;x
+ca_cat_speciality_2;Adventurer guild;Guilde des aventuriers;;;;;;;;;;;;x
+tb_cat_army_1;Barraks;Casernes;;;;;;;;;;;;x
+tb_cat_army_2;Barraks;Casernes;;;;;;;;;;;;x
+tb_cat_army_3;Barraks;Casernes;;;;;;;;;;;;x
+tb_cat_army_4;Barraks;Casernes;;;;;;;;;;;;x
+tb_cat_archer_1;Archery area;Zone de tir à l'arc;;;;;;;;;;;;x
+tb_cat_archer_2;Archery area;Zone de tir à l'arc;;;;;;;;;;;;x
+tb_cat_archer_3;Archery area;Zone de tir à l'arc;;;;;;;;;;;;x
+tb_cat_archer_4;Archery area;Zone de tir à l'arc;;;;;;;;;;;;x
+tb_cat_stable_1;Stables;Étable;;;;;;;;;;;;x
+tb_cat_stable_2;Stables;Étable;;;;;;;;;;;;x
+tb_cat_stable_3;Stables;Étable;;;;;;;;;;;;x
+tb_cat_stable_4;Stables;Étable;;;;;;;;;;;;x

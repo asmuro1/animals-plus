@@ -3,14 +3,14 @@
 ###so building code are juste copy-past can have no relation with actual bonuses
 
 castle = {
-    #Castle tower: building that unlock every building other than tower
-    ca_ani_castle_tower_1 = {           #1
+    #Castle tower: building that unlock every other animal building
+    ca_ani_castle_tower_01 = {
         # desc = ca_ani_castle_tower_desc
         add_number_to_name = no
 
         potential = {
             OR = {
-                FROMFROM = { has_building = ca_ani_castle_tower_1 }
+                FROMFROM = { has_building = ca_ani_castle_tower_01 }
                 Is_really_animal_trigger = yes
             }
         }
@@ -31,13 +31,13 @@ castle = {
         fort_level = 0.5
         tax_income = 0.4
     }
-    ca_ani_castle_tower_1_bis = {       #2
+    ca_ani_castle_tower_02 = {
         # desc = ca_ani_castle_tower_desc
         add_number_to_name = no
 
         potential = {
             OR = {
-                FROMFROM = { has_building = ca_ani_castle_tower_1_bis }
+                FROMFROM = { has_building = ca_ani_castle_tower_02 }
                 Is_really_animal_trigger = yes
             }
         }
@@ -57,7 +57,7 @@ castle = {
             Is_really_animal_trigger = yes
         }
 
-        upgrades_from	= ca_ani_castle_tower_1
+        upgrades_from	= ca_ani_castle_tower_01
 
         piety_cost = 75
         build_time = 257
@@ -68,13 +68,13 @@ castle = {
         fort_level = 0.5
         tax_income = 0.4
     }
-    ca_ani_castle_tower_2 = {           #3
+    ca_ani_castle_tower_03 = {
         # desc = ca_ani_castle_tower_desc
         add_number_to_name = no
 
         potential = {
             OR = {
-                FROMFROM = { has_building = ca_ani_castle_tower_2 }
+                FROMFROM = { has_building = ca_ani_castle_tower_03 }
                 Is_really_animal_trigger = yes
             }
         }
@@ -94,7 +94,7 @@ castle = {
             Is_really_animal_trigger = yes
         }
 
-        upgrades_from	= ca_ani_castle_tower_1_bis
+        upgrades_from	= ca_ani_castle_tower_02
 
         prestige_cost = 300
         build_time = 365
@@ -105,13 +105,13 @@ castle = {
         fort_level = 0.5
         tax_income = 0.4
     }
-    ca_ani_castle_tower_2_bis = {       #4
+    ca_ani_castle_tower_04 = {
         # desc = ca_ani_castle_tower_desc
         add_number_to_name = no
 
         potential = {
             OR = {
-                FROMFROM = { has_building = ca_ani_castle_tower_2_bis }
+                FROMFROM = { has_building = ca_ani_castle_tower_04 }
                 Is_really_animal_trigger = yes
             }
         }
@@ -131,7 +131,7 @@ castle = {
             Is_really_animal_trigger = yes
         }
 
-        upgrades_from	= ca_ani_castle_tower_2
+        upgrades_from	= ca_ani_castle_tower_03
 
         piety_cost = 150
         build_time = 365
@@ -142,13 +142,13 @@ castle = {
         fort_level = 0.5
         tax_income = 0.4
     }
-    ca_ani_castle_tower_3 = {           #5
+    ca_ani_castle_tower_05 = {
         # desc = ca_ani_castle_tower_desc
         add_number_to_name = no
 
         potential = {
             OR = {
-                FROMFROM = { has_building = ca_ani_castle_tower_3 }
+                FROMFROM = { has_building = ca_ani_castle_tower_05 }
                 Is_really_animal_trigger = yes
             }
         }
@@ -174,7 +174,7 @@ castle = {
             Is_really_animal_trigger = yes
         }
 
-        upgrades_from	= ca_ani_castle_tower_2_bis
+        upgrades_from	= ca_ani_castle_tower_04
 
         prestige_cost = 500
         build_time = 500
@@ -185,13 +185,13 @@ castle = {
         fort_level = 0.5
         tax_income = 0.4
     }
-    ca_ani_castle_tower_3_bis = {       #6
+    ca_ani_castle_tower_06 = {
         # desc = ca_ani_castle_tower_desc
         add_number_to_name = no
 
         potential = {
             OR = {
-                FROMFROM = { has_building = ca_ani_castle_tower_3_bis }
+                FROMFROM = { has_building = ca_ani_castle_tower_06 }
                 Is_really_animal_trigger = yes
             }
         }
@@ -217,7 +217,7 @@ castle = {
             Is_really_animal_trigger = yes
         }
 
-        upgrades_from	= ca_ani_castle_tower_3
+        upgrades_from	= ca_ani_castle_tower_05
 
         piety_cost = 250
         build_time = 500
@@ -228,13 +228,13 @@ castle = {
         fort_level = 0.5
         tax_income = 0.4
     }
-    ca_ani_castle_tower_4 = {           #7
+    ca_ani_castle_tower_07 = {
         # desc = ca_ani_castle_tower_desc
         add_number_to_name = no
 
         potential = {
             OR = {
-                FROMFROM = { has_building = ca_ani_castle_tower_4 }
+                FROMFROM = { has_building = ca_ani_castle_tower_07 }
                 Is_really_animal_trigger = yes
             }
         }
@@ -260,7 +260,7 @@ castle = {
             Is_really_animal_trigger = yes
         }
 
-        upgrades_from	= ca_ani_castle_tower_3_bis
+        upgrades_from	= ca_ani_castle_tower_06
 
         prestige_cost = 750
         build_time = 700
@@ -271,13 +271,13 @@ castle = {
         fort_level = 0.5
         tax_income = 0.4
     }
-    ca_ani_castle_tower_4_bis = {       #8
+    ca_ani_castle_tower_08 = {
         # desc = ca_ani_castle_tower_desc
         add_number_to_name = no
 
         potential = {
             OR = {
-                FROMFROM = { has_building = ca_ani_castle_tower_4_bis }
+                FROMFROM = { has_building = ca_ani_castle_tower_08 }
                 Is_really_animal_trigger = yes
             }
         }
@@ -303,7 +303,7 @@ castle = {
             Is_really_animal_trigger = yes
         }
 
-        upgrades_from = ca_ani_castle_tower_4
+        upgrades_from = ca_ani_castle_tower_07
 
         piety_cost = 375
         build_time = 700
@@ -314,13 +314,13 @@ castle = {
         fort_level = 0.5
         tax_income = 0.4
     }
-    ca_ani_castle_tower_5 = {           #9
+    ca_ani_castle_tower_09 = {
         # desc = ca_ani_castle_tower_desc
         add_number_to_name = no
 
         potential = {
             OR = {
-                FROMFROM = { has_building = ca_ani_castle_tower_5 }
+                FROMFROM = { has_building = ca_ani_castle_tower_09 }
                 Is_really_animal_trigger = yes
             }
         }
@@ -346,7 +346,7 @@ castle = {
             Is_really_animal_trigger = yes
         }
 
-        upgrades_from	= ca_ani_castle_tower_4_bis
+        upgrades_from	= ca_ani_castle_tower_08
 
         prestige_cost = 1000
         build_time = 900
@@ -357,13 +357,13 @@ castle = {
         fort_level = 0.5
         tax_income = 0.4
     }
-    ca_ani_castle_tower_5_bis = {       #10
+    ca_ani_castle_tower_10 = {
         # desc = ca_ani_castle_tower_desc
         add_number_to_name = no
 
         potential = {
             OR = {
-                FROMFROM = { has_building = ca_ani_castle_tower_5_bis }
+                FROMFROM = { has_building = ca_ani_castle_tower_10 }
                 Is_really_animal_trigger = yes
             }
         }
@@ -389,7 +389,7 @@ castle = {
             Is_really_animal_trigger = yes
         }
 
-        upgrades_from = ca_ani_castle_tower_5
+        upgrades_from = ca_ani_castle_tower_09
 
         piety_cost = 500
         build_time = 900
@@ -400,13 +400,13 @@ castle = {
         fort_level = 0.5
         tax_income = 0.4
     }
-    ca_ani_castle_tower_6 = {           #11
+    ca_ani_castle_tower_11 = {
         # desc = ca_ani_castle_tower_desc
         add_number_to_name = no
 
         potential = {
             OR = {
-                FROMFROM = { has_building = ca_ani_castle_tower_6 }
+                FROMFROM = { has_building = ca_ani_castle_tower_11 }
                 Is_really_animal_trigger = yes
             }
         }
@@ -432,7 +432,7 @@ castle = {
             Is_really_animal_trigger = yes
         }
 
-        upgrades_from	= ca_ani_castle_tower_5_bis
+        upgrades_from	= ca_ani_castle_tower_10
 
         prestige_cost = 1500
         build_time = 1000
@@ -443,13 +443,13 @@ castle = {
         fort_level = 0.5
         tax_income = 0.4
     }
-    ca_ani_castle_tower_6_bis = {       #12
+    ca_ani_castle_tower_12 = {
         # desc = ca_ani_castle_tower_desc
         add_number_to_name = no
 
         potential = {
             OR = {
-                FROMFROM = { has_building = ca_ani_castle_tower_6_bis }
+                FROMFROM = { has_building = ca_ani_castle_tower_12 }
                 Is_really_animal_trigger = yes
             }
         }
@@ -475,7 +475,7 @@ castle = {
             Is_really_animal_trigger = yes
         }
 
-        upgrades_from = ca_ani_castle_tower_6
+        upgrades_from = ca_ani_castle_tower_11
 
         piety_cost = 750
         build_time = 1000
@@ -486,13 +486,13 @@ castle = {
         fort_level = 0.5
         tax_income = 0.4
     }
-    ca_ani_castle_tower_7 = {           #13
+    ca_ani_castle_tower_13 = {
         # desc = ca_ani_castle_tower_desc
         add_number_to_name = no
 
         potential = {
             OR = {
-                FROMFROM = { has_building = ca_ani_castle_tower_7 }
+                FROMFROM = { has_building = ca_ani_castle_tower_13 }
                 Is_really_animal_trigger = yes
             }
         }
@@ -518,7 +518,7 @@ castle = {
             Is_really_animal_trigger = yes
         }
 
-        upgrades_from	= ca_ani_castle_tower_6_bis
+        upgrades_from	= ca_ani_castle_tower_12
 
         prestige_cost = 2500
         build_time = 1250
@@ -529,13 +529,13 @@ castle = {
         fort_level = 0.5
         tax_income = 0.4
     }
-    ca_ani_castle_tower_7_bis = {       #14
+    ca_ani_castle_tower_14 = {
         # desc = ca_ani_castle_tower_desc
         add_number_to_name = no
 
         potential = {
             OR = {
-                FROMFROM = { has_building = ca_ani_castle_tower_7_bis }
+                FROMFROM = { has_building = ca_ani_castle_tower_14 }
                 Is_really_animal_trigger = yes
             }
         }
@@ -561,7 +561,7 @@ castle = {
             Is_really_animal_trigger = yes
         }
 
-        upgrades_from = ca_ani_castle_tower_7
+        upgrades_from = ca_ani_castle_tower_13
 
         piety_cost = 1250
         build_time = 1250
@@ -572,13 +572,13 @@ castle = {
         fort_level = 0.5
         tax_income = 0.4
     }
-    ca_ani_castle_tower_8 = {           #15
+    ca_ani_castle_tower_15 = {
         # desc = ca_ani_castle_tower_desc
         add_number_to_name = no
 
         potential = {
             OR = {
-                FROMFROM = { has_building = ca_ani_castle_tower_8 }
+                FROMFROM = { has_building = ca_ani_castle_tower_15 }
                 Is_really_animal_trigger = yes
             }
         }
@@ -604,7 +604,7 @@ castle = {
             Is_really_animal_trigger = yes
         }
 
-        upgrades_from	= ca_ani_castle_tower_7_bis
+        upgrades_from	= ca_ani_castle_tower_14
 
         prestige_cost = 5000
         build_time = 1500
@@ -615,12 +615,12 @@ castle = {
         fort_level = 0.5
         tax_income = 0.4
     }
-    ca_ani_castle_tower_9 = {           #16
+    ca_ani_castle_tower_16 = {
         add_number_to_name = no
 
         potential = {
             OR = {
-                FROMFROM = { has_building = ca_ani_castle_tower_9 }
+                FROMFROM = { has_building = ca_ani_castle_tower_16 }
                 Is_really_animal_trigger = yes
             }
         }
@@ -646,7 +646,7 @@ castle = {
             Is_really_animal_trigger = yes
         }
 
-        upgrades_from	= ca_ani_castle_tower_8
+        upgrades_from	= ca_ani_castle_tower_15
 
         piety_cost = 2500
         build_time = 1500
@@ -709,7 +709,7 @@ castle = {
                 }
             }
         }
-        prerequisites = { ca_ani_castle_tower_1 }
+        prerequisites = { ca_ani_castle_tower_01 }
         not_if_x_exists = { ca_ani_siege_1 ca_ani_garrison_1}
 
         gold_cost = 120
@@ -771,7 +771,7 @@ castle = {
                 }
             }
         }
-        prerequisites = { ca_ani_castle_tower_2 }
+        prerequisites = { ca_ani_castle_tower_03 }
         not_if_x_exists = { ca_ani_siege_1 ca_ani_garrison_1}
         upgrades_from	= ca_ani_fort_1
 
@@ -828,7 +828,7 @@ castle = {
                 }
             }
         }
-        prerequisites = { ca_ani_castle_tower_3_bis }
+        prerequisites = { ca_ani_castle_tower_06 }
         not_if_x_exists = { ca_ani_siege_1 ca_ani_garrison_1}
         upgrades_from	= ca_ani_fort_2
 
@@ -885,7 +885,7 @@ castle = {
                 }
             }
         }
-        prerequisites = { ca_ani_castle_tower_5_bis }
+        prerequisites = { ca_ani_castle_tower_10 }
         not_if_x_exists = { ca_ani_siege_1 ca_ani_garrison_1}
         upgrades_from	= ca_ani_fort_3
 
@@ -948,7 +948,7 @@ castle = {
                 }
             }
         }
-        prerequisites = { ca_ani_castle_tower_1 }
+        prerequisites = { ca_ani_castle_tower_01 }
         not_if_x_exists = { ca_ani_fort_1 ca_ani_garrison_1}
         # upgrades_from	= BaseBuilding
 
@@ -1004,7 +1004,7 @@ castle = {
                 }
             }
         }
-        prerequisites = { ca_ani_castle_tower_2 }
+        prerequisites = { ca_ani_castle_tower_03 }
         not_if_x_exists = { ca_ani_fort_1 ca_ani_garrison_1}
         upgrades_from	= ca_ani_siege_1
 
@@ -1060,7 +1060,7 @@ castle = {
                 }
             }
         }
-        prerequisites = { ca_ani_castle_tower_3_bis }
+        prerequisites = { ca_ani_castle_tower_06 }
         not_if_x_exists = { ca_ani_fort_1 ca_ani_garrison_1}
         upgrades_from	= ca_ani_siege_2
 
@@ -1116,7 +1116,7 @@ castle = {
                 }
             }
         }
-        prerequisites = { ca_ani_castle_tower_5_bis }
+        prerequisites = { ca_ani_castle_tower_10 }
         not_if_x_exists = { ca_ani_fort_1 ca_ani_garrison_1}
         upgrades_from	= ca_ani_siege_3
 
@@ -1178,7 +1178,7 @@ castle = {
                 }
             }
         }
-        prerequisites = { ca_ani_castle_tower_1 }
+        prerequisites = { ca_ani_castle_tower_01 }
         not_if_x_exists = { ca_ani_siege_1 ca_ani_fort_1}
         # upgrades_from	= BaseBuilding
 
@@ -1235,7 +1235,7 @@ castle = {
                 }
             }
         }
-        prerequisites = { ca_ani_castle_tower_2 }
+        prerequisites = { ca_ani_castle_tower_03 }
         not_if_x_exists = { ca_ani_siege_1 ca_ani_fort_1}
         upgrades_from	= ca_ani_garrison_1
 
@@ -1292,7 +1292,7 @@ castle = {
                 }
             }
         }
-        prerequisites = { ca_ani_castle_tower_3_bis }
+        prerequisites = { ca_ani_castle_tower_06 }
         not_if_x_exists = { ca_ani_siege_1 ca_ani_fort_1}
         upgrades_from	= ca_ani_garrison_2
 
@@ -1349,7 +1349,7 @@ castle = {
                 }
             }
         }
-        prerequisites = { ca_ani_castle_tower_5_bis }
+        prerequisites = { ca_ani_castle_tower_10 }
         not_if_x_exists = { ca_ani_siege_1 ca_ani_fort_1}
         upgrades_from	= ca_ani_garrison_3
 
@@ -1428,7 +1428,7 @@ castle = {
                 }
             }
         }
-        prerequisites = { ca_ani_castle_tower_1_bis }
+        prerequisites = { ca_ani_castle_tower_02 }
         not_if_x_exists = { ca_ani_desmene_1 ca_ani_build_cost_1}
         # upgrades_from	=
 
@@ -1490,7 +1490,7 @@ castle = {
                 }
             }
         }
-        prerequisites = { ca_ani_castle_tower_3 }
+        prerequisites = { ca_ani_castle_tower_05 }
         not_if_x_exists = { ca_ani_desmene_1 ca_ani_build_cost_1}
         upgrades_from	= ca_ani_trade_build_1
 
@@ -1554,7 +1554,7 @@ castle = {
                 }
             }
         }
-        prerequisites = { ca_ani_castle_tower_4_bis }
+        prerequisites = { ca_ani_castle_tower_08 }
         not_if_x_exists = { ca_ani_desmene_1 ca_ani_build_cost_1}
         upgrades_from	= ca_ani_trade_build_2
 
@@ -1620,7 +1620,7 @@ castle = {
                 }
             }
         }
-        prerequisites = { ca_ani_castle_tower_6_bis }
+        prerequisites = { ca_ani_castle_tower_12 }
         not_if_x_exists = { ca_ani_build_cost_1 ca_ani_desmene_1 }
         upgrades_from = ca_ani_trade_build_3
 
@@ -1657,13 +1657,14 @@ castle = {
                     panda_vassal_bureau_active_trigger = yes
                 }
             }
+            is_capital = yes
         }
         trigger = {
             TECH_CASTLE_CONSTRUCTION = 1
             TECH_FORTIFICATIONS_CONSTRUCTION = 1
             NOR = {
-                has_building = ca_ani_trade_build_1
                 has_building = ca_ani_desmene_1
+                has_building = ca_ani_trade_build_1
             }
             conditional_tooltip = {
                 trigger = {
@@ -1696,7 +1697,7 @@ castle = {
                 }
             }
         }
-        prerequisites = { ca_ani_castle_tower_1_bis }
+        prerequisites = { ca_ani_castle_tower_02 }
         not_if_x_exists = { ca_ani_trade_build_1 ca_ani_desmene_1}
         # upgrades_from	=
 
@@ -1727,6 +1728,7 @@ castle = {
                     panda_vassal_bureau_active_trigger = yes
                 }
             }
+            is_capital = yes
         }
         trigger = {
             TECH_CASTLE_CONSTRUCTION = 3
@@ -1758,7 +1760,7 @@ castle = {
                 }
             }
         }
-        prerequisites = { ca_ani_castle_tower_3 }
+        prerequisites = { ca_ani_castle_tower_05 }
         not_if_x_exists = { ca_ani_trade_build_1 ca_ani_desmene_1}
         upgrades_from	= ca_ani_build_cost_1
 
@@ -1789,6 +1791,7 @@ castle = {
                     panda_vassal_bureau_active_trigger = yes
                 }
             }
+            is_capital = yes
         }
         trigger = {
             TECH_CASTLE_CONSTRUCTION = 4
@@ -1822,7 +1825,7 @@ castle = {
                 }
             }
         }
-        prerequisites = { ca_ani_castle_tower_4_bis }
+        prerequisites = { ca_ani_castle_tower_08 }
         not_if_x_exists = { ca_ani_trade_build_1 ca_ani_desmene_1}
         upgrades_from	= ca_ani_build_cost_2
 
@@ -1854,6 +1857,7 @@ castle = {
                     panda_vassal_bureau_active_trigger = yes
                 }
             }
+            is_capital = yes
         }
         trigger = {
             TECH_CASTLE_CONSTRUCTION = 6
@@ -1888,7 +1892,7 @@ castle = {
             }
         }
 
-        prerequisites = { ca_ani_castle_tower_6_bis }
+        prerequisites = { ca_ani_castle_tower_12 }
         not_if_x_exists = { ca_ani_build_cost_1 ca_ani_desmene_1 }
         upgrades_from = ca_ani_build_cost_3
 
@@ -1963,7 +1967,7 @@ castle = {
                 }
             }
         }
-        prerequisites = { ca_ani_castle_tower_1_bis }
+        prerequisites = { ca_ani_castle_tower_02 }
         not_if_x_exists = { ca_ani_trade_build_1 ca_ani_build_cost_1}
         # upgrades_from	=
 
@@ -2026,7 +2030,7 @@ castle = {
                 }
             }
         }
-        prerequisites = { ca_ani_castle_tower_3 }
+        prerequisites = { ca_ani_castle_tower_05 }
         not_if_x_exists = { ca_ani_trade_build_1 ca_ani_build_cost_1}
         upgrades_from	= ca_ani_desmene_1
 
@@ -2090,7 +2094,7 @@ castle = {
                 }
             }
         }
-        prerequisites = { ca_ani_castle_tower_4_bis }
+        prerequisites = { ca_ani_castle_tower_08 }
         not_if_x_exists = { ca_ani_trade_build_1 ca_ani_build_cost_1}
         upgrades_from	= ca_ani_desmene_2
 
@@ -2157,7 +2161,7 @@ castle = {
             }
         }
 
-        prerequisites = { ca_ani_castle_tower_6_bis }
+        prerequisites = { ca_ani_castle_tower_12 }
         not_if_x_exists = { ca_ani_build_cost_1 ca_ani_trade_build_1 }
         upgrades_from = ca_ani_desmene_3
 
@@ -2236,7 +2240,7 @@ castle = {
                 }
             }
         }
-        prerequisites = { ca_ani_castle_tower_2_bis }
+        prerequisites = { ca_ani_castle_tower_04 }
         not_if_x_exists = { ca_ani_tech_1 ca_ani_piety_1}
         # upgrades_from	=
 
@@ -2312,7 +2316,7 @@ castle = {
                 }
             }
         }
-        prerequisites = { ca_ani_castle_tower_5 }
+        prerequisites = { ca_ani_castle_tower_09 }
         not_if_x_exists = { ca_ani_tech_1 ca_ani_piety_1}
         upgrades_from	= ca_ani_prest_1
 
@@ -2389,7 +2393,7 @@ castle = {
                 }
             }
         }
-        prerequisites = { ca_ani_castle_tower_7_bis }
+        prerequisites = { ca_ani_castle_tower_14 }
         not_if_x_exists = { ca_ani_tech_1 ca_ani_piety_1 }
         upgrades_from = ca_ani_prest_2
 
@@ -2466,7 +2470,7 @@ castle = {
                 }
             }
         }
-        prerequisites = { ca_ani_castle_tower_9 }
+        prerequisites = { ca_ani_castle_tower_16 }
         not_if_x_exists = { ca_ani_tech_1 ca_ani_piety_1 }
         upgrades_from = ca_ani_prest_3
 
@@ -2545,7 +2549,7 @@ castle = {
                 }
             }
         }
-        prerequisites = { ca_ani_castle_tower_2_bis }
+        prerequisites = { ca_ani_castle_tower_04 }
         not_if_x_exists = { ca_ani_prest_1 ca_ani_tech_1}
         # upgrades_from	=
 
@@ -2621,7 +2625,7 @@ castle = {
                 }
             }
         }
-        prerequisites   = { ca_ani_castle_tower_5 }
+        prerequisites   = { ca_ani_castle_tower_09 }
         not_if_x_exists = { ca_ani_prest_1 ca_ani_tech_1}
         upgrades_from	= ca_ani_piety_1
 
@@ -2698,7 +2702,7 @@ castle = {
                 }
             }
         }
-        prerequisites = { ca_ani_castle_tower_7_bis }
+        prerequisites = { ca_ani_castle_tower_14 }
         not_if_x_exists = { ca_ani_tech_1 ca_ani_prest_1 }
         upgrades_from = ca_ani_piety_2
 
@@ -2775,7 +2779,7 @@ castle = {
                 }
             }
         }
-        prerequisites = { ca_ani_castle_tower_9 }
+        prerequisites = { ca_ani_castle_tower_16 }
         not_if_x_exists = { ca_ani_tech_1 ca_ani_prest_1 }
         upgrades_from = ca_ani_prest_3
 
@@ -2854,7 +2858,7 @@ castle = {
                 }
             }
         }
-        prerequisites = { ca_ani_castle_tower_2_bis }
+        prerequisites = { ca_ani_castle_tower_04 }
         not_if_x_exists = { ca_ani_prest_1 ca_ani_piety_1}
         # upgrades_from	=
 
@@ -2930,7 +2934,7 @@ castle = {
                 }
             }
         }
-        prerequisites = { ca_ani_castle_tower_5 }
+        prerequisites = { ca_ani_castle_tower_09 }
         not_if_x_exists = { ca_ani_prest_1 ca_ani_piety_1}
         upgrades_from	= ca_ani_tech_1
 
@@ -3007,7 +3011,7 @@ castle = {
             }
         }
 
-        prerequisites = { ca_ani_castle_tower_7_bis }
+        prerequisites = { ca_ani_castle_tower_14 }
         not_if_x_exists = { ca_ani_prest_1 ca_ani_piety_1}
         upgrades_from = ca_ani_tech_2
 
@@ -3083,7 +3087,7 @@ castle = {
                 }
             }
         }
-        prerequisites = { ca_ani_castle_tower_9 }
+        prerequisites = { ca_ani_castle_tower_16 }
         not_if_x_exists = { ca_ani_prest_1 ca_ani_piety_1}
         upgrades_from = ca_ani_tech_3
 
@@ -3144,7 +3148,7 @@ tribal = {
         }
 
         upgrades_from = tb_ani_tribal_tower_1
-        convert_to_castle = ca_ani_castle_tower_1
+        convert_to_castle = ca_ani_castle_tower_01
         # convert_to_temple = tp_ani_temple_tower_1
 
         piety_cost = 100
@@ -3205,7 +3209,7 @@ tribal = {
         }
 
         upgrades_from	= tb_ani_tribal_tower_3
-        convert_to_castle = ca_ani_castle_tower_1_bis
+        convert_to_castle = ca_ani_castle_tower_02
         # convert_to_temple = tp_ani_temple_tower_2
 
         piety_cost = 200
