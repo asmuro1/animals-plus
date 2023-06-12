@@ -1,0 +1,20 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+
+##### trait localisation
+hibernation;Hiberning;Hibernation;;;;;;;;;;;;;x
+hibernation_desc;Currently in hibernation.;En cours d'hibernation.;;;;;;;;;;;;;x
+human_bear_illness;Unknown illness;Maladie inconnu;;;;;;;;;;;;x
+human_bear_illness_desc;Have an unknown disease that seems to modify the body;A une maladie inconnu qui semble modifier le corps;;;;;;;;;;;;x
+human_bear;Bear-man;Homme-ours;;;;;;;;;;;;x
+human_bear_desc;Bear that has the power to transform human into bear;Ours qui a le pouvoir de transformer les humain en tant qu'ours;;;;;;;;;;;;x
+######
+succession_bear_heritage_winner;Bear tournament champion;Gagnant du tournois ours;;;;;;;;;;;;x
+succession_bear_heritage_winner_desc;Champion of the bear succession Tournament;Gagnant du tournois de succession des ours;;;;;;;;;;;;x
+succession_bear_heritage_looser;Bear tournament looser;Perdant du tournois ours;;;;;;;;;;;;x
+succession_bear_heritage_looser_desc;As a looser of the bear tournament, [GetSheHe] as lost [GetHerHis] right to inherit;En tant que perdant du tournois d'héritage ours, [GetIlElle] a perdu ses droits d'héritage aux titres;;;;;;;;;;;;x
+bear_hibernation_immortality;hibernation disease;Maladie d'hibernation;;;;;;;;;;;;x
+bear_hibernation_immortality_desc;A strange disease that come from hibernation. Because of it, that bear seems to need less hibernation to live...;Une étrange maladie obtenu lors de l'hibernation. A cause d'elle, les hibernations sont moins fréquentes...;;;;;;;;;;;;x
+bear_religious_right;Religious right;Droits religieux;;;;;;;;;;;;x
+bear_religious_right_desc;The liege allow to practice his religion dispite his own;Le seigneur lige permet la pratique de la religion du vassal qui est différente de la sienne;;;;;;;;;;;;x
+sympathy_animals_religions;Animal sympathy;Sympathie animale;;;;;;;;;;;;x
+sympathy_animals_religions_desc;This character, throught not animal, has a spacial sympathy for animals religions;Ce personnage, bien que non animal, montre une certaine tolérance et une compréhension relative des animaux;;;;;;;;;;;;x

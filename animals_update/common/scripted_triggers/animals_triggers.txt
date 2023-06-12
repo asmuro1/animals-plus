@@ -1,0 +1,661 @@
+Is_animal_trigger = {
+    OR = {
+        culture = horse
+        culture = dog_culture
+        culture = dragon_culture
+    }
+}
+
+Is_really_animal_trigger = {
+    OR = {
+        culture = dragon_culture
+        culture = horse
+        culture = dog_culture
+        culture_group = cat_group
+        culture_group = bear_group
+        culture_group = hedgehog_group
+        culture_group = panda_group
+        culture_group = duck_group
+        culture_group = elephant_group
+    }
+}
+
+#send true if colonization precess is at least at step xx
+colonization_step_10 = {
+    has_province_modifier = colonization_lvl10
+}
+colonization_step_09 = {
+    OR = {
+        has_province_modifier = colonization_lvl9
+        has_province_modifier = colonization_lvl10
+    }
+}
+colonization_step_08 = {
+    OR = {
+        has_province_modifier = colonization_lvl8
+        has_province_modifier = colonization_lvl9
+        has_province_modifier = colonization_lvl10
+    }
+}
+colonization_step_07 = {
+    OR = {
+        has_province_modifier = colonization_lvl7
+        has_province_modifier = colonization_lvl8
+        has_province_modifier = colonization_lvl9
+        has_province_modifier = colonization_lvl10
+    }
+}
+colonization_step_06 = {
+    OR = {
+        has_province_modifier = colonization_lvl6
+        has_province_modifier = colonization_lvl7
+        has_province_modifier = colonization_lvl8
+        has_province_modifier = colonization_lvl9
+        has_province_modifier = colonization_lvl10
+    }
+}
+colonization_step_05 = {
+    OR = {
+        has_province_modifier = colonization_lvl5
+        has_province_modifier = colonization_lvl6
+        has_province_modifier = colonization_lvl7
+        has_province_modifier = colonization_lvl8
+        has_province_modifier = colonization_lvl9
+        has_province_modifier = colonization_lvl10
+    }
+}
+colonization_step_04 = {
+    OR = {
+        has_province_modifier = colonization_lvl4
+        has_province_modifier = colonization_lvl5
+        has_province_modifier = colonization_lvl6
+        has_province_modifier = colonization_lvl7
+        has_province_modifier = colonization_lvl8
+        has_province_modifier = colonization_lvl9
+        has_province_modifier = colonization_lvl10
+    }
+}
+colonization_step_03 = {
+    OR = {
+        has_province_modifier = colonization_lvl3
+        has_province_modifier = colonization_lvl4
+        has_province_modifier = colonization_lvl5
+        has_province_modifier = colonization_lvl6
+        has_province_modifier = colonization_lvl7
+        has_province_modifier = colonization_lvl8
+        has_province_modifier = colonization_lvl9
+        has_province_modifier = colonization_lvl10
+    }
+}
+colonization_step_02 = {
+    OR = {
+        has_province_modifier = colonization_lvl2
+        has_province_modifier = colonization_lvl3
+        has_province_modifier = colonization_lvl4
+        has_province_modifier = colonization_lvl5
+        has_province_modifier = colonization_lvl6
+        has_province_modifier = colonization_lvl7
+        has_province_modifier = colonization_lvl8
+        has_province_modifier = colonization_lvl9
+        has_province_modifier = colonization_lvl10
+    }
+}
+colonization_step_01 = {
+    OR = {
+        has_province_modifier = colonization_lvl1
+        has_province_modifier = colonization_lvl2
+        has_province_modifier = colonization_lvl3
+        has_province_modifier = colonization_lvl4
+        has_province_modifier = colonization_lvl5
+        has_province_modifier = colonization_lvl6
+        has_province_modifier = colonization_lvl7
+        has_province_modifier = colonization_lvl8
+        has_province_modifier = colonization_lvl9
+        has_province_modifier = colonization_lvl10
+    }
+}
+
+has_not_bear_province_conversion_trigger = {
+    NOR = {
+        culture_group = bear_group
+        has_province_flag = white_flag_province_conversion
+        has_province_flag = black_flag_province_conversion
+        has_province_flag = brown_flag_province_conversion
+    }
+}
+
+Is_potential_child_succession_trigger = {
+    ROOT = {
+        OR = {
+            AND = {
+                has_law = agnatic_succession
+                PREV = { is_female = no }
+            }
+            AND = {
+                has_law = enatic_succession
+                PREV = { is_female = yes }
+            }
+            NOR = {
+                has_law = agnatic_succession
+                has_law = enatic_succession
+            }
+        }
+    }
+}
+has_province_familly_bear_trigger = {
+    OR = {
+        has_province_modifier = bear_stab_comtale_family_1
+        has_province_modifier = bear_stab_comtale_family_2
+        has_province_modifier = bear_stab_comtale_family_3
+        has_province_modifier = bear_stab_comtale_family_4
+        has_province_modifier = bear_stab_comtale_family_5
+        has_province_modifier = bear_stab_comtale_family_6
+        has_province_modifier = bear_income_family_1
+        has_province_modifier = bear_income_family_2
+        has_province_modifier = bear_income_family_3
+        has_province_modifier = bear_income_family_4
+        has_province_modifier = bear_income_family_5
+        has_province_modifier = bear_income_family_6
+        has_province_modifier = bear_building_family_1
+        has_province_modifier = bear_building_family_2
+        has_province_modifier = bear_building_family_3
+        has_province_modifier = bear_building_family_4
+        has_province_modifier = bear_building_family_5
+        has_province_modifier = bear_building_family_6
+        has_province_modifier = bear_siege_family_1
+        has_province_modifier = bear_siege_family_2
+        has_province_modifier = bear_siege_family_3
+        has_province_modifier = bear_siege_family_4
+        has_province_modifier = bear_siege_family_5
+        has_province_modifier = bear_siege_family_6
+    }
+}
+
+has_bear_converter_bloodline_trigger = {
+    custom_tooltip  = {
+        text = Has_bear_bloodline_convertion_ability ##localisation in bloodline file.csv
+
+        any_owned_bloodline = { has_bloodline_flag = Bear_converter_bloodline }
+    }
+}
+
+#to use insiade the 'close_relative' trigger
+has_potential_close_chancellor_pretender_trigger = {
+    dynasty = PREV
+    OR = {
+        sibling = PREV
+        AND = {
+            is_child_of = PREV
+            trait = succession_bear_heritage_looser
+        }
+    }
+    is_ruler = no
+    is_heir = no
+    OR = {
+        has_inheritance_blocker = no
+        trait = succession_bear_heritage_looser
+    }
+    OR = {
+        AND = {
+            PREV = { has_law = agnatic_succession }
+                is_female = no
+        }
+        AND = {
+            PREV = { has_law = enatic_succession }
+            is_female = yes
+        }
+        PREV = {
+            NOR = {
+                has_law = agnatic_succession
+                has_law = enatic_succession
+            }
+        }
+    }
+}
+
+has_hedgehog_in_province_trigger = {
+    OR = {
+        has_province_modifier = hedge_hedgehog_inhabitant
+        has_province_modifier = hedge_hedgehog_friendly_inhabitant
+        has_province_modifier = hedge_hedgehog_hostile_inhabitant
+    }
+}
+
+#in province scope
+hedgehog_desert_can_live_in_province_trigger = {
+    terrain = desert
+}
+hedgehog_common_can_live_in_province_trigger = {
+    OR = {
+        AND = {
+            NOR = {
+                terrain = forest
+                terrain = jungle
+            }
+            any_neighbor_province = {
+                OR = {
+                    terrain = forest
+                    terrain = jungle
+                }
+            }
+        }
+        AND = {
+            OR = {
+                terrain = forest
+                terrain = jungle
+            }
+            any_neighbor_province = {
+                NOR = {
+                    terrain = forest
+                    terrain = jungle
+                }
+            }
+        }
+    }
+}
+hedgehog_can_live_in_this_province_trigger = {
+    OR = {
+        hedgehog_desert_can_live_in_province_trigger = yes
+        hedgehog_common_can_live_in_province_trigger = yes
+    }
+}
+
+#As used in is_active_trigger scope, province scope must be used and the fort holder must be in FROM
+#custom tooltip are in building.csv
+hedgehog_terrain_adapter_trigger = {
+    OR = {
+        FROM = {
+            religion = Hedge_religion
+            culture_group = hedgehog_group
+        }
+        FROM = {
+            any_liege = {
+                religion = Hedge_religion
+                culture_group = hedgehog_group
+            }
+        }
+    }
+    conditional_tooltip = {
+        trigger = {
+            FROM = {
+                culture = hedgehog_culture
+            }
+        }
+        c_najera = {
+            holder_scope = {
+                religion = Hedge_religion
+            }
+        }
+    }
+    conditional_tooltip = {
+        trigger = {
+            FROM = {
+                culture = hedgehog_desert
+            }
+        }
+        c_hayya = {
+            holder_scope = {
+                religion = Hedge_religion
+            }
+        }
+    }
+}
+hedgehog_clonning_room_trigger = {
+    OR = {
+        FROM = {
+            religion = Hedge_religion
+            culture_group = hedgehog_group
+        }
+        FROM = {
+            any_liege = {
+                religion = Hedge_religion
+                culture_group = hedgehog_group
+            }
+        }
+    }
+    conditional_tooltip = {
+        trigger = {
+            FROM = {
+                culture = hedgehog_culture
+            }
+        }
+        c_nordgau = {
+            holder_scope = {
+                religion = Hedge_religion
+            }
+        }
+        OR = {
+            custom_tooltip = {
+                text = HEDGE_HAS_ACTIVE_TERRAIN_ADAPTER
+                fort_has_building = fo_terrain_adapter
+                hedgehog_terrain_adapter_trigger = yes
+            }
+            custom_tooltip = {
+                text = HEDGE_TERRAIN_ALLOW_CONSTRUCTION
+                hedgehog_common_can_live_in_province_trigger = yes
+            }
+        }
+    }
+    conditional_tooltip = {
+        trigger = {
+            FROM = {
+                culture = hedgehog_desert
+            }
+        }
+        c_murzuk = {
+            holder_scope = {
+                religion = Hedge_religion
+            }
+        }
+        OR = {
+            custom_tooltip = {
+                text = HEDGE_HAS_ACTIVE_TERRAIN_ADAPTER
+                fort_has_building = fo_terrain_adapter
+                hedgehog_terrain_adapter_trigger = yes
+            }
+            custom_tooltip = {
+                text = HEDGE_TERRAIN_ALLOW_CONSTRUCTION
+                hedgehog_desert_can_live_in_province_trigger = yes
+            }
+        }
+    }
+}
+hedgehog_home_01_trigger = {
+    OR = {
+        FROM = {
+            culture_group = hedgehog_group
+        }
+        FROM = {
+            any_liege = {
+                culture_group = hedgehog_group
+            }
+        }
+    }
+    conditional_tooltip = {
+        trigger = {
+            FROM = {
+                culture = hedgehog_culture
+            }
+        }
+        OR = {
+            custom_tooltip = {
+                text = HEDGE_HAS_ACTIVE_TERRAIN_ADAPTER
+                fort_has_building = fo_terrain_adapter
+                hedgehog_terrain_adapter_trigger = yes
+            }
+            custom_tooltip = {
+                text = HEDGE_TERRAIN_ALLOW_CONSTRUCTION
+                hedgehog_common_can_live_in_province_trigger = yes
+            }
+        }
+    }
+    conditional_tooltip = {
+        trigger = {
+            FROM = {
+                culture = hedgehog_desert
+            }
+        }
+        OR = {
+            custom_tooltip = {
+                text = HEDGE_HAS_ACTIVE_TERRAIN_ADAPTER
+                fort_has_building = fo_terrain_adapter
+                hedgehog_terrain_adapter_trigger = yes
+            }
+            custom_tooltip = {
+                text = HEDGE_TERRAIN_ALLOW_CONSTRUCTION
+                hedgehog_desert_can_live_in_province_trigger = yes
+            }
+        }
+    }
+}
+hedgehog_home_02_trigger = {
+    OR = {
+        FROM = {
+            religion = Hedge_religion
+            culture_group = hedgehog_group
+        }
+        FROM = {
+            any_liege = {
+                religion = Hedge_religion
+                culture_group = hedgehog_group
+            }
+        }
+    }
+    hedgehog_home_01_trigger = yes
+}
+hedgehog_home_01_tooltip = {
+    custom_tooltip = {
+        text = HAS_HEDGE_HOME_ACTIVE
+        fort_has_building = fo_hedgehog_home_01
+        hedgehog_home_01_trigger = yes
+    }
+}
+hedgehog_home_02_tooltip = {
+    custom_tooltip = {
+        text = HAS_HEDGE_HOME_2_ACTIVE
+        fort_has_building = fo_hedgehog_home_02
+        hedgehog_home_02_trigger = yes
+    }
+}
+
+####panda trigger
+#province scope
+panda_capital_bureau_active_trigger = {
+    culture_group = panda_group
+    is_capital = yes
+    holder_scope = {
+        OR = {
+            independent = yes
+            liege = { NOT = { culture_group = panda_group } }
+        }
+    }
+}
+
+#province scope
+panda_common_bureau_active_trigger = {
+    culture_group = panda_group
+    holder_scope = {
+        custom_tooltip = {
+            text = PANDA_TT_NEIGHBOR_BUREAU_NOT_COMMON
+            PREV = {
+                any_neighbor_province = {
+                    OR = {
+                        has_building = ca_panda_capital_bureau
+                        AND = {
+                            has_building = ca_panda_vassal_bureau
+                            holder_scope = {
+                                liege = {
+                                    OR = {
+                                        government = panda_bureaucratic_gov
+                                        government = panda_bureaucratic_gov_bis
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    holder_scope = {
+                        OR = {
+                            character = PREVPREVPREV
+                            is_vassal_or_below_of = PREVPREVPREV
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#province scope
+panda_vassal_bureau_active_trigger = {
+    culture_group = panda_group
+    holder_scope = {
+        culture_group = panda_group
+        religion = Panda_religion
+        independent = no
+        liege = {
+            culture_group = panda_group
+            religion = Panda_religion
+        }
+    }
+}
+
+#province scope
+panda_province_has_bureau_trigger = {
+    OR = {
+        AND = {
+            has_building = ca_panda_common_bureau
+            panda_common_bureau_active_trigger = yes
+        }
+        AND = {
+            has_building = ca_panda_vassal_bureau
+            panda_vassal_bureau_active_trigger = yes
+        }
+        AND = {
+            has_building = ca_panda_capital_bureau
+            panda_capital_bureau_active_trigger = yes
+        }
+    }
+}
+
+is_panda_government_trigger = {
+    OR = {
+        government = panda_bureaucratic_gov
+        government = panda_bureaucratic_gov_bis
+    }
+}
+
+panda_official_hold_trigger = {
+    is_close_relative = FROM #maybe add a vassal recomandation system to allow character to hold this
+    age = 18
+    is_incapable = no
+    is_ruler = no
+    liege = { character = FROM }
+}
+
+panda_official_grant_trigger = {
+    is_panda_government_trigger = yes
+    higher_real_tier_than = COUNT
+}
+panda_official_revoke_trigger = {
+    OR = {
+        is_foe = yes
+        NOT = { culture = FROM }
+        NOT = { religion = FROM }
+    }
+}
+
+#province scope
+#trigger done as seems impossible to compare 2 variable in trigger scope
+duck_higher_dev_level_supposed_trigger = {
+    OR = {
+        AND = {
+            has_province_modifier = duck_dev_level_1
+            NOT = { check_variable = { which=Max_duck_dev_level value=1 } }
+        }
+        AND = {
+            has_province_modifier = duck_dev_level_2
+            NOT = { check_variable = { which=Max_duck_dev_level value=2 } }
+        }
+        AND = {
+            has_province_modifier = duck_dev_level_3
+            NOT = { check_variable = { which=Max_duck_dev_level value=3 } }
+        }
+        AND = {
+            has_province_modifier = duck_dev_level_4
+            NOT = { check_variable = { which=Max_duck_dev_level value=4 } }
+        }
+        AND = {
+            has_province_modifier = duck_dev_level_5
+            NOT = { check_variable = { which=Max_duck_dev_level value=5 } }
+        }
+        AND = {
+            has_province_modifier = duck_dev_level_6
+            NOT = { check_variable = { which=Max_duck_dev_level value=6 } }
+        }
+        AND = {
+            has_province_modifier = duck_dev_level_7
+            NOT = { check_variable = { which=Max_duck_dev_level value=7 } }
+        }
+        AND = {
+            has_province_modifier = duck_dev_level_8
+            NOT = { check_variable = { which=Max_duck_dev_level value=8 } }
+        }
+        AND = {
+            has_province_modifier = duck_dev_level_9
+            NOT = { check_variable = { which=Max_duck_dev_level value=9 } }
+        }
+        AND = {
+            has_province_modifier = duck_dev_level_10
+            NOT = { check_variable = { which=Max_duck_dev_level value=10 } }
+        }
+    }
+}
+duck_lower_dev_level_supposed_trigger = {
+    OR = {
+        AND = {
+            has_province_modifier = duck_dev_level_0
+            check_variable = { which=Max_duck_dev_level value=1 }
+        }
+        AND = {
+            has_province_modifier = duck_dev_level_1
+            check_variable = { which=Max_duck_dev_level value=2 }
+        }
+        AND = {
+            has_province_modifier = duck_dev_level_2
+            check_variable = { which=Max_duck_dev_level value=3 }
+        }
+        AND = {
+            has_province_modifier = duck_dev_level_3
+            check_variable = { which=Max_duck_dev_level value=4 }
+        }
+        AND = {
+            has_province_modifier = duck_dev_level_4
+            check_variable = { which=Max_duck_dev_level value=5 }
+        }
+        AND = {
+            has_province_modifier = duck_dev_level_5
+            check_variable = { which=Max_duck_dev_level value=6 }
+        }
+        AND = {
+            has_province_modifier = duck_dev_level_6
+            check_variable = { which=Max_duck_dev_level value=7 }
+        }
+        AND = {
+            has_province_modifier = duck_dev_level_7
+            check_variable = { which=Max_duck_dev_level value=8 }
+        }
+        AND = {
+            has_province_modifier = duck_dev_level_8
+            check_variable = { which=Max_duck_dev_level value=9 }
+        }
+        AND = {
+            has_province_modifier = duck_dev_level_9
+            check_variable = { which=Max_duck_dev_level value=10 }
+        }
+    }
+}
+
+
+##Elephant trigger
+
+#province scope trigger
+Asian_eleph_can_live_trigger = {
+    terrain = jungle
+}
+African_eleph_can_live_trigger = {
+    terrain = plains #african savana (considered as plains in ck2)
+}
+Eleph_can_live_here_trigger = {
+    OR = {
+        Asian_eleph_can_live_trigger = yes
+        African_eleph_can_live_trigger = yes
+    }
+}
+Eleph_has_climat_control_trigger = {
+    OR = {
+        has_province_modifier = eleph_climate_control_1
+        has_province_modifier = eleph_climate_control_2
+        has_province_modifier = eleph_climate_control_3
+        has_province_modifier = eleph_climate_control_4
+    }
+}

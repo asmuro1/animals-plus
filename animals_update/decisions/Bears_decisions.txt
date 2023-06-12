@@ -1,0 +1,1656 @@
+
+decisions = {
+    ####### Bear conversion
+    study_local_particularity = {
+
+        is_high_prio = yes
+        ai_check_interval = 60
+
+        only_playable = yes
+        potential = {
+            OR = {
+                has_game_rule = {
+                    name = animals_conversion_ways
+                    value = animal_decision
+                }
+                AND = {
+                    has_game_rule = {
+                        name = animals_conversion_ways
+                        value = animal_instant
+                    }
+                    ai = no
+                }
+            }
+            any_realm_province = {
+                OR = {
+                    terrain = arctic
+                    terrain = mountain
+                    terrain = marsh
+                    county = {
+                        is_holy_site = Bears_religion
+                    }
+                }
+            }
+            NOT = { Is_really_animal_trigger = yes }
+            had_character_flag = {
+                flag = Has_done_bear_animal_researsh
+                months > 6
+            }
+        }
+
+        allow = {
+            is_adult = yes
+            is_incapable = no
+            has_regent = no
+            conditional_tooltip = {
+                trigger = { has_dlc = "Reapers" }
+                has_assigned_minor_title = title_court_physician
+            }
+
+            OR = {
+                trait = mystic
+                lifestyle_traits == 0
+            }
+
+            OR = {
+                AND = {
+                    owns = c_sortavala
+                    c_sortavala = {
+                       location = {
+                           custom_tooltip = {
+                               text = NOT_RENCENTLY_RESEARSHED_DEC_CONV_BEAR
+
+                               NOT = { has_province_modifier = Haze_cleared }
+                               NOT = { has_province_modifier = Haze_abadonned }
+                           }
+                        }
+                    }
+                }
+                any_demesne_province = {
+                    OR = {
+                        terrain = arctic
+                        terrain = mountain
+                        terrain = marsh
+                    }
+                    custom_tooltip = {
+                        text = NOT_RENCENTLY_RESEARSHED_DEC_CONV_BEAR
+
+                        NOT = { has_province_modifier = Haze_cleared }
+                        NOT = { has_province_modifier = Haze_abadonned }
+                    }
+                }
+            }
+        }
+        effect = {
+            clr_character_flag = Has_done_bear_animal_researsh
+            set_character_flag = Has_done_bear_animal_researsh
+            if = {
+                limit = {
+                    has_game_rule = {
+                        name = animals_conversion_ways
+                        value = animal_decision
+                    }
+                }
+                character_event = { id = ani_plus.008 }
+            }
+            else = {
+                random_list = {
+                    1 = {
+                        trigger = {
+                            any_demesne_province = {
+                                terrain = arctic
+                            }
+                        }
+                        culture = white_bear
+                    }
+                    1 = {
+                        trigger = {
+                            any_demesne_province = {
+                                terrain = mountain
+                            }
+                        }
+                        culture = brown_bear
+                    }
+                    1 = {
+                        trigger = {
+                            any_demesne_province = {
+                                terrain = marsh
+                            }
+                        }
+                        culture = black_bear
+                    }
+                    fallback = {
+                        random_list = {
+                            1 = { culture = brown_bear }
+                            1 = { culture = black_bear }
+                            1 = { culture = white_bear }
+                        }
+                    }
+                }
+                add_trait = human_bear
+            }
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+
+
+    #####Bear religion decision
+    # decision made to allow bears to change religion
+    adopt_bear_religion = {
+        is_high_prio = yes
+        ai_check_interval = 8
+
+        potential = {
+            culture_group = bear_group
+            NOT = { religion = Bears_religion }
+            can_change_religion = yes
+        }
+        allow = {
+            is_adult = yes
+            culture_group = bear_group
+            NOT = { trait = hibernation }
+            is_incapable = no
+            can_change_religion = yes
+        }
+        effect = {
+            religion = Bears_religion
+            if = {
+                limit = {
+                    OR = {
+                        independent = yes
+                        liege = { NOT = { religion = Bears_religion } }
+                    }
+                }
+                if = {
+                    limit = {
+                        has_game_rule = {
+                            name = animals_bonus_levy
+                            value = Few
+                        }
+                    }
+                    spawn_unit = {
+                        province = capital_scope
+                        home = capital_scope
+                        owner = ROOT
+                        leader = none
+                        troops = {
+                            heavy_infantry = { 1500 1500 }
+                        }
+                        attrition = 0.1
+                        maintenance = no
+
+                    }
+                }
+                else_if = {
+                    limit = {
+                        has_game_rule = {
+                            name = animals_bonus_levy
+                            value = Normal
+                        }
+                    }
+                    spawn_unit = {
+                        province = capital_scope
+                        home = capital_scope
+                        owner = ROOT
+                        leader = none
+                        troops = {
+                            heavy_infantry = { 4000 4000 }
+                        }
+                        attrition = 0.1
+                        maintenance = no
+
+                    }
+                }
+                else_if = {
+                    limit = {
+                        has_game_rule = {
+                            name = animals_bonus_levy
+                            value = Many
+                        }
+                    }
+                    spawn_unit = {
+                        province = capital_scope
+                        home = capital_scope
+                        owner = ROOT
+                        leader = none
+                        troops = {
+                            heavy_infantry = { 10000 10000 }
+                        }
+                        attrition = 0.1
+                        maintenance = no
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    is_feudal = yes
+                }
+                set_government_type = Bear_feudal_gov
+            }
+        }
+
+
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+
+                independent = no
+                liege = {
+                    NOT = { religion = Bears_religion }
+                }
+            }
+        }
+    }
+
+    # decision to give clan bonus
+    set_white_bear_bonus = {
+        is_high_prio = yes
+        ai_check_interval = 12
+
+        only_playable = yes
+
+        potential = {
+            religion = Bears_religion
+            culture_group = bear_group
+            OR = {
+                completely_controls = c_nordlendingafjordungur
+                culture = white_bear
+            }
+            c_nordlendingafjordungur = {
+                NOT = { has_title_flag = reinforced_white_bear }
+            }
+        }
+        allow = {
+            completely_controls = c_nordlendingafjordungur
+        }
+        effect = {
+            custom_tooltip = {
+                text = ANY_WBEARS_BONUSES
+                any_character = {
+                    limit = {
+                        religion = Bears_religion
+                        culture = white_bear
+                    }
+                    add_character_modifier = {
+                        name = white_bear_religious_modifier
+                        duration = -1
+                    }
+                }
+                c_nordlendingafjordungur = {
+                    set_title_flag = reinforced_white_bear
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+    clr_white_bear_bonus = {
+        is_high_prio = yes
+        ai_check_interval = 12
+
+        only_playable = yes
+
+        potential = {
+            c_nordlendingafjordungur = {
+                has_title_flag = reinforced_white_bear
+            }
+            NOT = { religion = Bears_religion }
+            NOT = { culture_group = bear_group }
+        }
+        allow = {
+            owns = c_nordlendingafjordungur
+        }
+        effect = {
+            c_nordlendingafjordungur = { clr_title_flag = reinforced_white_bear }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    set_brown_bear_bonus = {
+        is_high_prio = yes
+        ai_check_interval = 12
+
+        only_playable = yes
+        potential = {
+            religion = Bears_religion
+            culture_group = bear_group
+            OR = {
+                completely_controls = c_sortavala
+                culture = brown_bear
+            }
+            c_sortavala = {
+                NOT = { has_title_flag = reinforced_brown_bear }
+            }
+        }
+        allow = {
+            completely_controls = c_sortavala
+        }
+        effect = {
+            custom_tooltip = {
+                text = ANY_BRBEARS_BONUSES
+                any_character = {
+                    limit = {
+                        religion = Bears_religion
+                        culture = brown_bear
+                    }
+                    add_character_modifier = {
+                        name = brown_bear_religious_modifier
+                        duration = -1
+                    }
+                }
+                c_sortavala = {
+                    set_title_flag = reinforced_brown_bear
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+    clr_brown_bear_bonus = {
+        is_high_prio = yes
+        ai_check_interval = 12
+        only_playable = yes
+        potential = {
+            c_sortavala = {
+                has_title_flag = reinforced_brown_bear
+            }
+            NOT = { religion = Bears_religion }
+            NOT = { culture_group = bear_group }
+        }
+        allow = {
+            owns = c_sortavala
+        }
+        effect = {
+            c_sortavala = { clr_title_flag = reinforced_brown_bear }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    set_black_bear_bonus = {
+        is_high_prio = yes
+        ai_check_interval = 12
+
+        only_playable = yes
+        potential = {
+            religion = Bears_religion
+            culture_group = bear_group
+            OR = {
+                completely_controls = c_pinsk
+                culture = black_bear
+            }
+            c_pinsk = {
+                NOT = { has_title_flag = reinforced_black_bear}
+            }
+        }
+        allow = {
+            completely_controls = c_pinsk
+        }
+        effect = {
+            custom_tooltip = {
+                text = ANY_BLBEARS_BONUSES
+                any_character = {
+                    limit = {
+                        religion = Bears_religion
+                        culture = black_bear
+                    }
+                    add_character_modifier = {
+                        name = black_bear_religious_modifier
+                        duration = -1
+                    }
+                }
+                c_pinsk = {
+                    set_title_flag = reinforced_black_bear
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+    clr_black_bear_bonus = {
+        is_high_prio = yes
+        ai_check_interval = 12
+        only_playable = yes
+        potential = {
+            c_pinsk = {
+                has_title_flag = reinforced_black_bear
+            }
+            NOT = { religion = Bears_religion }
+            NOT = { culture_group = bear_group }
+        }
+        allow = {
+            owns = c_pinsk
+        }
+        effect = {
+            c_pinsk = { clr_title_flag = reinforced_black_bear }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+
+    #####global decision: c_dyrrachion autority additionnal bonus
+    set_animal_religious_autority = {
+        is_high_prio = yes
+        ai_check_interval = 30
+
+        only_playable = yes
+        potential = {
+            religion_group = Animals_grups
+            c_dyrrachion = {
+                location = {
+                    NOT = { has_province_modifier = holy_autority_animal_cooldown }
+                }
+            }
+        }
+        allow = {
+            completely_controls = c_dyrrachion
+            c_dyrrachion = {
+                location = {
+                    has_temple = yes
+                }
+            }
+        }
+        effect = {
+            religion_authority = {
+                modifier = animal_central_holy_site  #religious autority since putting conversion speed is hard in ck2
+            }
+            hidden_effect = {
+                c_dyrrachion = {
+                    location = {
+                        add_province_modifier = {
+                            name = holy_autority_animal_cooldown
+                            years = 10
+                            hidden = yes
+                        }
+                    }
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+
+    #####bear government decision
+    organize_bear_succession_tournament = {
+        is_high_prio = yes
+        ai_check_interval = 12
+
+        only_playable = yes
+
+        potential = {
+            government = Bear_feudal_gov
+        }
+        allow = {
+            custom_tooltip = {
+                text = HAS_BEAR_CHILD_COMPETITOR
+                any_child = {
+                    NOT = { is_heir = PREV }
+                    age = 6
+                    Is_potential_child_succession_trigger = yes
+                    OR = {
+                        NOR = {
+                            trait = succession_bear_heritage_winner
+                            trait = succession_bear_heritage_looser
+                        }
+                        any_child_even_if_dead = {
+                            trait = succession_bear_heritage_winner
+                            is_alive = no
+                        }
+                    }
+                }
+                any_child = {
+                    is_heir = yes
+                    is_adult = yes
+                }
+            }
+            OR = {
+                custom_tooltip = {
+                    text = NOT_ORGANIZED_SUCC_TOUR_COOLDOWN
+                    NOT = { has_character_modifier = bear_succession_tournament_cooldown }
+                }
+                custom_tooltip = {
+                    text = LEGITIME_BEAR_SUCCESSOR_DEAD
+                    any_child_even_if_dead = {
+                        trait = succession_bear_heritage_winner
+                        is_alive = no
+                    }
+                }
+            }
+            conditional_tooltip = { # wealth is enough
+                trigger = {
+                    real_tier = COUNT
+                }
+                wealth = 50
+            }
+            conditional_tooltip = {
+                trigger = {
+                    real_tier = DUKE
+                }
+                wealth = 150
+            }
+            conditional_tooltip = {
+                trigger = {
+                    real_tier = KING
+                }
+                wealth = 350
+            }
+            conditional_tooltip = {
+                trigger = {
+                    real_tier = EMPEROR
+                }
+                wealth = 750
+            }
+            has_regent = no #not possible to organize something while hiberning or similar
+        }
+        effect = {
+            hidden_tooltip = {
+                add_character_modifier = {
+                    name = bear_succession_tournament_cooldown
+                    hidden = yes
+                    years = 4
+                }
+            }
+            if = {
+                limit = {
+                    real_tier = COUNT
+                }
+                wealth = -50
+            }
+            else_if = {
+                limit = {
+                    real_tier = DUKE
+                }
+                wealth = -150
+            }
+            else_if = {
+                limit = {
+                    real_tier = KING
+                }
+                wealth = -350
+            }
+            else_if = {
+                limit = {
+                    real_tier = EMPEROR
+                }
+                wealth = -750
+            }
+            hidden_tooltip = {
+                if = {
+                    limit = {
+                        any_child_even_if_dead = {
+                            trait = succession_bear_heritage_winner
+                            is_alive = no
+                        }
+                    }
+                    any_child_even_if_dead = {
+                        remove_trait = succession_bear_heritage_looser
+                        remove_trait = succession_bear_heritage_winner
+                    }
+                }
+                else = {
+                    any_child = {
+                        remove_trait = succession_bear_heritage_winner
+                    }
+                }
+            }
+            character_event = { id = ani_plus.032 }
+        }
+        ai_will_do = { ###will be doing it later
+            factor = 0.1
+        }
+    }
+
+    Become_bear_tributary = {
+        is_high_prio = yes
+        ai_check_interval = 7
+
+        only_playable = yes
+
+        potential = {
+            independent = no
+            government = Bear_feudal_gov
+            liege = { government = Bear_feudal_gov }
+        }
+        allow = {
+            war = no
+            is_adult = yes
+            is_incapable = no
+            NOR = {
+                dynasty = liege
+                #maybe future servant bloodline
+                custom_tooltip = {
+                    text = CLOSE_RELATIVE_FAMILY
+                    OR = {
+                        any_close_relative = {
+                            ROOT = {
+                                liege = {
+                                    dynasty = PREVPREV
+                                }
+                            }
+                        }
+                        any_spouse = {
+                            ROOT = {
+                                liege = {
+                                    dynasty = PREVPREV
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            custom_tooltip = {
+                text = ONLY_ONE_TITLE_RANK_VASSAL
+                OR = {
+                    tier = KING
+                    AND = {
+                        tier = DUKE
+                        liege = {
+                            tier = KING
+                        }
+                    }
+                    AND = {
+                        tier = COUNT
+                        liege = {
+                            tier = DUKE
+                        }
+                    }
+                }
+            }
+        }
+        effect = {
+            liege = {
+                hidden_effect = {
+                    ROOT = {
+                        set_defacto_liege = ROOT
+                    }
+                }
+
+                make_tributary = {
+                    who = ROOT
+                    tributary_type = bear_tributary
+                }
+                hidden_effect = {
+                    if = {
+                        limit = {
+                            independent = no
+                        }
+                        liege = {
+                             ROOT = {
+                                 set_defacto_liege = PREV
+                             }
+                        }
+                    }
+                }
+                letter_event = {id = ani_plus.036}
+            }
+        }
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0.01
+
+                trait = content
+            }
+            modifier = {
+                factor = 0.05
+
+                de_jure_liege = liege
+            }
+        }
+    }
+    Become_bear_vassal = {
+        is_high_prio = yes
+        ai_check_interval = 1
+
+        only_playable = yes
+        only_independent = no
+
+        potential = {
+            is_tributary = {
+                type = bear_tributary
+            }
+        }
+        allow = {
+            war = no
+            is_adult = yes
+            is_incapable = no
+        }
+        effect = {
+            suzerain = {
+                remove_tributary = PREV
+
+                set_character_flag = Stopping_tributary_notification
+                letter_event = { id = ani_plus.036 }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+                NOR = {
+                    suzerain = {
+                        dynasty = PREV
+                    }
+                    any_close_relative = {
+                        ROOT = {
+                            suzerain = {
+                                dynasty = PREVPREV
+                            }
+                        }
+                    }
+                    any_spouse = {
+                        ROOT = {
+                            suzerain = {
+                                dynasty = PREVPREV
+                            }
+                        }
+                    }
+                    trait = content
+                    de_jure_liege = suzerain
+                }
+            }
+            modifier = {
+                factor = 0.35
+                OR = {
+                    trait = content
+                    de_jure_liege = suzerain
+                }
+                NOR = {
+                    suzerain = {
+                        dynasty = PREV
+                    }
+                    any_close_relative = {
+                        ROOT = {
+                            suzerain = {
+                                dynasty = PREVPREV
+                            }
+                        }
+                    }
+                    any_spouse = {
+                        ROOT = {
+                            suzerain = {
+                                dynasty = PREVPREV
+                            }
+                        }
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.65
+                OR = {
+                    suzerain = {
+                        dynasty = PREV
+                    }
+                    any_close_relative = {
+                        ROOT = {
+                            suzerain = {
+                                dynasty = PREVPREV
+                            }
+                        }
+                    }
+                    any_spouse = {
+                        ROOT = {
+                            suzerain = {
+                                dynasty = PREVPREV
+                            }
+                        }
+                    }
+                }
+                NOR = {
+                    trait = content
+                    de_jure_liege = suzerain
+                }
+            }
+
+            modifier = {
+                factor = 0.25
+                OR = {
+                    trait = ambitious
+                    trait = greedy
+                    trait = envious
+                }
+            }
+            modifier = {
+                factor = 0.75
+
+                trait = stubborn
+            }
+        }
+    }
+
+
+    ##### getting bear transformation bloodline
+    Affirm_your_human_bear_ability = {
+        is_high_prio = yes
+        ai_check_interval = 60 #5 years
+
+        only_playable = yes
+        potential = {
+            culture_group = bear_group
+            trait = human_bear
+            NOT = { has_bear_converter_bloodline_trigger = yes }
+            has_dlc = "Holy Fury"
+        }
+        allow = {
+            trait = human_bear
+            OR = {
+                father = {
+                    trait = human_bear
+                    OR = {
+                        father = { trait = human_bear }
+                        mother = { trait = human_bear }
+                    }
+                }
+                mother = {
+                    trait = human_bear
+                    OR = {
+                        father = { trait = human_bear }
+                        mother = { trait = human_bear }
+                    }
+                }
+            }
+        }
+
+        effect = {
+            create_bloodline = {
+                type = Bear_Converter_bloodline
+                allow_bastards = yes
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+
+    ##create bear holy order (decision created on hedgehogg update (version 2.0 ))
+    create_artic_fighter = {
+        only_playable = yes
+        ai_check_interval = 30
+
+        is_high_prio = yes
+
+        potential = {
+            NOT = { is_title_active = d_polar_fighter }
+            independent = yes
+            religion = Bears_religion
+            culture_group = bear_group
+            NOT = {	has_alternate_start_parameter = { key = religion_names value = random } }
+        }
+        allow = {
+            higher_tier_than = DUKE
+            war = no
+            piety = 350
+        }
+        effect = {
+            piety = -350
+            prestige = 600
+            custom_tooltip = {
+                text = CREATED_HOLY_ORDER_ANIMAL_TOOLTIP
+
+                activate_title = { title = d_polar_fighter status = yes }
+                create_character = {
+                    random_traits = no
+                    dynasty = random
+                    religion = ROOT
+                    culture = white_bear
+                    female = no
+                    age = 25
+                    trait = brilliant_strategist
+                    trait = zealous
+                    trait = humble
+                    trait = ambitious
+                    trait = strategist
+                    trait = holy_warrior
+                }
+                new_character = {
+                    wealth = 500
+                    d_polar_fighter = {
+                        grant_title = PREV
+                    }
+                    set_government_type = order_government
+                    create_character = {
+						random_traits = yes
+						dynasty = random
+						religion = ROOT
+						culture = ROOT
+						female = no
+						age = 20
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						religion = ROOT
+						culture = ROOT
+						female = no
+						age = 19
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						religion = ROOT
+						culture = ROOT
+						female = no
+						age = 18
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						religion = ROOT
+						culture = ROOT
+						female = no
+						age = 17
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						religion = ROOT
+						culture = ROOT
+						female = no
+						age = 16
+					}
+                }
+                any_player = {
+                    narrative_event = { id = ani_plus.070 }
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0.4
+            }
+            modifier = {
+                factor = 0.5
+                trait = cynical
+            }
+        }
+    }
+}
+
+targetted_decisions = {
+
+    ###human bear trait conversion
+    human_bear_conversion_power = {
+
+        is_high_prio = no
+        ai_check_interval = 6
+        filter = sub_realm_including_me
+        ai_target_filter = sub_realm_including_me
+
+        from_potential = {
+            OR = {
+                has_bear_converter_bloodline_trigger = yes
+                trait = human_bear
+            }
+            OR = {
+                culture_group = bear_group
+                character = ROOT
+            }
+        }
+        potential = {
+            NOT = { culture_group = bear_group }
+        }
+        allow = {
+            is_ill = no
+            custom_tooltip = {
+                text = NOT_IN_TRANSFORMATION
+                NOT = { has_character_flag = In_illness_bear_conversion }
+            }
+            NOT = {trait = infirm}
+            has_regent = no
+            OR = {
+                liege = {
+                    culture_group = FROM
+                }
+                NOT = { FROM = { culture_group = bear_group } }
+            }
+            conditional_tooltip = {
+                trigger = {
+                    is_landed = no
+                    NOT = { FROM = {culture_group = bear_group } }
+                }
+                FROM = {
+                    piety = 50
+                    prestige = 100
+                }
+            }
+            conditional_tooltip = {
+                trigger = {
+                    real_tier = BARON
+                    NOT = { FROM = {culture_group = bear_group } }
+                }
+                FROM = {
+                    piety = 100
+                    prestige = 200
+                }
+            }
+            conditional_tooltip = {
+                trigger = {
+                    real_tier = COUNT
+                    NOT = { FROM = {culture_group = bear_group } }
+                }
+                FROM = {
+                    piety = 150
+                    prestige = 300
+                }
+            }
+            conditional_tooltip = {
+                trigger = {
+                    real_tier = DUKE
+                    NOT = { FROM = {culture_group = bear_group } }
+                }
+                FROM = {
+                    piety = 250
+                    prestige = 500
+                }
+            }
+            conditional_tooltip = {
+                trigger = {
+                    real_tier = KING
+                    NOT = { FROM = {culture_group = bear_group } }
+                }
+                FROM = {
+                    piety = 500
+                    prestige = 1000
+                }
+            }
+        }
+
+        effect = {
+            if = {
+                limit = {
+                    FROM = { culture = white_bear }
+                }
+                set_character_flag = animal_white_bear_transformation
+            }
+            else_if = {
+                limit = {
+                    FROM = { culture = brown_bear }
+                }
+                set_character_flag = animal_brown_bear_transformation
+            }
+            else_if = {
+                limit = {
+                    FROM = { culture = black_bear }
+                }
+                set_character_flag = animal_black_bear_transformation
+            }
+            else = {
+                random_list = {
+                    1 = { set_character_flag = animal_white_bear_transformation }
+                    1 = { set_character_flag = animal_brown_bear_transformation }
+                    1 = { set_character_flag = animal_black_bear_transformation }
+                }
+            }
+            character_event = { id = ani_plus.022 days = 14 random = 21 }
+            if = {
+                limit = {
+                    is_landed = no
+                    NOT = { FROM = {culture_group = bear_group } }
+                }
+                FROM = {
+                    piety = -50
+                    prestige = -100
+                }
+            }
+            else_if = {
+                limit = {
+                    real_tier = BARON
+                    NOT = { FROM = {culture_group = bear_group } }
+                }
+                FROM = {
+                    piety = -100
+                    prestige = -200
+                }
+            }
+            else_if = {
+                limit = {
+                    real_tier = COUNT
+                    NOT = { FROM = {culture_group = bear_group } }
+                }
+                FROM = {
+                    piety = -150
+                    prestige = -300
+                }
+            }
+            else_if = {
+                limit = {
+                    real_tier = DUKE
+                    NOT = { FROM = {culture_group = bear_group } }
+                }
+                FROM = {
+                    piety = -250
+                    prestige = -500
+                }
+            }
+            else_if  = {
+                limit = {
+                    NOT = { FROM = {culture_group = bear_group } }
+                }
+                FROM = {
+                    piety = -500
+                    prestige = -1000
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0.1
+                NOT = { FROM = { culture_group = bear_group } }
+            }
+        }
+    }
+
+    #giving religious right without tributary
+    giving_animal_religious_right = {
+        is_high_prio = no
+        ai_check_interval = 12
+
+        filter = vassals
+        ai_target_filter = vassals
+
+        from_potential = {
+            NOT = {
+                religion = ROOT
+            }
+            religion_group = Animals_grups
+            is_theocracy = yes
+            OR = {
+                independent = yes
+                AND = {
+                    liege = { religion = PREV }
+                    top_liege = { religion = PREV }
+                }
+            }
+        }
+        potential = {
+            NOT = { trait = bear_religious_right }
+            is_playable = yes
+        }
+        allow = {
+            NOT = {
+                trait = bear_religious_right
+            }
+        }
+        effect = {
+            add_trait = bear_religious_right
+        }
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+
+                NOT = {
+                    reverse_opinion = {
+                        who = FROM
+                        value = 100
+                    }
+                }
+            }
+        }
+    }
+}
+
+title_decisions  = {
+
+    province_bear_conversion = {
+        is_high_prio = yes
+        ai_check_interval = 24
+
+        filter = sub_realm_owned
+        ai_target_filter = sub_realm_owned
+        potential = {
+            tier = COUNT
+            owner = { culture_group = bear_group }
+            location = { has_not_bear_province_conversion_trigger = yes }
+            OR = {
+                AND = {
+                    c_besancon = {
+                        location = {
+                            religion = Bears_religion
+                        }
+                    }
+                    FROM = { religion = Bears_religion }
+                }
+                AND = {
+                    OR = {
+                        FROM = { trait = human_bear }
+                        has_bear_converter_bloodline_trigger = yes
+                    }
+                    FROM = { culture_group = bear_group }
+                }
+            }
+        }
+        allow = {
+            FROM = {
+                is_adult = yes
+                is_incapable = no
+                conditional_tooltip = {
+                    trigger = {
+                        NAND = {
+                            c_besancon = {
+                                location = {
+                                    religion = Bears_religion
+                                }
+                            }
+                            religion = Bears_religion
+                        }
+                    }
+                    piety = 400
+                }
+                conditional_tooltip = {
+                    trigger = {
+                        OR = {
+                            trait = human_bear
+                            has_bear_converter_bloodline_trigger = yes
+                        }
+                    }
+                    prestige = 500
+                }
+                conditional_tooltip = {
+                    trigger = {
+                        NOR = {
+                            trait = human_bear
+                            has_bear_converter_bloodline_trigger = yes
+                        }
+                    }
+                    prestige = 1000
+                }
+            }
+        }
+
+        effect = {
+            FROM = {
+                if = {
+                    limit = {
+                        NAND = {
+                            c_besancon = {
+                                location = {
+                                    religion = Bears_religion
+                                }
+                            }
+                            religion = Bears_religion
+                        }
+                    }
+                    piety = -400
+                }
+
+                if = {
+                    limit = {
+                        OR = {
+                            trait = human_bear
+                            has_bear_converter_bloodline_trigger = yes
+                        }
+                    }
+                    prestige = -500
+                    if = {
+                        limit = {
+                            culture = white_bear
+                        }
+                        ROOT = { location = { set_province_flag = white_flag_province_conversion } }
+                    }
+                    else_if = {
+                        limit = {
+                            culture = black_bear
+                        }
+                        ROOT = { location = { set_province_flag = black_flag_province_conversion } }
+                    }
+                    else = {
+                        ROOT = { location = { set_province_flag = brown_flag_province_conversion } }
+                    }
+                }
+                else = {
+                    prestige = -1000
+                    ROOT = {
+                        location = {
+                            random_list = {
+                                1 = { set_province_flag = white_flag_province_conversion }
+                                1 = { set_province_flag = brown_flag_province_conversion }
+                                1 = { set_province_flag = black_flag_province_conversion }
+                            }
+                        }
+                    }
+                }
+            }
+            location = { province_event = { id = ani_plus.027 days = 7 random = 21 } }
+        }
+        ai_will_do = { factor = 0.5 }
+    }
+
+    implant_bear_clan = {
+        is_high_prio = no
+        ai_check_interval = 50
+
+        filter = sub_realm_owned
+        ai_target_filter = sub_realm_owned
+        potential = {
+            tier = COUNT
+            OR = {
+                AND = {
+                    FROM = { culture = white_bear }
+                    NOT = { location = { culture = white_bear } }
+                    # FROM = { religion = Bears_religion}
+                    c_nordlendingafjordungur = {
+                        location = {
+                            religion = Bears_religion
+                        }
+                    }
+                }
+                AND = {
+                    FROM = { culture = black_bear }
+                    NOT = { location = { culture = black_bear } }
+                    # FROM = { religion = Bears_religion}
+                    c_pinsk = {
+                        location = {
+                            religion = Bears_religion
+                        }
+                    }
+                }
+                AND = {
+                    FROM = { culture = brown_bear }
+                    NOT = { location = { culture = brown_bear } }
+                    # FROM = { religion = Bears_religion}
+                    c_sortavala = {
+                        location = {
+                            religion = Bears_religion
+                        }
+                    }
+                }
+            }
+        }
+        allow = {
+            c_dyrrachion = {
+                location = {
+                    religion = Bears_religion
+                }
+                holder_scope = {
+                    religion = Bears_religion
+                }
+            }
+            FROM = {
+                religion = Bears_religion
+                piety = 250
+                is_adult = yes
+                is_incapable = no
+                war = no
+            }
+        }
+
+        effect = {
+            FROM = { piety = -250 }
+            location = {
+                add_province_modifier = {
+                    name = bear_province_attack
+                    days = 32
+                }
+                province_event = { id = ani_plus.028 months = 1 }
+            }
+        }
+        ai_will_do = { factor = 0.8 }
+    }
+
+    # chase_bear_on_province = { moved on panda_decision
+    #     is_high_prio = no
+    #     ai_check_interval = 7
+    #
+    #     filter = sub_realm_owned
+    #     ai_target_filter = sub_realm_owned
+    #     potential = {
+    #         tier = COUNT
+    #         NOT = { FROM = { culture_group = bear_group } }
+    #         location = { culture_group = bear_group }
+    #     }
+    #     allow = {
+    #         FROM = {
+    #             prestige = 400
+    #             war = no
+    #             has_assigned_minor_title = { # need a minimum of man power
+    #                 title = title_commander
+    #                 count >= 7
+    #             }
+    #         }
+    #     }
+    #
+    #     effect = {
+    #         FROM = { prestige = -400}
+    #         location = {
+    #             add_province_modifier = {
+    #                 name = inhabitant_extermination
+    #                 days = 32
+    #             }
+    #             province_event = { id = ani_plus.028 months = 1 }
+    #         }
+    #     }
+    #     ai_will_do = {
+    #         factor = 1
+    #
+    #         modifier = {
+    #             factor = 0.30
+    #             ai_rationality > 0
+    #         }
+    #         modifier = {
+    #             factor = 0
+    #             ai_rationality <= 0
+    #         }
+    #     }
+    # }
+
+    build_theodosian_wall = {
+        is_high_prio = no
+        ai_check_interval = 240 #20 years -> only on conquest
+
+        filter = owned
+        ai_target_filter = owned
+
+        potential = {
+            tier = COUNT
+            location = {
+                has_building = ca_ani_castle_tower_1
+            }
+            FROM = { NOT = { Is_really_animal_trigger = yes }}
+        }
+        allow = {
+            has_building = ca_ani_castle_tower_2_bis
+            holder_scope = {
+                war = no
+                wealth = 1000
+            }
+            location = {
+                NOT = { Is_really_animal_trigger = yes }
+            }
+            custom_tooltip = {
+                text = NOT_IN_BIG_BUILDINGS_CONSTRUCTION
+                location = {
+                    NOR = {
+                        has_province_flag = theodosian_wall_construction
+                        has_province_flag = Ydragsil_construction
+                        has_province_flag = golden_wall_construction
+                        has_province_flag = animal_library_construction
+                    }
+                }
+            }
+        }
+
+        effect = {
+            holder_scope = {
+                wealth = -1000
+            }
+
+            location = {
+                set_province_flag = theodosian_wall_construction
+
+                province_event = { id = ani_plus.029 }
+            }
+        }
+
+        ai_will_do = { factor = 0.99 }
+    }
+    build_Ydragsil_tree = {
+        is_high_prio = no
+        ai_check_interval = 240 #20 years -> only on conquest
+
+        filter = owned
+        ai_target_filter = owned
+
+        potential = {
+            tier = COUNT
+            location = {
+                has_building = ca_ani_castle_tower_1
+            }
+            FROM = { NOT = { Is_really_animal_trigger = yes }}
+        }
+        allow = {
+            has_building = ca_ani_castle_tower_4_bis
+            holder_scope = {
+                war = no
+                wealth = 2000
+            }
+            location = {
+                NOT = { Is_really_animal_trigger = yes }
+            }
+            custom_tooltip = {
+                text = NOT_IN_BIG_BUILDINGS_CONSTRUCTION
+                location = {
+                    NOR = {
+                        has_province_flag = theodosian_wall_construction
+                        has_province_flag = Ydragsil_construction
+                        has_province_flag = golden_wall_construction
+                        has_province_flag = animal_library_construction
+                    }
+                }
+            }
+        }
+
+        effect = {
+            holder_scope = {
+                wealth = -2000
+            }
+            location = {
+                set_province_flag = Ydragsil_construction
+
+                province_event = { id = ani_plus.029 }
+            }
+        }
+
+        ai_will_do = { factor = 0.99 }
+    }
+    build_golden_wall = {
+        is_high_prio = no
+        ai_check_interval = 240 #20 years -> only on conquest
+
+        filter = owned
+        ai_target_filter = owned
+
+        potential = {
+            tier = COUNT
+            location = {
+                has_building = ca_ani_castle_tower_1
+            }
+            FROM = { NOT = { Is_really_animal_trigger = yes }}
+        }
+        allow = {
+            has_building = ca_ani_castle_tower_6_bis
+            holder_scope = {
+                war = no
+                wealth = 3000
+            }
+            location = {
+                NOT = { Is_really_animal_trigger = yes }
+            }
+            custom_tooltip = {
+                text = NOT_IN_BIG_BUILDINGS_CONSTRUCTION
+                location = {
+                    NOR = {
+                        has_province_flag = theodosian_wall_construction
+                        has_province_flag = Ydragsil_construction
+                        has_province_flag = golden_wall_construction
+                        has_province_flag = animal_library_construction
+                    }
+                }
+            }
+        }
+
+        effect = {
+            holder_scope = {
+                wealth = -3000
+            }
+            location = {
+                set_province_flag = golden_wall_construction
+
+                province_event = { id = ani_plus.029 }
+            }
+        }
+
+        ai_will_do = { factor = 0.99 }
+    }
+    build_animal_library = {
+        is_high_prio = no
+        ai_check_interval = 240 #20 years -> only on conquest
+
+        filter = owned
+        ai_target_filter = owned
+
+        potential = {
+            tier = COUNT
+            location = {
+                has_building = ca_ani_castle_tower_1
+            }
+            FROM = { NOT = { Is_really_animal_trigger = yes }}
+        }
+        allow = {
+            has_building = ca_ani_castle_tower_9
+            holder_scope = {
+                war = no
+                wealth = 4000
+            }
+            location = {
+                NOT = { Is_really_animal_trigger = yes }
+            }
+            custom_tooltip = {
+                text = NOT_IN_BIG_BUILDINGS_CONSTRUCTION
+                location = {
+                    NOR = {
+                        has_province_flag = theodosian_wall_construction
+                        has_province_flag = Ydragsil_construction
+                        has_province_flag = golden_wall_construction
+                        has_province_flag = animal_library_construction
+                    }
+                }
+            }
+        }
+
+        effect = {
+            holder_scope = {
+                wealth = -4000
+            }
+            location = {
+                set_province_flag = animal_library_construction
+
+                province_event = { id = ani_plus.029 }
+            }
+        }
+
+        ai_will_do = { factor = 0.99 }
+    }
+}

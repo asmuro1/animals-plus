@@ -1,0 +1,31 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+
+#####cb localisation
+DRAGON_LOOT_CB;Country plundering;Pillage de pays;;;;;;;;;;;;;x
+DRAGON_LOOT_WAR_NAME;Plundering war;Guerre de pillage;;;;;;;;;;;;;x
+dragon_cb_loot_desc;To allow a dragon to plunder a whole country;Permet aux dragons de piller un pays entier;;;;;;;;;;;;;x
+Old_warior_takes_province;A ancient dragon warrior choose to establish himself in the province [This.GetName];Un ancien guerrier dragon choisi de s'installer dans la province [This.GetName];;;;;;;;;;;;x
+NOT_RECENTLY_LOOTED_CB;Should not have been recently plundered;Ne doit pas avoir été recemment piller;;;;;;;;;;;;x
+####
+CB_NAME_LIBERTY;Liberation;Libération;;;;;;;;;;;;x
+WAR_NAME_LIBERTY;Liberty war;Guerre de libération;;;;;;;;;;;;x
+independance_bear_tributary_cb_desc;To allow a bear to completely free themself from their suzerain;Pour permetre aux ours de complétement se libérer de l'influence du suzerain;;;;;;;;;;;;x
+
+#####tributaries localisation
+BEAR_TRIBUTARY_NAME;Bear subject;Sujet ours;;;;;;;;;;;;x
+BEAR_TRIBTARIES_NAME;Bear subjects;Sujets ours;;;;;;;;;;;;x
+BEAR_SUZERAIN_TRIBUTARY;leader;Commandant;;;;;;;;;;;;x
+BEAR_TRIBUTE_TRIBUTARY;subject;Sujet;;;;;;;;;;;;x
+BEAR_UNRELIGOUS_VASSAL_NAME;Loyal vassal;Vassal loyal;;;;;;;;;;;;x
+BEAR_UNRELIGOUS_VASSALS_NAMES;Loyals vassals;Vassaux loyaux;;;;;;;;;;;;x
+BEAR_SUZERAIN_UNRELIGOUS;Liege;lige;;;;;;;;;;;;x
+BEAR_TRIBUTE_UNRELIGIOUS;Full obligations;Obligations absolues;;;;;;;;;;;;x
+
+
+##hedgehogg update
+#cb localisation
+CB_NAME_HEDGE_INVASION;Hostility war;Guerre d'hostilité;;;;;;;;;;;;x
+WAR_NAME_HEDGE_INVASION;Hostility war;Guerre d'hostilité;;;;;;;;;;;;x
+
+#cb tooltip
+HEDGE_WON_HOSTILITY_WAR_TITLE_GAIN;[Root.GetTitledName] gain every allied territory;[Root.GetTitledName] prend toutes les terres alliés;;;;;;;;;;;;x

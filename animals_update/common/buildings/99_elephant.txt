@@ -1,0 +1,650 @@
+
+
+hospital = {
+
+    ho_eleph_reprod_lab = {
+        desc = ho_eleph_reprod_lab_desc
+
+        potential = {
+            has_dlc = "Reapers"
+            is_capital = yes
+            OR = {
+                FROM = { culture_group = elephant_group }
+                has_province_flag = eleph_herd_in_prov
+                hospital_has_building = ho_eleph_reprod_lab
+            }
+        }
+        trigger = {
+            FROM = {
+                OR = {
+                    AND = {
+                        PREV = {
+                            custom_tooltip = {
+                                text = ELEPH_TT_STARTED_ELEPH_STUDY
+                                has_province_flag = eleph_herd_in_prov
+                            }
+                        }
+                        OR = {
+                            lifestyle_traits == 0
+                            trait = scholar
+                        }
+                    }
+                    PREV = { culture_group = elephant_group }
+                }
+            }
+            hidden_tooltip = {
+                TECH_CONSTRUCTION = 0
+            }
+        }
+
+        gold_cost = 222
+        build_time = 180 # 1/2 year
+        ai_creation_factor = 50
+        extra_tech_building_start = 10.0 # Never get at start of game
+
+        #no modifiers, unlock decisions
+    }
+
+    ho_eleph_trasfo_lab_1 = { #unlock decision to convert character into elephant
+        desc = ho_eleph_trasfo_lab_desc
+
+        potential = {
+            has_dlc = "Reapers"
+            culture_group = elephant_group
+        }
+        trigger = {
+            FROM = { culture_group = elephant_group }
+            hidden_tooltip = {
+                TECH_CONSTRUCTION = 0
+            }
+        }
+
+        gold_cost = 275
+        build_time = 700 # ~2years
+        ai_creation_factor = 40
+        extra_tech_building_start = 10.0 # Never get at start of game
+
+        #no modifiers, unlock decisions
+    }
+    ho_eleph_trasfo_lab_2 = {
+        desc = ho_eleph_trasfo_lab_desc
+
+        potential = {
+            has_dlc = "Reapers"
+            culture_group = elephant_group
+        }
+        trigger = {
+            FROM = { culture_group = elephant_group }
+            c_yatenga = { holder_scope = { religion = Eleph_religion } }
+            hidden_tooltip = {
+                TECH_CONSTRUCTION = 0
+            }
+        }
+        is_active_trigger = {
+            culture_group = elephant_group
+            c_yatenga = { holder_scope = { religion = Eleph_religion } }
+        }
+        upgrades_from = ho_eleph_trasfo_lab_1
+
+        gold_cost = 400
+        build_time = 1100 # ~3 years
+        ai_creation_factor = 20
+        extra_tech_building_start = 10.0 # Never get at start of game
+
+        #no modifiers, unlock decisions
+    }
+
+    # vanilla disease defence: 18% (without hospital)
+    # helephants can go to 25%      (also without hospital buildings)
+    ho_eleph_disease_def_lab = {
+        desc = ho_eleph_disease_def_lab_desc
+
+        potential = {
+            has_dlc = "Reapers"
+            culture_group = elephant_group
+        }
+        trigger = {
+            hidden_tooltip = {
+                TECH_CONSTRUCTION = 0
+            }
+        }
+        # is_active_trigger = { always = yes }
+        prerequisites = { hospital_building_1 }
+
+        gold_cost = 375
+        build_time = 720
+        ai_creation_factor = 35
+        extra_tech_building_start = 10.0
+
+        disease_defence = 0.25
+    }
+
+    #vanilla techpoint: 0.07 E, 0.09 C, 0.06 M, 50% growth
+    ho_eleph_techno_lab = {
+        desc = ho_eleph_techno_lab_desc
+
+        potential = {
+            has_dlc = "Reapers"
+            culture_group = elephant_group
+        }
+        trigger = {
+            FROM = { culture_group = elephant_group }
+            hidden_tooltip = {
+                TECH_CONSTRUCTION = 0
+            }
+        }
+        # is_active_trigger = { always = yes }
+        prerequisites = { hospital_building_2 }
+
+        gold_cost = 600
+        build_time = 1800
+        ai_creation_factor = 35
+        extra_tech_building_start = 10.0
+
+        culture_techpoints = 0.1
+        economy_techpoints = 0.1
+        military_techpoints = 0.08
+        tech_growth_modifier = 0.5
+    }
+
+    ho_eleph_climat_lab = {
+        desc = ho_eleph_climat_lab_desc
+        potential = {
+            has_dlc = "Reapers"
+            FROM = { culture_group = elephant_group }
+            is_capital = yes
+        }
+        trigger = {
+            FROM = { religion = Eleph_religion }
+            hidden_tooltip = {
+                TECH_CONSTRUCTION = 0
+            }
+        }
+        is_active_trigger = { FROM = { religion = Eleph_religion } }
+
+        gold_cost = 800
+        build_time = 2000
+        ai_creation_factor = 75
+        extra_tech_building_start = 10.0
+
+        #decision, no modifiers
+    }
+
+    ho_eleph_disease_lab = {
+        desc = ho_eleph_disease_lab_desc
+
+        potential = {
+            has_dlc = "Reapers"
+            FROM = { culture_group = elephant_group }
+            is_capital = yes
+            FROM = { ai = no }
+        }
+        trigger = {
+            FROM = { religion = Eleph_religion }
+            c_radha = { holder_scope = { religion = Eleph_religion } }
+            hidden_tooltip = {
+                TECH_CONSTRUCTION = 0
+            }
+        }
+        is_active_trigger = {
+            FROM = { religion = Eleph_religion }
+            c_radha = { holder_scope = { religion = Eleph_religion } }
+        }
+
+        gold_cost = 1600
+        build_time = 3750
+        ai_creation_factor = 1
+        extra_tech_building_start = 10.0
+
+        #decision (player only), no modifiers
+    }
+}
+
+castle = {
+    ca_eleph_recruit_1 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = elephant_group
+        }
+        trigger = {
+            culture_group = elephant_group
+            TECH_CASTLE_CONSTRUCTION = 1
+        }
+        is_active_trigger = {
+            culture_group = elephant_group
+            # has_building = ca_ani_castle_tower_1
+        }
+        prerequisites = { ca_ani_castle_tower_1 }
+        # upgrades_from = BaseBuilding
+
+        gold_cost = 90
+        build_time = 450
+        ai_creation_factor = 80
+        extra_tech_building_start = 1.0
+
+        war_elephants = 20
+    }
+    ca_eleph_recruit_2 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = elephant_group
+        }
+        trigger = {
+            culture_group = elephant_group
+            TECH_CASTLE_CONSTRUCTION = 2
+            TECH_FORTIFICATIONS_CONSTRUCTION = 1
+        }
+        is_active_trigger = {
+            culture_group = elephant_group
+            # has_building = ca_ani_castle_tower_2
+        }
+        prerequisites = { ca_ani_castle_tower_2 }
+        upgrades_from = ca_eleph_recruit_1
+
+        gold_cost = 180
+        build_time = 700
+        ai_creation_factor = 70
+        extra_tech_building_start = 1.0
+
+        war_elephants = 45
+    }
+    ca_eleph_recruit_3  = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = elephant_group
+        }
+        trigger = {
+            culture_group = elephant_group
+            TECH_CASTLE_CONSTRUCTION = 5
+            TECH_FORTIFICATIONS_CONSTRUCTION = 5
+        }
+        is_active_trigger = {
+            culture_group = elephant_group
+            # has_building = ca_ani_castle_tower_5_bis
+        }
+        prerequisites = { ca_ani_castle_tower_5_bis }
+        upgrades_from = ca_eleph_recruit_1
+
+        gold_cost = 270
+        build_time = 1150
+        ai_creation_factor = 60
+        extra_tech_building_start = 1.0
+
+        war_elephants = 95
+    }
+    ca_eleph_recruit_4  = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = elephant_group
+        }
+        trigger = {
+            culture_group = elephant_group
+            TECH_CASTLE_CONSTRUCTION = 7
+            TECH_FORTIFICATIONS_CONSTRUCTION = 6
+        }
+        is_active_trigger = {
+            culture_group = elephant_group
+            # has_building = ca_ani_castle_tower_7
+        }
+        prerequisites = { ca_ani_castle_tower_7 }
+        upgrades_from = ca_eleph_recruit_3
+
+        gold_cost = 360
+        build_time = 2500
+        ai_creation_factor = 50
+        extra_tech_building_start = 1.0
+
+        war_elephants = 160
+    }
+
+    ca_eleph_human_merc_1 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = elephant_group
+        }
+        trigger = {
+            culture_group = elephant_group
+            TECH_CASTLE_CONSTRUCTION = 1
+        }
+        is_active_trigger = {
+            culture_group = elephant_group
+            # has_building = ca_ani_castle_tower_1
+        }
+        prerequisites = { ca_ani_castle_tower_1 }
+        # upgrades_from = BaseBuilding
+
+        gold_cost = 110
+        build_time = 450
+        ai_creation_factor = 80
+        extra_tech_building_start = 1.0
+
+        light_infantry = 50
+    }
+    ca_eleph_human_merc_2 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = elephant_group
+        }
+        trigger = {
+            culture_group = elephant_group
+            TECH_CASTLE_CONSTRUCTION = 3
+            TECH_FORTIFICATIONS_CONSTRUCTION = 2
+        }
+        is_active_trigger = {
+            culture_group = elephant_group
+            # has_building = ca_ani_castle_tower_3
+        }
+        prerequisites = { ca_ani_castle_tower_3 }
+        upgrades_from = ca_eleph_human_merc_1
+
+        gold_cost = 220
+        build_time = 700
+        ai_creation_factor = 70
+        extra_tech_building_start = 1.0
+
+        light_infantry = 100
+    }
+    ca_eleph_human_merc_3 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = elephant_group
+        }
+        trigger = {
+            culture_group = elephant_group
+            TECH_CASTLE_CONSTRUCTION = 4
+            TECH_FORTIFICATIONS_CONSTRUCTION = 3
+        }
+        is_active_trigger = {
+            culture_group = elephant_group
+            # has_building = ca_ani_castle_tower_4
+        }
+        prerequisites = { ca_ani_castle_tower_4 }
+        upgrades_from = ca_eleph_human_merc_2
+
+        gold_cost = 330
+        build_time = 1000
+        ai_creation_factor = 60
+        extra_tech_building_start = 1.0
+
+        light_infantry = 200
+    }
+    ca_eleph_human_merc_4 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = elephant_group
+        }
+        trigger = {
+            culture_group = elephant_group
+            TECH_CASTLE_CONSTRUCTION = 6
+            TECH_FORTIFICATIONS_CONSTRUCTION = 5
+        }
+        is_active_trigger = {
+            culture_group = elephant_group
+            # has_building = ca_ani_castle_tower_6
+        }
+        prerequisites = { ca_ani_castle_tower_6 }
+        upgrades_from = ca_eleph_human_merc_3
+
+        gold_cost = 440
+        build_time = 1900
+        ai_creation_factor = 50
+        extra_tech_building_start = 1.0
+
+        light_infantry = 300
+    }
+    ca_eleph_human_merc_5 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = elephant_group
+        }
+        trigger = {
+            culture_group = elephant_group
+            TECH_CASTLE_CONSTRUCTION = 8
+            TECH_FORTIFICATIONS_CONSTRUCTION = 7
+        }
+        is_active_trigger = {
+            culture_group = elephant_group
+            # has_building = ca_ani_castle_tower_8
+        }
+        prerequisites = { ca_ani_castle_tower_8 }
+        upgrades_from = ca_eleph_human_merc_4
+
+        gold_cost = 600
+        build_time = 2725
+        ai_creation_factor = 40
+        extra_tech_building_start = 1.0
+
+        light_infantry = 450
+    }
+
+    ca_eleph_stables_1 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = elephant_group
+        }
+        trigger = {
+            culture_group = elephant_group
+
+            TECH_CASTLE_CONSTRUCTION = 1
+            TECH_FORTIFICATIONS_CONSTRUCTION = 1
+        }
+        is_active_trigger = {
+            culture_group = elephant_group
+            # has_building = ca_ani_castle_tower_1_bis
+        }
+        prerequisites = { ca_ani_castle_tower_1_bis }
+        # upgrades_from = BaseBuilding
+
+        gold_cost = 130
+        build_time = 500
+        ai_creation_factor = 70
+        extra_tech_building_start = 1.0
+
+        light_cavalry = 30
+        knights = 15
+    }
+    ca_eleph_stables_2 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = elephant_group
+        }
+        trigger = {
+            culture_group = elephant_group
+            TECH_CASTLE_CONSTRUCTION = 3
+            TECH_FORTIFICATIONS_CONSTRUCTION = 3
+        }
+        is_active_trigger = {
+            culture_group = elephant_group
+            # has_building = ca_ani_castle_tower_3_bis
+        }
+        prerequisites = { ca_ani_castle_tower_3_bis }
+        upgrades_from = ca_eleph_stables_1
+
+        gold_cost = 360
+        build_time = 1111
+        ai_creation_factor = 50
+        extra_tech_building_start = 1.0
+
+        light_cavalry = 90
+        knights = 30
+    }
+    ca_eleph_stables_3 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = elephant_group
+        }
+        trigger = {
+            culture_group = elephant_group
+            TECH_CASTLE_CONSTRUCTION = 6
+            TECH_FORTIFICATIONS_CONSTRUCTION = 6
+        }
+        is_active_trigger = {
+            culture_group = elephant_group
+            # has_building = ca_ani_castle_tower_6_bis
+        }
+        prerequisites = { ca_ani_castle_tower_6_bis }
+        upgrades_from = ca_eleph_stables_2
+
+        gold_cost = 550
+        build_time = 2345
+        ai_creation_factor = 30
+        extra_tech_building_start = 1.0
+
+        light_cavalry = 180
+        knights = 55
+    }
+
+    ca_eleph_retinue_1 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = elephant_group
+        }
+        trigger = {
+            culture_group = elephant_group
+            TECH_CASTLE_CONSTRUCTION = 2
+            TECH_FORTIFICATIONS_CONSTRUCTION = 2
+        }
+        is_active_trigger = {
+            culture_group = elephant_group
+            # has_building = ca_ani_castle_tower_2_bis
+        }
+        prerequisites = { ca_ani_castle_tower_2_bis }
+        # upgrades_from = BaseBuilding
+
+        gold_cost = 250
+        build_time = 750
+        ai_creation_factor = 80
+        extra_tech_building_start = 1.0
+
+        war_elephants = 20
+        retinuesize = 20
+        war_elephants_morale = 0.01
+    }
+    ca_eleph_retinue_2 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = elephant_group
+        }
+        trigger = {
+            culture_group = elephant_group
+            TECH_CASTLE_CONSTRUCTION = 5
+            TECH_FORTIFICATIONS_CONSTRUCTION = 4
+        }
+        is_active_trigger = {
+            culture_group = elephant_group
+            # has_building = ca_ani_castle_tower_5
+        }
+        prerequisites = { ca_ani_castle_tower_5 }
+        upgrades_from = ca_eleph_retinue_1
+
+        gold_cost = 500
+        build_time = 1500
+        ai_creation_factor = 65
+        extra_tech_building_start = 1.0
+
+        war_elephants = 20
+        retinuesize = 20
+        war_elephants_morale = 0.01
+    }
+    ca_eleph_retinue_3 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = elephant_group
+        }
+        trigger = {
+            culture_group = elephant_group
+            TECH_CASTLE_CONSTRUCTION = 7
+            TECH_FORTIFICATIONS_CONSTRUCTION = 7
+        }
+        is_active_trigger = {
+            culture_group = elephant_group
+            # has_building = ca_ani_castle_tower_7_bis
+        }
+        prerequisites = { ca_ani_castle_tower_7_bis }
+        upgrades_from = ca_eleph_retinue_2
+
+        gold_cost = 800
+        build_time = 2500
+        ai_creation_factor = 50
+        extra_tech_building_start = 1.0
+
+        war_elephants = 20
+        retinuesize = 20
+        war_elephants_morale = 0.01
+    }
+
+    ca_eleph_speciality_1 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = elephant_group
+            is_capital = yes
+        }
+        trigger = {
+            culture_group = elephant_group
+            TECH_CASTLE_CONSTRUCTION = 4
+            TECH_FORTIFICATIONS_CONSTRUCTION = 4
+        }
+        is_active_trigger = {
+            culture_group = elephant_group
+            # has_building = ca_ani_castle_tower_4_bis
+        }
+        prerequisites = { ca_ani_castle_tower_4_bis }
+        # upgrades_from = BaseBuilding
+
+        gold_cost = 500
+        build_time = 2500
+        ai_creation_factor = 50
+        extra_tech_building_start = 1.0
+
+        tech_growth_modifier = 0.5
+        military_techpoints = 0.01
+        economy_techpoints = 0.02
+        culture_techpoints = 0.04
+    }
+    ca_eleph_speciality_2 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = elephant_group
+            is_capital = yes
+        }
+        trigger = {
+            culture_group = elephant_group
+            TECH_CASTLE_CONSTRUCTION = 8
+            TECH_FORTIFICATIONS_CONSTRUCTION = 8
+            hedgehog_home_02_tooltip = yes
+        }
+        is_active_trigger = {
+            culture_group = elephant_group
+            # has_building = ca_ani_castle_tower_9
+        }
+        prerequisites = { ca_ani_castle_tower_9 }
+        upgrades_from = ca_hedge_speciality_01
+
+        gold_cost = 1000
+        build_time = 5000
+        ai_creation_factor = 25
+        extra_tech_building_start = 1.0
+
+        tech_growth_modifier = 0.5
+        military_techpoints = 0.01
+        economy_techpoints = 0.03
+        culture_techpoints = 0.06
+    }
+}

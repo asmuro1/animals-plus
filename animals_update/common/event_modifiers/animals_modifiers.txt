@@ -1,0 +1,599 @@
+#beta version modifier
+dragon_looted_cooldown = {
+	icon = 1
+}
+
+dragon_looted_province_by_war = {
+	icon = 110
+	garrison_size = -0.95
+	levy_size = -0.90
+	siege_speed = 0.75
+	local_tax_modifier = -0.95
+}
+
+Dragon_loose_looting_war = {
+	icon = 110
+	global_revolt_risk = 0.30
+	vassal_opinion = -50
+	general_opinion = -25
+	levy_reinforce_rate = -0.5
+}
+
+#bear update
+#number in modifier name dosn't means nothing anymore
+bear_child_0_3 = {
+	icon = 126
+	vassal_opinion = -15
+	monthly_character_prestige = -0.5
+	land_morale = -0.20
+}
+bear_child_4_6 = {
+	icon = 126
+	vassal_opinion = -10
+	monthly_character_prestige = -0.25
+	land_morale = -0.10
+}
+bear_child_7_9 = {
+	icon = 126
+	vassal_opinion = -5
+	monthly_character_prestige = -0.01
+	land_morale = -0.05
+}
+bear_child_10_12 = {
+	icon = 125
+	vassal_opinion = 5
+	monthly_character_prestige = 0.01
+	land_morale = 0.05
+}
+bear_child_13_15 = {
+	icon = 125
+	vassal_opinion = 10
+	monthly_character_prestige = 0.25
+	land_morale = 0.1
+}
+bear_child_16_plus = {
+	icon = 125
+	vassal_opinion = 15
+	monthly_character_prestige = 0.5
+	land_morale = 0.2
+}
+
+white_bear_religious_modifier = {
+	icon = 125
+	fertility = 0.2
+	combat_rating = 10
+	land_morale = 0.05
+}
+brown_bear_religious_modifier = {
+	icon = 125
+	fertility = 0.2
+	combat_rating = 10
+	retinuesize_perc = 0.05
+}
+black_bear_religious_modifier = {
+	icon = 125
+	fertility = 0.2
+	combat_rating = 10
+	siege_defence = 0.1
+	siege_speed = 0.1
+}
+holy_autority_animal_cooldown = {
+	icon = 1
+	#secret modifier
+}
+
+Haze_cleared = {
+	icon = 50
+
+	local_revolt_risk = -0.5
+	culture_flex = 0.2
+	religion_flex = 0.2
+	levy_reinforce_rate = 0.50
+	# garrison_growth = 0.25 not recognized by game
+	land_morale = 0.05
+}
+
+Haze_abadonned = {
+	icon = 51
+
+	local_revolt_risk = 0.05
+	local_movement_speed = -0.5
+	siege_defence = -0.5
+	siege_speed = -0.5
+}
+
+disappointed_commander_animal = {
+	icon = 19
+	monthly_character_prestige = -0.5
+}
+savior_rewarded = {
+	icon = 1
+	monthly_character_prestige = 0.25
+}
+savior_ignored = {
+	icon = 19
+	monthly_character_prestige = -0.75
+	general_opinion = -5
+}
+bear_malaise = {
+	icon = 120
+	local_revolt_risk = 0.02
+	disease_defence = -0.02
+	local_tax_modifier = -0.10
+}
+big_bear_malaise = {
+	icon = 120
+	disease_defence = -0.5
+	local_tax_modifier = -0.25
+}
+giant_bear_malaise = {
+	icon = 120
+	local_revolt_risk = -0.05
+	disease_defence = -0.08
+	local_tax_modifier = -0.40
+}
+
+bear_province_attack = {
+	icon = 126
+	local_revolt_risk = 0.2
+	tax_income = -0.5
+	levy_size = -0.5
+	local_build_cost_modifier = 1.0
+	local_build_time_modifier = 1.0
+}
+inhabitant_extermination = {
+	icon = 126
+	local_revolt_risk = 0.8
+	tax_income = -0.75
+	levy_size = -1.0
+	local_build_cost_modifier = 10.0
+	local_build_time_modifier = 10.0
+}
+recent_bear_depopulation = {
+	icon = 42
+	local_revolt_risk = -1.0
+	tax_income = -0.95
+	levy_size = -0.95
+	local_build_cost_modifier = 5.0
+	local_build_time_modifier = 20.0
+}
+
+bear_succession_tournament_cooldown = {
+	icon = 1
+}
+
+
+bear_stab_comtale_family_1 = {
+	icon = 36
+	local_revolt_risk = 0.20
+	local_tax_modifier = -0.025
+}
+bear_stab_comtale_family_2 = {
+	icon = 36
+	local_revolt_risk = 0.10
+	local_tax_modifier = -0.01
+}
+bear_stab_comtale_family_3 = {
+	icon = 36
+	local_revolt_risk = 0.05
+}
+bear_stab_comtale_family_4 = {
+	icon = 18
+	local_revolt_risk = -0.05
+}
+bear_stab_comtale_family_5 = {
+	icon = 18
+	local_revolt_risk = -0.075
+	local_tax_modifier = 0.01
+}
+bear_stab_comtale_family_6 = {
+	icon = 18
+	local_revolt_risk = -0.10
+	local_tax_modifier = 0.025
+}
+bear_income_family_1 = {
+	icon = 24
+	tax_income = -1.5
+	local_tax_modifier = -0.15
+}
+bear_income_family_2 = {
+	icon = 24
+	tax_income = -1.0
+	local_tax_modifier = -0.05
+}
+bear_income_family_3 = {
+	icon = 24
+	tax_income = -0.5
+}
+bear_income_family_4 = {
+	icon = 6
+	tax_income = 0.5
+}
+bear_income_family_5 = {
+	icon = 6
+	tax_income = 1.0
+	local_tax_modifier = 0.05
+}
+bear_income_family_6 = {
+	icon = 6
+	tax_income = 1.5
+	local_tax_modifier = 0.15
+}
+bear_building_family_1 = {
+	icon = 29
+	tax_income = -1.5
+	build_cost_modifier = 0.30
+	build_time_modifier = 0.50
+}
+bear_building_family_2 = {
+	icon = 29
+	tax_income = -1.0
+	build_cost_modifier = 0.15
+	build_time_modifier = 0.30
+}
+bear_building_family_3 = {
+	icon = 29
+	tax_income = -0.5
+	build_cost_modifier = 0.05
+	build_time_modifier = 0.10
+}
+bear_building_family_4 = {
+	icon = 11
+	tax_income = 0.5
+	build_cost_modifier = -0.05
+	build_time_modifier = -0.10
+}
+bear_building_family_5 = {
+	icon = 11
+	tax_income = 1.0
+	build_cost_modifier = -0.10
+	build_time_modifier = -0.25
+}
+bear_building_family_6 = {
+	icon = 11
+	tax_income = 1.5
+	build_cost_modifier = -0.15
+	build_time_modifier = -0.30
+}
+bear_siege_family_1 = {
+	icon = 116
+	build_cost_modifier = 0.10
+	siege_defence = -0.3
+}
+bear_siege_family_2 = {
+	icon = 116
+	build_cost_modifier = 0.025
+	siege_defence = -0.2
+}
+bear_siege_family_3 = {
+	icon = 116
+	siege_defence = -0.1
+}
+bear_siege_family_4 = {
+	icon = 115
+	siege_defence = 0.1
+}
+bear_siege_family_5 = {
+	icon = 115
+	build_cost_modifier = -0.025
+	siege_defence = 0.2
+}
+bear_siege_family_6 = {
+	icon = 115
+	build_cost_modifier = -0.05
+	siege_defence = 0.3
+}
+
+bear_hib_plot_gain = {
+	icon = 14
+
+	defensive_plot_power_modifier = 0.5
+	plot_discovery_chance = 0.2
+}
+bear_hib_plot_lost = {
+	icon = 32
+
+	defensive_plot_power_modifier = -0.35
+	plot_discovery_chance = -0.35
+}
+bear_hib_health_disease = {
+	icon = 69
+	health_penalty = 5.0
+}
+bear_hib_health_health = {
+	icon = 69
+	health = 4.0
+}
+
+
+#hedgehog war, theocratic gov removed
+Animal_theocratic_offensive_war =  {
+	icon = 19
+	land_morale = -0.40
+	land_organisation = -0.25
+}
+Animal_theocratic_civil_offensive_war = {
+	icon = 19
+	land_morale = -0.15
+	land_organisation = -0.05
+}
+Animal_theocratic_defensive_war = {
+	icon = 1
+	land_morale = 0.35
+	land_organisation = 0.25
+}
+
+animal_hord_province_invasion = {
+	icon = 126
+	local_tax_modifier = -0.85
+	levy_size = -0.85
+	local_revolt_risk = -0.20
+	local_build_time_modifier = 1.0
+}
+animal_hord_province_invasion_cleaned = {
+	icon = 125
+	local_revolt_risk = -0.20
+	local_tax_modifier = 0.09
+	local_build_time_modifier = -0.5
+}
+
+#hedgehog update
+hedge_hedgehog_inhabitant = {
+	icon = 93
+	siege_defence = 0.2
+	army_reinforce_rate = -0.15
+	levy_size = -0.10
+}
+hedge_hedgehog_friendly_inhabitant = {
+	icon = 93
+	siege_defence = 0.2
+	army_reinforce_rate = -0.05
+}
+hedge_hedgehog_hostile_inhabitant = {
+	icon = 94
+	garrison_size = -0.15
+	army_reinforce_rate = -0.15
+	levy_size = -0.15
+}
+hedge_friendly_gone = {
+	icon = 93
+	levy_size = -0.05
+	levy_reinforce_rate = -0.25
+	garrison_size = -0.25
+}
+
+hedge_province_frind_with_hedgehog = {
+	icon = 1
+}
+hedge_friendship_relation_with_hedgehog = {
+	icon = 93
+	child_opinion = 5
+}
+
+hedgehog_province_in_motion_1 = {
+	garrison_size		= -0.20
+	# garrison_growth		= -1.00   -> modifier exist on wiki but not for error.log
+	levy_size    		= -0.50
+	levy_reinforce_rate	= -1.50
+	icon				= 106
+}
+hedgehog_province_in_motion_2 = {
+	garrison_size		= -0.10
+	# garrison_growth		= -0.50
+	levy_size			= -0.25
+	levy_reinforce_rate	= -0.80
+	icon				= 106
+}
+
+hedgehog_loot_settlement_modifier = {
+	icon = 106
+	garrison_size = -0.5
+	levy_size = -0.5
+	local_tax_modifier = -0.35
+}
+hedgehog_siege_lost_settlment_modifier = {
+	icon = 42
+	garrison_size = -1.00
+	levy_size = -0.95
+	local_tax_modifier = -0.98
+}
+hedgehog_siege_lost_province_modifier = {
+	icon = 42
+	local_revolt_risk = 0.25
+	local_tax_modifier = -0.2
+	local_build_cost_modifier = 1.0
+	local_build_time_modifier = 3.0
+	land_organisation = -0.05
+}
+
+hedgehog_inhabitant_extermination = {
+	icon = 41
+	local_build_cost_modifier = 10.0
+	local_build_time_modifier = 10.0
+	local_revolt_risk = 0.60
+	levy_size = -10.0
+	garrison_size = -0.99
+}
+recent_hedge_depopulation = { ## can be used for other animals (as localisation dosn't mention hedgehog)
+	icon = 42
+	local_revolt_risk = -1.0
+	tax_income = -0.85
+	levy_size = -0.95
+	garrison_size = -0.60
+	local_build_cost_modifier = 5.0
+	local_build_time_modifier = 20.0
+}
+
+#panda update
+panda_conversion_quest_cooldown = {
+	icon = 1
+}
+panda_instability_war_cooldown = {
+	icon = 1
+}
+
+
+panda_food_imported = {
+	icon = 24
+	local_tax_modifier = -0.50
+}
+panda_plot_cooldown = {
+	icon = 1
+}
+panda_unraisable_land = {
+	icon = 31
+	levy_size = -10.0
+	garrison_size = 1.0
+}
+
+# duck update
+duck_dev_level_0 = {
+	icon = 6
+	local_tax_modifier = -0.5
+	levy_size = -0.5
+	tradevalue = -8
+}
+duck_dev_level_1 = {
+	icon = 6
+	local_tax_modifier = -0.4
+	levy_size = -0.4
+	tradevalue = -6
+}
+duck_dev_level_2 = {
+	icon = 6
+	local_tax_modifier = -0.3
+	levy_size = -0.3
+	tradevalue = -4
+}
+duck_dev_level_3 = {
+	icon = 6
+	local_tax_modifier = -0.2
+	levy_size = -0.2
+	tradevalue = -2
+}
+duck_dev_level_4 = {
+	icon = 6
+	local_tax_modifier = -0.1
+	levy_size = -0.1
+}
+duck_dev_level_5 = {
+	icon = 6
+	# local_tax_modifier = -0
+	# levy_size = 0
+	tradevalue = 1
+}
+duck_dev_level_6 = {
+	icon = 6
+	local_tax_modifier = 0.05
+	levy_size = 0.1
+	tradevalue = 2
+}
+duck_dev_level_7 = {
+	icon = 6
+	local_tax_modifier = 0.10
+	levy_size = 0.2
+	tradevalue = 3
+}
+duck_dev_level_8 = {
+	icon = 6
+	local_tax_modifier = 0.15
+	levy_size = 0.3
+	tradevalue = 4
+}
+duck_dev_level_9 = {
+	icon = 6
+	local_tax_modifier = 0.20
+	levy_size = 0.4
+	tradevalue = 5
+}
+duck_dev_level_10 = {
+	icon = 6
+	local_tax_modifier = 0.35
+	levy_size = 0.5
+	tradevalue = 6
+}
+
+duck_passive_conversion = {
+	icon = 32
+	general_opinion = -5
+}
+duck_HS_Respected_generation = {
+	icon = 58
+	vassal_opinion = 5
+}
+
+duck_province_invest_1 = {
+	icon = 101
+	duck_max_dev = 1
+	duck_dev_speed_increase = 0.5
+}
+duck_province_invest_2 = {
+	icon = 101
+	duck_max_dev = 2
+	duck_dev_speed_increase = 1.0
+}
+duck_province_invest_3 = {
+	icon = 101
+	duck_max_dev = 3
+	duck_dev_speed_increase = 1.5
+}
+
+#elephant update
+eleph_fertility_bonus = {
+	icon = 18
+	fertility = 0.3
+}
+
+eleph_province_hostility = {
+	icon = 32
+	local_revolt_risk = 0.075
+}
+eleph_researsh_bonus = {
+	icon = 85
+	learning = 1
+}
+
+eleph_epidemic_unrest = {
+	icon = 36
+	local_revolt_risk = 0.20
+}
+eleph_epidemic_garrison = {
+	icon = 36
+	garrison_size = -0.75
+	local_tax_modifier = -0.75
+}
+eleph_migration_malus = {
+	icon = 36
+	garrison_size = -1.5
+	levy_size = -2.0
+}
+
+eleph_malaises = {
+	icon = 35
+	diplomacy_penalty = -1
+	health_penalty = -0.5
+}
+
+eleph_climate_control_1 = {
+	icon = 133
+	local_tax_modifier = 0.05
+}
+eleph_climate_control_2 = {
+	icon = 134
+	garrison_size = -0.025
+	local_tax_modifier = -0.05
+}
+eleph_climate_control_3 = {
+	icon = 134
+	supply_limit = -5
+	garrison_size = -0.1
+	local_tax_modifier = -0.2
+	local_revolt_risk = 0.075
+}
+eleph_climate_control_4 = {
+	icon = 134
+	supply_limit = -20
+	garrison_size = -0.3
+	local_tax_modifier = -0.5
+	local_revolt_risk = 0.2
+}

@@ -1,0 +1,81 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+
+###DUCK update
+
+DESC_EVT_099_INSPECT_STRANGE_BIRD;From your castle, you see the sea. While looking at it, you see a strange comportment from some bird looking animals at an only place;Depuis le château, il est possible de voir l'océan. Cependant, en regardant quelques minutes vers la mer, vous voyez des animaux ressemblant à des oiseaux, regrouper autour d'un point avec un comportement étrange;;;;;;;;;;;;x
+OPT_1_EVT_099_GO_SEE_IT;I should see that myself;Je vais aller voir cela moi-même;;;;;;;;;;;;x
+OPT_2_EVT_099_IGNORE_IT;It's my imagination;C'est juste mon imagination;;;;;;;;;;;;x
+DESC_EVT_100_GO_SEE_FURTHER;When I came across those strange bird by boat, I found them to be some duck turning in circle;En m'approchant de ces étranges oiseaux en bateau, je réalise que ces oiseaux sont en réalité des canards qui tournent en cercle;;;;;;;;;;;;x
+OPT_1_EVT_100_GO_BACK;I now know what bird it is, go back to land!;Maintenant que je sais que ce ne sont que des canards, je n'ai aucune raison de rester;;;;;;;;;;;;x
+OPT_2_EVT_100_EXPLORE_MORE;I should see why they turn in circle;Je devrais m'approcher pour savoir pourquoi ils tournent en cercle;;;;;;;;;;;;x
+DESC_EVT_101_RETURN_NORMAL;The duck ran away and nothing happened;Les canards sont partis sans que rien n'arrive;;;;;;;;;;;;x
+OPT_EVT_101_NOTHIG;Then, I should return on land...;Je devrais retourner sur la terre ferme...;;;;;;;;;;;;x
+DESC_EVT_102_FOG_APPEAR;While I get close to those duck, a white fog appear. Suddenly the ducks disappears;En m'approchant de ces canards, un brouillards se lève. Soudain, les canards disparaissent;;;;;;;;;;;;x
+OPT_EVT_102_COUGH;Why can't I go out of the fog?!;Pourquoi est-ce impossible de quitter le brouillard?;;;;;;;;;;;;x
+DESC_EVT_103_FREE_FROM_FOG;After some months, maybe years, the fog finally disappears;Après plusieurs mois, peut-être même plusieurs années, le brouillard se disperce enfin;;;;;;;;;;;;x
+OPT_EVT_103_FINALLY_FREE;Why did so much thing happened?;Que s'est-til passé au juste?;;;;;;;;;;;;x
+DESC_EVT_104_DUCK_FOG;the fog is starting to lift in [This.GetName]. As a duck, you have to take this opportunity to make [This.GetName] inhabited by ducks, even if seen as aggressive;Un brouillard se lève en [This.GetName]. En tant que canard, je dois utiliser cette opportunité pour rendre [This.GetName] habité par des canards, même si c'est d'une manière qui semble aggressif.;;;;;;;;;;;;x
+OPT_EVT_103_FINALLY_DUCK;I have to do it!;Je dois le faire!;;;;;;;;;;;;x
+DESC_EVT_106_CHANGE_DEV;After times, the development level of [This.GetName] did changed.;Après suffisemment de temps, le niveau de développement de [This.GetName] vien de changer.;;;;;;;;;;;;x
+OPT1_EVT_106_DECREASE_DEV;Did it just decreased?!;Est-ce qu'il vient juste de diminuer?!;;;;;;;;;;;;x
+OPT2_EVT_106_INCREASE_DEV;Did it just increased?!;Est-ce qu'il vient juste d'augmenter?;;;;;;;;;;;;x
+DESC_EVT_109_START_INVESTISSMENT;As [This.GetName] start to weaken against potential enemy, it is time to make it shine!;Comme [This.GetName] commence à faiblir face aux différentes forces ennemis, il devient important d'investir pour faire briller la province à nouveau!;;;;;;;;;;;;x
+OPT1_EVT109_ONE_MORE_LEVEL;A small investissment to make it famous;Un petit investissment pour que [This.GetName] soit connu;;;;;;;;;;;;x
+OPT2_EVT109_TWO_MORE_LEVEL;A correct investissment to make it be coveted;Un bon investissment pour faire de [This.GetName] convoité;;;;;;;;;;;x
+OPT3_EVT109_THREE_MORE_LEVEL;A big investissment to make it shine wordly;Un gros investissmenet va faire briller [This.GetName] mondialement;;;;;;;;;;;;x
+OPT4_EVT109_NO_INVEST;Investing into provinces is too expensive...;Investir coûte trop cher...;;;;;;;;;;;;x
+DESC_EVT_110_CONTINUE_INVEST;The effect of the investissment made last year start to fade;Les effets de l'investissment fait il y a environ 1 an commence à s'ammoindrir;;;;;;;;;;;;x
+OPT1_EVT_110_CONTINUE_INVEST;We should made it again;Nous devrions le refaire;;;;;;;;;;;;x
+OPT2_EVT_110_REDUCE_INVEST;It will continue in moderation;Cela va continuer de manière plus modéré;;;;;;;;;;;;x
+OPT3_EVT_110_INCREASE_INVEST;I shall make those effect even stronger anymore;Je ferais en sorte que la province soit davantage prospère;;;;;;;;;;;;x
+OPT4_EVT_110_STOP_INVEST;Then, let it fade!;Investir ne servira plus à rien!;;;;;;;;;;;;x
+
+#event tooltips
+ANI_THEIR_IS_NOTHING_TT;nothing found;rien de trouvé;;;;;;;;;;;;x
+ANI_THEIR_IS_SOMETHING_TT;something happens;quelque chose arrive;;;;;;;;;;;;x
+ANI_GAIN_AGE;Became older;Devien plus agé;;;;;;;;;;;;x
+DUCK_prov_conv;Each non-duck character has §Y70%§! of chance to become duck;Tous les personnages non canard de la province ont §Y70%§! de chance de devenir canard;;;;;;;;;;;;x
+DUCK_DEV_REDUCE;The development level decrease by §Y1§!;Le niveau de développement diminue d'§Y1§!;;;;;;;;;;;;x
+DUCK_DEV_INCREASE;The development level increase by §Y1§!;Le niveau de développement augmente d'§Y1§!;;;;;;;;;;;;x
+
+#other tooltips
+DUCK_DEV_LESS_4;Has a development level inferior than §Y4§!;A un niveau de développement inférieur à §Y4§!;;;;;;;;;;;;x
+DUCK_DEV_MORE_2;Has a development level superior than §Y2§!;A un niveau de développement supérieur à §Y2§!;;;;;;;;;;;;x
+DUCK_DEV_MORE_3;Has a development level superior than §Y3§!;A un niveau de développement supérieur à §Y3§!;;;;;;;;;;;;x
+DUCK_DEV_MORE_4;Has a development level superior than §Y4§!;A un niveau de développement supérieur à §Y4§!;;;;;;;;;;;;x
+DUCK_DEV_MORE_5;Has a development level superior than §Y5§!;A un niveau de développement supérieur à §Y5§!;;;;;;;;;;;;x
+DUCK_DEV_MORE_6;Has a development level superior than §Y6§!;A un niveau de développement supérieur à §Y6§!;;;;;;;;;;;;x
+DUCK_DEV_MORE_7;Has a development level superior than §Y7§!;A un niveau de développement supérieur à §Y7§!;;;;;;;;;;;;x
+DUCK_DEV_MORE_8;Has a development level superior than §Y8§!;A un niveau de développement supérieur à §Y8§!;;;;;;;;;;;;x
+DUCK_DEV_MORE_9;Has a development level superior than §Y9§!;A un niveau de développement supérieur à §Y9§!;;;;;;;;;;;;x
+DUCK_DEV_10;Has a development level superior than §Y10§!;A un niveau de développement supérieur à §Y10§!;;;;;;;;;;;;x
+
+
+#ELEPHANT UPDATE
+
+DESC_EVT111_ELEPH_HERD_COME;An elephant herd just come around the hospital of [This.GetName]. It seems that they are searching something...;Un troupeau d'éléphant tourne près de l'hôpital de [This.GetName]. Il est dure de savoir ce qu'ils veulent faire...;;;;;;;;;;;;x
+OPT1_EVT111_LET_THEM_STAY;They cannot do anything wrong;Ils ne pourront rien faire de grave;;;;;;;;;;;;x
+OPT2_EVT111_CHASE_THEM;It could be too dangerous to let them here;Il est trop dangereux de les laisser là;;;;;;;;;;;;x
+DESC_EVT112_NO_ELEPH_HERD;The elephant herd in [This.GetName] seems to have disappeared;Le troupeau d'éléphants de [This.GetName] semble avoir disparu;;;;;;;;;;;;x
+OPT_DESC112_OK;They just return to their savage state;Pourquoi sont-ils retournés à la sauvagerie?;;;;;;;;;;;;x
+DESC_EVT113_HERD_ACCIDENT;During your research on elephant reproduction method, you did fall in the wrong room of your laboratory;Pendant la recherche sur la méthode de reproduction des éléphants, un accident occurre en entrant dans la mauvaise salle.;;;;;;;;;;;;x
+OPT_EVT113_HA;Hope it is fine;J'espère que ça finira bien;;;;;;;;;;;;x
+DESC_EVT114_ELEPH_ACC;The elephant herd in [This.GetName] is causing problems! When inside some town, they did go on rampage;La horde d'éléphant en [This.GetName] est devenu incontrollable.;;;;;;;;;;;;x
+OPT1_A_EVT114_WEALTH_ACC;I should pay to avoid damage;Je devrais payer pour réparer les dégâts;;;;;;;;;;;;x
+OPT1_B_EVT114_HONOR_ACC;I shall calms the peasants by using my authority;Je vais utiliser mon autorité pour calmer les habitants;;;;;;;;;;;;x
+OPT2_A_EVT114_WEALTH_ACC;I can't save [This.GetName] buildings;Je ne peux rien faire pour sauver les bâtiments de [This.GetName].;;;;;;;;;;;;x
+OPT2_B_EVT114_HONOR_ACC;The peasants should just keep quiet;Les paysants devraient rester calme;;;;;;;;;;;;x
+DESC1_EVT115_END_OF_RESEARSH;The disparition of the elephant put an end to the study. Unfortunately, I did not have time to find anything.;La disparitions des éléphants ont mis fin aux recherches. Maleuresement, rien n'a été trouvé;;;;;;;;;;;x
+DESC2_EVT115_RESULT_OF_RESEARSH;Without the elephant herd, the study on elephant reproduction ended. Some goods results have been found.;Sans la horde d'éléphant, les recherches sur la reproduction des éléphants a pris fin. De bonnes choses en ressortent.;;;;;;;;;;;;x
+OPTA_EVT115_GOOD;Good!;Bien!;;;;;;;;;;;;x
+OPTB_EVT115_TRY_AGAIN;I will succeed next time;La prochaine fois sera la bonne!;;;;;;;;;;;;x
+DESC_ECT117_UNREST;As condition to live in [This.GetName] are not ideal, the local population start to avoid listening;Comme les conditions de vie de [This.GetName] commencent à devenir incorrect, la population local commence à devenir insupportable;;;;;;;;;;;;x
+OPT1_EVT117_UNREST;I hope that I will avoid a revolt;J'espère éviter une révolte;;;;;;;;;;;;x
+OPT2_EVT117_GARRISON;I hope that they will soon work corretly;J'espère qu'ils vont rapidement se remettre au boulot;;;;;;;;;;;;x
+DESC_EVT118_ELEPH_ILLNESS;It seems that I just got the strange disease in [location.GetName].;Il semblerai que j'ai attrapé la maladie qui sévit en [location.GetName].;;;;;;;;;;;;x
+OPT_EVT118_ELEPH_ILLNESS;Does that means that I will became an elephant?!;Je vais donc devenir un éléphant?!;;;;;;;;;;;;x
+
+
+##tooltip
+
+eleph_unlock_reprod_lab;Can construct a laboratory on hospital;Peut construire un laboratoire dans l'hôpital;;;;;;;;;;;;x

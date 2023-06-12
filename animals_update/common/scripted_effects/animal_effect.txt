@@ -1,0 +1,937 @@
+generate_newborn_sisbro_effect = {
+    create_character = {
+        dynasty = ROOT
+        religion = ROOT
+        culture = ROOT
+        race = ROOT
+        flag = spawned_newborn
+        age = 0
+
+        female = random
+        genetic_father = real_father_even_if_dead
+        genetic_mother = mother
+    }
+    father = {
+        new_character = {
+            set_father = PREV
+        }
+    }
+    if = {
+        limit = {
+            trait = bastard
+        }
+        new_character = {
+            add_trait = bastard
+        }
+    }
+    if = {
+        limit = {
+            trait = human_bear
+        }
+        new_character = {
+            add_trait = human_bear
+        }
+    }
+    if = {
+        limit = {
+            trait = child_of_consort
+        }
+        new_character = {
+            add_trait = child_of_consort
+        }
+    }
+    else_if = {
+        limit = {
+            trait = child_of_consort_male
+        }
+        new_character = {
+            add_trait = child_of_consort_male
+        }
+    }
+
+    if = {
+        limit = {
+            trait = born_in_the_purple
+        }
+        new_character = {
+            add_trait = born_in_the_purple
+        }
+    }
+}
+
+evaluate_number_child_bear_effect = {
+
+    ###modifier name does not mean anything as number of child as changed while passing from 1.1 to 2.0 version
+    remove_character_modifier = bear_child_0_3
+    remove_character_modifier = bear_child_4_6
+    remove_character_modifier = bear_child_7_9
+    remove_character_modifier = bear_child_10_12
+    remove_character_modifier = bear_child_13_15
+    remove_character_modifier = bear_child_16_plus
+
+    if = {
+        limit = {
+            num_of_children == 0
+        }
+        add_character_modifier = {
+            name = bear_child_0_3
+            duration = -1
+        }
+    }
+    else_if = {
+        limit = {
+            num_of_children <= 2
+        }
+        add_character_modifier = {
+            name = bear_child_4_6
+            duration = -1
+        }
+    }
+    else_if = {
+        limit = {
+            num_of_children <= 4
+        }
+        add_character_modifier = {
+            name = bear_child_7_9
+            duration = -1
+        }
+    }
+    else_if = {
+        limit = {
+            num_of_children <= 7
+        }
+        add_character_modifier = {
+            name = bear_child_10_12
+            duration = -1
+        }
+    }
+    else_if = {
+        limit = {
+            num_of_children <= 9
+        }
+        add_character_modifier = {
+            name = bear_child_13_15
+            duration = -1
+        }
+    }
+    else = {
+        # limit = {
+        #     num_of_children >= 10
+        # }
+        add_character_modifier = {
+            name = bear_child_16_plus
+            duration = -1
+        }
+    }
+}
+
+continue_bear_conversion_effect = {
+    if = {
+        limit = { has_character_flag = animal_researsh_bear_advanced }
+        hidden_tooltip = {
+            random_list = {
+                7 = { character_event = { id = ani_plus.011 months = 2 } } #ending event
+                3 = { character_event = { id = ani_plus.010 months = 2 } } #haze
+            }
+        }
+    }
+    else = {
+        character_event = { id = ani_plus.009 months = 1 }
+    }
+}
+
+force_end_bear_researsh_effect = {
+    if = {
+        limit = {
+            trait = travelling
+        }
+        remove_trait = travelling
+    }
+    event_target:bear_haze_study_target = {
+        add_province_modifier = {
+            name = Haze_abadonned
+            years = 10
+        }
+        hidden_tooltip = {
+            random = {
+                chance = 25
+
+                if = {
+                    limit = {
+                        terrain = arctic
+                    }
+                    set_province_flag = white_flag_province_conversion
+                }
+                else_if = {
+                    limit = {
+                        terrain = marsh
+                    }
+                    set_province_flag = black_flag_province_conversion
+                }
+                else_if = {
+                    limit = {
+                        OR = {
+                            terrain = mountain
+                            title = c_sortavala
+                        }
+                    }
+                    set_province_flag = brown_flag_province_conversion
+                }
+
+                province_event = { id = ani_plus.027 years = 1 random = 730}
+            }
+        }
+    }
+    clr_character_flag = Has_done_bear_animal_researsh
+}
+
+fight_beast_AM_effect = {
+    random_list = {  #do not forget to modifie chance with
+        40 = { # won fight uninjured
+            trigger = {
+                combat_rating = 0
+            }
+            modifier = {
+                factor = 2
+                trait = hunter
+            }
+            modifier = {
+                factor = 1.25
+                trait = duelist
+            }
+            modifier = {
+                factor = 1.5
+                combat_rating = 30
+            }
+            modifier = {
+                factor = 0.25
+                NOT = { combat_rating = 10 }
+            }
+            modifier = {
+                factor = 5
+                combat_rating = 50
+            }
+            modifier = {
+                factor = 0.25
+                NOT = { combat_rating = 5 }
+            }
+            custom_tooltip = {
+                text = won_fight_against_bear
+
+                set_character_flag = EVENT_BEAR_BEATEN
+                character_event = { id = ani_plus.014 days = 1 }
+            }
+        }
+        40 = {  #won fight but injured
+            trigger = {
+                combat_rating = -5
+            }
+            modifier = {
+                factor = 0.25
+                NOT = { combat_rating = 5}
+            }
+            modifier = {
+                factor = 0.25
+                NOT = { combat_rating = 0 }
+            }
+            modifier = {
+                factor = 1.5
+                combat_rating = 30
+            }
+            modifier = {
+                factor = 5
+                combat_rating = 50
+            }
+            custom_tooltip = {
+                text = won_fight_against_bear_injured
+
+                set_character_flag = character_hirted_by_beast
+                character_event = { id = ani_plus.014 days = 1 }
+            }
+        }
+        35 = { #lost fight and barely survived -> you or physician die
+            modifier = {
+                factor = 0.4
+                OR = {
+                    trait = hunter
+                    has_focus = focus_hunting
+                }
+            }
+            custom_tooltip = {
+                text = lost_fight_against_bear
+
+                character_event = { id = ani_plus.013 days = 1 }
+            }
+        }
+    }
+}
+
+set_bear_cultural_flag_effect = {
+    event_target:bear_haze_study_target = {
+        if = {
+            limit = {
+                terrain = arctic
+            }
+            PREV = { set_character_flag = animal_white_bear_transformation }
+        }
+        else_if = {
+            limit = {
+                terrain = marsh
+            }
+            PREV = { set_character_flag = animal_black_bear_transformation }
+        }
+        else = {
+            # limit = {
+            #     OR = {
+            #         terrain = mountain
+            #         title = c_sortavala
+            #     }
+            # }
+            PREV = { set_character_flag = animal_brown_bear_transformation }
+        }
+    }
+}
+
+propagation_bear_transformation_virus_effect = {
+    location = {
+        any_province_character = {
+            limit = {
+                NOR = {
+                    culture_group = bear_group
+                    has_character_flag = animal_white_bear_transformation
+                    has_character_flag = animal_black_bear_transformation
+                    has_character_flag = animal_brown_bear_transformation
+                }
+            }
+            random = {
+                chance = 10
+                mult_modifier = {
+                    factor = 2
+                    ROOT = { trait = wounded }
+                }
+                mult_modifier = {
+                    factor = 3
+                    ROOT = { trait = infirm }
+                }
+
+                if = {
+                    limit = {
+                        PREVPREV = {
+                            has_character_flag = animal_white_bear_transformation
+                        }
+                    }
+                    set_character_flag = animal_white_bear_transformation
+                }
+                else_if = {
+                    limit = {
+                        PREVPREV = {
+                            has_character_flag = animal_black_bear_transformation
+                        }
+                    }
+                    set_character_flag = animal_black_bear_transformation
+                }
+                else = {
+                    # limit = {
+                    #    PREVPREV = {
+                    #        has_character_flag = animal_brown_bear_transformation
+                    #    }
+                    # }
+                    set_character_flag = animal_brown_bear_transformation
+                }
+                character_event = { id = ani_plus.022 days = 14 random = 14 }
+            }
+        }
+
+        random = {
+            chance = 2
+
+            if = {
+                limit = {
+                    NOR = {
+                        has_province_flag = white_flag_province_conversion
+                        has_province_flag = black_flag_province_conversion
+                        has_province_flag = brown_flag_province_conversion
+                    }
+                    ROOT = { has_character_flag = animal_white_bear_transformation }
+                }
+                set_province_flag = white_flag_province_conversion
+                province_event = { id = ani_plus.027  days = 14 random = 14 }
+            }
+            else_if = {
+                limit = {
+                    NOR = {
+                        has_province_flag = white_flag_province_conversion
+                        has_province_flag = black_flag_province_conversion
+                        has_province_flag = brown_flag_province_conversion
+                    }
+                    ROOT = { has_character_flag = animal_black_bear_transformation }
+                }
+                set_province_flag = black_flag_province_conversion
+                province_event = { id = ani_plus.027  days = 14 random = 14 }
+            }
+            else_if = {
+                limit = {
+                    NOR = {
+                        has_province_flag = white_flag_province_conversion
+                        has_province_flag = black_flag_province_conversion
+                        has_province_flag = brown_flag_province_conversion
+                    }
+                }
+                set_province_flag = brown_flag_province_conversion
+                province_event = { id = ani_plus.027  days = 14 random = 14 }
+            }
+        }
+    }
+}
+
+#province scope
+duck_calculate_max_dev_level_effect = {
+    set_variable = {
+        which = Max_duck_dev_level
+        value = 1
+    }
+    #trade_post buildings
+    if = {
+        limit = {
+            trade_post_has_building = tr_duck_level_dev_1
+        }
+        change_variable = {
+            which = Max_duck_dev_level
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            trade_post_has_building = tr_duck_level_dev_2
+        }
+        change_variable = {
+            which = Max_duck_dev_level
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            trade_post_has_building = tr_duck_level_dev_3
+        }
+        change_variable = {
+            which = Max_duck_dev_level
+            value = 1
+        }
+    }
+    #water bonuses
+    if = {
+        limit = {
+            OR = {
+                port = yes
+                borders_lake = yes
+                borders_major_river = yes
+            }
+        }
+        change_variable = {
+            which = Max_duck_dev_level
+            value = 2
+        }
+    }
+    #all holding slot unlocked
+    if = {
+        limit = {
+            num_of_max_settlements = 7
+        }
+        change_variable = {
+            which = Max_duck_dev_level
+            value = 1
+        }
+    }
+    #capital
+    if = {
+        limit = {
+            is_capital = yes
+            holder_scope = { culture_group = duck_group }
+        }
+        change_variable = {
+            which = Max_duck_dev_level
+            value = 1
+        }
+    }
+    #crown focus
+    if = {
+        limit = {
+            has_province_flag = crown_focus_province
+            holder_scope = { culture_group = duck_group }
+        }
+        change_variable = {
+            which = Max_duck_dev_level
+            value = 1
+        }
+    }
+    #terrain type
+    if = {
+        limit = {
+            OR = {
+                terrain = desert
+                terrain = mountain
+                terrain = arctic
+            }
+        }
+        subtract_variable = {
+            which = Max_duck_dev_level
+            value = 2
+        }
+    }
+    if = {
+        limit = {
+            OR = {
+                terrain = mountain
+                terrain = arctic
+                terrain = plains
+                terrain = farmlands
+                terrain = inland_ocean
+                terrain = ocean
+                terrain = coastal_desert
+            }
+        }
+        change_variable = {
+            which = Max_duck_dev_level
+            value = 1
+        }
+    }
+    #holder scope trigger
+    if = {
+        limit = {
+            holder_scope = { wealth < 0 }
+        }
+        subtract_variable = {
+            which = Max_duck_dev_level
+            value = 1
+        }
+    }
+    #prosperity modifiers
+    if = {
+        limit = {
+            has_province_modifier = prosperity_modifier_3
+        }
+        change_variable = {
+            which = Max_duck_dev_level
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            OR = {
+                has_province_modifier = depopulated_1
+                has_province_modifier = depopulated_2
+                has_province_modifier = depopulated_3
+            }
+        }
+        subtract_variable = {
+            which = Max_duck_dev_level
+            value = 1
+        }
+    }
+    #epidemy modifiers
+    if = {
+        limit = {
+            has_epidemic = yes
+        }
+        subtract_variable = {
+            which = Max_duck_dev_level
+            value = 1
+        }
+    }
+    #investissment modifiers
+    if = {
+        limit = {
+            has_province_modifier = duck_province_invest_1
+        }
+        change_variable = {
+            which = Max_duck_dev_level
+            value = 1
+        }
+    }
+    else_if = {
+        limit = {
+            has_province_modifier = duck_province_invest_2
+        }
+        change_variable = {
+            which = Max_duck_dev_level
+            value = 2
+        }
+    }
+    else_if = {
+        limit = {
+            has_province_modifier = duck_province_invest_3
+        }
+        change_variable = {
+            which = Max_duck_dev_level
+            value = 3
+        }
+    }
+
+    #removing negative number
+    if = {
+        limit = {
+            NOT = { check_variable = { which = duck_dev_var value = 0 } }
+        }
+        set_variable = {
+            which = Max_duck_dev_level
+            value = 0
+        }
+    }
+    #removing excessive number
+    if = {
+        limit = {
+            check_variable = { which=duck_dev_var value=9 }
+        }
+        set_variable = {
+            which = Max_duck_dev_level
+            value = 9
+        }
+    }
+    #holy site bonuses (extra bonus)
+    if = {
+        limit = {
+            holder_scope = { religion = Duck_religion }
+            OR = {
+                is_holy_site = Duck_religion
+                c_wight = { holder_scope = { religion = Duck_religion } }
+            }
+        }
+        change_variable = {
+            which = Max_duck_dev_level
+            value = 1
+        }
+    }
+}
+#province scope
+duck_remove_dev_modifier_effect = {
+    remove_province_modifier = duck_dev_level_0
+    remove_province_modifier = duck_dev_level_1
+    remove_province_modifier = duck_dev_level_2
+    remove_province_modifier = duck_dev_level_3
+    remove_province_modifier = duck_dev_level_4
+    remove_province_modifier = duck_dev_level_5
+    remove_province_modifier = duck_dev_level_6
+    remove_province_modifier = duck_dev_level_7
+    remove_province_modifier = duck_dev_level_8
+    remove_province_modifier = duck_dev_level_9
+    remove_province_modifier = duck_dev_level_10
+}
+#province scope
+duck_adapt_dev_province_modifier_effect = {
+    duck_remove_dev_modifier_effect = yes
+    if = {
+        limit = {
+            check_variable = { which=duck_dev_var value=10 }
+        }
+        add_province_modifier = { name = duck_dev_level_10 duration = -1 }
+    }
+    else_if = {
+        limit = {
+            check_variable = { which=duck_dev_var value=9 }
+        }
+        add_province_modifier = { name = duck_dev_level_9 duration = -1 }
+    }
+    else_if = {
+        limit = {
+            check_variable = { which=duck_dev_var value=8 }
+        }
+        add_province_modifier = { name = duck_dev_level_8 duration = -1 }
+    }
+    else_if = {
+        limit = {
+            check_variable = { which=duck_dev_var value=7 }
+        }
+        add_province_modifier = { name = duck_dev_level_7 duration = -1 }
+    }
+    else_if = {
+        limit = {
+            check_variable = { which=duck_dev_var value=6 }
+        }
+        add_province_modifier = { name = duck_dev_level_6 duration = -1 }
+    }
+    else_if = {
+        limit = {
+            check_variable = { which=duck_dev_var value=5 }
+        }
+        add_province_modifier = { name = duck_dev_level_5 duration = -1 }
+    }
+    else_if = {
+        limit = {
+            check_variable = { which=duck_dev_var value=4 }
+        }
+        add_province_modifier = { name = duck_dev_level_4 duration = -1 }
+    }
+    else_if = {
+        limit = {
+            check_variable = { which=duck_dev_var value=3 }
+        }
+        add_province_modifier = { name = duck_dev_level_3 duration = -1 }
+    }
+    else_if = {
+        limit = {
+            check_variable = { which=duck_dev_var value=2 }
+        }
+        add_province_modifier = { name = duck_dev_level_2 duration = -1 }
+    }
+    else_if = {
+        limit = {
+            check_variable = { which=duck_dev_var value=1 }
+        }
+        add_province_modifier = { name = duck_dev_level_1 duration = -1 }
+    }
+    else = {
+        # limit = { check_variable = { which=duck_dev_var value=0 } }
+        add_province_modifier = { name = duck_dev_level_0 duration = -1 }
+    }
+}
+
+#province scope
+duck_reduce_dev_effect = {
+    if = {
+        limit = {
+            check_variable = { which=duck_dev_var value=1 }
+        }
+        subtract_variable = {
+            which = duck_dev_var
+            value = 1
+        }
+        change_variable = {
+            which = deck_dev_growth
+            value = 350
+        }
+        duck_adapt_dev_province_modifier_effect = yes
+    }
+    else = {
+        set_variable = {
+            which = deck_dev_growth
+            value = 699
+        }
+    }
+}
+#province scope
+duck_increase_dev_effect = {
+    if = {
+        limit = {
+            NOT = { check_variable = { which=duck_dev_var value=10 } }
+        }
+        change_variable = {
+            which = duck_dev_var
+            value = 1
+        }
+        subtract_variable = {
+            which = deck_dev_growth
+            value = 350
+        }
+        duck_adapt_dev_province_modifier_effect = yes
+    }
+    else = {
+        set_variable = {
+            which = deck_dev_growth
+            value = 0
+        }
+    }
+}
+
+duck_dev_change_event_trigger_effect = {
+    if = {
+        limit = {
+            OR = {
+                check_variable = {
+                    which = deck_dev_growth
+                    value = 700
+                }
+                NOT = {
+                    check_variable = {
+                        which = deck_dev_growth
+                        value = 0
+                    }
+                }
+            }
+        }
+        province_event = { id = ani_plus.106 }
+    }
+}
+duck_update_dev_growth_counter_effect = {
+    set_variable = {
+        which = local_duck_dev_growth_change
+        value = 0
+    }
+    if = {
+        limit = {
+            duck_higher_dev_level_supposed_trigger = yes
+        }
+        subtract_variable = {
+            which = local_duck_dev_growth_change
+            value = 20
+        }
+        if = {
+            limit = {
+                holder_scope = { NOT = { wealth = 0 } }
+            }
+            subtract_variable = {
+                which = local_duck_dev_growth_change
+                value = 5
+            }
+        }
+        if = {
+            limit = {
+                holder_scope = { war = yes }
+            }
+            subtract_variable = {
+                which = local_duck_dev_growth_change
+                value = 15
+            }
+        }
+    }
+    else_if = {
+        limit = {
+            duck_lower_dev_level_supposed_trigger = yes
+        }
+        change_variable = {
+            which = local_duck_dev_growth_change
+            value = 15
+        }
+        if = {
+            limit = {
+                OR = {
+                    borders_lake = yes
+                    borders_major_river = yes
+                    port = yes
+                }
+            }
+            change_variable = {
+                which = local_duck_dev_growth_change
+                value = 5
+            }
+        }
+        if = {
+            limit = {
+                port = yes
+            }
+            multiply_variable = {
+                which = local_duck_dev_growth_change
+                value = 1.15
+            }
+        }
+        if = {
+            limit = {
+                is_capital = yes
+            }
+            multiply_variable = {
+                which = local_duck_dev_growth_change
+                value = 1.10
+            }
+        }
+        if = {
+            limit = {
+                holder_scope = { NOT = { wealth = 0 } }
+            }
+            multiply_variable = {
+                which = local_duck_dev_growth_change
+                value = 0.3
+            }
+        }
+        if = {
+            limit = {
+                holder_scope = { war = yes }
+            }
+            multiply_variable = {
+                which = local_duck_dev_growth_change
+                value = 0.3
+            }
+        }
+        if = {
+            limit = {
+                has_province_modifier = duck_province_invest_1
+            }
+            multiply_variable = {
+                which = local_duck_dev_growth_change
+                value = 1.5
+            }
+        }
+        if = {
+            limit = {
+                has_province_modifier = duck_province_invest_2
+            }
+            multiply_variable = {
+                which = local_duck_dev_growth_change
+                value = 2.0
+            }
+        }
+        if = {
+            limit = {
+                has_province_modifier = duck_province_invest_3
+            }
+            change_variable = {
+                which = local_duck_dev_growth_change
+                value = 2.5
+            }
+        }
+    }
+
+
+    if = {
+        limit = {
+            has_trade_post = yes
+        }
+        multiply_variable = {
+            which = local_duck_dev_growth_change
+            value = 1.05
+        }
+    }
+
+    if = {
+        limit = {
+            trade_post_has_building = tr_duck_dev_growth_1
+        }
+        multiply_variable = {
+            which = local_duck_dev_growth_change
+            value = 1.5
+        }
+    }
+    if = {
+        limit = {
+            trade_post_has_building = tr_duck_dev_growth_2
+        }
+        multiply_variable = {
+            which = local_duck_dev_growth_change
+            value = 1.33
+        }
+    }
+    if = {
+        limit = {
+            trade_post_has_building = tr_duck_dev_growth_3
+        }
+        multiply_variable = {
+            which = local_duck_dev_growth_change
+            value = 1.5
+        }
+    }
+    if = {
+        limit = {
+            trade_post_has_building = tr_duck_dev_growth_4
+        }
+        multiply_variable = {
+            which = local_duck_dev_growth_change
+            factor = 1.33
+        }
+    }
+
+
+    change_variable = {
+        which = deck_dev_growth
+        which = local_duck_dev_growth_change
+    }
+    duck_dev_change_event_trigger_effect = yes
+}
+#province scope
+eleph_start_epidemy_effect = {
+    random_list = {
+        1 = { spawn_disease = tuberculosis  }
+        1 = { spawn_disease = typhoid_fever }
+        1 = { spawn_disease = typhus        }
+        1 = { spawn_disease = measles       }
+        1 = { spawn_disease = small_pox     }
+        1 = { spawn_disease = syphilis      }
+    }
+}

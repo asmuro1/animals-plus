@@ -1,0 +1,237 @@
+
+### 3 pandas faction (only)
+
+faction_panda_instability = {
+	type = character
+
+	warning_level = 0.1 # At this level of faction power we give player an alert. Set to 0 for no alerts.
+
+	# Plotter scope
+	potential = {
+        prisoner = no
+		is_ruler = yes
+		independent = no
+		is_landed = yes
+		is_adult = yes
+		primary_title = { holy_order = no }
+		OR = {
+			NOT = { has_dlc = "Zeus" }
+			is_voter = no
+			liege = {
+				OR = {
+					is_council_content = no
+					NOT = { primary_title = { has_law = war_voting_power_1 } }
+					#has_council = no
+				}
+			}
+		}
+		NOT = { trait = incapable }
+        primary_title = { higher_tier_than = BARON }
+
+        liege = { is_panda_government_trigger = yes }
+        is_panda_government_trigger = yes
+
+		liege = {
+			OR = {
+				NOT = { has_character_modifier = panda_instability_war_cooldown }
+			}
+		}
+    }
+
+	# Target scope
+	allow = {
+        OR = {
+            has_law = panda_expension_size_medium
+            has_law = panda_expension_size_huge
+        }
+		NOT = {
+			has_opinion_modifier = {
+				who = LIEGE
+				modifier = opinion_coerced_into_leaving_faction
+			}
+		}
+    }
+
+	# Faction member scope (ROOT = joiner, FROM = target)
+    allow_join = {
+		prisoner = no
+		is_adult = yes
+		primary_title = { holy_order = no }
+		OR = {
+			NOT = { has_dlc = "Zeus" }
+			is_voter = no
+			liege = {
+				OR = {
+					is_council_content = no
+					NOT = { primary_title = { has_law = war_voting_power_1 } }
+					#has_council = no
+				}
+			}
+		}
+		NOT = { trait = incapable }
+		primary_title = { higher_tier_than = BARON }
+		liege = { is_panda_government_trigger = yes }
+		is_panda_government_trigger = yes
+    }
+
+    # AI creation weight
+    chance = {
+		factor = 2.5
+
+		panda_faction_trait_score = yes
+		panda_faction_opinion_score = yes
+
+		panda_faction_diplo_bureaucrate_score = yes
+		panda_faction_martial_bureaucrate_score = yes
+		panda_faction_plot_bureaucrate_score = yes
+    }
+
+	# AI membership weight: ROOT is the prospective member. FROM is the faction leader. FROMFROM is the target title or character.
+	membership = {
+		factor = 5
+
+		panda_faction_trait_score = yes
+		panda_faction_opinion_score = yes
+
+		panda_faction_diplo_bureaucrate_score = yes
+		panda_faction_martial_bureaucrate_score = yes
+		panda_faction_plot_bureaucrate_score = yes
+    }
+
+	success = {
+		liege = {
+			has_character_modifier = panda_instability_war_cooldown
+		}
+	}
+
+	abort = {
+		liege = {
+			has_law = panda_expension_size_law
+		}
+    }
+
+	abort_effect = {
+	}
+
+	effect = {
+	}
+}
+
+faction_panda_independence = {
+    type = liege_titles
+
+    warning_level = 0.1 # At this level of faction power we give player an alert. Set to 0 for no alerts.
+
+    # Plotter scope
+    potential = {
+        prisoner = no
+        is_ruler = yes
+        independent = no
+        is_landed = yes
+        is_adult = yes
+        primary_title = { holy_order = no }
+        OR = {
+            NOT = { has_dlc = "Zeus" }
+            is_voter = no
+            liege = {
+                OR = {
+                    is_council_content = no
+                    NOT = { primary_title = { has_law = war_voting_power_1 } }
+                    #has_council = no
+                }
+            }
+        }
+        NOT = { trait = incapable }
+        primary_title = { higher_tier_than = BARON }
+
+        liege = {
+			independent = yes
+			is_panda_government_trigger = yes
+		}
+        is_panda_government_trigger = yes
+		NOT = { has_character_modifier = faction_independence_ultimatum_timer }
+    }
+
+    # Target scope
+    allow = {
+		primary_title = { higher_real_tier_than = BARON }
+		NOT = { has_character_modifier = faction_independence_ultimatum_timer }
+		NOT = {
+			has_opinion_modifier = {
+				who = LIEGE
+				modifier = opinion_coerced_into_leaving_faction
+			}
+		}
+    }
+
+    # Faction member scope (ROOT = joiner, FROM = target)
+    allow_join = {
+		prisoner = no
+		OR = {
+			NOT = { has_dlc = "Zeus" }
+			is_voter = no
+			liege = {
+				OR = {
+					is_council_content = no
+					NOT = { primary_title = { has_law = war_voting_power_1 } }
+					#has_council = no
+				}
+			}
+		}
+		NOT = { trait = incapable }
+		primary_title = { higher_tier_than = BARON }
+		liege = { is_panda_government_trigger = yes }
+		is_panda_government_trigger = yes
+    }
+
+    # AI creation weight
+    chance = {
+		factor = 1.75
+
+		panda_faction_trait_score = yes
+		panda_faction_opinion_score = yes
+
+
+		panda_faction_diplo_bureaucrate_score = yes
+		panda_faction_steward_bureaucrate_score = yes
+		panda_faction_religious_bureaucrate_score = yes
+    }
+
+    # AI membership weight: ROOT is the prospective member. FROM is the faction leader. FROMFROM is the target title or character.
+    membership = {
+		factor = 3.5
+
+		panda_faction_trait_score = yes
+		panda_faction_opinion_score = yes
+
+		panda_faction_diplo_bureaucrate_score = yes
+		panda_faction_steward_bureaucrate_score = yes
+		panda_faction_religious_bureaucrate_score = yes
+    }
+
+	success = {
+		independent = yes
+	}
+
+	abort = {
+		liege = {
+			has_law = panda_vassal_unallowed
+		}
+    }
+
+	abort_effect = {
+	}
+
+	effect = {
+		FROM = {
+			any_faction_backer = {
+				faction = faction_panda_independence
+				reverse_opinion = {
+					modifier = opinion_grateful
+					who = FROM
+					years = 5
+				}
+			}
+		}
+	}
+}

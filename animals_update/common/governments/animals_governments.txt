@@ -1,0 +1,231 @@
+
+feudal_governments = {
+
+    Bear_feudal_gov = {
+        color = {150 220 0}
+        potential = {
+            religion = Bears_religion
+            culture_group = bear_group
+            NOT = { is_government_potential = order_government }
+        }
+        forced_contract = { feudal_government muslim_government theocratic_feudal_government roman_imperial_government theocracy_government }
+
+
+        can_build_forts = yes
+        can_build_castle = yes
+        can_build_city = yes
+        can_build_temple = yes
+        can_build_tribal = no
+        preferred_holdings = { CASTLE }
+        allowed_holdings = { CASTLE FORT HOSPITAL }
+        allowed_holdings_culture = { TRIBAL }
+        free_revoke_on_tiers = { baron }
+
+        can_grant_kingdoms_and_empires_to_other_government_group = yes
+        max_consorts = 3
+
+        capital_move_delay = 180
+        men_can_take_consorts = yes
+        women_can_take_consorts = yes
+    }
+    Hedge_feudal_gov = {
+        color = { 18 97 165 }
+        potential = {
+            religion = Hedge_religion
+            culture_group = hedgehog_group
+            NOT = { is_government_potential = order_government }
+        }
+        forced_contract = { feudal_government muslim_government theocratic_feudal_government roman_imperial_government theocracy_government }
+
+        can_build_forts = yes
+        can_build_castle = yes
+        can_build_city = yes
+        can_build_temple = yes
+        can_build_tribal = no
+        preferred_holdings = { CASTLE }
+        allowed_holdings = { CASTLE FORT HOSPITAL }
+        allowed_holdings_culture = { TRIBAL }
+
+        can_grant_kingdoms_and_empires_to_other_government_group = yes
+
+        max_consorts = 0
+        capital_move_delay = 180
+    }
+    panda_bureaucratic_gov = {
+        color = { 0 140 220 }
+        potential = {
+            religion = Panda_religion
+            culture_group = panda_group
+            NOT = { is_government_potential = order_government }
+            OR = {
+                independent = yes
+                liege = {
+                    OR = {
+                        NOR = {
+                            government = panda_bureaucratic_gov
+                            government = panda_bureaucratic_gov_bis
+                        }
+                        AND = {
+                            government = panda_bureaucratic_gov
+                            NOR = {
+                                has_law = panda_vassal_allowed
+                                AND = {
+                                    has_law = panda_vassal_count_allowed
+                                    PREV = { tier = COUNT }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        forced_contract = { muslim_government theocratic_feudal_government roman_imperial_government theocracy_government }
+
+
+        can_build_forts = yes
+        can_build_castle = yes
+        can_build_city = yes
+        can_build_temple = yes
+        can_build_tribal = no
+        uses_bride_price = yes
+        allowed_holdings = { CASTLE FORT HOSPITAL }
+        allowed_holdings_culture = { TRIBAL }
+        preferred_holdings = { CASTLE }
+        free_revoke_on_tiers = { baron }
+        ignore_in_vassal_limit_calculation = { panda_bureaucratic_gov_bis }
+
+        can_usurp_kingdoms_and_empires = no
+        max_consorts = 5
+
+        capital_move_delay = 3000
+        men_can_take_consorts = yes
+        women_can_take_consorts = yes
+        marriage_ignore_religion = yes
+        aggression = 0.5
+    }
+    panda_bureaucratic_gov_bis = {
+        color = { 0 140 220 }
+        potential = {
+            religion = Panda_religion
+            culture_group = panda_group
+            independent = no
+            liege = {
+                OR = {
+                    government = panda_bureaucratic_gov_bis
+                    AND = {
+                        government = panda_bureaucratic_gov
+                        OR = {
+                            has_law = panda_vassal_allowed
+                            AND = {
+                                has_law = panda_vassal_count_allowed
+                                PREV = { tier = COUNT }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        forced_contract = { muslim_government theocratic_feudal_government roman_imperial_government theocracy_government }
+
+
+        can_build_forts = yes
+        can_build_castle = yes
+        can_build_city = yes
+        can_build_temple = yes
+        can_build_tribal = no
+        uses_bride_price = yes
+        allowed_holdings = { CASTLE FORT HOSPITAL }
+        allowed_holdings_culture = { TRIBAL }
+        preferred_holdings = { CASTLE }
+        free_revoke_on_tiers = { baron }
+
+        can_usurp_kingdoms_and_empires = no
+        can_grant_kingdoms_and_empires_to_other_government = no
+        max_consorts = 5
+
+        capital_move_delay = 3000
+        men_can_take_consorts = yes
+        women_can_take_consorts = yes
+        marriage_ignore_religion = yes
+        aggression = 0.5
+
+        accepts_liege_governments = { panda_bureaucratic_gov }
+    }
+    Duck_feudal_gov = {
+        color = {70 70 220}
+        potential = {
+            religion = Duck_religion
+            culture_group = duck_group
+            NOT = { is_government_potential = order_government }
+        }
+        forced_contract = { feudal_government muslim_government theocratic_feudal_government roman_imperial_government theocracy_government }
+        # merchant_republic = yes
+
+        can_build_forts = yes
+        can_build_castle = yes
+        can_build_city = yes
+        can_build_temple = yes
+        can_build_tribal = no
+
+        accepts_liege_governments = { }
+        free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
+			tribal_government
+		}
+        ignore_in_vassal_limit_calculation = {
+			tribal_government
+		}
+        preferred_holdings = { CASTLE }
+        allowed_holdings = { TRADE_POST CASTLE FORT HOSPITAL }
+        allowed_holdings_culture = { TRIBAL }
+        free_revoke_on_tiers = { baron }
+
+        # can_grant_kingdoms_and_empires_to_other_government_group = yes
+        max_consorts = 3
+        # have_gender_laws = no
+        # allows_matrilineal_marriage = no
+        # uses_bride_price = yes
+
+        capital_move_delay = 240
+        men_can_take_consorts = yes
+        women_can_take_consorts = yes
+        # landed_inheritance = no
+
+        aggression = 0.5
+    }
+    Eleph_feudal_gov = {
+        color = { 50 50 50 }
+        potential = {
+            religion = Eleph_religion
+            culture_group = elephant_group
+            NOT = { is_government_potential = order_government }
+        }
+        forced_contract = { feudal_government muslim_government theocratic_feudal_government roman_imperial_government theocracy_government }
+
+        can_build_forts = yes
+        can_build_castle = yes
+        can_build_city = yes
+        can_build_temple = yes
+        can_build_tribal = no
+
+        accepts_liege_governments = { }
+        free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
+			tribal_government
+		}
+        ignore_in_vassal_limit_calculation = {
+			tribal_government
+		}
+        preferred_holdings = { CASTLE }
+        allowed_holdings = { CASTLE FORT HOSPITAL }
+        allowed_holdings_culture = { TRIBAL }
+        free_revoke_on_tiers = { baron }
+
+        max_consorts = 3
+        have_gender_laws = no
+
+        capital_move_delay = 240
+        men_can_take_consorts = no
+        women_can_take_consorts = yes
+
+        aggression = 0.3
+    }
+}

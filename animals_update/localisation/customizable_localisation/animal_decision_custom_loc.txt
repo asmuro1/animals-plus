@@ -1,0 +1,109 @@
+
+defined_text = {
+    name = GET_BROWN_REL_MODIFIER_LOCALISATION
+
+    text = {
+        trigger = {
+            always = yes
+        }
+        localisation_key = brown_bear_religious_modifier
+    }
+}
+defined_text = {
+    name = GET_WHITE_REL_MODIFIER_LOCALISATION
+
+    text = {
+        trigger = {
+            always = yes
+        }
+        localisation_key = white_bear_religious_modifier
+    }
+}
+defined_text = {
+    name = GET_BLACK_REL_MODIFIER_LOCALISATION
+
+    text = {
+        trigger = {
+            always = yes
+        }
+        localisation_key = black_bear_religious_modifier
+    }
+}
+
+defined_text = {
+    name = GET_FROM_ANIMAL_RELIGIOUS_NAME
+
+    text = {
+        trigger = {
+            FROM = { religion = Bears_religion }
+        }
+
+        localisation_key = Bears_religion
+    }
+    text = {
+        trigger = {
+            FROM = { religion = Hedge_religion }
+        }
+
+        localisation_key = Hedge_religion
+    }
+    text = {
+        trigger = {
+            FROM = { religion = Panda_religion }
+        }
+
+        localisation_key = Panda_religion
+    }
+    text = {
+        trigger = {
+            FROM = { religion = Duck_religion }
+        }
+        localisation_key = Duck_religion
+    }
+    text = {
+        trigger = {
+            FROM = { religion = Eleph_religion }
+        }
+        localisation_key = Eleph_religion
+    }
+}
+
+defined_text = {
+    name = GET_FROM_HOLY_ORDER_NAME
+
+    text = {
+        trigger = {
+            FROM = { religion = Bears_religion }
+        }
+
+        localisation_key = d_polar_fighter
+    }
+    text = {
+        trigger = {
+            FROM = { religion = Hedge_religion }
+        }
+
+        localisation_key = d_spike_ball
+    }
+    text = {
+        trigger = {
+            FROM = { religion = Panda_religion }
+        }
+
+        localisation_key = d_asian_fighter
+    }
+    text = {
+        trigger = {
+            FROM = { religion = Duck_religion }
+        }
+
+        localisation_key = d_sea_master
+    }
+    text = {
+        trigger = {
+            FROM = { religion = Eleph_religion }
+        }
+
+        localisation_key = d_immortal_herd
+    }
+}

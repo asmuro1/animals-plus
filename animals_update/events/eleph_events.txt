@@ -1,0 +1,620 @@
+namespace = ani_plus
+
+###### elephant update events
+### event 111 - 118
+
+####conversion quest:
+# event 111: (launching quest by event rule)
+#         unlock elephant hospital building to continue quest for 5 years
+# event 112: trigger to lock elephant hospital building (after 5 years) if not construct
+# event 113: accident happens on hospital during researsh
+#            can lead to transformation in elephant
+#            or great fertility bonuses
+# event 114: other accident with elephants herd (no elephant transformation)
+# event 115: Elephant researsh gains
+
+# event 111
+province_event = {
+    id = ani_plus.111
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    trigger = {
+        has_game_rule = {
+            name = animals_conversion_ways
+            value = animal_events
+        }
+        Is_really_animal_trigger = no
+        holder_scope = {
+            Is_really_animal_trigger = no
+            OR = {
+                lifestyle_traits == 0
+                trait = scholar
+            }
+        }
+        Eleph_can_live_here_trigger = yes
+        has_hospital = yes
+        NOT = { has_province_flag = eleph_herd_in_prov }
+        is_capital = yes
+        holder_scope = {
+            is_adult = yes
+            is_incapable = no
+            has_regent = no
+        }
+    }
+    mean_time_to_happen = {
+        years = 50
+
+        modifier = {
+            factor = 0.5
+            holder_scope = { ai = no }
+        }
+    }
+    desc = DESC_EVT111_ELEPH_HERD_COME
+
+    option = {
+        name = OPT1_EVT111_LET_THEM_STAY
+        custom_tooltip = {
+            text = eleph_unlock_reprod_lab
+            set_province_flag = eleph_herd_in_prov
+        }
+        province_event = { id = ani_plus.112 years = 5 random = 60}
+
+        ai_chance = {
+            factor = 1
+
+            modifier = {
+                factor = 3
+                holder_scope = {
+                    ai_greed = 21
+                }
+            }
+        }
+    }
+    option = {
+        name = OPT2_EVT111_CHASE_THEM
+        wealth = -10
+
+        ai_chance = {
+            factor = 3
+        }
+    }
+}
+
+# event 112
+province_event = {
+    id = ani_plus.112
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    is_triggered_only = yes
+
+    desc = DESC_EVT112_NO_ELEPH_HERD
+
+    immediate = {
+        if = {
+            limit = {
+                had_province_flag = {
+                    flag = eleph_human_reprod_researsh
+                    years <= 1
+                }
+            }
+            holder_scope = {
+                set_character_flag = eleph_reprod_0_rewards
+                character_event = { id = ani_plus.115 }
+            }
+        }
+        else_if = {
+            limit = {
+                had_province_flag = {
+                    flag = eleph_human_reprod_researsh
+                    years <= 4
+                }
+            }
+            holder_scope = {
+                set_character_flag = eleph_reprod_1_rewards
+                character_event = { id = ani_plus.115 }
+            }
+        }
+        else_if = {
+            limit = {
+                has_province_flag =  eleph_human_reprod_researsh
+            }
+            holder_scope = {
+                set_character_flag = eleph_reprod_2_rewards
+                character_event = { id = ani_plus.115 }
+            }
+        }
+    }
+
+    option = {
+        name = OPT_DESC112_OK
+        clr_province_flag = eleph_herd_in_prov
+        clr_province_flag = eleph_human_reprod_researsh
+    }
+}
+
+# event 113
+province_event = {
+    id = ani_plus.113
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    trigger = {
+        has_province_flag = eleph_herd_in_prov
+        has_province_flag = eleph_human_reprod_researsh
+        holder_scope = {
+            has_regent = no
+            OR = {
+                NOT = { has_character_flag = eleph_accident_tr }
+                had_character_flag = {
+                    flag = eleph_accident_tr
+                    years >= 3
+                }
+            }
+        }
+    }
+    mean_time_to_happen = {
+        months = 15
+    }
+    desc = DESC_EVT113_HERD_ACCIDENT
+
+    option = {
+        name = OPT_EVT113_HA
+
+        holder_scope = {
+            random_list = {
+                4 = {
+                    if = {
+                        limit = {
+                            PREV = {
+                                Asian_eleph_can_live_trigger = yes
+                            }
+                        }
+                        culture = elephant_culture
+                    }
+                    else = {
+                        culture = african_elephant
+                    }
+                }
+                1 = {
+                    add_character_modifier = {
+                        name = eleph_fertility_bonus
+                        years = 5
+                    }
+                }
+            }
+        }
+    }
+
+    after = {
+        holder_scope = { set_character_flag = eleph_accident_tr }
+    }
+}
+
+# event 114
+province_event = {
+    id = ani_plus.114
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    trigger = {
+        has_province_flag = eleph_herd_in_prov
+        NOT = { holder_scope = { culture_group = elephant_group } }
+    }
+    mean_time_to_happen = {
+        years = 6
+
+        modifier = {
+            factor = 0.75 # 3 years
+            has_province_flag = eleph_human_reprod_researsh
+        }
+    }
+
+    immediate = {
+        random_list = {
+            1 = { set_province_flag = eleph_wealth_acc }
+            1 = { set_province_flag = eleph_honor_acc }
+        }
+    }
+    desc = DESC_EVT114_ELEPH_ACC
+
+    option = {
+        trigger = {
+            OR = {
+                AND = {
+                    has_province_flag = eleph_wealth_acc
+                    holder_scope = { wealth = 100 }
+                }
+                AND = {
+                    has_province_flag = eleph_honor_acc
+                    holder_scope = { prestige = 1000}
+                }
+            }
+        }
+        name = {
+            trigger = {
+                has_province_flag = eleph_wealth_acc
+            }
+            text = OPT1_A_EVT114_WEALTH_ACC
+        }
+        name = {
+            trigger = {
+                has_province_flag = eleph_honor_acc
+            }
+            text = OPT1_B_EVT114_HONOR_ACC
+        }
+
+        if = {
+            limit = {
+                has_province_flag = eleph_wealth_acc
+            }
+            holder_scope = {
+                wealth = -100
+            }
+        }
+        else = {
+            holder_scope = {
+                prestige = -1000
+            }
+        }
+    }
+    option = {
+        name = {
+            trigger = {
+                has_province_flag = eleph_wealth_acc
+            }
+            text = OPT2_A_EVT114_WEALTH_ACC
+        }
+        name = {
+            trigger = {
+                has_province_flag = eleph_honor_acc
+            }
+            text = OPT2_B_EVT114_HONOR_ACC
+        }
+
+        if = {
+            limit = {
+                has_province_flag = eleph_wealth_acc
+            }
+            capital_holding = {
+                destroy_random_building = yes
+            }
+            random_province_holding = {
+                destroy_random_building = yes
+            }
+        }
+        else = {
+            add_province_modifier = {
+                name = eleph_province_hostility
+                years = 1
+            }
+        }
+    }
+
+
+    after = {
+        clr_province_flag = eleph_wealth_acc
+        clr_province_flag = eleph_honor_acc
+    }
+}
+
+# event 115
+character_event = {
+    id = ani_plus.115
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    is_triggered_only = yes
+
+    trigger = {
+        OR = {
+            has_character_flag = eleph_reprod_0_rewards
+            has_character_flag = eleph_reprod_1_rewards
+            has_character_flag = eleph_reprod_2_rewards
+        }
+    }
+    desc = {
+        trigger = {
+            has_character_flag = eleph_reprod_0_rewards
+        }
+        text = DESC1_EVT115_END_OF_RESEARSH
+    }
+    desc = {
+        trigger = {
+            OR = {
+                has_character_flag = eleph_reprod_1_rewards
+                has_character_flag = eleph_reprod_2_rewards
+            }
+        }
+        text = DESC2_EVT115_RESULT_OF_RESEARSH
+    }
+
+    option = {
+        name = {
+            trigger = {
+                OR = {
+                    has_character_flag = eleph_reprod_1_rewards
+                    has_character_flag = eleph_reprod_2_rewards
+                }
+            }
+            text = OPTA_EVT115_GOOD
+        }
+        name = {
+            trigger = {
+                has_character_flag = eleph_reprod_0_rewards
+            }
+            text = OPTB_EVT115_TRY_AGAIN
+        }
+
+        if = {
+            limit = {
+                NOT = { has_character_flag = eleph_reprod_0_rewards }
+            }
+
+            change_learning = 1
+            if = {
+                limit = {
+                    has_character_flag = eleph_reprod_2_rewards
+                }
+                add_character_modifier = {
+                    name = eleph_researsh_bonus
+                    years = 5
+                }
+            }
+        }
+    }
+}
+
+#### updating government law
+
+# event 116
+character_event = {
+    id = ani_plus.116
+
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        government = Eleph_feudal_gov
+    }
+
+    immediate = {
+        any_demesne_title = {
+            if = {
+                limit = {
+                    NOT = { has_law = enatic_cognatic_succession }
+                }
+            }
+            gender_succ = enatic
+            if = {
+                limit = {
+                    has_dlc = "Zeus"
+                }
+                add_law = status_of_women_4
+            }
+        }
+    }
+}
+
+#### epidemic event
+# event 117: malus on epidemic province (and also duck low development level event)
+
+#event 117
+province_event = {
+    id = ani_plus.117
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+
+    trigger = {
+        OR = {
+            AND = {
+                culture_group = elephant_group
+                has_epidemic = yes
+            }
+            AND = {
+                culture_group = duck_group
+                NOT = { check_variable = { which = duck_dev_var value = 6 } }
+            }
+        }
+        OR = {
+            NOT = { has_province_modifier = eleph_epidemic_unrest }
+            NOT = { has_province_modifier = eleph_epidemic_garrison }
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 3
+
+        ###duck modifier
+        modifier = {
+            factor = 4 # 1 year if dev lvl 1
+            culture_group = duck_group
+            check_variable = { which = duck_dev_var value = 1 }
+        }
+        modifier = {
+            factor = 4 # 4 year if dev lvl 2
+            culture_group = duck_group
+            check_variable = { which = duck_dev_var value = 2 }
+        }
+        modifier = {
+            factor = 4 # 16 year
+            culture_group = duck_group
+            check_variable = { which = duck_dev_var value = 3 }
+        }
+        modifier = {
+            factor = 3 # 54 year
+            culture_group = duck_group
+            check_variable = { which = duck_dev_var value = 4 }
+        }
+        modifier = {
+            factor = 3 # 162 year
+            culture_group = duck_group
+            check_variable = { which = duck_dev_var value = 5 }
+        }
+    }
+
+    immediate = {
+        #what malus appears
+        random_list = {
+            2 = {
+                trigger = { NOT = { has_province_modifier = eleph_epidemic_unrest } }
+                set_province_flag = local_eleph_unrest
+            }
+            1 = {
+                trigger = { NOT = { has_province_modifier = eleph_epidemic_garrison } }
+                set_province_flag = local_eleph_garrison
+            }
+        }
+    }
+
+    desc = DESC_ECT117_UNREST
+
+    option = {
+        trigger = { has_province_flag = local_eleph_unrest }
+        name = OPT1_EVT117_UNREST
+
+        add_province_modifier = {
+            name = eleph_epidemic_unrest
+            years = 2
+        }
+    }
+
+    option = {
+        trigger = { has_province_flag = local_eleph_garrison }
+        name = OPT2_EVT117_GARRISON
+
+        add_province_modifier = {
+            name = eleph_epidemic_garrison
+            years = 2
+        }
+    }
+
+
+    after = {
+        clr_province_flag = local_eleph_unrest
+        clr_province_flag = local_eleph_garrison
+    }
+}
+
+#### climate control events
+
+#event 118
+province_event = {
+    id = ani_plus.118
+
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        if = {
+            limit = {
+                OR = {
+                    event_target:eleph_climate_controller = {
+                        is_alive = no
+                    }
+                    NOR = {
+                        county = { event_target:eleph_climate_controller = { completely_controls = PREV } }
+                        controlled_by = event_target:eleph_climate_controller
+                    }
+                }
+            }
+            set_province_flag = eleph_climate_return_normal
+        }
+        if = {
+            limit = {
+                has_province_flag = eleph_climate_return_normal
+            }
+            if = {
+                limit = {
+                    has_province_modifier = eleph_climate_control_4
+                }
+                add_province_modifier = {
+                    name = eleph_climate_control_3
+                    duration = -1
+                }
+                remove_province_modifier = eleph_climate_control_4
+
+                province_event = { id = ani_plus.118 months = 3 }
+            }
+            else_if = {
+                limit = {
+                    has_province_modifier = eleph_climate_control_3
+                }
+                add_province_modifier = {
+                    name = eleph_climate_control_2
+                    duration = -1
+                }
+                remove_province_modifier = eleph_climate_control_3
+
+                province_event = { id = ani_plus.118 months = 3 }
+            }
+            else = { ##has_province_modifier = climate_2
+                remove_province_modifier = eleph_climate_control_2
+                clr_province_flag = eleph_climate_return_normal
+                if = {
+                    limit = {
+                        culture_group = elephant_group
+                    }
+                    add_province_modifier = {
+                        name = eleph_climate_control_1
+                        months = 6
+                    }
+                }
+                else = {
+                    add_province_modifier = {
+                        name = eleph_climate_control_2
+                        months = 6
+                    }
+                }
+            }
+        }
+        else = {
+            if = {
+                limit = {
+                    has_province_modifier = eleph_climate_control_2
+                }
+                remove_province_modifier = eleph_climate_control_2
+                add_province_modifier = {
+                    name = eleph_climate_control_3
+                    duration = -1
+                }
+            }
+            else_if = {
+                limit = {
+                    has_province_modifier = eleph_climate_control_3
+                }
+                remove_province_modifier = eleph_climate_control_3
+                add_province_modifier = {
+                    name = eleph_climate_control_4
+                    duration = -1
+                }
+            }
+            else = {
+                remove_province_modifier = eleph_climate_control_4
+                add_province_modifier = {
+                    name = eleph_climate_control_4
+                    duration = -1
+                }
+                random = {
+                    chance = 25
+                    modifier = {
+                        factor = 0.4 #10%
+
+                        culture_group = elephant_group
+                    }
+
+                    increase_depopulation_effect = yes
+                }
+            }
+            province_event = { id = ani_plus.118 months = 3 }
+        }
+    }
+}

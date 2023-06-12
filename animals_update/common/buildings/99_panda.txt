@@ -1,0 +1,2465 @@
+castle = {
+
+    #main building
+    ca_panda_capital_bureau = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = panda_group
+            is_capital = yes
+            FROMFROM = { is_capital = yes }
+            FROM = {
+                OR = {
+                    independent = yes
+                    liege = { NOT = { culture_group = panda_group } }
+                }
+            }
+        }
+
+        trigger = {
+            culture_group = panda_group
+            is_capital = yes
+            FROM = {
+                culture_group = panda_group
+            }
+            hidden_tooltip = { TECH_CASTLE_CONSTRUCTION = 0 }
+        }
+
+        is_active_trigger = {
+            panda_capital_bureau_active_trigger = yes
+        }
+
+        gold_cost = 95
+        build_time = 120
+        ai_creation_factor = 170
+        extra_tech_building_start = 0.0
+
+        retinuesize_perc = 0.25
+    }
+    ca_panda_common_bureau = {
+
+        potential = {
+            culture_group = panda_group
+            is_capital = no
+            FROMFROM = { is_capital = yes }
+            NOR = {
+                has_building = ca_panda_capital_bureau
+                has_building = ca_panda_vassal_bureau
+            }
+        }
+
+        trigger = {
+            culture_group = panda_group
+            custom_tooltip = {
+                text = PANDA_TT_NEIGHBOR_BUREAU
+                any_neighbor_province = {
+                    OR = {
+                        has_building = ca_panda_capital_bureau
+                        has_building = ca_panda_common_bureau
+                        has_building = ca_panda_vassal_bureau
+                    }
+                }
+            }
+            FROM = {
+                culture_group = panda_group
+                OR = {
+                    independent = yes
+                    liege = { NOT = { culture_group = panda_group } }
+                }
+            }
+            hidden_tooltip = { TECH_CASTLE_CONSTRUCTION = 0 }
+        }
+
+        is_active_trigger = {
+            panda_common_bureau_active_trigger = yes
+        }
+
+        gold_cost = 8
+        build_time = 90 # 3 months
+        ai_creation_factor = 120
+        extra_tech_building_start = 10.0
+
+        retinuesize = 15
+    }
+    ca_panda_vassal_bureau = {
+
+        potential = {
+            culture_group = panda_group
+            FROMFROM = { is_capital = yes }
+            NOT = { has_building = ca_panda_capital_bureau }
+            NOT = {
+                any_neighbor_province = {
+                    OR = {
+                        has_building = ca_panda_vassal_bureau
+                        has_building = ca_panda_capital_bureau
+                    }
+                }
+            }
+            any_neighbor_province = {
+                has_building = ca_panda_common_bureau
+                panda_common_bureau_active_trigger = yes
+            }
+        }
+
+        trigger = {
+            culture_group = panda_group
+            religion = Panda_religion
+            FROM = {
+                culture_group = panda_group
+                religion = Panda_religion
+            }
+            custom_tooltip = {
+                text = PANDA_TT_NEIGHBOR_COMMON
+                any_neighbor_province = {
+                    has_building = ca_panda_common_bureau
+                }
+            }
+            hidden_tooltip = { TECH_CASTLE_CONSTRUCTION = 0 }
+        }
+
+        is_active_trigger = {
+            panda_vassal_bureau_active_trigger = yes
+        }
+
+        gold_cost = 85
+        build_time = 365
+        ai_creation_factor = 170
+        extra_tech_building_start = 0.0
+
+        retinuesize = 125
+        garrison_size = 0.75
+    }
+
+    #generic building
+    ca_panda_common_retinue_01 = {
+        add_number_to_name = yes
+
+        potential = {
+            culture_group = panda_group
+            OR = {
+                AND = {
+                    has_building = ca_panda_common_bureau
+                    panda_common_bureau_active_trigger = yes
+                }
+                AND = {
+                    has_building = ca_panda_vassal_bureau
+                    panda_vassal_bureau_active_trigger = yes
+                }
+            }
+        }
+
+        trigger = {
+            culture_group = panda_group
+            TECH_CASTLE_CONSTRUCTION = 1
+            TECH_FORTIFICATIONS_CONSTRUCTION = 1
+        }
+        prerequisites = { ca_ani_castle_tower_1_bis }
+
+        is_active_trigger = {
+            culture_group = panda_group
+            OR = {
+                AND = {
+                    has_building = ca_panda_common_bureau
+                    hidden_tooltip = {
+                        panda_common_bureau_active_trigger = yes
+                    }
+                }
+                AND = {
+                    has_building = ca_panda_vassal_bureau
+                    hidden_tooltip = {
+                        panda_vassal_bureau_active_trigger = yes
+                    }
+                }
+            }
+            has_building = ca_ani_castle_tower_1_bis
+        }
+        # upgrades_from =
+
+        gold_cost = 60
+        build_time = 200
+        ai_creation_factor = 100
+        extra_tech_building_start = 1.0
+
+        retinuesize = 125
+        garrison_size = 0.25
+    }
+    ca_panda_common_retinue_02 = {
+        add_number_to_name = yes
+
+        potential = {
+            culture_group = panda_group
+            OR = {
+                AND = {
+                    has_building = ca_panda_common_bureau
+                    panda_common_bureau_active_trigger = yes
+                }
+                AND = {
+                    has_building = ca_panda_vassal_bureau
+                    panda_vassal_bureau_active_trigger = yes
+                }
+            }
+        }
+
+        trigger = {
+            culture_group = panda_group
+            TECH_CASTLE_CONSTRUCTION = 2
+            TECH_FORTIFICATIONS_CONSTRUCTION = 2
+        }
+        prerequisites = { ca_ani_castle_tower_2_bis }
+
+        is_active_trigger = {
+            culture_group = panda_group
+            OR = {
+                has_building = ca_panda_common_bureau
+                has_building = ca_panda_vassal_bureau
+            }
+            has_building = ca_ani_castle_tower_2_bis
+        }
+        upgrades_from = ca_panda_common_retinue_01
+
+        gold_cost = 100
+        build_time = 400
+        ai_creation_factor = 100
+        extra_tech_building_start = 1.0
+
+        retinuesize = 100
+        garrison_size = 0.25
+    }
+    ca_panda_common_retinue_03 = {
+        add_number_to_name = yes
+
+        potential = {
+            culture_group = panda_group
+            OR = {
+                AND = {
+                    has_building = ca_panda_common_bureau
+                    panda_common_bureau_active_trigger = yes
+                }
+                AND = {
+                    has_building = ca_panda_vassal_bureau
+                    panda_vassal_bureau_active_trigger = yes
+                }
+            }
+        }
+
+        trigger = {
+            culture_group = panda_group
+            TECH_CASTLE_CONSTRUCTION = 3
+            TECH_FORTIFICATIONS_CONSTRUCTION = 3
+        }
+        prerequisites = { ca_ani_castle_tower_3_bis }
+
+        is_active_trigger = {
+            culture_group = panda_group
+            OR = {
+                has_building = ca_panda_common_bureau
+                has_building = ca_panda_vassal_bureau
+            }
+            has_building = ca_ani_castle_tower_3_bis
+        }
+        upgrades_from = ca_panda_common_retinue_02
+
+        gold_cost = 140
+        build_time = 600
+        ai_creation_factor = 100
+        extra_tech_building_start = 1.0
+
+        retinuesize = 85
+        garrison_size = 0.25
+    }
+    ca_panda_common_retinue_04 = {
+        add_number_to_name = yes
+
+        potential = {
+            culture_group = panda_group
+            OR = {
+                AND = {
+                    has_building = ca_panda_common_bureau
+                    panda_common_bureau_active_trigger = yes
+                }
+                AND = {
+                    has_building = ca_panda_vassal_bureau
+                    panda_vassal_bureau_active_trigger = yes
+                }
+            }
+        }
+
+        trigger = {
+            culture_group = panda_group
+            TECH_CASTLE_CONSTRUCTION = 4
+            TECH_FORTIFICATIONS_CONSTRUCTION = 4
+        }
+        prerequisites = { ca_ani_castle_tower_4_bis }
+
+        is_active_trigger = {
+            culture_group = panda_group
+            OR = {
+                has_building = ca_panda_common_bureau
+                has_building = ca_panda_vassal_bureau
+            }
+            has_building = ca_ani_castle_tower_4_bis
+        }
+        upgrades_from = ca_panda_common_retinue_03
+
+        gold_cost = 180
+        build_time = 800
+        ai_creation_factor = 100
+        extra_tech_building_start = 1.0
+
+        retinuesize = 75
+        garrison_size = 0.25
+    }
+    ca_panda_common_retinue_05 = {
+        add_number_to_name = yes
+
+        potential = {
+            culture_group = panda_group
+            OR = {
+                AND = {
+                    has_building = ca_panda_common_bureau
+                    panda_common_bureau_active_trigger = yes
+                }
+                AND = {
+                    has_building = ca_panda_vassal_bureau
+                    panda_vassal_bureau_active_trigger = yes
+                }
+            }
+        }
+
+        trigger = {
+            culture_group = panda_group
+            TECH_CASTLE_CONSTRUCTION = 5
+            TECH_FORTIFICATIONS_CONSTRUCTION = 5
+        }
+        prerequisites = { ca_ani_castle_tower_5_bis }
+
+        is_active_trigger = {
+            culture_group = panda_group
+            OR = {
+                has_building = ca_panda_common_bureau
+                has_building = ca_panda_vassal_bureau
+            }
+            has_building = ca_ani_castle_tower_5_bis
+        }
+        upgrades_from = ca_panda_common_retinue_04
+
+        gold_cost = 220
+        build_time = 1000
+        ai_creation_factor = 100
+        extra_tech_building_start = 1.0
+
+        retinuesize = 75
+        garrison_size = 0.25
+    }
+    ca_panda_common_retinue_06 = {
+        add_number_to_name = yes
+
+        potential = {
+            culture_group = panda_group
+            OR = {
+                AND = {
+                    has_building = ca_panda_common_bureau
+                    panda_common_bureau_active_trigger = yes
+                }
+                AND = {
+                    has_building = ca_panda_vassal_bureau
+                    panda_vassal_bureau_active_trigger = yes
+                }
+            }
+        }
+
+        trigger = {
+            culture_group = panda_group
+            TECH_CASTLE_CONSTRUCTION = 6
+            TECH_FORTIFICATIONS_CONSTRUCTION = 6
+        }
+        prerequisites = { ca_ani_castle_tower_6_bis }
+
+        is_active_trigger = {
+            culture_group = panda_group
+            OR = {
+                has_building = ca_panda_common_bureau
+                has_building = ca_panda_vassal_bureau
+            }
+            has_building = ca_ani_castle_tower_6_bis
+        }
+        upgrades_from = ca_panda_common_retinue_05
+
+        gold_cost = 260
+        build_time = 1200
+        ai_creation_factor = 100
+        extra_tech_building_start = 1.0
+
+        retinuesize = 65
+        garrison_size = 0.25
+    }
+    ca_panda_common_retinue_07 = {
+        add_number_to_name = yes
+
+        potential = {
+            culture_group = panda_group
+            OR = {
+                AND = {
+                    has_building = ca_panda_common_bureau
+                    panda_common_bureau_active_trigger = yes
+                }
+                AND = {
+                    has_building = ca_panda_vassal_bureau
+                    panda_vassal_bureau_active_trigger = yes
+                }
+            }
+        }
+
+        trigger = {
+            culture_group = panda_group
+            TECH_CASTLE_CONSTRUCTION = 7
+            TECH_FORTIFICATIONS_CONSTRUCTION = 7
+        }
+        prerequisites = { ca_ani_castle_tower_7_bis }
+
+        is_active_trigger = {
+            culture_group = panda_group
+            OR = {
+                has_building = ca_panda_common_bureau
+                has_building = ca_panda_vassal_bureau
+            }
+            has_building = ca_ani_castle_tower_7_bis
+        }
+        upgrades_from = ca_panda_common_retinue_06
+
+        gold_cost = 300
+        build_time = 1400
+        ai_creation_factor = 100
+        extra_tech_building_start = 1.0
+
+        retinuesize = 50
+        garrison_size = 0.25
+    }
+    ca_panda_common_retinue_08 = {
+        add_number_to_name = yes
+
+        potential = {
+            culture_group = panda_group
+            OR = {
+                AND = {
+                    has_building = ca_panda_common_bureau
+                    panda_common_bureau_active_trigger = yes
+                }
+                AND = {
+                    has_building = ca_panda_vassal_bureau
+                    panda_vassal_bureau_active_trigger = yes
+                }
+            }
+        }
+
+        trigger = {
+            culture_group = panda_group
+            TECH_CASTLE_CONSTRUCTION = 8
+            TECH_FORTIFICATIONS_CONSTRUCTION = 8
+        }
+        prerequisites = { ca_ani_castle_tower_9 }
+
+        is_active_trigger = {
+            culture_group = panda_group
+            OR = {
+                has_building = ca_panda_common_bureau
+                has_building = ca_panda_vassal_bureau
+            }
+            has_building = ca_ani_castle_tower_9
+        }
+        upgrades_from = ca_panda_common_retinue_07
+
+        gold_cost = 340
+        build_time = 1600
+        ai_creation_factor = 100
+        extra_tech_building_start = 1.0
+
+        retinuesize = 25
+        garrison_size = 0.25
+    }
+
+    ca_panda_capital_speciality_1 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = panda_group
+            has_building = ca_panda_capital_bureau
+            panda_capital_bureau_active_trigger = yes
+        }
+        trigger = {
+            culture_group = panda_group
+            TECH_CASTLE_CONSTRUCTION = 2
+            TECH_FORTIFICATIONS_CONSTRUCTION = 1
+        }
+        prerequisites = { ca_ani_castle_tower_2 }
+        is_active_trigger = {
+            culture_group = panda_group
+            has_building = ca_ani_castle_tower_2
+        }
+
+        gold_cost = 150
+        build_time = 365
+        ai_creation_factor = 70
+        extra_tech_building_start = 1.0
+
+        retinuesize = 100
+        retinuesize_perc = 0.3
+    }
+    ca_panda_capital_speciality_2 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = panda_group
+            has_building = ca_panda_capital_bureau
+            panda_capital_bureau_active_trigger = yes
+        }
+        trigger = {
+            culture_group = panda_group
+            TECH_CASTLE_CONSTRUCTION = 5
+            TECH_FORTIFICATIONS_CONSTRUCTION = 4
+        }
+        prerequisites = { ca_ani_castle_tower_5 }
+        is_active_trigger = {
+            culture_group = panda_group
+            has_building = ca_ani_castle_tower_5
+        }
+        upgrades_from = ca_panda_capital_speciality_1
+
+        gold_cost = 300
+        build_time = 900
+        ai_creation_factor = 70
+        extra_tech_building_start = 1.0
+
+        retinuesize = 75
+        retinuesize_perc = 0.3
+    }
+    ca_panda_capital_speciality_3 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = panda_group
+            has_building = ca_panda_capital_bureau
+            panda_capital_bureau_active_trigger = yes
+        }
+        trigger = {
+            culture_group = panda_group
+            TECH_CASTLE_CONSTRUCTION = 6
+            TECH_FORTIFICATIONS_CONSTRUCTION = 5
+        }
+        prerequisites = { ca_ani_castle_tower_6 }
+        is_active_trigger = {
+            culture_group = panda_group
+            has_building = ca_ani_castle_tower_6
+        }
+        upgrades_from = ca_panda_capital_speciality_2
+
+        gold_cost = 600
+        build_time = 1500
+        ai_creation_factor = 70
+        extra_tech_building_start = 1.0
+
+        retinuesize = 50
+        retinuesize_perc = 0.3
+    }
+    ca_panda_capital_speciality_4 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = panda_group
+            has_building = ca_panda_capital_bureau
+            panda_capital_bureau_active_trigger = yes
+        }
+        trigger = {
+            culture_group = panda_group
+            TECH_CASTLE_CONSTRUCTION = 8
+            TECH_FORTIFICATIONS_CONSTRUCTION = 8
+        }
+        prerequisites = { ca_ani_castle_tower_9 }
+        is_active_trigger = {
+            culture_group = panda_group
+            has_building = ca_ani_castle_tower_9
+        }
+        upgrades_from = ca_panda_capital_speciality_3
+
+        gold_cost = 1000
+        build_time = 3000
+        ai_creation_factor = 70
+        extra_tech_building_start = 1.0
+
+        retinuesize = 125
+        retinuesize_perc = 0.2
+    }
+
+    #red panda building
+    ca_red_capital_stable_01 = {
+        add_number_to_name = no
+
+        potential = {
+            culture = red_panda
+            has_building = ca_panda_capital_bureau
+            panda_capital_bureau_active_trigger = yes
+        }
+        trigger = {
+            culture = red_panda
+            TECH_CASTLE_CONSTRUCTION = 1
+        }
+        prerequisites = { ca_ani_castle_tower_1 }
+        is_active_trigger = {
+            culture = red_panda
+            has_building = ca_ani_castle_tower_1
+        }
+
+        gold_cost = 100
+        build_time = 365
+        ai_creation_factor = 70
+        extra_tech_building_start = 1.0
+
+        light_cavalry = 200
+        retinuesize = 5
+    }
+    ca_red_capital_stable_02 = {
+        add_number_to_name = no
+
+        potential = {
+            culture = red_panda
+            has_building = ca_panda_capital_bureau
+            panda_capital_bureau_active_trigger = yes
+        }
+        trigger = {
+            culture = red_panda
+            TECH_CASTLE_CONSTRUCTION = 3
+            TECH_FORTIFICATIONS_CONSTRUCTION = 2
+        }
+        prerequisites = { ca_ani_castle_tower_3 }
+        is_active_trigger = {
+            culture = red_panda
+            has_building = ca_ani_castle_tower_3
+        }
+        upgrades_from = ca_red_capital_stable_01
+
+        gold_cost = 200
+        build_time = 730
+        ai_creation_factor = 65
+        extra_tech_building_start = 1.0
+
+        light_cavalry = 400
+        retinuesize = 5
+    }
+    ca_red_capital_stable_03 = {
+        add_number_to_name = no
+
+        potential = {
+            culture = red_panda
+            has_building = ca_panda_capital_bureau
+            panda_capital_bureau_active_trigger = yes
+        }
+        trigger = {
+            culture = red_panda
+            TECH_CASTLE_CONSTRUCTION = 5
+            TECH_FORTIFICATIONS_CONSTRUCTION = 5
+        }
+        prerequisites = { ca_ani_castle_tower_5_bis }
+        is_active_trigger = {
+            culture = red_panda
+            has_building = ca_ani_castle_tower_5_bis
+        }
+        upgrades_from = ca_red_capital_stable_02
+
+        gold_cost = 400
+        build_time = 1050
+        ai_creation_factor = 60
+        extra_tech_building_start = 1.0
+
+        light_cavalry = 600
+        retinuesize = 5
+    }
+    ca_red_capital_stable_04 = {
+        add_number_to_name = no
+
+        potential = {
+            culture = red_panda
+            has_building = ca_panda_capital_bureau
+            panda_capital_bureau_active_trigger = yes
+        }
+        trigger = {
+            culture = red_panda
+            TECH_CASTLE_CONSTRUCTION = 7
+            TECH_FORTIFICATIONS_CONSTRUCTION = 7
+        }
+        prerequisites = { ca_ani_castle_tower_7_bis }
+        is_active_trigger = {
+            culture = red_panda
+            has_building = ca_ani_castle_tower_7_bis
+        }
+        upgrades_from = ca_red_capital_stable_03
+
+        gold_cost = 800
+        build_time = 1400
+        ai_creation_factor = 55
+        extra_tech_building_start = 1.0
+
+        light_cavalry = 800
+        retinuesize = 5
+    }
+
+    ca_red_capital_armors_01 = {
+        add_number_to_name = no
+
+        potential = {
+            culture = red_panda
+            has_building = ca_panda_capital_bureau
+            panda_capital_bureau_active_trigger = yes
+        }
+        trigger = {
+            culture = red_panda
+            TECH_CASTLE_CONSTRUCTION = 1
+        }
+        prerequisites = { ca_ani_castle_tower_1 }
+        is_active_trigger = {
+            culture = red_panda
+            has_building = ca_ani_castle_tower_1
+        }
+
+        gold_cost = 100
+        build_time = 365
+        ai_creation_factor = 70
+        extra_tech_building_start = 1.0
+
+        pikemen = 180
+        heavy_infantry = 80
+        retinuesize = 5
+    }
+    ca_red_capital_armors_02 = {
+        add_number_to_name = no
+
+        potential = {
+            culture = red_panda
+            has_building = ca_panda_capital_bureau
+            panda_capital_bureau_active_trigger = yes
+        }
+        trigger = {
+            culture = red_panda
+            TECH_CASTLE_CONSTRUCTION = 4
+            TECH_FORTIFICATIONS_CONSTRUCTION = 3
+        }
+        prerequisites = { ca_ani_castle_tower_4 }
+        is_active_trigger = {
+            culture = red_panda
+            has_building = ca_ani_castle_tower_4
+        }
+        upgrades_from = ca_red_capital_armors_01
+
+        gold_cost = 200
+        build_time = 730
+        ai_creation_factor = 65
+        extra_tech_building_start = 1.0
+
+        pikemen = 360
+        heavy_infantry = 160
+        retinuesize = 5
+    }
+    ca_red_capital_armors_03 = {
+        add_number_to_name = no
+
+        potential = {
+            culture = red_panda
+            has_building = ca_panda_capital_bureau
+            panda_capital_bureau_active_trigger = yes
+        }
+        trigger = {
+            culture = red_panda
+            TECH_CASTLE_CONSTRUCTION = 7
+            TECH_FORTIFICATIONS_CONSTRUCTION = 6
+        }
+        prerequisites = { ca_ani_castle_tower_7 }
+        is_active_trigger = {
+            culture = red_panda
+            has_building = ca_ani_castle_tower_7
+        }
+        upgrades_from = ca_red_capital_armors_02
+
+        gold_cost = 300
+        build_time = 1050
+        ai_creation_factor = 65
+        extra_tech_building_start = 1.0
+
+        pikemen = 540
+        heavy_infantry = 240
+        retinuesize = 5
+    }
+    ca_red_capital_armors_04 = {
+        add_number_to_name = no
+
+        potential = {
+            culture = red_panda
+            has_building = ca_panda_capital_bureau
+            panda_capital_bureau_active_trigger = yes
+        }
+        trigger = {
+            culture = red_panda
+            TECH_CASTLE_CONSTRUCTION = 8
+            TECH_FORTIFICATIONS_CONSTRUCTION = 7
+        }
+        prerequisites = { ca_ani_castle_tower_8 }
+        is_active_trigger = {
+            culture = red_panda
+            has_building = ca_ani_castle_tower_8
+        }
+        upgrades_from = ca_red_capital_armors_03
+
+        gold_cost = 400
+        build_time = 1400
+        ai_creation_factor = 65
+        extra_tech_building_start = 1.0
+
+        pikemen = 720
+        heavy_infantry = 320
+        retinuesize = 5
+    }
+
+
+    ca_red_vassal_stable_01 = {
+        add_number_to_name = no
+
+        potential = {
+            has_building = ca_panda_vassal_bureau
+            panda_vassal_bureau_active_trigger = yes
+            culture = red_panda
+        }
+        trigger = {
+            culture = red_panda
+            TECH_CASTLE_CONSTRUCTION = 1
+        }
+        prerequisites = { ca_ani_castle_tower_1 }
+        is_active_trigger = {
+            culture = red_panda
+            has_building = ca_panda_vassal_bureau
+            has_building = ca_ani_castle_tower_1
+        }
+
+        gold_cost = 120
+        build_time = 365
+        ai_creation_factor = 100
+        extra_tech_building_start = 1.1
+
+        light_cavalry = 800
+        retinuesize = 5
+    }
+    ca_red_vassal_stable_02 = {
+        add_number_to_name = no
+
+        potential = {
+            has_building = ca_panda_vassal_bureau
+            panda_vassal_bureau_active_trigger = yes
+            culture = red_panda
+        }
+        trigger = {
+            culture = red_panda
+            TECH_CASTLE_CONSTRUCTION = 2
+            TECH_FORTIFICATIONS_CONSTRUCTION = 1
+        }
+        prerequisites = { ca_ani_castle_tower_2 }
+        is_active_trigger = {
+            culture = red_panda
+            has_building = ca_panda_vassal_bureau
+            has_building = ca_ani_castle_tower_2
+        }
+        upgrades_from = ca_red_vassal_stable_01
+
+        gold_cost = 240
+        build_time = 730
+        ai_creation_factor = 95
+        extra_tech_building_start = 1.1
+
+        light_cavalry = 800
+        retinuesize = 5
+    }
+    ca_red_vassal_stable_03 = {
+        add_number_to_name = no
+
+        potential = {
+            has_building = ca_panda_vassal_bureau
+            panda_vassal_bureau_active_trigger = yes
+            culture = red_panda
+        }
+        trigger = {
+            culture = red_panda
+            TECH_CASTLE_CONSTRUCTION = 3
+            TECH_FORTIFICATIONS_CONSTRUCTION = 2
+        }
+        prerequisites = { ca_ani_castle_tower_3 }
+        is_active_trigger = {
+            culture = red_panda
+            has_building = ca_panda_vassal_bureau
+            has_building = ca_ani_castle_tower_3
+        }
+        upgrades_from = ca_red_vassal_stable_02
+
+        gold_cost = 360
+        build_time = 1095
+        ai_creation_factor = 90
+        extra_tech_building_start = 1.1
+
+        light_cavalry = 800
+        retinuesize = 5
+    }
+    ca_red_vassal_stable_04 = {
+        add_number_to_name = no
+
+        potential = {
+            has_building = ca_panda_vassal_bureau
+            panda_vassal_bureau_active_trigger = yes
+            culture = red_panda
+        }
+        trigger = {
+            culture = red_panda
+            TECH_CASTLE_CONSTRUCTION = 4
+            TECH_FORTIFICATIONS_CONSTRUCTION = 3
+        }
+        prerequisites = { ca_ani_castle_tower_4 }
+        is_active_trigger = {
+            culture = red_panda
+            has_building = ca_panda_vassal_bureau
+            has_building = ca_ani_castle_tower_4
+        }
+        upgrades_from = ca_red_vassal_stable_03
+
+        gold_cost = 480
+        build_time = 1460
+        ai_creation_factor = 85
+        extra_tech_building_start = 1.1
+
+        light_cavalry = 800
+        retinuesize = 5
+    }
+    ca_red_vassal_stable_05 = {
+        add_number_to_name = no
+
+        potential = {
+            has_building = ca_panda_vassal_bureau
+            panda_vassal_bureau_active_trigger = yes
+            culture = red_panda
+        }
+        trigger = {
+            culture = red_panda
+            TECH_CASTLE_CONSTRUCTION = 5
+            TECH_FORTIFICATIONS_CONSTRUCTION = 4
+        }
+        prerequisites = { ca_ani_castle_tower_5 }
+        is_active_trigger = {
+            culture = red_panda
+            has_building = ca_panda_vassal_bureau
+            has_building = ca_ani_castle_tower_5
+        }
+        upgrades_from = ca_red_vassal_stable_04
+
+        gold_cost = 600
+        build_time = 1825
+        ai_creation_factor = 80
+        extra_tech_building_start = 1.1
+
+        light_cavalry = 800
+        retinuesize = 5
+    }
+    ca_red_vassal_stable_06 = {
+        add_number_to_name = no
+
+        potential = {
+            has_building = ca_panda_vassal_bureau
+            panda_vassal_bureau_active_trigger = yes
+            culture = red_panda
+        }
+        trigger = {
+            culture = red_panda
+            TECH_CASTLE_CONSTRUCTION = 6
+            TECH_FORTIFICATIONS_CONSTRUCTION = 5
+        }
+        prerequisites = { ca_ani_castle_tower_6 }
+        is_active_trigger = {
+            culture = red_panda
+            has_building = ca_panda_vassal_bureau
+            has_building = ca_ani_castle_tower_6
+        }
+        upgrades_from = ca_red_vassal_stable_05
+
+        gold_cost = 720
+        build_time = 2190
+        ai_creation_factor = 75
+        extra_tech_building_start = 1.1
+
+        light_cavalry = 800
+        retinuesize = 5
+    }
+    ca_red_vassal_stable_07 = {
+        add_number_to_name = no
+
+        potential = {
+            has_building = ca_panda_vassal_bureau
+            panda_vassal_bureau_active_trigger = yes
+            culture = red_panda
+        }
+        trigger = {
+            culture = red_panda
+            TECH_CASTLE_CONSTRUCTION = 7
+            TECH_FORTIFICATIONS_CONSTRUCTION = 6
+        }
+        prerequisites = { ca_ani_castle_tower_7 }
+        is_active_trigger = {
+            culture = red_panda
+            has_building = ca_panda_vassal_bureau
+            has_building = ca_ani_castle_tower_7
+        }
+        upgrades_from = ca_red_vassal_stable_06
+
+        gold_cost = 840
+        build_time = 2555
+        ai_creation_factor = 70
+        extra_tech_building_start = 1.1
+
+        light_cavalry = 800
+        retinuesize = 5
+    }
+    ca_red_vassal_stable_08 = {
+        add_number_to_name = no
+
+        potential = {
+            has_building = ca_panda_vassal_bureau
+            panda_vassal_bureau_active_trigger = yes
+            culture = red_panda
+        }
+        trigger = {
+            culture = red_panda
+            TECH_CASTLE_CONSTRUCTION = 8
+            TECH_FORTIFICATIONS_CONSTRUCTION = 7
+        }
+        prerequisites = { ca_ani_castle_tower_8 }
+        is_active_trigger = {
+            culture = red_panda
+            has_building = ca_panda_vassal_bureau
+            has_building = ca_ani_castle_tower_8
+        }
+        upgrades_from = ca_red_vassal_stable_07
+
+        gold_cost = 960
+        build_time = 2920
+        ai_creation_factor = 65
+        extra_tech_building_start = 1.1
+
+        light_cavalry = 800
+        retinuesize = 5
+    }
+
+    ca_red_vassal_weapon_01 = {
+        add_number_to_name = no
+
+        potential = {
+            has_building = ca_panda_vassal_bureau
+            panda_vassal_bureau_active_trigger = yes
+            culture = red_panda
+        }
+        trigger = {
+            culture = red_panda
+            TECH_CASTLE_CONSTRUCTION = 1
+        }
+        prerequisites = { ca_ani_castle_tower_1 }
+        is_active_trigger = {
+            culture = red_panda
+            has_building = ca_panda_vassal_bureau
+            has_building = ca_ani_castle_tower_1
+        }
+
+        gold_cost = 120
+        build_time = 365
+        ai_creation_factor = 100
+        extra_tech_building_start = 1.1
+
+        light_infantry = 800
+        archers = 400
+        pikemen = 200
+        retinuesize = 5
+    }
+    ca_red_vassal_weapon_02 = {
+        add_number_to_name = no
+
+        potential = {
+            has_building = ca_panda_vassal_bureau
+            panda_vassal_bureau_active_trigger = yes
+            culture = red_panda
+        }
+        trigger = {
+            culture = red_panda
+            TECH_CASTLE_CONSTRUCTION = 2
+            TECH_FORTIFICATIONS_CONSTRUCTION = 1
+        }
+        prerequisites = { ca_ani_castle_tower_2 }
+        is_active_trigger = {
+            culture = red_panda
+            has_building = ca_panda_vassal_bureau
+            has_building = ca_ani_castle_tower_2
+        }
+        upgrades_from = ca_red_vassal_weapon_01
+
+        gold_cost = 240
+        build_time = 730
+        ai_creation_factor = 95
+        extra_tech_building_start = 1.1
+
+        light_infantry = 800
+        archers = 400
+        pikemen = 200
+        retinuesize = 5
+    }
+    ca_red_vassal_weapon_03 = {
+        add_number_to_name = no
+
+        potential = {
+            has_building = ca_panda_vassal_bureau
+            panda_vassal_bureau_active_trigger = yes
+            culture = red_panda
+        }
+        trigger = {
+            culture = red_panda
+            TECH_CASTLE_CONSTRUCTION = 3
+            TECH_FORTIFICATIONS_CONSTRUCTION = 2
+        }
+        prerequisites = { ca_ani_castle_tower_3 }
+        is_active_trigger = {
+            culture = red_panda
+            has_building = ca_panda_vassal_bureau
+            has_building = ca_ani_castle_tower_3
+        }
+        upgrades_from = ca_red_vassal_weapon_02
+
+        gold_cost = 360
+        build_time = 1095
+        ai_creation_factor = 90
+        extra_tech_building_start = 1.1
+
+        light_infantry = 800
+        archers = 400
+        pikemen = 200
+        retinuesize = 5
+    }
+    ca_red_vassal_weapon_04 = {
+        add_number_to_name = no
+
+        potential = {
+            has_building = ca_panda_vassal_bureau
+            panda_vassal_bureau_active_trigger = yes
+            culture = red_panda
+        }
+        trigger = {
+            culture = red_panda
+            TECH_CASTLE_CONSTRUCTION = 4
+            TECH_FORTIFICATIONS_CONSTRUCTION = 3
+        }
+        prerequisites = { ca_ani_castle_tower_4 }
+        is_active_trigger = {
+            culture = red_panda
+            has_building = ca_panda_vassal_bureau
+            has_building = ca_ani_castle_tower_4
+        }
+        upgrades_from = ca_red_vassal_weapon_03
+
+        gold_cost = 480
+        build_time = 1460
+        ai_creation_factor = 85
+        extra_tech_building_start = 1.1
+
+        light_infantry = 800
+        archers = 400
+        pikemen = 200
+        retinuesize = 5
+    }
+    ca_red_vassal_weapon_05 = {
+        add_number_to_name = no
+
+        potential = {
+            has_building = ca_panda_vassal_bureau
+            panda_vassal_bureau_active_trigger = yes
+            culture = red_panda
+        }
+        trigger = {
+            culture = red_panda
+            TECH_CASTLE_CONSTRUCTION = 5
+            TECH_FORTIFICATIONS_CONSTRUCTION = 4
+        }
+        prerequisites = { ca_ani_castle_tower_5 }
+        is_active_trigger = {
+            culture = red_panda
+            has_building = ca_panda_vassal_bureau
+            has_building = ca_ani_castle_tower_5
+        }
+        upgrades_from = ca_red_vassal_weapon_04
+
+        gold_cost = 600
+        build_time = 1825
+        ai_creation_factor = 80
+        extra_tech_building_start = 1.1
+
+        light_infantry = 800
+        archers = 400
+        pikemen = 200
+        retinuesize = 5
+    }
+    ca_red_vassal_weapon_06 = {
+        add_number_to_name = no
+
+        potential = {
+            has_building = ca_panda_vassal_bureau
+            panda_vassal_bureau_active_trigger = yes
+            culture = red_panda
+        }
+        trigger = {
+            culture = red_panda
+            TECH_CASTLE_CONSTRUCTION = 6
+            TECH_FORTIFICATIONS_CONSTRUCTION = 5
+        }
+        prerequisites = { ca_ani_castle_tower_6 }
+        is_active_trigger = {
+            culture = red_panda
+            has_building = ca_panda_vassal_bureau
+            has_building = ca_ani_castle_tower_6
+        }
+        upgrades_from = ca_red_vassal_weapon_05
+
+        gold_cost = 720
+        build_time = 2190
+        ai_creation_factor = 75
+        extra_tech_building_start = 1.1
+
+        light_infantry = 800
+        archers = 400
+        pikemen = 200
+        retinuesize = 5
+    }
+    ca_red_vassal_weapon_07 = {
+        add_number_to_name = no
+
+        potential = {
+            has_building = ca_panda_vassal_bureau
+            panda_vassal_bureau_active_trigger = yes
+            culture = red_panda
+        }
+        trigger = {
+            culture = red_panda
+            TECH_CASTLE_CONSTRUCTION = 7
+            TECH_FORTIFICATIONS_CONSTRUCTION = 6
+        }
+        prerequisites = { ca_ani_castle_tower_7 }
+        is_active_trigger = {
+            culture = red_panda
+            has_building = ca_panda_vassal_bureau
+            has_building = ca_ani_castle_tower_7
+        }
+        upgrades_from = ca_red_vassal_weapon_06
+
+        gold_cost = 840
+        build_time = 2555
+        ai_creation_factor = 70
+        extra_tech_building_start = 1.1
+
+        light_infantry = 800
+        archers = 400
+        pikemen = 200
+        retinuesize = 5
+    }
+    ca_red_vassal_weapon_08 = {
+        add_number_to_name = no
+
+        potential = {
+            has_building = ca_panda_vassal_bureau
+            panda_vassal_bureau_active_trigger = yes
+            culture = red_panda
+        }
+        trigger = {
+            culture = red_panda
+            TECH_CASTLE_CONSTRUCTION = 8
+            TECH_FORTIFICATIONS_CONSTRUCTION = 7
+        }
+        prerequisites = { ca_ani_castle_tower_8 }
+        is_active_trigger = {
+            culture = red_panda
+            has_building = ca_panda_vassal_bureau
+            has_building = ca_ani_castle_tower_8
+        }
+        upgrades_from = ca_red_vassal_weapon_07
+
+        gold_cost = 960
+        build_time = 2920
+        ai_creation_factor = 65
+        extra_tech_building_start = 1.1
+
+        light_infantry = 800
+        archers = 400
+        pikemen = 25
+        retinuesize = 5
+    }
+
+    #giant panda building
+    ca_giant_capital_stable_1 = {
+        add_number_to_name = no
+
+        potential = {
+            culture = giant_panda
+            has_building = ca_panda_capital_bureau
+            panda_capital_bureau_active_trigger = yes
+        }
+        trigger = {
+            culture = giant_panda
+            TECH_CASTLE_CONSTRUCTION = 1
+        }
+        prerequisites = { ca_ani_castle_tower_1 }
+        is_active_trigger = {
+            culture = giant_panda
+            has_building = ca_ani_castle_tower_1
+        }
+
+        gold_cost = 100
+        build_time = 365
+        ai_creation_factor = 70
+        extra_tech_building_start = 1.0
+
+        light_cavalry = 80
+        knights = 40
+        retinuesize = 5
+    }
+    ca_giant_capital_stable_2 = {
+        add_number_to_name = no
+
+        potential = {
+            culture = giant_panda
+            has_building = ca_panda_capital_bureau
+            panda_capital_bureau_active_trigger = yes
+        }
+        trigger = {
+            culture = giant_panda
+            TECH_CASTLE_CONSTRUCTION = 3
+            TECH_FORTIFICATIONS_CONSTRUCTION = 2
+        }
+        prerequisites = { ca_ani_castle_tower_3 }
+        is_active_trigger = {
+            culture = giant_panda
+            has_building = ca_ani_castle_tower_3
+        }
+        upgrades_from = ca_giant_capital_stable_1
+
+        gold_cost = 200
+        build_time = 730
+        ai_creation_factor = 65
+        extra_tech_building_start = 1.0
+
+        light_cavalry = 120
+        knights = 80
+        retinuesize = 5
+    }
+    ca_giant_capital_stable_3 = {
+        add_number_to_name = no
+
+        potential = {
+            culture = giant_panda
+            has_building = ca_panda_capital_bureau
+            panda_capital_bureau_active_trigger = yes
+        }
+        trigger = {
+            culture = giant_panda
+            TECH_CASTLE_CONSTRUCTION = 5
+            TECH_FORTIFICATIONS_CONSTRUCTION = 5
+        }
+        prerequisites = { ca_ani_castle_tower_5_bis }
+        is_active_trigger = {
+            culture = giant_panda
+            has_building = ca_ani_castle_tower_5_bis
+        }
+        upgrades_from = ca_giant_capital_stable_2
+
+        gold_cost = 400
+        build_time = 1050
+        ai_creation_factor = 60
+        extra_tech_building_start = 1.0
+
+        light_cavalry = 160
+        knights = 140
+        retinuesize = 5
+    }
+    ca_giant_capital_stable_4 = {
+        add_number_to_name = no
+
+        potential = {
+            culture = giant_panda
+            has_building = ca_panda_capital_bureau
+            panda_capital_bureau_active_trigger = yes
+        }
+        trigger = {
+            culture = giant_panda
+            TECH_CASTLE_CONSTRUCTION = 7
+            TECH_FORTIFICATIONS_CONSTRUCTION = 7
+        }
+        prerequisites = { ca_ani_castle_tower_7_bis }
+        is_active_trigger = {
+            culture = giant_panda
+            has_building = ca_ani_castle_tower_7_bis
+        }
+        upgrades_from = ca_giant_capital_stable_3
+
+        gold_cost = 800
+        build_time = 1400
+        ai_creation_factor = 55
+        extra_tech_building_start = 1.0
+
+        light_cavalry = 240
+        knights = 220
+        retinuesize = 5
+    }
+
+    ca_giant_capital_armors_1 = {
+        add_number_to_name = no
+
+        potential = {
+            culture = giant_panda
+            has_building = ca_panda_capital_bureau
+            panda_capital_bureau_active_trigger = yes
+        }
+        trigger = {
+            culture = giant_panda
+            TECH_CASTLE_CONSTRUCTION = 1
+        }
+        prerequisites = { ca_ani_castle_tower_1 }
+        is_active_trigger = {
+            culture = giant_panda
+            has_building = ca_ani_castle_tower_1
+        }
+
+        gold_cost = 100
+        build_time = 365
+        ai_creation_factor = 70
+        extra_tech_building_start = 1.0
+
+        heavy_infantry = 180
+        retinuesize = 5
+    }
+    ca_giant_capital_armors_2 = {
+        add_number_to_name = no
+
+        potential = {
+            culture = giant_panda
+            has_building = ca_panda_capital_bureau
+            panda_capital_bureau_active_trigger = yes
+        }
+        trigger = {
+            culture = giant_panda
+            TECH_CASTLE_CONSTRUCTION = 4
+            TECH_FORTIFICATIONS_CONSTRUCTION = 3
+        }
+        prerequisites = { ca_ani_castle_tower_4 }
+        is_active_trigger = {
+            culture = giant_panda
+            has_building = ca_ani_castle_tower_4
+        }
+        upgrades_from = ca_giant_capital_armors_1
+
+        gold_cost = 200
+        build_time = 730
+        ai_creation_factor = 65
+        extra_tech_building_start = 1.0
+
+        heavy_infantry = 280
+        retinuesize = 5
+    }
+    ca_giant_capital_armors_3 = {
+        add_number_to_name = no
+
+        potential = {
+            culture = giant_panda
+            has_building = ca_panda_capital_bureau
+            panda_capital_bureau_active_trigger = yes
+        }
+        trigger = {
+            culture = giant_panda
+            TECH_CASTLE_CONSTRUCTION = 7
+            TECH_FORTIFICATIONS_CONSTRUCTION = 6
+        }
+        prerequisites = { ca_ani_castle_tower_7 }
+        is_active_trigger = {
+            culture = giant_panda
+            has_building = ca_ani_castle_tower_7
+        }
+        upgrades_from = ca_giant_capital_armors_2
+
+        gold_cost = 300
+        build_time = 1050
+        ai_creation_factor = 65
+        extra_tech_building_start = 1.0
+
+        heavy_infantry = 400
+        retinuesize = 5
+    }
+    ca_giant_capital_armors_4 = {
+        add_number_to_name = no
+
+        potential = {
+            culture = giant_panda
+            has_building = ca_panda_capital_bureau
+            panda_capital_bureau_active_trigger = yes
+        }
+        trigger = {
+            culture = giant_panda
+            TECH_CASTLE_CONSTRUCTION = 8
+            TECH_FORTIFICATIONS_CONSTRUCTION = 7
+        }
+        prerequisites = { ca_ani_castle_tower_8 }
+        is_active_trigger = {
+            culture = giant_panda
+            has_building = ca_ani_castle_tower_8
+        }
+        upgrades_from = ca_giant_capital_armors_3
+
+        gold_cost = 400
+        build_time = 1400
+        ai_creation_factor = 65
+        extra_tech_building_start = 1.0
+
+        heavy_infantry = 600
+        retinuesize = 5
+    }
+
+    ca_giant_vassal_stable_1 = {
+        add_number_to_name = no
+
+        potential = {
+            has_building = ca_panda_vassal_bureau
+            panda_vassal_bureau_active_trigger = yes
+            culture = giant_panda
+        }
+        trigger = {
+            culture = giant_panda
+            TECH_CASTLE_CONSTRUCTION = 1
+        }
+        prerequisites = { ca_ani_castle_tower_1 }
+        is_active_trigger = {
+            culture = giant_panda
+            has_building = ca_panda_vassal_bureau
+            has_building = ca_ani_castle_tower_1
+        }
+
+        gold_cost = 120
+        build_time = 365
+        ai_creation_factor = 100
+        extra_tech_building_start = 1.1
+
+        light_cavalry = 200
+        knights = 100
+        retinuesize = 5
+    }
+    ca_giant_vassal_stable_2 = {
+        add_number_to_name = no
+
+        potential = {
+            has_building = ca_panda_vassal_bureau
+            panda_vassal_bureau_active_trigger = yes
+            culture = giant_panda
+        }
+        trigger = {
+            culture = giant_panda
+            TECH_CASTLE_CONSTRUCTION = 2
+            TECH_FORTIFICATIONS_CONSTRUCTION = 1
+        }
+        prerequisites = { ca_ani_castle_tower_2 }
+        is_active_trigger = {
+            culture = giant_panda
+            has_building = ca_panda_vassal_bureau
+            has_building = ca_ani_castle_tower_2
+        }
+        upgrades_from = ca_giant_vassal_stable_1
+
+        gold_cost = 240
+        build_time = 730
+        ai_creation_factor = 95
+        extra_tech_building_start = 1.1
+
+        light_cavalry = 200
+        knights = 100
+        retinuesize = 5
+    }
+    ca_giant_vassal_stable_3 = {
+        add_number_to_name = no
+
+        potential = {
+            has_building = ca_panda_vassal_bureau
+            panda_vassal_bureau_active_trigger = yes
+            culture = giant_panda
+        }
+        trigger = {
+            culture = giant_panda
+            TECH_CASTLE_CONSTRUCTION = 3
+            TECH_FORTIFICATIONS_CONSTRUCTION = 2
+        }
+        prerequisites = { ca_ani_castle_tower_3 }
+        is_active_trigger = {
+            culture = giant_panda
+            has_building = ca_panda_vassal_bureau
+            has_building = ca_ani_castle_tower_3
+        }
+        upgrades_from = ca_giant_vassal_stable_2
+
+        gold_cost = 360
+        build_time = 1095
+        ai_creation_factor = 90
+        extra_tech_building_start = 1.1
+
+        light_cavalry = 200
+        knights = 100
+        retinuesize = 5
+    }
+    ca_giant_vassal_stable_4 = {
+        add_number_to_name = no
+
+        potential = {
+            has_building = ca_panda_vassal_bureau
+            panda_vassal_bureau_active_trigger = yes
+            culture = giant_panda
+        }
+        trigger = {
+            culture = giant_panda
+            TECH_CASTLE_CONSTRUCTION = 4
+            TECH_FORTIFICATIONS_CONSTRUCTION = 3
+        }
+        prerequisites = { ca_ani_castle_tower_4 }
+        is_active_trigger = {
+            culture = giant_panda
+            has_building = ca_panda_vassal_bureau
+            has_building = ca_ani_castle_tower_4
+        }
+        upgrades_from = ca_giant_vassal_stable_3
+
+        gold_cost = 480
+        build_time = 1460
+        ai_creation_factor = 85
+        extra_tech_building_start = 1.1
+
+        light_cavalry = 200
+        knights = 100
+        retinuesize = 5
+    }
+    ca_giant_vassal_stable_5 = {
+        add_number_to_name = no
+
+        potential = {
+            has_building = ca_panda_vassal_bureau
+            panda_vassal_bureau_active_trigger = yes
+            culture = giant_panda
+        }
+        trigger = {
+            culture = giant_panda
+            TECH_CASTLE_CONSTRUCTION = 5
+            TECH_FORTIFICATIONS_CONSTRUCTION = 4
+        }
+        prerequisites = { ca_ani_castle_tower_5 }
+        is_active_trigger = {
+            culture = giant_panda
+            has_building = ca_panda_vassal_bureau
+            has_building = ca_ani_castle_tower_5
+        }
+        upgrades_from = ca_giant_vassal_stable_4
+
+        gold_cost = 600
+        build_time = 1825
+        ai_creation_factor = 80
+        extra_tech_building_start = 1.1
+
+        light_cavalry = 200
+        knights = 100
+        retinuesize = 5
+    }
+    ca_giant_vassal_stable_6 = {
+        add_number_to_name = no
+
+        potential = {
+            has_building = ca_panda_vassal_bureau
+            panda_vassal_bureau_active_trigger = yes
+            culture = giant_panda
+        }
+        trigger = {
+            culture = giant_panda
+            TECH_CASTLE_CONSTRUCTION = 6
+            TECH_FORTIFICATIONS_CONSTRUCTION = 5
+        }
+        prerequisites = { ca_ani_castle_tower_6 }
+        is_active_trigger = {
+            culture = giant_panda
+            has_building = ca_panda_vassal_bureau
+            has_building = ca_ani_castle_tower_6
+        }
+        upgrades_from = ca_giant_vassal_stable_5
+
+        gold_cost = 720
+        build_time = 2190
+        ai_creation_factor = 75
+        extra_tech_building_start = 1.1
+
+        light_cavalry = 200
+        knights = 100
+        retinuesize = 5
+    }
+    ca_giant_vassal_stable_7 = {
+        add_number_to_name = no
+
+        potential = {
+            has_building = ca_panda_vassal_bureau
+            panda_vassal_bureau_active_trigger = yes
+            culture = giant_panda
+        }
+        trigger = {
+            culture = giant_panda
+            TECH_CASTLE_CONSTRUCTION = 7
+            TECH_FORTIFICATIONS_CONSTRUCTION = 6
+        }
+        prerequisites = { ca_ani_castle_tower_7 }
+        is_active_trigger = {
+            culture = giant_panda
+            has_building = ca_panda_vassal_bureau
+            has_building = ca_ani_castle_tower_7
+        }
+        upgrades_from = ca_giant_vassal_stable_6
+
+        gold_cost = 840
+        build_time = 2555
+        ai_creation_factor = 70
+        extra_tech_building_start = 1.1
+
+        light_cavalry = 200
+        knights = 100
+        retinuesize = 5
+    }
+    ca_giant_vassal_stable_8 = {
+        add_number_to_name = no
+
+        potential = {
+            has_building = ca_panda_vassal_bureau
+            panda_vassal_bureau_active_trigger = yes
+            culture = giant_panda
+        }
+        trigger = {
+            culture = giant_panda
+            TECH_CASTLE_CONSTRUCTION = 8
+            TECH_FORTIFICATIONS_CONSTRUCTION = 7
+        }
+        prerequisites = { ca_ani_castle_tower_8 }
+        is_active_trigger = {
+            culture = giant_panda
+            has_building = ca_panda_vassal_bureau
+            has_building = ca_ani_castle_tower_8
+        }
+        upgrades_from = ca_giant_vassal_stable_7
+
+        gold_cost = 960
+        build_time = 2920
+        ai_creation_factor = 65
+        extra_tech_building_start = 1.1
+
+        light_cavalry = 200
+        knights = 100
+        retinuesize = 5
+    }
+
+    ca_giant_vassal_armors_1 = {
+        add_number_to_name = no
+
+        potential = {
+            has_building = ca_panda_vassal_bureau
+            panda_vassal_bureau_active_trigger = yes
+            culture = giant_panda
+        }
+        trigger = {
+            culture = giant_panda
+            TECH_CASTLE_CONSTRUCTION = 1
+        }
+        prerequisites = { ca_ani_castle_tower_1 }
+        is_active_trigger = {
+            culture = giant_panda
+            has_building = ca_panda_vassal_bureau
+            has_building = ca_ani_castle_tower_1
+        }
+
+        gold_cost = 120
+        build_time = 365
+        ai_creation_factor = 100
+        extra_tech_building_start = 1.1
+
+        heavy_infantry = 240
+        archers = 140
+        pikemen = 100
+        retinuesize = 5
+    }
+    ca_giant_vassal_armors_2 = {
+        add_number_to_name = no
+
+        potential = {
+            has_building = ca_panda_vassal_bureau
+            panda_vassal_bureau_active_trigger = yes
+            culture = giant_panda
+        }
+        trigger = {
+            culture = giant_panda
+            TECH_CASTLE_CONSTRUCTION = 2
+            TECH_FORTIFICATIONS_CONSTRUCTION = 1
+        }
+        prerequisites = { ca_ani_castle_tower_2 }
+        is_active_trigger = {
+            culture = giant_panda
+            has_building = ca_panda_vassal_bureau
+            has_building = ca_ani_castle_tower_2
+        }
+        upgrades_from = ca_giant_vassal_armors_1
+
+        gold_cost = 240
+        build_time = 730
+        ai_creation_factor = 95
+        extra_tech_building_start = 1.1
+
+        heavy_infantry = 240
+        archers = 140
+        pikemen = 100
+        retinuesize = 5
+    }
+    ca_giant_vassal_armors_3 = {
+        add_number_to_name = no
+
+        potential = {
+            has_building = ca_panda_vassal_bureau
+            panda_vassal_bureau_active_trigger = yes
+            culture = giant_panda
+        }
+        trigger = {
+            culture = giant_panda
+            TECH_CASTLE_CONSTRUCTION = 3
+            TECH_FORTIFICATIONS_CONSTRUCTION = 2
+        }
+        prerequisites = { ca_ani_castle_tower_3 }
+        is_active_trigger = {
+            culture = giant_panda
+            has_building = ca_panda_vassal_bureau
+            has_building = ca_ani_castle_tower_3
+        }
+        upgrades_from = ca_giant_vassal_armors_2
+
+        gold_cost = 360
+        build_time = 1095
+        ai_creation_factor = 90
+        extra_tech_building_start = 1.1
+
+        heavy_infantry = 240
+        archers = 140
+        pikemen = 100
+        retinuesize = 5
+    }
+    ca_giant_vassal_armors_4 = {
+        add_number_to_name = no
+
+        potential = {
+            has_building = ca_panda_vassal_bureau
+            panda_vassal_bureau_active_trigger = yes
+            culture = giant_panda
+        }
+        trigger = {
+            culture = giant_panda
+            TECH_CASTLE_CONSTRUCTION = 4
+            TECH_FORTIFICATIONS_CONSTRUCTION = 3
+        }
+        prerequisites = { ca_ani_castle_tower_4 }
+        is_active_trigger = {
+            culture = giant_panda
+            has_building = ca_panda_vassal_bureau
+            has_building = ca_ani_castle_tower_4
+        }
+        upgrades_from = ca_giant_vassal_armors_3
+
+        gold_cost = 480
+        build_time = 1460
+        ai_creation_factor = 85
+        extra_tech_building_start = 1.1
+
+        heavy_infantry = 240
+        archers = 140
+        pikemen = 100
+        retinuesize = 5
+    }
+    ca_giant_vassal_armors_5 = {
+        add_number_to_name = no
+
+        potential = {
+            has_building = ca_panda_vassal_bureau
+            panda_vassal_bureau_active_trigger = yes
+            culture = giant_panda
+        }
+        trigger = {
+            culture = giant_panda
+            TECH_CASTLE_CONSTRUCTION = 5
+            TECH_FORTIFICATIONS_CONSTRUCTION = 4
+        }
+        prerequisites = { ca_ani_castle_tower_5 }
+        is_active_trigger = {
+            culture = giant_panda
+            has_building = ca_panda_vassal_bureau
+            has_building = ca_ani_castle_tower_5
+        }
+        upgrades_from = ca_giant_vassal_armors_4
+
+        gold_cost = 600
+        build_time = 1825
+        ai_creation_factor = 80
+        extra_tech_building_start = 1.1
+
+        heavy_infantry = 240
+        archers = 140
+        pikemen = 100
+        retinuesize = 5
+    }
+    ca_giant_vassal_armors_6 = {
+        add_number_to_name = no
+
+        potential = {
+            has_building = ca_panda_vassal_bureau
+            panda_vassal_bureau_active_trigger = yes
+            culture = giant_panda
+        }
+        trigger = {
+            culture = giant_panda
+            TECH_CASTLE_CONSTRUCTION = 6
+            TECH_FORTIFICATIONS_CONSTRUCTION = 5
+        }
+        prerequisites = { ca_ani_castle_tower_6 }
+        is_active_trigger = {
+            culture = giant_panda
+            has_building = ca_panda_vassal_bureau
+            has_building = ca_ani_castle_tower_6
+        }
+        upgrades_from = ca_giant_vassal_armors_5
+
+        gold_cost = 720
+        build_time = 2190
+        ai_creation_factor = 75
+        extra_tech_building_start = 1.1
+
+        heavy_infantry = 240
+        archers = 140
+        pikemen = 100
+        retinuesize = 5
+    }
+    ca_giant_vassal_armors_7 = {
+        add_number_to_name = no
+
+        potential = {
+            has_building = ca_panda_vassal_bureau
+            panda_vassal_bureau_active_trigger = yes
+            culture = giant_panda
+        }
+        trigger = {
+            culture = giant_panda
+            TECH_CASTLE_CONSTRUCTION = 7
+            TECH_FORTIFICATIONS_CONSTRUCTION = 6
+        }
+        prerequisites = { ca_ani_castle_tower_7 }
+        is_active_trigger = {
+            culture = giant_panda
+            has_building = ca_panda_vassal_bureau
+            has_building = ca_ani_castle_tower_7
+        }
+        upgrades_from = ca_giant_vassal_armors_6
+
+        gold_cost = 840
+        build_time = 2555
+        ai_creation_factor = 70
+        extra_tech_building_start = 1.1
+
+        heavy_infantry = 240
+        archers = 140
+        pikemen = 100
+        retinuesize = 5
+    }
+    ca_giant_vassal_armors_8 = {
+        add_number_to_name = no
+
+        potential = {
+            has_building = ca_panda_vassal_bureau
+            panda_vassal_bureau_active_trigger = yes
+            culture = giant_panda
+        }
+        trigger = {
+            culture = giant_panda
+            TECH_CASTLE_CONSTRUCTION = 8
+            TECH_FORTIFICATIONS_CONSTRUCTION = 7
+        }
+        prerequisites = { ca_ani_castle_tower_8 }
+        is_active_trigger = {
+            culture = giant_panda
+            has_building = ca_panda_vassal_bureau
+            has_building = ca_ani_castle_tower_8
+        }
+        upgrades_from = ca_giant_vassal_armors_7
+
+        gold_cost = 960
+        build_time = 2920
+        ai_creation_factor = 65
+        extra_tech_building_start = 1.1
+
+        heavy_infantry = 240
+        archers = 140
+        pikemen = 100
+        retinuesize = 5
+    }
+}
+
+tribal = {
+    tb_panda_capital_bureau  = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = panda_group
+            is_capital = yes
+            FROMFROM = { is_capital = yes }
+            FROM = {
+                OR = {
+                    independent = yes
+                    liege = { NOT = { culture_group = panda_group } }
+                }
+            }
+        }
+
+        trigger = {
+            culture_group = panda_group
+            is_capital = yes
+            FROM = {
+                culture_group = panda_group
+            }
+        }
+
+        is_active_trigger = {
+            panda_capital_bureau_active_trigger = yes
+        }
+
+        prestige_cost = 100
+        build_time = 180
+        ai_creation_factor = 170
+        extra_tech_building_start = 0.0
+
+        convert_to_castle = ca_panda_capital_bureau
+
+        retinuesize = 100
+    }
+    tb_panda_common_bureau  = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = panda_group
+            is_capital = no
+            FROMFROM = { is_capital = yes }
+            NOT = { has_building = tb_panda_capital_bureau }
+        }
+
+        trigger = {
+            culture_group = panda_group
+            any_neighbor_province = {
+                OR = {
+                    has_building = tb_panda_capital_bureau
+                    has_building = tb_panda_common_bureau
+                }
+                holder_scope = {
+                    same_realm = FROM
+                }
+            }
+            FROM = { culture_group = panda_group }
+        }
+
+        is_active_trigger = {
+            culture_group = panda_group
+        }
+
+        gold_cost = 75
+        build_time = 365
+        ai_creation_factor = 120
+        extra_tech_building_start = 10.0
+
+        convert_to_castle = ca_panda_common_bureau
+
+        retinuesize = 50
+    }
+
+    tb_panda_giant_troops_1 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = panda_group
+            OR = {
+                has_building = tb_panda_capital_bureau
+                has_building = tb_panda_common_bureau
+            }
+        }
+        trigger = {
+            culture_group = panda_group
+            hidden_tooltip = { TECH_CASTLE_CONSTRUCTION = 0 }
+        }
+        prerequisites = { tb_ani_tribal_tower_1 }
+        is_active_trigger = {
+            culture_group = panda_group
+            OR = {
+                has_building = tb_panda_capital_bureau
+                has_building = tb_panda_common_bureau
+            }
+        }
+
+        prestige_cost = 100
+        build_time = 180
+        ai_creation_factor = 70
+        extra_tech_building_start = 0.9
+
+        heavy_infantry = 35
+        retinuesize = 20
+    }
+    tb_panda_giant_troops_2 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                AND = {
+                    has_building = tb_panda_capital_bureau
+                    culture_group = panda_group
+                }
+                AND = {
+                    has_building = tb_panda_common_bureau
+                    culture = giant_panda
+                }
+            }
+        }
+        trigger = {
+            culture_group = panda_group
+            TECH_CASTLE_CONSTRUCTION = 1
+            TECH_CITY_CONSTRUCTION = 1
+        }
+        prerequisites = { tb_ani_tribal_tower_2 }
+        is_active_trigger = {
+            culture_group = panda_group
+            OR = {
+                has_building = tb_panda_capital_bureau
+                has_building = tb_panda_common_bureau
+            }
+        }
+        upgrades_from = tb_panda_giant_troops_1
+
+        prestige_cost = 200
+        build_time = 360
+        ai_creation_factor = 70
+        extra_tech_building_start = 0.9
+
+        convert_to_castle = ca_giant_capital_armors_1
+
+        heavy_infantry = 50
+        retinuesize = 20
+    }
+    tb_panda_giant_troops_3 = {
+        add_number_to_name = no
+
+        potential = {
+            culture = giant_panda
+            has_building = tb_panda_capital_bureau
+        }
+        trigger = {
+            culture_group = panda_group
+            TECH_CASTLE_CONSTRUCTION = 1
+            TECH_CITY_CONSTRUCTION = 1
+        }
+        prerequisites = { tb_ani_tribal_tower_3 }
+        is_active_trigger = {
+            culture = giant_panda
+            has_building = tb_panda_capital_bureau
+
+        }
+        upgrades_from = tb_panda_giant_troops_2
+
+        prestige_cost = 300
+        build_time = 500
+        ai_creation_factor = 70
+        extra_tech_building_start = 0.9
+
+        heavy_infantry = 75
+        retinuesize = 20
+    }
+    tb_panda_giant_troops_4 = {
+        add_number_to_name = no
+
+        potential = {
+            culture = giant_panda
+            has_building = tb_panda_capital_bureau
+        }
+        trigger = {
+            culture_group = panda_group
+            TECH_CASTLE_CONSTRUCTION = 1
+            TECH_CITY_CONSTRUCTION = 1
+            TECH_FORTIFICATIONS_CONSTRUCTION = 1
+        }
+        prerequisites = { tb_ani_tribal_tower_4 }
+        is_active_trigger = {
+            culture = giant_panda
+            has_building = tb_panda_capital_bureau
+        }
+        upgrades_from = tb_panda_giant_troops_3
+
+        prestige_cost = 400
+        build_time = 650
+        ai_creation_factor = 70
+        extra_tech_building_start = 0.9
+
+        convert_to_castle = ca_giant_capital_stable_1
+
+        heavy_infantry = 90
+        retinuesize = 20
+    }
+
+    tb_panda_red_troops_1 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = panda_group
+            OR = {
+                has_building = tb_panda_capital_bureau
+                has_building = tb_panda_common_bureau
+            }
+        }
+        trigger = {
+            culture_group = panda_group
+            hidden_tooltip = { TECH_CASTLE_CONSTRUCTION = 0 }
+        }
+        prerequisites = { tb_ani_tribal_tower_1 }
+        is_active_trigger = {
+            culture_group = panda_group
+            OR = {
+                has_building = tb_panda_capital_bureau
+                has_building = tb_panda_common_bureau
+            }
+        }
+
+        prestige_cost = 100
+        build_time = 180
+        ai_creation_factor = 70
+        extra_tech_building_start = 0.9
+
+        archers = 60
+        retinuesize = 20
+    }
+    tb_panda_red_troops_2 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                AND = {
+                    has_building = tb_panda_capital_bureau
+                    culture_group = panda_group
+                }
+                AND = {
+                    has_building = tb_panda_common_bureau
+                    culture = red_panda
+                }
+            }
+        }
+        trigger = {
+            culture_group = panda_group
+            TECH_CASTLE_CONSTRUCTION = 1
+            TECH_CITY_CONSTRUCTION = 1
+        }
+        prerequisites = { tb_ani_tribal_tower_2 }
+        is_active_trigger = {
+            culture_group = panda_group
+            OR = {
+                has_building = tb_panda_capital_bureau
+                has_building = tb_panda_common_bureau
+            }
+        }
+        upgrades_from = tb_panda_red_troops_1
+
+        prestige_cost = 200
+        build_time = 360
+        ai_creation_factor = 70
+        extra_tech_building_start = 0.9
+
+        convert_to_castle = ca_red_capital_armors_01
+
+        archers = 85
+        retinuesize = 20
+    }
+    tb_panda_red_troops_3 = {
+        add_number_to_name = no
+
+        potential = {
+            culture = red_panda
+            has_building = tb_panda_capital_bureau
+        }
+        trigger = {
+            culture_group = panda_group
+            TECH_CASTLE_CONSTRUCTION = 1
+            TECH_CITY_CONSTRUCTION = 1
+        }
+        prerequisites = { tb_ani_tribal_tower_3 }
+        is_active_trigger = {
+            culture = red_panda
+            has_building = tb_panda_capital_bureau
+
+        }
+        upgrades_from = tb_panda_red_troops_2
+
+        prestige_cost = 300
+        build_time = 500
+        ai_creation_factor = 70
+        extra_tech_building_start = 0.9
+
+        archers = 130
+        retinuesize = 20
+    }
+    tb_panda_red_troops_4 = {
+        add_number_to_name = no
+
+        potential = {
+            culture = red_panda
+            has_building = tb_panda_capital_bureau
+        }
+        trigger = {
+            culture_group = panda_group
+            TECH_CASTLE_CONSTRUCTION = 1
+            TECH_CITY_CONSTRUCTION = 1
+            TECH_FORTIFICATIONS_CONSTRUCTION = 1
+        }
+        prerequisites = { tb_ani_tribal_tower_4 }
+        is_active_trigger = {
+            culture = red_panda
+            has_building = tb_panda_capital_bureau
+        }
+        upgrades_from = tb_panda_giant_troops_3
+
+        prestige_cost = 400
+        build_time = 650
+        ai_creation_factor = 70
+        extra_tech_building_start = 0.9
+
+        convert_to_castle = ca_red_capital_stable_01
+
+        heavy_infantry = 180
+        retinuesize = 20
+    }
+
+    tb_panda_retinue_1 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = panda_group
+            OR = {
+                has_building = tb_panda_capital_bureau
+                has_building = tb_panda_common_bureau
+            }
+        }
+        trigger = {
+            culture_group = panda_group
+            hidden_tooltip = { TECH_CASTLE_CONSTRUCTION = 0 }
+        }
+        prerequisites = { tb_ani_tribal_tower_1 }
+        is_active_trigger = {
+            culture_group = panda_group
+            OR = {
+                has_building = tb_panda_capital_bureau
+                has_building = tb_panda_common_bureau
+            }
+        }
+
+        prestige_cost = 100
+        build_time = 180
+        ai_creation_factor = 70
+        extra_tech_building_start = 0.9
+
+        retinuesize = 50
+    }
+    tb_panda_retinue_2 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = panda_group
+            OR = {
+                has_building = tb_panda_capital_bureau
+                has_building = tb_panda_common_bureau
+            }
+        }
+        trigger = {
+            culture_group = panda_group
+            TECH_CASTLE_CONSTRUCTION = 1
+            TECH_CITY_CONSTRUCTION = 1
+        }
+        prerequisites = { tb_ani_tribal_tower_2 }
+        is_active_trigger = {
+            culture_group = panda_group
+            OR = {
+                has_building = tb_panda_capital_bureau
+                has_building = tb_panda_common_bureau
+            }
+        }
+        upgrades_from = tb_panda_retinue_1
+
+        prestige_cost = 200
+        build_time = 360
+        ai_creation_factor = 70
+        extra_tech_building_start = 0.9
+
+        convert_to_castle = ca_panda_capital_speciality_1
+
+        retinuesize = 50
+    }
+    tb_panda_retinue_3 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = panda_group
+            has_building = tb_panda_capital_bureau
+        }
+        trigger = {
+            culture_group = panda_group
+            TECH_CASTLE_CONSTRUCTION = 1
+            TECH_CITY_CONSTRUCTION = 1
+        }
+        prerequisites = { tb_ani_tribal_tower_3 }
+        is_active_trigger = {
+            culture_group = panda_group
+            has_building = tb_panda_capital_bureau
+        }
+        upgrades_from = tb_panda_retinue_2
+
+        prestige_cost = 300
+        build_time = 500
+        ai_creation_factor = 70
+        extra_tech_building_start = 0.9
+
+        retinuesize = 50
+    }
+    tb_panda_retinue_4 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = panda_group
+            has_building = tb_panda_capital_bureau
+        }
+        trigger = {
+            culture_group = panda_group
+            TECH_CASTLE_CONSTRUCTION = 1
+            TECH_CITY_CONSTRUCTION = 1
+            TECH_FORTIFICATIONS_CONSTRUCTION = 1
+        }
+        prerequisites = { tb_ani_tribal_tower_4 }
+        is_active_trigger = {
+            culture_group = panda_group
+            has_building = tb_panda_capital_bureau
+        }
+        upgrades_from = tb_panda_retinue_3
+
+        prestige_cost = 400
+        build_time = 650
+        ai_creation_factor = 70
+        extra_tech_building_start = 0.9
+
+        retinuesize = 50
+    }
+}

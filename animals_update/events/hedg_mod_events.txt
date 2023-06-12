@@ -1,0 +1,1001 @@
+#######hedgehog update
+### event 061 - 077
+
+namespace = ani_plus
+
+
+###conversion event
+#starting conversion quest with event conversion rule
+province_event = {
+    id = ani_plus.061
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    # only_playable = yes
+    trigger = {
+        has_game_rule = {
+            name = animals_conversion_ways
+            value = animal_events
+        }
+        NOT = { Is_really_animal_trigger = yes }
+        hedgehog_can_live_in_this_province_trigger = yes
+        fort_has_building = fo_fortification_human
+        holder_scope = {
+            OR = {
+                ai = no
+                ai_rationality < 0
+            }
+        }
+        NOT = { has_hedgehog_in_province_trigger = yes }
+    }
+
+    mean_time_to_happen = {
+        years = 100
+
+        modifier = {
+            factor = 0.25 # 25 years
+
+            holder_scope = {
+                trait = lunatic
+            }
+        }
+
+        modifier = {
+            factor = 0.01
+
+            holder_scope = {
+                culture_group = hedgehog_group
+            }
+        }
+    }
+
+    desc = DESC_EVENT061_HEDGE_SETTLE_IN_PROVINCE
+
+    option = {
+        name = OPT1_EVENT061_LET_HEGDE_STAY
+
+        add_province_modifier = {
+            name = hedge_hedgehog_inhabitant
+            duration = -1
+        }
+    }
+
+    option = {
+        name = OPT2_EVENT061_CHASE_THEM
+    }
+}
+
+#different phase for hedgehog presence in occupying fort and associated conversion event
+province_event = {
+    id = ani_plus.062
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    trigger = {
+        has_hedgehog_in_province_trigger = yes
+        OR = {
+            NOT = { has_province_modifier = hedge_hedgehog_hostile_inhabitant }
+            holder_scope = { war = no }
+        }
+        NOT = { has_province_modifier = hedge_province_frind_with_hedgehog }
+    }
+
+    mean_time_to_happen = {
+        years = 5
+
+        modifier = {
+            factor = 2 # 10 years
+
+            has_province_modifier = hedge_hedgehog_hostile_inhabitant
+        }
+        modifier = {
+            factor = 1.4 # 7 years
+
+            has_province_modifier = hedge_hedgehog_friendly_inhabitant
+        }
+        modifier = {
+            factor = 0.6  # 6/3/4.2 years
+            any_neighbor_province = {
+                OR = {
+                    AND = {
+                        has_province_modifier = hedge_hedgehog_friendly_inhabitant
+                        PREV = { NOT = { has_province_modifier = hedge_hedgehog_friendly_inhabitant } }
+                    }
+                    AND = {
+                        has_province_modifier = hedge_hedgehog_hostile_inhabitant
+                        PREV = { NOT = { has_province_modifier = hedge_hedgehog_hostile_inhabitant } }
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0.1
+
+            has_fort = no
+            NOT = { has_province_modifier = hedge_hedgehog_hostile_inhabitant }
+        }
+    }
+
+    immediate = {
+        random_list = { #getting what event we will have
+            100 = { #end of hedgehog in province
+                trigger = {
+                    OR = {
+                        AND = {
+                            has_fort = no
+                            NOT = { has_province_modifier = hedge_hedgehog_hostile_inhabitant }
+                        }
+                        holder_scope = { culture_group = hedgehog_group }
+                    }
+                }
+                set_province_flag = hedge_end_of_province_hedgehog
+            }
+            5 =  { #going into friendly 'mode'
+                trigger = {
+                    has_province_modifier = hedge_hedgehog_inhabitant
+                }
+                mult_modifier = {
+                    factor = 5
+                    any_neighbor_province = {
+                        has_province_modifier = hedge_hedgehog_friendly_inhabitant
+                    }
+                }
+                set_province_flag = hedge_getting_friendship_on_province
+            }
+            1 = { #getting into "normal mode" (if hostile: goes away, if friendly, just inhabited)
+                trigger = {
+                    NOT = { has_province_modifier = hedge_hedgehog_inhabitant }
+                }
+                set_province_flag = hedge_getting_normal_inhabitant
+            }
+            5 = { #getting into hostile 'mode'
+                trigger = {
+                    has_province_modifier = hedge_hedgehog_inhabitant
+                }
+                mult_modifier = {
+                    factor = 5
+                    any_neighbor_province = {
+                        has_province_modifier = hedge_hedgehog_hostile_inhabitant
+                    }
+                }
+
+                set_province_flag = hedge_getting_hostile_on_province
+            }
+            3 = { #getting special event (and conversion process)
+                trigger = { ## as quest for friendly conversion is not done, can't be choosen for friendly case
+                    NOT = { has_province_modifier = hedge_hedgehog_inhabitant }
+                    holder_scope = { war = no }
+                }
+                mult_modifier = {
+                    factor = 4
+                    has_province_modifier = hedge_hedgehog_hostile_inhabitant
+                    has_fort = no
+                }
+                set_province_flag = hedge_hedgehog_special_event
+            }
+        }
+    }
+
+    desc = {
+        trigger = {
+            has_province_flag = hedge_end_of_province_hedgehog
+
+            has_fort = no
+            NOT = { has_province_modifier = hedge_hedgehog_hostile_inhabitant }
+        }
+        text = DESC1_EVENT062_END_OF_HEDGEHOG_IN_PROVINCE
+    }
+    desc = {
+        trigger = {
+            has_province_flag = hedge_end_of_province_hedgehog
+            holder_scope = { culture_group = hedgehog_group }
+        }
+        text = DESC1BIS_EVENT062_HEDGEHOG_ALREADY_LIVE_HERE
+    }
+    desc = {
+        trigger = {
+            has_province_flag = hedge_getting_friendship_on_province
+        }
+        text = DESC2_EVENT062_HEDGE_BECOME_FRIENDLY
+    }
+    desc = {
+        trigger = {
+            has_province_flag = hedge_getting_normal_inhabitant
+            has_province_modifier = hedge_hedgehog_hostile_inhabitant
+        }
+        text = DESC3A_EVENT062_HEDGE_GOES_AWAY #take some time to came back (even if it can be immediatly triggered in decision rule)
+    }
+    desc = {
+        trigger = {
+            has_province_flag = hedge_getting_normal_inhabitant
+            has_province_modifier = hedge_hedgehog_friendly_inhabitant
+        }
+        text = DESC3B_EVENT062_HEDGE_STOP_FRIENDSHIP #become normal; neither hostile nor friendly
+    }
+    desc = {
+        trigger = {
+            has_province_flag = hedge_getting_hostile_on_province
+        }
+        text = DESC4_EVENT062_HEDGE_BECOME_HOSTILE
+    }
+    desc = {
+        trigger = {
+            has_province_flag = hedge_hedgehog_special_event
+            has_province_modifier = hedge_hedgehog_hostile_inhabitant
+        }
+        text = DESC5A_EVENT062_ITS_A_WAR
+    }
+    desc = {
+        trigger = {
+            has_province_flag = hedge_hedgehog_special_event
+            has_province_modifier = hedge_hedgehog_friendly_inhabitant
+        }
+        text = DESC5B_EVENT062_ITS_A_FRIENDSHIP
+    }
+
+    option = {
+        name = {
+            trigger = {
+                has_province_flag = hedge_end_of_province_hedgehog
+            }
+            text = OPTA_EVENT062_HEDGEHOGG_GOES_AWAY
+        }
+        name = {
+            trigger = {
+                has_province_flag = hedge_getting_friendship_on_province
+            }
+            text = OPTB_EVENT062_BECOME_FRIENDLY
+        }
+        name = {
+            trigger = {
+                has_province_flag = hedge_getting_normal_inhabitant
+                has_province_modifier = hedge_hedgehog_hostile_inhabitant
+            }
+            text = OPTC1_EVENT062_GOES_AWAY_HOSTILITY
+        }
+        name = {
+            trigger = {
+                has_province_flag = hedge_getting_normal_inhabitant
+                has_province_modifier = hedge_hedgehog_friendly_inhabitant
+            }
+            text = OPTC2_EVENT062_GOES_AWAY_FRIENDSHIP
+        }
+        name = {
+            trigger = {
+                has_province_flag = hedge_getting_hostile_on_province
+            }
+            text = OPTD_EVENT062_GOING_INTO_HOSTILITY
+        }
+        name = {
+            trigger = {
+                has_province_flag = hedge_hedgehog_special_event
+                has_province_modifier = hedge_hedgehog_hostile_inhabitant
+            }
+            text = OPTE1_EVENT062_WAR_DECLARATION
+        }
+        name = {
+            trigger = {
+                has_province_flag = hedge_hedgehog_special_event
+                has_province_modifier = hedge_hedgehog_friendly_inhabitant
+            }
+            text = OPTE2_EVENT062_CHILD_GET_HEDGE_FRIEND
+        }
+
+
+        if = { # quit province
+            limit = {
+                has_province_flag = hedge_end_of_province_hedgehog
+            }
+            clr_province_flag = hedge_end_of_province_hedgehog
+            custom_tooltip = {
+                text = HEDGEHOG_QUIT_PROVINCE
+                remove_province_modifier = hedge_hedgehog_inhabitant
+                remove_province_modifier = hedge_hedgehog_friendly_inhabitant
+                remove_province_modifier = hedge_hedgehog_hostile_inhabitant
+            }
+        }
+        else_if = { # getting friendly
+            limit = {
+                has_province_flag = hedge_getting_friendship_on_province
+            }
+            clr_province_flag = hedge_getting_friendship_on_province
+            remove_province_modifier = hedge_hedgehog_inhabitant
+            add_province_modifier = {
+                name = hedge_hedgehog_friendly_inhabitant
+                duration = -1
+            }
+        }
+        else_if = {#loosing friendly or hostility
+            limit = {
+                has_province_flag = hedge_getting_normal_inhabitant
+            }
+            clr_province_flag = hedge_getting_normal_inhabitant
+            if = {
+                limit = {
+                    has_province_modifier = hedge_hedgehog_hostile_inhabitant
+                }
+                remove_province_modifier = hedge_hedgehog_hostile_inhabitant
+            }
+            else = {
+                remove_province_modifier = hedge_hedgehog_friendly_inhabitant
+                add_province_modifier = {
+                    name = hedge_hedgehog_inhabitant
+                    duration = -1
+                }
+            }
+        }
+        else_if = { #becoming hostile
+            limit = {
+                has_province_flag = hedge_getting_hostile_on_province
+            }
+            clr_province_flag = hedge_getting_hostile_on_province
+            remove_province_modifier = hedge_hedgehog_inhabitant
+            add_province_modifier = {
+                name = hedge_hedgehog_hostile_inhabitant
+                duration = -1
+            }
+        }
+        else_if = { ##special event flag: in hostility relation
+            limit = {
+                has_province_modifier = hedge_hedgehog_hostile_inhabitant
+            }
+            clr_province_flag = hedge_hedgehog_special_event
+            hidden_tooltip = {
+                if = {
+                    limit = {
+                        terrain = desert
+                    }
+                    create_character = {
+                        min_age = 16
+                        max_age = 26
+                        random_traits = yes
+                        female = no
+                        culture = hedgehog_desert
+                        dynasty = none
+                    }
+                }
+                else = {
+                    create_character = {
+                        min_age = 16
+                        max_age = 26
+                        random_traits = yes
+                        female = no
+                        culture = hedgehog_culture
+                        dynasty = none
+                    }
+                }
+                holder_scope = {
+                    new_character = {
+                        create_title = {
+                            tier = DUKE
+                            landless = yes
+                            temporary = yes
+                            rebel = yes
+                            holder = new_character
+                        }
+                        spawn_unit = {
+                            province = ROOT
+                            home = ROOT
+                            owner = new_character
+                            leader = none
+                            troops = {
+                                light_infantry = { 500 500 }
+                                pikemen = { 1500 1500 }
+                            }
+                            earmark = hedge_hostility_revolt_army
+                            # disband_on_peace = yes
+                            attrition = 0.25
+                            reinforces = yes
+                            reinforce_rate_multiplier = 0.08
+                            maintenance = no
+                            # cannot_inherit = yes
+                        }
+                    }
+                    if = {
+                        limit = {
+                            independent = no
+                        }
+                        liege = {
+                            new_character = {
+                                set_defacto_liege = PREV
+                            }
+                        }
+                    }
+                    any_realm_province = {
+                        limit = {
+                            OR = {
+                                has_province_modifier = hedge_hedgehog_inhabitant
+                                has_province_modifier = hedge_hedgehog_hostile_inhabitant
+                            }
+                            NOT = { province = ROOT }
+                        }
+                        new_character = {
+                            spawn_unit = {
+                                province = PREV
+                                home = PREV
+                                owner = new_character
+                                leader = none
+                                troops = {
+                                    # light_infantry = { 0 2000 }
+                                    pikemen = { 750 750 }
+                                }
+                                earmark = hedge_hostility_revolt_army_ally
+                                disband_on_peace = yes
+                                attrition = 0.2
+                                reinforces = yes
+                                reinforce_rate_multiplier = 0.5
+                                maintenance = no
+                            }
+                        }
+                        set_province_flag = hedge_in_hostility_war_allies
+                    }
+                    new_character = {
+                        war = {
+                            target = PREV
+                            casus_belli = hedgehog_hostility_province_war
+                            thirdparty_title = ROOT
+                        }
+                    }
+                }
+            }
+        }
+        else = { ##special event_flag: in frienship relation
+            clr_province_flag = hedge_hedgehog_special_event
+            add_province_modifier = {
+                name = hedge_province_frind_with_hedgehog
+                hidden = yes
+                years = 5
+            }
+            any_province_character = {
+                limit = {
+                        is_adult = no
+                        NOT = { culture_group = hedgehog_group }
+                }
+                add_character_modifier = {
+                    name = hedge_friendship_relation_with_hedgehog
+                    years = 5
+                }
+            }
+        }
+    }
+}
+
+#conversion via hostility imprisonment decision
+character_event = {
+    id = ani_plus.063
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    is_triggered_only = yes
+
+    desc = DESC_EVENT063_GETTING_USURPED
+
+    option = {
+        name = OPT1_EVENT063_I_CAN_DO_NOTHING
+    }
+    option = {
+        trigger = {
+            NOT = { FROMFROM = { ai = no } }
+            ai = no
+        }
+        name = OPT2_EVENT063_I_CAN_HAVE_THAT_POWER
+        set_player_character = FROMFROM
+    }
+    after = {
+        abdicate_to = FROMFROM
+        hidden_tooltip = {
+            any_child_even_if_dead = {
+                if = {
+                    limit = {
+                        ROOT = { is_female =  no }
+                    }
+                    set_father = FROMFROM
+                }
+                else = {
+                    set_mother = FROMFROM
+                }
+                dynasty = FROMFROM
+                any_child_even_if_dead = {
+                    dynasty = FROMFROM
+                }
+                if = {
+                    limit = {
+                        is_adult = no
+                    }
+                    culture = FROMFROM
+                }
+                character_event = { id = ani_plus.075 } #to correct every dynasties problems
+            }
+        }
+        death = {
+            death_reason = death_vanished
+        }
+    }
+}
+
+#conversion via friendship relation (modifier "friendship_relation" or bing friend, tutor or pupil with a hedgehog)
+character_event = {
+    id = ani_plus.064
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    max_age = 46
+
+    trigger = {
+        OR = {
+            has_character_modifier = hedge_friendship_relation_with_hedgehog
+            any_friend = {
+                culture_group = hedgehog_group
+            }
+            any_pupil = {
+                culture_group = hedgehog_group
+            }
+            guardian = {
+                culture_group = hedgehog_group
+            }
+        }
+        NOT = { Is_really_animal_trigger = yes }
+    }
+    mean_time_to_happen = {
+        years = 3
+
+        modifier = {
+            factor = 2 # 6 years
+            is_adult = yes
+        }
+        modifier = {
+            factor = 1.7 # 10 years
+            age = 25
+        }
+        modifier = {
+            factor = 3 # 30 years
+            age = 35
+        }
+        modifier = {
+            factor = 0.3
+            any_pupil = {
+                culture_group = hedgehog_group
+            }
+        }
+    }
+    desc = DESC_EVENT064_HEDGE_ASK_TO_USURP_IDENTITY
+    option = {
+        name = OPT1_EVENT064_I_SHALL_BECOME_ONE
+
+        if = {
+            limit = {
+                location = {
+                    OR = {
+                        terrain = desert
+                        terrain = steppe
+                        terrain = marsh
+                        terrain = woods
+                        terrain = arctic
+                    }
+                }
+            }
+            culture = hedgehog_desert
+        }
+        else = {
+            culture = hedgehog_culture
+        }
+        if = {
+            limit = {
+                is_adult = yes
+            }
+            if = {
+                limit = {
+                    age = 22
+                }
+                add_age = -6
+            }
+            else_if = {
+                limit = {
+                    age = 19
+                }
+                add_age = -3
+            }
+        }
+
+        ai_chance = {
+            factor = 50
+            modifier = {
+                factor = 0.2
+                age = 40
+            }
+            modifier = {
+                factor = 2
+                liege = { culture_group = hedgehog_group }
+            }
+        }
+    }
+    option = {
+        name = OPT2_EVENT064_I_STAY_HUMAN
+
+        ai_chance = {
+            factor = 20
+            modifier = {
+                factor = 0
+                is_adult = no
+            }
+            modifier = {
+                factor = 2.5
+                age >= 30
+            }
+            modifier = {
+                factor = 1.5
+                ai_honor = 20
+            }
+            modifier = {
+                factor = 2.5
+                ai_rationality = 21
+            }
+        }
+    }
+}
+
+province_event = {
+    id = ani_plus.065
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    is_triggered_only = yes
+
+    desc = DESC_EVENT065_CULTURAL_CONVERSION_FINISED
+
+    option = {
+        name = OPT_EVENT065_OKAY
+
+        culture = FROMFROM
+    }
+}
+
+#looted hedgehog provinces
+character_event = {
+    id = ani_plus.066
+
+    hide_window = yes # since it is on the looting side
+    is_triggered_only = yes
+
+    trigger = {
+        location = { culture_group = hedgehog_group }
+    }
+
+    immediate = {
+        FROM = {
+            if = {
+                limit = {
+                    is_capital = yes
+                }
+                location = {
+                    province_event = {
+                        id = ani_plus.067  #for notification only
+                    }
+                }
+            }
+            else = {
+                add_holding_modifier = {
+                    name = hedgehog_loot_settlement_modifier
+                    years = 3
+                }
+            }
+        }
+    }
+}
+#modifier notification
+province_event = {
+    id = ani_plus.067
+
+    is_triggered_only = yes
+
+    border = GFX_event_normal_frame_diplomacy
+	picture = GFX_evt_council
+    desc = DESC_EVENT067_NOTIF_SETTLEMENT_LOOTED
+
+    option = {
+        name = OPT_EVENT067_GET_MALUS
+        capital_holding = {
+            add_holding_modifier = {
+                name = hedgehog_loot_settlement_modifier
+                years = 3
+            }
+        }
+    }
+}
+
+#war siege lost hedgehog province
+character_event = {
+    id = ani_plus.068
+
+    hide_window = yes # since it is on the looting side
+    is_triggered_only = yes
+
+    trigger = {
+        FROM = {
+            location = {
+                culture_group = hedgehog_group
+            }
+        }
+    }
+
+    immediate = {
+        FROM = {
+            if = {
+                limit = {
+                    is_capital = yes
+                    holder_scope = {
+                        NOT = { government = Hedge_feudal_gov }
+                    }
+                }
+                location = {
+                    add_province_modifier = {
+                        name = hedgehog_siege_lost_province_modifier
+                        years = 5
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    is_capital = yes
+                }
+                location = {
+                    province_event = {
+                        id = ani_plus.069  #for notification only
+                    }
+                }
+            }
+            else = {
+                add_holding_modifier = {
+                    name = hedgehog_siege_lost_settlment_modifier
+                    years = 3
+                }
+            }
+        }
+    }
+}
+#modifier notification
+province_event = {
+    id = ani_plus.069
+
+    is_triggered_only = yes
+
+    border = GFX_event_normal_frame_diplomacy
+	picture = GFX_evt_council
+    desc = DESC_EVENT069_NOTIF_SETTLEMENT_SIEGED
+
+    option = {
+        name = OPT_EVENT069_GET_MALUS
+        capital_holding = {
+            add_holding_modifier = {
+                name = hedgehog_siege_lost_settlment_modifier
+                years = 3
+            }
+        }
+    }
+}
+
+#new holy order notification
+narrative_event = {
+    id = ani_plus.070
+
+    is_triggered_only = yes
+
+    border = GFX_event_narrative_frame_war
+    picture = GFX_evt_garden
+    title = TITLE_EVENT070_HOLY_ORDER_CREATED
+    desc = DESC_EVENT070_ANIMAL_HOLY_ORDER_CREATED
+
+    option = {
+        name = {
+            trigger = {
+                religion = FROM
+            }
+            text = OPT1_DESC070_GET_NEW_ALLIES
+        }
+        name = {
+            trigger = {
+                NOT = { religion = FROM }
+            }
+            text = OPT2_EVENT070_INFIDEL_TO_DESTROY
+        }
+    }
+}
+
+##old holy order event removed
+
+
+#animals getting chased
+province_event = {
+    id = ani_plus.072
+
+    is_triggered_only = yes
+
+    hide_window = yes
+
+    trigger = {
+        has_province_modifier = hedgehog_inhabitant_extermination
+        Is_really_animal_trigger = yes
+        holder_scope = { Is_really_animal_trigger = no }
+        event_target:animal_exterminator = { Is_really_animal_trigger = no }
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                event_target:animal_exterminator = {
+                    war = no
+                }
+            }
+            event_target:animal_exterminator = {
+                character_event = { id = ani_plus.073 } # notification
+            }
+        }
+        else = { # can't convert province
+            event_target:animal_exterminator = {
+                prestige = -100
+                wealth = -50
+            }
+            province_event = { id = ani_plus.072 months = 1 }
+        }
+    }
+}
+
+character_event = {
+    id = ani_plus.073
+
+    is_triggered_only = yes
+    border = GFX_event_normal_frame_diplomacy
+	picture = GFX_evt_council
+    desc = DESC_EVENT073_PROVINCE_JUST_FINISHED_CULTURE_CONV
+
+    option = {
+        name = OPT_EVENT073_PROVINCE_HUMAN_CONVERTED
+
+        FROM = {
+            remove_province_modifier = hedgehog_inhabitant_extermination
+            culture = ROOT
+            religion = ROOT
+            add_province_modifier = {
+                name = recent_hedge_depopulation
+                years = 2
+            }
+        }
+    }
+}
+
+###special event: getting cultural lifestyle trait
+character_event = {
+    id = ani_plus.074
+
+    min_age = 16
+	capable_only = yes
+    prisoner = no
+    only_playable = yes
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    trigger = {
+        Is_really_animal_trigger = yes
+        NOT = { Is_animal_trigger = yes }
+        lifestyle_traits == 0
+    }
+    mean_time_to_happen = {
+        years = 14
+    }
+
+    desc = DESC_EVENT074_GETTING_LIFESTYLE_TRAIT
+
+    option = {
+        name = {
+            trigger = { culture_group = bear_group }
+            text = OPTA_EVENT074_GETTING_BEAR_TRAIT
+        }
+        name = {
+            trigger = { culture_group = hedgehog_group }
+            text = OPTB_EVENT074_GETTING_HEDGE_TRAIT
+        }
+        name = {
+            trigger = { culture_group = panda_group }
+            text = OPTC_EVENT074_GETTING_PANDA_TRAIT
+        }
+        name = {
+            trigger = { culture_group = duck_group }
+            text = OPTD_EVENT074_GETTING_DUCK_TRAIT
+        }
+        name = {
+            trigger = { culture_group = elephant_group }
+            text = OPTE_EVENT074_GETTING_ELEPH_TRAIT
+        }
+
+
+        if = {
+            limit = { culture_group = bear_group }
+            add_trait = mystic
+        }
+        else_if = {
+            limit = { culture_group = hedgehog_group}
+            add_trait = architect
+        }
+        else_if = {
+            limit = { culture_group = panda_group }
+            add_trait = hedonist
+        }
+        else_if = {
+            limit = { culture_group = duck_group }
+            add_trait = administrator
+        }
+        else_if = {
+            limit = { culture_group = elephant_group }
+            add_trait = scholar
+        }
+    }
+}
+
+#correcting dynasties problems in hedgehog hotility conversion mod
+character_event = {
+    id = ani_plus.075
+    is_triggered_only = yes
+    hide_window = yes
+
+    immediate = {
+        any_child_even_if_dead = {
+            dynasty = ROOT
+            any_child_even_if_dead = {
+                dynasty = ROOT
+            }
+            character_event = { id = ani_plus.075 } #to correct every dynasties problems
+        }
+    }
+}
+
+#removing war modifier (put by event 43)
+# had to put it 1 day late because event is called before the war end
+character_event = {
+    id = ani_plus.076
+    is_triggered_only = yes
+    hide_window = yes
+
+    immediate = {
+        ROOT = {
+            if = {
+                limit = {
+                    government = Hedge_feudal_gov
+                }
+                character_event = { id = ani_plus.077 days = 1 }
+            }
+        }
+        FROM = {
+            if = {
+                limit = {
+                    government = Hedge_feudal_gov
+                }
+                character_event = { id = ani_plus.077 days = 1 }
+            }
+        }
+    }
+}
+character_event = {
+    id = ani_plus.077
+    is_triggered_only = yes
+    hide_window = yes
+
+    immediate = {
+        if = {
+            limit = {
+                is_primary_war_attacker = no
+            }
+            remove_character_modifier = Animal_theocratic_civil_offensive_war
+            remove_character_modifier = Animal_theocratic_offensive_war
+        }
+        if = {
+            limit = {
+                is_primary_war_defender = no
+            }
+            remove_character_modifier = Animal_theocratic_defensive_war
+        }
+    }
+}

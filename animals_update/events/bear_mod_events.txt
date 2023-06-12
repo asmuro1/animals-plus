@@ -1,0 +1,4362 @@
+namespace = ani_plus
+
+###### bear update and associated events
+### event 001 - 060
+
+# event 001 to 007 are beta version adaptation
+
+##hibernation event (bear only)
+character_event = {
+    id = ani_plus.001
+
+    desc = HIBERNATION_EVENT_001_DESC
+    border = GFX_event_normal_frame_diplomacy
+	picture = GFX_evt_council
+
+    only_playable = yes
+    culture_group = bear_group
+    trigger = {
+        is_adult = yes
+        is_pregnant = no
+        NAND = { #not in summer
+            month >= 4
+            month < 11
+        }
+        NOT =  { trait = hibernation }
+    }
+    mean_time_to_happen = {
+        years = 10 # as nobles bears, they need less than 1 hibernation per year
+
+        modifier = {
+            factor = 0.3 #more chance to hibernate in winter
+
+            month <= 3
+        }
+        modifier = {
+            factor = 3
+
+            trait = bear_hibernation_immortality
+        }
+    }
+
+    option = {
+        name = HIBERNATION_EVENT_001_OPT_1
+
+        add_trait = hibernation
+        character_event = { id = ani_plus.002 months = 3 }
+        hidden_tooltip = { #special hibernation event
+            random = {
+                chance = 5
+
+                mult_modifier = {
+                    factor = 8
+
+                    government = Bear_feudal_gov
+                }
+                mult_modifier = {
+                    factor = 10
+
+                    trait = bear_hibernation_immortality
+                }
+
+                character_event = { id = ani_plus.039  days = 15 random = 50 }
+            }
+        }
+    }
+}
+
+character_event = {
+    id = ani_plus.002
+
+    is_triggered_only = yes
+    desc = HIBERNATION_EVENT_002_DESC
+    border = GFX_event_normal_frame_diplomacy
+	picture = GFX_evt_council
+
+    option = {
+        name = OPT_GOOD
+
+        remove_trait = hibernation
+    }
+}
+
+##family event
+#set bears children bonuses
+character_event = {
+    id = ani_plus.003
+
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        if = {
+            limit = {
+                culture_group = bear_group
+            }
+            evaluate_number_child_bear_effect = yes
+        }
+        father = {
+            if = {
+                limit = {
+                    culture_group = bear_group
+                }
+                evaluate_number_child_bear_effect = yes
+            }
+        }
+        mother = {
+            if = {
+                limit = {
+                    culture_group = bear_group
+                }
+                evaluate_number_child_bear_effect = yes
+            }
+        }
+    }
+}
+
+##on_action event
+
+#culture change: remove old animal modifier
+character_event = {
+    id = ani_plus.004
+
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        remove_character_modifier = bear_child_0_3
+        remove_character_modifier = bear_child_4_6
+        remove_character_modifier = bear_child_7_9
+        remove_character_modifier = bear_child_10_12
+        remove_character_modifier = bear_child_13_15
+        remove_character_modifier = bear_child_16_plus
+    }
+}
+
+#put new animal cultural modifier and animal appearance
+character_event = {
+    id = ani_plus.005
+
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        Is_really_animal_trigger = yes
+    }
+
+    immediate = {
+
+        if = {
+            limit = {
+                culture = horse
+            }
+            set_graphical_culture = horse
+        }
+        else_if = {
+            limit = {
+                culture = cat
+            }
+            set_graphical_culture = cat
+        }
+        else_if = {
+            limit = {
+                culture_group = bear_group
+            }
+
+            if = {
+                limit = {
+                    culture = white_bear
+                }
+                set_graphical_culture = white_bear
+                if = {
+                    limit = {
+                        c_nordlendingafjordungur = {
+                            has_title_flag = reinforced_white_bear
+                        }
+                    }
+                    add_character_modifier = {
+                        name = white_bear_religious_modifier
+                        duration = -1
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    culture = brown_bear
+                }
+                set_graphical_culture = brown_bear
+                if = {
+                    limit = {
+                        c_sortavala = {
+                            has_title_flag = reinforced_brown_bear
+                        }
+                    }
+                    add_character_modifier = {
+                        name = brown_bear_religious_modifier
+                        duration = -1
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    culture = black_bear
+                }
+                set_graphical_culture = black_bear
+                if = {
+                    limit = {
+                        c_pinsk = {
+                            has_title_flag = reinforced_black_bear
+                        }
+                    }
+                    add_character_modifier = {
+                        name = black_bear_religious_modifier
+                        duration = -1
+                    }
+                }
+            }
+            evaluate_number_child_bear_effect = yes
+        }
+        else_if = {
+            limit = {
+                culture = duck_culture
+            }
+            set_graphical_culture = duck_culture
+        }
+        else_if = {
+            limit = {
+                culture = dog_culture
+            }
+            set_graphical_culture = dog_culture
+        }
+        else_if = {
+            limit = {
+                culture_group = elephant_group
+            }
+            if = {
+                limit = {
+                    culture = elephant_culture
+                }
+                set_graphical_culture = elephant_culture
+            }
+            else = {
+                set_graphical_culture = african_elephant
+            }
+        }
+        else_if = {
+            limit = {
+                culture = dragon_culture
+            }
+            set_graphical_culture = dragon_culture
+        }
+        else_if = {
+            limit = {
+                culture_group = hedgehog_group
+            }
+            if = {
+                limit = {
+                    culture = hedgehog_culture
+                }
+                set_graphical_culture = hedgehog_culture
+            }
+            else = {
+                set_graphical_culture = hedgehog_desert
+            }
+        }
+        else = {
+            # limit = {
+            #     culture_group = panda_group
+            # }
+            if = {
+                limit = {
+                    culture = red_panda
+                }
+                set_graphical_culture = red_panda
+            }
+            else = {
+                # limit = {
+                #     culture = giant_panda
+                # }
+                set_graphical_culture = giant_panda
+            }
+        }
+    }
+}
+
+#animal birth event: bear and panda multiple child per birth + setting newly born bear maluses
+character_event = {
+    id = ani_plus.006
+
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        OR = {
+            culture_group = bear_group
+            culture_group = panda_group
+        }
+    }
+    immediate = {
+        set_character_flag = test_event_ROOT
+        random_list = {
+            20 = {
+                generate_newborn_sisbro_effect = yes
+                set_character_flag = one_more_sibling_animal
+            }
+            5 = {
+                trigger = {
+                    OR = {
+                        AND = {
+                            culture_group = bear_group
+                            NOT = { trait = twin }
+                        }
+                        culture_group = panda_group
+                    }
+                }
+                mult_modifier = {
+                    factor = 4
+
+                    culture_group = panda_group
+                }
+
+                generate_newborn_sisbro_effect = yes
+                generate_newborn_sisbro_effect = yes
+                set_character_flag = two_more_sibling_animal
+            }
+            10 = {
+                trigger = { culture_group = panda_group NOT = { trait = twin } }
+
+                generate_newborn_sisbro_effect = yes
+                generate_newborn_sisbro_effect = yes
+                generate_newborn_sisbro_effect = yes
+                set_character_flag = three_more_sibling_animal
+            }
+            5 = {
+                trigger = {
+                    culture_group = panda_group
+                    NOT = { trait = twin }
+                }
+
+                generate_newborn_sisbro_effect = yes
+                generate_newborn_sisbro_effect = yes
+                generate_newborn_sisbro_effect = yes
+                generate_newborn_sisbro_effect = yes
+                set_character_flag = four_more_sibling_animal
+            }
+        }
+
+        father = { save_event_target_as = child_spawn_father }
+        real_father_even_if_dead = { save_event_target_as = child_spawn_real_father }
+        mother = { save_event_target_as = child_spawn_mother }
+
+        any_courtier = {
+            limit = {
+                has_character_flag = spawned_newborn
+            }
+            clr_character_flag = spawned_newborn
+
+            set_father = event_target:child_spawn_father
+            set_real_father = event_target:child_spawn_real_father
+            set_mother = event_target:child_spawn_mother
+
+            character_event = { id = ani_plus.003 }
+        }
+    }
+    after = {
+        clear_event_target = child_spawn_father
+        clear_event_target = child_spawn_mother
+        clear_event_target = child_spawn_real_father
+        if = {
+            limit = {
+                mother = {
+                    ai = no
+                }
+            }
+            mother = { character_event = { id = ani_plus.007 } }
+        }
+        if = {
+            limit = {
+                father = {
+                    ai = no
+                }
+            }
+            father = { character_event = { id = ani_plus.007 } }
+        }
+    }
+}
+
+#notification for player in previous event
+character_event = {
+    id = ani_plus.007
+
+    is_triggered_only = yes
+    border = GFX_event_normal_frame_diplomacy
+	picture = GFX_evt_council
+    desc = {
+        trigger = {
+            FROM = {
+                has_character_flag = one_more_sibling_animal
+            }
+        }
+        text = MULTI_CHILD_EVENT_007_DESC_1
+    }
+    desc = {
+        trigger = {
+            FROM = {
+                has_character_flag = two_more_sibling_animal
+            }
+        }
+        text = MULTI_CHILD_EVENT_007_DESC_2
+    }
+    desc = {
+        trigger = {
+            FROM = {
+                has_character_flag = three_more_sibling_animal
+            }
+        }
+        text = MULTI_CHILD_EVENT_007_DESC_3
+    }
+    desc = {
+        trigger = {
+            FROM = {
+                has_character_flag = four_more_sibling_animal
+            }
+        }
+        text = MULTI_CHILD_EVENT_007_DESC_4
+    }
+
+    option = {
+        name = OPT_OKAY
+    }
+}
+
+
+##Conversion quest events
+#decision event: notification
+character_event = {
+    id = ani_plus.008
+
+    is_triggered_only = yes
+    border = GFX_event_normal_frame_diplomacy
+	picture = GFX_evt_council
+    desc = NOTIF_DEC_BEAR_CONV_EVENT_008_DESC
+
+    immediate = {
+        if = {
+            limit = {
+                any_demesne_province = {
+                    OR = {
+                        terrain = arctic
+                        terrain = mountain
+                        terrain = marsh
+                    }
+                    NOT = { has_province_modifier = Haze_cleared }
+                }
+            }
+            random_demesne_province = {
+                limit = {
+                    OR = {
+                        terrain = arctic
+                        terrain = mountain
+                        terrain = marsh
+                    }
+                    NOT = { has_province_modifier = Haze_cleared }
+                }
+                save_event_target_as = bear_haze_study_target
+            }
+        }
+        else = {
+            c_sortavala = {
+                location = {
+                    save_event_target_as = bear_haze_study_target
+                }
+            }
+        }
+    }
+    option = {
+        name = START_RESEARSH_EVENT_008_OPT_1
+
+        add_trait = travelling
+        hidden_tooltip = {
+            random_list = {
+                #studies goes well, first step
+                23 = { character_event = { id = ani_plus.009 months = 1 } }
+                #a beast appear
+                77 = { character_event = { id = ani_plus.012 months = 1 } }
+            }
+        }
+    }
+    option = {
+        name = STOP_RESEARCH_EVENT_008_OPT_2
+
+        force_end_bear_researsh_effect = yes
+
+    }
+}
+#event saying that we have a progress
+character_event = {
+    id = ani_plus.009
+
+    is_triggered_only = yes
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = RESEASH_GOES_WELL_EVENT_009_DESC
+
+    immediate = {
+        set_character_flag = animal_researsh_bear_advanced
+    }
+    option = {
+        name = STAY_PRUDENT_EVENT_009_OPT_1
+        hidden_tooltip = {
+            random_list = {
+                4 = { character_event = { id = ani_plus.010 months = 2 } }  #event ended
+                4 = { character_event = { id = ani_plus.012 months = 2 } }  #a beast appear
+                2 = { character_event = { id = ani_plus.011 months = 2 } }  #breath event
+            }
+        }
+    }
+    option = {
+        name =  ACCELERATE_ME_MYSTIC_EVENT_009_OPT_2
+        trigger = {
+            trait = mystic
+        }
+        hidden_tooltip = {
+            random_list = {
+                1 = { character_event = { id = ani_plus.010 days = 14 } }
+                3 = { character_event = { id = ani_plus.011 days = 7 } }
+                3 = { character_event = { id = ani_plus.012 days = 7 } }
+            }
+        }
+    }
+    option = {
+        name =  ACCELERATE_PHYSICIAN_MYSTIC_EVENT_009_OPT_3
+        trigger = {
+            any_courtier_or_vassal = {
+                has_minor_title = title_court_physician
+                liege = { character = ROOT }
+                trait = mystic
+            }
+        }
+        hidden_tooltip = {
+            random_list = {
+                2 = { character_event = { id = ani_plus.010 months = 1 } }
+                4 = { character_event = { id = ani_plus.011 months = 1 } }
+                3 = { character_event = { id = ani_plus.012 months = 1 } }
+            }
+        }
+    }
+}
+#Event to say that we ended our researsh and solved the problem
+character_event = {
+    id = ani_plus.010
+
+    is_triggered_only = yes
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = RESEARSH_END_SOLVED_EVENT_010_DESC
+
+    immediate = {
+        clr_character_flag = animal_researsh_bear_advanced
+    }
+
+    option = {
+        name = RESEARSH_END_SOLVED_EVENT_010_OPT
+
+        remove_trait = travelling
+        event_target:bear_haze_study_target = {
+            add_province_modifier = {
+                name = Haze_cleared
+                years = 10
+            }
+        }
+        clr_character_flag = Has_done_bear_animal_researsh
+    }
+}
+
+#event: haze appeared on you
+character_event = {
+    id = ani_plus.011
+
+    is_triggered_only = yes
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = BREATH_MAZE_EVENT_011_DESC
+
+    option = {
+        name = BREATH_MAZE_EVENT_011_OPT
+
+        hidden_tooltip = {
+            character_event = { id = ani_plus.010 days = 7 random = 28}
+            character_event = { id = ani_plus.017 months = 2 }
+        }
+    }
+}
+
+#Event: a "beast" appear and is hostile to our character
+character_event = {
+    id = ani_plus.012
+
+    is_triggered_only = yes
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = A_BEAST_APPEAR_EVENT_012_DESC
+
+    option = {
+        name = RUN_AWAY_EVENT_012_OPT_1
+        hidden_tooltip = {
+            random_list = {
+                33 = { #bear don'l let run away
+                    set_character_flag = Running_away_animal  # flag to change text in event in comparison to the same event in second option
+                    character_event = { id = ani_plus.013 days = 1 }
+                }
+                33 = { character_event = { id = ani_plus.014 days = 1 }}  #success: lost bear
+                33 = { character_event = { id = ani_plus.015 days = 1 }}  #being trapped into a cave while hoping it goes away
+            }
+        }
+    }
+    option = {
+        name = FIGHT_BEAST_EVENT_012_OPT_2
+
+        fight_beast_AM_effect = yes
+    }
+}
+
+#Event: gravely injured
+character_event = {
+    id = ani_plus.013
+
+    is_triggered_only = yes
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = {
+        trigger = {
+            has_character_flag = Running_away_animal
+        }
+        text = RUNNING_AXAY_FAILS_EVENT_013_DESC_1
+    }
+    desc = {
+        trigger = {
+            has_character_flag = Encountered_while_hiding
+        }
+        text = BEAST_FOUND_YOUR_HIDING_EVENT_013_DESC_3
+    }
+    desc = {
+        trigger = {
+            NOR = {
+                has_character_flag = Running_away_animal
+                has_character_flag = Encountered_while_hiding
+            }
+
+        }
+        text = FIGHT_AGAINST_MONSTER_FAILS_EVENT_013_DESC_2
+    }
+
+    option = {
+        name = WE_SHOULD_PREPARE_TO_THE_WORST_EVENT_013_OPT
+
+        force_end_bear_researsh_effect = yes
+
+
+        if = {
+            limit = {
+                any_courtier_or_vassal = {
+                    has_minor_title = title_court_physician
+                    liege = { character = ROOT }
+                }
+            }
+            random_list = {
+                1 = {
+                    random_courtier_or_vassal = {
+                        limit = {
+                            has_minor_title = title_court_physician
+                            liege = { character = ROOT }
+                        }
+                        death = {
+                            death_reason = death_accident_boar
+                        }
+                    }
+                    add_trait = infirm
+                    set_bear_cultural_flag_effect = yes
+                    character_event = { id = ani_plus.022 days = 7 random = 21 }
+                }
+                1 = {
+                    random_courtier_or_vassal = {
+                        limit = {
+                            has_minor_title = title_court_physician
+                            liege = { character = ROOT }
+                        }
+                        add_trait = infirm
+                        set_bear_cultural_flag_effect = yes
+                        character_event = { id = ani_plus.022 days = 7 random = 21 }
+                    }
+                    death = {
+                        death_reason = death_accident_boar
+                    }
+                }
+            }
+        }
+        else = {
+            death = {
+                death_reason = death_accident_boar
+            }
+        }
+    }
+
+    after = {
+        clr_character_flag = Running_away_animal
+        clr_character_flag = Encountered_while_hiding
+        clr_character_flag = Has_done_bear_animal_researsh
+    }
+}
+
+#Event: sucessfully run away
+character_event = {
+    id = ani_plus.014
+
+    is_triggered_only = yes
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = {
+        trigger = {
+            NOR = {
+                 has_character_flag = Choice_after_savior
+                 has_character_flag = BEAST_GOES_AWAY
+                 has_character_flag = EVENT_BEAR_BEATEN
+                 has_character_flag = character_hirted_by_beast
+             }
+
+        }
+        text = RAN_AWAY_SUCCESSFULLY_EVENT_014_DESC_1
+    }
+    desc = {
+        trigger = {
+            has_character_flag = Choice_after_savior
+        }
+        text = AFTER_SAVIOR_CHOICE_EVENT_014_DESC_2
+    }
+    desc = {
+        trigger = {
+            has_character_flag = BEAST_GOES_AWAY
+        }
+        text = BEAST_GOES_AWAY_EVENT_014_DESC_3
+    }
+    desc = {
+        trigger = {
+            has_character_flag = EVENT_BEAR_BEATEN
+        }
+        text = BEAST_BEATEN_EVENT_014_DESC_4
+    }
+    desc = {
+        trigger = {
+            has_character_flag = character_hirted_by_beast
+        }
+        text = BEAST_KILLED_AND_HURTED_EVENT_014_DESC_5
+    }
+
+    option = {
+        name = CONTINUE_RESEARSH_EVENT_014_OPT_1
+
+        continue_bear_conversion_effect = yes
+    }
+    option = {
+        name = GIVE_UP_EVENT_014_OPT_2
+
+        force_end_bear_researsh_effect = yes
+        clr_character_flag = Has_done_bear_animal_researsh
+    }
+
+    after = {
+        if = {
+            limit = {
+                has_character_flag = character_hirted_by_beast
+            }
+            set_bear_cultural_flag_effect = yes
+            character_event = { id = ani_plus.022  days = 7 random = 21}
+
+            clr_character_flag = character_hirted_by_beast
+        }
+        else = {
+            clr_character_flag = Choice_after_savior
+            clr_character_flag = BEAST_GOES_AWAY
+            clr_character_flag = EVENT_BEAR_BEATEN
+        }
+    }
+}
+
+#Event: escaped bear while hidding
+character_event = {
+    id = ani_plus.015
+
+    is_triggered_only = yes
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = RUN_AWAY_IN_HIDDING_EVENT_015_DESC
+
+    option = {
+        name = WAITING_EVENT_015_OPT_1
+
+        hidden_tooltip = {
+            random_list = {
+                10 = {  ##The beast found you
+                    set_character_flag = Encountered_while_hiding
+                    character_event = { id = ani_plus.013 days = 1 }
+                }
+                2  = { character_event = {id = ani_plus.016 days = 1 } } ## someone come to kill the beast
+                18 = { ## beast give up on you and goes away
+                    set_character_flag = BEAST_GOES_AWAY
+                    character_event = { id = ani_plus.014 days = 1 }
+                }
+            }
+        }
+    }
+    option = {
+        name = QUIT_HIDDING_AND_FIGHT_BEAST_EVENT_015_OPT_2
+
+        fight_beast_AM_effect = yes
+    }
+}
+
+#someone saved you from bear
+character_event = {
+    id = ani_plus.016
+
+    is_triggered_only = yes
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = SAVED_BY_HUMAN_EVENT_016_DESC
+
+    option = {
+        trigger = {
+            can_grant_title = title_commander
+        }
+        name = RECRUIT_SAVIOR_EVENT_016_OPT_1
+
+        create_character = {
+            min_age = 26
+            max_age = 36
+
+            attributes = { martial = 15 }
+            random_traits = yes
+            add_trait = hunter
+            female = no
+
+            flag = spawned_hunter_new_commander
+        }
+        any_courtier = {
+            limit = {
+                has_character_flag = spawned_hunter_new_commander
+            }
+            unsafe_give_minor_title = title_commander
+            clr_character_flag = spawned_hunter_new_commander
+        }
+        add_character_modifier = {
+            name = disappointed_commander_animal
+            years = 5
+        }
+    }
+    option = {
+        name = PAY_SAVIOR_EVENT_016_OPT_2
+
+        scaled_wealth = {
+            value = 0.4
+            min = 40
+            max = 250
+        }
+        add_character_modifier = {
+            name = savior_rewarded
+            years = 5
+        }
+    }
+    option = {
+        name = THANK_AND_IGNORE_EVENT_016_OPT_3
+        add_character_modifier = {
+            name = savior_ignored
+            years = 5
+        }
+    }
+    after = {
+        set_character_flag = Choice_after_savior
+        character_event = { id = ani_plus.014 }
+    }
+}
+
+
+### conversion event: if trigger has been done in quest
+#haze trigger: first symptom
+character_event = {
+    id = ani_plus.017
+
+    is_triggered_only = yes
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = FEELING_NAUSEOUS_EVENT_017_DESC
+
+    trigger = {
+        NOR = {
+            has_character_flag = animal_white_bear_transformation
+            has_character_flag = animal_black_bear_transformation
+            has_character_flag = animal_brown_bear_transformation
+            culture_group = bear_group
+        }
+    }
+
+    option = {
+        name = GO_SEARCH_REASON_EVENT_017_OPT
+        add_trait = malaise
+
+        character_event = { id = ani_plus.018 days = 1 random = 13 }
+    }
+}
+
+#haze trigger: care
+character_event = {
+    id = ani_plus.018
+
+    is_triggered_only = yes
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    desc = {
+        text = PHYSICIAN_FIRST_AIDE_EVENT_018_DESC_1
+        trigger = {
+            any_courtier_or_vassal = {
+                has_minor_title = title_court_physician
+                liege = { character = ROOT }
+            }
+        }
+    }
+    desc = {
+        text = CARE_WITHOUT_PHYSICIAN_EVENT_DESC_018_2
+        trigger = {
+            NOT = {
+                any_courtier_or_vassal = {
+                    has_minor_title = title_court_physician
+                    liege = { character = ROOT }
+                }
+            }
+        }
+    }
+
+    option = {
+        trigger = {
+            any_courtier_or_vassal = {
+                has_minor_title = title_court_physician
+                liege = { character = ROOT }
+                trait = mystic
+            }
+        }
+        name = GO_WITH_TREATMENT_EVENT_018_OPT_1
+        set_character_flag = animal_physician_treatment
+    }
+    option = {
+        name = {
+            text = IGNORE_PHYSICIAN_TREATMENT_EVENT_018_OPT_2
+            trigger = {
+                any_courtier_or_vassal = {
+                    has_minor_title = title_court_physician
+                    liege = { character = ROOT }
+                    trait = mystic
+                }
+            }
+        }
+        name = {
+            text = DO_WITH_WHAT_WE_CAN_EVENT_018_OPT_2_BIS
+            trigger = {
+                NOT = {
+                    any_courtier_or_vassal = {
+                        has_minor_title = title_court_physician
+                        liege = { character = ROOT }
+                        trait = mystic
+                    }
+                }
+            }
+        }
+        set_character_flag = animal_standard_treatment
+
+    }
+    after = {
+        add_trait = cough
+        character_event = { id = ani_plus.019 days = 1 random = 7 }
+    }
+}
+
+#haze trigger: symptoms transform themselfs into lunatic plus other events
+character_event = {
+    id = ani_plus.019
+
+    is_triggered_only = yes
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    desc = SYMPTOMS_GO_CRAZY_EVENT_019_DESC
+
+    option = {
+        name = {
+            text = PHYSICIAN_EFFECT_EVENT_019_OPT
+            trigger = { has_character_flag = animal_physician_treatment }
+        }
+        name = {
+            text = NO_BOOST_EFFECT_EVENT_019_OPT
+            trigger = { has_character_flag = animal_standard_treatment }
+        }
+
+        add_trait = lunatic
+        remove_trait = malaise
+        if = {
+            limit = {
+                has_character_flag = animal_physician_treatment
+            }
+            remove_trait = cough
+        }
+    }
+    after = {
+        character_event = { id = ani_plus.020 }
+    }
+}
+
+#haze triggeer: setting disease
+character_event = {
+    id = ani_plus.020
+
+    is_triggered_only = yes
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    desc = GETTING_ILL_EVENT_020_DESC
+
+    option = {
+        name = IT_WAS_OBVIOUS_EVENT_020_OPT
+        add_trait = human_bear_illness
+
+        character_event = { id = ani_plus.021 days = 45 random = 20 }
+    }
+}
+
+#haze trigger: Final event: getting bear culture
+character_event = {
+    id = ani_plus.021
+
+    is_triggered_only = yes
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    desc = BECOMMING_BEAR_EVENT_021_DESC
+
+    option = {
+        name = BECOMMING_BEAR_PRICE_021_OPT
+        random_list = {
+            6 = { #die because of disease
+                modifier = {
+                    factor = 10
+                    trait = cough
+                }
+                custom_tooltip = {
+                    text = dying_bear_conversion
+                    death = {
+                        death_reason = death_trait
+                    }
+                }
+            }
+            40 = { #change culture
+                hidden_tooltip = {
+                    remove_trait = cough
+                }
+                event_target:bear_haze_study_target = {
+                    if = {
+                        limit = {
+                            terrain = arctic
+                        }
+                        ROOT = { culture = white_bear }
+                    }
+                    else_if = {
+                        limit = {
+                            terrain = marsh
+                        }
+                        ROOT = { culture = black_bear }
+                    }
+                    else = {
+                        # limit = {
+                        #     OR = {
+                        #         terrain = mountain
+                        #         title = c_sortavala
+                        #     }
+                        # }
+                        ROOT = { culture = brown_bear }
+                    }
+                }
+                remove_trait = human_bear_illness
+                add_trait = human_bear
+            }
+        }
+    }
+}
+
+#Wound trigger or decision event: starting settings
+character_event = {
+    id = ani_plus.022
+
+    is_triggered_only = yes
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    desc = FIRST_SYMPTOMS_EVENT_022_DESC
+
+    trigger = {
+        NOT = { has_character_flag = wound_bear_culture_conversion }
+        NOT = { culture_group = bear_group }
+    }
+
+    option = {
+        name = GET_MALAISE_TRAIT_EVENT_022_OPT
+        propagation_bear_transformation_virus_effect = yes
+        add_trait = malaise
+
+        character_event = { id = ani_plus.023 days = 14 random = 7 }
+    }
+    after = {
+        set_character_flag = wound_bear_culture_conversion
+    }
+}
+
+#wound trigger: getting the illness trait
+character_event = {
+    id = ani_plus.023
+
+    is_triggered_only = yes
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    desc = GET_ILNESS_TRAIT_EVENT_023_DESC
+
+    option = {
+        name = GET_ILLNESS_EVENT_023_OPT
+
+        propagation_bear_transformation_virus_effect = yes
+        remove_trait = malaise
+        add_trait = human_bear_illness
+
+        character_event = { id = ani_plus.024 days = 7 random = 7 }
+    }
+}
+
+#wound trigger: getting bear appearance
+character_event = {
+    id = ani_plus.024
+
+    is_triggered_only = yes
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    desc = GETTING_BEAR_APPEARANCE_EVENT_024_DESC
+
+    immediate = {
+        if = {
+            limit = {
+                has_character_flag = animal_white_bear_transformation
+            }
+            set_graphical_culture = white_bear
+        }
+        else_if = {
+            limit = {
+                has_character_flag = animal_black_bear_transformation
+            }
+            set_graphical_culture = black_bear
+        }
+        else_if = {
+            limit = {
+                has_character_flag = animal_brown_bear_transformation
+            }
+            set_graphical_culture = brown_bear
+        }
+    }
+    option = {
+        name = TRANSFORMATION_EVENT_024_OPT
+
+        propagation_bear_transformation_virus_effect = yes
+
+        character_event = { id = ani_plus.025 days = 14 random = 7 }
+    }
+}
+
+#wound trigger: Getting bear culture
+character_event = {
+    id = ani_plus.025
+
+    is_triggered_only = yes
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    desc = GETTING_BEAR_CULTURE_025_DESC
+
+    option = {
+        name = WHY_BEAR_EVENT_025_OPT
+
+        if = {
+            limit = {
+                has_character_flag = animal_white_bear_transformation
+            }
+            culture = white_bear
+            clr_character_flag = animal_white_bear_transformation
+        }
+        else_if = {
+            limit = {
+                has_character_flag = animal_black_bear_transformation
+            }
+            culture = black_bear
+            clr_character_flag = animal_black_bear_transformation
+        }
+        else_if = {
+            limit = {
+                has_character_flag = animal_brown_bear_transformation
+            }
+            culture = brown_bear
+            clr_character_flag = animal_brown_bear_transformation
+        }
+        remove_trait = human_bear_illness
+    }
+}
+
+###event rule: launching quest event
+character_event = {
+    id = ani_plus.026
+
+    # is_triggered_only = yes
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    desc = LAUNCHING_QUEST_BEAR_CONVERSION_EVENT_026
+
+    only_playable = yes
+    trigger = {
+        has_game_rule = {
+            name = animals_conversion_ways
+            value = animal_events
+        }
+        any_demesne_province = {
+            OR = {
+                terrain = arctic
+                terrain = mountain
+                terrain = marsh
+                county = {
+                    is_holy_site = Bears_religion
+                }
+            }
+            NOT = { has_province_modifier = Haze_cleared }
+            NOT = { has_province_modifier = Haze_abadonned }
+        }
+        NOT = { Is_really_animal_trigger = yes }
+        NOT = {
+            had_character_flag = {
+                flag = Has_done_bear_animal_researsh
+                months <= 6
+            }
+        }
+        has_regent = no
+    }
+    mean_time_to_happen = {
+        years = 200
+
+        modifier = {
+            factor = 0.2
+            ai = no
+        }
+    }
+
+    option = {
+        name = TRY_RESEARCH_EVENT_026_OPT1
+
+        set_character_flag = Has_done_bear_animal_researsh
+        character_event = { id = ani_plus.008 }
+    }
+    option = {
+        name = REFUSING_RESEARCH_026_OPT2
+    }
+}
+
+### province conversion events: main transformation | trigger: epidemic
+province_event = {
+    id = ani_plus.027
+
+    trigger = {
+        OR = {
+            has_province_flag = white_flag_province_conversion
+            has_province_flag = black_flag_province_conversion
+            has_province_flag = brown_flag_province_conversion
+        }
+        NOT = { culture_group = bear_group }
+    }
+
+    is_triggered_only = yes
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    desc = {
+        trigger = {
+            NOR = {
+                has_province_modifier = bear_malaise
+                has_province_modifier = big_bear_malaise
+            }
+        }
+        text = STEP_1_CONVERSION_EVENT_027_DESC_1
+    }
+    desc = {
+        trigger = {
+            has_province_modifier = bear_malaise
+        }
+        text = STEP_2_CONVERSION_EVENT_027_DESC_2
+    }
+    desc = {
+        trigger = {
+            has_province_modifier = big_bear_malaise
+        }
+        text = FINAL_STEP_CONVERSION_EVENT_027_DESC_3
+    }
+
+    option = {
+        name = {
+            trigger = {
+                NOR = {
+                    has_province_modifier = bear_malaise
+                    has_province_modifier = big_bear_malaise
+                }
+            }
+            text = START_PROVINCE_CONVERSION_027_OPT
+        }
+        name = {
+            trigger = {
+                has_province_flag = bear_malaise
+            }
+            text = INCREASE_MALAISE_SENTIMENT_027_OPT
+        }
+        name = {
+            trigger = {
+                has_province_modifier = big_bear_malaise
+            }
+            text = BIG_INCREASE_MALAISE_SENTIMENT_027_OPT
+        }
+
+        any_neighbor_province = {
+            limit = {
+                has_owner = yes
+                has_not_bear_province_conversion_trigger = yes
+            }
+            random = {
+                chance = 5
+
+                if = {
+                    limit = { PREV = { has_province_flag = white_flag_province_conversion } }
+                    set_province_flag = white_flag_province_conversion
+                }
+                else_if = {
+                    limit = { PREV = { has_province_flag = black_flag_province_conversion } }
+                    set_province_flag = black_flag_province_conversion
+                }
+                else = {
+                    set_province_flag = brown_flag_province_conversion
+                }
+                province_event = { id = ani_plus.027 months = 2 random = 61 }
+            }
+        }
+        any_province_character = {
+            limit = {
+                NOR = {
+                    culture_group = bear_group
+                    has_character_flag = animal_white_bear_transformation
+                    has_character_flag = animal_black_bear_transformation
+                    has_character_flag = animal_brown_bear_transformation
+                }
+
+            }
+            random = {
+                chance = 20
+
+                if = {
+                    limit = { PREV = { has_province_flag = white_flag_province_conversion } }
+                    set_character_flag = animal_white_bear_transformation
+                }
+                else_if = {
+                    limit = { PREV = { has_province_flag = black_flag_province_conversion } }
+                    set_character_flag = animal_black_bear_transformation
+                }
+                else = {
+                    set_character_flag = animal_brown_bear_transformation
+                }
+                character_event = { id = ani_plus.022 days = 7 random = 21 }
+            }
+        }
+
+        if = {
+            limit = {
+                has_province_modifier = bear_malaise
+            }
+            remove_province_modifier = bear_malaise
+            add_province_modifier = {
+                name = big_bear_malaise
+                duration = -1
+            }
+            province_event = { id = ani_plus.027 days = 31 }
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = big_bear_malaise
+            }
+            remove_province_modifier = big_bear_malaise
+            add_province_modifier = {
+                name = giant_bear_malaise
+                months = 3
+            }
+
+            if = {
+                limit = {
+                    has_province_flag = white_flag_province_conversion
+                }
+                culture = white_bear
+            }
+            else_if = {
+                limit = {
+                    has_province_flag = black_flag_province_conversion
+                }
+                culture = black_bear
+            }
+            else = {
+                culture = brown_bear
+            }
+        }
+        else = {
+            add_province_modifier = {
+                name = bear_malaise
+                duration = -1
+            }
+            province_event = { id = ani_plus.027 days = 28 }
+        }
+    }
+}
+
+##second conversion way:
+#from bear -> implant_bear_clan
+#from human -> chase_bear_on_province
+province_event = {
+    id = ani_plus.028
+
+    trigger = {
+        OR = {
+            has_province_modifier = bear_province_attack
+            has_province_modifier = inhabitant_extermination
+        }
+    }
+
+    is_triggered_only = yes
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    desc = {
+        trigger = {
+            holder_scope = {war = yes}
+        }
+        text = STOP_PROVINCE_CONVERSION_EVENT_028_DESC_1
+    }
+    desc = {
+        trigger = {
+            has_province_modifier = bear_province_attack
+            holder_scope = {war = no}
+        }
+        text = CONFIRM_BEAR_COLONISASITION_EVENT_028_DESC_2
+    }
+    desc = {
+        trigger = {
+            has_province_modifier = inhabitant_extermination
+            holder_scope = {war = no}
+        }
+        text = CONFIRM_BEAR_EXTERMINATION_EVENT_028_DESC_3
+    }
+
+    option = {
+        trigger = {
+            holder_scope = { war = yes }
+        }
+        name =  START_AGAIN_EVENT_028_OPT
+
+    }
+    option = {
+        trigger = {
+            holder_scope = { war = no }
+        }
+        name = FINALLY_EVENT_028_OPT
+
+        holder_scope = {
+            ROOT = {
+                culture = PREV
+            }
+        }
+    }
+    after = {
+        if = {
+            limit = {
+                has_province_modifier = inhabitant_extermination
+            }
+            add_province_modifier = {
+                name = recent_bear_depopulation
+                years = 2
+            }
+        }
+    }
+}
+
+#construction major building from animal tower
+province_event = {
+    id = ani_plus.029
+
+    trigger = {
+        OR = {
+            has_province_flag = theodosian_wall_construction
+            has_province_flag = Ydragsil_construction
+            has_province_flag = golden_wall_construction
+            has_province_flag = animal_library_construction
+        }
+    }
+
+    is_triggered_only = yes
+    hide_window = yes
+
+    immediate = {
+        if = {
+            limit = {
+                OR = {
+                    holder_scope  = {
+                        Is_really_animal_trigger = yes
+                    }
+                    Is_really_animal_trigger = yes
+                }
+            }
+            clr_province_flag = theodosian_wall_construction
+            clr_province_flag = Ydragsil_construction
+            clr_province_flag = golden_wall_construction
+            clr_province_flag = animal_library_construction
+        }
+        else_if = {
+            limit = {
+                holder_scope = {
+                    war = yes
+                }
+                #On hold, nothing to do
+            }
+        }
+        else_if = {
+            limit = {
+                any_province_holding = {
+                    is_capital = yes
+                    has_building = ca_ani_castle_tower_9
+                }
+            }
+            any_province_holding = {
+                limit = {
+                    is_capital = yes
+                }
+                remove_building = ca_ani_castle_tower_9
+                remove_building = ca_ani_prest_4
+                remove_building = ca_ani_piety_4
+                remove_building = ca_ani_tech_4
+
+                remove_building = ca_horse_garrison_2
+                remove_building = ca_cat_armored_2
+                remove_building = ca_dog_garrison_2
+                remove_building = ca_dragon_archery_2
+                remove_building = ca_horse_speciality
+                remove_building = ca_cat_speciality
+                remove_building = ca_dog_speciality
+                remove_building = ca_dragon_speciality
+            }
+        }
+        else_if = {
+            limit = {
+                any_province_holding = {
+                    is_capital = yes
+                    has_building = ca_ani_castle_tower_8
+                }
+            }
+            any_province_holding = {
+                limit = {
+                    is_capital = yes
+                }
+                remove_building = ca_ani_castle_tower_8
+
+                remove_building = ca_horse_retinue_2
+                remove_building = ca_cat_retinue_2
+                remove_building = ca_dog_retinue_2
+                remove_building = ca_dragon_retinue_2
+                remove_building = ca_horse_garrison_1
+                remove_building = ca_cat_armored_1
+                remove_building = ca_dog_garrison_1
+                remove_building = ca_dragon_archery_1
+            }
+        }
+        else_if = {
+            limit = {
+                any_province_holding = {
+                    is_capital = yes
+                    has_building = ca_ani_castle_tower_7_bis
+                }
+            }
+            any_province_holding = {
+                limit = {
+                    is_capital = yes
+                }
+                remove_building = ca_ani_castle_tower_7_bis
+                remove_building = ca_ani_prest_3
+                remove_building = ca_ani_piety_3
+                remove_building = ca_ani_tech_3
+            }
+        }
+        else_if = {
+            limit = {
+                any_province_holding = {
+                    is_capital = yes
+                    has_building = ca_ani_castle_tower_7
+                }
+            }
+            any_province_holding = {
+                limit = {
+                    is_capital = yes
+                }
+                remove_building = ca_ani_castle_tower_7
+
+                remove_building = ca_cat_retinue_1
+                remove_building = ca_horse_retinue_1
+                remove_building = ca_dog_retinue_1
+                remove_building = ca_dragon_retinue_1
+            }
+        }
+        else_if = {
+            limit = {
+                any_province_holding = {
+                    is_capital = yes
+                    has_building = ca_ani_castle_tower_6_bis
+                }
+            }
+            any_province_holding = {
+                limit = {
+                    is_capital = yes
+                }
+                remove_building = ca_ani_castle_tower_6_bis
+                remove_building = ca_ani_trade_build_4
+                remove_building = ca_ani_build_cost_4
+                remove_building = ca_ani_desmene_4
+            }
+        }
+        else_if = {
+            limit = {
+                any_province_holding = {
+                    is_capital = yes
+                    has_building = ca_ani_castle_tower_6
+                }
+            }
+            any_province_holding = {
+                limit = {
+                    is_capital = yes
+                }
+                remove_building = ca_ani_castle_tower_6
+
+                remove_building = ca_cat_stable_2
+                remove_building = ca_horse_armor_2
+                remove_building = ca_dog_stable_2
+                remove_building = ca_dragon_stable_2
+            }
+        }
+        else_if = {
+            limit = {
+                any_province_holding = {
+                    is_capital = yes
+                    has_building = ca_ani_castle_tower_5_bis
+                }
+            }
+            any_province_holding = {
+                limit = {
+                    is_capital = yes
+                }
+                remove_building = ca_ani_castle_tower_5_bis
+                remove_building = ca_ani_fort_4
+                remove_building = ca_ani_siege_4
+                remove_building = ca_ani_garrison_4
+            }
+        }
+        else_if = {
+            limit = {
+                any_province_holding = {
+                    is_capital = yes
+                    has_building = ca_ani_castle_tower_5
+                }
+            }
+            any_province_holding = {
+                limit = {
+                    is_capital = yes
+                }
+                remove_building = ca_ani_castle_tower_5
+                remove_building = ca_ani_prest_2
+                remove_building = ca_ani_piety_2
+                remove_building = ca_ani_tech_2
+
+                remove_building = ca_horse_archer_3
+                remove_building = ca_cat_influence_3
+                remove_building = ca_dog_weapons_3
+                remove_building = ca_dragon_treasury_3
+                remove_building = ca_horse_armor_1
+                remove_building = ca_cat_stable_1
+                remove_building = ca_dragon_stable_1
+                remove_building = ca_dog_stable_1
+            }
+        }
+        else_if = {
+            limit = {
+                any_province_holding = {
+                    has_building = ca_ani_castle_tower_4_bis
+                    is_capital = yes
+                }
+            }
+            any_province_holding = {
+                limit = {
+                    is_capital = yes
+                }
+                remove_building = ca_ani_castle_tower_4_bis
+                remove_building = ca_ani_trade_build_3
+                remove_building = ca_ani_build_cost_3
+                remove_building = ca_ani_desmene_3
+            }
+        }
+        else_if = {
+            limit = {
+                any_province_holding = {
+                    has_building = ca_ani_castle_tower_4
+                    is_capital = yes
+                }
+            }
+            any_province_holding = {
+                limit = {
+                    is_capital = yes
+                }
+                remove_building = ca_ani_castle_tower_4
+
+                remove_building = ca_horse_archer_2
+                remove_building = ca_cat_influence_2
+                remove_building = ca_dog_weapons_2
+                remove_building = ca_dragon_treasury_2
+            }
+        }
+        else_if = {
+            limit = {
+                any_province_holding = {
+                    is_capital = yes
+                    has_building = ca_ani_castle_tower_3_bis
+                }
+            }
+            any_province_holding = {
+                limit = {
+                    is_capital = yes
+                }
+                remove_building = ca_ani_castle_tower_3_bis
+                remove_building = ca_ani_fort_3
+                remove_building = ca_ani_siege_3
+                remove_building = ca_ani_garrison_3
+            }
+        }
+        else_if = {
+            limit = {
+                any_province_holding = {
+                    has_building = ca_ani_castle_tower_3
+                    is_capital = yes
+                }
+            }
+            any_province_holding = {
+                limit = {
+                    is_capital = yes
+                }
+                remove_building = ca_ani_castle_tower_3
+                remove_building = ca_ani_trade_build_2
+                remove_building = ca_ani_build_cost_2
+                remove_building = ca_ani_desmene_2
+
+                remove_building = ca_horse_stable_3
+                remove_building = ca_cat_regiment_3
+                remove_building = ca_dragon_fortification_3
+                remove_building = ca_dog_infantery_3
+                remove_building = ca_horse_archer_1
+                remove_building = ca_cat_influence_1
+                remove_building = ca_dragon_treasury_1
+                remove_building = ca_dog_weapons_1
+            }
+        }
+        else_if = {
+            limit = {
+                any_province_holding = {
+                    is_capital = yes
+                    has_building = ca_ani_castle_tower_2_bis
+                }
+            }
+            any_province_holding = {
+                limit = {
+                    is_capital = yes
+                }
+                remove_building = ca_ani_castle_tower_2_bis
+                remove_building = ca_ani_prest_1
+                remove_building = ca_ani_piety_1
+                remove_building = ca_ani_tech_1
+            }
+        }
+        else_if = {
+            limit = {
+                any_province_holding = {
+                    is_capital = yes
+                    has_building = ca_ani_castle_tower_2
+                }
+            }
+            any_province_holding = {
+                limit = {
+                    is_capital = yes
+                }
+                remove_building = ca_ani_castle_tower_2
+                remove_building = ca_ani_fort_2
+                remove_building = ca_ani_siege_2
+                remove_building = ca_ani_garrison_2
+
+                remove_building = ca_horse_stable_2
+                remove_building = ca_cat_regiment_2
+                remove_building = ca_dragon_fortification_2
+                remove_building = ca_dog_infantery_2
+            }
+        }
+        else_if = {
+            limit = {
+                any_province_holding = {
+                    is_capital = yes
+                    has_building = ca_ani_castle_tower_1_bis
+                }
+            }
+            any_province_holding = {
+                limit = {
+                    is_capital = yes
+                }
+                remove_building = ca_ani_castle_tower_1_bis
+                remove_building = ca_ani_trade_build_1
+                remove_building = ca_ani_build_cost_1
+                remove_building = ca_ani_desmene_1
+            }
+        }
+        else_if = {
+            limit = {
+                any_province_holding = {
+                    is_capital = yes
+                    has_building = ca_ani_castle_tower_1
+                }
+            }
+            any_province_holding = {
+                limit = {
+                    is_capital = yes
+                }
+                remove_building = ca_ani_castle_tower_1
+                remove_building = ca_ani_fort_1
+                remove_building = ca_ani_siege_1
+                remove_building = ca_ani_garrison_1
+
+                remove_building = ca_horse_stable_1
+                remove_building = ca_cat_regiment_1
+                remove_building = ca_dragon_fortification_1
+                remove_building = ca_dog_infantery_1
+            }
+        }
+        else = {
+            province_event = { id = ani_plus.030 } #notification construction finished (event not implemented)
+        }
+        province_event = { id = ani_plus.029 months = 2 }
+    }
+}
+
+# province event 030: notification building finished
+province_event = {
+    id = ani_plus.030
+
+    trigger = {
+        OR = {
+            has_province_flag = theodosian_wall_construction
+            has_province_flag = Ydragsil_construction
+            has_province_flag = golden_wall_construction
+            has_province_flag = animal_library_construction
+        }
+    }
+
+    is_triggered_only = yes
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    desc = {
+        trigger = {
+            has_province_flag = theodosian_wall_construction
+        }
+        text = CONSTRUCTION_FINISHED_EVENT_030_DESC_1
+    }
+    desc = {
+        trigger = {
+            has_province_flag = Ydragsil_construction
+        }
+        text = CONSTRUCTION_FINISHED_EVENT_030_DESC_2
+    }
+    desc = {
+        trigger = {
+            has_province_flag = golden_wall_construction
+        }
+        text = CONSTRUCTION_FINISHED_EVENT_030_DESC_3
+    }
+    desc = {
+        trigger = {
+            has_province_flag = animal_library_construction
+        }
+        text = CONSTRUCTION_FINISHED_EVENT_030_DESC_4
+    }
+
+    option = {
+        name = CONSTRUCTION_FINISHED_EVENT_030_OPT
+
+        if = {
+            limit = {
+                has_province_flag = theodosian_wall_construction
+            }
+            clr_province_flag = theodosian_wall_construction
+            any_province_holding = {
+                limit = {
+                    is_capital = yes
+                }
+                add_building = ca_con_wall_6
+            }
+        }
+        else_if = {
+            limit = {
+                has_province_flag = Ydragsil_construction
+            }
+            clr_province_flag = Ydragsil_construction
+            any_province_holding = {
+                limit = {
+                    is_capital = yes
+                }
+                add_building = ca_con_ydragsil
+            }
+        }
+        else_if = {
+            limit = {
+                has_province_flag = golden_wall_construction
+            }
+            clr_province_flag = golden_wall_construction
+            any_province_holding = {
+                limit = {
+                    is_capital = yes
+                }
+                add_building = ca_con_golden
+            }
+        }
+        else_if = {
+            limit = {
+                has_province_flag = animal_library_construction
+            }
+            clr_province_flag = animal_library_construction
+            any_province_holding = {
+                limit = {
+                    is_capital = yes
+                }
+                add_building = ca_con_library
+            }
+        }
+    }
+}
+
+##destroying major buildong on siege event (not looting)
+character_event = {
+    id = ani_plus.031
+
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        FROM = {
+            OR = {
+                has_building = ca_con_golden
+                has_building = ca_con_library
+                has_building = ca_con_ydragsil
+                has_building = ca_con_wall_6
+            }
+        }
+    }
+
+    immediate = {
+        random = {
+            chance = 90
+            FROM = {
+                remove_building = ca_con_golden
+                remove_building = ca_con_library
+                remove_building = ca_con_wall_6
+                remove_building = ca_con_ydragsil
+            }
+        }
+    }
+}
+
+##succession tournament events
+#launching event quest
+character_event = {
+    id = ani_plus.032
+    is_triggered_only = yes
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = START_SUCCESSION_TOURNMENT_EVENT_032_DESC
+
+    option = {
+        name = LET_GET_STARTED_EVENT_032_OPT
+
+        any_courtier_or_vassal = {
+            limit = {
+                NOT = {
+                    is_child_of = PREV
+                }
+                culture_group = bear_group
+            }
+            opinion = {
+                who = PREV
+                modifier = bear_succession_invitation
+            }
+        }
+        any_child = {
+            limit = {
+                age = 6
+                Is_potential_child_succession_trigger = yes
+                NOT = { trait = succession_bear_heritage_looser }
+            }
+            set_character_flag = On_succession_bear_battle
+        }
+
+        character_event = { id = ani_plus.033 months = 1 random = 7 }
+    }
+}
+
+character_event = {
+    id = ani_plus.033
+    is_triggered_only = yes
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    desc = {
+        trigger = {
+            NOT = { #test if event has at least be launch once before
+                event_target:bear_tournament_fighter_one = {
+                    always = yes
+                }
+            }
+         }
+         text = STARTING_BATTLE_EVENT_034_DESC_1
+    }
+    desc = {
+        trigger = {
+            event_target:bear_tournament_fighter_two = {
+                trait = succession_bear_heritage_looser
+            }
+        }
+        text = FIGHTER_ONE_WON_PREV_BATTLE_EVENT_033_DESC_2
+    }
+    desc = {
+        trigger = {
+            event_target:bear_tournament_fighter_one = {
+                trait = succession_bear_heritage_looser
+            }
+        }
+        text = FIGHTER_TWO_WON_PREV_BATTLE_EVENT_033_DESC_2_bis
+    }
+
+    option = {
+        name = {
+            trigger = {
+                NOT = { #test if event has at least be launch once before
+                    event_target:bear_tournament_fighter_one = {
+                        always = yes
+                    }
+                }
+            }
+            text = START_EVENT_ANNOUNCMENT_EVENT_034_OPT
+        }
+        name = {
+            trigger = {
+                event_target:bear_tournament_fighter_one = {
+                    always = yes
+                }
+            }
+            text = WAITING_NEXT_FIGHT_EVENT_034_OPT
+        }
+
+
+        random_child = {
+            limit = {
+                # NOT = { trait = succession_bear_heritage_looser }
+                has_character_flag = On_succession_bear_battle
+            }
+            save_event_target_as = bear_tournament_fighter_one
+        }
+        random_child = {
+            limit = {
+                # NOT = { trait = succession_bear_heritage_looser }
+                has_character_flag = On_succession_bear_battle
+            }
+            preferred_limit = {
+                NOT = { character = event_target:bear_tournament_fighter_one }
+            }
+
+            if = {
+                limit = {
+                    character = event_target:bear_tournament_fighter_one
+                }
+                PREV = { set_character_flag = bear_tournament_finished }
+            }
+            else = {
+                save_event_target_as = bear_tournament_fighter_two
+            }
+        }
+        character_event = { id = ani_plus.034 }
+    }
+}
+
+character_event = {
+    id = ani_plus.034
+    is_triggered_only = yes
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+
+    desc = {
+        trigger = {
+            has_character_flag = bear_tournament_finished
+        }
+        text = WE_HAVE_A_WINNER_EVENT_034_DESC_1
+    }
+    desc = {
+        trigger = {
+            NOT = { has_character_flag = bear_tournament_finished }
+        }
+        text = FIGHT_BETWEEN_2_CANDIDATS_034_DESC_2
+    }
+
+    option = {
+        name = {
+            trigger = {
+                has_character_flag = bear_tournament_finished
+            }
+            text = CONGRATULATION_EVENT_034_OPT
+        }
+        name = {
+            trigger = {
+                NOT = { has_character_flag = bear_tournament_finished }
+            }
+            text = THE_FIGHTING_START_EVENT_034_OPT
+        }
+
+        if = {
+            limit = {
+                has_character_flag = bear_tournament_finished
+            }
+            event_target:bear_tournament_fighter_one = {
+                add_trait = succession_bear_heritage_winner
+                clr_character_flag = On_succession_bear_battle
+            }
+            clr_character_flag = bear_tournament_finished
+        }
+        else = {
+            random_list = {
+                100 = { # fighter_one won
+                    mult_modifier = {
+                        factor = 0.1
+                        event_target:bear_tournament_fighter_one = {
+                            trait = craven
+                        }
+                    }
+                    mult_modifier = {
+                        factor = 0.2
+                        event_target:bear_tournament_fighter_one = {
+                            trait = shy
+                        }
+                    }
+                    mult_modifier = {
+                        factor = 1.5
+                        event_target:bear_tournament_fighter_one = {
+                            trait = brave
+                        }
+                    }
+                    mult_modifier = {
+                        factor = 0.5
+                        event_target:bear_tournament_fighter_one = {
+                            combat_rating <= 0
+                        }
+                    }
+                    mult_modifier = {
+                        factor = 0.5
+                        event_target:bear_tournament_fighter_one = {
+                            combat_rating < 5
+                        }
+                    }
+                    mult_modifier = {
+                        factor = 1.2
+                        event_target:bear_tournament_fighter_one = {
+                            combat_rating > 10
+                        }
+                    }
+                    mult_modifier = {
+                        factor = 1.3
+                        event_target:bear_tournament_fighter_one = {
+                            combat_rating > 15
+                        }
+                    }
+                    mult_modifier = {
+                        factor = 1.4
+                        event_target:bear_tournament_fighter_one = {
+                            combat_rating > 20
+                        }
+                    }
+                    mult_modifier = {
+                        factor = 1.4
+                        event_target:bear_tournament_fighter_one = {
+                            combat_rating > 30
+                        }
+                    }
+                    mult_modifier = {
+                        factor = 1.5
+                        event_target:bear_tournament_fighter_one = {
+                            combat_rating > 40
+                        }
+                    }
+                    mult_modifier = {
+                        factor = 1.5
+                        event_target:bear_tournament_fighter_one = {
+                            combat_rating > 50
+                        }
+                    }
+                    mult_modifier = {
+                        factor = 0.1
+                        event_target:bear_tournament_fighter_one = {
+                            NOT = {
+                                culture_group = bear_group
+                            }
+                        }
+                    }
+
+                    custom_tooltip = {
+                        text = FIGHT_SUCC_WON
+                    }
+                    event_target:bear_tournament_fighter_one = {
+                        prestige = 150
+                    }
+                    event_target:bear_tournament_fighter_two = {
+                        show_scope_change = no
+                        add_trait = succession_bear_heritage_looser
+                        clr_character_flag = On_succession_bear_battle
+                    }
+                }
+                100 = { # fighter_two won
+                    mult_modifier = {
+                        factor = 0.1
+                        event_target:bear_tournament_fighter_two = {
+                            trait = craven
+                        }
+                    }
+                    mult_modifier = {
+                        factor = 0.2
+                        event_target:bear_tournament_fighter_two = {
+                            trait = shy
+                        }
+                    }
+                    mult_modifier = {
+                        factor = 1.5
+                        event_target:bear_tournament_fighter_two = {
+                            trait = brave
+                        }
+                    }
+                    mult_modifier = {
+                        factor = 0.5
+                        event_target:bear_tournament_fighter_two = {
+                            combat_rating <= 0
+                        }
+                    }
+                    mult_modifier = {
+                        factor = 0.5
+                        event_target:bear_tournament_fighter_two = {
+                            combat_rating < 5
+                        }
+                    }
+                    mult_modifier = {
+                        factor = 1.2
+                        event_target:bear_tournament_fighter_two = {
+                            combat_rating > 10
+                        }
+                    }
+                    mult_modifier = {
+                        factor = 1.3
+                        event_target:bear_tournament_fighter_two = {
+                            combat_rating > 15
+                        }
+                    }
+                    mult_modifier = {
+                        factor = 1.4
+                        event_target:bear_tournament_fighter_two = {
+                            combat_rating > 20
+                        }
+                    }
+                    mult_modifier = {
+                        factor = 1.4
+                        event_target:bear_tournament_fighter_two = {
+                            combat_rating > 30
+                        }
+                    }
+                    mult_modifier = {
+                        factor = 1.5
+                        event_target:bear_tournament_fighter_two = {
+                            combat_rating > 40
+                        }
+                    }
+                    mult_modifier = {
+                        factor = 1.5
+                        event_target:bear_tournament_fighter_two = {
+                            combat_rating > 50
+                        }
+                    }
+                    mult_modifier = {
+                        factor = 0.1
+                        event_target:bear_tournament_fighter_two = {
+                            NOT = {
+                                culture_group = bear_group
+                            }
+                        }
+                    }
+                    custom_tooltip = {
+                        text = FIGHT_SUCC_WON_bis
+                    }
+                    event_target:bear_tournament_fighter_two = {
+                        prestige = 150
+                    }
+                    event_target:bear_tournament_fighter_one = {
+                        show_scope_change = no
+                        add_trait = succession_bear_heritage_looser
+                        clr_character_flag = On_succession_bear_battle
+                    }
+                }
+            }
+            character_event = { id = ani_plus.033 }
+        }
+    }
+}
+
+###removing winner trait at inheritance
+##removed as winner must be recognized all his life
+character_event = {
+    id = ani_plus.035
+
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        government = Bear_feudal_gov
+    }
+
+    immediate = {
+        # remove_trait = succession_bear_heritage_winner
+    }
+}
+
+#tributarys notifications
+letter_event = {
+    id = ani_plus.036
+
+    is_triggered_only = yes
+
+    border = GFX_event_letter_frame_diplomacy
+    desc = {
+        trigger = {
+            NOT = { has_character_flag = Stopping_tributary_notification}
+        }
+        text = NOTIF_GETTING_TRIBUTARY_BEAR_EVENT_036
+    }
+    desc = {
+        trigger = {
+            has_character_flag = Stopping_tributary_notification
+        }
+        text = NOTIF_GETTING_NEW_VASSAL_BEAR_EVENT_036
+    }
+
+    option = {
+        name = BEAR_EVENT_036_OPT
+        hidden_tooltip = {
+            if = {
+                limit = {
+                    has_character_flag = Stopping_tributary_notification
+                }
+                FROM = {
+                    set_defacto_liege = ROOT
+                }
+                clr_character_flag = Stopping_tributary_notification
+            }
+        }
+    }
+}
+
+## family size event
+#county
+province_event = {
+    id = ani_plus.037
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    trigger = {
+        holder_scope = {
+            government = Bear_feudal_gov
+        }
+        culture_group = bear_group
+        religion = Bears_religion
+        NOT = { has_province_familly_bear_trigger = yes }
+    }
+    mean_time_to_happen = {
+        years = 15
+
+        modifier = {
+            factor = 0.7 # ~10 years
+            holder_scope = {
+                OR = {
+                    has_character_modifier = bear_child_0_3
+                    has_character_modifier = bear_child_16_plus
+                }
+            }
+
+        }
+        modifier = {
+            factor = 1.4 #  21 years
+            holder_scope = {
+                OR = {
+                    has_character_modifier = bear_child_7_9
+                    has_character_modifier = bear_child_10_12
+                }
+            }
+        }
+    }
+    immediate = {
+        random_list = {
+            3 = { set_province_flag = bear_stability_event }
+            2 = { set_province_flag = bear_siege_event }
+            2 = { set_province_flag = bear_build_event }
+            1 = { set_province_flag = bear_economic_event }
+        }
+    }
+    desc = COUNTY_FAMILY_EVENT_037_DESC
+    option = {
+        name = FAMILY_INFLUENCE_EVENT_037_OPT
+        if = {
+            limit = {
+                has_province_flag = bear_stability_event
+            }
+            controller = {
+                if = {
+                    limit = {
+                        has_character_modifier = bear_child_0_3
+                    }
+                    ROOT = {
+                         add_province_modifier = {
+                            name = bear_stab_comtale_family_1
+                            years = 5
+                        }
+                    }
+                }
+                else_if = {
+                    limit = {
+                        has_character_modifier = bear_child_4_6
+                    }
+                    ROOT = {
+                         add_province_modifier = {
+                            name = bear_stab_comtale_family_2
+                            years = 5
+                        }
+                    }                }
+                else_if = {
+                    limit = {
+                        has_character_modifier = bear_child_7_9
+                    }
+                    ROOT = {
+                         add_province_modifier = {
+                            name = bear_stab_comtale_family_3
+                            years = 5
+                        }
+                    }                }
+                else_if = {
+                    limit = {
+                        has_character_modifier = bear_child_10_12
+                    }
+                    ROOT = {
+                         add_province_modifier = {
+                            name = bear_stab_comtale_family_4
+                            years = 5
+                        }
+                    }                }
+                else_if = {
+                    limit = {
+                        has_character_modifier = bear_child_13_15
+                    }
+                    ROOT = {
+                         add_province_modifier = {
+                            name = bear_stab_comtale_family_5
+                            years = 5
+                        }
+                    }                }
+                else = {
+                    ROOT = {
+                         add_province_modifier = {
+                            name = bear_stab_comtale_family_6
+                            years = 5
+                        }
+                    }
+                }
+            }
+            clr_province_flag = bear_stability_event
+        }
+        else_if = {
+            limit = {
+                has_province_flag = bear_siege_event
+            }
+            controller = {
+                if = {
+                    limit = {
+                        has_character_modifier = bear_child_0_3
+                    }
+                    ROOT = {
+                         add_province_modifier = {
+                            name = bear_income_family_1
+                            years = 5
+                        }
+                    }
+                }
+                else_if = {
+                    limit = {
+                        has_character_modifier = bear_child_4_6
+                    }
+                    ROOT = {
+                         add_province_modifier = {
+                            name = bear_income_family_2
+                            years = 5
+                        }
+                    }                }
+                else_if = {
+                    limit = {
+                        has_character_modifier = bear_child_7_9
+                    }
+                    ROOT = {
+                         add_province_modifier = {
+                            name = bear_income_family_3
+                            years = 5
+                        }
+                    }                }
+                else_if = {
+                    limit = {
+                        has_character_modifier = bear_child_10_12
+                    }
+                    ROOT = {
+                         add_province_modifier = {
+                            name = bear_income_family_4
+                            years = 5
+                        }
+                    }                }
+                else_if = {
+                    limit = {
+                        has_character_modifier = bear_child_13_15
+                    }
+                    ROOT = {
+                         add_province_modifier = {
+                            name = bear_income_family_5
+                            years = 5
+                        }
+                    }                }
+                else = {
+                    ROOT = {
+                         add_province_modifier = {
+                            name = bear_income_family_6
+                            years = 5
+                        }
+                    }                }
+            }
+            clr_province_flag = bear_siege_event
+        }
+        else_if = {
+            limit = {
+                has_province_flag = bear_build_event
+            }
+            controller = {
+                if = {
+                    limit = {
+                        has_character_modifier = bear_child_0_3
+                    }
+                    ROOT = {
+                         add_province_modifier = {
+                            name = bear_building_family_1
+                            years = 5
+                        }
+                    }
+                }
+                else_if = {
+                    limit = {
+                        has_character_modifier = bear_child_4_6
+                    }
+                    ROOT = {
+                         add_province_modifier = {
+                            name = bear_building_family_2
+                            years = 5
+                        }
+                    }
+                }
+                else_if = {
+                    limit = {
+                        has_character_modifier = bear_child_7_9
+                    }
+                    ROOT = {
+                         add_province_modifier = {
+                            name = bear_building_family_3
+                            years = 5
+                        }
+                    }
+                }
+                else_if = {
+                    limit = {
+                        has_character_modifier = bear_child_10_12
+                    }
+                    ROOT = {
+                         add_province_modifier = {
+                            name = bear_building_family_4
+                            years = 5
+                        }
+                    }
+                }
+                else_if = {
+                    limit = {
+                        has_character_modifier = bear_child_13_15
+                    }
+                    ROOT = {
+                         add_province_modifier = {
+                            name = bear_building_family_5
+                            years = 5
+                        }
+                    }
+                }
+                else = {
+                    ROOT = {
+                         add_province_modifier = {
+                            name = bear_building_family_6
+                            years = 5
+                        }
+                    }
+                }
+            }
+            clr_province_flag = bear_build_event
+        }
+        else = {
+            # limit = {
+            #     has_province_flag = bear_economic_event
+            # }
+            controller = {
+                if = {
+                    limit = {
+                        has_character_modifier = bear_child_0_3
+                    }
+                    ROOT = {
+                         add_province_modifier = {
+                            name = bear_siege_family_1
+                            years = 5
+                        }
+                    }
+                }
+                else_if = {
+                    limit = {
+                        has_character_modifier = bear_child_4_6
+                    }
+                    ROOT = {
+                         add_province_modifier = {
+                            name = bear_siege_family_2
+                            years = 5
+                        }
+                    }
+                }
+                else_if = {
+                    limit = {
+                        has_character_modifier = bear_child_7_9
+                    }
+                    ROOT = {
+                         add_province_modifier = {
+                            name = bear_siege_family_3
+                            years = 5
+                        }
+                    }
+                }
+                else_if = {
+                    limit = {
+                        has_character_modifier = bear_child_10_12
+                    }
+                    ROOT = {
+                         add_province_modifier = {
+                            name = bear_siege_family_4
+                            years = 5
+                        }
+                    }
+                }
+                else_if = {
+                    limit = {
+                        has_character_modifier = bear_child_13_15
+                    }
+                    ROOT = {
+                         add_province_modifier = {
+                            name = bear_siege_family_5
+                            years = 5
+                        }
+                    }
+                }
+                else = {
+                    ROOT = {
+                         add_province_modifier = {
+                            name = bear_siege_family_6
+                            years = 5
+                        }
+                    }
+                }
+            }
+            clr_province_flag = bear_economic_event
+        }
+    }
+}
+
+#character
+character_event = {
+    id = ani_plus.038
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    only_playable = yes
+
+    trigger = {
+        culture_group = bear_group
+        war = no
+    }
+
+    mean_time_to_happen = {
+        years = 30
+
+        modifier = {
+            factor = 0.2
+            religion = Bears_religion
+        }
+        modifier = {
+            factor = 0.75 #  22.5 years
+            OR = {
+                has_character_modifier = bear_child_0_3
+                has_character_modifier = bear_child_16_plus
+            }
+        }
+        modifier = {
+            factor = 1.5 #  45 years
+
+            OR = {
+                has_character_modifier = bear_child_7_9
+                has_character_modifier = bear_child_10_12
+            }
+        }
+    }
+    immediate = {
+        random_list = {
+            5 = { set_character_flag = bear_prestige_family_bonus }
+            5 = { set_character_flag = bear_piety_family_bonus }
+            2 = { set_character_flag = bear_gold_family_bonus }
+        }
+    }
+    desc = GAIN_BONUS_FAMILY_EVENT_038_DESC
+
+
+    option = {
+        name = GAIN_BONUS_FAMILY_EVENT_038_OPT
+
+        if = {
+            limit = {
+                has_character_flag = bear_prestige_family_bonus
+            }
+            if = {
+                limit = {
+                    has_character_modifier = bear_child_0_3
+                }
+                prestige = -800
+            }
+            else_if = {
+                limit = {
+                    has_character_modifier = bear_child_4_6
+                }
+                prestige = -400
+            }
+            else_if = {
+                limit = {
+                    has_character_modifier = bear_child_7_9
+                }
+                prestige = -150
+            }
+            else_if = {
+                limit = {
+                    has_character_modifier = bear_child_10_12
+                }
+                prestige = 100
+            }
+            else_if = {
+                limit = {
+                    has_character_modifier = bear_child_13_15
+                }
+                prestige = 300
+            }
+            else = {
+                prestige = 555
+            }
+            clr_character_flag = bear_prestige_family_bonus
+        }
+        else_if = {
+            limit = {
+                has_character_flag = bear_piety_family_bonus
+            }
+            if = {
+                limit = {
+                    has_character_modifier = bear_child_0_3
+                }
+                piety = -400
+            }
+            else_if = {
+                limit = {
+                    has_character_modifier = bear_child_4_6
+                }
+                piety = -200
+            }
+            else_if = {
+                limit = {
+                    has_character_modifier = bear_child_7_9
+                }
+                piety = -50
+            }
+            else_if = {
+                limit = {
+                    has_character_modifier = bear_child_10_12
+                }
+                piety = 50
+            }
+            else_if = {
+                limit = {
+                    has_character_modifier = bear_child_13_15
+                }
+                piety = 150
+            }
+            else = {
+                piety = 333
+            }
+            clr_character_flag = bear_piety_family_bonus
+        }
+        else = {
+            if = {
+                limit = {
+                    has_character_modifier = bear_child_0_3
+                }
+                wealth = -500
+            }
+            else_if = {
+                limit = {
+                    has_character_modifier = bear_child_4_6
+                }
+                wealth = -250
+            }
+            else_if = {
+                limit = {
+                    has_character_modifier = bear_child_7_9
+                }
+                wealth = -100
+            }
+            else_if = {
+                limit = {
+                    has_character_modifier = bear_child_10_12
+                }
+                wealth = 100
+            }
+            else_if = {
+                limit = {
+                    has_character_modifier = bear_child_13_15
+                }
+                wealth = 200
+            }
+            else = {
+                wealth = 400
+            }
+            clr_character_flag = bear_gold_family_bonus
+        }
+    }
+}
+
+## hibernation event: called from hibernation start event (event 1)
+character_event = {
+    id = ani_plus.039
+    is_triggered_only = yes
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    immediate = {
+        random_list = {
+            100 = { set_character_flag = bear_hibernation_plot }
+            300 = {
+                additive_modifier = {
+                    value = 600
+                    trait = bear_hibernation_immortality
+                }
+                set_character_flag = bear_hibernation_health
+            }
+            100 = {
+                modifier = {
+                    factor = 0
+                    trait = bear_hibernation_immortality
+                }
+                set_character_flag = bear_hibernation_stat
+            }
+            1 = {
+                modifier = {
+                    factor = 0
+                    trait = bear_hibernation_immortality
+                }
+                set_character_flag = bear_hibernation_immortality_disease
+            }
+        }
+    }
+    desc = {
+        trigger = { has_character_flag = bear_hibernation_plot }
+        text = HIBERNATION_PLOT_EVENT_039_DESC_1
+    }
+    desc = {
+        trigger = { has_character_flag = bear_hibernation_health }
+        text = HIBERNATION_HEALTH_EVENT_039_DESC_2
+    }
+    desc = {
+        trigger = { has_character_flag = bear_hibernation_stat }
+        text = HIBERNATION_STAT_EVENT_039_DESC_3
+    }
+    desc = {
+        trigger = { has_character_flag = bear_hibernation_immortality_disease}
+        text = HIBERNATION_IMMOR_EVENT_039_DESC_4
+    }
+
+    option = {
+        name = {
+            trigger = { has_character_flag = bear_hibernation_plot }
+            text = HIBERNATION_PLOT_EVENT_039_OPT_1
+        }
+        name = {
+            trigger = { has_character_flag = bear_hibernation_health }
+            text = HIBERNATION_HEALTH_EVENT_039_OPT_2
+        }
+        name = {
+            trigger = { has_character_flag = bear_hibernation_stat }
+            text = HIBERNATION_STAT_EVENT_039_OPT_3
+        }
+        name = {
+            trigger = { has_character_flag = bear_hibernation_immortality_disease}
+            text = HIBERNATION_IMMOR_EVENT_039_OPT_4
+        }
+        if = {
+            limit = {
+                has_character_flag = bear_hibernation_plot
+            }
+            random_list = {
+                3 = {
+                    add_character_modifier = {
+                        name = bear_hib_plot_gain
+                        months = 18
+                    }
+                }
+                1 = {
+                    add_character_modifier = {
+                        name = bear_hib_plot_lost
+                        months = 12
+                    }
+                }
+            }
+            clr_character_flag = bear_hibernation_plot
+        }
+        else_if = {
+            limit = {
+                has_character_flag = bear_hibernation_health
+            }
+            random_list = {
+                10 = {
+                    modifier = {
+                        factor = 0.5
+                        trait = bear_hibernation_immortality
+                    }
+                    ## health against penality -> 3 years
+                    add_character_modifier = {
+                        name = bear_hib_health_disease
+                        years = 3
+                    }
+                }
+                8 = {
+                    modifier = {
+                        factor = 0
+                        trait = bear_hibernation_immortality
+                    }
+                    ## normal health -> 2 years
+                    add_character_modifier = {
+                        name = bear_hib_health_health
+                        years = 2
+                    }
+                }
+                1 = {
+                    modifier = {
+                        factor = 0
+                        NOT = { trait = human_bear }
+                    }
+                    modifier = {
+                        factor = 0
+                        trait = bear_hibernation_immortality
+                    }
+                    add_trait = human_bear
+                }
+                95 = {
+                    modifier = {
+                        factor = 0
+                        NOT = { trait = bear_hibernation_immortality }
+                    }
+                    remove_trait = bear_hibernation_immortality
+                    random = {
+                        chance = 15
+
+                        add_trait = human_bear
+                    }
+                }
+            }
+            clr_character_flag = bear_hibernation_health
+        }
+        else_if = {
+            limit = {
+                has_character_flag = bear_hibernation_stat
+            }
+            random_list = {
+                15 = {
+                    custom_tooltip = {
+                        text = FAIN_BONUS_STAT_POINT_BEAR_HIB #"FAIN"... typo error -- mean "GAIN"
+                        random_list = {
+                            1 = { change_diplomacy   = 1 }
+                            1 = { change_martial     = 1 }
+                            1 = { change_stewardship = 1 }
+                            1 = { change_intrigue    = 1 }
+                            1 = { change_learning    = 1 }
+                        }
+                    }
+                }
+                5 = {
+                    change_diplomacy   = 1
+                    change_martial     = 1
+                    change_stewardship = 1
+                    change_intrigue    = 1
+                    change_learning    = 1
+                }
+                1 = {
+                    custom_tooltip = {
+                        text = GAIN_GENETIC_TRAIT_BEAR_HIB
+                        random_list = {
+                            9 = { add_trait = fair }
+                            9 = { add_trait = quick }
+                            9 = { add_trait = strong }
+                            1 = { add_trait = ugly }
+                            1 = { add_trait = slow }
+                            1 = { add_trait = weak }
+                        }
+                    }
+                }
+            }
+            clr_character_flag = bear_hibernation_stat
+        }
+        else = {
+            add_trait = bear_hibernation_immortality
+            clr_character_flag = bear_hibernation_immortality_disease
+        }
+    }
+}
+
+# # event removed
+# character_event = {
+#     id = ani_plus.040
+#     is_triggered_only = yes
+#
+#     border = GFX_event_normal_frame_diplomacy
+#     picture = GFX_evt_council
+#
+#     desc = ULTIMATUM_BEAR_EVENT_040_DESC
+#
+#     option = {
+#         name = HAVE_FULL_RIGT_EVENT_040_OPT_1
+#
+#         liege = {
+#             ROOT = {
+#                 set_defacto_liege = ROOT
+#             }
+#             make_tributary = {
+#                 who = ROOT
+#
+#                 tributary_type = animal_theocratic_unreligious_vassals
+#             }
+#         }
+#     }
+#     option = {
+#         name = NEGOCIATE_RELIGIOUS_RIGHT_EVENT_040_OPT_2
+#
+#         random_list = {
+#             50 = {
+#                 modifier = {
+#                     factor = 1.25
+#
+#                     diplomacy < liege
+#                 }
+#                 modifier = {
+#                     factor = 0.75
+#
+#                     diplomacy > liege
+#                 }
+#                 modifier = {
+#                     factor = 1.1
+#
+#                     liege = { diplomacy = 2 }
+#                 }
+#                 modifier = {
+#                     factor = 1.1
+#
+#                     liege = { diplomacy = 4 }
+#                 }
+#                 modifier = {
+#                     factor = 1.1
+#
+#                     liege = { diplomacy = 6 }
+#                 }
+#                 modifier = {
+#                     factor = 1.1
+#
+#                     liege = { diplomacy = 8 }
+#                 }
+#                 modifier = {
+#                     factor = 1.1
+#
+#                     liege = { diplomacy = 10 }
+#                 }
+#                 modifier = {
+#                     factor = 1.1
+#
+#                     liege = { diplomacy = 12 }
+#                 }
+#                 modifier = {
+#                     factor = 1.1
+#
+#                     liege = { diplomacy = 14 }
+#                 }
+#                 modifier = {
+#                     factor = 1.1
+#
+#                     liege = { diplomacy = 16 }
+#                 }
+#                 modifier = {
+#                     factor = 1.1
+#
+#                     liege = { diplomacy = 18 }
+#                 }
+#                 modifier = {
+#                     factor = 1.1
+#
+#                     liege = { diplomacy = 20 }
+#                 }
+#                 custom_tooltip = {
+#                     text = BEAR_GIVE_RELIGIOUS_RIGHT
+#                     liege = {
+#                         ROOT = {
+#                             set_defacto_liege = ROOT
+#                         }
+#                         make_tributary = {
+#                             who = ROOT
+#
+#                             tributary_type = animal_theocratic_unreligious_vassals
+#                         }
+#                     }
+#                 }
+#             }
+#             30 = {
+#                 modifier = {
+#                     factor = 2
+#                     reverse_opinion = {
+#                         who = liege
+#                         value <= -50
+#                     }
+#                 }
+#                 modifier = {
+#                     factor = 1.5
+#                     reverse_opinion = {
+#                         who = liege
+#                         value <= -25
+#                     }
+#                 }
+#                 modifier = {
+#                     factor = 1.4
+#                     reverse_opinion = {
+#                         who = liege
+#                         value <= -10
+#                     }
+#                 }
+#                 modifier = {
+#                     factor = 1.25
+#                     reverse_opinion = {
+#                         who = liege
+#                         value < 0
+#                     }
+#                 }
+#                 modifier = {
+#                     factor = 0.8
+#                     reverse_opinion = {
+#                         who = liege
+#                         value = 10
+#                     }
+#                 }
+#                 modifier = {
+#                     factor = 0.8
+#                     reverse_opinion = {
+#                         who = liege
+#                         value = 25
+#                     }
+#                 }
+#                 modifier = {
+#                     factor = 0.75
+#                     reverse_opinion = {
+#                         who = liege
+#                         value = 50
+#                     }
+#                 }
+#                 modifier = {
+#                     factor = 0.5
+#                     reverse_opinion = {
+#                         who = liege
+#                         value = 100
+#                     }
+#                 }
+#                 modifier = {
+#                     factor = 1.05
+#
+#                     liege = { diplomacy = 2 }
+#                 }
+#                 modifier = {
+#                     factor = 1.05
+#
+#                     liege = { diplomacy = 4 }
+#                 }
+#                 modifier = {
+#                     factor = 1.05
+#
+#                     liege = { diplomacy = 6 }
+#                 }
+#                 modifier = {
+#                     factor = 1.1
+#
+#                     liege = { diplomacy = 8 }
+#                 }
+#                 modifier = {
+#                     factor = 1.1
+#
+#                     liege = { diplomacy = 10 }
+#                 }
+#                 custom_tooltip = {
+#                     text = BEAR_RELIGIOUS_TRAITORS
+#                 }
+#                 imprison = liege
+#             }
+#             20 = {
+#                 modifier = {
+#                     factor = 0.75
+#
+#                     diplomacy < liege
+#                 }
+#                 modifier = {
+#                     factor = 1.25
+#
+#                     diplomacy > liege
+#                 }
+#                 modifier = {
+#                     factor = 1.1
+#
+#                     diplomacy = 2
+#                 }
+#                 modifier = {
+#                     factor = 1.1
+#
+#                     diplomacy = 4
+#                 }
+#                 modifier = {
+#                     factor = 1.1
+#
+#                     diplomacy = 6
+#                 }
+#                 modifier = {
+#                     factor = 1.1
+#
+#                     diplomacy = 8
+#                 }
+#                 modifier = {
+#                     factor = 1.1
+#
+#                     diplomacy = 10
+#                 }
+#                 modifier = {
+#                     factor = 1.1
+#
+#                     diplomacy = 12
+#                 }
+#                 modifier = {
+#                     factor = 1.1
+#
+#                     diplomacy = 14
+#                 }
+#                 modifier = {
+#                     factor = 1.1
+#
+#                     diplomacy = 16
+#                 }
+#                 modifier = {
+#                     factor = 1.1
+#
+#                     diplomacy = 18
+#                 }
+#                 modifier = {
+#                     factor = 1.1
+#
+#                     diplomacy = 20
+#                 }
+#                 custom_tooltip = {
+#                     text = SUCCESSFUL_BEAR_REL_NEGOCIATION
+#                 }
+#                 add_trait = bear_religious_right
+#             }
+#         }
+#     }
+#     option = {
+#         name = I_HAVe_FAVOR_EVENT_040_OPT_3
+#         trigger = {
+#             holds_favor_on = liege
+#         }
+#         tooltip_info = learning
+#
+#         add_trait = bear_religious_right
+#     }
+# }
+
+# #fire for inheriting religious right
+# character_event = {
+#     id = ani_plus.041
+#     is_triggered_only = yes
+#     hide_window = yes
+#
+#     trigger = {
+#         independent = no
+#         liege = {
+#             religion_group = Animals_grups
+#             NOT = { religion = ROOT }
+#             is_theocracy = yes
+#         }
+#         FROMFROM = {
+#             trait = bear_religious_right
+#         }
+#     }
+#
+#     immediate = {
+#         add_trait = bear_religious_right
+#     }
+# }
+
+# #notification: loosing a full right vassal
+# letter_event = {
+#     id = ani_plus.042
+#
+#     is_triggered_only = yes
+#
+#     border = GFX_event_letter_frame_diplomacy
+#     desc = NOTIF_LOOSING_FULL_RIGHT_VASSALS_EVENT_042_DESC
+#     option = {
+#         name = OKAY_EVENT_042_OPT
+#     }
+# }
+
+#event: starting war
+character_event = {
+    id = ani_plus.043
+    is_triggered_only = yes
+    hide_window = yes
+
+    immediate = {
+        ROOT = { #defender scope
+            if = {
+                limit = {
+                    culture_group = hedgehog_group
+                }
+                add_character_modifier = {
+                    name = Animal_theocratic_defensive_war
+                    duration = -1
+                }
+            }
+        }
+
+        FROM = { #attacker scope
+            if = {
+                limit = {
+                    culture_group = hedgehog_group
+                }
+
+                if = { #civil war or not
+                    limit = {
+                        primary_title = {
+                            temporary = yes
+                        }
+                        government = Hedge_feudal_gov
+                    }
+                    add_character_modifier = {
+                        name = Animal_theocratic_civil_offensive_war
+                        duration = -1
+                    }
+                }
+                else = {
+                    add_character_modifier = {
+                        name = Animal_theocratic_offensive_war
+                        duration = -1
+                    }
+                }
+            }
+        }
+    }
+}
+
+####Council events
+#Chancellor (repress vassal)
+character_event = {
+    id = ani_plus.044
+
+    hide_window = yes
+
+    title = CHANCELLOR_EVENT_SUCCEED_REPRIMATE
+
+    min_age = 16
+	capable_only = yes
+	prisoner = no
+	has_job_title = yes
+
+    trigger = {
+        has_job_action = action_repress_vassal
+		NOT = { has_character_modifier = in_seclusion }
+		NOT = { has_character_modifier = bedridden_illness }
+		NOT = { trait = incapable }
+		location = {
+			holder_scope = {
+                primary_title = { higher_tier_than = BARON }
+                NOT = { is_liege_of = ROOT }
+                NOT = { character = ROOT }
+                any_close_relative = {
+                    has_potential_close_chancellor_pretender_trigger = yes
+                }
+            }
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 100
+
+        job_event_mtth_modifier_diplomacy_score = yes
+    }
+
+    immediate = {
+        location = {
+            holder_scope = {
+                random_close_relative = {
+                    limit = {
+                        has_potential_close_chancellor_pretender_trigger = yes
+                    }
+                    preferred_limit = { trait = succession_bear_heritage_looser }
+                    save_event_target_as = bear_chancellor_pretender
+                }
+                set_character_flag = target_bear_government_chancellor_pretender
+                character_event = { id = ani_plus.046 }
+            }
+        }
+    }
+}
+
+character_event = {
+    id = ani_plus.045
+
+    hide_window = yes
+
+    title = CHANCELLOR_EVENT_FAILED_REPRIMATE
+
+    min_age = 16
+	capable_only = yes
+	prisoner = no
+	has_job_title = yes
+
+    trigger = {
+		has_job_action = action_repress_vassal
+		NOT = { has_character_modifier = in_seclusion }
+		NOT = { has_character_modifier = bedridden_illness }
+		NOT = { trait = incapable }
+		location = {
+            holder_scope = {
+				primary_title = { higher_tier_than = BARON }
+				NOT = { is_liege_of = ROOT }
+				NOT = { character = ROOT }
+			}
+		}
+	}
+
+    mean_time_to_happen = {
+		months = 120
+		job_event_mtth_modifier_inverted_diplomacy_score = yes
+	}
+
+    immediate = {
+        location = { holder_scope = {
+            set_character_flag = target_bear_government_chancellor_insult
+            character_event = { id = ani_plus.046 }
+
+        } }
+    }
+}
+
+#event itself
+character_event = {
+    id = ani_plus.046
+    is_triggered_only = yes
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    desc = {
+        trigger = {
+            has_character_flag = target_bear_government_chancellor_pretender
+        }
+        text = SUCCESS_CHANCELLOR_REPRESSION_EVENT_046_DESC_1
+    }
+    desc = {
+        trigger = {
+            has_character_flag = target_bear_government_chancellor_insult
+        }
+        text = FAILED_CHANCELLOR_REPRESSION_EVENT_046_DESC_2
+    }
+
+    option = {
+        trigger = {
+            has_character_flag = target_bear_government_chancellor_pretender
+        }
+        name = I_GIVE_UP_ON_LAND_EVENT_046_OPT_1
+
+        random_demesne_title = {
+            limit = {
+                real_tier = COUNT
+                ROOT = {
+                    capital_scope = {
+                        county = {
+                            NOT = { title = PREVPREVPREV }
+                        }
+                    }
+                }
+            }
+            gain_title = event_target:bear_chancellor_pretender
+        }
+    }
+    option = {
+        trigger = {
+            has_character_flag = target_bear_government_chancellor_pretender
+        }
+        name = I_DONT_GIVE_UP_EVENT_046_OPT_2
+        event_target:bear_chancellor_pretender = {
+            any_courtier_or_vassal = {
+                reverse_opinion = {
+                    modifier = bear_chancellor_job_insult
+                    years = 8
+                    who = ROOT
+                }
+            }
+            reverse_opinion = {
+                modifier = bear_chancellor_job_pretender_insult
+                years = 8
+                who = ROOT
+            }
+        }
+    }
+
+    option = {
+        trigger = {
+            has_character_flag = target_bear_government_chancellor_insult
+        }
+        name = JOB_CHANCELLOR_FAILED_EVENT_046_OPT_3
+    }
+
+    after = {
+        FROM = {
+            liege = {
+                letter_event = { id = ani_plus.047 }
+            }
+        }
+        clr_character_flag = target_bear_government_chancellor_insult
+        clr_character_flag = target_bear_government_chancellor_pretender
+    }
+}
+
+letter_event = {
+    id = ani_plus.047
+    is_triggered_only = yes
+    border = GFX_event_letter_frame_diplomacy
+
+    desc = {
+        trigger = {
+            # FROM = {
+            #     has_character_flag = target_bear_government_chancellor_pretender
+            # }
+            always = yes
+        }
+        text = LETTER_BEAR_CHANCELLOR_SUCCEED_EVENT_047_DESC_1
+    }
+    # desc = {
+    #     trigger = {
+    #         FROM = {
+    #             has_character_flag = target_bear_government_chancellor_insult
+    #         }
+    #     }
+    #     text = LETTER_BEAR_CHANCELLOR_FAILED_EVENT_047_DESC_2
+    # }
+    option = {
+        name = OKAY_EVENT_046_OPT
+        hidden_tooltip = {
+            FROM = {
+            }
+        }
+        reverse_opinion = {
+            modifier = bear_chancellor_job_lieage_repression
+            years = 8
+            who = FROM
+        }
+    }
+}
+
+#marshall (train nobles)
+character_event = {
+    id = ani_plus.048
+
+    hide_window = yes
+    title = NOBLE_TRAINED_EVENT_048_TITLE
+
+    min_age = 16
+	capable_only = yes
+	prisoner = no
+	has_job_title = yes
+
+	trigger = {
+		has_job_action = action_train_nobles
+		NOT = { has_character_modifier = in_seclusion }
+		NOT = { has_character_modifier = bedridden_illness }
+		NOT = { trait = incapable }
+		location = {
+            any_province_character = {
+    			NOT = { character = ROOT }
+    		}
+		}
+	}
+    mean_time_to_happen = {
+		months = 75
+		job_event_mtth_modifier_martial_score = yes
+	}
+
+    immediate = {
+        location = {
+            random_province_character = {
+                limit = {
+                    OR = {
+                        is_adult = no
+                        has_minor_title = title_commander
+                    }
+                    NOR = {
+                        character = ROOT
+                        ROOT = {
+                            liege = {
+                                character = PREVPREV
+                            }
+                        }
+                    }
+                }
+
+                change_martial = 1
+            }
+        }
+    }
+}
+
+character_event = {
+    id = ani_plus.049
+
+    hide_window = yes
+    title = NOBLE_INJURED_EVENT_049_TITLE
+
+    min_age = 16
+	capable_only = yes
+	prisoner = no
+	has_job_title = yes
+
+	trigger = {
+		has_job_action = action_train_nobles
+		NOT = { has_character_modifier = in_seclusion }
+		NOT = { has_character_modifier = bedridden_illness }
+		NOT = { trait = incapable }
+		location = {
+            any_province_character = {
+    			NOT = { character = ROOT }
+    		}
+		}
+	}
+    mean_time_to_happen = {
+		months = 125
+		job_event_mtth_modifier_inverted_martial_score = yes
+	}
+
+    immediate = {
+        location = {
+            random_province_character = {
+                limit = {
+                    OR = {
+                        is_adult = no
+                        has_minor_title = title_commander
+                    }
+                    NOR = {
+                        character = ROOT
+                        ROOT = {
+                            liege = {
+                                character = PREVPREV
+                            }
+                        }
+                    }
+                }
+                add_trait = wounded
+            }
+        }
+    }
+}
+
+#steward (cultural acceptance)
+character_event = {
+    id = ani_plus.050
+
+    hide_window = yes
+    title = CHILD_CONVERTED_EVENT_050_TITLE
+
+    min_age = 16
+	capable_only = yes
+	prisoner = no
+	has_job_title = yes
+
+	trigger = {
+		has_job_action = action_cultural_acceptation
+		NOT = { has_character_modifier = in_seclusion }
+		NOT = { has_character_modifier = bedridden_illness }
+		NOT = { trait = incapable }
+		liege = {
+			OR = {
+                any_realm_character = {
+                    age <= 20
+                    NOT = { culture_group = bear_group }
+                }
+                any_tributary = {
+                    any_realm_character = {
+                        age <= 20
+                        NOT = { culture_group = bear_group }
+                    }
+                }
+            }
+		}
+	}
+
+    mean_time_to_happen = {
+		months = 120
+		job_event_mtth_modifier_stewardship_score = yes
+	}
+
+    immediate = {
+        liege = {
+            random_list = {
+                4 = {
+                    trigger = {
+                        any_realm_character = {
+                            age <= 20
+                            NOT = { culture_group = bear_group }
+                        }
+                    }
+                    random_realm_character = {
+                        limit = {
+                            age <= 20
+                            NOT = { culture_group = bear_group }
+                        }
+                        random_list = {
+                            1 = {
+                                culture = white_bear
+                            }
+                            1 = {
+                                culture = brown_bear
+                            }
+                            1 = {
+                                culture = black_bear
+                            }
+                        }
+                    }
+                }
+                1 = {
+                    trigger = {
+                        any_tributary = {
+                            any_realm_character = {
+                                age <= 20
+                                NOT = { culture_group = bear_group }
+                            }
+                        }
+                    }
+                    random_tributary = {
+                        limit = {
+                            any_realm_character = {
+                                age <= 20
+                                NOT = { culture_group = bear_group }
+                            }
+                        }
+                        random_realm_character = {
+                            limit = {
+                                age <= 20
+                                NOT = { culture_group = bear_group }
+                            }
+                            random_list = {
+                                1 = {
+                                    culture = white_bear
+                                }
+                                1 = {
+                                    culture = brown_bear
+                                }
+                                1 = {
+                                    culture = black_bear
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+character_event = {
+    id = ani_plus.051
+
+    hide_window = yes
+    title = CHILD_UNCONVVERTED_051_TITLE
+
+    min_age = 16
+	capable_only = yes
+	prisoner = no
+	has_job_title = yes
+
+	trigger = {
+		has_job_action = action_cultural_acceptation
+		NOT = { has_character_modifier = in_seclusion }
+		NOT = { has_character_modifier = bedridden_illness }
+		NOT = { trait = incapable }
+		liege = {
+            OR = {
+                any_realm_lord = {
+                    NOT = { culture_group = bear_group }
+                }
+                any_tributary = {
+                    NOT = { culture_group = bear_group }
+                }
+            }
+        }
+	}
+    mean_time_to_happen = {
+        months = 160
+
+        job_event_mtth_modifier_inverted_stewardship_score = yes
+    }
+
+    immediate = {
+        random_list = {
+            9 = {
+                trigger = {
+                    any_realm_lord = {
+                        NOT = { culture_group = bear_group }
+                    }
+                }
+                random_realm_lord = {
+                    limit = {
+                        NOT = { culture_group = bear_group }
+                    }
+                    save_event_target_as = bear_animal_insult_target
+                }
+            }
+            1 = {
+                trigger = {
+                    any_tributary = {
+                        NOT = { culture_group = bear_group }
+                    }
+                }
+                random_tributary = {
+                    limit = {
+                        NOT = { culture_group = bear_group }
+                    }
+                    save_event_target_as = bear_animal_insult_target
+                }
+            }
+        }
+        letter_event = { id = ani_plus.052 }
+    }
+}
+
+letter_event = {
+    id = ani_plus.052
+    is_triggered_only = yes
+    border = GFX_event_letter_frame_diplomacy
+
+    desc = TEXT_INSULT_STEWARD_FAIL_EVENT_052_DESC
+
+    option = {
+        name = EVENT_052_OPT
+        event_target:bear_animal_insult_target = {
+            opinion = {
+                modifier = bear_steward_job_cultural_insult
+                who = ROOT
+                years = 15
+            }
+        }
+    }
+}
+
+#spymaster
+character_event = {
+    id = ani_plus.053
+
+    hide_window = yes
+    title = INVASION_ANIMAL_EVENT_053_TITLE
+
+    min_age = 16
+	capable_only = yes
+	prisoner = no
+	has_job_title = yes
+
+	trigger = {
+		has_job_action = action_create_animal_hord
+		NOT = { has_character_modifier = in_seclusion }
+		NOT = { has_character_modifier = bedridden_illness }
+		NOT = { trait = incapable }
+	}
+
+    mean_time_to_happen = {
+		months = 240
+		job_event_mtth_modifier_intrigue_score = yes
+	}
+
+    immediate = {
+        location = {
+            holder_scope = {
+                character_event = { id = ani_plus.055 }
+            }
+        }
+    }
+}
+
+character_event = {
+    id = ani_plus.054
+
+    hide_window = yes
+    title = IMPRISON_SPYMASTER_EVENT_054_TITLE
+
+    min_age = 16
+	capable_only = yes
+	prisoner = no
+	has_job_title = yes
+
+	trigger = {
+		has_job_action = action_create_animal_hord
+		NOT = { has_character_modifier = in_seclusion }
+		NOT = { has_character_modifier = bedridden_illness }
+		NOT = { trait = incapable }
+
+	}
+
+    mean_time_to_happen = {
+		months = 240
+        job_event_mtth_modifier_inverted_intrigue_score = yes
+	}
+
+    immediate = {
+        location = {
+            holder_scope = {
+                set_character_flag = imprison_bear_spymaster
+                character_event = { id = ani_plus.055 }
+            }
+        }
+    }
+}
+
+character_event = {
+    id = ani_plus.055
+    is_triggered_only = yes
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    desc = {
+        trigger = {
+            NOT = { has_character_flag = imprison_bear_spymaster }
+        }
+        text = AN_ANIMAL_HORD_APPEAR_EVENT_055_DESC_1
+    }
+    desc = {
+        trigger = {
+            has_character_flag = imprison_bear_spymaster
+        }
+        text = SPYMASTER_CAUTCH_EVENT_056_DESC_2
+    }
+
+    option = {
+        trigger = {
+            NOT = { has_character_flag = imprison_bear_spymaster }
+            scaled_wealth = 3.5
+        }
+        name = ORGANIZE_A_BIG_HUNT_EVENT_056_OPT_1
+
+        scaled_wealth = -3.5
+        FROM = {
+            show_scope_change = no
+
+            location = {
+                random_list = {
+                    14 = {
+                        add_province_modifier = {
+                            name = animal_hord_province_invasion_cleaned
+                            years = 5
+                        }
+                    }
+                    1 = {
+                        add_province_modifier = {
+                            name = animal_hord_province_invasion
+                            years = 5
+                        }
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        trigger = {
+            NOT = { has_character_flag = imprison_bear_spymaster }
+        }
+        name = LET_THEM_BE_EVENT_056_OPT_2
+
+        FROM = {
+            show_scope_change = no
+
+            location = {
+                add_province_modifier = {
+                    name = animal_hord_province_invasion
+                    years = 5
+                }
+                destroy_random_building = yes
+                destroy_random_building = yes
+            }
+        }
+    }
+    option = {
+        trigger = {
+            has_character_flag = imprison_bear_spymaster
+        }
+        name = IMPRIOSON_HIM_EVENT_056_OPT_3
+
+        FROM = {
+            imprison = ROOT
+            liege = {
+                letter_event = { id = ani_plus.056 }
+            }
+        }
+    }
+}
+
+letter_event = {
+    id = ani_plus.056
+
+    is_triggered_only = yes
+    border = GFX_event_letter_frame_diplomacy
+
+    desc = TEXT_IMPRISON_SPYMASTER_EVENT_056_DESC
+
+    option = {
+        name = EVENT_056_OPT
+    }
+}
+
+#spiritual
+character_event = {
+    id = ani_plus.057
+    hide_window = yes
+    title = CHARACTER_ACCEPT_ANIMALS_EVENT_057_TITLE
+
+    min_age = 16
+	capable_only = yes
+	prisoner = no
+	has_job_title = yes
+
+	trigger = {
+		has_job_action = action_religious_sympathy
+		NOT = { has_character_modifier = in_seclusion }
+		NOT = { has_character_modifier = bedridden_illness }
+		NOT = { trait = incapable }
+        location = {
+            any_province_character = {
+                NOR = {
+    				religion_group = Animals_grups
+    				trait = sympathy_animals_religions
+    			}
+            }
+        }
+	}
+
+    mean_time_to_happen = {
+        months = 120
+
+        modifier = {
+            factor = 3.5
+            liege = {
+                ai = yes
+            }
+        }
+
+        job_event_mtth_modifier_learning_score = yes
+
+        modifier = {
+			factor = 2.0
+			NOT = { religion_authority = 0.4 }
+		}
+		modifier = {
+			factor = 2.0
+			NOT = { religion_authority = 0.2 }
+		}
+        modifier = {
+			factor = 0.75
+			religion_authority = 0.6
+		}
+		modifier = {
+			factor = 0.75
+			religion_authority = 0.8
+		}
+	}
+
+    immediate = {
+        location = {
+            random_province_character = {
+                limit = {
+                    NOR = {
+                        religion_group = Animals_grups
+                        trait = sympathy_animals_religions
+                    }
+    			}
+                character_event = { id = ani_plus.059 }
+            }
+        }
+    }
+}
+
+character_event = {
+    id = ani_plus.058
+    hide_window = yes
+
+    title = A_LOCAL_LORD_GET_ZEALOUS_EVENT_058_TITLE
+
+    min_age = 16
+	capable_only = yes
+	prisoner = no
+	has_job_title = yes
+
+	trigger = {
+		has_job_action = action_religious_sympathy
+		NOT = { has_character_modifier = in_seclusion }
+		NOT = { has_character_modifier = bedridden_illness }
+		NOT = { trait = incapable }
+        location = {
+            any_province_character = {
+                NOR = {
+                    religion_group = Animals_grups
+                    trait = sympathy_animals_religions
+                }
+            }
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 120
+
+        modifier = {
+			factor = 2.0
+			liege = {
+				tier = count
+			}
+		}
+		job_event_mtth_modifier_inverted_learning_score = yes
+		modifier = {
+			factor = 0.75
+			NOT = { religion_authority = 0.4 }
+		}
+		modifier = {
+			factor =0.75
+			NOT = { religion_authority = 0.2 }
+		}
+		modifier = {
+			factor = 2.0
+			religion_authority = 0.6
+		}
+		modifier = {
+			factor = 2.0
+			religion_authority = 0.8
+		}
+	}
+
+    immediate = {
+        location = {
+            random_province_character = {
+                limit = { NOT = { culture_group = ROOT } }
+                preferred_limit = { has_landed_title = yes higher_tier_than = BARON }
+                preferred_limit = { has_landed_title = yes }
+                preferred_limit = { OR = { has_job_title = yes has_minor_title = yes}}
+                ROOT = {
+                    liege = {
+                        any_realm_character = {
+                            limit = {
+                                Is_really_animal_trigger = yes
+                            }
+                            reverse_opinion = {
+                                modifier = bear_religious_job_zeal
+                                who = PREVPREVPREV
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+character_event = {
+    id = ani_plus.059
+    is_triggered_only = yes
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    desc = NOTIF_GET_ANIMAL_SYMPATHY_EVENT_059_DESC
+
+    option = {
+        name = I_LOVE_ANIMAL_EVENT_059_OPT_1
+
+        add_trait = sympathy_animals_religions
+    }
+    option = {
+        trigger = {
+            ai = no
+        }
+        name = HE_MUST_BE_DREAMING_EVENT_059_OPT_2
+    }
+}
+
+#province religion conversion event
+province_event = {
+    id = ani_plus.060
+    hide_window = yes
+
+    trigger = {
+        OR = {
+            AND = {
+                culture_group = bear_group
+                NOT = { religion = Bears_religion }
+                holder_scope = {
+                    religion = Bears_religion
+                    culture_group = bear_group
+                }
+            }
+            AND = {
+                culture_group = hedgehog_group
+                NOT = { religion = Hedge_religion }
+                holder_scope = {
+                    religion = Hedge_religion
+                    culture_group = hedgehog_group
+                }
+            }
+            AND = {
+                culture_group = panda_group
+                NOT = { religion = Panda_religion }
+                holder_scope = {
+                    religion = Panda_religion
+                    culture_group = panda_group
+                }
+            }
+            AND = {
+                culture_group = duck_group
+                NOT = { religion = Duck_religion }
+                holder_scope = {
+                    religion = Duck_religion
+                    culture_group = duck_group
+                }
+            }
+            AND = {
+                culture_group = elephant_group
+                NOT = { religion = Eleph_religion }
+                holder_scope = {
+                    religion = Eleph_religion
+                    culture_group = elephant_group
+                }
+            }
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 6
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                culture_group = bear_group
+            }
+            religion = Bears_religion
+        }
+        else_if = {
+            limit = {
+                culture_group = hedgehog_group
+            }
+            religion = Hedge_religion
+        }
+        else_if = {
+            limit = {
+                culture_group = panda_group
+            }
+            religion = Panda_religion
+        }
+        else_if = {
+            limit = {
+                culture_group = duck_group
+            }
+            religion = Duck_religion
+        }
+        else_if = {
+            limit = {
+                culture_group = elephant_group
+            }
+            religion = Eleph_religion
+        }
+    }
+}

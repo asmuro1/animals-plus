@@ -1,0 +1,200 @@
+
+
+#probably later updates
+
+Animals_grups = {
+	color = { 0.38 0.38 0.38 }
+	graphical_culture = beargfx #no idea to what i can do here
+	has_coa_on_barony_only = yes
+	crusade_cb = crusade
+
+	hostile_within_group = yes #bear don't go along whith cat..
+	# crusade_cb = None #Animals do not search to extend themself, just survive
+
+	ai_peaceful = yes
+	playable = yes
+	ai_fabricate_claims = yes
+
+	ai_convert_same_group = 0 #culture must make the religion change
+	ai_convert_other_group = 0
+
+
+	Bears_religion = {
+		icon = 60
+		heresy_icon = 1 #No heresiys
+		color = { 0.80 0.80 0.80}
+
+		piety_name = SAVAGIOUS
+		priest_title = ELDERS
+		high_god_name = BEAR_RELIGION_HIGH_GOD
+
+		can_demand_religious_conversion = no #Personalized decision
+		can_retire_to_monastery = no
+
+		priests_can_marry = yes
+		priests_can_inherit = no
+		female_temple_holders = yes
+
+		feminist = no
+		# intermarry = No # Bears do not marry others animals
+		max_wives = 1
+		max_consorts = 3
+		men_can_take_consorts = yes
+		women_can_take_consorts = yes
+
+		allow_looting = yes
+		allow_rivermovement = no
+		aggression = 0.75
+		defensive_attrition = yes
+		ignores_defensive_attrition = no
+		join_crusade_if_bordering_hostile = yes
+
+		peace_prestige_loss	= no
+		peace_piety_gain = 0.015
+		raised_vassal_opinion_loss = yes
+		landed_kin_prestige_bonus = yes
+	}
+	Hedge_religion = {
+		icon = 61
+		heresy_icon = 1 #No heresiys
+		color = { 0.20 0.85 0.80}
+
+		piety_name = SAVAGIOUS
+		priest_title = ELDERS
+		high_god_name = HEDGE_RELIGION_HIGH_GOD
+
+		can_demand_religious_conversion = no #Personalized decision
+		can_retire_to_monastery = no
+
+		priests_can_marry = yes
+		priests_can_inherit = no
+		female_temple_holders = yes
+
+		feminist = no
+		# intermarry = No
+		max_wives = 1
+		max_consorts = 2
+		men_can_take_consorts = no
+		women_can_take_consorts = yes
+
+		allow_looting = yes
+		allow_rivermovement = no
+		aggression = 0.1
+		defensive_attrition = yes
+		ignores_defensive_attrition = no
+		join_crusade_if_bordering_hostile = yes
+		pacifist = yes
+
+		peace_prestige_loss	= no
+		peace_piety_gain = 0.015
+		raised_vassal_opinion_loss = yes
+		landed_kin_prestige_bonus = yes
+	}
+	Panda_religion = {
+		icon = 62
+		heresy_icon = 1 #No heresiys
+		color = { 0.75 0.85 0.80}
+
+		piety_name = SAVAGIOUS
+		priest_title = ELDERS
+		high_god_name = PANDA_RELIGION_HIGH_GOD
+
+		can_demand_religious_conversion = no #Personalized decision
+		can_retire_to_monastery = yes
+
+		priests_can_marry = yes
+		priests_can_inherit = no
+		female_temple_holders = yes
+
+		feminist = no
+		# intermarry = No
+		max_wives = 1
+		max_consorts = 2
+		men_can_take_consorts = yes
+		women_can_take_consorts = yes
+
+		allow_looting = no
+		allow_rivermovement = no
+		has_heir_designation = yes
+		aggression = 0.35
+		defensive_attrition = no
+		ignores_defensive_attrition = no
+		join_crusade_if_bordering_hostile = yes
+
+		peace_prestige_loss	= no
+		raised_vassal_opinion_loss = yes
+		landed_kin_prestige_bonus = yes
+	}
+	Duck_religion = {
+		graphical_culture = duckgfx
+
+		icon = 63
+		heresy_icon = 1 #No heresy
+		color = { 0.63 0.65 0.80 }
+		alternate_start = { always = no }
+
+		piety_name = SAVAGIOUS
+		priest_title = ELDERS
+		high_god_name = DUCK_RELIGION_HIGH_GOD
+
+		can_demand_religious_conversion = no #Personalized decision
+		can_retire_to_monastery = yes
+
+		priests_can_marry = yes
+		priests_can_inherit = no
+		female_temple_holders = yes
+
+		feminist = no
+		max_wives = 1
+
+		men_can_take_consorts = no
+		women_can_take_consorts = no
+
+		allow_looting = no
+		allow_rivermovement = yes
+		has_heir_designation = no
+		aggression = 0.20
+		defensive_attrition = no
+		ignores_defensive_attrition = no
+		join_crusade_if_bordering_hostile = yes
+
+		peace_prestige_loss	= no
+		raised_vassal_opinion_loss = yes
+		landed_kin_prestige_bonus = yes
+	}
+	Eleph_religion = {
+		graphical_culture = elephantgfx
+
+		icon = 64 #to do
+		heresy_icon = 1 #No heresy
+		color = { 0.4 0.4 0.4 }
+		alternate_start = { always = no }
+
+		piety_name = SAVAGIOUS
+		priest_title = ELDERS
+		high_god_name = ELEPH_RELIGION_HIGH_GOD
+
+		can_demand_religious_conversion = no #Personalized decision
+		can_retire_to_monastery = no
+
+		priests_can_marry = no
+		priests_can_inherit = no
+		female_temple_holders = no
+
+		feminist = yes
+		max_wives = 1
+
+		men_can_take_consorts = no
+		women_can_take_consorts = yes
+
+		allow_looting = no
+		# allow_rivermovement = yes
+		has_heir_designation = no
+		aggression = 0.10
+		defensive_attrition = no
+		ignores_defensive_attrition = yes
+		join_crusade_if_bordering_hostile = yes
+
+		peace_prestige_loss	= no
+	}
+}

@@ -1,0 +1,35 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+
+####Bear update
+black_bear;Black bear;Ours noir;;;;;;;;;;;;x
+brown_bear;Brown bear;Ours brun;;;;;;;;;;;;x
+white_bear;White bear;Ours blanc;;;;;;;;;;;;x
+
+
+##bloodlines
+Bear_Converter_bloodline;Primitif bear blood;Sang de l'ours primitif;;;;;;;;;;;;x
+Bear_Converter_bloodline_desc;Bloodline created by bear to make sure that its childrens dosn't loose its bear ability.;Ligné créée par un ours pour être sûre que ses capacités d'ours ne soient pas perdu par ses enfants.;;;;;;;;;;;;x
+
+##custom modifier for bloodline
+bloodline_effect_Bear_converter;Allow to convert people into bear without Â§YBear-man traitÂ§!;Permet de convertir des personnes en ours sans le §Ytrait Homme-ours§!;;;;;;;;;;;;x
+
+##associated tooltip (in scripted trigger)
+Has_bear_bloodline_convertion_ability;Has a bloodline with bear conversion ability;Possède un sang qui débloque la possibilité de transformer les personnages en oursrs;;;;;;;;;;;;x
+
+
+####hedgehog update
+#file renamed 00_ for overriding culture name purpose
+hedgehog_culture;common hedgehog;hérisson commun;;;;;;;;;;;;x
+hedgehog_desert;desert hedgehog;hérisson du désert;;;;;;;;;;;;x
+
+##culture test tooltip
+IS_AN_ANIMAL;Is an animal;Est d'une culture animale;;;;;;;;;;;;x
+
+
+####panda update
+red_panda;Red panda;Panda roux;;;;;;;;;;;;x
+giant_panda;Giant panda;Panda géant;;;;;;;;;;;;x
+
+#### elephant update
+elephant_culture;Asian elephant;Éléphant d'Asie;;;;;;;;;;;;x
+african_elephant;African elephant;Éléphant d'Afrique;;;;;;;;;;;;x

@@ -1,0 +1,131 @@
+
+
+
+hibernation = {
+    cannot_marry = yes
+    pilgrimage = yes
+    is_health = yes
+    random = no
+    customizer = no
+
+    diplomacy = -3
+    health = 4.0
+}
+
+human_bear_illness = {
+    is_illness = yes
+    random = no
+    tolerates_Animals_grups = yes
+    incapacitating = yes
+
+    health_penalty = -1.5
+    ai_ambition = -5
+    sex_appeal_opinion = -10
+}
+
+human_bear = {
+    enatic = yes
+    inherit_chance = 45 #male parent
+    random = no
+
+    tolerates_Animals_grups = yes
+}
+
+succession_bear_heritage_winner = {
+    potential = {
+        age = 16
+        OR = {
+            father = {
+                culture_group = bear_group
+            }
+            mother = {
+                culture_group = bear_group
+            }
+        }
+        culture_group = bear_group
+    }
+    customizer = no
+    random = no
+
+    monthly_character_prestige = 1.0
+    vassal_opinion = 10
+}
+succession_bear_heritage_looser = {
+    potential = {
+        age = 16
+        OR = {
+            father = {
+                culture_group = bear_group
+            }
+            mother = {
+                culture_group = bear_group
+            }
+        }
+        culture_group = bear_group
+    }
+    cannot_inherit = yes
+    random = no
+    customizer = no
+}
+
+bear_hibernation_immortality = {
+    potential = {
+        age = 16
+        culture_group = bear_group
+    }
+
+    customizer = no
+    immortal = yes
+    random = no
+    is_health = yes
+    is_illness = yes
+
+    general_opinion = -5
+    health_penalty = -1.0
+}
+
+bear_religious_right = {
+    potential = {
+        independent = no
+        is_landed = yes
+        liege = {
+            religion_group = Animals_grups
+            NOT = { religion = ROOT }
+            is_theocracy = yes
+        }
+    }
+
+    is_visible = {
+        OR = {
+            FROM = {
+                vassal_of = ROOT
+            }
+            liege = {
+                de_facto_liege = FROM
+            }
+        }
+    }
+}
+
+sympathy_animals_religions = {
+	opposites =  {
+		zealous
+	}
+
+	potential = {
+		NOT = { religion_group = Animals_grups }
+	}
+
+	tolerates_christian = yes		# Tolerates and is tolerated by Christians
+
+	same_opinion_if_same_religion = 5
+
+	customizer = no
+	random = no
+
+    male_insult = INSULT_LOVER_OF_HEATHENS
+	female_insult = INSULT_LOVER_OF_HEATHENS
+	male_insult_adj = INSULT_UNPRINCIPLED
+	female_insult_adj = INSULT_UNPRINCIPLED
+	child_insult_adj = INSULT_STUPID
+}

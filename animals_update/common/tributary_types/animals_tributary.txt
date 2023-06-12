@@ -1,0 +1,82 @@
+
+
+bear_tributary = {
+    tributary_name = BEAR_TRIBUTARY_NAME
+    tributary_plural = BEAR_TRIBTARIES_NAME
+    icon = 10
+
+    suzerain_name = BEAR_SUZERAIN_TRIBUTARY
+    tribute_name = BEAR_TRIBUTE_TRIBUTARY
+
+    breaks_at_suzerain_death = no
+    breaks_at_tributary_death = no
+    tributary_can_be_summoned = yes
+    tributary_must_defend = yes
+    suzerain_can_be_called = yes
+    suzerain_must_defend = yes
+    tributaries_can_infight = yes
+    suzerain_can_join_infighting = no
+    tributaries_can_unite = yes
+    breaks_on_realm_change = no
+
+    cbs_against_suzerain = {
+        independance_bear_tributary_cb
+    }
+    income_tribute_percentage = { value = 0.05 }
+    reinforce_tribute_percentage = { value = 0.1 }
+    prestige_to_suzerain = { value = 0 }
+    prestige_to_tributary = { value = 0 }
+    piety_to_suzerain = { value = 0 }
+    piety_to_tributary = { value = 0 }
+}
+animal_theocratic_unreligious_vassals = {
+    tributary_name = BEAR_UNRELIGOUS_VASSAL_NAME
+    tributary_plural = BEAR_UNRELIGOUS_VASSALS_NAMES
+    icon = 10
+
+    suzerain_name = BEAR_SUZERAIN_UNRELIGOUS
+    tribute_name = BEAR_TRIBUTE_UNRELIGIOUS
+
+    breaks_at_suzerain_death = no
+    breaks_at_tributary_death = no
+    tributary_can_be_summoned = yes
+    tributary_must_defend = yes
+    suzerain_can_be_called = yes
+    suzerain_must_defend = no
+    tributaries_can_infight = yes
+    suzerain_can_join_infighting = yes
+    tributaries_can_unite = yes
+
+    cbs_against_suzerain = {
+		free_tributary_cb
+	}
+
+    income_tribute_percentage = { value = 0.80 }
+    reinforce_tribute_percentage = {
+        value = 0.25
+        modifier = {
+            factor = 2
+
+            ROOT = {
+                opinion = {
+                    who = FROM
+                    value >= 50
+                }
+            }
+        }
+        modifier = {
+            factor = 1.5
+
+            ROOT = {
+                opinion = {
+                    who = FROM
+                    value = 100
+                }
+            }
+        }
+    }
+    prestige_to_suzerain = { value = 0.20 }
+    prestige_to_tributary = { value = -0.20 }
+    piety_to_suzerain = { value = 0.15 }
+    piety_to_tributary = { value = 0.05 }
+}

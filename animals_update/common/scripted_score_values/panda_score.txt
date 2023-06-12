@@ -1,0 +1,466 @@
+panda_faction_trait_score = {
+    modifier = {
+        factor = 0.05
+        trait = content
+    }
+    modifier = {
+        factor = 0.1
+        trait = imbecile
+    }
+    modifier = {
+        factor = 0.075
+        trait = craven
+    }
+    modifier = {
+        factor = 0.2
+        OR = {
+            trait = slow
+            trait = dull
+        }
+    }
+    modifier = {
+        factor = 0.25
+        trait = inbred
+    }
+    modifier = {
+        factor = 0.5
+        trait = kind
+    }
+    modifier = {
+        factor = 0.5
+        trait = charitable
+    }
+    modifier = {
+        factor = 0.75
+        trait = honest
+    }
+    modifier = {
+        factor = 0.75
+        trait = just
+    }
+    modifier = {
+        factor = 0.8
+        trait = humble
+    }
+    modifier = {
+        factor = 1.25
+        trait = proud
+    }
+    modifier = {
+        factor = 1.25
+        trait = brave
+    }
+    modifier = {
+        factor = 1.5
+        trait = arbitrary
+    }
+    modifier = {
+        factor = 1.75
+        trait = impaler
+    }
+    modifier = {
+        factor = 1.75
+        trait = deceitful
+    }
+    modifier = {
+        factor = 2.0
+        trait = envious
+    }
+    modifier = {
+        factor = 2.0
+        trait = greedy
+    }
+    modifier = {
+        factor = 4.0
+        trait = ambitious
+    }
+}
+
+panda_faction_diplo_bureaucrate_score = {
+    modifier = {
+        factor = 0.01
+
+        liege = {
+            any_courtier_or_vassal = {
+                has_minor_title = title_panda_diplo_official
+                diplomacy >= 25
+                opinion = {
+                    who = PREV
+                    value >= 0
+                }
+            }
+        }
+    }
+    modifier = {
+        factor = 0.1
+
+        liege = {
+            any_courtier_or_vassal = {
+                has_minor_title = title_panda_diplo_official
+                diplomacy >= 15
+                opinion = {
+                    who = PREV
+                    value >= 0
+                }
+            }
+        }
+    }
+    modifier = {
+        factor = 0.25
+
+        liege = {
+            any_courtier_or_vassal = {
+                has_minor_title = title_panda_diplo_official
+                diplomacy >= 5
+                opinion = {
+                    who = PREV
+                    value >= 0
+                }
+            }
+        }
+    }
+    modifier = {
+        factor = 1.25
+
+        liege = {
+            any_courtier_or_vassal = {
+                has_minor_title = title_panda_diplo_official
+                diplomacy < 5
+            }
+        }
+    }
+    modifier = {
+        factor = 3.5
+
+        liege = {
+            OR = {
+                NOT = { has_assigned_minor_title = title_panda_diplo_official }
+                any_courtier_or_vassal = {
+                    has_minor_title = title_panda_diplo_official
+                    opinion = {
+                        who = PREV
+                        value < 0
+                    }
+                }
+            }
+        }
+    }
+}
+panda_faction_martial_bureaucrate_score = {
+    modifier = {
+        factor = 0.01
+
+        liege = {
+            any_courtier_or_vassal = {
+                has_minor_title = title_panda_martial_official
+                martial >= 25
+                opinion = {
+                    who = PREV
+                    value >= 0
+                }
+            }
+        }
+    }
+    modifier = {
+        factor = 0.1
+
+        liege = {
+            any_courtier_or_vassal = {
+                has_minor_title = title_panda_martial_official
+                martial >= 15
+                opinion = {
+                    who = PREV
+                    value >= 0
+                }
+            }
+        }
+    }
+    modifier = {
+        factor = 0.25
+
+        liege = {
+            any_courtier_or_vassal = {
+                has_minor_title = title_panda_martial_official
+                martial >= 5
+                opinion = {
+                    who = PREV
+                    value >= 0
+                }
+            }
+        }
+    }
+    modifier = {
+        factor = 1.25
+
+        liege = {
+            any_courtier_or_vassal = {
+                has_minor_title = title_panda_martial_official
+                martial < 5
+            }
+        }
+    }
+    modifier = {
+        factor = 3.5
+
+        liege = {
+            OR = {
+                NOT = { has_assigned_minor_title = title_panda_martial_official }
+                any_courtier_or_vassal = {
+                    has_minor_title = title_panda_martial_official
+                    opinion = {
+                        who = PREV
+                        value < 0
+                    }
+                }
+            }
+        }
+    }
+}
+panda_faction_steward_bureaucrate_score = {
+    modifier = {
+        factor = 0.01
+
+        liege = {
+            any_courtier_or_vassal = {
+                has_minor_title = title_panda_steward_official
+                stewardship >= 25
+                opinion = {
+                    who = PREV
+                    value >= 0
+                }
+            }
+        }
+    }
+    modifier = {
+        factor = 0.1
+
+        liege = {
+            any_courtier_or_vassal = {
+                has_minor_title = title_panda_steward_official
+                stewardship >= 15
+                opinion = {
+                    who = PREV
+                    value >= 0
+                }
+            }
+        }
+    }
+    modifier = {
+        factor = 0.25
+
+        liege = {
+            any_courtier_or_vassal = {
+                has_minor_title = title_panda_steward_official
+                stewardship >= 5
+                opinion = {
+                    who = PREV
+                    value >= 0
+                }
+            }
+        }
+    }
+    modifier = {
+        factor = 1.25
+
+        liege = {
+            any_courtier_or_vassal = {
+                has_minor_title = title_panda_steward_official
+                stewardship < 5
+            }
+        }
+    }
+    modifier = {
+        factor = 3.5
+
+        liege = {
+            OR = {
+                NOT = { has_assigned_minor_title = title_panda_steward_official }
+                any_courtier_or_vassal = {
+                    has_minor_title = title_panda_steward_official
+                    opinion = {
+                        who = PREV
+                        value < 0
+                    }
+                }
+            }
+        }
+    }
+}
+panda_faction_plot_bureaucrate_score = {
+    modifier = {
+        factor = 0.01
+
+        liege = {
+            any_courtier_or_vassal = {
+                has_minor_title = title_panda_plot_official
+                intrigue >= 25
+                opinion = {
+                    who = PREV
+                    value >= 0
+                }
+            }
+        }
+    }
+    modifier = {
+        factor = 0.1
+
+        liege = {
+            any_courtier_or_vassal = {
+                has_minor_title = title_panda_plot_official
+                intrigue >= 15
+                opinion = {
+                    who = PREV
+                    value >= 0
+                }
+            }
+        }
+    }
+    modifier = {
+        factor = 0.25
+
+        liege = {
+            any_courtier_or_vassal = {
+                has_minor_title = title_panda_plot_official
+                intrigue >= 5
+                opinion = {
+                    who = PREV
+                    value >= 0
+                }
+            }
+        }
+    }
+    modifier = {
+        factor = 1.25
+
+        liege = {
+            any_courtier_or_vassal = {
+                has_minor_title = title_panda_plot_official
+                intrigue < 5
+            }
+        }
+    }
+    modifier = {
+        factor = 3.5
+
+        liege = {
+            OR = {
+                NOT = { has_assigned_minor_title = title_panda_plot_official }
+                any_courtier_or_vassal = {
+                    has_minor_title = title_panda_plot_official
+                    opinion = {
+                        who = PREV
+                        value < 0
+                    }
+                }
+            }
+        }
+    }
+}
+panda_faction_religious_bureaucrate_score = {
+    modifier = {
+        factor = 0.01
+
+        liege = {
+            any_courtier_or_vassal = {
+                has_minor_title = title_panda_religious_official
+                learning >= 25
+                opinion = {
+                    who = PREV
+                    value >= 0
+                }
+            }
+        }
+    }
+    modifier = {
+        factor = 0.1
+
+        liege = {
+            any_courtier_or_vassal = {
+                has_minor_title = title_panda_religious_official
+                learning >= 15
+                opinion = {
+                    who = PREV
+                    value >= 0
+                }
+            }
+        }
+    }
+    modifier = {
+        factor = 0.25
+
+        liege = {
+            any_courtier_or_vassal = {
+                has_minor_title = title_panda_religious_official
+                learning >= 5
+                opinion = {
+                    who = PREV
+                    value >= 0
+                }
+            }
+        }
+    }
+    modifier = {
+        factor = 1.25
+
+        liege = {
+            any_courtier_or_vassal = {
+                has_minor_title = title_panda_religious_official
+                learning < 5
+            }
+        }
+    }
+    modifier = {
+        factor = 3.5
+
+        liege = {
+            OR = {
+                NOT = { has_assigned_minor_title = title_panda_religious_official }
+                any_courtier_or_vassal = {
+                    has_minor_title = title_panda_religious_official
+                    opinion = {
+                        who = PREV
+                        value < 0
+                    }
+                }
+            }
+        }
+    }
+}
+
+panda_faction_opinion_score = {
+    modifier = {
+        factor = 0
+        opinion = {
+            value >= 50
+            who = liege
+        }
+    }
+    modifier = {
+        factor = 0.75
+        opinion = {
+            value >= 25
+            who = liege
+        }
+    }
+    modifier = {
+        factor = 1.25
+        opinion = {
+            value < 0
+            who = liege
+        }
+    }
+    modifier = {
+        factor = 2
+        opinion = {
+            value <= 25
+            who = liege
+        }
+    }
+    modifier = {
+        factor = 10
+        opinion = {
+            value <= 50
+            who = liege
+        }
+    }
+}

@@ -1,0 +1,143 @@
+
+title_bear_children = {
+    is_high_prio = yes
+    dignity = 0.9
+    grant_limit = 1
+
+    opinion_effect = 25
+    monthly_salary = 0.075
+    monthly_prestige = 0.5
+    is_unique = yes
+
+    allowed_to_hold = {
+        is_adult = no
+        is_child_of = FROM
+        # is_female = no
+    }
+    allowed_to_grant = {
+        OR = {
+            government = Bear_feudal_gov
+            government = Bear_theocracy_gov
+        }
+        has_regent = no
+        is_incapable = no
+    }
+    revoke_trigger = {
+        always = yes
+    }
+
+    message = no
+}
+
+title_panda_diplo_official = {
+    is_high_prio = yes
+    is_voter = yes
+    dignity = 1.0
+    attribute = diplomacy
+    grant_limit = 1
+    opinion_effect = 10
+    monthly_salary = 0.2
+    monthly_prestige = 0.75
+    is_unique = yes
+    allowed_to_hold = {
+        panda_official_hold_trigger = yes
+    }
+    allowed_to_grant = {
+        panda_official_grant_trigger = yes
+    }
+    # gain_effect = { }
+    revoke_trigger = {
+        panda_official_revoke_trigger = yes
+    }
+    # retire_effect = { }
+    # death_effect = { }
+    message = yes
+}
+title_panda_martial_official = {
+    is_high_prio = yes
+    is_voter = yes
+    dignity = 1.0
+    attribute = martial
+    grant_limit = 1
+    opinion_effect = 10
+    monthly_salary = 0.2
+    monthly_prestige = 0.75
+    is_unique = yes
+    allowed_to_hold = {
+        panda_official_hold_trigger = yes
+    }
+    allowed_to_grant  = {
+        panda_official_grant_trigger = yes
+    }
+    revoke_trigger = {
+        panda_official_revoke_trigger = yes
+    }
+
+    message = yes
+}
+title_panda_steward_official = {
+    is_high_prio = yes
+    is_voter = yes
+    dignity = 1.0
+    attribute = stewardship
+    grant_limit = 1
+    opinion_effect = 10
+    monthly_salary = 0.2
+    monthly_prestige = 0.75
+    is_unique = yes
+    allowed_to_hold = {
+        panda_official_hold_trigger = yes
+    }
+    allowed_to_grant  = {
+        panda_official_grant_trigger = yes
+    }
+    revoke_trigger = {
+        panda_official_revoke_trigger = yes
+    }
+
+    message = yes
+}
+title_panda_plot_official = {
+    is_high_prio = yes
+    is_voter = yes
+    dignity = 1.0
+    attribute = intrigue
+    grant_limit = 1
+    opinion_effect = 10
+    monthly_salary = 0.2
+    monthly_prestige = 0.75
+    is_unique = yes
+    allowed_to_hold = {
+        panda_official_hold_trigger = yes
+    }
+    allowed_to_grant  = {
+        panda_official_grant_trigger = yes
+    }
+    revoke_trigger = {
+        panda_official_revoke_trigger = yes
+    }
+
+    message = yes
+}
+title_panda_religious_official = {
+    is_high_prio = yes
+    is_voter = yes
+    dignity = 1.0
+    attribute = learning
+    grant_limit = 1
+    opinion_effect = 10
+    monthly_salary = 0.2
+    monthly_prestige = 0.75
+    is_unique = yes
+    allowed_to_hold = {
+        panda_official_hold_trigger = yes
+    }
+    allowed_to_grant  = {
+        panda_official_grant_trigger = yes
+    }
+    revoke_trigger = {
+        panda_official_revoke_trigger = yes
+    }
+
+    message = yes
+}

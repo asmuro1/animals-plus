@@ -1,0 +1,180 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+
+#######Beta version modifier
+
+### modifier localisation
+
+animal_buildings_destruction;Human building destruction;Destruction de bâtiments humains;;;;;;;;;;;;;x
+colonization_lvl1;1st colonization step;1ère étape de colonisation;;;;;;;;;;;;;x
+colonization_lvl2;2nd colonization step;2è étape de colonisation;;;;;;;;;;;;;x
+colonization_lvl3;3rd colonization step;3è étape de colonisation;;;;;;;;;;;;;x
+colonization_lvl4;4th colonization step;4è étape de colonisation;;;;;;;;;;;;;x
+colonization_lvl5;5th colonization step;5è étape de colonisation;;;;;;;;;;;;;x
+colonization_lvl6;6th colonization step;6è étape de colonisation;;;;;;;;;;;;;x
+colonization_lvl7;7th colonization step;7è étape de colonisation;;;;;;;;;;;;;x
+colonization_lvl8;8th colonization step;8è étape de colonisation;;;;;;;;;;;;;x
+colonization_lvl9;9th colonization step;9è étape de colonisation;;;;;;;;;;;;;x
+colonization_lvl10;Last colonization step;Dernière étape de colonisation;;;;;;;;;;;;;x
+dragons_war;At war with the dragons;En guerre avec les dragons;;;;;;;;;;;;;x
+dragon_nest;Dragon nest;Nid de dragon;;;;;;;;;;;;;x
+dragon_teaching;Teaching the dragon;Enseignant du dragon;;;;;;;;;;;;;x
+dragon_looted_province_by_war;Plundered by dragons;Pillé par des dragons;;;;;;;;;;;;;x
+Dragon_loose_looting_war;Plundering war lost;Guerre de pillage perdu;;;;;;;;;;;;;x
+dragon_looted_cooldown;Secret modifier;Modificateur secret;;;;;;;;;;;;x
+
+
+###opinion modifier
+
+event_gift;Pacifist gift;Cadeau pacifique;;;;;;;;;;;;;x
+
+
+
+#########BEAR update modifier
+
+#event modifier
+white_bear_religious_modifier;White bear's;Clan des ours blancs;;;;;;;;;;;;x
+brown_bear_religious_modifier;Brown bear's;Clan des ours bruns;;;;;;;;;;;;x
+black_bear_religious_modifier;Black bear's;Clan des ours noirs;;;;;;;;;;;;x
+Haze_cleared;Haze dissipated;Brouillard dissipé;;;;;;;;;;;;x
+Haze_abadonned;Research against haze abandonned;Recherche contre le brouillard abandonnée;;;;;;;;;;;;x
+disappointed_commander_animal;Anormal commander;Commandant honteux;;;;;;;;;;;;x
+savior_rewarded;Savior rewarded;sauveur récompenser;;;;;;;;;;;;x
+savior_ignored;Ignored savior;Sauveur ignoré;;;;;;;;;;;;x
+bear_child_0_3;Small family;Petite famille;;;;;;;;;;;;;x
+bear_child_4_6;Small family;Petite famille;;;;;;;;;;;;;x
+bear_child_7_9;Small family;petite famille;;;;;;;;;;;;;x
+bear_child_10_12;Big family;Grande famille;;;;;;;;;;;;;x
+bear_child_13_15;Big family;Grande famille;;;;;;;;;;;;;x
+bear_child_16_plus;Big family;Grande famille;;;;;;;;;;;;;x
+bear_malaise;Frequents malaises;Malaises fréquents;;;;;;;;;;;;x
+big_bear_malaise;Frequent painful malaises;Malaises douloureux fréquents;;;;;;;;;;;;x
+giant_bear_malaise;Weakened body;Paysans affaiblis;;;;;;;;;;;;x
+bear_province_attack;Bear colonization;Colonisation par les ours;;;;;;;;;;;x
+inhabitant_extermination;Big bears hunt;Grande chasse d'ours;;;;;;;;;;;;x
+recent_bear_depopulation;Underpopulated;Sous-peuplé;;;;;;;;;;;;x
+bear_succession_tournament_cooldown;_;;;;;;;;;;;;;x
+bear_stab_comtale_family_1;Family influence;Influence familiale;;;;;;;;;;;;x
+bear_stab_comtale_family_2;Family influence;Influence familiale;;;;;;;;;;;;x
+bear_stab_comtale_family_3;Family influence;Influence familiale;;;;;;;;;;;;x
+bear_stab_comtale_family_4;Family influence;Influence familiale;;;;;;;;;;;;x
+bear_stab_comtale_family_5;Family influence;Influence familiale;;;;;;;;;;;;x
+bear_stab_comtale_family_6;Family influence;Influence familiale;;;;;;;;;;;;x
+bear_income_family_1;Family influence;Influence familiale;;;;;;;;;;;;x
+bear_income_family_2;Family influence;Influence familiale;;;;;;;;;;;;x
+bear_income_family_3;Family influence;Influence familiale;;;;;;;;;;;;x
+bear_income_family_4;Family influence;Influence familiale;;;;;;;;;;;;x
+bear_income_family_5;Family influence;Influence familiale;;;;;;;;;;;;x
+bear_income_family_6;Family influence;Influence familiale;;;;;;;;;;;;x
+bear_building_family_1;Family influence;Influence familiale;;;;;;;;;;;;x
+bear_building_family_2;Family influence;Influence familiale;;;;;;;;;;;;x
+bear_building_family_3;Family influence;Influence familiale;;;;;;;;;;;;x
+bear_building_family_4;Family influence;Influence familiale;;;;;;;;;;;;x
+bear_building_family_5;Family influence;Influence familiale;;;;;;;;;;;;x
+bear_building_family_6;Family influence;Influence familiale;;;;;;;;;;;;x
+bear_siege_family_1;Family influence;Influence familiale;;;;;;;;;;;;x
+bear_siege_family_2;Family influence;Influence familiale;;;;;;;;;;;;x
+bear_siege_family_3;Family influence;Influence familiale;;;;;;;;;;;;x
+bear_siege_family_4;Family influence;Influence familiale;;;;;;;;;;;;x
+bear_siege_family_5;Family influence;Influence familiale;;;;;;;;;;;;x
+bear_siege_family_6;Family influence;Influence familiale;;;;;;;;;;;;x
+bear_hib_plot_gain;Loyals gards;Gardes loyaux;;;;;;;;;;;;x
+bear_hib_plot_lost;Incompetents gards;Gardes incompétent;;;;;;;;;;;;x
+bear_hib_health_disease;Health hibernation boost;Boost vitale d'hibernation;;;;;;;;;;;;x
+bear_hib_health_health;Health hibernation boost;Boost vitale d'hibernation;;;;;;;;;;;;x
+Animal_theocratic_offensive_war;In offenssive war;En guerre offensive;;;;;;;;;;;;x
+Animal_theocratic_civil_offensive_war;Attacker in civil war;Attanquant de guerre civile;;;;;;;;;;;;x
+Animal_theocratic_civil_defensive_war;Defender in civil war;Défenseur de guerre civile;;;;;;;;;;;;x
+Animal_theocratic_defensive_war;In defensive war;En guerre défensives;;;;;;;;;;;;x
+animal_hord_province_invasion;devastated by animals;Comté dévasté par une horde animal;;;;;;;;;;;;x
+animal_hord_province_invasion_cleaned;Animal hord exterminated;Horde animal exterminé;;;;;;;;;;;;x
+
+#religion modifier
+
+animal_central_holy_site;favored conversion;Conversion favoriser;;;;;;;;;;;;x
+
+#opinion modifier
+
+bear_succession_invitation;Battle invitation;Invitation au tournois;;;;;;;;;;;;x
+bear_chancellor_job_insult;Insult;Insulte;;;;;;;;;;;;x
+bear_chancellor_job_pretender_insult;Insult;Insulte;;;;;;;;;;;;x
+bear_chancellor_job_lieage_repression;Repression;Répression;;;;;;;;;;;;x
+bear_steward_job_cultural_insult;Insilt;Insulte;;;;;;;;;;;;x
+bear_religious_job_zeal;animal zeal;zêle animalier;;;;;;;;;;;;x
+
+#### hedgehog update
+
+#event modifier
+hedge_hedgehog_inhabitant;hedgehogs established;hérissons installés;;;;;;;;;;;;x
+hedge_hedgehog_friendly_inhabitant;friendships hedgehogs established;hérissons amicales installés;;;;;;;;;;;;x
+hedge_hedgehog_hostile_inhabitant;hostiles hedgehogs established;hérissons hostiles installés;;;;;;;;;;;;x
+hedge_friendly_gone;hedgehogs friends gone;amis hérissons partie;;;;;;;;;;;;x
+hedge_friendship_relation_with_hedgehog;hedgehog friend;Ami des hérissons;;;;;;;;;;;;x
+hedgehog_province_in_motion_1;Hedgehog colonization processus;colonisation hérissonne en cour;;;;;;;;;;;;x
+hedgehog_province_in_motion_2;Hedgehog colonization processus;colonisation hérissonne en cour;;;;;;;;;;;;x
+hedgehog_loot_settlement_modifier;Recently looted;Récement pillé;;;;;;;;;;;;;x
+hedgehog_siege_lost_settlment_modifier;Recently besieged;Récemment assiégé;;;;;;;;;;;;x
+hedgehog_siege_lost_province_modifier;Unpeaceful hedgehog;Hérisson agités;;;;;;;;;;;;x
+hedgehog_inhabitant_extermination;Animal extermination;Extermination d'animaux;;;;;;;;;;;;x
+recent_hedge_depopulation;Huge depopulation;Importante dépopulation;;;;;;;;;;;;x
+
+
+##### panda update
+
+#event modifier
+panda_food_imported;food insufficiency;insuffisance alimentaire;;;;;;;;;;;;x
+panda_unraisable_land;Unraisable levies;Levée non mobilisable;;;;;;;;;;;;x
+
+#opinion modifier
+panda_traitor_imprison;traitor;trahison;;;;;;;;;;;;x
+panda_plot_discovered_rivality;Rivality;Rivalité;;;;;;;;;;;;x
+panda_instab_ultimatum;Given autority;Autonomie accordé;;;;;;;;;;;;x
+
+#cooldown modifier
+holy_autority_animal_cooldown;_;;;;;;;;;;;;x
+hedge_province_frind_with_hedgehog;_;;;;;;;;;;;;;x
+panda_conversion_quest_cooldown;_;;;;;;;;;;;;;x
+panda_plot_cooldown;_;;;;;;;;;;;;;x
+panda_instability_war_coolown;_;;;;;;;;;;;;;x
+
+
+#### duck update
+
+#event modifier
+duck_dev_level_0;development level 0;Dévelopement de niveau 0;;;;;;;;;;;;x
+duck_dev_level_1;development level 1;Dévelopement de niveau 1;;;;;;;;;;;;x
+duck_dev_level_2;development level 2;Dévelopement de niveau 2;;;;;;;;;;;;x
+duck_dev_level_3;development level 3;Dévelopement de niveau 3;;;;;;;;;;;;x
+duck_dev_level_4;development level 4;Dévelopement de niveau 4;;;;;;;;;;;;x
+duck_dev_level_5;development level 5;Dévelopement de niveau 5;;;;;;;;;;;;x
+duck_dev_level_6;development level 6;Dévelopement de niveau 6;;;;;;;;;;;;x
+duck_dev_level_7;development level 7;Dévelopement de niveau 7;;;;;;;;;;;;x
+duck_dev_level_8;development level 8;Dévelopement de niveau 8;;;;;;;;;;;;x
+duck_dev_level_9;development level 9;Dévelopement de niveau 9;;;;;;;;;;;;x
+duck_dev_level_10;development level 10;Dévelopement de niveau 10;;;;;;;;;;;;x
+duck_passive_conversion;Aggressive conversion;Convertion agressive;;;;;;;;;;;;x
+duck_HS_Respected_generation;Respected generations;Générations réspectés;;;;;;;;;;;;x
+duck_province_invest_1;County in development;Investissement comtale;;;;;;;;;;;;x
+duck_province_invest_2;County in development;Investissement comtale;;;;;;;;;;;;x
+duck_province_invest_3;County in development;Investissement comtale;;;;;;;;;;;;x
+
+#custom modifier
+duck_max_dev;Max development level;Niveau max de développement;;;;;;;;;;;;x
+duck_dev_speed_increase;Development Growth;Croissance du développement;;;;;;;;;;;;x
+
+
+
+#### elephant update
+eleph_fertility_bonus;Elephant accidient;Accident éléphantin;;;;;;;;;;;;x
+eleph_province_hostility;Elephant tension;Tension éléphantine;;;;;;;;;;;;x
+eleph_researsh_bonus;Successful study;études réussites;;;;;;;;;;;;x
+eleph_epidemic_unrest;Ruler unrespected;Seigneur non respecté;;;;;;;;;;;;x
+eleph_epidemic_garrison;Undisciplined peasant;Paysants indiscipliné;;;;;;;;;;;;x
+eleph_migration_malus;Migration in process;Migration en cour;;;;;;;;;;;;x
+eleph_malaises;Recent conversion;Conversion récente;;;;;;;;;;;;x
+eleph_climate_control_1;good climate;Bon climat;;;;;;;;;;;;x
+eleph_climate_control_2;A bit harsh climate;Climat un peu rude;;;;;;;;;;;;x
+eleph_climate_control_3;Harsh climate;Climat rude;;;;;;;;;;;;x
+eleph_climate_control_4;Very harsh climate;Climat très rude;;;;;;;;;;;;x
+
+#opinion modifier
+eleph_forced_conversion;Forced conversion;Conversion forcé;;;;;;;;;;;;x

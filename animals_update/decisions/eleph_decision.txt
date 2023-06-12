@@ -1,0 +1,952 @@
+
+title_decisions = {
+    start_eleph_conv_quest = {
+        is_high_prio = yes
+        ai_check_interval = 40
+
+        filter = owned #filters dosn't seems to work, unlike what wiki said
+        ai_target_filter = owned
+
+        potential = {
+            has_dlc = "Reapers"
+            tier = COUNT
+            FROM = {
+                OR = {
+                    has_game_rule = {
+                        name = animals_conversion_ways
+                        value = animal_decision
+                    }
+                    AND = {
+                        has_game_rule = {
+                            name = animals_conversion_ways
+                            value = animal_instant
+                        }
+                        ai = no
+                    }
+                }
+                Is_really_animal_trigger = no
+            }
+            location = {
+                Is_really_animal_trigger = no
+                NOT = { has_province_flag = eleph_herd_in_prov }
+                is_capital = yes
+                has_hospital = yes
+                holder_scope = {
+                    character = FROM
+                }
+            }
+        }
+        allow = {
+            FROM = {
+                is_adult = yes
+                is_incapable = no
+                has_regent = no
+                OR = {
+                    lifestyle_traits == 0
+                    trait = scholar
+                }
+            }
+            location = {
+                Eleph_can_live_here_trigger = yes
+                custom_tooltip = {
+                    text = ELEPH_NO_RECENT_STUDY
+                    OR = {
+                        NOT = { has_province_flag = eleph_study_CD }
+                        had_province_flag = {
+                            flag = eleph_study_CD
+                            years = 10
+                        }
+                    }
+                }
+            }
+        }
+        effect = {
+            location = {
+                custom_tooltip = {
+                    text = eleph_unlock_reprod_lab
+                    set_province_flag = eleph_herd_in_prov
+                    clr_province_flag = eleph_study_CD
+                    set_province_flag = eleph_study_CD
+                }
+                province_event = { id = ani_plus.112 years = 5 random = 60 }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+            modifier = {
+                factor = 0.05
+                always = yes
+            }
+            modifier = {
+                factor = 0
+                FROM = { ai_greed < 21 }
+            }
+        }
+    }
+
+    start_eleph_reprod_study = {
+        is_high_prio = yes
+        ai_check_interval = 10
+
+        filter = owned
+        ai_target_filter = owned
+
+        potential = {
+            has_dlc = "Reapers"
+            tier = COUNT
+            holder_scope = {
+                character = FROM
+            }
+            location = {
+                Is_really_animal_trigger = no
+                FROM = { Is_really_animal_trigger = no }
+                has_province_flag = eleph_herd_in_prov
+                NOT = { has_province_flag = eleph_human_reprod_researsh }
+                has_hospital = yes
+            }
+        }
+        allow = {
+            location = {
+                hospital_has_building = ho_eleph_reprod_lab
+            }
+            FROM = {
+                is_incapable = no
+                has_regent = no
+            }
+        }
+        effect = {
+            location = {
+                if = {
+                    limit = {
+                        has_game_rule = {
+                            name = animals_conversion_ways
+                            value = animal_instant
+                        }
+                    }
+                    if = {
+                        limit = {
+                            Asian_eleph_can_live_trigger = yes
+                        }
+                        FROM = { culture = elephant_culture }
+                    }
+                    else = {
+                        FROM = { culture = african_elephant }
+                    }
+                }
+                else = {
+                    custom_tooltip = {
+                        text = ELEPH_START_RESEARSH
+                        set_province_flag = eleph_human_reprod_researsh
+                    }
+                }
+            }
+        }
+        ai_will_do = { factor = 1 modifier = { factor = 0.5 always = yes } }
+    }
+
+    eleph_construct_hospital = {
+        is_high_prio = no
+
+        ai_check_interval = 6
+
+        filter = owned ###does they work? or just in wiki?
+        ai_target_filter = owned
+
+        potential = {
+            has_dlc = "Reapers"
+            tier = COUNT
+            location = {
+                has_hospital = no
+                holder_scope = {
+                    character = FROM
+                }
+            }
+            FROM = {
+                culture_group = elephant_group
+                is_feudal = yes
+            }
+        }
+
+        allow = {
+            FROM = {
+                culture_group = elephant_group
+                wealth = 45
+                has_regent = no
+                is_female = yes
+            }
+            location = {
+                has_hospital = no
+            }
+        }
+
+        effect = {
+            location = {
+                FROM = {
+                    wealth = -45
+                    create_hospital = PREV
+                }
+            }
+        }
+
+        ai_will_do = { factor = 1 modifier = { factor = 0.95 always = yes } }
+    }
+
+    eleph_migration = {
+        is_high_prio = no
+
+        ai_check_interval = 12
+
+        filter = owned
+        ai_target_filter = owned
+
+        potential = {
+            FROM = {
+                culture_group = elephant_group
+            }
+            tier = COUNT
+            location = {
+                has_settlement_construction = no
+                # num_of_empty_holdings = 1
+
+                NOT = { has_province_modifier = eleph_migration_malus }
+                holder_scope = {
+                    character = FROM
+                }
+            }
+        }
+
+        allow = {
+            FROM = {
+                culture_group = elephant_group #for tooltip
+                is_female = yes                #A male can't ordrer an elephant herd
+                has_regent = no
+                wealth = 275
+                religion = Eleph_religion
+                war = no
+            }
+            location = {
+                # OR = {
+                    conditional_tooltip = {
+                        trigger = {
+                            FROM = { culture = elephant_culture }
+                        }
+                        OR = {
+                            Asian_eleph_can_live_trigger = yes
+                            c_kondana = {
+                                holder_scope = {
+                                    religion = Eleph_religion
+                                }
+                            }
+                            culture = FROM
+                        }
+                    }
+                    conditional_tooltip = {
+                        trigger = {
+                            FROM = { culture = african_elephant }
+                        }
+                        OR = {
+                            African_eleph_can_live_trigger = yes
+                            c_gezira = {
+                                holder_scope = {
+                                    religion = Eleph_religion
+                                }
+                            }
+                            culture = FROM
+                        }
+                    }
+                #     capital_holding = { holding_type = tribal }
+                # }
+            }
+        }
+
+        effect = {
+            FROM = {
+                wealth = -275
+                if = {
+                    limit = { is_tribal = yes }
+                    set_government_type = Eleph_feudal_gov
+                }
+            }
+            location = {
+                add_province_modifier = {
+                    name = eleph_migration_malus
+                    years = 1
+                }
+                if = {
+                    limit = {
+                        NOT = { culture = FROM } #conditionnal tooltip, not needed
+                    }
+                    random = {
+                        chance = 85
+
+                        culture = FROM
+                    }
+                }
+                if = {
+                    limit = {
+                        num_of_empty_holdings = 1
+                    }
+                    random_list = {
+                        15 = {
+                            custom_tooltip = {
+                                text = eleph_build_castle
+                                build_holding = { type = castle }
+                            }
+                        }
+                        3 = {
+                            custom_tooltip = {
+                                text = eleph_build_city
+                                build_holding = { type = city }
+                            }
+                        }
+                        2 = {
+                            custom_tooltip = {
+                                text = eleph_build_temple
+                                build_holding = { type = temple }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+
+                FROM = {
+                    OR = {
+                        NOT = { wealth = 2500 }
+                        war = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+
+                location = {
+                    NOT = { culture = FROM }
+                    NOT = { num_of_empty_holdings = 1 }
+                }
+            }
+        }
+    }
+
+    eleph_climate_change = {
+        is_high_prio = no
+
+        ai_check_interval = 12
+
+        filter = sub_realm_owned
+        ai_target_filter = sub_realm_owned
+
+        potential = {
+            FROM = {
+                culture_group = elephant_group
+                religion = Eleph_religion
+                capital_scope = {
+                    has_hospital = yes
+                    hospital_has_building = ho_eleph_climat_lab
+                }
+            }
+            tier = COUNT
+            OR = {
+                FROM = { completely_controls = PREV }
+                ROOT = { location = { controlled_by = FROM } }
+            }
+            location = {
+                Eleph_has_climat_control_trigger = no
+            }
+        }
+
+        allow = {
+            FROM = {
+                has_regent = no
+                OR = {
+                    completely_controls = PREV
+                    ROOT = { location = { controlled_by = FROM } }
+                }
+            }
+            location = {
+                # controlled_by = FROM
+                custom_tooltip = {
+                    text = ELEPH_NO_ONE_CHANGE_CLIMATE
+                    Eleph_has_climat_control_trigger = no
+                }
+            }
+        }
+
+        effect = {
+            FROM = { save_event_target_as = eleph_climate_controller }
+            location = {
+                show_scope_change = no
+
+                add_province_modifier = {
+                    name = eleph_climate_control_2
+                    duration = -1
+                }
+
+                province_event = { id = ani_plus.118 months = 3 }
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+
+                FROM = {
+                    OR = {
+                        independent = no
+                        war = no
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+
+                NOT = {
+                    location = {
+                        any_neighbor_province = {
+                            controller = {
+                                war_with = FROM
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    eleph_climate_reset = {
+        is_high_prio = no
+
+        ai_check_interval = 12
+
+        filter = sub_realm_owned
+        ai_target_filter = sub_realm_owned
+
+        potential = {
+            tier = COUNT
+            location = {
+                Eleph_has_climat_control_trigger = yes
+                NOR = {
+                    has_province_flag = eleph_climate_return_normal
+                    has_province_modifier = eleph_climate_control_1
+                    has_province_modifier = eleph_climate_control_2
+                }
+            }
+        }
+
+        allow = {
+            FROM = {
+                culture_group = elephant_group
+                capital_scope = {
+                    hospital_has_building = ho_eleph_climat_lab
+                }
+            }
+        }
+
+        effect = {
+            custom_tooltip = {
+                text = ELEPH_CLIMATE_TT_RETURN_NORMAL
+                location = {
+                    set_province_flag = eleph_climate_return_normal
+                }
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+
+                FROM = {
+                    war = yes
+                }
+            }
+            modifier = {
+                factor = 0
+
+                location = {
+                    any_neighbor_province = {
+                        controller = {
+                            war_with = FROM
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    eleph_spawn_epidemy = {
+        is_high_prio = no
+
+        filter = all
+        ai_target_filter = none
+        ai_check_interval = 30
+
+        potential = {
+            tier = COUNT
+            FROM = {
+                ai = no
+                culture_group = elephant_group
+                religion = Eleph_religion
+                capital_scope = { hospital_has_building = ho_eleph_disease_lab }
+                c_radha = { holder_scope = { religion = Eleph_religion } }
+            }
+            location = {
+                OR = {
+                    holder_scope = { character = FROM }
+                    holder_scope = { is_vassal_or_below_of = FROM }
+                    any_neighbor_province = {
+                        OR = {
+                            holder_scope = { character = FROM }
+                            holder_scope = { is_vassal_or_below_of = FROM }
+                        }
+                    }
+                }
+            }
+        }
+
+        allow = {
+            FROM = {
+                capital_scope = { hospital_has_building = ho_eleph_disease_lab }
+                has_regent = no
+                wealth = 250
+            }
+            location = {
+                has_epidemic = no
+            }
+        }
+
+        effect = {
+            location = {
+                random = {
+                    chance = 100
+                    modifier = {
+                        factor = 0.75
+                        hospital_level = 1
+                    }
+                    modifier = {
+                        factor = 0.667
+                        hospital_level = 2
+                    }
+                    modifier = {
+                        factor = 0.5
+                        hospital_level = 3
+                    }
+                    modifier = {
+                        factor = 0.5
+                        hospital_level = 4
+                    }
+                    modifier = {
+                        factor = 0.5
+                        hospital_level = 5
+                    }
+                    modifier = {
+                        factor = 0.5
+                        hospital_level = 6
+                    }
+
+                    custom_tooltip = {
+                        text = ELEPH_TT_DISEASE_SPAWN
+                        random_list = {
+                            1 = { spawn_disease = tuberculosis  }
+                            1 = { spawn_disease = typhoid_fever }
+                            1 = { spawn_disease = typhus        }
+                            1 = { spawn_disease = measles       }
+                            1 = { spawn_disease = small_pox     }
+                            1 = { spawn_disease = syphilis      }
+                        }
+                    }
+                }
+            }
+        }
+
+        ai_will_do = { factor = 0 }
+    }
+}
+
+decisions = {
+    adopt_eleph_religion = {
+        is_high_prio = yes
+        ai_check_interval = 3
+
+        potential = {
+            culture_group = elephant_group
+            NOT = { religion = Eleph_religion }
+            can_change_religion = yes
+        }
+        allow = {
+            is_adult = yes
+            culture_group = elephant_group
+            has_regent = no
+            is_incapable = no
+            can_change_religion = yes
+        }
+        effect = {
+            religion = Eleph_religion
+            if = {
+                limit = {
+                    OR = {
+                        independent = yes
+                        liege = { NOT = { religion = Eleph_religion } }
+                    }
+                }
+                if = {
+                    limit = {
+                        has_game_rule = {
+                            name = animals_bonus_levy
+                            value = Few
+                        }
+                    }
+                    spawn_unit = {
+                        province = capital_scope
+                        home = capital_scope
+                        owner = ROOT
+                        leader = none
+                        troops = {
+                            war_elephants = { 1000 1000 }
+                        }
+                        attrition = 0.1
+                        maintenance = no
+
+                    }
+                }
+                else_if = {
+                    limit = {
+                        has_game_rule = {
+                            name = animals_bonus_levy
+                            value = Normal
+                        }
+                    }
+                    spawn_unit = {
+                        province = capital_scope
+                        home = capital_scope
+                        owner = ROOT
+                        leader = none
+                        troops = {
+                            war_elephants = { 3000 3000 }
+                        }
+                        attrition = 0.1
+                        maintenance = no
+
+                    }
+                }
+                else_if = {
+                    limit = {
+                        has_game_rule = {
+                            name = animals_bonus_levy
+                            value = Many
+                        }
+                    }
+                    spawn_unit = {
+                        province = capital_scope
+                        home = capital_scope
+                        owner = ROOT
+                        leader = none
+                        troops = {
+                            war_elephants = { 7000 7000 }
+                        }
+                        attrition = 0.05
+                        maintenance = no
+
+                    }
+                }
+            }
+            set_government_type = Eleph_feudal_gov
+            character_event = { id = ani_plus.116 }
+        }
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+
+                independent = no
+                liege = {
+                    NOT = { religion = Eleph_religion }
+                }
+            }
+        }
+    }
+
+    ##create bear holy order (decision created on hedgehogg update (version 2.0 ))
+    create_immortal_herd = {
+        only_playable = yes
+        ai_check_interval = 30
+
+        is_high_prio = yes
+
+        potential = {
+            NOT = { is_title_active = d_immortal_herd }
+            independent = yes
+            religion = Eleph_religion
+            culture_group = elephant_group
+            NOT = {	has_alternate_start_parameter = { key = religion_names value = random } }
+        }
+        allow = {
+            higher_tier_than = DUKE
+            war = no
+            piety = 350
+        }
+        effect = {
+            piety = -350
+            prestige = 600
+            custom_tooltip = {
+                text = CREATED_HOLY_ORDER_ELEPH_TOOLTIP
+
+                activate_title = { title = d_immortal_herd status = yes }
+                create_character = {
+                    random_traits = no
+                    dynasty = random
+                    religion = ROOT
+                    culture = ROOT
+                    female = no
+                    age = 25
+                    trait = brilliant_strategist
+                    trait = zealous
+                    trait = humble
+                    trait = ambitious
+                    trait = strategist
+                    trait = holy_warrior
+                }
+                new_character = {
+                    wealth = 500
+                    d_immortal_herd = {
+                        grant_title = PREV
+                    }
+                    set_government_type = order_government
+                    create_character = {
+						random_traits = yes
+						dynasty = random
+						religion = ROOT
+						culture = ROOT
+						female = no
+						age = 20
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						religion = ROOT
+						culture = ROOT
+						female = no
+						age = 19
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						religion = ROOT
+						culture = ROOT
+						female = no
+						age = 18
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						religion = ROOT
+						culture = ROOT
+						female = no
+						age = 17
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						religion = ROOT
+						culture = ROOT
+						female = no
+						age = 16
+					}
+                }
+                any_player = {
+                    narrative_event = { id = ani_plus.070 }
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0.4
+            }
+            modifier = {
+                factor = 0.5
+                trait = cynical
+            }
+        }
+    }
+
+    eleph_abdicate = {
+        only_playable = yes
+        ai_check_interval = 20
+
+        is_high_prio = no
+
+        potential = {
+            culture_group = elephant_group
+            is_female = no
+        }
+        allow = {
+            culture_group = elephant_group
+            is_female = no
+        }
+        effect = {
+            abdicate = yes
+        }
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_child = {
+                        is_female = yes
+                        is_adult = yes
+                    }
+                }
+
+            }
+        }
+    }
+
+    eleph_become_pregnant = {
+        only_playable = yes
+        ai_check_interval = 12
+
+        is_high_prio = yes
+
+        potential = {
+            culture_group = elephant_group
+            capital_scope = {
+                has_hospital = yes
+                hospital_has_building = ho_eleph_reprod_lab
+            }
+            is_pregnant = no
+        }
+        allow = {
+            is_adult = yes
+            is_female = yes
+            has_regent = no
+            is_married = yes
+            OR = {
+                prestige = 300
+                AND = {
+                    religion = Eleph_religion
+                    piety = 150
+                }
+            }
+        }
+        effect = {
+            impregnate = spouse
+
+            random_list = {
+                1 = {
+                    trigger = { prestige = 300 }
+                    prestige = -300
+                }
+                1 = {
+                    trigger = { religion = Eleph_religion piety = 150 }
+                    piety = -150
+                }
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_child = {
+                        is_female = yes
+                        OR = {
+                            is_married_matrilineally = yes
+                            is_married = no
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+targetted_decisions = {
+    eleph_labo_transforformation = {
+        is_high_prio = no
+        ai_check_interval = 11
+        filter = sub_realm
+        ai_target_filter = sub_realm
+
+        from_potential = {
+            culture_group = elephant_group
+            is_adult = yes
+        }
+        potential = {
+            NOT = { culture = FROM }
+            location = {
+                has_hospital = yes
+                hospital_has_building = ho_eleph_trasfo_lab_1
+                holder_scope = {
+                    OR = {
+                        character = FROM
+                        is_vassal_or_below_of = FROM
+                    }
+                }
+            }
+        }
+        allow = {
+            location = {
+                hospital_has_building = ho_eleph_trasfo_lab_1
+                FROM = {
+                    has_regent = no
+                    conditional_tooltip = {
+                        trigger = {
+                            PREV = { NOT = { hospital_has_building = ho_eleph_trasfo_lab_2 } }
+                        }
+                        prestige = 1000
+                        piety = 300
+                    }
+                    conditional_tooltip = {
+                        trigger = { PREV = { hospital_has_building = ho_eleph_trasfo_lab_2 } }
+                        prestige = 300
+                    }
+                }
+            }
+        }
+        effect = {
+            FROM = {
+                if = {
+                    limit = {
+                        ROOT = {
+                            location = {
+                                hospital_has_building = ho_eleph_trasfo_lab_2
+                            }
+                        }
+                    }
+                    prestige = -300
+                }
+                else = {
+                    prestige = -650
+                    piety = -300
+                }
+            }
+            culture = FROM
+            opinion = {
+                name = eleph_forced_conversion
+                who = FROM
+            }
+        }
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0.1
+                always = yes
+            }
+        }
+    }
+}

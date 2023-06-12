@@ -1,0 +1,15 @@
+
+
+Bear_Converter_bloodline = {
+    inheritance = all_descendants
+    matrilineal_override = no
+
+
+    active = {
+        culture_group = bear_group
+    }
+
+    monthly_character_prestige = 0.1
+    bloodline_effect_Bear_converter = 1
+    flags = { Bear_converter_bloodline }
+}

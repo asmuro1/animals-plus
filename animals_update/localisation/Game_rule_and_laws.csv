@@ -1,0 +1,46 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+
+##gamerule
+ANIMALS_APPEARANCE;Animal appearance ways;Mode d'apparition des animaux;;;;;;;;;;;;;x
+RULE_OPTION_DECISION_MOD;Decision;Décision;;;;;;;;;;;;;x
+RULE_OPTION_DECISION_MOD_DESC;You can choose to launch animal conversion quest by decision. It makes easier the use of the mod;Il est possible de lancer la quête de conversion animal par décision. Cela donne facilement l'accès aux fonctionnalités du mod.;;;;;;;;;;;;;x
+RULE_OPTION_EVENTS_MOD;Events;Évènements;;;;;;;;;;;;;x
+RULE_OPTION_OFF_MOD;None;Aucune;;;;;;;;;;;;;x
+RULE_OPTION_EVENTS_MOD_DESC;Only randoms events can launch animal quest decision. Makes harder to become an animal but IAs still has chances to become animals;Seuls des évènements aléatoires permettent de lancer la quête de conversion animale. Ce qui fait qu'il est plus dur de devenir un animal, mais peut créer plus d'animaux chez les IAs.;;;;;;;;;;;;;x
+RULE_OPTION_OFF_MOD_DESC;No transformation into animals (usually if played in alternate start where animals already exist);Aucune conversion possible (principalement si on charge une sauvegarde alternative où il y a déjà des animaux);;;;;;;;;;;;;x
+RULE_OPTION_INSTANT_MOD;Instant;Instantanée;;;;;;;;;;;;x
+RULE_OPTION_INSTANT_MOD_DESC;The quest decision now instantly convert player to an animal but can't be picked by AI;La décision converti instantanément en animal mais ne peut plus être choisi par l'IA;;;;;;;;;;;;x
+RULE_ANIMALS_LEVY;Animal conversion army;Armée bonus de conversion animal;;;;;;;;;;;;x
+RULE_NO_ANI_LEVY;None;Aucune;;;;;;;;;;;;x
+RULE_NO_ANI_LEVY_DESC;Convert yourself to an animal religion is easy? Then no helping army nedded;Se convertir à une religion animale est facile, donc je n'en ai pas besoin;;;;;;;;;;;;x
+RULE_ANI_LEVY_1500;small army;Petite armée;;;;;;;;;;;;x
+RULE_ANI_LEVY_1500_DESC;Having a small army to help during transformation to help you defend against non-animal AI;On récupère une petite armée à la conversion en religion animal, pour nous assister lors de notre défense face à l'IA non animale;;;;;;;;;;;;x
+RULE_ANI_LEVY_4000;Normal army;Armée normale;;;;;;;;;;;;x
+RULE_ANI_LEVY_4000_DESC;Having a army to help during transformation to help you defend against non-animal AI;On récupère une armée à la conversion en religion animal, pour nous assister lors de notre défense face à l'IA non animale;;;;;;;;;;;;x
+RULE_ANI_LEVY_10000;Big army;Grosse armée;;;;;;;;;;;;x
+RULE_ANI_LEVY_10000_DESC;Having a big army to help during transformation to help you defend against non-animal AI;On récupère une grosse armée à la conversion en religion animal, pour nous assister lors de notre défense face à l'IA non animale;;;;;;;;;;;;x
+
+
+##laws
+panda_vassal_allowed;Bureaucratic vassals;Vassaux bureaucratique;;;;;;;;;;;;x
+panda_vassal_unallowed;None;Aucun;;;;;;;;;;;;x
+panda_vassal_unallowed_desc;The only vassal allowed are the barons;Les seuls vassaux tolérés sont les barons;;;;;;;;;;;;x
+panda_vassal_count_allowed;Count allowed;Comtes autorisés;;;;;;;;;;;;x
+panda_vassal_count_allowed_desc;Only panda bureaucratic count are allowed to stay in your realm;Seul les comtes panda et bureaucratiques sont autorisé à rester vassal;;;;;;;;;;;;x
+panda_vassal_all_allowed;Any;Total;;;;;;;;;;;;x
+panda_vassal_all_allowed_desc;Any panda bureaucratic vassal are allowed in your realm;Tous type de vassaux panda bureaucratiques sont autorisés dans le royaume;;;;;;;;;;;;x
+panda_expension_size;Realm expension;Expension du domaine;;;;;;;;;;;;x
+panda_expension_size_law;Small;Petite;;;;;;;;;;;;x
+panda_expension_size_law_desc;Small expension allowed;Petite expension autorisé;;;;;;;;;;;;x
+panda_expension_size_medium;Medium;Moyenne;;;;;;;;;;;;x
+panda_expension_size_medium_desc;Medium expension allowed;Moyenne expension autorisé;;;;;;;;;;;;x
+panda_expension_size_huge;Big;Grande;;;;;;;;;;;;s
+panda_expension_size_huge_desc;Big expension allowed;Grande expension autorisé;;;;;;;;;;;;x
+
+##laws tooltip
+ALL_BUREAUCRATIC_VASSAL_UNACCEPTED;All panda bureaucratic vassal now count as vassal;Tous les vassaux bureaucratiques pandas comptent en tant que vassal;;;;;;;;;;;;x
+PANDA_TT_ALL_BUREAUCRATIC_COUNT_ACCEPTED;Only panda duke and king vassal count as vassal;Seulement les ducs et les rois pandas comptent en tant que vassaux;;;;;;;;;;;;x
+PANDA_TT_ALL_BUREAUCRATIC_VASSAL_ACCEPTED;No panda bureaucratic vassals count in vassal limit;Aucun vassal bureaucratique panda ne compte dans la limite de vassaux;;;;;;;;;;;;x
+PANDA_UNLOCK_INSTABILITY_FACTION;Vassals can create or join instability faction;Les vassaux peuvent créer ou rejoindre les factions d'instabilité;;;;;;;;;;;;x
+PANDA_INSTABILITY_FACT_TRIGGER;Did not recently loose autority from instability faction;N'a pas récemment perdu de l'autorité dû à la faction d'instabilité;;;;;;;;;;;;x
+PANDA_INDEPENDENCE_ELVOLVED;Independences factions now lower vassal acceptance law;Les factions d'indépendance réduisent maintenant le niveau de la loi d'acceptation de vassaux;;;;;;;;;;;;x

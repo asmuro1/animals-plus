@@ -1,0 +1,58 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+
+DESC_EVT_078_GOES_SEARCH_FOR_DISH;Some rumor says that, at the top of a certain mountain, their is a special dish that grant ability;Des rumeurs rapportent qu'au sommet d'une certaine montagne se trouve un plat qui renforce les capacités de celui qui le mange;;;;;;;;;;;;x
+OPT_1_EVT_078_I_NEED_TO_EAT_IT;I should go eat it;Je devrais aller le manger rapidement;;;;;;;;;;;;x
+OPT_2_EVT_078_IT_IS_NOTHING;It can't be true!;Ce n'est que des foutaises;;;;;;;;;;;;x
+DESC_EVT_079_EAT_WHAT;You finally got up. You see the rumored dish.\nWait, why is there several of them? Only one should be the one!;Je suis enfin arrivé au sommet! Je vais enfin pouvoir manger le fameux plat!\nHeu... pourquoi il y en a plusieurs? Je ne devrais en manger qu'un.;;;;;;;;;;;;x
+OPT_1_EVT_079_SAFE_ONE;The first one should be safe;Le premier devrait être sûre;;;;;;;;;;;;x
+OPT_2_EVT_079_RED_PANDA_ONE;The second one because animals like it.;Le second car les animaux l'aiment bien.;;;;;;;;;;;;x
+OPT_3_EVT_079_GIANT_PANDA_ONE;Those bamboos should be the one!;Ces bambous devraient être le vrai plats.;;;;;;;;;;;;x
+DESC_EVT_080_RUMORS_WERE_TRUE;The rumors were trus, My ability increased!;Les rumeurs étaient vrais, mes habilités se sont améliorées;;;;;;;;;;;;x
+OPT_EVT_080_I_GOT_STATS;Good news;Bonnes nouvelles;;;;;;;;;;;;x
+DESC_EVT_081_GOT_FOOD_POISONNING;I feel really bad since a few days... it must be that strange dish;Je me sens mal depuis quelques jours... Ce doit être à cause de l'étrange plat de la dernière fois!;;;;;;;;;;;;x
+OPT_1_EVT_080_I_WILL_SURVIVE;I will probably live long!;Je vais probablement survivre!;;;;;;;;;;;;x
+OPT_2_EVT_081_I_SHOULD_BE_TREATED;I should get some treatments;Je devrais avoir des traitmements;;;;;;;;;;;;x
+DESC_EVT_082_GETTING_IMMUNE_TO_CONVERSION;It seems that the rumors were totally false, my ability didn't event change!;Il semblerait que les rumeurs étaient totalement fausses, mes capacités ne se sont pas améliorer avec ce plât!;;;;;;;;;;;;x
+OPT_EVT_082_IT_WAS_NOTHING;I should not have listened those rumors;Je n'aurais jamais du écouter ces rumeurs;;;;;;;;;;;;x
+DESC_EVT_83_BECOME_PANDA;Did those rumors said that increased ability means become a panda?!;Est-ce que ces rumeurs signifiaient qu'il nous transformait en panda?!;;;;;;;;;;;;x
+OPT_EVT_083_BECOME_PANDA;Probably;Probablement;;;;;;;;;;;;x
+DESC_EVT_084_REMVING_FP;I finally got rid of the rumored dish issues;J'ai enfin réussi à me soigner des effets secondaires du fameux plat!;;;;;;;;;;;;x
+OPT_EVENT_084_FINALLY;Good!;Bien!;;;;;;;;;;;;x
+DESC_1_EVT_085_PANDA_CONVERSION;After months of food influence, the inhabitants of [This.GetName] have become pandas!;Après des mois d'influence, les habitants de [This.GetName] ont consommé les aliments pandas...;;;;;;;;;;;;x
+DESC_2_EVT_085_LOST_FD_IMPORT;The population in [This.GetName] dosn't need to import their panda food!;La population de [This.GetName] n'ont plus besoin d'acheter leur nourriture de panda dans les montagnes!;;;;;;;;;;;;x
+DESC_3_EVT_085_NO_NEED_FD_IMPORT;The pandas in [This.GetName] are gone, They don't need to import any type of food!;Comme les pandas de [This.GetName] ont été exterminés, les habitants de [This.GetName] n'ont plus besoin d'importer leur nourriture des montagnes!;;;;;;;;;;;;x
+OPT_EVENT_085_GOOD;Good!;Bien!;;;;;;;;;;;;x
+DESC_EVT_086_PANDA_PLOT_LEAKED;With the discovery of a huge amount of food, your plot has been revealed;Avec la découverte de nourriture panda, le complot visant à convertir quelqu'un en ours a été révélé;;;;;;;;;;;;x
+OPT_EVT_086_PLOT_DISCOVERED;It will not stop me!;Ca ne va pas me stopper;;;;;;;;;;;;x
+DESC_EVT_087_PLOT_TRAITOR;A human backer has revealed the totality of my plot;Il semblerai qu'un humaiun qui m'assistait dans mon complot l'a totallement révélée!;;;;;;;;;;;;x
+OPT_EVT_087_WHAT_A_TRAITOR;Who is this traitor?!;Qui est ce traitre?;;;;;;;;;;;;x
+DESC_EVT_088_PANDA_PLOT_START;The preparation are done, we can finally force [plot_target_char.GetTitledName] to eat the panda transformation dish. In abohut a weak, [plot_target_char] will eat alone!;Les préparations sont fini, nous pouvons profiter que dans environ une semaine, [plot_target_char.GetTitledName] mangera seul, ce sera l'occasion de lui faire manger les plats de transformation en panda;;;;;;;;;;;;x
+OPT_1_EVT_088_LETS_START;It will be a good opportunity;C'est l'opportunité idéal;;;;;;;;;;;;x
+OPT_2_EVT_088_ITS_TOO_SOON;We should wait more, it could probably failed;Nous devrions attendre davantage, c'est trop risquer pour le moment;;;;;;;;;;;;x
+DESC_EVT_089_PANDA_PLOT_BANQUET;I go to eat, except the fact that this evening almost no one is with me, everything is normal. But as I start tp eat, I feel that something is wrong...;Ce soir, en allant manger, j'ai l'impression que quelque chose se passe mal. Tout se passe comme d'habitude, si on oublie le fait que contrairement à d'habitude, je suis quasiment seul...;;;;;;;;;;;;x
+OPT_EVT_089_LETS_GO_EAT;Wait, what is this in my dish?;Attendez, qu'y a-t-il dans mon plat?!;;;;;;;;;;;;x
+DESC_1_EVT_090_PANDA_PLOT_FAILED_DISCOVERED;I don't now what it was, but I did found who put it here;Je ne sais pas ce que c'était, mais j'ai au moins pu retrouver qui a mis ça là;;;;;;;;;;;;x
+DESC_2_EVT_090_PANDA_PLOT_DISCOVERED;I found it too late, but at least I found the criminal;Je l'ai vu trop tard, mais au moins, j'ai pu voir qui en était à l'origine!;;;;;;;;;;;;x
+DESC_3_EVT_090_PANDA_PLOT_SUCCEED;I found it too late as I ate a small part before. Wrost of it, I don't even now who put it here...;J'ai trouver ce plat trop tard, j'en ai manger un petit bous, pire, je n'ai même pas pu trouver qui l'a mis là;;;;;;;;;;;;x
+DESC_4_EVT_090_PANDA_PLOT_FAILED;I don't now who try to poison me, but at least, I didn't eat it;Je ne sais pas qui a essayé de m'empoisonner, mais je n'ai rien manger de cela;;;;;;;;;;;;x
+OPT_EVT_90_PANDA_PLOT_RESULT;I should be more prudent in future;Je devrais être plus prudent dans le future;;;;;;;;;;;;x
+DESC_1_EVT_091_NOTIF_PLOT_SUCCEES_DISCOVERED;We could give the dish and transform [From.GetTitledName] into a panda, even if he discovered us;Victoire, nous avons réussi a transformer [From.GetTitledName] en panda, même s'il nous a démasqué;;;;;;;;;;;;x
+DESC_2_EVT_091_NOTIF_PLOT_SUCCEES;We could give the dish and transform [From.GetTitledName] into a panda;Victoire, nous avons réussi a transformer [From.GetTitledName] en panda;;;;;;;;;;;;x
+DESC_3_EVT_091_NOTIF_PLOT_FAILED_DISCOVERED;We couldn't transform [From.GetTitledName] into a panda, wrost, he could determine it was us who tried it;Nous n'avons pas réussi à transformer [From.GetTitledName] en panda, mais en plus, il a découvert qu'on était derrière cette tentative;;;;;;;;;;;;x
+DESC_4_EVT_091_NOTIF_PLOT_FAILED;We couldn't transform [From.GetTitledName] into a panda...;Nous n'avons pas réussi à transformer [From.GetTitledName] en panda...;;;;;;;;;;;;x
+OPT_EVT_091_OKAY_NOTIF;Finally some results...;Enfin des résultats;;;;;;;;;;;;x
+DESC_EVT_096_INSTAB_ULTIMATUM;Your reign over us was too strong, so with the instability faction, I make sure that you will loose some power over us; Votre autorité étant trop importante sur nous, avec la faction d'instabilité, j'ai pris les mesures nécessaires pour que ce ne soit plus le cas...;;;;;;;;;;;;x
+OPT_1_EVT_096_EXTENSION_LAW;I can't have a strong government anymore!;Je ne pourrais plus gouverner aussi bien qu'avant!;;;;;;;;;;;;x
+OPT_2_EVT_096_COUNCIL_POWER;Wait... Do you thing that my council should be strenghten instead?;Attendez... Est-il possible de renforcer mon conseil à la place?;;;;;;;;;;;;x
+DESC_EVT_097_INDEP_ULTIMATUM;Your tyrannie over us, the independence faction, is no more. We will now get our independence!;Les actes tyrannique imposé à notre faction, la faction d'indépendance, sont allés trop loin. Nous allons maintenant obtenir notre indépendance!;;;;;;;;;;;;x
+OPT_1_EVT_097_ACCEPT_INDEP_DEMAND;I should not provoke them;Je ne devrais pas les provoquer;;;;;;;;;;;;x
+OPT_2_EVT_097_THEN_WAR;They will not get their independence so easily;Ils n'auront pas leur indépendance aussi facilement;;;;;;;;;;;;x
+DESC_EVT_098_INDEP_ULTIMATUM_POSITIVE_ANSWER;You will have your independence;Je me soumet à vos demande et vous accorde votre indépendence;;;;;;;;;;;;x
+DESC_EVT_098_INDEP_ULTIMATUM_NEGATIVE_ANSWER;I will never accept your demand!;Je n'accepterai jamais vos demandes absurdes!;;;;;;;;;;;;x
+OPT_1_EVT_098_SUCESS;A good answer;La réponse qu'on attendait;;;;;;;;;;;;x
+OPT_2_EVT_098_WAR;Then, its a war;C'est donc la guerre!;;;;;;;;;;;;x
+
+
+#tooltip
+PANDA_INDEP_GRANTED;independence granted for faction members;l'indépendance est donné aux membre de la faction;;;;;;;;;;;;x
+NOTHING_HAPPEN_PANDA_TT;Nothing happens;Rien n'arrive;;;;;;;;;;;;x

@@ -1,0 +1,324 @@
+law_groups = {
+    panda_vassal_allowed = {
+        law_type = realm
+    }
+    panda_expension_size = {
+        law_type = realm
+    }
+}
+
+laws = {
+    panda_vassal_unallowed = {
+        group = panda_vassal_allowed
+        default = yes
+
+        potential = {
+            higher_tier_than = count
+            holder_scope = { #title scope?
+                government = panda_bureaucratic_gov
+            }
+            is_primary_holder_title = yes
+        }
+        allow = {
+            OR = {
+                has_law = panda_vassal_count_allowed
+                NOR = {
+                    has_law = panda_vassal_unallowed
+                    has_law = panda_vassal_count_allowed
+                    has_law = panda_vassal_all_allowed
+                }
+            }
+        }
+        revoke_allowed = {
+            always = no
+        }
+        ai_will_revoke = {
+            factor = 0
+        }
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+
+                OR = {
+                    has_law = panda_vassal_unallowed
+                    has_law = panda_vassal_count_allowed
+                    has_law = panda_vassal_allowed
+                }
+            }
+        }
+        pass_effect = { }
+        effect = {
+            hidden_tooltip = {
+				revoke_law = panda_vassal_count_allowed
+				revoke_law = panda_vassal_allowed
+			}
+            custom_tooltip = {
+                text = ALL_BUREAUCRATIC_VASSAL_UNACCEPTED
+                holder_scope = {
+                    any_vassal = {
+                        limit = {
+                            is_panda_government_trigger = yes
+                            liege = { character = PREVPREV }
+                        }
+                        character_event = { id = ani_plus.092 days = 1}
+
+                    }
+                }
+            }
+        }
+    }
+    panda_vassal_count_allowed = {
+        group = panda_vassal_allowed
+
+        potential = {
+            higher_tier_than = count
+            holder_scope = { #title scope?
+                government = panda_bureaucratic_gov
+            }
+            is_primary_holder_title = yes
+        }
+        allow = {
+            OR = {
+                has_law = panda_vassal_unallowed
+                has_law = panda_vassal_all_allowed
+            }
+        }
+        revoke_allowed = {
+            always = no
+        }
+        ai_will_revoke = {
+            factor = 0
+        }
+        ai_will_do = {
+            factor = 1
+            modifier = {
+                factor = 0
+
+                has_law = panda_vassal_allowed
+                higher_real_tier_than = KING
+            }
+        }
+        pass_effect = {}
+        effect = {
+            hidden_tooltip = {
+                revoke_law = panda_vassal_unallowed
+                revoke_law = panda_vassal_allowed
+            }
+            custom_tooltip = {
+                text = PANDA_TT_ALL_BUREAUCRATIC_COUNT_ACCEPTED
+                holder_scope = {
+                    any_vassal = {
+                        limit = {
+                            is_panda_government_trigger = yes
+                            liege = { character = PREVPREV }
+                        }
+                        character_event = { id = ani_plus.092 days = 1}
+                    }
+                }
+            }
+        }
+    }
+    panda_vassal_all_allowed = {
+        group = panda_vassal_allowed
+
+        potential = {
+            higher_tier_than = count
+            holder_scope = { #title scope?
+                government = panda_bureaucratic_gov
+            }
+            is_primary_holder_title = yes
+        }
+        allow = {
+            has_law = panda_vassal_count_allowed
+            higher_real_tier_than = KING
+            num_of_vassals > 500
+        }
+        revoke_allowed = {
+            always = no
+        }
+        ai_will_revoke = {
+            factor = 0
+        }
+        ai_will_do = {
+            factor = 1
+            ## no modifier as already done in allow section
+        }
+        pass_effect = {}
+        effect = {
+            hidden_tooltip = {
+                revoke_law = panda_vassal_unallowed
+                revoke_law = panda_vassal_count_allowed
+            }
+            custom_tooltip = {
+                text = PANDA_TT_ALL_BUREAUCRATIC_VASSAL_ACCEPTED
+                holder_scope = {
+                    any_vassal = {
+                        limit = {
+                            is_panda_government_trigger = yes
+                            liege = { character = PREVPREV }
+                        }
+                        character_event = { id = ani_plus.092 days = 1}
+                    }
+                }
+            }
+            custom_tooltip = {
+                text = PANDA_INDEPENDENCE_ELVOLVED
+            }
+        }
+    }
+
+    panda_expension_size_law = { #typoo: means low not law
+        group = panda_expension_size
+        default = yes
+
+        potential = {
+            higher_tier_than = count
+            holder_scope = {
+                is_panda_government_trigger = yes
+                higher_real_tier_than = BARON
+            }
+            is_primary_holder_title = yes
+        }
+        allow = {
+            OR = {
+                has_law = panda_expension_size_medium
+                NOR = {
+                    has_law = panda_expension_size_law
+                    has_law = panda_expension_size_medium
+                    has_law = panda_expension_size_huge
+                }
+            }
+        }
+        revoke_allowed = {
+            always = no
+        }
+        ai_will_revoke = {
+            factor = 0
+        }
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+
+                OR = {
+                    has_law = panda_expension_size_law
+                    has_law = panda_expension_size_medium
+                    has_law = panda_expension_size_huge
+                }
+            }
+        }
+        pass_effect = { }
+        effect = {
+            hidden_tooltip = {
+				revoke_law = panda_expension_size_medium
+				revoke_law = panda_expension_size_huge
+			}
+        }
+        vassal_limit = -200
+        demesne_size = 20
+    }
+    panda_expension_size_medium = {
+        group = panda_expension_size
+
+        potential = {
+            higher_tier_than = count
+            holder_scope = { #title scope?
+                is_panda_government_trigger = yes
+                higher_real_tier_than = BARON
+            }
+            is_primary_holder_title = yes
+        }
+        allow = {
+            OR = {
+                has_law = panda_expension_size_law
+                has_law = panda_expension_size_huge
+            }
+            holder_scope = {
+                OR = {
+                    has_law = panda_expension_size_huge
+                    AND = {
+                        higher_real_tier_than = DUKE
+                        custom_tooltip = {
+                            text = PANDA_INSTABILITY_FACT_TRIGGER
+                            NOT = { has_character_modifier = panda_instability_war_cooldown }
+                        }
+                    }
+                }
+            }
+        }
+        revoke_allowed = {
+            always = no
+        }
+        ai_will_revoke = {
+            factor = 0
+        }
+        ai_will_do = {
+            factor = 1
+            modifier = {
+                factor = 0
+
+                has_law = panda_expension_size_huge
+                higher_real_tier_than = KING
+            }
+        }
+        pass_effect = {}
+        effect = {
+            hidden_tooltip = {
+                revoke_law = panda_expension_size_law
+                revoke_law = panda_expension_size_huge
+            }
+            custom_tooltip = {
+                text = PANDA_UNLOCK_INSTABILITY_FACTION
+            }
+        }
+        vassal_limit = -200
+        demesne_size = 60
+    }
+    panda_expension_size_huge = {
+        group = panda_expension_size
+
+        potential = {
+            higher_tier_than = count
+            holder_scope = { #title scope?
+                is_panda_government_trigger = yes
+                higher_real_tier_than = BARON
+            }
+            is_primary_holder_title = yes
+        }
+        allow = {
+            has_law = panda_expension_size_medium
+            holder_scope = {
+                real_tier = EMPEROR
+                custom_tooltip = {
+                    text = PANDA_INSTABILITY_FACT_TRIGGER
+                    NOT = { has_character_modifier = panda_instability_war_cooldown }
+                }
+            }
+        }
+        revoke_allowed = {
+            always = no
+        }
+        ai_will_revoke = {
+            factor = 0
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        pass_effect = {}
+        effect = {
+            hidden_tooltip = {
+                revoke_law = panda_expension_size_medium
+                revoke_law = panda_expension_size_huge
+            }
+            custom_tooltip = {
+                text = PANDA_UNLOCK_INSTABILITY_FACTION
+            }
+        }
+        vassal_limit = -200
+        demesne_size = 150
+    }
+
+}

@@ -1,0 +1,97 @@
+# Plot tags need to start with 'plot_'
+
+# Supported types:
+# character, spouse, rivals, friends, liege_titles, vassal_titles, realm_titles, realm_characters, realm_characters_plus, independent_rulers
+# Special: society_plot. When trigger fulfilled, anyone within the society can be invited. ROOT is the plotter. FROM is the target. FROMFROM is the society
+# Note that "player_allow" has the target as ROOT, and the plotter (the player) as FROM!
+
+###############
+# PLOTS
+###############
+
+plot_animal_panda_conversion = {
+	type = realm_characters_plus
+	intrigue_plot = yes
+	murder_plot = yes
+
+	potential = {
+		is_ruler = yes
+		primary_title = { higher_tier_than = BARON }
+		NAND = {
+			ai = yes
+			trait = honest
+		}
+		NAND = {
+			ai = yes
+			trait = kind
+		}
+		culture_group = panda_group
+		is_adult = yes
+	}
+	target_potential = {
+		NOT = { Is_really_animal_trigger = yes } #to hard to change animal alimentation
+		OR = { #nomadics rulers seem hardcoded to not change culture, so no...
+			is_ruler = no
+			is_nomadic = no
+		}
+	}
+
+	player_allow = {
+		prisoner = no
+		is_incapable = no
+		age = 16
+		is_within_diplo_range = FROM
+	}
+
+	allow = {
+		age = 16 #or else, death instantly?
+		custom_tooltip = {
+			text = PANDA_HAS_NO_IMMUNITY
+			NOT = { has_character_flag = panda_transformation_immunity }
+		}
+	}
+
+	allow_join = {
+		# OR = {
+		# 	culture_group = panda_group		#why does a human would help animal expending?
+		# 	is_liege_or_above = FROM		#maybe because intimidated by its ruler prestige
+		#   can't make work the liege or above condition :'(
+		#   probably because there is no ruler so no liege
+	 	# }
+		age = 16					#must be adult to plot
+	}
+
+	chance = {
+		factor = 25
+
+		modifier = {
+			factor = 4.5
+			religion = Panda_religion
+		}
+		modifier = {
+			factor = 2
+			is_vassal_or_below_of = FROM
+		}
+	}
+
+	success = {
+		culture = FROM
+	}
+	effect = {
+		####nothing for now
+	}
+	abort = {
+		OR = {
+			ROOT = { is_alive = no }
+			FROM = { is_alive = no }
+			ROOT = {
+				has_character_flag = panda_transformation_immunity
+			}
+			ROOT = { Is_really_animal_trigger = yes }
+			FROM = { NOT = { culture_group = panda_group } }
+		}
+	}
+	abort_effect = {
+		####nothing for now
+	}
+}

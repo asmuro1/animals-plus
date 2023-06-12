@@ -1,0 +1,75 @@
+
+
+spriteTypes = {
+    spriteType = {
+        name = "GFX_trait_hibernation"
+        texturefile = "gfx/trait/hiberning.tga"
+
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+
+    spriteType = {
+        name = "GFX_trait_human_bear_illness"
+        texturefile = "gfx/traits/ill.dds"
+
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+
+    spriteType = {
+        name = "GFX_trait_human_bear"
+        texturefile = "gfx\trait\human_bear.dds"
+
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+
+    spriteType = {
+      name = "GFX_trait_succession_bear_heritage_winner"
+      texturefile = "gfx\trait\bear_tourn_winner.dds"
+
+      noOfFrames = 1
+      norefcount = yes
+      effectFile = "gfx/FX/buttonstate.lua"
+    }
+
+    spriteType = {
+      name = "GFX_trait_succession_bear_heritage_looser"
+      texturefile = "gfx\trait\bear_tourn_looser.dds"
+
+      noOfFrames = 1
+      norefcount = yes
+      effectFile = "gfx/FX/buttonstate.lua"
+    }
+
+    spriteType = {
+      name = "GFX_trait_bear_hibernation_immortalityr"
+      texturefile = "gfx\trait\hibernal_immortal.dds"
+
+      noOfFrames = 1
+      norefcount = yes
+      effectFile = "gfx/FX/buttonstate.lua"
+    }
+
+    spriteType = {
+      name = "GFX_trait_bear_religious_right"
+      texturefile = "gfx\trait\trait_right.dds"
+
+      noOfFrames = 1
+      norefcount = yes
+      effectFile = "gfx/FX/buttonstate.lua"
+    }
+
+    spriteType = {
+      name = "GFX_traitsympathy_animals_religions"
+      texturefile = "gfx\trait\sympathy_animals.dds"
+
+      noOfFrames = 1
+      norefcount = yes
+      effectFile = "gfx/FX/buttonstate.lua"
+    }
+}

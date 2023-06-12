@@ -1,0 +1,58 @@
+# Types:
+# 0 - Light Infantry
+# 1 - Heavy Infantry
+# 2 - Pikemen
+# 3 - Light Cavalry
+# 4 - Heavy Cavalry
+# 5 - Archers
+# 6 - Special troops
+
+
+RETTYPE_REL_PANDA_GIANT = {
+	first_type = 1
+	first_amount = 300
+
+	potential = {
+		religion = Panda_religion
+		culture = giant_panda
+	}
+
+	modifier = {
+		heavy_infantry_defensive = 0.25
+		heavy_infantry_offensive = 0.05
+	}
+}
+
+RETTYPE_REL_PANDA_RED = {
+	first_type = 5
+	first_amount = 300
+
+	potential = {
+		religion = Panda_religion
+		culture = red_panda
+	}
+
+	modifier = {
+		archers_morale = 0.60
+		archers_offensive = 0.50
+		archers_defensive = 0.05
+	}
+}
+
+RETTYPE_REL_PANDA_OTHER = {
+	first_type = 1
+	first_amount = 150
+
+	second_type = 5
+	second_amount = 150
+
+	potential = {
+		religion = Panda_religion
+		NOT = { culture_group = panda_group }
+	}
+
+	modifier = {
+		heavy_infantry_morale = 0.10
+		archers_morale = 0.10
+	}
+}

@@ -1,0 +1,1395 @@
+#######panda update
+### events 078 - 098
+
+namespace = ani_plus
+
+###launching conversion quest by event rule
+character_event = {
+    id = ani_plus.078
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    desc = DESC_EVT_078_GOES_SEARCH_FOR_DISH
+
+    only_playable = yes
+    min_age = 18
+
+    trigger = {
+        has_game_rule = {
+            name = animals_conversion_ways
+            value = animal_events
+        }
+        NOT = { Is_really_animal_trigger = yes }
+        NOT = { has_character_modifier = panda_conversion_quest_cooldown }
+        is_adult = yes
+        is_incapable = no
+        has_regent = no
+        OR = {
+            trait = hedonist
+            lifestyle_traits == 0
+        }
+
+        any_demesne_province = {
+            OR = {
+                terrain = mountain
+                terrain = hills
+            }
+        }
+
+        OR = {
+            NOT = { can_grant_title = title_court_jester }
+            has_assigned_minor_title = title_court_jester
+        }
+    }
+
+    mean_time_to_happen = {
+        years = 200
+
+        modifier = {
+            factor = 0.2
+            ai = no
+        }
+        modifier = {
+            factor = 0.35
+            trait = ambitious
+        }
+    }
+
+    option = {
+        name = OPT_1_EVT_078_I_NEED_TO_EAT_IT
+        add_trait = travelling
+
+        character_event = { id = ani_plus.079 days = 14 }
+
+        ai_chance = {
+            factor = 10
+
+            modifier = {
+                factor = 5
+                trait = ambitious
+            }
+            modifier = {
+                factor = 0
+                trait = paranoid
+            }
+            modifier = {
+                factor = 3.5
+                trait = gluttonous
+            }
+            modifier = {
+                factor = 3.5
+                OR = {
+                    trait = envious
+                    trait = proud
+                }
+            }
+            modifier = {
+                factor = 0.4
+                trait = erudite
+            }
+        }
+    }
+    option = {
+        name = OPT_2_EVT_078_IT_IS_NOTHING
+
+        ai_chance = {
+            factor = 10
+
+            modifier = {
+                factor = 5
+                trait = temperate
+            }
+            modifier = {
+                factor = 0
+                trait = gluttonous
+            }
+            modifier = {
+                factor = 2
+                OR = {
+                    trait = diligent
+                    trait = patient
+                    trait = charitable
+                }
+            }
+            modifier = {
+                factor = 0.25
+                trait = trusting
+            }
+        }
+    }
+    after = {
+        add_character_modifier = {
+            name = panda_conversion_quest_cooldown
+            years = 5
+            hidden = yes
+        }
+    }
+}
+
+###conversion quest plan:
+# event 79: choice to what we eat
+    # can lead to event 80 or 81 (if safe dish chosen)
+    # can lead to event 81 (if panda dish and not immmune to transformation)
+    # can lead to event 81 or 80 (if panda dish and immune to transformation)
+#event 80 statistic gain
+    #end of quest: gain a random statistic point
+#event 81 food poisoning (if transformation immunity: always considered as safe dish)
+    # can lead to event 80 or death (if safe dish - no physician treatment)
+    # can lead to event 83 or death (if panda dish - no physician treatment)
+    # can lead to event 80 or 82 (if safe dish - physician treatment)
+    # can lead to event 83 or 82 (if panda dish - physician treatment)
+#event 82 transformation immunity (or nothing if already got)
+    #end of quest: cannot become panda anymore and less chance to get food poisonous if quest done again
+#event 83 panda transformation
+    #end of quest: becomming panda
+
+#event 79
+character_event = {
+    id = ani_plus.079
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    is_triggered_only = yes
+
+    desc = DESC_EVT_079_EAT_WHAT
+
+    option = {
+        name = OPT_1_EVT_079_SAFE_ONE
+
+        ai_chance = {
+            factor = 5
+            modifier = {
+                factor = 0.2
+                has_character_flag = panda_transformation_immunity
+            }
+        }
+    }
+    option = {
+        name = OPT_2_EVT_079_RED_PANDA_ONE
+        trigger = {
+            any_demesne_province = {
+                OR = {
+                    terrain = mountain
+                    terrain = hills
+                }
+            }
+        }
+
+        set_character_flag = Red_pand_dish
+
+        ai_chance = {
+            factor = 2
+        }
+    }
+    option = {
+        name = OPT_3_EVT_079_GIANT_PANDA_ONE
+        trigger = {
+            any_demesne_province = {
+                terrain = mountain
+                any_neighbor_province = {
+                    OR = {
+                        terrain = forest
+                        terrain = jungle
+                        terrain = farmlands
+                        terrain = plains
+                    }
+                }
+            }
+        }
+        set_character_flag = Giant_pand_dish
+
+        ai_chance = {
+            factor = 2
+        }
+    }
+
+    after = {
+        remove_trait = travelling
+        hidden_tooltip = {
+            if = {
+                limit = { # safe dish
+                    NOR = {
+                        has_character_flag = Red_pand_dish
+                        has_character_flag = Giant_pand_dish
+                    }
+                }
+                random_list = {
+                    1 = { character_event = { id = ani_plus.080 days = 9 } }
+                    1 = { character_event = { id = ani_plus.081 days = 9 } }
+                }
+            }
+            else_if = {
+                limit = { # if immune to panda transformation
+                    has_character_flag = panda_transformation_immunity
+                }
+                random_list = {
+                    3 = { character_event = { id = ani_plus.080 days = 9 } }
+                    1 = { character_event = { id = ani_plus.081 days = 9 } }
+                }
+            }
+            else = {
+                #panda dish - no immunity
+                character_event = { id = ani_plus.081 days = 9 }
+            }
+        }
+    }
+}
+#event 80
+character_event = {
+    id = ani_plus.080
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    is_triggered_only = yes
+
+    desc = DESC_EVT_080_RUMORS_WERE_TRUE
+
+    option = {
+        name = OPT_EVT_080_I_GOT_STATS
+        random_list = {
+            1 = { change_diplomacy = 1 }
+            1 = { change_martial = 1 }
+            1 = { change_stewardship = 1 }
+            1 = { change_intrigue = 1 }
+            1 = { change_learning = 1 }
+        }
+    }
+    after = {
+        clr_character_flag = Red_pand_dish
+        clr_character_flag = Giant_pand_dish
+    }
+}
+#event 81
+character_event = {
+    id = ani_plus.081
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    is_triggered_only = yes
+
+    desc = DESC_EVT_081_GOT_FOOD_POISONNING
+
+    option = {
+        name = OPT_1_EVT_080_I_WILL_SURVIVE
+
+        add_trait = food_poisoning
+
+        hidden_tooltip = {
+            random_list = {
+                3 = {
+                    death = {
+                        death_reason = death_trait
+                    }
+                }
+                9 = {
+                    trigger = {
+                        OR = {
+                            has_character_flag = panda_transformation_immunity
+                            NOR = {
+                                has_character_flag = Red_pand_dish
+                                has_character_flag = Giant_pand_dish
+                            }
+                        }
+                    }
+                    character_event = { id = ani_plus.080 days = 3 }
+                }
+                4 = {
+                    trigger = {
+                        OR = {
+                            has_character_flag = Red_pand_dish
+                            has_character_flag = Giant_pand_dish
+                        }
+                        NOT = { has_character_flag = panda_transformation_immunity }
+                    }
+                    character_event = { id = ani_plus.083 days = 7 }
+                }
+            }
+        }
+
+        ai_chance = {
+            factor = 1
+        }
+    }
+    option = {
+        trigger = {
+            has_assigned_minor_title = title_court_physician
+        }
+        tooltip_info = learning
+        name = OPT_2_EVT_081_I_SHOULD_BE_TREATED
+
+        add_trait = food_poisoning
+
+        hidden_tooltip = {
+            random_list = {
+                6 = { character_event = { id = ani_plus.082 days = 3 } }
+                6 = {
+                    trigger = {
+                        OR = {
+                            has_character_flag = panda_transformation_immunity
+                            NOR = {
+                                has_character_flag = Red_pand_dish
+                                has_character_flag = Giant_pand_dish
+                            }
+                        }
+                    }
+                    character_event = { id = ani_plus.080 days = 3 }
+                }
+                4 = {
+                    trigger = {
+                        OR = {
+                            has_character_flag = Red_pand_dish
+                            has_character_flag = Giant_pand_dish
+                        }
+                        NOT = { has_character_flag = panda_transformation_immunity }
+                    }
+                    character_event = { id = ani_plus.083 days = 7 }
+                }
+            }
+        }
+
+        ai_chance = {
+            factor = 1000
+        }
+    }
+
+    after = {
+        character_event = { id = ani_plus.084 days = 10 }
+    }
+}
+#event 82
+character_event = {
+    id = ani_plus.082
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    is_triggered_only = yes
+
+    desc = DESC_EVT_082_GETTING_IMMUNE_TO_CONVERSION
+
+    option = {
+        name = OPT_EVT_082_IT_WAS_NOTHING
+        set_character_flag = panda_transformation_immunity
+    }
+    after = {
+        clr_character_flag = Red_pand_dish
+        clr_character_flag = Giant_pand_dish
+    }
+}
+#event 83
+character_event = {
+    id = ani_plus.083
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    is_triggered_only = yes
+
+    desc = DESC_EVT_83_BECOME_PANDA
+
+    option = {
+        name = OPT_EVT_083_BECOME_PANDA
+
+        if = {
+            limit = {
+                has_character_flag = Red_pand_dish
+            }
+            clr_character_flag = Red_pand_dish
+            culture = red_panda
+        }
+        else = {
+            clr_character_flag = Giant_pand_dish
+            culture = giant_panda
+        }
+    }
+}
+
+#event 84 removing food poisoning trait from event 81
+character_event = {
+    id = ani_plus.084
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    is_triggered_only = yes
+
+    desc = DESC_EVT_084_REMVING_FP
+
+    option = {
+        name = OPT_EVENT_084_FINALLY
+
+        remove_trait = food_poisoning
+    }
+}
+
+#event 85: transforming province into panda
+#          and adding/removing panda food importation modifier
+# modifier is put if can't produce food in province or expension holy site conquered
+# modifier removed if expension holy sute conquered or not panda culture anymore
+province_event = {
+    id = ani_plus.085
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    trigger = {
+        OR = {
+            AND = {  #changing culture trigger
+                holder_scope = { culture_group = panda_group }
+                NOT = { culture = holder_scope }
+            }
+            AND = { # food importation bonuses
+                has_province_modifier = panda_food_imported
+                OR = {
+                    NOT = { culture_group = panda_group }
+                    AND = {
+                        holder_scope = {
+                            culture_group = panda_group
+                            religion = Panda_religion
+                        }
+                        c_kasmira = {
+                            holder_scope = {
+                                religion = Panda_religion
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    mean_time_to_happen = {
+        months = 18
+
+        modifier = {
+            factor = 0.15
+            has_province_modifier = panda_food_imported
+        }
+    }
+
+    desc = {
+        trigger = {
+            holder_scope = { culture_group = panda_group }
+            NOT = { culture = holder_scope }
+        }
+        text = DESC_1_EVT_085_PANDA_CONVERSION
+    }
+    desc = {
+        trigger = {
+            culture_group = panda_group
+            culture = holder_scope
+        }
+        text = DESC_2_EVT_085_LOST_FD_IMPORT
+    }
+    desc = {
+        trigger = {
+            NOT = { culture_group = panda_group }
+            holder_scope = { NOT = { culture_group = panda_group } }
+        }
+        text = DESC_3_EVT_085_NO_NEED_FD_IMPORT
+    }
+
+    option = {
+
+        name = OPT_EVENT_085_GOOD
+
+        if = {
+            limit = {
+                holder_scope = {
+                    culture_group = panda_group
+                }
+            }
+            culture = holder_scope
+        }
+        if = {
+            limit = {
+                culture_group = panda_group
+                NOR = {
+                    terrain = mountain
+                    terrain = hills
+                }
+                NAND = {
+                    c_kasmira = {
+                        holder_scope = {
+                            religion = Panda_religion
+                        }
+                    }
+                    holder_scope = { religion = Panda_religion }
+                }
+            }
+            add_province_modifier = {
+                name = panda_food_imported
+                duration = -1
+            }
+        }
+        else_if = {
+            limit = {
+                has_province_modifier = panda_food_imported
+                OR = {
+                    NOT = { culture_group = panda_group }
+                    AND = {
+                        c_kasmira = {
+                            holder_scope = {
+                                religion = Panda_religion
+                            }
+                        }
+                        holder_scope = { religion = Panda_religion }
+                    }
+                }
+            }
+            remove_province_modifier = panda_food_imported
+        }
+    }
+}
+
+#####plot event: cultural conversion:
+#event 86-87 : reveal plot event
+    # 86 : a plot backer has forgot to remove panda' dish and everyone found it
+    # 87 : a non-human backer spill information
+#event 88-91: panda transformation plot events
+    # 88 : starting banquet preparations
+    # 89 : banquet event itself
+    # 90 : plot target notification + immunity or culture conversion if plot worked
+    # 91 : notification for plotter / if plot failed, discovered, worked with conversion, etc.
+
+#event 86
+character_event = {
+    id = ani_plus.086
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    is_part_of_plot = yes
+
+    trigger = {
+        has_plot = plot_animal_panda_conversion
+        is_plot_active = no #to only ping the plot creator
+        plot_target_char = {
+            location = {
+                NOT = { culture_group = panda_group } # would not be strange to see it there
+            }
+        }
+        num_of_plot_backers = 2 # a minimum to justify an that error
+    }
+    mean_time_to_happen = {
+        years = 70
+
+        modifier = {
+            factor = 0.2
+
+            any_plot_backer = {
+                NOT = { culture_group = panda_group }
+            }
+        }
+
+        modifier = {
+            factor = 0.5
+            any_plot_backer = {
+                trait = drunkard
+            }
+        }
+        modifier = {
+            factor = 0.5
+            any_plot_backer = {
+                trait = slothful
+            }
+        }
+    }
+
+    desc = DESC_EVT_086_PANDA_PLOT_LEAKED
+
+    option = {
+        name = OPT_EVT_086_PLOT_DISCOVERED
+
+        if = {
+            limit = {
+                any_plot_backer = {
+                    culture_group = panda_group
+                    NOT = {
+                        plot_is_known_by = plot_target_char
+                    }
+                }
+            }
+            random_backed_character = {
+                limit = {
+                    culture_group = panda_group
+                    NOT = {
+                        plot_is_known_by = plot_target_char
+                    }
+                }
+                reveal_plot_w_message = yes
+            }
+        }
+        else = {
+            reveal_plot = yes
+        }
+    }
+}
+#event 87
+character_event = {
+    id = ani_plus.087
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    is_part_of_plot = yes
+
+    trigger = {
+        has_plot = plot_animal_panda_conversion
+        is_plot_active = no #to only ping the plot creator
+        any_plot_backer = {
+            NOT = { culture_group = panda_group } # only human can betray a panda
+        }
+    }
+    mean_time_to_happen = {
+        years = 45
+
+        modifier = {
+            factor = 0.1
+            any_plot_backer = {
+                NOT = { culture_group = panda_group }
+                OR = {
+                    trait = slothful
+                    trait = honest
+                    trait = trusting
+                }
+            }
+        }
+    }
+
+    immediate = {
+        random_plot_backer = { #good scope?
+            limit = {
+                NOT = { culture_group = panda_group }
+            }
+            preferred_limit = {
+                OR = {
+                    trait = slothful
+                    trait = honest
+                    trait = trusting
+                }
+            }
+            save_event_target_as = panda_plot_traitor
+        }
+    }
+
+    desc = DESC_EVT_087_PLOT_TRAITOR
+
+    option = {
+        name = OPT_EVT_087_WHAT_A_TRAITOR
+
+        reveal_plot = yes
+        opinion = {
+            modifier = panda_traitor_imprison
+            who = event_target:panda_plot_traitor
+            years = 2
+        }
+        clear_event_target = panda_plot_traitor
+    }
+}
+#event 88
+character_event = {
+    id = ani_plus.088
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    is_part_of_plot = yes
+    prisoner = no
+
+    trigger = {
+        has_plot = plot_animal_panda_conversion
+        is_plot_active = no  # can only appear for plot leader
+        plot_power >= 0.5    # minimum plot power
+        plot_target_char = {
+            prisoner = no
+            ROOT = {
+                any_plot_backer = {
+                    at_location = PREVPREV
+                }
+            }
+            NOT = { is_inaccessible_trigger = yes }
+        }
+        NOT = { has_character_modifier = panda_plot_cooldown }
+    }
+
+    mean_time_to_happen = {
+        months = 7000
+
+        modifier = {
+            factor = 0.55
+            plot_power = 0.6
+        }
+        modifier = {
+            factor = 0.55
+            plot_power = 0.7
+        }
+        modifier = {
+            factor = 0.55
+            plot_power = 0.8
+        }
+        modifier = {
+            factor = 0.55
+            plot_power = 0.9
+        }
+        modifier = {
+            factor = 0.55
+            plot_power = 1.0
+        }
+        modifier = {
+            factor = 0.55
+            plot_power = 1.25
+        }
+        modifier = {
+            factor = 0.55
+            plot_power = 1.5
+        }
+        modifier = {
+            factor = 0.55
+            plot_power = 1.75
+        }
+        modifier = {
+            factor = 0.55
+            plot_power = 2.0
+        }
+        modifier = {
+            factor = 0.55
+            plot_power = 2.25
+        }
+        modifier = {
+            factor = 0.55
+            plot_power = 2.5
+        }
+        modifier = {
+            factor = 0.55
+            plot_power = 2.75
+        }
+        modifier = {
+            factor = 0.55
+            plot_power = 3.0
+        }
+    }
+
+    desc = DESC_EVT_088_PANDA_PLOT_START
+
+    option = {
+        name = OPT_1_EVT_088_LETS_START
+
+        plot_target_char = {
+            character_event = { id = ani_plus.089 days = 7 }
+        }
+
+        ai_chance = {
+            factor = 1
+        }
+    }
+    option = {
+        name = OPT_2_EVT_088_ITS_TOO_SOON
+
+        ai_chance = {
+            factor = 0
+        }
+    }
+
+    after = {
+        hidden_tooltip = {
+            generate_tooltip = no
+            add_character_modifier = {
+                name = panda_plot_cooldown
+                months = 3
+                hidden = yes
+            }
+        }
+    }
+}
+#event 89
+character_event = {
+    id = ani_plus.089
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    is_triggered_only = yes
+
+    desc = DESC_EVT_089_PANDA_PLOT_BANQUET
+
+    option = {
+        name = OPT_EVT_089_LETS_GO_EAT
+
+        hidden_tooltip = {
+            generate_tooltip = no
+            random = { #plot failed
+                chance = 5
+
+                mult_modifier = {
+                    factor = 1.5 # 75%
+
+                    FROM = { plot_power < 0.7 }
+                }
+                mult_modifier = {
+                    factor = 3.33 # 50%
+
+                    FROM = { plot_power < 1.0 }
+                }
+                mult_modifier = {
+                    factor = 3 # 15%
+
+                    FROM = { plot_power < 1.5 }
+                }
+
+                set_character_flag = ani_panda_plot_failed
+            }
+            random = { # plotter discovered
+                chance = 25
+
+                mult_modifier = {
+                    factor = 0
+                    trait = trusting
+                }
+                mult_modifier = {
+                    factor = 2.8 # 70 %
+                    trait = paranoid
+                }
+
+                set_character_flag = ani_panda_plot_discovered
+            }
+
+            character_event = { id = ani_plus.090 }
+        }
+    }
+}
+#event 90
+character_event = {
+    id = ani_plus.090
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    is_triggered_only = yes
+
+    desc = {
+        trigger = {
+            has_character_flag = ani_panda_plot_failed
+            has_character_flag = ani_panda_plot_discovered
+        }
+        text = DESC_1_EVT_090_PANDA_PLOT_FAILED_DISCOVERED
+    }
+    desc = {
+        trigger = {
+            NOT = { has_character_flag = ani_panda_plot_failed }
+            has_character_flag = ani_panda_plot_discovered
+        }
+        text = DESC_2_EVT_090_PANDA_PLOT_DISCOVERED
+    }
+    desc = {
+        trigger = {
+            NOT = { has_character_flag = ani_panda_plot_failed }
+            NOT = { has_character_flag = ani_panda_plot_discovered }
+        }
+        text = DESC_3_EVT_090_PANDA_PLOT_SUCCEED
+    }
+    desc = {
+        trigger = {
+            has_character_flag = ani_panda_plot_failed
+            NOT = { has_character_flag = ani_panda_plot_discovered }
+        }
+        text = DESC_4_EVT_090_PANDA_PLOT_FAILED
+    }
+    option = {
+        name = OPT_EVT_90_PANDA_PLOT_RESULT
+
+        if = {
+            limit = {
+                has_character_flag = ani_panda_plot_discovered
+            }
+            reveal_plot = yes
+            if = {
+                limit = {
+                    NOT = { has_character_flag = ani_panda_plot_failed }
+                }
+                opinion = {
+                    name = panda_plot_discovered_rivality
+                    who = FROMFROM
+                    years = 50
+                }
+            }
+        }
+        if = {
+            limit = {
+                NOT = { has_character_flag = ani_panda_plot_failed }
+            }
+            random_list = {
+                79 = {
+                    culture = FROMFROM
+                }
+
+                20 = {
+                    modifier = {
+                        factor = 0.05 #1 chance out of  80
+                        FROMFROM = { religion = Panda_religion }
+                        OR = {
+                            AND = {
+                                FROMFROM = { culture = red_panda }
+                                c_paro = {
+                                    holder_scope = { religion = Panda_religion }
+                                }
+                            }
+                            AND = {
+                                FROMFROM = { culture = giant_panda }
+                                c_lumbini = {
+                                    holder_scope = { religion = Panda_religion }
+                                }
+                            }
+                        }
+                    }
+                    custom_tooltip = {
+                        text = NOTHING_HAPPEN_PANDA_TT
+                        set_character_flag = panda_transformation_immunity
+                    }
+                }
+            }
+        }
+        clr_character_flag = ani_panda_plot_failed
+        FROMFROM = { character_event = { id = ani_plus.091 days = 1 } }
+    }
+}
+#event 91
+character_event = {
+    id = ani_plus.091
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    is_triggered_only = yes
+
+    desc = {
+        trigger = {
+            culture = FROM
+            FROM = { has_character_flag = ani_panda_plot_discovered }
+        }
+        text = DESC_1_EVT_091_NOTIF_PLOT_SUCCEES_DISCOVERED
+    }
+    desc = {
+        trigger = {
+            culture = FROM
+            FROM = { NOT = { has_character_flag = ani_panda_plot_discovered } }
+        }
+        text = DESC_2_EVT_091_NOTIF_PLOT_SUCCEES
+    }
+    desc = {
+        trigger = {
+            NOT = { culture = FROM }
+            FROM = { has_character_flag = ani_panda_plot_discovered }
+        }
+        text = DESC_3_EVT_091_NOTIF_PLOT_FAILED_DISCOVERED
+    }
+    desc = {
+        trigger = {
+            NOR = {
+                culture = FROM
+                FROM = { has_character_flag = ani_panda_plot_discovered }
+            }
+        }
+        text = DESC_4_EVT_091_NOTIF_PLOT_FAILED
+    }
+
+    option = {
+        name = OPT_EVT_091_OKAY_NOTIF
+        if = {
+            limit = {
+                FROM = { has_character_flag = ani_panda_plot_discovered}
+            }
+            FROM = {
+                opinion = { #put here for tooltip purpose
+                    name = panda_plot_discovered_rivality
+                    who = ROOT
+                    years = 50
+                }
+                clr_character_flag = ani_panda_plot_discovered
+            }
+        }
+    }
+}
+
+######law events
+
+#event 92: government: update vassals numbers
+character_event = {
+    id = ani_plus.092
+
+    is_triggered_only = yes
+    hide_window = yes
+
+    immediate = {
+        if = {
+            limit = {
+                is_government_potential = panda_bureaucratic_gov
+            }
+            set_government_type = panda_bureaucratic_gov
+        }
+        else = {
+            set_government_type = panda_bureaucratic_gov_bis
+        }
+        any_vassal = {
+            limit = {
+                is_panda_government_trigger = yes
+                liege = { character = PREVPREV }
+            }
+            character_event = { id = ani_plus.092 }
+        }
+    }
+}
+
+###### balance events
+
+#event 93: removing or adding expension law if not supposed to have associated modifiers
+#           modifier can be added if pana title pass non-panda (inheritence of head of faith,
+#           or having a non-panda heir )
+character_event = {
+    id = ani_plus.093
+
+    hide_window = yes
+
+    only_playable = yes
+    war = no
+
+    trigger = {
+        OR = {
+            NOT = { is_panda_government_trigger = yes }
+            lower_tier_than = DUKE
+        }
+        OR = {
+            has_law = panda_expension_size_law
+            has_law = panda_expension_size_medium
+            has_law = panda_expension_size_huge
+        }
+    }
+    mean_time_to_happen = {
+        days = 1
+    }
+
+    immediate = {
+        revoke_law = panda_expension_size_law
+        revoke_law = panda_expension_size_medium
+        revoke_law = panda_expension_size_huge
+    }
+}
+
+#event 94: no levies on Relay provinces
+province_event = {
+    id = ani_plus.094
+
+    hide_window = yes
+
+    trigger = {
+        OR = {
+            #adding modifier if good culture but no vassal or capital bureau
+            AND = {
+                NOT = { has_province_modifier = panda_unraisable_land }
+                culture_group = panda_group
+                NOR = {
+                    holder_scope = {
+                        is_capital = PREV
+                    }
+                    AND = {
+                        has_building = ca_panda_vassal_bureau
+                        panda_vassal_bureau_active_trigger = yes
+                    }
+                    holder_scope = { real_tier = COUNT }
+                }
+            }
+            #by removing modifier if wrong bureau or wrong culture
+            AND = {
+                has_province_modifier = panda_unraisable_land
+                OR = {
+                    holder_scope = {
+                        is_capital = PREV
+                    }
+                    AND = {
+                        has_building = ca_panda_vassal_bureau
+                        panda_vassal_bureau_active_trigger = yes
+                    }
+                    holder_scope = { real_tier = COUNT }
+                    NOT = { culture_group = panda_group }
+                }
+            }
+        }
+    }
+    mean_time_to_happen = { days = 1 }
+    immediate = {
+        if = {
+            limit = {
+                NOT = { has_province_modifier = panda_unraisable_land }
+            }
+            add_province_modifier = {
+                name = panda_unraisable_land
+                duration = -1
+            }
+        }
+        else = {
+            remove_province_modifier = panda_unraisable_land
+        }
+    }
+}
+
+#event 95: (on action) removing wrong bureau if a second constructed
+character_event = {
+    id = ani_plus.095
+
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        FROM = {
+            OR = {
+                is_building = ca_panda_capital_bureau
+                is_building = ca_panda_vassal_bureau
+                is_building = ca_panda_common_bureau
+            }
+        }
+    }
+
+    immediate = {
+        FROM = {
+            remove_building = ca_panda_capital_bureau
+            remove_building = ca_panda_vassal_bureau
+            remove_building = ca_panda_common_bureau
+        }
+    }
+}
+
+###### faction events
+#event 96: instability gain from faction ultimatum
+#event 97: independence and dissolution faction ultimatum
+#event 98: notif liege accepted or refused independence to vassals
+
+
+#event 96
+letter_event = {
+    id = ani_plus.096
+
+    is_triggered_only = yes
+
+    border = GFX_event_letter_frame_diplomacy
+    desc = DESC_EVT_096_INSTAB_ULTIMATUM
+
+    option = {
+        name = OPT_1_EVT_096_EXTENSION_LAW
+        if = {
+            limit = {
+                has_law = panda_expension_size_huge
+            }
+            add_law = panda_expension_size_medium
+        }
+        else = {
+            add_law = panda_expension_size_law
+        }
+    }
+    option = {
+        name = OPT_2_EVT_096_COUNCIL_POWER
+        trigger = {
+            has_dlc = "Zeus"
+            OR = {
+                has_law = law_voting_power_0
+                has_law = war_voting_power_0
+                has_law = revoke_title_voting_power_0
+                has_law = imprison_voting_power_0
+                has_law = grant_title_voting_power_0
+                has_law = banish_voting_power_0
+                has_law = execution_voting_power_0
+                has_law = succession_voting_power_0
+            }
+            ai = no
+        }
+
+        #vanilla sccripted effect on council faction as very relevent
+        increase_council_power_effect = yes
+        increase_vassal_freedom_effect = yes
+    }
+
+    after = {
+        hidden_tooltip = {
+            add_character_modifier = {
+                name = panda_instability_war_cooldown
+                years = 5
+                hidden = yes
+            }
+            FROM = {
+                any_faction_backer = {
+                    faction = faction_panda_instability
+                    opinion = {
+                        modifier = panda_instab_ultimatum
+                        who = ROOT
+                        years = 8
+                    }
+                }
+            }
+        }
+    }
+}
+
+#event 97
+letter_event = {
+    id = ani_plus.097
+
+    is_triggered_only = yes
+
+    border = GFX_event_letter_frame_diplomacy
+    desc = DESC_EVT_097_INDEP_ULTIMATUM
+
+
+    immediate = {
+		FROM = {
+			diplomatic_immunity = yes
+			any_faction_backer = {
+				faction = faction_panda_independence
+				diplomatic_immunity = yes
+			}
+		}
+	}
+
+    option = {
+        name = OPT_1_EVT_097_ACCEPT_INDEP_DEMAND
+        ai_chance = {
+            factor = 0
+        }
+
+        FROM = {
+            opinion = {
+                modifier = opinion_granted_independence
+                who = ROOT
+                months = 120
+            }
+        }
+        custom_tooltip = {
+            text = PANDA_INDEP_GRANTED
+
+            if = {
+                limit = {
+                    has_law = panda_vassal_all_allowed
+                }
+                add_law = panda_vassal_count_allowed # can't have strong vassals anymore
+            }
+            FROM = {
+    			diplomatic_immunity = no
+    			any_faction_backer = {
+    				faction = faction_panda_independence
+    				diplomatic_immunity = no
+    			}
+    		}
+            FROM = {
+    			any_faction_backer = {
+    				faction = faction_panda_independence
+
+                    capital_scope = {
+                        any_neighbor_province = {
+                            limit = {
+                                has_owner = yes
+                                county = {
+                                    same_realm = ROOT
+                                }
+                            }
+                            county = {
+                                grant_title = PREVPREVPREV
+                            }
+                        }
+                    }
+                    set_defacto_liege = THIS
+    			}
+                capital_scope = {
+                    any_neighbor_province = {
+                        limit = {
+                            has_owner = yes
+                            county = {
+                                same_realm = ROOT
+                            }
+                        }
+                        county = {
+                            grant_title = PREVPREVPREV
+                        }
+                    }
+                }
+                set_defacto_liege = THIS
+    		}
+        }
+    }
+    option = {
+        name = OPT_2_EVT_097_THEN_WAR
+    }
+
+    after = {
+        hidden_tooltip = {
+            FROM = {
+                letter_event = { id = ani_plus.098 }
+            }
+        }
+    }
+}
+
+#event 98
+letter_event = {
+    id = ani_plus.098
+
+    is_triggered_only = yes
+
+    border = GFX_event_letter_frame_diplomacy
+    desc = {
+        text = DESC_EVT_098_INDEP_ULTIMATUM_POSITIVE_ANSWER
+        trigger = {
+            independent = yes
+        }
+    }
+    desc = {
+        text = DESC_EVT_098_INDEP_ULTIMATUM_NEGATIVE_ANSWER
+        trigger = {
+            independent = no
+        }
+    }
+
+    option = {
+        trigger = {
+            independent = yes
+        }
+        name = OPT_1_EVT_098_SUCESS
+    }
+    option = {
+        trigger = {
+            independent = no
+        }
+        name = OPT_2_EVT_098_WAR
+
+        hidden_tooltip = {
+            diplomatic_immunity = no
+            any_faction_backer = {
+                faction = faction_panda_independence
+                diplomatic_immunity = no
+            }
+        }
+
+        spawn_unit = {
+            province = capital_scope
+            home = capital_scope
+            owner = ROOT
+            leader = none
+            match_character = FROM
+            match_mult = 1.0
+            disband_on_peace = yes
+            cannot_inherit = no
+            attrition = 0.25
+            merge = no
+            maintenance = yes
+            maintenance_multiplier = 0.90
+            reinforces = yes
+            reinforce_rate_multiplier = 0.15
+        }
+
+        reverse_war = {
+    		target = FROM
+    		casus_belli = panda_cb_faction_independence
+    		faction = faction_panda_independence
+        }
+    }
+}

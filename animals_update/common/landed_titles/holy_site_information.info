@@ -1,0 +1,36 @@
+animal bear site information:
+
+BEARS:
+  c_dyrrachion                : central groups religious center
+  c_nordlendingafjordungur    : white bear holy site
+  c_sortavala                 : brown bear holy site
+  c_pinsk                     : black bear holy site
+  c_besancon                  : Culture origin
+
+HEDGEHOGS:
+  c_dyrrachion                : central groups religious center
+  c_murzuk                    : desert clan cloning room
+  c_hayya                     : desert clan terraforming buildings
+  c_nordgau                   : common clan cloning room
+  c_najera                    : common clan terraforming buildings
+
+PANDA:
+  c_dyrrachion                : central groups religious center
+  c_lumbini                   : giant panda holy site (plot transformation can't immune someone)
+  c_paro                      : red panda holy site (plot transformation can't immune someone)
+  c_kasmira                   : expansion holy site (dosn't seem to work as intended. Won't change as panda has enough gold without)
+  c_markam                    : China interaction unlocked
+                                (need to replace the one removed because old one not-RP, if a correct one is found)
+DUCK:
+  c_dyrrachion                : central groups religious center
+  c_wight                     : unlock 10th development level
+  c_venezia                   : Unlock or reduces continental cultural conversion
+  c_socotra                   : Unlock or reduces continental cultural conversion
+  c_maldives                  : duck landed character bonuses
+
+ELEPHANT:
+  c_dyrrachion                : central groups religious center
+  c_yatenga                   : Unlock elephant transformation laboratory (level 2)
+  c_gezira                    : African elephant immigration
+  c_kondana                   : Asian elephant immigration
+  c_radha                     : Unlocked spawning disease laboratory

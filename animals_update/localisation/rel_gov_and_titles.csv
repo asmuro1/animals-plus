@@ -1,0 +1,94 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+
+
+#religious localisation
+Animals_grups;animal;animalier;;;;;;;;;;;;;x
+Bears_religion;Bear;Oursienne;;;;;;;;;;;;x
+Bears_religion_DESC;Bear's religion;Religion des Ours;;;;;;;;;;;;;x
+Bears_religion_full;Bear;Oursien;;;;;;;;;;;;;x
+ELDERS;Elders;Anciens;;;;;;;;;;;;;x
+STAT_PIETY_SAVAGIOUS;Wildness;Sauvagerie;;;;;;;;;;;;;x
+STAT_PIETY_MENU_SAVAGIOUS;Wildness;Sauvagerie;;;;;;;;;;;;;x
+STAT_PIETY_DESC_SAVAGIOUS;Wild reputation;Réputation sauvage;;;;;;;;;;;;;x
+MONTHLY_PIETY_SAVAGIOUS;Monthly wildness gain;Gain de sauvagerie mensuelle;;;;;;;;;;;;;x
+BEAR_RELIGION_HIGH_GOD;Ursus;Ursus;;;;;;;;;;;;x
+Hedge_religion;Hedgehog;hérissonne;;;;;;;;;;;;x
+Hedge_religion_DESC;Hedgehog's religion;Religion des Hérissons;;;;;;;;;;;;x
+Hedge_religion_full;Hedgehog;hérissonne;;;;;;;;;;;;x
+HEDGE_RELIGION_HIGH_GOD;Ericius;Ericius;;;;;;;;;;;;x
+Panda_religion;Panda;Panda;;;;;;;;;;;;x
+Panda_religion_DESC;Panda's religion;Religion des pandas;;;;;;;;;;;;x
+Panda_religion_full;Panda;Panda;;;;;;;;;;;;x
+PANDA_RELIGION_HIGH_GOD;Big panda;Grand panda;;;;;;;;;;;;x
+Duck_religion;Duck;Canard;;;;;;;;;;;;x
+Duck_religion_DESC;Duck's religion;Religion des canards;;;;;;;;;;;;x
+Duck_religion_full;Duck;Canard;;;;;;;;;;;;x
+DUCK_RELIGION_HIGH_GOD;Navy;Naval;;;;;;;;;;;;x
+Eleph_religion;Elephant;Éléphant;;;;;;;;;;;;x
+Eleph_religion_DESC;Elephant's religion;Religion des éléphants;;;;;;;;;;;;x
+Eleph_religion_full;Elephant;Éléphant;;;;;;;;;;;;x
+ELEPH_RELIGION_HIGH_GOD;Elepha;Élépha;;;;;;;;;;;;x
+
+###government localisation
+Bear_feudal_gov;Bears feodality;féodalité oursienne;;;;;;;;;;;;x
+Bear_feudal_gov_desc;Government made for bear and for bears;Gouvernement fait par les ours et uniquement pour les ours;;;;;;;;;;;;x
+Bear_theocracy_gov;Animal theocracy;théocratie animale;;;;;;;;;;;;x
+Bear_theocracy_gov_desc;A group of animals that want to govern a group of faith defender, not really a country;Un groupe d'ours qui préfaire défendre leur religion que s'étendre;;;;;;;;;;;;x
+Hedge_feudal_gov;hedgehog feodality;féodalité hérisonne;;;;;;;;;;;;;x
+Hedge_feudal_gov_desc;Government made for hedgehog and by hedgehogs;Gouvernement fait par les hérissons et uniquement pour les hérissons;;;;;;;;;;;;x
+panda_bureaucratic_gov;Pandas' bureaucracy;bureaucratie des pandas;;;;;;;;;;;;x
+panda_bureaucratic_gov_desc;Government made for pandas and by pandas;Gouvernement fait par les pandas et uniquement pour les pandas;;;;;;;;;;;;x
+panda_bureaucratic_gov_bis;Pandas' bureaucracy;bureaucratie des pandas;;;;;;;;;;;;x
+panda_bureaucratic_gov_bis_desc;Government made for pandas and by pandas;Gouvernement fait par les pandas et uniquement pour les pandas;;;;;;;;;;;;x
+Duck_feudal_gov;Duck's feodality;Féodalité canard;;;;;;;;;;;;x
+Duck_feudal_gov_desc;Government made by ducks for ducks;Gouvernement fait par les canards pour les canards;;;;;;;;;;;;x
+Eleph_feudal_gov;Elephant's feodality;Féodalité éléphantine;;;;;;;;;;;;x
+Eleph_feudal_gov_desc;Government made by elephant for elephant;Gouvernement fait par les éléphant pour les éléphant;;;;;;;;;;;;x
+
+###minor titles
+title_bear_children;Honor child;Enfant d'honneur;;;;;;;;;;;;x
+title_bear_children_desc;A bear child that is supposed to inherit titles need a lot of attention given by this title;Lorsqu'un ours est jeune, il a besoin d'apprendre à reigner. Cette position lui permet d'obtenir l'expérience necessaire.;;;;;;;;;;;;x
+title_panda_diplo_official;Diplomatic official;Bureaucrate diplomate;;;;;;;;;;;;x
+title_panda_diplo_official_desc;Diplomatic official has a big impact on vassals joining instability and independence factions;Le bureaucrate diplomatique a de l'impact pour limiter l'adhésions aux factions d'indépendance et d'instabilité;;;;;;;;;;;;x
+title_panda_martial_official;Military official;Bureaucrate militaire;;;;;;;;;;;;x
+title_panda_martial_official_desc;Military official has a big impact on vassals joining instability faction;Le bureaucrate militaire a de l'impact pour limiter l'adhésions à la faction d'instabilité;;;;;;;;;;;;x
+title_panda_steward_official;Administrative official;Bureaucrate administratif;;;;;;;;;;;;x
+title_panda_steward_official_desc;Adminstrative official has a big impact on vassals joining independence faction;Le bureaucrate administratif a de l'impact pour limiter l'adhésions à la faction d'indépendance;;;;;;;;;;;;x
+title_panda_plot_official;Intrigue official;Bureaucrate intriguant;;;;;;;;;;;;x
+title_panda_plot_official_desc;Intrigue official has a big impact on vassals joining instability faction;Le bureaucrate intriguant a de l'impact pour limiter l'adhésions à la factions d'instabilité ;;;;;;;;;;;;x
+title_panda_religious_official;Religious official;Bureaucrate religieux;;;;;;;;;;;;x
+title_panda_religious_official_desc;Religious official has a big impact on vassals joining  independence faction;Le bureaucrate religieux a de l'impact pour limiter l'adhésions à la faction d'indépendance;;;;;;;;;;;;x
+
+###holy order titles
+d_polar_fighter;The polar warriors;Les chevaliers de la banquise;;;;;;;;;;;;x
+d_polar_fighter_adj;animal;animale;;;;;;;;;;;;x
+d_spike_ball;The spiked balls;Les boules piquantes;;;;;;;;;;;;x
+d_spike_ball_adj;animal;animale;;;;;;;;;;;;x
+d_asian_fighter;The chineses fighters;Les combattants chinois;;;;;;;;;;;;x # no idea for the name, could be changed later
+d_asian_fighter_adj;animal;animale;;;;;;;;;;;;x                            # I still don't want to make direct references to "kung fu panda" movies
+d_sea_master;Sea master;Maître des mer;;;;;;;;;;;;x
+d_sea_master_adj;animal;animale;;;;;;;;;;;;x
+d_immortal_herd;Immortals herds;Hordes immortelles;;;;;;;;;;;;x
+d_immortal_herd_adj;animal;animale;;;;;;;;;;;;x
+
+#job title names
+action_repress_vassal;Repress vassals;réprimer des vassaux;;;;;;;;;;;;x
+action_repress_vassal_desc;Do you hate your vassal? Force him to give his titles to somoene else;Détestes-tu ton vassal? Force-le à donner des titres à d'autres membre de sa famille;;;;;;;;;;;;x
+action_organize_retinue;Organize the retinue;Organiser l'escorte;;;;;;;;;;;;x
+action_organize_retinue_desc;Organize your retinue to improve your military strength;Organiser l'escorte pour augmenter la force militaire;;;;;;;;;;;;x
+action_train_nobles;Train nobles;Entraîner les nobles;;;;;;;;;;;;x
+action_train_nobles_desc;By giving a military training to nobles, they can have a better militaries stats;Donner un entraînement aux nobles pour augmenter leurs statistiques martiales;;;;;;;;;;;;x
+action_cultural_acceptation;promote bear unity;promouvoir l'unité oursienne;;;;;;;;;;;;x
+action_cultural_acceptation_desc;Send your steaward to promote bear amongs young nobles!;Demander à l'intendant promouvoir la culture ours au sein des jeunes nobles du pays;;;;;;;;;;;;x
+action_create_animal_hord;Form an animal horde;Provoquer une invasion animale;;;;;;;;;;;;x
+action_create_animal_hord_desc;By forming an hord from native animal, it is possible to sabotate a county;En utilisant les animaux locaux, il est possible de saboter l'exploitation du comté;;;;;;;;;;;;x
+action_advance_global_tech;researsh technologies;Rechercher des technologies;;;;;;;;;;;;x
+action_advance_global_tech_desc;Try to develop or propagating your technology with this job;promouvoir le développement technologique;;;;;;;;;;;;x
+action_religious_sympathy;provoke religious sympathy;Provoquer la sympathie religieuse;;;;;;;;;;;;x
+action_religious_sympathy_desc;make character like your religion and have some sympathy;encourage les relations entre humain et animal;;;;;;;;;;;;x
+
+
+###retinue names
+RETTYPE_REL_PANDA_GIANT;Pandas fighters;Combattants pandas;;;;;;;;;;;;x
+RETTYPE_REL_PANDA_RED;Pandas archers;Archers pandas;;;;;;;;;;;;x
+RETTYPE_REL_PANDA_OTHER;Fanatics pandas;Pandas fanatiques;;;;;;;;;;;;x

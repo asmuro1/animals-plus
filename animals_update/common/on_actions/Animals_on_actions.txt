@@ -1,0 +1,99 @@
+
+# character
+on_birth = {
+	events = {
+		ani_plus.005 #force animal portrait
+		ani_plus.006 #birth event for bear (multiple child and number of childs' bonus) and panda (multiple child, more than bear)
+		ani_plus.108 #duck holy site modifier
+	}
+}
+
+# Character converts culture, for whatever reason. ROOT is the character after conversion and the FROM scope has the old culture.
+on_character_convert_culture = {
+	events = {
+		ani_plus.004 #remove cultural modifier
+		ani_plus.005 #force animal portrait and add cultural modifier
+	}
+}
+
+on_death = {
+	events = {
+		ani_plus.003 #put up to date bears family number
+	}
+}
+
+#fire for settlement looted
+on_loot_settlement = {
+	events = {
+		ani_plus.066 # hedgehog province modifier
+		ani_plus.107 # reduce development level for duck
+	}
+}
+
+#fire for besiege settlement
+on_siege_over_winner = {
+	events = {
+		ani_plus.031 # deletting big construction  (theodosian wall etc.)
+		ani_plus.068 # hedgehog province modifier
+		ani_plus.107 # reduce development level for duck
+	}
+}
+
+
+on_new_holder_inheritance = {
+	events = {
+		ani_plus.035 # tournament winner: loosing associated trait
+		ani_plus.116 # updating elephant law
+	}
+}
+
+on_war_started = {
+	events = {
+		ani_plus.043 #  hedgehog morale bonuses/maluses at war start
+	}
+}
+
+on_chronicle_start = {
+	events = {
+		ani_plus.003 #setting bear family bonuses at game start
+	}
+}
+
+####event 76
+on_war_ended_victory = {
+	events = {
+		ani_plus.076 #removing hedgehogg war bonus or malus
+	}
+}
+on_war_ended_invalid = {
+	events = {
+		ani_plus.076 #removing hedgehogg war bonus or malus
+	}
+}
+on_war_ended_whitepeace = {
+	events = {
+		ani_plus.076 #removing hedgehogg war bonus or malus
+	}
+}
+on_war_ended_defeat = {
+	events = {
+		ani_plus.076 #removing hedgehogg war bonus or malus
+	}
+}
+
+on_holding_building_start = {
+	events = {
+		ani_plus.095 #updating panda's bureau building
+	}
+}
+
+on_startup = {
+	events = {
+		ani_plus.105 #updating duck dev maximum potential and dev growth
+	}
+}
+on_yearly_pulse = {
+	events = {
+		ani_plus.105 #updating duck dev maximum potential and dev growth
+	}
+}

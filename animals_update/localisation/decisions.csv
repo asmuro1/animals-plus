@@ -1,0 +1,200 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+
+
+##### decisions localisation
+province_animal_conversion;Establish an animal colony;Implanter une colonie animalière;;;;;;;;;;;;;;x
+province_animal_conversion_desc;Establish your animal culture in the county to allow the use of the animal upgraded buildings;établir la culture animalière dans le comté pour autoriser l'utilisation des bâtiments animaliers améliorés;;;;;;;;;;;;;x
+hide_human_buildings;Hide human buildings;Cacher les bâtiments humains;;;;;;;;;;;;;x
+show_human_building;Show human buildings;Montrer les bâtiments humains;;;;;;;;;;;;;x
+hide_human_buildings_desc;;;;;;;;;;;;;;;x
+show_human_building_desc;;;;;;;;;;;;;;;x
+cursed_text_cat;[ROOT.GetTitledName] will be cursed;[ROOT.GetTitledName] va être maudit;;;;;;;;;;;;;x
+cat_building_curse;Curse this person;Maudire cette personne;;;;;;;;;;;;;x
+cat_building_curse_desc;Curse this person. It takes up to a month to take effect.;Maudire cette personne. Cela peut prendre jusqu'à un mois pour prendre effet.;;;;;;;;;;;;;x
+cat_harrassment_start;Start the harrassment process;Commencer le processus de harcèlement;;;;;;;;;;;;;;x
+cat_favor_harass;Start harrassing;Commencer à harceler;;;;;;;;;;;;;x
+cat_favor_harass_desc;Start harrassing a person, it takes up to a month to take effect and stress him or her out;Commence à harceler une personne. Cela peut prendre jusqu'à un mois pour prendre effet et la stresser.;;;;;;;;;;;;;x
+
+
+
+#####Bear update localisation
+adopt_bear_religion;Adopt bears' religion;Adopter la religion des ours;;;;;;;;;;;;;x
+adopt_bear_religion_desc;if you are a bear, you can freely choose to convert yourself to the associated religion;En tant qu'ours, tu peux librement choisir de te convertir à la religion culturel;;;;;;;;;;;;;x
+set_white_bear_bonus;Reinforce white bear's clan;Renforcer le clan des ours blancs;;;;;;;;;;;;;x
+set_white_bear_bonus_desc;With the conquest of the clan's origin, You can strenghten the entire white bear clan!;Avec la conquête de la terre ancestrale des ours blancs, vous pouvez renforcer l'intégralité du clan!;;;;;;;;;;;;;x
+clr_white_bear_bonus;Weaken white bear's clan;Affaiblir le clan des ours blancs;;;;;;;;;;;;;x
+clr_white_bear_bonus_desc;White bear are too strong, they need to be stopped. As the owner of their homeland county, you can weaken them a little by preventing new white bear to get their bonuses!;Les ours blancs sont trop forts, ils ont besoin d'être arrêter. Avec la prise de leur comté originaire, il est possible d'empêcher les nouveaux ours blancs d'obtenir leur bonus de clan!;;;;;;;;;;;;;x
+set_brown_bear_bonus;Reinforce brown bear's clan;Renforcer le clan des ours bruns;;;;;;;;;;;;;x
+set_brown_bear_bonus_desc;With the conquest of the clan's origin, You can strenghten the entire brown bear clan!;Avec la conquête de la terre ancestrale des ours bruns, vous pouvez renforcer l'intégralité du clan!;;;;;;;;;;;;;x
+clr_brown_bear_bonus;Weaken brown bear's clan;Affaiblir le clan des ours bruns;;;;;;;;;;;;;x
+clr_brown_bear_bonus_desc;Brown bear are too strong, they need to be stopped. As the owner of their homeland county, you can weaken them a little by preventing new brown bear to get their bonuses!;Les ours bruns sont trop forts, ils ont besoin d'être arrêter. Avec la prise de leur comté originaire, il est possible d'empêcher les nouveaux ours bruns d'obtenir leur bonus de clan!;;;;;;;;;;;;;x
+set_black_bear_bonus;Reinforce black bear's clan;Renforcer le clan des ours noirs;;;;;;;;;;;;;x
+set_black_bear_bonus_desc;With the conquest of the clan's origin, You can strenghten the entire black bear clan!;Avec la conquête de la terre ancestrale des ours noirs, vous pouvez renforcer l'intégralité du clan!;;;;;;;;;;;;;x
+clr_black_bear_bonus;Weaken black bear's clan;Affaiblir le clan des ours noirs;;;;;;;;;;;;;x
+clr_black_bear_bonus_desc;Black bear are too strong, they need to be stopped. As the owner of their homeland county, you can weaken them a little by preventing new black bear to get their bonuses!;Les ours noirs sont trop forts, ils ont besoin d'être arrêter. Avec la prise de leur comté originaire, il est possible d'empêcher les nouveaux ours noirs d'obtenir leur bonus de clan!;;;;;;;;;;;;;x
+set_animal_religious_autority;Increase religious influence;Augmenter l'influence de la religion;;;;;;;;;;;;;x
+set_animal_religious_autority_desc;By owning the religious group central territory, you can increase the moral autority by 20%;En possédant le territoire sacré du groupe religieux, l'influence morale est augmenté de 20%;;;;;;;;;;;;;x
+study_local_particularity;Study locals strange haze;Etudier les étranges fumées locales;;;;;;;;;;;;x
+study_local_particularity_desc;Study some strange haze that sometimes appear on some provinces. As those haze dosn't seem to belong to usual knowledge, a mystic's knowledge is needed, and since those haze can be dangerous, your physician is a good precaution.;Etudier d'étrange apparition de fumées dans certaines provinces. Comme ces fumées ne peuvent pas s'expliquer par des connaissances traditionnelles, avoir un mystic est nécessaire. De plus, comme ces fumées peuvent devenir dangereuses, emmener un physicien de la cour s'impose.;;;;;;;;;;;;;x
+human_bear_conversion_power;Change into a bear;Transformer en ours;;;;;;;;;;;;x
+human_bear_conversion_power_desc;Allow you to propage an illness that transform people into bear. That illness can also spread from itself;Provoque une maladie qui transforme les personnes en ours. Cette maladie peut aussi se propager toute seule.;;;;;;;;;;;;x
+province_bear_conversion;Convert province culture;Convertir la culture de la province;;;;;;;;;;;;x
+province_bear_conversion_desc;Generate the illness that convert the culture of a province into a bear one. What bear clan can be random.;Permet de répandre la maladie qui transforme en ours au sein de la province. Le résultat peut être aléatoire.;;;;;;;;;;;;x
+implant_bear_clan;imlplant your bear clan;Implante ton clan d'ours;;;;;;;;;;;;x
+implant_bear_clan_desc;By using your religion influence, you can implant your clan in the province.;En utilisant l'influence de la religion des ours, il est possible d'implanter une colonie d'ours;;;;;;;;;;;;x
+#chase_bear_on_province;exterminate bears;exterminer les ours;;;;;;;;;;;;x
+#chase_bear_on_province_desc;By using your personnal aide, you can start an hunt on bear inhabitant. At the condition that you have enough man power;Grâce aux membre de votre cour, il est possible de chasser par la force les ours du domaine. Cependant, cela demande suffisemment de chasseur potentiel;;;;;;;;;;;;x
+build_theodosian_wall;Construct big fortification wall;Construire de grands murs de fortifications;;;;;;;;;;;;x
+build_theodosian_wall_desc;Allow by destroying animals buildings, to construct a great monument on the county's capital. But war pause the construction;Permet la construction d'un grand mur défensif, semblable à celui des murs théodosiens. Cependant, les guerres interrompent la construction du mur.;;;;;;;;;;;;x
+build_Ydragsil_tree;Make a big tree grow;faire pousser un arbre nouricier;;;;;;;;;;;;x
+build_Ydragsil_tree_desc;Allow yourself, by using animals building as compost to make growing a big nurturing tree. But war stops the growing process;Permet de faire pousser, en utilisant les ressources des bâtiments animaux, d'avoir un arbre nourricier géant. Cependant les guerres empêche la bonne croissance de l'arbre.;;;;;;;;;;;;x
+build_golden_wall;Construct a big golden fortification;Construire une grosse fortification d'or;;;;;;;;;;;;x
+build_golden_wall_desc;By destroying animal's building, it is possible to construct a golden fortification that increase your revenue. But war pause the construction process;Permet de construire des fortifications en or. Cela augmenterai les revenus fiscaux de la province. Cependant, les guerres mettent en pause la construction.;;;;;;;;;;;;x
+build_animal_library;Construct a major library;Construire une bibliothèque majeur;;;;;;;;;;;;x
+build_animal_library_desc;By using ingenious knowledge, it is possible to construct a library that describe unethical knoledge. Wars interrupt the construction process;En utilisant des connaissances contenus dans les constructions animalières, il est possible de construire un grande bibliothèque peut orthodoxe. Les guerres interrompent le processus de construction.;;;;;;;;;;;;x
+convert_to_thecracy;Form a religious union;Former une union religieuse;;;;;;;;;;;;x
+convert_to_thecracy_desc;As animal, our survival isn't assured as human keepbeing aggressive;En tant qu'animal, la survie de la religion doit être le plus important à cause des humains qui nous voient avec aggressivité;;;;;;;;;;;;x
+organize_bear_succession_tournament;Oraganize a battle for succession;Organiser un tournois de succession;;;;;;;;;;;;x
+organize_bear_succession_tournament_desc;Bear believe that only the strongest have to stay on top. For that purpose, a giant battle are organized to choose the strongest amongst all adult child to be the only heir;En tant qu'ours, le plus fort soit le seul à pouvoir hériter. Pour trouver le plus fort des enfants, ce tournoi est la meilleur chose à faire!;;;;;;;;;;;;x
+Become_bear_tributary;Declare your independence;Déclarer l'indépendance;;;;;;;;;;;;x
+Become_bear_tributary_desc;The bear believe that only the strongest can rule. So if they have no relation with their liege, it become accepted to declare independance for showing the strongest bear;Les ours croient en la loi du plus fort. Pour cela, devenir indépendant pour montrer à son suzerain sa force est quelque chose de normal.;;;;;;;;;;;;x
+Become_bear_vassal;Becomming your suzerain's vassal;Devenir le vassal du suzerain;;;;;;;;;;;;x
+Become_bear_vassal_desc;As your relation have been closed with your suzerain, a bear can choose to swear alligiance to their suzerain.;En devenant plus proche avec le suzerain, il est possible pour un ours de lui prêter allégence.;;;;;;;;;;;;x
+giving_up_on_theocratic_normal_vasselage;swear total allegence to your lige;Prêter une allégence total au seigneur lige;;;;;;;;;;;;x
+giving_up_on_theocratic_normal_vasselage_desc;You swear total allegence to your lige lord to avoid any repression type based on religion;Prêter une allégence total à votre seigneur lige pour éviter tous types de repression basés sur la religion;;;;;;;;;;;;x
+giving_animal_religious_right;Give religious religious right;Donner les droits religieux;;;;;;;;;;;;x
+giving_animal_religious_right_desc;allow him to freely practice his religionin your country.;Permettre le vassal de pratiquer librement sa religion dans le pays.;;;;;;;;;;;;x
+force_full_obligation_unreligious_vassal;impose full obligation;Imposer les obligation absolue;;;;;;;;;;;;x
+force_full_obligation_unreligious_vassal_desc;Since [ROOT.GetTitledName] is infidel, you can impose the full vassal right until you successfully convert him;Comme [ROOT.GetTitledName] est infidèle, il est possible de lui imposer les droits vassaliques absolue tant qu'il ne s'est pas convertie!;;;;;;;;;;;;x
+giving_up_on_full_obligation;Get religious right;Récupérer les droits religieux;;;;;;;;;;;;x
+giving_up_on_full_obligation_desc;Use your favor to get back your rightfull religious right as any other vassals;Utiliser la faveur contre le seigneur lige pour réclamer les droits religieux et redevenir l'un de ses vassaux!;;;;;;;;;;;;x
+Affirm_your_human_bear_ability;Affirm your bear transformation ability;Réafirmer les capacités de transformation en ours;;;;;;;;;;;;x
+Affirm_your_human_bear_ability_desc;The trait §YBear-man§! isn't hereditary, but you succeded in making hereditary!;Le trait §YHomme-ours§! n'est pas sensé être héréditaire, cependant il est possible de le rendre héréditaire...;;;;;;;;;;;;x
+
+######TOOLTIP localisation
+ANY_WBEARS_BONUSES;Every white bear get §Y[GET_WHITE_REL_MODIFIER_LOCALISATION]§!!;Tous les ours blancs auront le bonus §Y[GET_WHITE_REL_MODIFIER_LOCALISATION]§!;;;;;;;;;;;;;x
+ANY_BLBEARS_BONUSES;Every black bear get §Y[GET_BLACK_REL_MODIFIER_LOCALISATION]§!!;Tous les ours noirs auront le bonus §Y[GET_BLACK_REL_MODIFIER_LOCALISATION]§!;;;;;;;;;;;;;x
+ANY_BRBEARS_BONUSES;Every brown bear get §Y[GET_BROWN_REL_MODIFIER_LOCALISATION]§!!;Tous les ours bruns auront le bonus §Y[GET_BROWN_REL_MODIFIER_LOCALISATION]§!;;;;;;;;;;;;;x
+CDT_MTSTIC_PHYSICIAN;has a court physician with the trait §Y mystic§!.;A nommé un physicien de la cour qui a le trait §Y'Mystique'§!.;;;;;;;;;;;;x
+NOT_RENCENTLY_RESEARSHED_DEC_CONV_BEAR;Do not have recently do a research in the province;N'a pas récemment fais de recherches dans la province;;;;;;;;;;;;x
+NOT_IN_TRANSFORMATION;Is not currently in transformation;N'est déjà pas en cours de transformation;;;;;;;;;;;;x
+NOT_IN_BIG_BUILDINGS_CONSTRUCTION;Do not have other big building in construction;N'a pas d'autre grands bâtiments en construction;;;;;;;;;;;;x
+NOT_ORGANIZED_SUCC_TOUR_COOLDOWN;Do not have organize the battle on the last 4 years;N'a pas organiser de tournois dans les 4 dernières années;;;;;;;;;;;;x
+HAS_BEAR_CHILD_COMPETITOR;Has at least 2 participant;A au moins 2 participants;;;;;;;;;;;;x
+LEGITIME_BEAR_SUCCESSOR_DEAD;The last legitime heir is dead;Le dernier héritier légitime est mort;;;;;;;;;;;;x
+CLOSE_RELATIVE_FAMILY;At least one close family member is of liege's dynasty;Au moins l'un des parents proches est de la dynastie du seigneur liege.;;;;;;;;;;;;x
+ONLY_ONE_TITLE_RANK_VASSAL;Has at most one title rank gap;A au plus un seul rang d'écart;;;;;;;;;;;;x
+SEND_RELIGIOUS_SUBMISSION_ULTIMATUM;You send an ultimatum to force him the full obligations;Envoie d'un ultimatum pour lui imposer les obligations absolues;;;;;;;;;;;;x
+
+
+####Hedgehogg update
+allow_hedgehogg_to_stay;Allow hedgehogg to inhabit your fort;Permettre aux hérissons d'habiter ici;;;;;;;;;;;;x
+allow_hedgehogg_to_stay_desc;By allowing hedgehog to stay in your fort, you can get a defensive bonus on your province;En permettant aux hérissons de rester dans le fort, il est possible d'avoir un bonus défensif dans la province;;;;;;;;;;;;x
+chase_hedgehogg_on_fort;Chase hedgehogg from the province;Chasser les hérissons de la province;;;;;;;;;;;;x
+chase_hedgehogg_on_fort_desc;By hiring hunter, you can chase hedgehogg from the province, usefull if their prensence means danger;En payant des chasseurs, il est possible de chasser les hérissons de la province. Utile s'ils représentent un danger potentiel;;;;;;;;;;;;x
+hedgehog_revolt_conversion;usurp his identity;Usurper son identité;;;;;;;;;;;;x
+hedgehog_revolt_conversion_desc;By releasing a prisoner, you can start the usurpation process and usurp all is title and wealth;En libérent ce prisonnier, il est possible de commencer la procédure d'usurpation d'identité;;;;;;;;;;;;x
+adopt_hedge_religion;Adopt hedgehogs' religion;Adopter la religion des hérissons;;;;;;;;;;;;x
+adopt_hedge_religion_desc;if you are an hedgehog, you can freely choose to convert yourself to the associated religion;En tant qu'hérisson, tu peux librement choisir de te convertir à la religion culturel;;;;;;;;;;;;;x
+hedgehog_province_conversion_from_fort_building;Convert human into hedgehog;Convertir la province en hérisson;;;;;;;;;;;;x
+hedgehog_province_conversion_from_fort_building_desc;By using your fort building, it is possible to chase the majority of non-hedgehog inhabitant in [This.GetName] and make hedgehog live here; En utilisant les bâtiments du fort, il est possible de chasser la majorité des non hérisson, pour que les hérissons puissent peupler la province;;;;;;;;;;;;x
+hedgehog_building_character_conversion;Create a clone of [Root.GetTitledName] and transform him into an hedgehog;Créer un clone de [Root.GetTitledName] et le transformer en hérisson;;;;;;;;;;;;x
+hedgehog_building_character_conversion_desc;By using the local clonning fort building, it is possible to change the character culture of someone on the province;en utilisant le bâtiment de clonage d'un fort, il est poswsible de transformer quelqu'un de la même province en hérisson;;;;;;;;;;;;x
+create_artic_fighter;Form [d_polar_fighter.GetName];Former [d_polar_fighter.GetName];;;;;;;;;;;;x
+create_artic_fighter_desc;By using your influence, you can defend your religion with a veteran groups of soldiers;En utilisant mon influence personnel, il est possible de créer une troupe de mercennaires afin de défendre les terres de ma religion;;;;;;;;;;;;x
+create_spiked_ball;Form [d_spike_ball.GetName];Former [d_spike_ball.GetName];;;;;;;;;;;;x
+create_spiked_ball_desc;By using your influence, you can defend your religion with a veteran groups of soldiers;En utilisant mon influence personnel, il est possible de créer une troupe de mercennaires afin de défendre les terres de ma religion;;;;;;;;;;;;x
+#hedgehog_chase_hedge_on_province;Chase hedgehog on the province;Chasser les hérissons de la province;;;;;;;;;;;;x
+#hedgehog_chase_hedge_on_province_desc;By spending prestige, gold ant time, it is possible to chase hedgehog in the province;Avec le prestige, l'argent et le temps, il est possible de chasser les hérissons de la province;;;;;;;;;;;;x
+
+#TOOLTIP
+HERGEHOG_LIVE_HERE;Some hedgehog can live in the province;Des hérissons peuvent vivre dans la province;;;;;;;;;;;;x
+HEDGEHOG_NOT_ALREADY_INSTALLED;No hedgehog already live in this province;Aucun hérisson ne vit dans la province;;;;;;;;;;;;x
+HAS_HEDGEHOG_HOSTILITY_REVOLUTIONARY_ARMY;Owns his rebel army;Posséde son armée de hérisson révolutionnaire;;;;;;;;;;;;x
+SAME_GENDER_TOOLTIP;[Root.GetTitledName] has the same gender as [From.GetTitledName];[Root.GetTitledName] est du même sexe que [From.GetTitledName];;;;;;;;;;;;x
+CREATED_HOLY_ORDER_ANIMAL_TOOLTIP;[d_polar_fighter.GetName] created;[d_polar_fighter.GetName] sont créée;;;;;;;;;;;;x
+CREATED_HOLY_ORDER_HEDGE_TOOLTIP;[d_spike_ball.GetName] created;[d_spike_ball.GetName] sont créée;;;;;;;;;;;;x
+
+####Panda update
+search_rumored_dish;Search for the mystic dish;Rechercher le plat mystique;;;;;;;;;;;;x
+search_rumored_dish_desc;A court jester told you a rumor that a the top of a mountain, you can get and eat a mystic dish that increase your ability, even if it does not work for animal character;Un boufon de la cour viens de rapporter une rumeur comme quoi un plat mystique qui renforce les capacités de ceux qui le mange. Cependant ce fameux plat ne peut être mangé qu'au sommet d'une montagne.;;;;;;;;;;;;x
+adopt_panda_religion;Adopt pandas' religion;Adopter la religion des pandas;;;;;;;;;;;;x
+adopt_panda_religion_desc;if you are a panda, you can freely choose to convert yourself to the associated religion;En tant que panda, tu peux librement choisir de te convertir à la religion culturel;;;;;;;;;;;;;x
+create_asian_fighter;Form [d_asian_fighter.GetName];Former [d_asian_fighter.GetName];;;;;;;;;;;;x
+create_asian_fighter_desc;By using your influence, you can defend your religion with a veteran groups of soldiers;En utilisant mon influence personnel, il est possible de créer une troupe de mercennaires afin de défendre les terres de ma religion;;;;;;;;;;;;x
+panda_instability_faction_ultimatum;Unstabilize the bureaucracy;Déstabiliser la bureaucratie;;;;;;;;;;;;x
+panda_instability_faction_ultimatum_desc;As the faction became strong enough, it is possible to weaken the liege autority;Comme le complot est désormais assez puissant, il est maintenant possible d'affaiblir l'autorité du seigneur lige;;;;;;;;;;;;x
+panda_independence_faction_ultimatum;Claim your independence;Réclammer son indépendance;;;;;;;;;;;;x
+panda_independence_faction_ultimatum_desc;As your faction own many members, they can claim their independence from their liege with increased retinue;Comme votre faction d'indépendance a pris suffisemment de pouvoir, il est possible de recruter une escorte provisoire pour imposer à son seigneur lige son indépendance.;;;;;;;;;;;;x
+panda_chase_animal_on_province;Chase animals on the province;Chasser les animaux de la province;;;;;;;;;;;;x
+panda_chase_animal_on_province_desc;By spending prestige, gold ant time, it is possible to chase animals in the province;Avec le prestige, l'argent et le temps, il est possible de chasser les animaux de la province;;;;;;;;;;;;x
+
+#TOOLTIP
+PANDA_HAS_NO_IMMUNITY;Has no panda transformation immunity;N'est pas immunisé au processus de transformation en panda;;;;;;;;;;;;x
+CREATED_HOLY_ORDER_PANDA_TOOLTIP;[d_asian_fighter.GetName] created;[d_asian_fighter.GetName] sont créée;;;;;;;;;;;;x
+PANDA_ULTIMATUM_SENT;Force autority weakening;Forcer la réduction de l'autorité royale;;;;;;;;;;;;x
+PANDA_INDEP_ULTIMATUM_SENT;Send your ultimatum;Envoie un ultimatum;;;;;;;;;;;;x
+
+
+####Duck update
+duck_conversion_quest;Go observe strange bird behavior;Observer les comportements d'étranges oiseaux;;;;;;;;;;;;x
+duck_conversion_quest_desc;Sometimes, strange birds keep regrouping on specifics sea part. To protect our coasts, we should investigate it;parfois, d'étranges oiseaux se regroupent à un même endroit au sein de certaines parties de l'océan. Aller observer ce qu'ils font peut s'avérer nécessaire pour défendre nos côtes.;;;;;;;;;;;;x
+adopt_duck_religion;Adopt duck' religion;Adopter la religion des canards;;;;;;;;;;;;x
+adopt_duck_religion_desc;if you are a duck, you can freely choose to convert yourself to the associated religion;En tant que canard, tu peux librement choisir de te convertir à la religion associé;;;;;;;;;;;;;x
+create_sea_master;Form the [d_sea_master.GetName];Former les [d_sea_master.GetName];;;;;;;;;;;;x
+create_sea_master_desc;By using your influence, you can defend your religion with a veteran groups of soldiers;En utilisant mon influence personnel, il est possible de créer une troupe de mercennaires afin de défendre les terres de ma religion;;;;;;;;;;;;x
+duck_cultural_convert_character;Transform into a duck;Transformer en canard;;;;;;;;;;;;x
+duck_cultural_convert_character_desc;By making the duck conversion fog, it is possible to convert character on water into a duck;En faisant apparaître le brouillard de conversion, il est possible de transformer des personnes sur l'eau en canards;;;;;;;;;;;;x
+duck_invasion_conversion;Invade the county;Envahir le comté;;;;;;;;;;;;x
+duck_invasion_conversion_desc;With neighbor county influence and help, the duck living in [This.GetName] can revolt and become a majority in [This.GetName];Avec l'influence et l'aide des comtés voisins, les canards vivants en [This.GetName] peuvent se révolter et devenir majoritaires en [This.GetName].;;;;;;;;;;;;x
+duck_invest_in_province;Invest in province;Investir dans la province;;;;;;;;;;;;x
+duck_invest_in_province_desc;By using money, you can make sure that the development level can increase;En utilisant de l'argent pour investir dans la province, le niveau de développement comtale pourra augmenter à nouveau;;;;;;;;;;;;x
+
+
+#TOOLTIP
+DUCK_is_on_boat;Is on a boat;Est dans un bâteau;;;;;;;;;;;;x
+DUCK_same_cul_neighbor;has a duck neighbor county;A un comté voisin de culture canard;;;;;;;;;;;;x
+DUCK_neighbor_high_dev;Has a neighbor county with a higher development of §Y6§!;A un comté voisin canard ayant un développement d'au moins §Y6§!;;;;;;;;;;;;x
+DUCK_HAS_SHIPYARD_TT;Has a shipyard;A un chantier naval;;;;;;;;;;;;x
+DUCK_Can_improve_dev;Max dev level can be increased;Le niveau de développement maximum peut être augmenter.;;;;;;;;;;;;x
+CREATED_HOLY_ORDER_DUCK_TOOLTIP;[d_sea_master.GetName] created;[d_sea_master.GetName] sont créée;;;;;;;;;;;;x
+DUCK_reduce_dev_tt;Reduce neighbor county's development value by %Y1§!;Réduit le développement comtale des comtés voisins d'§Y1§!;;;;;;;;;;;;x
+DUCK_non_duck_death_TT;Every non-duck character in [This.GetName] has %Y50%§! chance of dying;Tous les non canards de [This.GetName] ont §Y50%§! de chance de mourrir;;;;;;;;;;;;x
+
+####elephant update
+start_eleph_conv_quest;Let an elephant herd live here;Laisser une horde d'éléphant vivre ici;;;;;;;;;;;;x
+start_eleph_conv_quest_desc;By letting an elephant herd, it is possible to study their metabolism;En laissant une horde d'éléphant vivre ici, il peut être possible d'étudier leur métabolilsme;;;;;;;;;;;;x
+start_eleph_reprod_study;Study elephant reproduction ability;étudier les méthodes de reproduction des éléphants;;;;;;;;;;;;x
+start_eleph_reprod_study_desc;By studying reproduction method, you can hope to have a better understanding of elephant reproduction;En étudiant la manière dont les éléphants se reproduisent et ainsi avoir une meilleur compréhention des éléphants;;;;;;;;;;;;x
+adopt_eleph_religion;Adopt elephants' religion;Adopter la religion des éléphaqnts;;;;;;;;;;;;x
+adopt_eleph_religion_desc;As an elephant, you can freely choose to convert yourself to the associated religion;En tant que éléphant, tu peux librement choisir de te convertir à la religion associé;;;;;;;;;;;;;x
+create_immortal_herd;Form the [d_immortal_herd.GetName];Former les [d_immortal_herd.GetName];;;;;;;;;;;;x
+create_immortal_herd_desc;By using your influence, you can defend your religion with a veteran groups of soldiers;En utilisant mon influence personnel, il est possible de créer une troupe de mercennaires afin de défendre les terres de ma religion;;;;;;;;;;;;x
+eleph_construct_hospital;Construct an hospital;Construire un hopital;;;;;;;;;;;;x
+eleph_construct_hospital_desc;With elephants knowledge, an hospital is way easier and cheaper to build than what human can do;Avec les connaissances des éléphants, il est beaucoup plus simple, rapide et moins cher de construire un hôpital que pour les humains;;;;;;;;;;;;x
+eleph_abdicate;Abdicate;Abdiquer;;;;;;;;;;;;x
+eleph_abdicate_desc;As a male elephant is not fit to be a ruler, it is possible to abdicate and give the power to a proper dirigeant;En tant qu'éléphant mâle, il est difficile de diriger. Pour cela, il est possible d'abdiquer sont pouvoir à un dirigeant digne.;;;;;;;;;;;;x
+eleph_migration;Force migration;Forcer une migration;;;;;;;;;;;;x
+eleph_migration_desc;As a female elephant, it is possible to force a migration in the province;En tant qu'éléphante, il est possible d'organiser une migration;;;;;;;;;;;;x
+eleph_become_pregnant;Become pregnant;Devenir enceinte;;;;;;;;;;;;x
+eleph_become_pregnant_desc;As an elephant, it is possible with help from laboratory to force a pregnancy;En tant qu'éléphant, il est possible avec le bon laboratoire de forcer une grossesse;;;;;;;;;;;;x
+eleph_labo_transforformation;Force DNA mutation;Forcer la mutation de l'ADN;;;;;;;;;;;;x
+eleph_labo_transforformation_desc;By using your hospital laboratory, you can force the DAN mutation and transform him in animals;En utilisant le laboratoire hospitalier, il est possible de forcer la mutation de l'ADN et de le transformer en éléphant;;;;;;;;;;;;x
+eleph_climate_change;Harden the climate;Rendre le climat plus dure;;;;;;;;;;;;x
+eleph_climate_change_desc;With the help of your climate laboratory, you can change the local climate to make harder the life in this county;Avec l'aide du laboratoire climatique, il est possible de provisoirement changer le climat locale pour rendre le comté moins approvisionnable;;;;;;;;;;;;x
+eleph_climate_reset;Return climate to normal;Remettre le climat locale à la norme;;;;;;;;;;;;x
+eleph_climate_reset_desc;The Climate on [This.GetName] has been altered, but returning it to normal is easy...;Le climat de [This.GetName] a été altéré, mais le remettre normale est facile...;;;;;;;;;;;;x
+eleph_spawn_epidemy;Start an epidemy outbreak;Commencer une épidémie;;;;;;;;;;;;x
+eleph_spawn_epidemy_desc;As an elephant, it is possible to purposely create an epidemy outbreak with the help of the good laboratory;En tant qu'éléphant, il est possible de volontairement créer un début d'épidémie grâce au bon laboratoire;;;;;;;;;;;;x
+
+#TOOLTIP
+ELEPH_NO_RECENT_STUDY;Did not recently had an herd here;N'a pas récemment acueilli de troupeau ici;;;;;;;;;;;;x
+ELEPH_START_RESEARSH;The research start;Les recherches commencent;;;;;;;;;;;;x
+CREATED_HOLY_ORDER_ELEPH_TOOLTIP;[d_immortal_herd.GetName] created;[d_immortal_herd.GetName] sont créée;;;;;;;;;;;;x
+eleph_build_castle;Build a castle;Construire un château;;;;;;;;;;;;x
+eleph_build_city;Build a cité;Construire un citée;;;;;;;;;;;;x
+eleph_build_temple;Build a temple;Construire un temple;;;;;;;;;;;;x
+ELEPH_NO_ONE_CHANGE_CLIMATE;No one did change the local climate;Personne ne change le climat;;;;;;;;;;;;x
+ELEPH_CLIMATE_TT_CHANGE_CLIMATE;[From.GetTitledNameWithNick] is currently changing the climate;[From.GetTitledNameWithNick] modifie le climat local;;;;;;;;;;;;x
+ELEPH_CLIMATE_TT_RETURN_NORMAL;Return local climate to the norms;Retourne le climat local à la normale;;;;;;;;;;;;x
+ELEPH_TT_DISEASE_SPAWN;An epidemic start;Une épidémie commence;;;;;;;;;;;;x

@@ -1,0 +1,52 @@
+## le '00_' in file name is for rules to be displayed before the vanilla
+
+animals_conversion_ways = {
+	name = "ANIMALS_APPEARANCE"
+	# group = "ANNIMALS_MOD"
+	option = {
+		name = off
+		text = "RULE_OPTION_OFF_MOD"
+		desc = "RULE_OPTION_OFF_MOD_DESC"
+	}
+	option = {
+		name = animal_events
+		text = "RULE_OPTION_EVENTS_MOD"
+		desc = "RULE_OPTION_EVENTS_MOD_DESC"
+	}
+	option = {
+		name = animal_decision
+		text = "RULE_OPTION_DECISION_MOD"
+		desc = "RULE_OPTION_DECISION_MOD_DESC"
+	}
+	option = {
+		name = animal_instant
+		text = "RULE_OPTION_INSTANT_MOD"
+		desc = "RULE_OPTION_INSTANT_MOD_DESC"
+
+	}
+}
+
+animals_bonus_levy = {
+	name = "RULE_ANIMALS_LEVY"
+
+	option = {
+		name = No_levies
+		text = "RULE_NO_ANI_LEVY"
+		desc = "RULE_NO_ANI_LEVY_DESC"
+	}
+	option = {
+		name = Few
+		text = "RULE_ANI_LEVY_1500"
+		desc = "RULE_ANI_LEVY_1500_DESC"
+	}
+	option = {
+		name = Normal
+		text = "RULE_ANI_LEVY_4000"
+		desc = "RULE_ANI_LEVY_4000_DESC"
+	}
+	option = {
+		name = Many
+		text = "RULE_ANI_LEVY_10000"
+		desc = "RULE_ANI_LEVY_10000_DESC"
+	}
+}

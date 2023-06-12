@@ -1,0 +1,19 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+
+####panda update
+
+#start plot decision
+plot_animal_panda_conversion_short;change into a panda;Changer en panda;;;;;;;;;;;;x
+plot_animal_panda_conversion_title;Give panda food;Donner la nouriture de panda;;;;;;;;;;;;x
+plot_animal_panda_conversion_desc;Waiting to have an opportunity to force him to eat panda food and transform him into a panda;Le forcer Ã  manger un plat panda et ainsi le transformer en panda;;;;;;;;;;;;x
+
+#faction localisation
+#I don't know what are the localisation key, so I make all
+faction_panda_instability;Instability faction;Faction d'instabilité;;;;;;;;;;;;x
+faction_panda_instability_title;Instability faction;Faction d'instabilité;;;;;;;;;;;;x
+faction_panda_instability_short;Instability faction;Faction d'instabilité;;;;;;;;;;;;x
+faction_panda_instability_desc;If a ruler autority is too strong, vassals can become members to weaken its ruler;Les membres sont des vassaux qui pensent que leur seigneur lige ont une autorité trop importante sur le pays.;;;;;;;;;;;;x
+faction_panda_independence;Independence faction;Faction d'indépendance;;;;;;;;;;;;x
+faction_panda_independence_title;Independence faction;Faction d'indépendance;;;;;;;;;;;;x
+faction_panda_independence_short;Independence faction;Faction d'indépendance;;;;;;;;;;;;x
+faction_panda_independence_desc;The vassals members wish to flee from their lige or its officials and become independent;Les membres de la factions sont des vassaux qui n'apprécient pas l'administration de leur seigneur lige ou de ses bureaucrates.;;;;;;;;;;;;x

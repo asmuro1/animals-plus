@@ -1,0 +1,916 @@
+###### duck update
+### event 99 - 110
+
+namespace = ani_plus
+
+####conversion quest
+# event 099: launching quest (event rule)
+# event 100: see if naval duck regroupment is linked to supernatural event
+    # choice 1: just avoid them (no event, end of quest)
+    # choice 2: let's investigate (regency, lead to event 101 or 102)
+# event 101: duck goes away without any reason (end of quest/regency)
+# event 102: fog appear - every one lost counciousness
+# event 103: everyone woke up (end of quest/regency)
+    # gain age (between 1 to 15 years)
+    # one of following:
+        #70% - became duck
+        #20% - gain genious trait
+        #10% - gain imbecile trait
+
+#event 099
+character_event = {
+    id = ani_plus.099
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    desc = DESC_EVT_099_INSPECT_STRANGE_BIRD
+
+    only_playable = yes
+    min_age = 18
+
+    trigger = {
+        has_game_rule = {
+            name = animals_conversion_ways
+            value = animal_events
+        }
+        NOT = { Is_really_animal_trigger = yes }
+        is_incapable = no
+        has_regent = no
+        OR = {
+            trait = administrator
+            lifestyle_traits == 0
+        }
+
+        any_demesne_province = {
+            port = yes
+            OR = {
+                has_building = ca_shipyard_1
+                has_building = tb_shipyard_1
+            }
+        }
+    }
+
+    mean_time_to_happen = {
+        years = 500
+
+        modifier = {
+            factor = 0.15 #75 years
+            ai = no
+        }
+        modifier = {
+            factor = 0.5
+            any_demesne_province = {
+                has_trade_post = yes
+                port = yes #to avoid trade routes ones
+            }
+        }
+    }
+
+    option = {
+        name = OPT_1_EVT_099_GO_SEE_IT
+
+        character_event = { id = ani_plus.100 days = 7 }
+        ai_chance = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+                NOR = {
+                    trait = gluttonous
+                    trait = paranoid
+                    trait = lunatic
+                }
+            }
+            modifier = {
+                factor = 0.05 #5%
+                always = yes
+            }
+            modifier = {
+                factor = 2.5
+                trait = gluttonous
+            }
+            modifier = {
+                factor = 5
+                trait = paranoid
+            }
+            modifier = {
+                factor = 2.5
+                trait = lunatic
+            }
+        }
+    }
+    option = {
+        name = OPT_2_EVT_099_IGNORE_IT
+        ai_chance = {
+            factor = 1
+        }
+    }
+}
+
+#event 100
+character_event = {
+    id = ani_plus.100
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    is_triggered_only = yes
+
+    desc = DESC_EVT_100_GO_SEE_FURTHER
+
+    option = {
+        name = OPT_1_EVT_100_GO_BACK
+
+        ai_chance = {factor = 0} #filters done on event 99 or decision
+    }
+    option = {
+        name = OPT_2_EVT_100_EXPLORE_MORE
+
+        add_trait = travelling
+
+        random_list = {
+            1 = {
+                custom_tooltip = {
+                    text = ANI_THEIR_IS_NOTHING_TT
+                    character_event = { id = ani_plus.101 } ##end of quest
+                }
+            }
+            9 = {
+                custom_tooltip = {
+                    text = ANI_THEIR_IS_SOMETHING_TT
+                    character_event = { id = ani_plus.102 } # fog appear
+                }
+            }
+        }
+
+        ai_chance = {factor = 1} #filters done on event 99 or decision
+    }
+}
+
+#event 101
+character_event = {
+    id = ani_plus.101
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    is_triggered_only = yes
+
+    desc = DESC_EVT_101_RETURN_NORMAL
+
+    option = {
+        name = OPT_EVT_101_NOTHIG
+        remove_trait = travelling
+    }
+}
+
+#event 102
+character_event = {
+    id = ani_plus.102
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    is_triggered_only = yes
+
+    desc = DESC_EVT_102_FOG_APPEAR
+
+    option = {
+        name = OPT_EVT_102_COUGH
+        character_event = { id = ani_plus.103 days = 7 }
+    }
+}
+
+#event 103
+character_event = {
+    id = ani_plus.103
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    is_triggered_only = yes
+
+    desc = DESC_EVT_103_FREE_FROM_FOG
+
+    option = {
+        name = OPT_EVT_103_FINALLY_FREE
+
+        custom_tooltip = {
+            text = ANI_GAIN_AGE
+
+            random_list = {
+                1 = {
+                    add_age = 1
+                }
+                2 = {
+                    add_age = 4
+                }
+                4 = {
+                    add_age = 7
+                }
+                3 = {
+                    add_age = 8
+                }
+                2 = {
+                    add_age = 9
+                }
+                1 = {
+                    add_age = 12
+                }
+                1 = {
+                    add_age = 15
+                }
+            }
+        }
+        random_list = {
+            7 = { culture = duck_culture }
+            2 = { add_trait = genius }
+            1 = { add_trait = imbecile }
+        }
+        remove_trait = travelling
+    }
+}
+
+####county cultural conversion
+## 1 - passive conversion (event 104)
+## 2 - conversion by expension (moved to decision, not an event anymore)
+
+#event 104
+province_event = {
+    id = ani_plus.104
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    trigger = {
+        holder_scope = {
+            culture_group = duck_group
+        }
+        NOT = { culture = holder_scope }
+        OR = {
+            port = yes
+            borders_lake = yes
+            borders_major_river = yes
+        }
+    }
+
+    mean_time_to_happen = {
+        years = 40
+
+        modifier = {
+            factor = 0.90
+            has_trade_post = yes
+        }
+        modifier = {
+            factor = 0.375
+            holder_scope = { religion = Duck_religion }
+        }
+        modifier = {
+            factor = 0.4 #~12 years if holder scope is duck_religion
+            has_trade_post = yes
+            trade_post_owner = {
+                culture_group = duck_group
+            }
+        }
+        modifier = {
+            factor = 0.75
+            is_capital = yes
+        }
+    }
+
+    desc = DESC_EVT_104_DUCK_FOG
+
+    option = {
+        name = OPT_EVT_103_FINALLY_DUCK
+
+        culture = holder_scope
+        hidden_tooltip = {
+            duck_calculate_max_dev_level_effect = yes
+            set_variable = {
+                which = duck_dev_var
+                value = 5
+            }
+            duck_adapt_dev_province_modifier_effect = yes
+        }
+        holder_scope = {
+            add_character_modifier = {
+                name = duck_passive_conversion
+                months = 9
+                stacking = yes
+            }
+            if = {
+                limit = {
+                    NOT = {
+                        religion = Duck_religion
+                    }
+                }
+                add_character_modifier = {
+                    name = duck_passive_conversion
+                    years = 2
+                    stacking = yes
+                }
+            }
+        }
+        #put a tooltip
+        custom_tooltip = {
+            text = DUCK_prov_conv
+            any_province_character = {
+                limit = { NOT = { culture_group = duck_group } }
+
+                random = {
+                    chance = 70
+
+                    culture = PREV
+                }
+            }
+        }
+    }
+}
+
+####development level events
+## event 105: yearly update on maximum development a duck province can got
+##              + updating growth counter
+## event 106: duck development level change (triggered by event 105 or 107)
+## event 107: siege or looting effect on development growth counter
+# event 105 and 107 are classified as "character_event" instead of "province_event" because triggered by on_action trigger
+
+#event 105
+character_event = {
+    id = ani_plus.105
+
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        any_demesne_title = {
+            limit = { tier = COUNT }
+            location = {
+                if = {
+                    limit = { culture_group = duck_group }
+                    duck_calculate_max_dev_level_effect = yes
+                    duck_adapt_dev_province_modifier_effect = yes #for culture change not done by this mod
+                    duck_update_dev_growth_counter_effect = yes
+                }
+                else = {
+                    duck_remove_dev_modifier_effect = yes #if had a previous modifier before culture change
+                    set_variable = {
+                        which = deck_dev_growth
+                        value = 0
+                    }
+                }
+            }
+        }
+    }
+}
+#event 106
+province_event = {
+    id = ani_plus.106
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    is_triggered_only = yes
+
+    immediate = {
+        if = {
+            limit = {
+                NOT = {
+                    check_variable = {
+                        which = deck_dev_growth
+                        value = 0
+                    }
+                }
+            }
+            set_province_flag = duck_reduce_dev_evt
+        }
+    }
+
+    desc = DESC_EVT_106_CHANGE_DEV
+
+    option = {
+        trigger = {
+            has_province_flag = duck_reduce_dev_evt
+        }
+        name = OPT1_EVT_106_DECREASE_DEV
+        custom_tooltip = {
+            text = DUCK_DEV_REDUCE
+            duck_reduce_dev_effect = yes
+            clr_province_flag = duck_reduce_dev_evt
+        }
+    }
+    option = {
+        trigger = {
+            NOT = { has_province_flag = duck_reduce_dev_evt }
+        }
+        name = OPT2_EVT_106_INCREASE_DEV
+        custom_tooltip = {
+            text = DUCK_DEV_INCREASE
+            duck_increase_dev_effect = yes
+        }
+    }
+}
+#event 107
+character_event = {
+    id = ani_plus.107
+
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        FROM = {
+            location = {
+                if = {
+                    limit = {
+                        culture_group = duck_group
+                    }
+                    subtract_variable = {
+                        which = deck_dev_growth
+                        value = 650
+                    }
+                    duck_dev_change_event_trigger_effect = yes
+                }
+            }
+        }
+    }
+}
+
+#### on_action event
+# event 108: giving c_maldives holy site bonus
+character_event = {
+    id = ani_plus.108
+
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        culture_group = duck_group
+        religion = Duck_religion
+        c_maldives = {
+            holder_scope = {
+                religion = Duck_religion
+            }
+        }
+    }
+    immediate = {
+        add_character_modifier = {
+            name = duck_HS_Respected_generation
+            duration = -1
+        }
+    }
+}
+
+###investissment events (increasing duck_max_dev)
+## event 109: choosing how much we invested
+## event 110: yearly payment (can invest more, less or just stop)
+
+#event 109
+province_event = {
+    id = ani_plus.109
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    is_triggered_only = yes
+
+    immediate = {
+        duck_calculate_max_potential_dev_level_effect = yes
+    }
+
+    desc = DESC_EVT_109_START_INVESTISSMENT
+
+    option = {
+        name = OPT1_EVT109_ONE_MORE_LEVEL
+        trigger = {
+            holder_scope = {
+                scaled_wealth = {
+                    value = 0.4
+                    max = 200
+                    min = 20
+                }
+            }
+            NOT = {
+                check_variable = {
+                    which = local_max_dev_potential_level
+                    value = 9
+                }
+            }
+        }
+        add_province_modifier = {
+            name = duck_province_invest_1
+            duration = -1
+        }
+        holder_scope = {
+            scaled_wealth = {
+                value = -0.4
+                max = -200
+                min = -20
+            }
+        }
+        province_event = { id = ani_plus.110 months = 12 }
+
+        ai_chance = {
+            factor = 20
+
+            modifier = {
+                factor = 0
+                holder_scope = { NOT = { culture_group = duck_group } }
+            }
+            modifier = {
+                factor = 0.05
+                holder_scope = { NOT = { wealth = 250 } }
+            }
+        }
+    }
+    option = {
+        name = OPT2_EVT109_TWO_MORE_LEVEL
+        trigger = {
+            holder_scope = {
+                scaled_wealth = {
+                    value = 0.80
+                    max = 400
+                    min = 40
+                }
+            }
+            NOT = {
+                check_variable = {
+                    which = local_max_dev_potential_level
+                    value = 8
+                }
+            }
+        }
+
+        add_province_modifier = {
+            name = duck_province_invest_2
+            duration = -1
+        }
+        holder_scope = {
+            scaled_wealth = {
+                value = -0.80
+                max = -400
+                min = -40
+            }
+        }
+        province_event = { id = ani_plus.110 months = 11 random = 45 }
+
+        ai_chance = {
+            factor = 5
+
+            modifier = {
+                factor = 10
+                holder_scope = { wealth = 2500}
+            }
+            modifier = {
+                factor = 0
+                holder_scope = { NOT = { culture_group = duck_group } }
+            }
+        }
+    }
+    option = {
+        name = OPT3_EVT109_THREE_MORE_LEVEL
+        trigger = {
+            holder_scope = {
+                ai = no
+                scaled_wealth = {
+                    value = 1.20
+                    max = 600
+                    min = 60
+                }
+            }
+            NOT = {
+                check_variable = {
+                    which = local_max_dev_potential_level
+                    value = 7
+                }
+            }
+        }
+
+
+        add_province_modifier = {
+            name = duck_province_invest_3
+            duration = -1
+        }
+        holder_scope = {
+            scaled_wealth = {
+                value = -1.20
+                max = -600
+                min = -60
+            }
+        }
+        province_event = { id = ani_plus.110 months = 11 random = 30 }
+    }
+    option = {
+        name = OPT4_EVT109_NO_INVEST
+
+        clr_province_flag = duck_dev_invest
+
+        ai_chance = {
+            factor = 1
+        }
+    }
+}
+
+#event 110
+province_event = {
+    id = ani_plus.110
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    is_triggered_only = yes
+
+    trigger = {
+        culture_group = duck_group
+    }
+
+    immediate = {
+        duck_calculate_max_potential_dev_level_effect = yes
+    }
+    desc = DESC_EVT_110_CONTINUE_INVEST
+
+    option = {
+        name = OPT1_EVT_110_CONTINUE_INVEST
+        trigger = {
+            has_province_modifier = duck_province_invest_1
+            holder_scope = {
+                scaled_wealth = {
+                    value = 0.4
+                    max = 200
+                    min = 20
+                }
+            }
+            NOT = {
+                check_variable = {
+                    which = local_max_dev_potential_level
+                    value = 10
+                }
+            }
+        }
+
+        holder_scope = {
+            scaled_wealth = {
+                value = -0.4
+                max = -200
+                min = -20
+            }
+        }
+
+        province_event = { id = ani_plus.110 months = 12 }
+        ai_chance = {
+            factor = 20
+
+            modifier = {
+                factor = 0
+                holder_scope = { NOT = { culture_group = duck_group } }
+            }
+            modifier = {
+                factor = 0.05
+                holder_scope = { NOT = { wealth = 250 } }
+            }
+        }
+    }
+    option = {
+        name = OPT1_EVT_110_CONTINUE_INVEST
+        trigger = {
+            has_province_modifier = duck_province_invest_2
+            holder_scope = {
+                scaled_wealth = {
+                    value = 0.80
+                    max = 400
+                    min = 40
+                }
+            }
+            NOT = {
+                check_variable = {
+                    which = local_max_dev_potential_level
+                    value = 10
+                }
+            }
+        }
+
+        holder_scope = {
+            scaled_wealth = {
+                value = -0.80
+                max = -400
+                min = -40
+            }
+        }
+        province_event = { id = ani_plus.110 months = 11 random = 45 }
+
+        ai_chance = {
+            factor = 20
+
+            modifier = {
+                factor = 0
+                holder_scope = { NOT = { culture_group = duck_group } }
+            }
+            modifier = {
+                factor = 0.05
+                holder_scope = { NOT = { wealth = 250 } }
+            }
+        }
+    }
+    option = {
+        name = OPT1_EVT_110_CONTINUE_INVEST
+        trigger = {
+            has_province_modifier = duck_province_invest_3
+            holder_scope = {
+                scaled_wealth = {
+                    value = 1.20
+                    max = 600
+                    min = 60
+                }
+            }
+            NOT = {
+                check_variable = {
+                    which = local_max_dev_potential_level
+                    value = 10
+                }
+            }
+        }
+
+        holder_scope = {
+            scaled_wealth = {
+                value = -1.20
+                max = -600
+                min = -60
+            }
+        }
+        province_event = { id = ani_plus.110 months = 11 random = 30 }
+
+        ai_chance = {
+            factor = 0
+        }
+    }
+    option = {
+        name = OPT2_EVT_110_REDUCE_INVEST
+        trigger = {
+            has_province_modifier = duck_province_invest_2
+            holder_scope = {
+                scaled_wealth = {
+                    value = 0.4
+                    max = 200
+                    min = 20
+                }
+            }
+        }
+
+        remove_province_modifier = duck_province_invest_2
+        add_province_modifier = {
+            name = duck_province_invest_1
+            duration = -1
+        }
+        holder_scope = {
+            scaled_wealth = {
+                value = -0.4
+                max = -200
+                min = -20
+            }
+        }
+        province_event = { id = ani_plus.110 months = 12 }
+
+        ai_chance = {
+            factor = 5
+
+            modifier = {
+                factor = 10
+                NOT = { holder_scope = { wealth = 2500 } }
+            }
+            modifier = {
+                factor = 0
+                holder_scope = { NOT = { culture_group = duck_group } }
+            }
+        }
+    }
+    option = {
+        name = OPT2_EVT_110_REDUCE_INVEST
+        trigger = {
+            has_province_modifier = duck_province_invest_3
+            holder_scope = {
+                scaled_wealth = {
+                    value = 0.80
+                    max = 400
+                    min = 40
+                }
+            }
+        }
+
+        remove_province_modifier = duck_province_invest_3
+        add_province_modifier = {
+            name = duck_province_invest_2
+            duration = -1
+        }
+        holder_scope = {
+            scaled_wealth = {
+                value = -0.80
+                max = -400
+                min = -40
+            }
+        }
+        province_event = { id = ani_plus.110 months = 11 random = 45 }
+
+        ai_chance = {
+            factor = 1000
+        }
+    }
+    option = {
+        name = OPT3_EVT_110_INCREASE_INVEST
+        trigger = {
+            has_province_modifier = duck_province_invest_1
+            holder_scope = {
+                scaled_wealth = {
+                    value = 0.80
+                    max = 400
+                    min = 40
+                }
+            }
+            NOT = {
+                check_variable = {
+                    which = local_max_dev_potential_level
+                    value = 9
+                }
+            }
+        }
+
+        remove_province_modifier = duck_province_invest_1
+        add_province_modifier = {
+            name = duck_province_invest_2
+            duration = -1
+        }
+        holder_scope = {
+            scaled_wealth = {
+                value = -0.80
+                max = -400
+                min = -40
+            }
+        }
+        province_event = { id = ani_plus.110 months = 11 random = 45 }
+
+        ai_chance = {
+            factor = 5
+
+            modifier = {
+                factor = 10
+                holder_scope = { wealth = 2500}
+            }
+            modifier = {
+                factor = 0
+                holder_scope = { NOT = { culture_group = duck_group } }
+            }
+        }
+    }
+    option = {
+        name = OPT3_EVT_110_INCREASE_INVEST
+        trigger = {
+            has_province_modifier = duck_province_invest_2
+            holder_scope = {
+                scaled_wealth = {
+                    value = 1.20
+                    max = 600
+                    min = 60
+                }
+            }
+            NOT = {
+                check_variable = {
+                    which = local_max_dev_potential_level
+                    value = 9
+                }
+            }
+        }
+
+        remove_province_modifier = duck_province_invest_2
+        add_province_modifier = {
+            name = duck_province_invest_3
+            duration = -1
+        }
+        holder_scope = {
+            scaled_wealth = {
+                value = -1.20
+                max = -600
+                min = -60
+            }
+        }
+        province_event = { id = ani_plus.110 months = 11 random = 30 }
+
+        ai_chance = {
+            factor = 0
+        }
+    }
+    option = {
+        name = OPT4_EVT_110_STOP_INVEST
+
+        remove_province_modifier = duck_province_invest_1
+        hidden_tooltip = {
+            remove_province_modifier = duck_province_invest_2
+            remove_province_modifier = duck_province_invest_3
+        }
+
+        clr_province_flag = duck_dev_invest
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    fail_trigger_effect = {
+        remove_province_modifier = duck_province_invest_1
+        remove_province_modifier = duck_province_invest_2
+        remove_province_modifier = duck_province_invest_3
+        clr_province_flag = duck_dev_invest
+    }
+}

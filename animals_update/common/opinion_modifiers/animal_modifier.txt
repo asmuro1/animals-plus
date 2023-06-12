@@ -1,0 +1,70 @@
+
+
+
+#beta version modifier
+
+event_gift = {
+    opinion = 40
+    years = 2
+
+    inherit = yes
+    decay = yes
+    non_aggression_pact = yes
+}
+
+###bear update modifier
+bear_succession_invitation = {
+    opinion = 20
+    years = 10
+}
+
+bear_chancellor_job_insult = {
+    opinion = -20
+    years = 8
+}
+bear_chancellor_job_pretender_insult = {
+    opinion = -30
+    years = 8
+}
+bear_chancellor_job_lieage_repression = {
+    opinion = -50
+    years = 8
+}
+bear_steward_job_cultural_insult = {
+    opinion = -25
+    years = 15
+}
+bear_religious_job_zeal = {
+    opinion = -35
+    years = 10
+}
+
+###panda update modifier
+panda_traitor_imprison = {
+    opinion = -50
+    years = 1
+    prison_reason = yes
+    banish_reason = yes
+    disable_non_aggression_pacts = yes
+}
+
+panda_plot_discovered_rivality = {
+    opinion = -60
+    years = 30
+    revoke_reason = yes
+    prison_reason = yes
+    execute_reason = yes
+    banish_reason = yes
+    crime = yes
+}
+
+panda_instab_ultimatum = {
+    opinion = 35
+    years = 10
+}
+
+eleph_forced_conversion = {
+    opinion = -75
+    years = 3
+    crime = yes
+}

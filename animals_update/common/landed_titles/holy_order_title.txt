@@ -1,0 +1,115 @@
+
+d_polar_fighter = {
+    color = { 90 90 90 }
+    color2 = { 255 255 255 }
+
+    graphical_culture = beargfx
+
+    title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+
+    holy_order = yes
+    mercenary_type = polar_fighter_mercs
+    landless = yes
+
+    short_name = yes
+
+    religion = Bears_religion
+    culture = white_bear
+
+    primary = yes
+
+    monthly_income  = 2
+}
+
+d_spike_ball = {
+    color = { 91 91 91 }
+    color2 = { 255 255 255 }
+
+    graphical_culture = hedgehoggfx
+
+    title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+
+    holy_order = yes
+    mercenary_type = spike_ball_mercs
+    landless = yes
+
+    short_name = yes
+
+    religion = Hedge_religion
+    culture = hedgehog_culture
+
+    primary = yes
+
+    monthly_income = 2
+}
+
+d_asian_fighter = {
+    color = { 92 92 92 }
+    color2 = { 255 255 255 }
+
+    graphical_culture = redpandagfx
+
+    title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+
+    holy_order = yes
+    mercenary_type = asian_fighter_mercs
+    landless = yes
+
+    short_name = yes
+
+    religion = Panda_religion
+    culture = red_panda
+
+    primary = yes
+
+    monthly_income = 2
+}
+
+d_sea_master = {
+    color = { 93 93 93 }
+    color2 = { 255 255 255 }
+
+    graphical_culture = duckgfx
+
+    title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+
+    holy_order = yes
+    mercenary_type = sea_master_mercs
+    landless = yes
+
+    short_name = yes
+
+    religion = Duck_religion
+    culture = duck_culture
+
+    primary = yes
+
+    monthly_income = 2
+}
+
+d_immortal_herd = {
+    color = { 94 94 94 }
+    color2 = { 255 255 255 }
+
+    graphical_culture = elephantgfx
+
+    title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+
+    holy_order = yes
+    mercenary_type = immortal_herd
+    landless = yes
+
+    short_name = yes
+
+    religion = Eleph_religion
+    culture = elephant_culture
+
+    primary = yes
+
+    monthly_income = 2
+}

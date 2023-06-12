@@ -1,0 +1,855 @@
+castle = {
+    ca_bear_regiment_1 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = bear_group
+        }
+        trigger = {
+            culture_group = bear_group
+            TECH_CASTLE_CONSTRUCTION = 1
+        }
+        is_active_trigger = {
+            culture_group = bear_group
+            has_building = ca_ani_castle_tower_1
+        }
+        prerequisites = { ca_ani_castle_tower_1 }
+
+        gold_cost = 84
+        build_time = 360
+        ai_creation_factor = 30
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 1.5
+
+        light_infantry = 50
+        heavy_infantry = 25
+    }
+    ca_bear_regiment_2 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = bear_group
+        }
+        trigger = {
+            culture_group = bear_group
+            TECH_CASTLE_CONSTRUCTION = 1
+            TECH_FORTIFICATIONS_CONSTRUCTION = 1
+        }
+        is_active_trigger = {
+            culture_group = bear_group
+            has_building = ca_ani_castle_tower_1_bis
+        }
+        prerequisites = { ca_ani_castle_tower_1_bis }
+        upgrades_from	= ca_bear_regiment_1
+
+        gold_cost = 100
+        build_time = 720
+        ai_creation_factor = 30
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 1.6
+
+        light_infantry = 75
+        heavy_infantry = 25
+    }
+    ca_bear_regiment_3 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = bear_group
+        }
+        trigger = {
+            culture_group = bear_group
+            TECH_CASTLE_CONSTRUCTION = 3
+            TECH_FORTIFICATIONS_CONSTRUCTION = 2
+        }
+        is_active_trigger = {
+            culture_group = bear_group
+            has_building = ca_ani_castle_tower_3
+        }
+        prerequisites = { ca_ani_castle_tower_3 }
+        upgrades_from	= ca_bear_regiment_2
+
+        gold_cost = 217
+        build_time = 1150
+        ai_creation_factor = 30
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 1.7
+
+        light_infantry = 100
+        heavy_infantry = 75
+    }
+    ca_bear_regiment_4 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = bear_group
+        }
+        trigger = {
+            culture_group = bear_group
+            TECH_CASTLE_CONSTRUCTION = 6
+            TECH_FORTIFICATIONS_CONSTRUCTION = 5
+        }
+        is_active_trigger = {
+            culture_group = bear_group
+            has_building = ca_ani_castle_tower_6
+        }
+        prerequisites = { ca_ani_castle_tower_6 }
+        upgrades_from	= ca_bear_regiment_2
+
+        gold_cost = 570
+        build_time = 1500
+        ai_creation_factor = 30
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 1.7
+
+        light_infantry = 125 #total = 350
+        heavy_infantry = 125 #total = 250
+    }
+
+    ca_bear_armor_1 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = bear_group
+        }
+        trigger = {
+            culture_group = bear_group
+            TECH_CASTLE_CONSTRUCTION = 1
+        }
+        is_active_trigger = {
+            culture_group = bear_group
+            has_building = ca_ani_castle_tower_1
+        }
+        prerequisites = { ca_ani_castle_tower_1 }
+
+        gold_cost = 84
+        build_time = 360
+        ai_creation_factor = 30
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 1.5
+
+        heavy_infantry = 35
+    }
+    ca_bear_armor_2 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = bear_group
+        }
+        trigger = {
+            culture_group = bear_group
+            TECH_CASTLE_CONSTRUCTION = 2
+            TECH_FORTIFICATIONS_CONSTRUCTION = 1
+        }
+        is_active_trigger = {
+            culture_group = bear_group
+            has_building = ca_ani_castle_tower_2
+        }
+        prerequisites = { ca_ani_castle_tower_2 }
+        upgrades_from = ca_bear_armor_1
+
+        gold_cost = 134
+        build_time = 720
+        ai_creation_factor = 30
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 1.6
+
+        heavy_infantry = 55
+    }
+    ca_bear_armor_3 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = bear_group
+        }
+        trigger = {
+            culture_group = bear_group
+            TECH_CASTLE_CONSTRUCTION = 4
+            TECH_FORTIFICATIONS_CONSTRUCTION = 3
+        }
+        is_active_trigger = {
+            culture_group = bear_group
+            has_building = ca_ani_castle_tower_4
+        }
+        prerequisites = { ca_ani_castle_tower_4 }
+        upgrades_from = ca_bear_armor_2
+
+        gold_cost = 320
+        build_time = 1150
+        ai_creation_factor = 30
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 1.7
+
+        heavy_infantry = 100
+    }
+    ca_bear_armor_4 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = bear_group
+        }
+        trigger = {
+            culture_group = bear_group
+            TECH_CASTLE_CONSTRUCTION = 6
+            TECH_FORTIFICATIONS_CONSTRUCTION = 6
+        }
+        is_active_trigger = {
+            culture_group = bear_group
+            has_building = ca_ani_castle_tower_6_bis
+        }
+        prerequisites = { ca_ani_castle_tower_6_bis }
+        upgrades_from = ca_bear_armor_2
+
+        gold_cost = 575
+        build_time = 1500
+        ai_creation_factor = 30
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 1.7
+
+        heavy_infantry = 110
+    }
+
+    ca_bear_weapons_1 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = bear_group
+        }
+        trigger = {
+            culture_group = bear_group
+            TECH_CASTLE_CONSTRUCTION = 1
+        }
+        is_active_trigger = {
+            culture_group = bear_group
+            has_building = ca_ani_castle_tower_1
+        }
+        prerequisites = { ca_ani_castle_tower_1 }
+
+        gold_cost = 84
+        build_time = 360
+        ai_creation_factor = 30
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 1.5
+
+        pikemen = 30
+        archers = 25
+    }
+    ca_bear_weapons_2 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = bear_group
+        }
+        trigger = {
+            culture_group = bear_group
+            TECH_CASTLE_CONSTRUCTION = 2
+            TECH_FORTIFICATIONS_CONSTRUCTION = 2
+        }
+        is_active_trigger = {
+            culture_group = bear_group
+            has_building = ca_ani_castle_tower_2_bis
+        }
+        prerequisites = { ca_ani_castle_tower_2_bis }
+        upgrades_from = ca_bear_weapons_1
+
+        gold_cost = 167
+        build_time = 720
+        ai_creation_factor = 30
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 1.6
+
+        pikemen = 35
+        archers = 35
+    }
+    ca_bear_weapons_3 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = bear_group
+        }
+        trigger = {
+            culture_group = bear_group
+            TECH_CASTLE_CONSTRUCTION = 5
+            TECH_FORTIFICATIONS_CONSTRUCTION = 4
+        }
+        is_active_trigger = {
+            culture_group = bear_group
+            has_building = ca_ani_castle_tower_5
+        }
+        prerequisites = {ca_ani_castle_tower_5}
+        upgrades_from = ca_bear_weapons_2
+
+        gold_cost = 440
+        build_time = 1150
+        ai_creation_factor = 30
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 1.7
+
+        pikemen = 55
+        archers = 60
+    }
+    ca_bear_weapons_4 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = bear_group
+        }
+        trigger = {
+            culture_group = bear_group
+            TECH_CASTLE_CONSTRUCTION = 7
+            TECH_FORTIFICATIONS_CONSTRUCTION = 7
+        }
+        is_active_trigger = {
+            culture_group = bear_group
+            has_building = ca_ani_castle_tower_7_bis
+        }
+        prerequisites = {ca_ani_castle_tower_7_bis}
+        upgrades_from = ca_bear_weapons_3
+
+        gold_cost = 814
+        build_time = 1500
+        ai_creation_factor = 30
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 1.7
+
+        pikemen = 80
+        archers = 80
+    }
+
+    ca_bear_retinue_1 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = bear_group
+        }
+        trigger = {
+            culture_group = bear_group
+            TECH_CASTLE_CONSTRUCTION = 2
+            TECH_FORTIFICATIONS_CONSTRUCTION = 1
+        }
+        is_active_trigger = {
+            culture_group = bear_group
+            has_building = ca_ani_castle_tower_2
+        }
+        prerequisites = { ca_ani_castle_tower_2 }
+
+        gold_cost = 134
+        build_time = 365
+        ai_creation_factor = 30
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 1.5
+
+        heavy_infantry = 20
+        retinuesize = 20
+        heavy_infantry_morale = 0.025
+    }
+    ca_bear_retinue_2 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = bear_group
+        }
+        trigger = {
+            culture_group = bear_group
+            TECH_CASTLE_CONSTRUCTION = 5
+            TECH_FORTIFICATIONS_CONSTRUCTION = 4
+        }
+        is_active_trigger = {
+            culture_group = bear_group
+            has_building = ca_ani_castle_tower_5_bis
+        }
+        prerequisites = { ca_ani_castle_tower_5_bis }
+        upgrades_from	= ca_bear_retinue_1
+
+        gold_cost = 500
+        build_time = 900
+        ai_creation_factor = 30
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 1.6
+
+        heavy_infantry = 30
+        retinuesize = 30
+        heavy_infantry_defensive = 0.025
+    }
+    ca_bear_retinue_3 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = bear_group
+        }
+        trigger = {
+            culture_group = bear_group
+            TECH_CASTLE_CONSTRUCTION = 8
+            TECH_FORTIFICATIONS_CONSTRUCTION = 7
+        }
+        is_active_trigger = {
+            culture_group = bear_group
+            has_building = ca_ani_castle_tower_8
+        }
+        prerequisites = { ca_ani_castle_tower_8 }
+        upgrades_from	= ca_bear_retinue_1
+
+        gold_cost = 1000
+        build_time = 1500
+        ai_creation_factor = 30
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 1.7
+
+        heavy_infantry = 50
+        retinuesize = 30
+        heavy_infantry_offensive = 0.025
+    }
+
+    ca_bear_stable_1 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = bear_group
+        }
+        trigger = {
+            culture_group = bear_group
+            TECH_CASTLE_CONSTRUCTION = 1
+            TECH_FORTIFICATIONS_CONSTRUCTION = 1
+        }
+        is_active_trigger = {
+            culture_group = bear_group
+            has_building = ca_ani_castle_tower_1_bis
+        }
+        prerequisites = { ca_ani_castle_tower_1_bis }
+
+        gold_cost = 100
+        build_time = 305
+        ai_creation_factor = 30
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 1.5
+
+        light_infantry = -50
+        light_cavalry  = 50
+    }
+    ca_bear_stable_2 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = bear_group
+        }
+        trigger = {
+            culture_group = bear_group
+            TECH_CASTLE_CONSTRUCTION = 3
+            TECH_FORTIFICATIONS_CONSTRUCTION = 3
+        }
+        is_active_trigger = {
+            culture_group = bear_group
+            has_building = ca_ani_castle_tower_3_bis
+        }
+        prerequisites = { ca_ani_castle_tower_3_bis }
+        upgrades_from	= ca_bear_stable_1
+
+        gold_cost = 267
+        build_time = 700
+        ai_creation_factor = 30
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 1.6
+
+        light_infantry = -50
+        light_cavalry = 50
+        heavy_infantry = -50
+        knights = 25
+    }
+    ca_bear_stable_3 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = bear_group
+        }
+        trigger = {
+            culture_group = bear_group
+            TECH_CASTLE_CONSTRUCTION = 7
+            TECH_FORTIFICATIONS_CONSTRUCTION = 6
+        }
+        is_active_trigger = {
+            culture_group = bear_group
+            has_building = ca_ani_castle_tower_7
+        }
+        prerequisites = { ca_ani_castle_tower_7 }
+        upgrades_from	= ca_bear_stable_2
+
+        gold_cost = 770
+        build_time = 1400
+        ai_creation_factor = 30
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 1.7
+
+        light_infantry = -50
+        light_cavalry = 50
+        heavy_infantry = -150
+        knights = 75
+    }
+
+    ca_bear_speciality_1 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = bear_group
+        }
+        trigger = {
+            culture_group = bear_group
+            TECH_CASTLE_CONSTRUCTION = 4
+            TECH_FORTIFICATIONS_CONSTRUCTION = 4
+        }
+        is_active_trigger = {
+            is_capital = yes
+            culture_group = bear_group
+            has_building = ca_ani_castle_tower_4_bis
+        }
+        prerequisites = { ca_ani_castle_tower_4_bis }
+
+        gold_cost = 370
+        build_time = 750
+        ai_creation_factor = 30
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 1.0
+
+
+        fertility = 0.10
+        garrison_size = 0.15
+    }
+    ca_bear_speciality_2 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = bear_group
+        }
+        trigger = {
+            culture_group = bear_group
+            TECH_CASTLE_CONSTRUCTION = 8
+            TECH_FORTIFICATIONS_CONSTRUCTION = 8
+            is_capital = yes
+        }
+        is_active_trigger = {
+            culture_group = bear_group
+            is_capital = yes
+            has_building = ca_ani_castle_tower_9
+        }
+        prerequisites = { ca_ani_castle_tower_9 }
+        upgrades_from	= ca_bear_stable_2
+
+        gold_cost = 1700
+        build_time = 1750
+        ai_creation_factor = 30
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 1.7
+
+        fertility = 0.15
+        levy_size = 0.15
+    }
+}
+
+tribal = {
+    tb_bear_retinue_1 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = bear_group
+        }
+        trigger = {
+            culture_group = bear_group
+            TECH_CASTLE_CONSTRUCTION = 0
+        }
+        is_active_trigger = {
+            culture_group = bear_group
+        }
+        prerequisites = { tb_ani_tribal_tower_1 }
+        # upgrades_from =
+
+        prestige_cost = 100
+        build_time = 280
+        ai_creation_factor = 50
+        extra_tech_building_start = 0.8
+
+        retinuesize = 20
+        heavy_infantry = 35
+    }
+    tb_bear_retinue_2 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = bear_group
+        }
+        trigger = {
+            culture_group = bear_group
+            TECH_CASTLE_CONSTRUCTION = 1
+            TECH_CITY_CONSTRUCTION = 1
+        }
+        is_active_trigger = {
+            culture_group = bear_group
+        }
+        prerequisites = { tb_ani_tribal_tower_2 }
+        upgrades_from = tb_bear_retinue_1
+
+        convert_to_castle = ca_bear_retinue_1
+        # convert_to_temple = tp_bear_retinue_1
+
+        prestige_cost = 200
+        build_time = 540
+        ai_creation_factor = 45
+        extra_tech_building_start = 1.0
+
+        retinuesize = 20
+        heavy_infantry = 35
+    }
+    tb_bear_retinue_3 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = bear_group
+        }
+        trigger = {
+            culture_group = bear_group
+            TECH_CASTLE_CONSTRUCTION = 1
+            TECH_CITY_CONSTRUCTION = 1
+        }
+        is_active_trigger = {
+            culture_group = bear_group
+        }
+        prerequisites = { tb_ani_tribal_tower_3 }
+        upgrades_from = tb_bear_retinue_2
+
+        prestige_cost = 300
+        build_time = 540
+        ai_creation_factor = 40
+        extra_tech_building_start = 1.2
+
+        retinuesize = 20
+        heavy_infantry = 40
+    }
+    tb_bear_retinue_4 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = bear_group
+        }
+        trigger = {
+            culture_group = bear_group
+            TECH_CASTLE_CONSTRUCTION = 1
+            TECH_CITY_CONSTRUCTION = 1
+            TECH_FORTIFICATIONS_CONSTRUCTION = 1
+        }
+        is_active_trigger = {
+            culture_group = bear_group
+        }
+        prerequisites = { tb_ani_tribal_tower_4 }
+        upgrades_from = tb_bear_retinue_3
+
+        prestige_cost = 400
+        build_time = 540
+        ai_creation_factor = 35
+        extra_tech_building_start = 1.2
+
+        retinuesize = 20
+        heavy_infantry = 40
+    }
+
+    tb_bear_regiment_1 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = bear_group
+        }
+        trigger = {
+            culture_group = bear_group
+            TECH_CASTLE_CONSTRUCTION = 0
+        }
+        is_active_trigger = {
+            culture_group = bear_group
+        }
+        prerequisites = { tb_ani_tribal_tower_1 }
+        # upgrades_from =
+
+        prestige_cost = 100
+        build_time = 280
+        ai_creation_factor = 50
+        extra_tech_building_start = 0.8
+
+        heavy_infantry = 40
+    }
+    tb_bear_regiment_2 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = bear_group
+        }
+        trigger = {
+            culture_group = bear_group
+            TECH_CASTLE_CONSTRUCTION = 1
+            TECH_CITY_CONSTRUCTION = 1
+        }
+        is_active_trigger = {
+            culture_group = bear_group
+        }
+        prerequisites = { tb_ani_tribal_tower_2 }
+        upgrades_from = tb_bear_regiment_1
+
+        convert_to_castle = ca_bear_regiment_1
+        # convert_to_temple = tp_bear_regiment_1
+
+        prestige_cost = 200
+        build_time = 540
+        ai_creation_factor = 45
+        extra_tech_building_start = 1.0
+
+        heavy_infantry = 45
+    }
+    tb_bear_regiment_3 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = bear_group
+        }
+        trigger = {
+            culture_group = bear_group
+            TECH_CASTLE_CONSTRUCTION = 1
+            TECH_CITY_CONSTRUCTION = 1
+        }
+        is_active_trigger = {
+            culture_group = bear_group
+        }
+        prerequisites = { tb_ani_tribal_tower_3 }
+        upgrades_from = tb_bear_regiment_2
+
+        prestige_cost = 300
+        build_time = 540
+        ai_creation_factor = 40
+        extra_tech_building_start = 1.2
+
+        heavy_infantry = 55
+    }
+    tb_bear_regiment_4 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = bear_group
+        }
+        trigger = {
+            culture_group = bear_group
+            TECH_CASTLE_CONSTRUCTION = 1
+            TECH_CITY_CONSTRUCTION = 1
+            TECH_FORTIFICATIONS_CONSTRUCTION = 1
+        }
+        is_active_trigger = {
+            culture_group = bear_group
+        }
+        prerequisites = { tb_ani_tribal_tower_4 }
+        upgrades_from = tb_bear_regiment_3
+
+        prestige_cost = 400
+        build_time = 540
+        ai_creation_factor = 35
+        extra_tech_building_start = 1.2
+
+        heavy_infantry = 70
+    }
+
+    tb_bear_armory_1 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = bear_group
+        }
+        trigger = {
+            culture_group = bear_group
+            TECH_CASTLE_CONSTRUCTION = 0
+        }
+        is_active_trigger = {
+            culture_group = bear_group
+        }
+        prerequisites = { tb_ani_tribal_tower_1 }
+        # upgrades_from =
+
+        prestige_cost = 100
+        build_time = 280
+        ai_creation_factor = 50
+        extra_tech_building_start = 0.8
+
+        pikemen = 20
+        archers = 30
+    }
+    tb_bear_armory_2 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = bear_group
+        }
+        trigger = {
+            culture_group = bear_group
+            TECH_CASTLE_CONSTRUCTION = 1
+            TECH_CITY_CONSTRUCTION = 1
+        }
+        is_active_trigger = {
+            culture_group = bear_group
+        }
+        prerequisites = { tb_ani_tribal_tower_2 }
+        upgrades_from = tb_bear_armory_1
+
+        convert_to_castle = ca_bear_regiment_1
+        # convert_to_temple = tp_bear_regiment_1
+
+        prestige_cost = 200
+        build_time = 540
+        ai_creation_factor = 45
+        extra_tech_building_start = 1.0
+
+        pikemen = 25
+        archers = 35
+    }
+    tb_bear_armory_3 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = bear_group
+        }
+        trigger = {
+            culture_group = bear_group
+            TECH_CASTLE_CONSTRUCTION = 1
+            TECH_CITY_CONSTRUCTION = 1
+        }
+        is_active_trigger = {
+            culture_group = bear_group
+        }
+        prerequisites = { tb_ani_tribal_tower_3 }
+        upgrades_from = tb_bear_armory_2
+
+        prestige_cost = 300
+        build_time = 540
+        ai_creation_factor = 40
+        extra_tech_building_start = 1.2
+
+        pikemen = 30
+        archers = 45
+    }
+    tb_bear_armory_4 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = bear_group
+        }
+        trigger = {
+            culture_group = bear_group
+            TECH_CASTLE_CONSTRUCTION = 1
+            TECH_CITY_CONSTRUCTION = 1
+            TECH_FORTIFICATIONS_CONSTRUCTION = 1
+        }
+        is_active_trigger = {
+            culture_group = bear_group
+        }
+        prerequisites = { tb_ani_tribal_tower_4 }
+        upgrades_from = tb_bear_armory_3
+
+        prestige_cost = 400
+        build_time = 540
+        ai_creation_factor = 35
+        extra_tech_building_start = 1.2
+
+        pikemen = 35
+        archers = 50
+    }
+}

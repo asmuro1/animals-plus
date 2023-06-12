@@ -1,0 +1,489 @@
+
+decisions = {
+    ##### panda conversion
+    search_rumored_dish = {
+        is_high_prio = yes
+        ai_check_interval = 30
+
+        only_playable = yes
+        potential = {
+            OR = {
+                has_game_rule = {
+                    name = animals_conversion_ways
+                    value = animal_decision
+                }
+                AND = {
+                    has_game_rule = {
+                        name = animals_conversion_ways
+                        value = animal_instant
+                    }
+                    ai = no
+                }
+            }
+            Is_really_animal_trigger = no
+            NOT = { has_character_modifier = panda_conversion_quest_cooldown }
+            any_realm_province = {
+                OR = {
+                    terrain = mountain
+                    terrain = hills
+                }
+            }
+        }
+        allow = {
+            is_adult = yes
+            is_incapable = no
+            has_regent = no
+
+            OR = {
+                trait = hedonist
+                lifestyle_traits == 0
+            }
+
+            any_demesne_province = {
+                OR = {
+                    terrain = mountain
+                    terrain = hills
+                }
+            }
+
+            conditional_tooltip = {
+                trigger = {
+                    can_grant_title = title_court_jester
+                }
+                has_assigned_minor_title = title_court_jester
+            }
+        }
+        effect = {
+            if = {
+                limit = {
+                    has_game_rule = {
+                        name = animals_conversion_ways
+                        value = animal_decision
+                    }
+                }
+                add_character_modifier = {
+                    name = panda_conversion_quest_cooldown
+                    years = 7
+                    hidden = yes
+                }
+                add_trait = travelling
+
+                character_event = { id = ani_plus.079 days = 14 }
+            }
+            else = {
+                random_list = {
+                    1 = {
+                        culture = red_panda
+                    }
+                    1 = {
+                        trigger = {
+                            any_demesne_province = {
+                                terrain = mountain
+                                any_neighbor_province = {
+                                    OR = {
+                                        terrain = forest
+                                        terrain = jungle
+                                        terrain = farmlands
+                                        terrain = plains
+                                    }
+                                }
+                            }
+                        }
+                        culture = giant_panda
+                    }
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+
+    adopt_panda_religion = {
+        is_high_prio = yes
+        ai_check_interval = 3
+
+        potential = {
+            culture_group = panda_group
+            NOT = { religion = Panda_religion }
+            can_change_religion = yes
+        }
+        allow = {
+            is_adult = yes
+            culture_group = panda_group
+            has_regent = no
+            is_incapable = no
+            can_change_religion = yes
+        }
+        effect = {
+            religion = Panda_religion
+            if = {
+                limit = {
+                    OR = {
+                        independent = yes
+                        liege = { NOT = { religion = Panda_religion } }
+                    }
+                }
+                if = {
+                    limit = {
+                        has_game_rule = {
+                            name = animals_bonus_levy
+                            value = Few
+                        }
+                    }
+                    spawn_unit = {
+                        province = capital_scope
+                        home = capital_scope
+                        owner = ROOT
+                        leader = none
+                        troops = {
+                            heavy_infantry = { 750 750 }
+                            archers        = { 750 750 }
+                        }
+                        attrition = 0.1
+                        maintenance = no
+
+                    }
+                }
+                else_if = {
+                    limit = {
+                        has_game_rule = {
+                            name = animals_bonus_levy
+                            value = Normal
+                        }
+                    }
+                    spawn_unit = {
+                        province = capital_scope
+                        home = capital_scope
+                        owner = ROOT
+                        leader = none
+                        troops = {
+                            heavy_infantry = { 1500 1500 }
+                            archers        = { 1500 1500 }
+                        }
+                        attrition = 0.1
+                        maintenance = no
+
+                    }
+                }
+                else_if = {
+                    limit = {
+                        has_game_rule = {
+                            name = animals_bonus_levy
+                            value = Many
+                        }
+                    }
+                    spawn_unit = {
+                        province = capital_scope
+                        home = capital_scope
+                        owner = ROOT
+                        leader = none
+                        troops = {
+                            heavy_infantry = { 4000 4000 }
+                            archers        = { 4000 4000 }
+                        }
+                        attrition = 0.1
+                        maintenance = no
+
+                    }
+                }
+            }
+
+            if = {
+                limit = {
+                    is_feudal = yes
+                }
+                if = {
+                    limit = {
+                        is_government_potential = panda_bureaucratic_gov
+                    }
+                    set_government_type = panda_bureaucratic_gov
+                }
+                else = {
+                    set_government_type = panda_bureaucratic_gov_bis
+                }
+            }
+            spawn_unit = {
+                province = capital_scope
+                home = capital_scope
+                owner = ROOT
+                leader = none
+                troops = {
+                    heavy_infantry = { 250 250 }
+                    archers        = { 250 250 }
+                }
+                attrition = 0.5
+                maintenance = yes
+                maintenance_multiplier = 0.25
+                reinforces = yes
+                reinforce_rate_multiplier = 0.15
+                cannot_inherit = yes
+            }
+            spawn_unit = {
+                province = capital_scope
+                home = capital_scope
+                owner = ROOT
+                leader = none
+                troops = {
+                    heavy_infantry = { 250 250 }
+                    archers        = { 250 250 }
+                }
+                attrition = 0.5
+                maintenance = yes
+                maintenance_multiplier = 0.25
+                reinforces = yes
+                reinforce_rate_multiplier = 0.15
+                cannot_inherit = yes
+            }
+            spawn_unit = {
+                province = capital_scope
+                home = capital_scope
+                owner = ROOT
+                leader = none
+                troops = {
+                    heavy_infantry = { 250 250 }
+                    archers        = { 250 250 }
+                }
+                attrition = 0.5
+                maintenance = yes
+                maintenance_multiplier = 0.25
+                reinforces = yes
+                reinforce_rate_multiplier = 0.15
+                cannot_inherit = yes
+            }
+        }
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                 factor = 0
+
+                independent = no
+                liege = {
+                    NOT = { religion = Panda_religion }
+                }
+            }
+        }
+    }
+
+    create_asian_fighter = {
+        only_playable = yes
+        ai_check_interval = 30
+
+        is_high_prio = yes
+
+        potential = {
+            NOT = { is_title_active = d_asian_fighter }
+            independent = yes
+            religion = Panda_religion
+            culture_group = panda_group
+            NOT = {	has_alternate_start_parameter = { key = religion_names value = random } }
+        }
+        allow = {
+            higher_tier_than = DUKE
+            war = no
+            piety = 350
+        }
+        effect = {
+            piety = -350
+            prestige = 600
+            custom_tooltip = {
+                text = CREATED_HOLY_ORDER_PANDA_TOOLTIP
+
+                activate_title = { title = d_asian_fighter status = yes }
+                create_character = {
+                    random_traits = no
+                    dynasty = random
+                    religion = ROOT
+                    culture = red_panda
+                    female = no
+                    age = 25
+                    trait = brilliant_strategist
+                    trait = zealous
+                    trait = humble
+                    trait = ambitious
+                    trait = strategist
+                    trait = holy_warrior
+                }
+                new_character = {
+                    wealth = 500
+                    d_asian_fighter = {
+                        grant_title = PREV
+                    }
+                    set_government_type = feudal_government
+                    create_character = {
+                        random_traits = yes
+                        dynasty = random
+                        religion = ROOT
+                        culture = ROOT
+                        female = no
+                        age = 20
+                    }
+                    create_character = {
+                        random_traits = yes
+                        dynasty = random
+                        religion = ROOT
+                        culture = ROOT
+                        female = no
+                        age = 19
+                    }
+                    create_character = {
+                        random_traits = yes
+                        dynasty = random
+                        religion = ROOT
+                        culture = ROOT
+                        female = no
+                        age = 18
+                    }
+                    create_character = {
+                        random_traits = yes
+                        dynasty = random
+                        religion = ROOT
+                        culture = ROOT
+                        female = no
+                        age = 17
+                    }
+                    create_character = {
+                        random_traits = yes
+                        dynasty = random
+                        religion = ROOT
+                        culture = ROOT
+                        female = no
+                        age = 16
+                    }
+                }
+                any_player = {
+                    narrative_event = { id = ani_plus.070 }
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0.8
+                always = yes
+            }
+            modifier = {
+                factor = 0.5
+                trait = cynical
+            }
+        }
+    }
+
+    panda_instability_faction_ultimatum = {
+        only_playable = yes
+        only_independent = no
+
+        ai_check_interval = 6
+
+        is_high_prio = yes
+
+        potential = {
+            liege = { NOT = { has_character_modifier = panda_instability_war_cooldown } }
+            leads_faction = faction_panda_instability
+        }
+        allow = {
+            faction_power = {
+                faction = faction_panda_instability
+                power >= 0.15
+            }
+            prisoner = no
+            is_incapable = no
+            has_regent = no
+        }
+        effect = {
+            liege = { letter_event = { id = ani_plus.096  days = 1 random = 6 tooltip = "PANDA_ULTIMATUM_SENT"} }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+    panda_independence_faction_ultimatum = {
+        only_playable = yes
+        only_independent = no
+
+        ai_check_interval = 6
+
+        is_high_prio = yes
+
+        potential = {
+            leads_faction = faction_panda_independence
+        }
+
+        allow = {
+            faction_power = {
+                faction = faction_panda_independence
+                power >= 0.25
+            }
+            war = no
+            prisoner = no
+            is_incapable = no
+            has_regent = no
+        }
+
+        effect = {
+            liege = { letter_event = { id = ani_plus.097  days = 1 random = 6 tooltip = "PANDA_INDEP_ULTIMATUM_SENT" } }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+}
+
+title_decisions = {
+    panda_chase_animal_on_province = {
+        is_high_prio = yes
+        ai_check_interval = 12
+
+        # only_independent = yes
+        filter = sub_realm_owned
+        ai_target_filter = sub_realm_owned
+        from_potential = {
+            Is_really_animal_trigger = no
+        }
+        potential = {
+            tier = COUNT
+            location = {
+                Is_really_animal_trigger = yes
+            }
+        }
+        allow = {
+            FROM = {
+                OR = {
+                    independent = yes
+                    any_liege = { Is_really_animal_trigger = no }
+                }
+                wealth = 250
+                prestige = 400
+                war = no
+            }
+            holder_scope = {
+                Is_really_animal_trigger = no
+                any_liege = { Is_really_animal_trigger = no }
+            }
+        }
+        effect = {
+            FROM = {
+                prestige = -400
+                wealth = -250
+            }
+            location = {
+                add_province_modifier = {
+                    name = hedgehog_inhabitant_extermination
+                    years = 1
+                }
+                FROM = { save_event_target_as = animal_exterminator }
+                province_event = { id = ani_plus.072 months = 2 }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0.25
+                NOT = { controller = { character = FROM} }
+            }
+        }
+    }
+}

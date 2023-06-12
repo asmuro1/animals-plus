@@ -1,0 +1,3345 @@
+###This file only countain buildings common for all animal culture
+###Those building was on this mod's beta version, but reworked on this one,
+###so building code are juste copy-past can have no relation with actual bonuses
+
+castle = {
+    #Castle tower: building that unlock every building other than tower
+    ca_ani_castle_tower_1 = {           #1
+        # desc = ca_ani_castle_tower_desc
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                FROMFROM = { has_building = ca_ani_castle_tower_1 }
+                Is_really_animal_trigger = yes
+            }
+        }
+        trigger = {
+            Is_really_animal_trigger = yes
+            TECH_CASTLE_CONSTRUCTION = 1
+        }
+        is_active_trigger = {
+            Is_really_animal_trigger = yes
+        }
+
+        prestige_cost = 150
+        build_time = 257
+        ai_creation_factor = 15
+        ai_feudal_modifier = 90
+        extra_tech_building_start = 0.8
+
+        fort_level = 0.5
+        tax_income = 0.4
+    }
+    ca_ani_castle_tower_1_bis = {       #2
+        # desc = ca_ani_castle_tower_desc
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                FROMFROM = { has_building = ca_ani_castle_tower_1_bis }
+                Is_really_animal_trigger = yes
+            }
+        }
+        trigger = {
+            Is_really_animal_trigger = yes
+            TECH_CASTLE_CONSTRUCTION = 1
+            TECH_FORTIFICATIONS_CONSTRUCTION = 1
+
+            conditional_tooltip = {
+                trigger = {
+                    FROM = { culture_group = elephant_group }
+                }
+                FROM = { is_female = yes }
+            }
+        }
+        is_active_trigger = {
+            Is_really_animal_trigger = yes
+        }
+
+        upgrades_from	= ca_ani_castle_tower_1
+
+        piety_cost = 75
+        build_time = 257
+        ai_creation_factor = 15
+        ai_feudal_modifier = 85
+        extra_tech_building_start = 1.0
+
+        fort_level = 0.5
+        tax_income = 0.4
+    }
+    ca_ani_castle_tower_2 = {           #3
+        # desc = ca_ani_castle_tower_desc
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                FROMFROM = { has_building = ca_ani_castle_tower_2 }
+                Is_really_animal_trigger = yes
+            }
+        }
+        trigger = {
+            Is_really_animal_trigger = yes
+            TECH_CASTLE_CONSTRUCTION = 2
+            TECH_FORTIFICATIONS_CONSTRUCTION = 1
+
+            conditional_tooltip = {
+                trigger = {
+                    FROM = { culture_group = elephant_group }
+                }
+                FROM = { is_female = yes }
+            }
+        }
+        is_active_trigger = {
+            Is_really_animal_trigger = yes
+        }
+
+        upgrades_from	= ca_ani_castle_tower_1_bis
+
+        prestige_cost = 300
+        build_time = 365
+        ai_creation_factor = 15
+        ai_feudal_modifier = 80
+        extra_tech_building_start = 1.0
+
+        fort_level = 0.5
+        tax_income = 0.4
+    }
+    ca_ani_castle_tower_2_bis = {       #4
+        # desc = ca_ani_castle_tower_desc
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                FROMFROM = { has_building = ca_ani_castle_tower_2_bis }
+                Is_really_animal_trigger = yes
+            }
+        }
+        trigger = {
+            Is_really_animal_trigger = yes
+            TECH_CASTLE_CONSTRUCTION = 2
+            TECH_FORTIFICATIONS_CONSTRUCTION = 2
+
+            conditional_tooltip = {
+                trigger = {
+                    FROM = { culture_group = elephant_group }
+                }
+                FROM = { is_female = yes }
+            }
+        }
+        is_active_trigger = {
+            Is_really_animal_trigger = yes
+        }
+
+        upgrades_from	= ca_ani_castle_tower_2
+
+        piety_cost = 150
+        build_time = 365
+        ai_creation_factor = 15
+        ai_feudal_modifier = 75
+        extra_tech_building_start = 1.0
+
+        fort_level = 0.5
+        tax_income = 0.4
+    }
+    ca_ani_castle_tower_3 = {           #5
+        # desc = ca_ani_castle_tower_desc
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                FROMFROM = { has_building = ca_ani_castle_tower_3 }
+                Is_really_animal_trigger = yes
+            }
+        }
+        trigger = {
+            Is_really_animal_trigger = yes
+            TECH_CASTLE_CONSTRUCTION = 3
+            TECH_FORTIFICATIONS_CONSTRUCTION = 2
+
+            conditional_tooltip = {
+                trigger = {
+                    FROM = { culture_group = elephant_group }
+                }
+                FROM = { is_female = yes }
+            }
+        }
+        is_active_trigger = {
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_01_tooltip = yes
+            }
+            Is_really_animal_trigger = yes
+        }
+
+        upgrades_from	= ca_ani_castle_tower_2_bis
+
+        prestige_cost = 500
+        build_time = 500
+        ai_creation_factor = 15
+        ai_feudal_modifier = 70
+        extra_tech_building_start = 1.0
+
+        fort_level = 0.5
+        tax_income = 0.4
+    }
+    ca_ani_castle_tower_3_bis = {       #6
+        # desc = ca_ani_castle_tower_desc
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                FROMFROM = { has_building = ca_ani_castle_tower_3_bis }
+                Is_really_animal_trigger = yes
+            }
+        }
+        trigger = {
+            Is_really_animal_trigger = yes
+            TECH_CASTLE_CONSTRUCTION = 3
+            TECH_FORTIFICATIONS_CONSTRUCTION = 3
+
+            conditional_tooltip = {
+                trigger = {
+                    FROM = { culture_group = elephant_group }
+                }
+                FROM = { is_female = yes }
+            }
+        }
+        is_active_trigger = {
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_01_tooltip = yes
+            }
+            Is_really_animal_trigger = yes
+        }
+
+        upgrades_from	= ca_ani_castle_tower_3
+
+        piety_cost = 250
+        build_time = 500
+        ai_creation_factor = 15
+        ai_feudal_modifier = 65
+        extra_tech_building_start = 1.0
+
+        fort_level = 0.5
+        tax_income = 0.4
+    }
+    ca_ani_castle_tower_4 = {           #7
+        # desc = ca_ani_castle_tower_desc
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                FROMFROM = { has_building = ca_ani_castle_tower_4 }
+                Is_really_animal_trigger = yes
+            }
+        }
+        trigger = {
+            Is_really_animal_trigger = yes
+            TECH_CASTLE_CONSTRUCTION = 4
+            TECH_FORTIFICATIONS_CONSTRUCTION = 3
+
+            conditional_tooltip = {
+                trigger = {
+                    FROM = { culture_group = elephant_group }
+                }
+                FROM = { is_female = yes }
+            }
+        }
+        is_active_trigger = {
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_01_tooltip = yes
+            }
+            Is_really_animal_trigger = yes
+        }
+
+        upgrades_from	= ca_ani_castle_tower_3_bis
+
+        prestige_cost = 750
+        build_time = 700
+        ai_creation_factor = 15
+        ai_feudal_modifier = 60
+        extra_tech_building_start = 1.0
+
+        fort_level = 0.5
+        tax_income = 0.4
+    }
+    ca_ani_castle_tower_4_bis = {       #8
+        # desc = ca_ani_castle_tower_desc
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                FROMFROM = { has_building = ca_ani_castle_tower_4_bis }
+                Is_really_animal_trigger = yes
+            }
+        }
+        trigger = {
+            Is_really_animal_trigger = yes
+            TECH_CASTLE_CONSTRUCTION = 4
+            TECH_FORTIFICATIONS_CONSTRUCTION = 4
+
+            conditional_tooltip = {
+                trigger = {
+                    FROM = { culture_group = elephant_group }
+                }
+                FROM = { is_female = yes }
+            }
+        }
+        is_active_trigger = {
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_01_tooltip = yes
+            }
+            Is_really_animal_trigger = yes
+        }
+
+        upgrades_from = ca_ani_castle_tower_4
+
+        piety_cost = 375
+        build_time = 700
+        ai_creation_factor = 15
+        ai_feudal_modifier = 55
+        extra_tech_building_start = 1.0
+
+        fort_level = 0.5
+        tax_income = 0.4
+    }
+    ca_ani_castle_tower_5 = {           #9
+        # desc = ca_ani_castle_tower_desc
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                FROMFROM = { has_building = ca_ani_castle_tower_5 }
+                Is_really_animal_trigger = yes
+            }
+        }
+        trigger = {
+            Is_really_animal_trigger = yes
+            TECH_CASTLE_CONSTRUCTION = 5
+            TECH_FORTIFICATIONS_CONSTRUCTION = 4
+
+            conditional_tooltip = {
+                trigger = {
+                    FROM = { culture_group = elephant_group }
+                }
+                FROM = { is_female = yes }
+            }
+        }
+        is_active_trigger = {
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_01_tooltip = yes
+            }
+            Is_really_animal_trigger = yes
+        }
+
+        upgrades_from	= ca_ani_castle_tower_4_bis
+
+        prestige_cost = 1000
+        build_time = 900
+        ai_creation_factor = 15
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 1.0
+
+        fort_level = 0.5
+        tax_income = 0.4
+    }
+    ca_ani_castle_tower_5_bis = {       #10
+        # desc = ca_ani_castle_tower_desc
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                FROMFROM = { has_building = ca_ani_castle_tower_5_bis }
+                Is_really_animal_trigger = yes
+            }
+        }
+        trigger = {
+            Is_really_animal_trigger = yes
+            TECH_CASTLE_CONSTRUCTION = 5
+            TECH_FORTIFICATIONS_CONSTRUCTION = 5
+
+            conditional_tooltip = {
+                trigger = {
+                    FROM = { culture_group = elephant_group }
+                }
+                FROM = { is_female = yes }
+            }
+        }
+        is_active_trigger = {
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_01_tooltip = yes
+            }
+            Is_really_animal_trigger = yes
+        }
+
+        upgrades_from = ca_ani_castle_tower_5
+
+        piety_cost = 500
+        build_time = 900
+        ai_creation_factor = 15
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 1.0
+
+        fort_level = 0.5
+        tax_income = 0.4
+    }
+    ca_ani_castle_tower_6 = {           #11
+        # desc = ca_ani_castle_tower_desc
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                FROMFROM = { has_building = ca_ani_castle_tower_6 }
+                Is_really_animal_trigger = yes
+            }
+        }
+        trigger = {
+            Is_really_animal_trigger = yes
+            TECH_CASTLE_CONSTRUCTION = 6
+            TECH_FORTIFICATIONS_CONSTRUCTION = 5
+
+            conditional_tooltip = {
+                trigger = {
+                    FROM = { culture_group = elephant_group }
+                }
+                FROM = { is_female = yes }
+            }
+        }
+        is_active_trigger = {
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_01_tooltip = yes
+            }
+            Is_really_animal_trigger = yes
+        }
+
+        upgrades_from	= ca_ani_castle_tower_5_bis
+
+        prestige_cost = 1500
+        build_time = 1000
+        ai_creation_factor = 15
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 1.0
+
+        fort_level = 0.5
+        tax_income = 0.4
+    }
+    ca_ani_castle_tower_6_bis = {       #12
+        # desc = ca_ani_castle_tower_desc
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                FROMFROM = { has_building = ca_ani_castle_tower_6_bis }
+                Is_really_animal_trigger = yes
+            }
+        }
+        trigger = {
+            Is_really_animal_trigger = yes
+            TECH_CASTLE_CONSTRUCTION = 6
+            TECH_FORTIFICATIONS_CONSTRUCTION = 6
+
+            conditional_tooltip = {
+                trigger = {
+                    FROM = { culture_group = elephant_group }
+                }
+                FROM = { is_female = yes }
+            }
+        }
+        is_active_trigger = {
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_01_tooltip = yes
+            }
+            Is_really_animal_trigger = yes
+        }
+
+        upgrades_from = ca_ani_castle_tower_6
+
+        piety_cost = 750
+        build_time = 1000
+        ai_creation_factor = 15
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 1.0
+
+        fort_level = 0.5
+        tax_income = 0.4
+    }
+    ca_ani_castle_tower_7 = {           #13
+        # desc = ca_ani_castle_tower_desc
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                FROMFROM = { has_building = ca_ani_castle_tower_7 }
+                Is_really_animal_trigger = yes
+            }
+        }
+        trigger = {
+            Is_really_animal_trigger = yes
+            TECH_CASTLE_CONSTRUCTION = 7
+            TECH_FORTIFICATIONS_CONSTRUCTION = 6
+
+            conditional_tooltip = {
+                trigger = {
+                    FROM = { culture_group = elephant_group }
+                }
+                FROM = { is_female = yes }
+            }
+        }
+        is_active_trigger = {
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_01_tooltip = yes
+            }
+            Is_really_animal_trigger = yes
+        }
+
+        upgrades_from	= ca_ani_castle_tower_6_bis
+
+        prestige_cost = 2500
+        build_time = 1250
+        ai_creation_factor = 15
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 1.0
+
+        fort_level = 0.5
+        tax_income = 0.4
+    }
+    ca_ani_castle_tower_7_bis = {       #14
+        # desc = ca_ani_castle_tower_desc
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                FROMFROM = { has_building = ca_ani_castle_tower_7_bis }
+                Is_really_animal_trigger = yes
+            }
+        }
+        trigger = {
+            Is_really_animal_trigger = yes
+            TECH_CASTLE_CONSTRUCTION = 7
+            TECH_FORTIFICATIONS_CONSTRUCTION = 7
+
+            conditional_tooltip = {
+                trigger = {
+                    FROM = { culture_group = elephant_group }
+                }
+                FROM = { is_female = yes }
+            }
+        }
+        is_active_trigger = {
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_01_tooltip = yes
+            }
+            Is_really_animal_trigger = yes
+        }
+
+        upgrades_from = ca_ani_castle_tower_7
+
+        piety_cost = 1250
+        build_time = 1250
+        ai_creation_factor = 15
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 1.0
+
+        fort_level = 0.5
+        tax_income = 0.4
+    }
+    ca_ani_castle_tower_8 = {           #15
+        # desc = ca_ani_castle_tower_desc
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                FROMFROM = { has_building = ca_ani_castle_tower_8 }
+                Is_really_animal_trigger = yes
+            }
+        }
+        trigger = {
+            Is_really_animal_trigger = yes
+            TECH_CASTLE_CONSTRUCTION = 8
+            TECH_FORTIFICATIONS_CONSTRUCTION = 7
+
+            conditional_tooltip = {
+                trigger = {
+                    FROM = { culture_group = elephant_group }
+                }
+                FROM = { is_female = yes }
+            }
+        }
+        is_active_trigger = {
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_02_tooltip = yes
+            }
+            Is_really_animal_trigger = yes
+        }
+
+        upgrades_from	= ca_ani_castle_tower_7_bis
+
+        prestige_cost = 5000
+        build_time = 1500
+        ai_creation_factor = 15
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 1.0
+
+        fort_level = 0.5
+        tax_income = 0.4
+    }
+    ca_ani_castle_tower_9 = {           #16
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                FROMFROM = { has_building = ca_ani_castle_tower_9 }
+                Is_really_animal_trigger = yes
+            }
+        }
+        trigger = {
+            Is_really_animal_trigger = yes
+            TECH_CASTLE_CONSTRUCTION = 8
+            TECH_FORTIFICATIONS_CONSTRUCTION = 8
+
+            conditional_tooltip = {
+                trigger = {
+                    FROM = { culture_group = elephant_group }
+                }
+                FROM = { is_female = yes }
+            }
+        }
+        is_active_trigger = {
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_02_tooltip = yes
+            }
+            Is_really_animal_trigger = yes
+        }
+
+        upgrades_from	= ca_ani_castle_tower_8
+
+        piety_cost = 2500
+        build_time = 1500
+        ai_creation_factor = 15
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 1.0
+
+        fort_level = 0.5
+        tax_income = 0.4
+    }
+
+
+    ##military common buildings
+    ca_ani_fort_1 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                FROMFROM = { has_building = ca_ani_fort_1 }
+                Is_really_animal_trigger = yes
+            }
+            NOR = {
+                has_building = ca_ani_siege_1
+                has_building = ca_ani_garrison_1
+            }
+            OR = {
+                NOT = { culture_group = panda_group }
+                AND = {
+                    has_building = ca_panda_capital_office
+                    panda_capital_bureau_active_trigger = yes
+                }
+                AND = {
+                    has_building = ca_panda_vassal_office
+                    panda_vassal_bureau_active_trigger = yes
+                }
+            }
+        }
+        trigger = {
+            TECH_CASTLE_CONSTRUCTION = 1
+            NOR = { ###for visual appearance
+                has_building = ca_ani_siege_1
+                has_building = ca_ani_garrison_1
+            }
+        }
+        is_active_trigger = {
+            hidden_tooltip = {
+                Is_really_animal_trigger = yes
+            }
+            NOR = { ###for visual appearance
+                has_building = ca_ani_siege_1
+                has_building = ca_ani_garrison_1
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = duck_group
+                }
+                custom_tooltip = {
+                    text = DUCK_DEV_MORE_2
+                    check_variable = { which=duck_dev_var value=2 }
+                }
+            }
+        }
+        prerequisites = { ca_ani_castle_tower_1 }
+        not_if_x_exists = { ca_ani_siege_1 ca_ani_garrison_1}
+
+        gold_cost = 120
+        build_time = 365
+        ai_creation_factor = 50
+        ai_feudal_modifier = 20
+        extra_tech_building_start = 10.0
+
+        fort_level = 0.75
+        garrison_size = 0.10
+    }
+    ca_ani_fort_2 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                FROMFROM = { has_building = ca_ani_fort_2 }
+                Is_really_animal_trigger = yes
+            }
+            OR = {
+                NOT = { culture_group = panda_group }
+                AND = {
+                    has_building = ca_panda_capital_office
+                    panda_capital_bureau_active_trigger = yes
+                }
+                AND = {
+                    has_building = ca_panda_vassal_office
+                    panda_vassal_bureau_active_trigger = yes
+                }
+            }
+        }
+        trigger = {
+            TECH_CASTLE_CONSTRUCTION = 2
+            TECH_FORTIFICATIONS_CONSTRUCTION = 1
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_01_tooltip = yes
+            }
+        }
+        is_active_trigger = {
+            hidden_tooltip = {
+                Is_really_animal_trigger = yes
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_01_tooltip = yes
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = duck_group
+                }
+                custom_tooltip = {
+                    text = DUCK_DEV_MORE_4
+                    check_variable = { which=duck_dev_var value=4 }
+                }
+            }
+        }
+        prerequisites = { ca_ani_castle_tower_2 }
+        not_if_x_exists = { ca_ani_siege_1 ca_ani_garrison_1}
+        upgrades_from	= ca_ani_fort_1
+
+        gold_cost = 150
+        build_time = 365
+        ai_creation_factor = 50
+        ai_feudal_modifier = 20
+        extra_tech_building_start = 10.0
+
+        fort_level = 0.75
+        garrison_size = 0.12
+    }
+    ca_ani_fort_3 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                FROMFROM = { has_building = ca_ani_fort_3 }
+                Is_really_animal_trigger = yes
+            }
+            OR = {
+                NOT = { culture_group = panda_group }
+                AND = {
+                    has_building = ca_panda_capital_office
+                    panda_capital_bureau_active_trigger = yes
+                }
+                AND = {
+                    has_building = ca_panda_vassal_office
+                    panda_vassal_bureau_active_trigger = yes
+                }
+            }
+        }
+        trigger = {
+            TECH_CASTLE_CONSTRUCTION = 3
+            TECH_FORTIFICATIONS_CONSTRUCTION = 3
+        }
+        is_active_trigger = {
+            hidden_tooltip = {
+                Is_really_animal_trigger = yes
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_01_tooltip = yes
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = duck_group
+                }
+                custom_tooltip = {
+                    text = DUCK_DEV_MORE_6
+                    check_variable = { which=duck_dev_var value=6 }
+                }
+            }
+        }
+        prerequisites = { ca_ani_castle_tower_3_bis }
+        not_if_x_exists = { ca_ani_siege_1 ca_ani_garrison_1}
+        upgrades_from	= ca_ani_fort_2
+
+        gold_cost = 200
+        build_time = 730
+        ai_creation_factor = 50
+        ai_feudal_modifier = 20
+        extra_tech_building_start = 10.0
+
+        fort_level = 1.5
+        garrison_size = 0.13
+    }
+    ca_ani_fort_4 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                FROMFROM = { has_building = ca_ani_fort_4 }
+                Is_really_animal_trigger = yes
+            }
+            OR = {
+                NOT = { culture_group = panda_group }
+                AND = {
+                    has_building = ca_panda_capital_office
+                    panda_capital_bureau_active_trigger = yes
+                }
+                AND = {
+                    has_building = ca_panda_vassal_office
+                    panda_vassal_bureau_active_trigger = yes
+                }
+            }
+        }
+        trigger = {
+            TECH_CASTLE_CONSTRUCTION = 5
+            TECH_FORTIFICATIONS_CONSTRUCTION = 5
+        }
+        is_active_trigger = {
+            hidden_tooltip = {
+                Is_really_animal_trigger = yes
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_02_tooltip = yes
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = duck_group
+                }
+                custom_tooltip = {
+                    text = DUCK_DEV_MORE_8
+                    check_variable = { which=duck_dev_var value=8 }
+                }
+            }
+        }
+        prerequisites = { ca_ani_castle_tower_5_bis }
+        not_if_x_exists = { ca_ani_siege_1 ca_ani_garrison_1}
+        upgrades_from	= ca_ani_fort_3
+
+        gold_cost = 300
+        build_time = 1090
+        ai_creation_factor = 50
+        ai_feudal_modifier = 20
+        extra_tech_building_start = 10.0
+
+        fort_level = 1.5
+        garrison_size = 0.15
+    }
+
+    ca_ani_siege_1 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                FROMFROM = { has_building = ca_ani_siege_1 }
+                Is_really_animal_trigger = yes
+            }
+            NOR = {
+                has_building = ca_ani_fort_1
+                has_building = ca_ani_garrison_1
+            }
+            OR = {
+                NOT = { culture_group = panda_group }
+                AND = {
+                    has_building = ca_panda_capital_office
+                    panda_capital_bureau_active_trigger = yes
+                }
+                AND = {
+                    has_building = ca_panda_vassal_office
+                    panda_vassal_bureau_active_trigger = yes
+                }
+            }
+        }
+        trigger = {
+            TECH_CASTLE_CONSTRUCTION = 1
+            NOR = {
+                has_building = ca_ani_fort_1
+                has_building = ca_ani_garrison_1
+            }
+        }
+        is_active_trigger = {
+            hidden_tooltip = {
+                Is_really_animal_trigger = yes
+            }
+            NOR = {
+                has_building = ca_ani_fort_1
+                has_building = ca_ani_garrison_1
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = duck_group
+                }
+                custom_tooltip = {
+                    text = DUCK_DEV_MORE_2
+                    check_variable = { which=duck_dev_var value=2 }
+                }
+            }
+        }
+        prerequisites = { ca_ani_castle_tower_1 }
+        not_if_x_exists = { ca_ani_fort_1 ca_ani_garrison_1}
+        # upgrades_from	= BaseBuilding
+
+        gold_cost = 120
+        build_time = 365
+        ai_creation_factor = 50
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 10.0
+
+        land_morale = 0.015
+    }
+    ca_ani_siege_2 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                FROMFROM = { has_building = ca_ani_siege_2 }
+                Is_really_animal_trigger = yes
+            }
+            OR = {
+                NOT = { culture_group = panda_group }
+                AND = {
+                    has_building = ca_panda_capital_office
+                    panda_capital_bureau_active_trigger = yes
+                }
+                AND = {
+                    has_building = ca_panda_vassal_office
+                    panda_vassal_bureau_active_trigger = yes
+                }
+            }
+        }
+        trigger = {
+            TECH_CASTLE_CONSTRUCTION = 2
+            TECH_FORTIFICATIONS_CONSTRUCTION = 1
+        }
+        is_active_trigger = {
+            hidden_tooltip = {
+                Is_really_animal_trigger = yes
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_01_tooltip = yes
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = duck_group
+                }
+                custom_tooltip = {
+                    text = DUCK_DEV_MORE_4
+                    check_variable = { which=duck_dev_var value=4 }
+                }
+            }
+        }
+        prerequisites = { ca_ani_castle_tower_2 }
+        not_if_x_exists = { ca_ani_fort_1 ca_ani_garrison_1}
+        upgrades_from	= ca_ani_siege_1
+
+        gold_cost = 150
+        build_time = 365
+        ai_creation_factor = 50
+        ai_feudal_modifier = 20
+        extra_tech_building_start = 10.0
+
+        land_morale = 0.025
+    }
+    ca_ani_siege_3 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                FROMFROM = { has_building = ca_ani_siege_3 }
+                Is_really_animal_trigger = yes
+            }
+            OR = {
+                NOT = { culture_group = panda_group }
+                AND = {
+                    has_building = ca_panda_capital_office
+                    panda_capital_bureau_active_trigger = yes
+                }
+                AND = {
+                    has_building = ca_panda_vassal_office
+                    panda_vassal_bureau_active_trigger = yes
+                }
+            }
+        }
+        trigger = {
+            TECH_CASTLE_CONSTRUCTION = 3
+            TECH_FORTIFICATIONS_CONSTRUCTION = 3
+        }
+        is_active_trigger = {
+            hidden_tooltip = {
+                Is_really_animal_trigger = yes
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_01_tooltip = yes
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = duck_group
+                }
+                custom_tooltip = {
+                    text = DUCK_DEV_MORE_6
+                    check_variable = { which=duck_dev_var value=6 }
+                }
+            }
+        }
+        prerequisites = { ca_ani_castle_tower_3_bis }
+        not_if_x_exists = { ca_ani_fort_1 ca_ani_garrison_1}
+        upgrades_from	= ca_ani_siege_2
+
+        gold_cost = 200
+        build_time = 730
+        ai_creation_factor = 50
+        ai_feudal_modifier = 20
+        extra_tech_building_start = 10.0
+
+        land_morale = 0.035
+    }
+    ca_ani_siege_4 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                FROMFROM = { has_building = ca_ani_siege_4 }
+                Is_really_animal_trigger = yes
+            }
+            OR = {
+                NOT = { culture_group = panda_group }
+                AND = {
+                    has_building = ca_panda_capital_office
+                    panda_capital_bureau_active_trigger = yes
+                }
+                AND = {
+                    has_building = ca_panda_vassal_office
+                    panda_vassal_bureau_active_trigger = yes
+                }
+            }
+        }
+        trigger = {
+            TECH_CASTLE_CONSTRUCTION = 5
+            TECH_FORTIFICATIONS_CONSTRUCTION = 5
+        }
+        is_active_trigger = {
+            hidden_tooltip = {
+                Is_really_animal_trigger = yes
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_02_tooltip = yes
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = duck_group
+                }
+                custom_tooltip = {
+                    text = DUCK_DEV_MORE_8
+                    check_variable = { which=duck_dev_var value=8 }
+                }
+            }
+        }
+        prerequisites = { ca_ani_castle_tower_5_bis }
+        not_if_x_exists = { ca_ani_fort_1 ca_ani_garrison_1}
+        upgrades_from	= ca_ani_siege_3
+
+        gold_cost = 300
+        build_time = 1090
+        ai_creation_factor = 50
+        ai_feudal_modifier = 20
+        extra_tech_building_start = 10.0
+
+        land_morale = 0.045
+    }
+
+    ca_ani_garrison_1 = {
+        add_number_to_name = no
+
+        potential = {
+            NOR = {
+                has_building = ca_ani_siege_1
+                has_building = ca_ani_fort_1
+            }
+            OR = {
+                FROMFROM = { has_building = ca_ani_garrison_1 }
+                Is_really_animal_trigger = yes
+            }
+            OR = {
+                NOT = { culture_group = panda_group }
+                AND = {
+                    has_building = ca_panda_capital_office
+                    panda_capital_bureau_active_trigger = yes
+                }
+                AND = {
+                    has_building = ca_panda_vassal_office
+                    panda_vassal_bureau_active_trigger = yes
+                }
+            }
+        }
+        trigger = {
+            TECH_CASTLE_CONSTRUCTION = 1
+            NOR = {
+                has_building = ca_ani_siege_1
+                has_building = ca_ani_fort_1
+            }
+        }
+        is_active_trigger = {
+            hidden_tooltip = {
+                Is_really_animal_trigger = yes
+            }
+            NOR = {
+                has_building = ca_ani_siege_1
+                has_building = ca_ani_fort_1
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = duck_group
+                }
+                custom_tooltip = {
+                    text = DUCK_DEV_MORE_2
+                    check_variable = { which=duck_dev_var value=2 }
+                }
+            }
+        }
+        prerequisites = { ca_ani_castle_tower_1 }
+        not_if_x_exists = { ca_ani_siege_1 ca_ani_fort_1}
+        # upgrades_from	= BaseBuilding
+
+        gold_cost = 120
+        build_time = 365
+        ai_creation_factor = 50
+        ai_feudal_modifier = 25
+        extra_tech_building_start = 10.0
+
+        levy_reinforce_rate = 0.05
+        levy_size = 0.10
+    }
+    ca_ani_garrison_2 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                FROMFROM = { has_building = ca_ani_garrison_2 }
+                Is_really_animal_trigger = yes
+            }
+            OR = {
+                NOT = { culture_group = panda_group }
+                AND = {
+                    has_building = ca_panda_capital_office
+                    panda_capital_bureau_active_trigger = yes
+                }
+                AND = {
+                    has_building = ca_panda_vassal_office
+                    panda_vassal_bureau_active_trigger = yes
+                }
+            }
+        }
+        trigger = {
+            TECH_CASTLE_CONSTRUCTION = 2
+            TECH_FORTIFICATIONS_CONSTRUCTION = 1
+        }
+        is_active_trigger = {
+            hidden_tooltip = {
+                Is_really_animal_trigger = yes
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_01_tooltip = yes
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = duck_group
+                }
+                custom_tooltip = {
+                    text = DUCK_DEV_MORE_4
+                    check_variable = { which=duck_dev_var value=4 }
+                }
+            }
+        }
+        prerequisites = { ca_ani_castle_tower_2 }
+        not_if_x_exists = { ca_ani_siege_1 ca_ani_fort_1}
+        upgrades_from	= ca_ani_garrison_1
+
+        gold_cost = 150
+        build_time = 365
+        ai_creation_factor = 50
+        ai_feudal_modifier = 20
+        extra_tech_building_start = 10.0
+
+        levy_reinforce_rate = 0.05
+        levy_size = 0.12
+    }
+    ca_ani_garrison_3 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                FROMFROM = { has_building = ca_ani_garrison_3 }
+                Is_really_animal_trigger = yes
+            }
+            OR = {
+                NOT = { culture_group = panda_group }
+                AND = {
+                    has_building = ca_panda_capital_office
+                    panda_capital_bureau_active_trigger = yes
+                }
+                AND = {
+                    has_building = ca_panda_vassal_office
+                    panda_vassal_bureau_active_trigger = yes
+                }
+            }
+        }
+        trigger = {
+            TECH_CASTLE_CONSTRUCTION = 3
+            TECH_FORTIFICATIONS_CONSTRUCTION = 3
+        }
+        is_active_trigger = {
+            hidden_tooltip = {
+                Is_really_animal_trigger = yes
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_01_tooltip = yes
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = duck_group
+                }
+                custom_tooltip = {
+                    text = DUCK_DEV_MORE_6
+                    check_variable = { which=duck_dev_var value=6 }
+                }
+            }
+        }
+        prerequisites = { ca_ani_castle_tower_3_bis }
+        not_if_x_exists = { ca_ani_siege_1 ca_ani_fort_1}
+        upgrades_from	= ca_ani_garrison_2
+
+        gold_cost = 200
+        build_time = 730
+        ai_creation_factor = 50
+        ai_feudal_modifier = 20
+        extra_tech_building_start = 10.0
+
+        levy_reinforce_rate = 0.1
+        levy_size = 0.13
+    }
+    ca_ani_garrison_4 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                FROMFROM = { has_building = ca_ani_garrison_4 }
+                Is_really_animal_trigger = yes
+            }
+            OR = {
+                NOT = { culture_group = panda_group }
+                AND = {
+                    has_building = ca_panda_capital_office
+                    panda_capital_bureau_active_trigger = yes
+                }
+                AND = {
+                    has_building = ca_panda_vassal_office
+                    panda_vassal_bureau_active_trigger = yes
+                }
+            }
+        }
+        trigger = {
+            TECH_CASTLE_CONSTRUCTION = 5
+            TECH_FORTIFICATIONS_CONSTRUCTION = 5
+        }
+        is_active_trigger = {
+            hidden_tooltip = {
+                Is_really_animal_trigger = yes
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_02_tooltip = yes
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = duck_group
+                }
+                custom_tooltip = {
+                    text = DUCK_DEV_MORE_8
+                    check_variable = { which=duck_dev_var value=8 }
+                }
+            }
+        }
+        prerequisites = { ca_ani_castle_tower_5_bis }
+        not_if_x_exists = { ca_ani_siege_1 ca_ani_fort_1}
+        upgrades_from	= ca_ani_garrison_3
+
+        gold_cost = 300
+        build_time = 1090
+        ai_creation_factor = 50
+        ai_feudal_modifier = 20
+        extra_tech_building_start = 10.0
+
+        levy_reinforce_rate = 0.1
+        levy_size = 0.15
+    }
+
+
+
+    ##economic common buildings
+    ca_ani_trade_build_1 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                FROMFROM = { has_building = ca_ani_garrison_1 }
+                Is_really_animal_trigger = yes
+            }
+            NOR = {
+                has_building = ca_ani_build_cost_1
+                has_building = ca_ani_desmene_1
+            }
+            OR = {
+                NOT = { culture_group = panda_group }
+                AND = {
+                    has_building = ca_panda_capital_office
+                    panda_capital_bureau_active_trigger = yes
+                }
+                AND = {
+                    has_building = ca_panda_vassal_office
+                    panda_vassal_bureau_active_trigger = yes
+                }
+            }
+        }
+        trigger = {
+            TECH_CASTLE_CONSTRUCTION = 1
+            TECH_FORTIFICATIONS_CONSTRUCTION = 1
+            NOR = {
+                has_building = ca_ani_build_cost_1
+                has_building = ca_ani_desmene_1
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_01_tooltip = yes
+            }
+        }
+        is_active_trigger = {
+            hidden_tooltip = {
+                Is_really_animal_trigger = yes
+            }
+            NOR = {
+                has_building = ca_ani_build_cost_1
+                has_building = ca_ani_desmene_1
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_01_tooltip = yes
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = duck_group
+                }
+                custom_tooltip = {
+                    text = DUCK_DEV_MORE_3
+                    check_variable = { which=duck_dev_var value=3 }
+                }
+            }
+        }
+        prerequisites = { ca_ani_castle_tower_1_bis }
+        not_if_x_exists = { ca_ani_desmene_1 ca_ani_build_cost_1}
+        # upgrades_from	=
+
+        gold_cost = 120
+        build_time = 365
+        ai_creation_factor = 75
+        ai_feudal_modifier = -55
+        extra_tech_building_start = 10.0
+
+        tradevalue = 10
+    }
+    ca_ani_trade_build_2 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                Is_really_animal_trigger = yes
+                FROMFROM = { has_building = ca_ani_trade_build_2 }
+            }
+            OR = {
+                NOT = { culture_group = panda_group }
+                AND = {
+                    has_building = ca_panda_capital_office
+                    panda_capital_bureau_active_trigger = yes
+                }
+                AND = {
+                    has_building = ca_panda_vassal_office
+                    panda_vassal_bureau_active_trigger = yes
+                }
+            }
+        }
+        trigger = {
+            TECH_CASTLE_CONSTRUCTION = 3
+            TECH_FORTIFICATIONS_CONSTRUCTION = 2
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_01_tooltip = yes
+            }
+        }
+        is_active_trigger = {
+            hidden_tooltip = {
+                Is_really_animal_trigger = yes
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_01_tooltip = yes
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = duck_group
+                }
+                custom_tooltip = {
+                    text = DUCK_DEV_MORE_5
+                    check_variable = { which=duck_dev_var value=5 }
+                }
+            }
+        }
+        prerequisites = { ca_ani_castle_tower_3 }
+        not_if_x_exists = { ca_ani_desmene_1 ca_ani_build_cost_1}
+        upgrades_from	= ca_ani_trade_build_1
+
+        gold_cost = 150
+        build_time = 365
+        ai_creation_factor = 50
+        ai_feudal_modifier = 20
+        extra_tech_building_start = 10.0
+
+        tradevalue = 10
+    }
+    ca_ani_trade_build_3 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                Is_really_animal_trigger = yes
+                FROMFROM = { has_building = ca_ani_trade_build_3}
+            }
+            OR = {
+                NOT = { culture_group = panda_group }
+                AND = {
+                    has_building = ca_panda_capital_office
+                    panda_capital_bureau_active_trigger = yes
+                }
+                AND = {
+                    has_building = ca_panda_vassal_office
+                    panda_vassal_bureau_active_trigger = yes
+                }
+            }
+        }
+        trigger = {
+            TECH_CASTLE_CONSTRUCTION = 4
+            TECH_FORTIFICATIONS_CONSTRUCTION = 3
+            is_capital = yes
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_02_tooltip = yes
+            }
+        }
+        is_active_trigger = {
+            hidden_tooltip = {
+                Is_really_animal_trigger = yes
+            }
+            is_capital = yes
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_02_tooltip = yes
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = duck_group
+                }
+                custom_tooltip = {
+                    text = DUCK_DEV_MORE_7
+                    check_variable = { which=duck_dev_var value=7 }
+                }
+            }
+        }
+        prerequisites = { ca_ani_castle_tower_4_bis }
+        not_if_x_exists = { ca_ani_desmene_1 ca_ani_build_cost_1}
+        upgrades_from	= ca_ani_trade_build_2
+
+        gold_cost = 200
+        build_time = 730
+        ai_creation_factor = 50
+        ai_feudal_modifier = 20
+        extra_tech_building_start = 10.0
+
+        tradevalue = 15
+        global_tradevalue = 1
+    }
+    ca_ani_trade_build_4 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                Is_really_animal_trigger = yes
+                FROMFROM = { has_building = ca_ani_trade_build_4 }
+            }
+            is_capital = yes
+            OR = {
+                NOT = { culture_group = panda_group }
+                AND = {
+                    has_building = ca_panda_capital_office
+                    panda_capital_bureau_active_trigger = yes
+                }
+                AND = {
+                    has_building = ca_panda_vassal_office
+                    panda_vassal_bureau_active_trigger = yes
+                }
+            }
+        }
+        trigger = {
+            TECH_CASTLE_CONSTRUCTION = 6
+            TECH_FORTIFICATIONS_CONSTRUCTION = 6
+            is_capital = yes
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_02_tooltip = yes
+            }
+        }
+        is_active_trigger = {
+            hidden_tooltip = {
+                Is_really_animal_trigger = yes
+            }
+            is_capital = yes
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_02_tooltip = yes
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = duck_group
+                }
+                custom_tooltip = {
+                    text = DUCK_DEV_MORE_9
+                    check_variable = { which=duck_dev_var value=9 }
+                }
+            }
+        }
+        prerequisites = { ca_ani_castle_tower_6_bis }
+        not_if_x_exists = { ca_ani_build_cost_1 ca_ani_desmene_1 }
+        upgrades_from = ca_ani_trade_build_3
+
+        gold_cost = 300
+        build_time = 1090
+        ai_creation_factor = 50
+        ai_feudal_modifier = 20
+        extra_tech_building_start = 10.0
+
+        tradevalue = 15
+        global_tradevalue = 2
+    }
+
+    ca_ani_build_cost_1 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                FROMFROM = { has_building = ca_ani_garrison_1 }
+                Is_really_animal_trigger = yes
+            }
+            NOR = {
+                has_building = ca_ani_trade_build_1
+                has_building = ca_ani_desmene_1
+            }
+            OR = {
+                NOT = { culture_group = panda_group }
+                AND = {
+                    has_building = ca_panda_capital_office
+                    panda_capital_bureau_active_trigger = yes
+                }
+                AND = {
+                    has_building = ca_panda_vassal_office
+                    panda_vassal_bureau_active_trigger = yes
+                }
+            }
+        }
+        trigger = {
+            TECH_CASTLE_CONSTRUCTION = 1
+            TECH_FORTIFICATIONS_CONSTRUCTION = 1
+            NOR = {
+                has_building = ca_ani_trade_build_1
+                has_building = ca_ani_desmene_1
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_01_tooltip = yes
+            }
+        }
+        is_active_trigger = {
+            hidden_tooltip = {
+                Is_really_animal_trigger = yes
+            }
+            NOR = {
+                has_building = ca_ani_trade_build_1
+                has_building = ca_ani_desmene_1
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_01_tooltip = yes
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = duck_group
+                }
+                custom_tooltip = {
+                    text = DUCK_DEV_MORE_3
+                    check_variable = { which=duck_dev_var value=3 }
+                }
+            }
+        }
+        prerequisites = { ca_ani_castle_tower_1_bis }
+        not_if_x_exists = { ca_ani_trade_build_1 ca_ani_desmene_1}
+        # upgrades_from	=
+
+        gold_cost = 120
+        build_time = 365
+        ai_creation_factor = 75
+        ai_feudal_modifier = 0
+        extra_tech_building_start = 10.0
+
+        tax_income = 1.0
+    }
+    ca_ani_build_cost_2 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                Is_really_animal_trigger = yes
+                FROMFROM = { has_building = ca_ani_build_cost_2 }
+            }
+            OR = {
+                NOT = { culture_group = panda_group }
+                AND = {
+                    has_building = ca_panda_capital_office
+                    panda_capital_bureau_active_trigger = yes
+                }
+                AND = {
+                    has_building = ca_panda_vassal_office
+                    panda_vassal_bureau_active_trigger = yes
+                }
+            }
+        }
+        trigger = {
+            TECH_CASTLE_CONSTRUCTION = 3
+            TECH_FORTIFICATIONS_CONSTRUCTION = 2
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_01_tooltip = yes
+            }
+        }
+        is_active_trigger = {
+            hidden_tooltip = {
+                Is_really_animal_trigger = yes
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_01_tooltip = yes
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = duck_group
+                }
+                custom_tooltip = {
+                    text = DUCK_DEV_MORE_5
+                    check_variable = { which=duck_dev_var value=5 }
+                }
+            }
+        }
+        prerequisites = { ca_ani_castle_tower_3 }
+        not_if_x_exists = { ca_ani_trade_build_1 ca_ani_desmene_1}
+        upgrades_from	= ca_ani_build_cost_1
+
+        gold_cost = 150
+        build_time = 365
+        ai_creation_factor = 50
+        ai_feudal_modifier = 20
+        extra_tech_building_start = 10.0
+
+        tax_income = 1.0
+    }
+    ca_ani_build_cost_3 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                Is_really_animal_trigger = yes
+                FROMFROM = { has_building = ca_ani_build_cost_3 }
+            }
+            OR = {
+                NOT = { culture_group = panda_group }
+                AND = {
+                    has_building = ca_panda_capital_office
+                    panda_capital_bureau_active_trigger = yes
+                }
+                AND = {
+                    has_building = ca_panda_vassal_office
+                    panda_vassal_bureau_active_trigger = yes
+                }
+            }
+        }
+        trigger = {
+            TECH_CASTLE_CONSTRUCTION = 4
+            TECH_FORTIFICATIONS_CONSTRUCTION = 3
+            is_capital = yes
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_02_tooltip = yes
+            }
+        }
+        is_active_trigger = {
+            hidden_tooltip = {
+                Is_really_animal_trigger = yes
+            }
+            is_capital = yes
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_02_tooltip = yes
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = duck_group
+                }
+                custom_tooltip = {
+                    text = DUCK_DEV_MORE_7
+                    check_variable = { which=duck_dev_var value=7 }
+                }
+            }
+        }
+        prerequisites = { ca_ani_castle_tower_4_bis }
+        not_if_x_exists = { ca_ani_trade_build_1 ca_ani_desmene_1}
+        upgrades_from	= ca_ani_build_cost_2
+
+        gold_cost = 200
+        build_time = 730
+        ai_creation_factor = 50
+        ai_feudal_modifier = 20
+        extra_tech_building_start = 10.0
+
+        tax_income = 1.5
+    }
+    ca_ani_build_cost_4 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                Is_really_animal_trigger = yes
+                FROMFROM = { has_building = ca_ani_build_cost_4 }
+            }
+            is_capital = yes
+            OR = {
+                NOT = { culture_group = panda_group }
+                AND = {
+                    has_building = ca_panda_capital_office
+                    panda_capital_bureau_active_trigger = yes
+                }
+                AND = {
+                    has_building = ca_panda_vassal_office
+                    panda_vassal_bureau_active_trigger = yes
+                }
+            }
+        }
+        trigger = {
+            TECH_CASTLE_CONSTRUCTION = 6
+            TECH_FORTIFICATIONS_CONSTRUCTION = 6
+            is_capital = yes
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_02_tooltip = yes
+            }
+        }
+        is_active_trigger = {
+            hidden_tooltip = {
+                Is_really_animal_trigger = yes
+            }
+            is_capital = yes
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_02_tooltip = yes
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = duck_group
+                }
+                custom_tooltip = {
+                    text = DUCK_DEV_MORE_9
+                    check_variable = { which=duck_dev_var value=9 }
+                }
+            }
+        }
+
+        prerequisites = { ca_ani_castle_tower_6_bis }
+        not_if_x_exists = { ca_ani_build_cost_1 ca_ani_desmene_1 }
+        upgrades_from = ca_ani_build_cost_3
+
+        gold_cost = 300
+        build_time = 1090
+        ai_creation_factor = 50
+        ai_feudal_modifier = 20
+        extra_tech_building_start = 10.0
+
+        tax_income = 2.5
+    }
+
+    ca_ani_desmene_1 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                FROMFROM = { has_building = ca_ani_garrison_1 }
+                Is_really_animal_trigger = yes
+            }
+            NOR = {
+                has_building = ca_ani_build_cost_1
+                has_building = ca_ani_trade_build_1
+            }
+            OR = {
+                NOT = { culture_group = panda_group }
+                AND = {
+                    has_building = ca_panda_capital_office
+                    panda_capital_bureau_active_trigger = yes
+                }
+                AND = {
+                    has_building = ca_panda_vassal_office
+                    panda_vassal_bureau_active_trigger = yes
+                }
+            }
+        }
+        trigger = {
+            TECH_CASTLE_CONSTRUCTION = 1
+            TECH_FORTIFICATIONS_CONSTRUCTION = 1
+            NOR = {
+                has_building = ca_ani_build_cost_1
+                has_building = ca_ani_trade_build_1
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_01_tooltip = yes
+            }
+        }
+        is_active_trigger = {
+            hidden_tooltip = {
+                Is_really_animal_trigger = yes
+            }
+            NOR = {
+                has_building = ca_ani_build_cost_1
+                has_building = ca_ani_trade_build_1
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_01_tooltip = yes
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = duck_group
+                }
+                custom_tooltip = {
+                    text = DUCK_DEV_MORE_3
+                    check_variable = { which=duck_dev_var value=3 }
+                }
+            }
+        }
+        prerequisites = { ca_ani_castle_tower_1_bis }
+        not_if_x_exists = { ca_ani_trade_build_1 ca_ani_build_cost_1}
+        # upgrades_from	=
+
+        gold_cost = 120
+        build_time = 365
+        ai_creation_factor = 75
+        ai_feudal_modifier = 25
+        extra_tech_building_start = 10.0
+
+        moved_capital_months_mult = -0.5
+        tech_growth_modifier = 0.02
+    }
+    ca_ani_desmene_2 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                Is_really_animal_trigger = yes
+                FROMFROM = { has_building = ca_ani_desmene_2 }
+            }
+            OR = {
+                NOT = { culture_group = panda_group }
+                AND = {
+                    has_building = ca_panda_capital_office
+                    panda_capital_bureau_active_trigger = yes
+                }
+                AND = {
+                    has_building = ca_panda_vassal_office
+                    panda_vassal_bureau_active_trigger = yes
+                }
+            }
+        }
+        trigger = {
+            TECH_CASTLE_CONSTRUCTION = 3
+            TECH_FORTIFICATIONS_CONSTRUCTION = 2
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_01_tooltip = yes
+            }
+        }
+        is_active_trigger = {
+            hidden_tooltip = {
+                Is_really_animal_trigger = yes
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_01_tooltip = yes
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = duck_group
+                }
+                custom_tooltip = {
+                    text = DUCK_DEV_MORE_5
+                    check_variable = { which=duck_dev_var value=5 }
+                }
+            }
+        }
+        prerequisites = { ca_ani_castle_tower_3 }
+        not_if_x_exists = { ca_ani_trade_build_1 ca_ani_build_cost_1}
+        upgrades_from	= ca_ani_desmene_1
+
+        gold_cost = 150
+        build_time = 365
+        ai_creation_factor = 50
+        ai_feudal_modifier = 20
+        extra_tech_building_start = 10.0
+
+        local_tax_modifier = 0.1
+    }
+    ca_ani_desmene_3 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                Is_really_animal_trigger = yes
+                FROMFROM = { has_building = ca_ani_desmene_3 }
+            }
+            OR = {
+                NOT = { culture_group = panda_group }
+                AND = {
+                    has_building = ca_panda_capital_office
+                    panda_capital_bureau_active_trigger = yes
+                }
+                AND = {
+                    has_building = ca_panda_vassal_office
+                    panda_vassal_bureau_active_trigger = yes
+                }
+            }
+        }
+        trigger = {
+            TECH_CASTLE_CONSTRUCTION = 4
+            TECH_FORTIFICATIONS_CONSTRUCTION = 3
+            is_capital = yes
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_02_tooltip = yes
+            }
+        }
+        is_active_trigger = {
+            hidden_tooltip = {
+                Is_really_animal_trigger = yes
+            }
+            is_capital = yes
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_02_tooltip = yes
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = duck_group
+                }
+                custom_tooltip = {
+                    text = DUCK_DEV_MORE_7
+                    check_variable = { which=duck_dev_var value=7 }
+                }
+            }
+        }
+        prerequisites = { ca_ani_castle_tower_4_bis }
+        not_if_x_exists = { ca_ani_trade_build_1 ca_ani_build_cost_1}
+        upgrades_from	= ca_ani_desmene_2
+
+        gold_cost = 200
+        build_time = 730
+        ai_creation_factor = 50
+        ai_feudal_modifier = 20
+        extra_tech_building_start = 10.0
+
+        retinuesize_perc = 0.15
+        max_tradeposts = 1
+    }
+    ca_ani_desmene_4 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                Is_really_animal_trigger = yes
+                FROMFROM = { has_building = ca_ani_build_cost_4 }
+            }
+            is_capital = yes
+            OR = {
+                NOT = { culture_group = panda_group }
+                AND = {
+                    has_building = ca_panda_capital_office
+                    panda_capital_bureau_active_trigger = yes
+                }
+                AND = {
+                    has_building = ca_panda_vassal_office
+                    panda_vassal_bureau_active_trigger = yes
+                }
+            }
+        }
+        trigger = {
+            TECH_CASTLE_CONSTRUCTION = 6
+            TECH_FORTIFICATIONS_CONSTRUCTION = 6
+            is_capital = yes
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_02_tooltip = yes
+            }
+        }
+        is_active_trigger = {
+            hidden_tooltip = {
+                Is_really_animal_trigger = yes
+            }
+            is_capital = yes
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_02_tooltip = yes
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = duck_group
+                }
+                custom_tooltip = {
+                    text = DUCK_DEV_MORE_9
+                    check_variable = { which=duck_dev_var value=9 }
+                }
+            }
+        }
+
+        prerequisites = { ca_ani_castle_tower_6_bis }
+        not_if_x_exists = { ca_ani_build_cost_1 ca_ani_trade_build_1 }
+        upgrades_from = ca_ani_desmene_3
+
+        gold_cost = 300
+        build_time = 1090
+        ai_creation_factor = 50
+        ai_feudal_modifier = 20
+        extra_tech_building_start = 10.0
+
+        demesne_size = 2
+    }
+
+
+    ##cultural common buildings
+    ca_ani_prest_1 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                FROMFROM = { has_building = ca_ani_prest_1 }
+                Is_really_animal_trigger = yes
+            }
+            NOR = {
+                has_building = ca_ani_piety_1
+                has_building = ca_ani_tech_1
+            }
+            is_capital = yes
+            OR = {
+                NOT = { culture_group = panda_group }
+                AND = {
+                    has_building = ca_panda_capital_office
+                    panda_capital_bureau_active_trigger = yes
+                }
+                AND = {
+                    has_building = ca_panda_vassal_office
+                    panda_vassal_bureau_active_trigger = yes
+                }
+            }
+        }
+        trigger = {
+            TECH_CASTLE_CONSTRUCTION = 2
+            TECH_FORTIFICATIONS_CONSTRUCTION = 2
+            NOR = {
+                has_building = ca_ani_piety_1
+                has_building = ca_ani_tech_1
+            }
+            is_capital = yes
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_01_tooltip = yes
+            }
+        }
+        is_active_trigger = {
+            hidden_tooltip = {
+                Is_really_animal_trigger = yes
+            }
+            NOR = {
+                has_building = ca_ani_piety_1
+                has_building = ca_ani_tech_1
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_01_tooltip = yes
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = duck_group
+                }
+                custom_tooltip = {
+                    text = DUCK_DEV_MORE_4
+                    check_variable = { which=duck_dev_var value=4 }
+                }
+            }
+        }
+        prerequisites = { ca_ani_castle_tower_2_bis }
+        not_if_x_exists = { ca_ani_tech_1 ca_ani_piety_1}
+        # upgrades_from	=
+
+        gold_cost = 150
+        build_time = 365
+        ai_creation_factor = 10
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 10.0
+
+        monthly_character_prestige = 0.5
+        military_techpoints = 0.01
+    }
+    ca_ani_prest_2 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                Is_really_animal_trigger = yes
+                FROMFROM = { has_building = ca_ani_prest_2 }
+            }
+            is_capital = yes
+            OR = {
+                NOT = { culture_group = panda_group }
+                AND = {
+                    has_building = ca_panda_capital_office
+                    panda_capital_bureau_active_trigger = yes
+                }
+                AND = {
+                    has_building = ca_panda_vassal_office
+                    panda_vassal_bureau_active_trigger = yes
+                }
+            }
+        }
+        trigger = {
+            TECH_CASTLE_CONSTRUCTION = 4
+            TECH_FORTIFICATIONS_CONSTRUCTION = 4
+            is_capital = yes
+            holder_scope = {
+                primary_title = {
+                    higher_real_tier_than = DUKE
+                }
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_02_tooltip = yes
+            }
+        }
+        is_active_trigger = {
+            hidden_tooltip = {
+                Is_really_animal_trigger = yes
+            }
+            is_capital = yes
+            holder_scope = {
+                primary_title = {
+                    higher_real_tier_than = DUKE
+                }
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_02_tooltip = yes
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = duck_group
+                }
+                custom_tooltip = {
+                    text = DUCK_DEV_MORE_6
+                    check_variable = { which=duck_dev_var value=6 }
+                }
+            }
+        }
+        prerequisites = { ca_ani_castle_tower_5 }
+        not_if_x_exists = { ca_ani_tech_1 ca_ani_piety_1}
+        upgrades_from	= ca_ani_prest_1
+
+        gold_cost = 200
+        build_time = 730
+        ai_creation_factor = 50
+        ai_feudal_modifier = 20
+        extra_tech_building_start = 10.0
+
+        monthly_character_prestige = 0.75
+        military_techpoints = 0.05
+        vassal_opinion = 1
+    }
+    ca_ani_prest_3 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                Is_really_animal_trigger = yes
+                FROMFROM = { has_building = ca_ani_prest_3 }
+            }
+            is_capital = yes
+            OR = {
+                NOT = { culture_group = panda_group }
+                AND = {
+                    has_building = ca_panda_capital_office
+                    panda_capital_bureau_active_trigger = yes
+                }
+                AND = {
+                    has_building = ca_panda_vassal_office
+                    panda_vassal_bureau_active_trigger = yes
+                }
+            }
+        }
+        trigger = {
+            TECH_CASTLE_CONSTRUCTION = 7
+            TECH_FORTIFICATIONS_CONSTRUCTION = 7
+            is_capital = yes
+            holder_scope = {
+                primary_title = {
+                    higher_real_tier_than = KING
+                }
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_02_tooltip = yes
+            }
+        }
+        is_active_trigger = {
+            hidden_tooltip = {
+                Is_really_animal_trigger = yes
+            }
+            is_capital = yes
+            holder_scope = {
+                primary_title = {
+                    higher_real_tier_than = KING
+                }
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_02_tooltip = yes
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = duck_group
+                }
+                custom_tooltip = {
+                    text = DUCK_DEV_MORE_8
+                    check_variable = { which=duck_dev_var value=8 }
+                }
+            }
+        }
+        prerequisites = { ca_ani_castle_tower_7_bis }
+        not_if_x_exists = { ca_ani_tech_1 ca_ani_piety_1 }
+        upgrades_from = ca_ani_prest_2
+
+        gold_cost = 300
+        build_time = 1090
+        ai_creation_factor = 50
+        ai_feudal_modifier = 20
+        extra_tech_building_start = 10.0
+
+        monthly_character_prestige = 1
+        military_techpoints = 0.05
+        vassal_opinion = 4
+    }
+    ca_ani_prest_4 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                Is_really_animal_trigger = yes
+                FROMFROM = { has_building = ca_ani_prest_4 }
+            }
+            is_capital = yes
+            OR = {
+                NOT = { culture_group = panda_group }
+                AND = {
+                    has_building = ca_panda_capital_office
+                    panda_capital_bureau_active_trigger = yes
+                }
+                AND = {
+                    has_building = ca_panda_vassal_office
+                    panda_vassal_bureau_active_trigger = yes
+                }
+            }
+        }
+        trigger = {
+            TECH_CASTLE_CONSTRUCTION = 8
+            TECH_FORTIFICATIONS_CONSTRUCTION = 8
+            is_capital = yes
+            holder_scope = {
+                primary_title = {
+                    higher_real_tier_than = EMPEROR
+                }
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_02_tooltip = yes
+            }
+        }
+        is_active_trigger = {
+            hidden_tooltip = {
+                Is_really_animal_trigger = yes
+            }
+            is_capital = yes
+            holder_scope = {
+                primary_title = {
+                    higher_real_tier_than = EMPEROR
+                }
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_02_tooltip = yes
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = duck_group
+                }
+                custom_tooltip = {
+                    text = DUCK_DEV_10
+                    check_variable = { which=duck_dev_var value=10 }
+                }
+            }
+        }
+        prerequisites = { ca_ani_castle_tower_9 }
+        not_if_x_exists = { ca_ani_tech_1 ca_ani_piety_1 }
+        upgrades_from = ca_ani_prest_3
+
+        gold_cost = 500
+        build_time = 1455
+        ai_creation_factor = 50
+        ai_feudal_modifier = 20
+        extra_tech_building_start = 10.0
+
+        monthly_character_prestige = 1.75
+        military_techpoints = 0.05
+        vassal_opinion = 10
+    }
+
+    ca_ani_piety_1 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                FROMFROM = { has_building = ca_ani_piety_1 }
+                Is_really_animal_trigger = yes
+            }
+            NOR = {
+                has_building = ca_ani_prest_1
+                has_building = ca_ani_tech_1
+            }
+            is_capital = yes
+            OR = {
+                NOT = { culture_group = panda_group }
+                AND = {
+                    has_building = ca_panda_capital_office
+                    panda_capital_bureau_active_trigger = yes
+                }
+                AND = {
+                    has_building = ca_panda_vassal_office
+                    panda_vassal_bureau_active_trigger = yes
+                }
+            }
+        }
+        trigger = {
+            TECH_CASTLE_CONSTRUCTION = 2
+            TECH_FORTIFICATIONS_CONSTRUCTION = 2
+            NOR = {
+                has_building = ca_ani_prest_1
+                has_building = ca_ani_tech_1
+            }
+            is_capital = yes
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_01_tooltip = yes
+            }
+        }
+        is_active_trigger = {
+            hidden_tooltip = {
+                Is_really_animal_trigger = yes
+            }
+            NOR = {
+                has_building = ca_ani_prest_1
+                has_building = ca_ani_tech_1
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_01_tooltip = yes
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = duck_group
+                }
+                custom_tooltip = {
+                    text = DUCK_DEV_MORE_4
+                    check_variable = { which=duck_dev_var value=4 }
+                }
+            }
+        }
+        prerequisites = { ca_ani_castle_tower_2_bis }
+        not_if_x_exists = { ca_ani_prest_1 ca_ani_tech_1}
+        # upgrades_from	=
+
+        gold_cost = 150
+        build_time = 365
+        ai_creation_factor = 10
+        ai_feudal_modifier = 15
+        extra_tech_building_start = 10.0
+
+        monthly_character_piety = 0.25
+        culture_techpoints = 0.01
+    }
+    ca_ani_piety_2 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                Is_really_animal_trigger = yes
+                FROMFROM = { has_building = ca_ani_piety_2}
+            }
+            is_capital = yes
+            OR = {
+                NOT = { culture_group = panda_group }
+                AND = {
+                    has_building = ca_panda_capital_office
+                    panda_capital_bureau_active_trigger = yes
+                }
+                AND = {
+                    has_building = ca_panda_vassal_office
+                    panda_vassal_bureau_active_trigger = yes
+                }
+            }
+        }
+        trigger = {
+            TECH_CASTLE_CONSTRUCTION = 4
+            TECH_FORTIFICATIONS_CONSTRUCTION = 4
+            is_capital = yes
+            holder_scope = {
+                primary_title = {
+                    higher_real_tier_than = DUKE
+                }
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_02_tooltip = yes
+            }
+        }
+        is_active_trigger = {
+            hidden_tooltip = {
+                Is_really_animal_trigger = yes
+            }
+            is_capital = yes
+            holder_scope = {
+                primary_title = {
+                    higher_real_tier_than = DUKE
+                }
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_02_tooltip = yes
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = duck_group
+                }
+                custom_tooltip = {
+                    text = DUCK_DEV_MORE_6
+                    check_variable = { which=duck_dev_var value=6 }
+                }
+            }
+        }
+        prerequisites   = { ca_ani_castle_tower_5 }
+        not_if_x_exists = { ca_ani_prest_1 ca_ani_tech_1}
+        upgrades_from	= ca_ani_piety_1
+
+        gold_cost = 200
+        build_time = 730
+        ai_creation_factor = 50
+        ai_feudal_modifier = 20
+        extra_tech_building_start = 10.0
+
+        monthly_character_piety = 0.5
+        culture_techpoints = 0.05
+        church_opinion = 1
+    }
+    ca_ani_piety_3 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                Is_really_animal_trigger = yes
+                FROMFROM = { has_building = ca_ani_piety_3}
+            }
+            is_capital = yes
+            OR = {
+                NOT = { culture_group = panda_group }
+                AND = {
+                    has_building = ca_panda_capital_office
+                    panda_capital_bureau_active_trigger = yes
+                }
+                AND = {
+                    has_building = ca_panda_vassal_office
+                    panda_vassal_bureau_active_trigger = yes
+                }
+            }
+        }
+        trigger = {
+            TECH_CASTLE_CONSTRUCTION = 7
+            TECH_FORTIFICATIONS_CONSTRUCTION = 7
+            is_capital = yes
+            holder_scope = {
+                primary_title = {
+                    higher_real_tier_than = KING
+                }
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_02_tooltip = yes
+            }
+        }
+        is_active_trigger = {
+            hidden_tooltip = {
+                Is_really_animal_trigger = yes
+            }
+            is_capital = yes
+            holder_scope = {
+                primary_title = {
+                    higher_real_tier_than = KING
+                }
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_02_tooltip = yes
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = duck_group
+                }
+                custom_tooltip = {
+                    text = DUCK_DEV_MORE_8
+                    check_variable = { which=duck_dev_var value=8 }
+                }
+            }
+        }
+        prerequisites = { ca_ani_castle_tower_7_bis }
+        not_if_x_exists = { ca_ani_tech_1 ca_ani_prest_1 }
+        upgrades_from = ca_ani_piety_2
+
+        gold_cost = 300
+        build_time = 1090
+        ai_creation_factor = 50
+        ai_feudal_modifier = 20
+        extra_tech_building_start = 10.0
+
+        monthly_character_piety = 0.75
+        culture_techpoints = 0.05
+        church_opinion = 4
+    }
+    ca_ani_piety_4 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                Is_really_animal_trigger = yes
+                FROMFROM = { has_building = ca_ani_piety_4}
+            }
+            is_capital = yes
+            OR = {
+                NOT = { culture_group = panda_group }
+                AND = {
+                    has_building = ca_panda_capital_office
+                    panda_capital_bureau_active_trigger = yes
+                }
+                AND = {
+                    has_building = ca_panda_vassal_office
+                    panda_vassal_bureau_active_trigger = yes
+                }
+            }
+        }
+        trigger = {
+            TECH_CASTLE_CONSTRUCTION = 8
+            TECH_FORTIFICATIONS_CONSTRUCTION = 8
+            is_capital = yes
+            holder_scope = {
+                primary_title = {
+                    higher_real_tier_than = EMPEROR
+                }
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_02_tooltip = yes
+            }
+        }
+        is_active_trigger = {
+            hidden_tooltip = {
+                Is_really_animal_trigger = yes
+            }
+            is_capital = yes
+            holder_scope = {
+                primary_title = {
+                    higher_real_tier_than = EMPEROR
+                }
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_02_tooltip = yes
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = duck_group
+                }
+                custom_tooltip = {
+                    text = DUCK_DEV_10
+                    check_variable = { which=duck_dev_var value=10 }
+                }
+            }
+        }
+        prerequisites = { ca_ani_castle_tower_9 }
+        not_if_x_exists = { ca_ani_tech_1 ca_ani_prest_1 }
+        upgrades_from = ca_ani_prest_3
+
+        gold_cost = 500
+        build_time = 1455
+        ai_creation_factor = 50
+        ai_feudal_modifier = 20
+        extra_tech_building_start = 10.0
+
+        monthly_character_piety = 1.0
+        culture_techpoints = 0.05
+        church_opinion = 10
+    }
+
+    ca_ani_tech_1 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                FROMFROM = { has_building = ca_ani_tech_1}
+                Is_really_animal_trigger = yes
+            }
+            NOR = {
+                has_building = ca_ani_prest_1
+                has_building = ca_ani_piety_1
+            }
+            is_capital = yes
+            OR = {
+                NOT = { culture_group = panda_group }
+                AND = {
+                    has_building = ca_panda_capital_office
+                    panda_capital_bureau_active_trigger = yes
+                }
+                AND = {
+                    has_building = ca_panda_vassal_office
+                    panda_vassal_bureau_active_trigger = yes
+                }
+            }
+        }
+        trigger = {
+            TECH_CASTLE_CONSTRUCTION = 2
+            TECH_FORTIFICATIONS_CONSTRUCTION = 2
+            NOR = {
+                has_building = ca_ani_prest_1
+                has_building = ca_ani_piety_1
+            }
+            is_capital = yes
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_01_tooltip = yes
+            }
+        }
+        is_active_trigger = {
+            hidden_tooltip = {
+                Is_really_animal_trigger = yes
+            }
+            NOR = {
+                has_building = ca_ani_prest_1
+                has_building = ca_ani_piety_1
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_01_tooltip = yes
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = duck_group
+                }
+                custom_tooltip = {
+                    text = DUCK_DEV_MORE_4
+                    check_variable = { which=duck_dev_var value=4 }
+                }
+            }
+        }
+        prerequisites = { ca_ani_castle_tower_2_bis }
+        not_if_x_exists = { ca_ani_prest_1 ca_ani_piety_1}
+        # upgrades_from	=
+
+        gold_cost = 150
+        build_time = 365
+        ai_creation_factor = 50
+        ai_feudal_modifier = -20
+        extra_tech_building_start = 10.0
+
+        economy_techpoints = 0.01
+        tech_growth_modifier = 0.01
+    }
+    ca_ani_tech_2 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                Is_really_animal_trigger = yes
+                FROMFROM = { has_building = ca_ani_tech_2}
+            }
+            is_capital = yes
+            OR = {
+                NOT = { culture_group = panda_group }
+                AND = {
+                    has_building = ca_panda_capital_office
+                    panda_capital_bureau_active_trigger = yes
+                }
+                AND = {
+                    has_building = ca_panda_vassal_office
+                    panda_vassal_bureau_active_trigger = yes
+                }
+            }
+        }
+        trigger = {
+            TECH_CASTLE_CONSTRUCTION = 4
+            TECH_FORTIFICATIONS_CONSTRUCTION = 4
+            is_capital = yes
+            holder_scope = {
+                primary_title = {
+                    higher_real_tier_than = DUKE
+                }
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_02_tooltip = yes
+            }
+        }
+        is_active_trigger = {
+            hidden_tooltip = {
+                Is_really_animal_trigger = yes
+            }
+            is_capital = yes
+            holder_scope = {
+                primary_title = {
+                    higher_real_tier_than = DUKE
+                }
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_02_tooltip = yes
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = duck_group
+                }
+                custom_tooltip = {
+                    text = DUCK_DEV_MORE_6
+                    check_variable = { which=duck_dev_var value=6 }
+                }
+            }
+        }
+        prerequisites = { ca_ani_castle_tower_5 }
+        not_if_x_exists = { ca_ani_prest_1 ca_ani_piety_1}
+        upgrades_from	= ca_ani_tech_1
+
+        gold_cost = 200
+        build_time = 730
+        ai_creation_factor = 50
+        ai_feudal_modifier = 20
+        extra_tech_building_start = 10.0
+
+        economy_techpoints = 0.05
+        tech_growth_modifier = 0.02
+    }
+    ca_ani_tech_3 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                Is_really_animal_trigger = yes
+                FROMFROM = { has_building = ca_ani_tech_3}
+            }
+            is_capital = yes
+            OR = {
+                NOT = { culture_group = panda_group }
+                AND = {
+                    has_building = ca_panda_capital_office
+                    panda_capital_bureau_active_trigger = yes
+                }
+                AND = {
+                    has_building = ca_panda_vassal_office
+                    panda_vassal_bureau_active_trigger = yes
+                }
+            }
+        }
+        trigger = {
+            TECH_CASTLE_CONSTRUCTION = 7
+            TECH_FORTIFICATIONS_CONSTRUCTION = 7
+            is_capital = yes
+            holder_scope = {
+                primary_title = {
+                    higher_real_tier_than = KING
+                }
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_02_tooltip = yes
+            }
+        }
+        is_active_trigger = {
+            hidden_tooltip = {
+                Is_really_animal_trigger = yes
+            }
+            is_capital = yes
+            holder_scope = {
+                primary_title = {
+                    higher_real_tier_than = KING
+                }
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_02_tooltip = yes
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = duck_group
+                }
+                custom_tooltip = {
+                    text = DUCK_DEV_MORE_8
+                    check_variable = { which=duck_dev_var value=8 }
+                }
+            }
+        }
+
+        prerequisites = { ca_ani_castle_tower_7_bis }
+        not_if_x_exists = { ca_ani_prest_1 ca_ani_piety_1}
+        upgrades_from = ca_ani_tech_2
+
+        gold_cost = 300
+        build_time = 1090
+        ai_creation_factor = 50
+        ai_feudal_modifier = 20
+        extra_tech_building_start = 10.0
+
+        economy_techpoints = 0.05
+        tech_growth_modifier = 0.03
+    }
+    ca_ani_tech_4 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                Is_really_animal_trigger = yes
+                FROMFROM = { has_building = ca_ani_tech_4}
+            }
+            is_capital = yes
+            OR = {
+                NOT = { culture_group = panda_group }
+                AND = {
+                    has_building = ca_panda_capital_office
+                    panda_capital_bureau_active_trigger = yes
+                }
+                AND = {
+                    has_building = ca_panda_vassal_office
+                    panda_vassal_bureau_active_trigger = yes
+                }
+            }
+        }
+        trigger = {
+            TECH_CASTLE_CONSTRUCTION = 8
+            TECH_FORTIFICATIONS_CONSTRUCTION = 8
+            is_capital = yes
+            holder_scope = {
+                primary_title = {
+                    higher_real_tier_than = EMPEROR
+                }
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_02_tooltip = yes
+            }
+        }
+        is_active_trigger = {
+            hidden_tooltip = {
+                Is_really_animal_trigger = yes
+            }
+            is_capital = yes
+            holder_scope = {
+                primary_title = {
+                    higher_real_tier_than = EMPEROR
+                }
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = hedgehog_group
+                }
+                hedgehog_home_02_tooltip = yes
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = duck_group
+                }
+                custom_tooltip = {
+                    text = DUCK_DEV_10
+                    check_variable = { which=duck_dev_var value=10 }
+                }
+            }
+        }
+        prerequisites = { ca_ani_castle_tower_9 }
+        not_if_x_exists = { ca_ani_prest_1 ca_ani_piety_1}
+        upgrades_from = ca_ani_tech_3
+
+        gold_cost = 500
+        build_time = 1455
+        ai_creation_factor = 50
+        ai_feudal_modifier = 20
+        extra_tech_building_start = 10.0
+
+        economy_techpoints = 0.05
+        tech_growth_modifier = 0.04
+    }
+}
+
+tribal = {
+    tb_ani_tribal_tower_1 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                FROMFROM = { has_building = tb_ani_tribal_tower_1}
+                Is_really_animal_trigger = yes
+            }
+        }
+        trigger = {
+            Is_really_animal_trigger = yes
+            TECH_CASTLE_CONSTRUCTION = 0
+        }
+        is_active_trigger = {
+            Is_really_animal_trigger = yes
+        }
+
+        prestige_cost = 100
+        build_time = 365
+        ai_creation_factor = 15
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 0.8
+
+        monthly_character_prestige = 0.15
+    }
+    tb_ani_tribal_tower_2 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                FROMFROM = { has_building = tb_ani_tribal_tower_2}
+                Is_really_animal_trigger = yes
+            }
+        }
+        trigger = {
+            Is_really_animal_trigger = yes
+            TECH_CASTLE_CONSTRUCTION = 1
+            TECH_CITY_CONSTRUCTION = 1
+            # TECH_FORTIFICATIONS_CONSTRUCTION = 1
+        }
+        is_active_trigger = {
+            Is_really_animal_trigger = yes
+        }
+
+        upgrades_from = tb_ani_tribal_tower_1
+        convert_to_castle = ca_ani_castle_tower_1
+        # convert_to_temple = tp_ani_temple_tower_1
+
+        piety_cost = 100
+        build_time = 465
+        ai_creation_factor = 15
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 1.0
+
+        monthly_character_piety = 0.15
+    }
+    tb_ani_tribal_tower_3 = {
+        # desc = ca_ani_castle_tower_desc
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                FROMFROM = { has_building = tb_ani_tribal_tower_3}
+                Is_really_animal_trigger = yes
+            }
+        }
+        trigger = {
+            Is_really_animal_trigger = yes
+            TECH_CASTLE_CONSTRUCTION = 1
+            TECH_CITY_CONSTRUCTION = 1
+        }
+        is_active_trigger = {
+            Is_really_animal_trigger = yes
+        }
+
+        upgrades_from	= tb_ani_tribal_tower_2
+
+        prestige_cost = 300
+        build_time = 565
+        ai_creation_factor = 15
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 0.8
+
+        monthly_character_prestige = 0.35
+    }
+    tb_ani_tribal_tower_4 = {
+        # desc = ca_ani_castle_tower_desc
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                FROMFROM = { has_building = tb_ani_tribal_tower_4}
+                Is_really_animal_trigger = yes
+            }
+        }
+        trigger = {
+            Is_really_animal_trigger = yes
+            TECH_CASTLE_CONSTRUCTION = 1
+            TECH_CITY_CONSTRUCTION = 1
+            TECH_FORTIFICATIONS_CONSTRUCTION = 1
+        }
+        is_active_trigger = {
+            Is_really_animal_trigger = yes
+        }
+
+        upgrades_from	= tb_ani_tribal_tower_3
+        convert_to_castle = ca_ani_castle_tower_1_bis
+        # convert_to_temple = tp_ani_temple_tower_2
+
+        piety_cost = 200
+        build_time = 665
+        ai_creation_factor = 15
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 1.0
+
+        monthly_character_piety = 0.25
+    }
+
+    tb_ani_fort_1 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                FROMFROM = { has_building = tb_ani_fort_1}
+                Is_really_animal_trigger = yes
+            }
+            NOT = {
+                has_building = tb_ani_siege_1
+            }
+        }
+        trigger = {
+            TECH_CASTLE_CONSTRUCTION = 0
+            NOT = { ###for visual appearance
+                has_building = tb_ani_siege_1
+            }
+        }
+        is_active_trigger = {
+            Is_really_animal_trigger = yes
+        }
+        prerequisites = { tb_ani_tribal_tower_1 }
+        not_if_x_exists = { tb_ani_siege_1 }
+
+
+        prestige_cost = 150
+        build_time = 365
+        ai_creation_factor = 50
+        extra_tech_building_start = 10.0
+
+        fort_level = 0.25
+        garrison_size = 0.05
+    }
+    tb_ani_fort_2 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                FROMFROM = { has_building = tb_ani_fort_2}
+                Is_really_animal_trigger = yes
+            }
+        }
+        trigger = {
+            TECH_CASTLE_CONSTRUCTION = 0
+        }
+        is_active_trigger = {
+            Is_really_animal_trigger = yes
+        }
+        prerequisites = { tb_ani_tribal_tower_2 }
+        not_if_x_exists = { tb_ani_siege_1 }
+        upgrades_from	= tb_ani_fort_1
+        convert_to_castle = ca_ani_fort_1
+        # convert_to_temple = tp_ani_fort_1
+
+        prestige_cost = 300
+        build_time = 400
+        ai_creation_factor = 85
+        ai_feudal_modifier = 20
+        extra_tech_building_start = 10.0
+
+        fort_level = 0.25
+        garrison_size = 0.10
+    }
+
+    tb_ani_siege_1 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                FROMFROM = { has_building = tb_ani_siege_1}
+                Is_really_animal_trigger = yes
+            }
+            NOT = {
+                has_building = tb_ani_fort_1
+            }
+        }
+        trigger = {
+            TECH_CASTLE_CONSTRUCTION = 0
+            NOT = {
+                has_building = tb_ani_fort_1
+            }
+        }
+        is_active_trigger = {
+            Is_really_animal_trigger = yes
+        }
+        prerequisites = { tb_ani_tribal_tower_1 }
+        not_if_x_exists = { tb_ani_fort_1 }
+
+        prestige_cost = 150
+        build_time = 365
+        ai_creation_factor = 50
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 10.0
+
+        land_morale = 0.01
+    }
+    tb_ani_siege_2 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                FROMFROM = { has_building = tb_ani_siege_2}
+                Is_really_animal_trigger = yes
+            }
+        }
+        trigger = {
+            TECH_CASTLE_CONSTRUCTION = 0
+        }
+        is_active_trigger = {
+            Is_really_animal_trigger = yes
+        }
+        prerequisites = { tb_ani_tribal_tower_2 }
+        not_if_x_exists = { tb_ani_fort_1 }
+        upgrades_from	= tb_ani_siege_1
+        convert_to_castle = ca_ani_siege_1
+        # convert_to_temple = tp_ani_siege_1
+
+        prestige_cost = 300
+        build_time = 400
+        ai_creation_factor = 85
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 10.0
+
+        land_morale = 0.025
+    }
+}

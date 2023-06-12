@@ -1,0 +1,1281 @@
+trade_post = {
+    tr_duck_level_dev_1 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = duck_group
+        }
+        trigger = {
+            religion = Duck_religion
+            TECH_TRADE_PRACTICES = 0
+        }
+        is_active_trigger = {
+            culture_group = duck_group
+            religion_group = Duck_religion
+        }
+
+        gold_cost = 120
+        build_time = 300
+        ai_creation_factor = 90
+        extra_tech_building_start = 10.0
+
+        duck_max_dev = 1
+    }
+    tr_duck_level_dev_2 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = duck_group
+            OR = {
+                borders_lake = yes
+                borders_major_river = yes
+                port = yes
+            }
+        }
+        trigger = {
+            religion = Duck_religion
+            TECH_TRADE_PRACTICES = 1
+        }
+        is_active_trigger = {
+            culture_group = duck_group
+            religion_group = Duck_religion
+        }
+        upgrades_from = tr_duck_level_dev_1
+
+        gold_cost = 180
+        build_time = 400
+        ai_creation_factor = 89
+        extra_tech_building_start = 10.0
+
+        duck_max_dev = 1
+    }
+    tr_duck_level_dev_3 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = duck_group
+            port = yes
+        }
+        trigger = {
+            religion = Duck_religion
+            TECH_TRADE_PRACTICES = 2
+        }
+        is_active_trigger = {
+            culture_group = duck_group
+            religion_group = Duck_religion
+        }
+        upgrades_from = tr_duck_level_dev_2
+
+        gold_cost = 240
+        build_time = 500
+        ai_creation_factor = 88
+        extra_tech_building_start = 10.0
+
+        duck_max_dev = 1
+    }
+
+    tr_duck_dev_growth_1 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = duck_group
+        }
+        trigger = {
+            religion = Duck_religion
+            TECH_TRADE_PRACTICES = 0
+        }
+        is_active_trigger = {
+            culture_group = duck_group
+            religion_group = Duck_religion
+        }
+
+        gold_cost = 120
+        build_time = 300
+        ai_creation_factor = 90
+        extra_tech_building_start = 10.0
+
+        duck_dev_speed_increase = 0.5
+    }
+    tr_duck_dev_growth_2 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = duck_group
+        }
+        trigger = {
+            religion = Duck_religion
+            TECH_TRADE_PRACTICES = 1
+        }
+        is_active_trigger = {
+            culture_group = duck_group
+            religion_group = Duck_religion
+        }
+        upgrades_from = tr_duck_dev_growth_1
+
+        gold_cost = 180
+        build_time = 400
+        ai_creation_factor = 89
+        extra_tech_building_start = 10.0
+
+        duck_dev_speed_increase = 0.5
+    }
+    tr_duck_dev_growth_3 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = duck_group
+        }
+        trigger = {
+            religion = Duck_religion
+            TECH_TRADE_PRACTICES = 1
+        }
+        is_active_trigger = {
+            culture_group = duck_group
+            religion_group = Duck_religion
+        }
+        upgrades_from = tr_duck_dev_growth_2
+
+        gold_cost = 240
+        build_time = 500
+        ai_creation_factor = 88
+        extra_tech_building_start = 10.0
+
+        duck_dev_speed_increase = 1
+    }
+    tr_duck_dev_growth_4 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = duck_group
+        }
+        trigger = {
+            religion = Duck_religion
+            TECH_TRADE_PRACTICES = 2
+        }
+        is_active_trigger = {
+            culture_group = duck_group
+            religion_group = Duck_religion
+        }
+        upgrades_from = tr_duck_dev_growth_3
+
+        gold_cost = 300
+        build_time = 600
+        ai_creation_factor = 87
+        extra_tech_building_start = 10.0
+
+        duck_dev_speed_increase = 1
+    }
+}
+
+castle = { # custom modifier loc are in duckevent file
+    ca_duck_fortification_01 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = duck_group
+        }
+        trigger = {
+            culture_group = duck_group
+            TECH_CASTLE_CONSTRUCTION = 1
+            TECH_FORTIFICATIONS_CONSTRUCTION = 1
+            custom_tooltip = {
+                text = DUCK_DEV_LESS_4
+                NOT = { check_variable = { which=duck_dev_var value=5 } }
+            }
+        }
+        is_active_trigger = {
+            culture_group = duck_group
+            has_building = ca_ani_castle_tower_1_bis
+            custom_tooltip = {
+                text = DUCK_DEV_LESS_4
+                NOT = { check_variable = { which=duck_dev_var value=5 } }
+            }
+        }
+        prerequisites = { ca_ani_castle_tower_1_bis }
+
+        gold_cost = 100
+        build_time = 150
+        ai_creation_factor = 75
+        extra_tech_building_start = 1.0
+
+        garrison_size = 0.2
+        fort_level = 0.4
+    }
+    ca_duck_fortification_02 = {
+        add_number_to_name = no
+
+        potential = {
+             culture_group = duck_group
+        }
+        trigger = {
+            culture_group = duck_group
+            TECH_CASTLE_CONSTRUCTION = 2
+            TECH_FORTIFICATIONS_CONSTRUCTION = 2
+            custom_tooltip = {
+                text = DUCK_DEV_LESS_4
+                NOT = { check_variable = { which=duck_dev_var value=5 } }
+            }
+        }
+        is_active_trigger = {
+            culture_group = duck_group
+            has_building = ca_ani_castle_tower_2_bis
+            custom_tooltip = {
+                text = DUCK_DEV_LESS_4
+                NOT = { check_variable = { which=duck_dev_var value=5 } }
+            }
+        }
+        prerequisites = { ca_ani_castle_tower_2_bis }
+        upgrades_from = ca_duck_fortification_01
+
+        gold_cost = 120
+        build_time = 200
+        ai_creation_factor = 75
+        extra_tech_building_start = 1.0
+
+        garrison_size = 0.2
+        fort_level = 0.4
+    }
+    ca_duck_fortification_03 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = duck_group
+        }
+        trigger = {
+            culture_group = duck_group
+            TECH_CASTLE_CONSTRUCTION = 3
+            TECH_FORTIFICATIONS_CONSTRUCTION = 3
+            custom_tooltip = {
+                text = DUCK_DEV_LESS_4
+                NOT = { check_variable = { which=duck_dev_var value=5 } }
+            }
+        }
+        is_active_trigger = {
+            culture_group = duck_group
+            has_building = ca_ani_castle_tower_3_bis
+            custom_tooltip = {
+                text = DUCK_DEV_LESS_4
+                NOT = { check_variable = { which=duck_dev_var value=5 } }
+            }
+        }
+        prerequisites = { ca_ani_castle_tower_3_bis }
+        upgrades_from = ca_duck_fortification_02
+
+        gold_cost = 130
+        build_time = 250
+        ai_creation_factor = 75
+        extra_tech_building_start = 1.0
+
+        garrison_size = 0.2
+        fort_level = 0.4
+    }
+    ca_duck_fortification_04 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = duck_group
+        }
+        trigger = {
+            culture_group = duck_group
+            TECH_CASTLE_CONSTRUCTION = 4
+            TECH_FORTIFICATIONS_CONSTRUCTION = 4
+            custom_tooltip = {
+                text = DUCK_DEV_LESS_4
+                NOT = { check_variable = { which=duck_dev_var value=5 } }
+            }
+        }
+        is_active_trigger = {
+            culture_group = duck_group
+            has_building = ca_ani_castle_tower_4_bis
+            custom_tooltip = {
+                text = DUCK_DEV_LESS_4
+                NOT = { check_variable = { which=duck_dev_var value=5 } }
+            }
+        }
+        prerequisites = { ca_ani_castle_tower_4_bis }
+        upgrades_from = ca_duck_fortification_03
+
+        gold_cost = 140
+        build_time = 300
+        ai_creation_factor = 75
+        extra_tech_building_start = 1.0
+
+        garrison_size = 0.2
+        fort_level = 0.4
+    }
+    ca_duck_fortification_05 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = duck_group
+        }
+        trigger = {
+            culture_group = duck_group
+            TECH_CASTLE_CONSTRUCTION = 5
+            TECH_FORTIFICATIONS_CONSTRUCTION = 5
+            custom_tooltip = {
+                text = DUCK_DEV_LESS_4
+                NOT = { check_variable = { which=duck_dev_var value=5 } }
+            }
+        }
+        is_active_trigger = {
+            culture_group = duck_group
+            has_building = ca_ani_castle_tower_5_bis
+            custom_tooltip = {
+                text = DUCK_DEV_LESS_4
+                NOT = { check_variable = { which=duck_dev_var value=5 } }
+            }
+        }
+        prerequisites = { ca_ani_castle_tower_5_bis }
+        upgrades_from = ca_duck_fortification_04
+
+        gold_cost = 150
+        build_time = 350
+        ai_creation_factor = 75
+        extra_tech_building_start = 1.0
+
+        garrison_size = 0.2
+        fort_level = 0.4
+    }
+    ca_duck_fortification_06 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = duck_group
+        }
+        trigger = {
+            culture_group = duck_group
+            TECH_CASTLE_CONSTRUCTION = 6
+            TECH_FORTIFICATIONS_CONSTRUCTION = 6
+            custom_tooltip = {
+                text = DUCK_DEV_LESS_4
+                NOT = { check_variable = { which=duck_dev_var value=5 } }
+            }
+        }
+        is_active_trigger = {
+            culture_group = duck_group
+            has_building = ca_ani_castle_tower_6_bis
+            custom_tooltip = {
+                text = DUCK_DEV_LESS_4
+                NOT = { check_variable = { which=duck_dev_var value=5 } }
+            }
+        }
+        prerequisites = { ca_ani_castle_tower_6_bis }
+        upgrades_from = ca_duck_fortification_05
+
+        gold_cost = 160
+        build_time = 400
+        ai_creation_factor = 75
+        extra_tech_building_start = 1.0
+
+        garrison_size = 0.2
+        fort_level = 0.4
+    }
+    ca_duck_fortification_07 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = duck_group
+        }
+        trigger = {
+            culture_group = duck_group
+            TECH_CASTLE_CONSTRUCTION = 7
+            TECH_FORTIFICATIONS_CONSTRUCTION = 7
+            custom_tooltip = {
+                text = DUCK_DEV_LESS_4
+                NOT = { check_variable = { which=duck_dev_var value=5 } }
+            }
+        }
+        is_active_trigger = {
+            culture_group = duck_group
+            has_building = ca_ani_castle_tower_7_bis
+            custom_tooltip = {
+                text = DUCK_DEV_LESS_4
+                NOT = { check_variable = { which=duck_dev_var value=5 } }
+            }
+        }
+        prerequisites = { ca_ani_castle_tower_7_bis }
+        upgrades_from = ca_duck_fortification_06
+
+        gold_cost = 170
+        build_time = 450
+        ai_creation_factor = 75
+        extra_tech_building_start = 1.0
+
+        garrison_size = 0.2
+        fort_level = 0.4
+    }
+    ca_duck_fortification_08 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = duck_group
+        }
+        trigger = {
+            culture_group = duck_group
+            TECH_CASTLE_CONSTRUCTION = 8
+            TECH_FORTIFICATIONS_CONSTRUCTION = 8
+            custom_tooltip = {
+                text = DUCK_DEV_LESS_4
+                NOT = { check_variable = { which=duck_dev_var value=5 } }
+            }
+        }
+        is_active_trigger = {
+            culture_group = duck_group
+            has_building = ca_ani_castle_tower_9
+            custom_tooltip = {
+                text = DUCK_DEV_LESS_4
+                NOT = { check_variable = { which=duck_dev_var value=5 } }
+            }
+        }
+        prerequisites = { ca_ani_castle_tower_9 }
+        upgrades_from = ca_duck_fortification_07
+
+        gold_cost = 180
+        build_time = 500
+        ai_creation_factor = 75
+        extra_tech_building_start = 1.0
+
+        garrison_size = 0.2
+        fort_level = 0.4
+    }
+
+    ca_duck_quarters_1 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = duck_group
+        }
+        trigger = {
+            culture_group = duck_group
+            TECH_CASTLE_CONSTRUCTION = 1
+
+            custom_tooltip = {
+                text = DUCK_DEV_MORE_2
+                check_variable = { which=duck_dev_var value=2 }
+            }
+        }
+        is_active_trigger = {
+            culture_group = duck_group
+            has_building = ca_ani_castle_tower_1
+            custom_tooltip = {
+                text = DUCK_DEV_MORE_2
+                check_variable = { which=duck_dev_var value=2 }
+            }
+        }
+        prerequisites = { ca_ani_castle_tower_1 }
+        # upgrades_from = BaseBuilding
+
+        gold_cost = 150
+        build_time = 450
+        ai_creation_factor = 80
+        extra_tech_building_start = 1.0
+
+        light_infantry = 40
+        archers = 25
+        tax_income = 0.1
+    }
+    ca_duck_quarters_2 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = duck_group
+        }
+        trigger = {
+            culture_group = duck_group
+            TECH_CASTLE_CONSTRUCTION = 3
+            TECH_FORTIFICATIONS_CONSTRUCTION = 2
+            custom_tooltip = {
+                text = DUCK_DEV_MORE_4
+                check_variable = { which=duck_dev_var value=4 }
+            }
+        }
+        is_active_trigger = {
+            culture_group = duck_group
+            has_building = ca_ani_castle_tower_3
+            custom_tooltip = {
+                text = DUCK_DEV_MORE_4
+                check_variable = { which=duck_dev_var value=4 }
+            }
+        }
+        prerequisites = { ca_ani_castle_tower_3 }
+        upgrades_from = ca_duck_quarters_1
+
+        gold_cost = 250
+        build_time = 700
+        ai_creation_factor = 80
+        extra_tech_building_start = 1.0
+
+        light_infantry = 80
+        archers = 50
+        tax_income = 0.1
+    }
+    ca_duck_quarters_3 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = duck_group
+        }
+        trigger = {
+            culture_group = duck_group
+            TECH_CASTLE_CONSTRUCTION = 4
+            TECH_FORTIFICATIONS_CONSTRUCTION = 4
+            custom_tooltip = {
+                text = DUCK_DEV_MORE_6
+                check_variable = { which=duck_dev_var value=6 }
+            }
+        }
+        is_active_trigger = {
+            culture_group = duck_group
+            has_building = ca_ani_castle_tower_4_bis
+            custom_tooltip = {
+                text = DUCK_DEV_MORE_6
+                check_variable = { which=duck_dev_var value=6 }
+            }
+        }
+        prerequisites = { ca_ani_castle_tower_4_bis }
+        upgrades_from = ca_duck_quarters_2
+
+        gold_cost = 400
+        build_time = 1100
+        ai_creation_factor = 80
+        extra_tech_building_start = 1.0
+
+        light_infantry = 125
+        archers = 95
+        tax_income = 0.1
+    }
+    ca_duck_quarters_4 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = duck_group
+        }
+        trigger = {
+            culture_group = duck_group
+            TECH_CASTLE_CONSTRUCTION = 8
+            TECH_FORTIFICATIONS_CONSTRUCTION = 7
+            custom_tooltip = {
+                text = DUCK_DEV_MORE_8
+                check_variable = { which=duck_dev_var value=8 }
+            }
+        }
+        is_active_trigger = {
+            culture_group = duck_group
+            has_building = ca_ani_castle_tower_8
+            custom_tooltip = {
+                text = DUCK_DEV_MORE_8
+                check_variable = { which=duck_dev_var value=8 }
+            }
+        }
+        prerequisites = { ca_ani_castle_tower_8 }
+        upgrades_from = ca_duck_quarters_3
+
+        gold_cost = 650
+        build_time = 2500
+        ai_creation_factor = 80
+        extra_tech_building_start = 1.0
+
+        light_infantry = 250
+        archers = 165
+        tax_income = 0.1
+    }
+
+    ca_duck_forge_1 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = duck_group
+        }
+        trigger = {
+            culture_group = duck_group
+            TECH_CASTLE_CONSTRUCTION = 1
+            TECH_FORTIFICATIONS_CONSTRUCTION = 1
+            custom_tooltip = {
+                text = DUCK_DEV_MORE_4
+                check_variable = { which=duck_dev_var value=4 }
+            }
+        }
+        is_active_trigger = {
+            culture_group = duck_group
+            has_building = ca_ani_castle_tower_1_bis
+            custom_tooltip = {
+                text = DUCK_DEV_MORE_4
+                check_variable = { which=duck_dev_var value=4 }
+            }
+        }
+        prerequisites = { ca_ani_castle_tower_1_bis }
+        # upgrades_from = BaseBuilding
+
+        gold_cost = 90
+        build_time = 450
+        ai_creation_factor = 30
+        ai_feudal_modifier = 30
+        extra_tech_building_start = 1.0
+
+        pikemen = 30
+        heavy_infantry = 30
+        tax_income = 0.1
+    }
+    ca_duck_forge_2 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = duck_group
+        }
+        trigger = {
+            culture_group = duck_group
+            TECH_CASTLE_CONSTRUCTION = 4
+            TECH_FORTIFICATIONS_CONSTRUCTION = 3
+            custom_tooltip = {
+                text = DUCK_DEV_MORE_7
+                check_variable = { which=duck_dev_var value=7 }
+            }
+        }
+        is_active_trigger = {
+            culture_group = duck_group
+            has_building = ca_ani_castle_tower_4
+            custom_tooltip = {
+                text = DUCK_DEV_MORE_7
+                check_variable = { which=duck_dev_var value=7 }
+            }
+        }
+        prerequisites = { ca_ani_castle_tower_4 }
+        upgrades_from = ca_duck_forge_1
+
+        gold_cost = 130
+        build_time = 700
+        ai_creation_factor = 30
+        ai_feudal_modifier = 25
+        extra_tech_building_start = 1.0
+
+        pikemen = 70
+        heavy_infantry = 75
+        tax_income = 0.1
+    }
+    ca_duck_forge_3 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = duck_group
+        }
+        trigger = {
+            culture_group = duck_group
+            TECH_CASTLE_CONSTRUCTION = 6
+            TECH_FORTIFICATIONS_CONSTRUCTION = 6
+            custom_tooltip = {
+                text = DUCK_DEV_MORE_9
+                check_variable = { which=duck_dev_var value=9 }
+            }
+        }
+        is_active_trigger = {
+            culture_group = duck_group
+            has_building = ca_ani_castle_tower_6_bis
+            custom_tooltip = {
+                text = DUCK_DEV_MORE_9
+                check_variable = { which=duck_dev_var value=9 }
+            }
+        }
+        prerequisites = { ca_ani_castle_tower_6_bis }
+        upgrades_from = ca_duck_forge_2
+
+        gold_cost = 230
+        build_time = 1100
+        ai_creation_factor = 30
+        ai_feudal_modifier = 20
+        extra_tech_building_start = 1.0
+
+        pikemen = 100
+        heavy_infantry = 100
+        tax_income = 0.1
+    }
+
+    ca_duck_stables_1 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = duck_group
+        }
+        trigger = {
+            culture_group = duck_group
+            TECH_CASTLE_CONSTRUCTION = 2
+            TECH_FORTIFICATIONS_CONSTRUCTION = 2
+            custom_tooltip = {
+                text = DUCK_DEV_MORE_5
+                check_variable = { which=duck_dev_var value=5 }
+            }
+        }
+        is_active_trigger = {
+            culture_group = duck_group
+            has_building = ca_ani_castle_tower_2_bis
+            custom_tooltip = {
+                text = DUCK_DEV_MORE_5
+                check_variable = { which=duck_dev_var value=5 }
+            }
+        }
+        prerequisites = { ca_ani_castle_tower_2_bis }
+        # upgrades_from = BaseBuilding
+
+        gold_cost = 180
+        build_time = 450
+        ai_creation_factor = 30
+        ai_feudal_modifier = 30
+        extra_tech_building_start = 1.0
+
+        light_cavalry = 120
+        tax_income = 0.05
+    }
+    ca_duck_stables_2 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = duck_group
+        }
+        trigger = {
+            culture_group = duck_group
+            TECH_CASTLE_CONSTRUCTION = 6
+            TECH_FORTIFICATIONS_CONSTRUCTION = 5
+            custom_tooltip = {
+                text = DUCK_DEV_MORE_8
+                check_variable = { which=duck_dev_var value=8 }
+            }
+        }
+        is_active_trigger = {
+            culture_group = duck_group
+            has_building = ca_ani_castle_tower_6
+            custom_tooltip = {
+                text = DUCK_DEV_MORE_8
+                check_variable = { which=duck_dev_var value=8 }
+            }
+        }
+        prerequisites = { ca_ani_castle_tower_6 }
+        upgrades_from = ca_duck_stables_1
+
+        gold_cost = 320
+        build_time = 700
+        ai_creation_factor = 30
+        ai_feudal_modifier = 25
+        extra_tech_building_start = 1.0
+
+        light_cavalry = 380
+        tax_income = 0.05
+    }
+
+    ca_duck_retinue_1 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = duck_group
+        }
+        trigger = {
+            culture_group = duck_group
+            TECH_CASTLE_CONSTRUCTION = 2
+            TECH_FORTIFICATIONS_CONSTRUCTION = 1
+            custom_tooltip = {
+                text = DUCK_DEV_MORE_6
+                check_variable = { which=duck_dev_var value=6 }
+            }
+        }
+        is_active_trigger = {
+            culture_group = duck_group
+            has_building = ca_ani_castle_tower_2
+            custom_tooltip = {
+                text = DUCK_DEV_MORE_6
+                check_variable = { which=duck_dev_var value=6 }
+            }
+        }
+        prerequisites = { ca_ani_castle_tower_2 }
+        # upgrades_from = BaseBuilding
+
+        gold_cost = 90
+        build_time = 450
+        ai_creation_factor = 30
+        ai_feudal_modifier = 30
+        extra_tech_building_start = 1.0
+
+        heavy_infantry = 25
+        retinuesize = 20
+        heavy_infantry_morale = 0.05
+    }
+    ca_duck_retinue_2 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = duck_group
+        }
+        trigger = {
+            culture_group = duck_group
+            TECH_CASTLE_CONSTRUCTION = 5
+            TECH_FORTIFICATIONS_CONSTRUCTION = 4
+            custom_tooltip = {
+                text = DUCK_DEV_MORE_8
+                check_variable = { which=duck_dev_var value=8 }
+            }
+        }
+        is_active_trigger = {
+            culture_group = duck_group
+            has_building = ca_ani_castle_tower_5
+            custom_tooltip = {
+                text = DUCK_DEV_MORE_8
+                check_variable = { which=duck_dev_var value=8 }
+            }
+        }
+        prerequisites = { ca_ani_castle_tower_5 }
+        upgrades_from = ca_duck_retinue_1
+
+        gold_cost = 130
+        build_time = 700
+        ai_creation_factor = 30
+        ai_feudal_modifier = 25
+        extra_tech_building_start = 1.0
+
+        heavy_infantry = 65
+        retinuesize = 20
+        heavy_infantry_offensive = 0.05
+    }
+    ca_duck_retinue_3 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = duck_group
+        }
+        trigger = {
+            culture_group = duck_group
+            TECH_CASTLE_CONSTRUCTION = 7
+            TECH_FORTIFICATIONS_CONSTRUCTION = 7
+            custom_tooltip = {
+                text = DUCK_DEV_10
+                check_variable = { which=duck_dev_var value=10 }
+            }
+        }
+        is_active_trigger = {
+            culture_group = duck_group
+            has_building = ca_ani_castle_tower_7_bis
+            custom_tooltip = {
+                text = DUCK_DEV_10
+                check_variable = { which=duck_dev_var value=10 }
+            }
+        }
+        prerequisites = { ca_ani_castle_tower_7_bis }
+        upgrades_from = ca_duck_retinue_2
+
+        gold_cost = 230
+        build_time = 1100
+        ai_creation_factor = 30
+        ai_feudal_modifier = 20
+        extra_tech_building_start = 1.0
+
+        heavy_infantry = 110
+        retinuesize = 20
+        max_tradeposts = 1
+    }
+}
+
+tribal = {
+    tb_duck_center_1 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = duck_group
+        }
+        trigger = {
+            culture_group = duck_group
+            TECH_CASTLE_CONSTRUCTION = 0
+            custom_tooltip = {
+                text = DUCK_DEV_MORE_3
+                check_variable = { which=duck_dev_var value=3 }
+            }
+        }
+        is_active_trigger = {
+            culture_group = duck_group
+            custom_tooltip = {
+                text = DUCK_DEV_MORE_3
+                check_variable = { which=duck_dev_var value=3 }
+            }
+        }
+        prerequisites = { tb_ani_tribal_tower_1 }
+
+        prestige_cost = 100
+        build_time = 280
+        ai_creation_factor = 50
+        extra_tech_building_start = 0.8
+
+        light_infantry = 70
+        archers = 30
+    }
+    tb_duck_center_2 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = duck_group
+        }
+        trigger = {
+            culture_group = duck_group
+            TECH_CASTLE_CONSTRUCTION = 1
+            TECH_CITY_CONSTRUCTION = 1
+            custom_tooltip = {
+                text = DUCK_DEV_MORE_4
+                check_variable = { which=duck_dev_var value=4 }
+            }
+        }
+        is_active_trigger = {
+            culture_group = duck_group
+            custom_tooltip = {
+                text = DUCK_DEV_MORE_4
+                check_variable = { which=duck_dev_var value=4 }
+            }
+        }
+        prerequisites = { tb_ani_tribal_tower_2 }
+        upgrades_from = tb_duck_center_1
+
+        convert_to_castle = ca_duck_quarters_1
+
+        prestige_cost = 200
+        build_time = 540
+        ai_creation_factor = 45
+        extra_tech_building_start = 1.0
+
+        light_infantry = 90
+        archers = 45
+    }
+    tb_duck_center_3 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = duck_group
+        }
+        trigger = {
+            culture_group = duck_group
+            TECH_CASTLE_CONSTRUCTION = 1
+            TECH_CITY_CONSTRUCTION = 1
+            custom_tooltip = {
+                text = DUCK_DEV_MORE_5
+                check_variable = { which=duck_dev_var value=5 }
+            }
+        }
+        is_active_trigger = {
+            culture_group = duck_group
+            custom_tooltip = {
+                text = DUCK_DEV_MORE_5
+                check_variable = { which=duck_dev_var value=5 }
+            }
+        }
+        prerequisites = { tb_ani_tribal_tower_3 }
+        upgrades_from = tb_duck_center_2
+
+        prestige_cost = 300
+        build_time = 540
+        ai_creation_factor = 40
+        extra_tech_building_start = 1.2
+
+        light_infantry = 120
+        archers = 60
+    }
+    tb_duck_center_4 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = duck_group
+        }
+        trigger = {
+            culture_group = duck_group
+            TECH_CASTLE_CONSTRUCTION = 1
+            TECH_CITY_CONSTRUCTION = 1
+            TECH_FORTIFICATIONS_CONSTRUCTION = 1
+            custom_tooltip = {
+                text = DUCK_DEV_MORE_6
+                check_variable = { which=duck_dev_var value=6 }
+            }
+        }
+        is_active_trigger = {
+            culture_group = duck_group
+            custom_tooltip = {
+                text = DUCK_DEV_MORE_6
+                check_variable = { which=duck_dev_var value=6 }
+            }
+        }
+        prerequisites = { tb_ani_tribal_tower_4 }
+        upgrades_from = tb_duck_center_3
+
+        prestige_cost = 400
+        build_time = 540
+        ai_creation_factor = 35
+        extra_tech_building_start = 1.2
+
+        light_infantry = 180
+        archers = 90
+    }
+
+    tb_duck_forge_1 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = duck_group
+        }
+        trigger = {
+            culture_group = duck_group
+            TECH_CASTLE_CONSTRUCTION = 0
+            custom_tooltip = {
+                text = DUCK_DEV_MORE_4
+                check_variable = { which=duck_dev_var value=4 }
+            }
+        }
+        is_active_trigger = {
+            culture_group = duck_group
+            custom_tooltip = {
+                text = DUCK_DEV_MORE_4
+                check_variable = { which=duck_dev_var value=4 }
+            }
+        }
+        prerequisites = { tb_ani_tribal_tower_1 }
+
+        prestige_cost = 100
+        build_time = 280
+        ai_creation_factor = 50
+        extra_tech_building_start = 0.8
+
+        pikemen = 45
+        heavy_infantry = 50
+    }
+    tb_duck_forge_2 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = duck_group
+        }
+        trigger = {
+            culture_group = duck_group
+            TECH_CASTLE_CONSTRUCTION = 1
+            TECH_CITY_CONSTRUCTION = 1
+            custom_tooltip = {
+                text = DUCK_DEV_MORE_5
+                check_variable = { which=duck_dev_var value=5 }
+            }
+        }
+        is_active_trigger = {
+            culture_group = duck_group
+            custom_tooltip = {
+                text = DUCK_DEV_MORE_5
+                check_variable = { which=duck_dev_var value=5 }
+            }
+        }
+        prerequisites = { tb_ani_tribal_tower_2 }
+        upgrades_from = tb_duck_forge_1
+
+        convert_to_castle = ca_duck_forge_1
+
+        prestige_cost = 200
+        build_time = 540
+        ai_creation_factor = 45
+        extra_tech_building_start = 1.0
+
+        pikemen = 65
+        heavy_infantry = 70
+    }
+    tb_duck_forge_3 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = duck_group
+        }
+        trigger = {
+            culture_group = duck_group
+            TECH_CASTLE_CONSTRUCTION = 1
+            TECH_CITY_CONSTRUCTION = 1
+            custom_tooltip = {
+                text = DUCK_DEV_MORE_6
+                check_variable = { which=duck_dev_var value=6 }
+            }
+        }
+        is_active_trigger = {
+            culture_group = duck_group
+            custom_tooltip = {
+                text = DUCK_DEV_MORE_6
+                check_variable = { which=duck_dev_var value=6 }
+            }
+        }
+        prerequisites = { tb_ani_tribal_tower_3 }
+        upgrades_from = tb_duck_forge_2
+
+        prestige_cost = 300
+        build_time = 540
+        ai_creation_factor = 40
+        extra_tech_building_start = 1.2
+
+        pikemen = 85
+        heavy_infantry = 90
+    }
+    tb_duck_forge_4 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = duck_group
+        }
+        trigger = {
+            culture_group = duck_group
+            TECH_CASTLE_CONSTRUCTION = 1
+            TECH_CITY_CONSTRUCTION = 1
+            TECH_FORTIFICATIONS_CONSTRUCTION = 1
+            custom_tooltip = {
+                text = DUCK_DEV_MORE_7
+                check_variable = { which=duck_dev_var value=7 }
+            }
+        }
+        is_active_trigger = {
+            culture_group = duck_group
+            custom_tooltip = {
+                text = DUCK_DEV_MORE_7
+                check_variable = { which=duck_dev_var value=7 }
+            }
+        }
+        prerequisites = { tb_ani_tribal_tower_4 }
+        upgrades_from = tb_duck_forge_3
+
+        prestige_cost = 400
+        build_time = 540
+        ai_creation_factor = 35
+        extra_tech_building_start = 1.2
+
+        pikemen = 95
+        heavy_infantry = 100
+    }
+
+    tb_duck_retinue_1 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = duck_group
+        }
+        trigger = {
+            culture_group = duck_group
+            TECH_CASTLE_CONSTRUCTION = 0
+            custom_tooltip = {
+                text = DUCK_DEV_MORE_5
+                check_variable = { which=duck_dev_var value=5 }
+            }
+        }
+        is_active_trigger = {
+            culture_group = duck_group
+            custom_tooltip = {
+                text = DUCK_DEV_MORE_5
+                check_variable = { which=duck_dev_var value=5 }
+            }
+        }
+        prerequisites = { tb_ani_tribal_tower_1 }
+
+        prestige_cost = 100
+        build_time = 280
+        ai_creation_factor = 50
+        extra_tech_building_start = 0.8
+
+        heavy_infantry = 25
+        retinuesize = 10
+        heavy_infantry_morale = 0.05
+    }
+    tb_duck_retinue_2 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = duck_group
+        }
+        trigger = {
+            culture_group = duck_group
+            TECH_CASTLE_CONSTRUCTION = 1
+            TECH_CITY_CONSTRUCTION = 1
+            custom_tooltip = {
+                text = DUCK_DEV_MORE_6
+                check_variable = { which=duck_dev_var value=6 }
+            }
+        }
+        is_active_trigger = {
+            culture_group = duck_group
+            custom_tooltip = {
+                text = DUCK_DEV_MORE_6
+                check_variable = { which=duck_dev_var value=6 }
+            }
+        }
+        prerequisites = { tb_ani_tribal_tower_2 }
+        upgrades_from = tb_duck_retinue_1
+
+        convert_to_castle = ca_hedge_weapon_01
+        # convert_to_temple = tp_hedge_defender_1
+
+        prestige_cost = 200
+        build_time = 540
+        ai_creation_factor = 45
+        extra_tech_building_start = 1.0
+
+        heavy_infantry = 25
+        retinuesize = 10
+        heavy_infantry_morale = 0.05
+    }
+    tb_duck_retinue_3 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = duck_group
+        }
+        trigger = {
+            culture_group = duck_group
+            TECH_CASTLE_CONSTRUCTION = 1
+            TECH_CITY_CONSTRUCTION = 1
+            custom_tooltip = {
+                text = DUCK_DEV_MORE_7
+                check_variable = { which=duck_dev_var value=7 }
+            }
+        }
+        is_active_trigger = {
+            culture_group = duck_group
+            custom_tooltip = {
+                text = DUCK_DEV_MORE_7
+                check_variable = { which=duck_dev_var value=7 }
+            }
+        }
+        prerequisites = { tb_ani_tribal_tower_3 }
+        upgrades_from = tb_duck_retinue_2
+
+        prestige_cost = 300
+        build_time = 540
+        ai_creation_factor = 40
+        extra_tech_building_start = 1.2
+
+        heavy_infantry = 25
+        retinuesize = 10
+        heavy_infantry_morale = 0.05
+    }
+    tb_duck_retinue_4 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = duck_group
+        }
+        trigger = {
+            culture_group = duck_group
+            TECH_CASTLE_CONSTRUCTION = 1
+            TECH_CITY_CONSTRUCTION = 1
+            TECH_FORTIFICATIONS_CONSTRUCTION = 1
+            custom_tooltip = {
+                text = DUCK_DEV_MORE_8
+                check_variable = { which=duck_dev_var value=8 }
+            }
+        }
+        is_active_trigger = {
+            culture_group = duck_group
+            custom_tooltip = {
+                text = DUCK_DEV_MORE_8
+                check_variable = { which=duck_dev_var value=8 }
+            }
+        }
+        prerequisites = { tb_ani_tribal_tower_4 }
+        upgrades_from = tb_duck_retinue_3
+
+        prestige_cost = 400
+        build_time = 540
+        ai_creation_factor = 35
+        extra_tech_building_start = 1.2
+
+        heavy_infantry = 35
+        retinuesize = 20
+        heavy_infantry_offensive = 0.05
+    }
+}

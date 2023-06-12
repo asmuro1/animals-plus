@@ -1,0 +1,6 @@
+
+#When c_dyrrachion is controlled by the religion
+animal_central_holy_site = {
+    authority = 20
+    years = 10
+}

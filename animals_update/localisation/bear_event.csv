@@ -1,0 +1,181 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+
+
+
+##### beta version events localisation
+##### should be progressivly and totally deleted with updates
+OPT_OKAY;OK;;;;;;;;;;;;;x
+OPT_GOOD;Good!;Bien!;;;;;;;;;;;;x
+EVTDESCanimal_plus_mod402;It is time to upgrade the loyalty of ...;C'est le moment d'augmenter la loyauté de...;;;;;;;;;;;;x
+EVTOPTAanimal_plus_mod402;... [dog_gift_one.GetTitledFirstName] !;... [dog_gift_one.GetTitledFirstName] !;;;;;;;;;;;;x
+EVTOPTBanimal_plus_mod402;... [dog_gift_two.GetTitledFirstName] !;... [dog_gift_two.GetTitledFirstName] !;;;;;;;;;;;;x
+EVTOPTCanimal_plus_mod402;... [dog_gift_three.GetTitledFirstName] !;... [dog_gift_three.GetTitledFirstName] !;;;;;;;;;;;;x
+EVTDESCanimal_plus_mod104;By using the fact that he has a favor, [For_localisation.GetTitledName] recalls you the loyalty you need to express every days. I'm going to go crazy ...;Prétextant de sa faveur, [For_localisation.GetTitledName] se permet de me rappeler tous les jours le devoir de loyauté que je lui dois en tant que vassal. Cela va finir par me rendre fou ...;;;;;;;;;;;;x
+EVTOPTAanimal_plus_mod104;It will end badly if this continues;ça va mal finir si ça continue;;;;;;;;;;;;x
+EVTDESCanimal_plus_mod102;You just see a black cat ...;Un chat noir vient de passer devant vous ...;;;;;;;;;;;;x
+EVTOPTAanimal_plus_mod102;It is a sign of bad luck ...;C'est un signe de mauvaise chance;;;;;;;;;;;;x
+EVTDESCanimal_plus_mod801;The colonization in [This.GetName] is over !;La colonisation en [This.GetName] est terminée !;;;;;;;;;;;;x
+
+
+
+####Bear update localisation
+#event 001 to 060
+HIBERNATION_EVENT_001_DESC;It is the time when you need to hibernate to recover your strenghts;C'est le moment de l'année où l'hibernation devient impérative pour récupérer;;;;;;;;;;;;;x
+HIBERNATION_EVENT_001_OPT_1;Hope it dosn't go wrong;J'espère que cela ne va pas mal tourner;;;;;;;;;;;;;x
+HIBERNATION_EVENT_002_DESC;Your hibernation takes an end today;Votre hibernation prend fin aujourd'hui;;;;;;;;;;;;;x
+MULTI_CHILD_EVENT_007_DESC_1;Your wife gave birth to an additionnal child;Votre femme a accouché d'un enfant supplémentaire;;;;;;;;;;;;x
+MULTI_CHILD_EVENT_007_DESC_2;Your wife gave birth to 2 additionnals childs;Votre femme a accouché de 2 enfants supplémentaires;;;;;;;;;;;;x
+MULTI_CHILD_EVENT_007_DESC_3;Your wife gave birth to 3 additionnals childs;Votre femme a accouché de 3 enfants supplémentaires;;;;;;;;;;;;x
+MULTI_CHILD_EVENT_007_DESC_4;Your wife gave birth to 4 additionnals childs;Votre femme a accouché de 4 enfants supplémentaires;;;;;;;;;;;;x
+NOTIF_DEC_BEAR_CONV_EVENT_008_DESC;Some strange haze incident are starting to be frequent. Would you like to start an investigation with your physician?;D'étranges cas d'apparition de brouillard deviennent fréquentes. Commencer une enquête avec votre physicien?;;;;;;;;;;;;x
+START_RESEARSH_EVENT_008_OPT_1;Yes, we will solve the problem in [bear_haze_study_target.GetName];Oui, nous allons régler le problème de [bear_haze_study_target.GetName];;;;;;;;;;;;x
+STOP_RESEARCH_EVENT_008_OPT_2;No, it is finally too dangerous;Non, c'est trop dangereux;;;;;;;;;;;;x
+RESEASH_GOES_WELL_EVENT_009_DESC;You did make a major breakthrough in your research, it is a question of time before you clear those strange haze!;Une grosse découverte a été faite dans la recherche contre le brouillard! Ce n'est plus qu'une question de temps avant de pouvoir résoudre le problème!;;;;;;;;;;;;x
+STAY_PRUDENT_EVENT_009_OPT_1;We should stay prudent;Nous devrions rester prudent;;;;;;;;;;;;x
+ACCELERATE_ME_MYSTIC_EVENT_009_OPT_2;Their is no place for prudence;On n'a pas de temps à perdre;;;;;;;;;;;;x
+ACCELERATE_PHYSICIAN_MYSTIC_EVENT_009_OPT_3;My physician should work harder;Mon physicien devrait redoubler d'efforts;;;;;;;;;;;;x
+RESEARSH_END_SOLVED_EVENT_010_DESC;We found the source of those maze and destroyed it, from now on, it will be no problem in [bear_haze_study_target.GetName]!;Nous avons enfin trouvé la source du mystérieux brouillard. Nous venons de l'arrêter, ce qui veut dire que l'on n'aura plus de problèmes au niveau du brouillard en [bear_haze_study_target.GetName]!;;;;;;;;;;;;x
+RESEARSH_END_SOLVED_EVENT_010_OPT;Finally!;Enfin!;;;;;;;;;;;;x
+BREATH_MAZE_EVENT_011_DESC;You were isolated by accident. Unluckily, the haze suddenly appear on you...;Isolé du physicien, l'étrange brouillard apparaît d'un coup...;;;;;;;;;;;;x
+BREATH_MAZE_EVENT_011_OPT;Hope it isn't poisonous;J'espère que ce brouillard n'est pas empoisonné;;;;;;;;;;;;x
+A_BEAST_APPEAR_EVENT_012_DESC;You just see a strange beast, it dosn't seems it noticed us, what should we do?;Nous venons de croiser une bête, elle ne semble pas nous avoir repérée. Que devrions-nous faire?;;;;;;;;;;;;x
+RUN_AWAY_EVENT_012_OPT_1;Running away while it does not notice us;Partir rapidement tant qu'elle ne nous a pas repérée;;;;;;;;;;;;x
+FIGHT_BEAST_EVENT_012_OPT_2;We should fight that beast, running away will not solve anything;Nous devrions battre cette bête, fuir ne va pas nous sauver!;;;;;;;;;;;;x
+RUNNING_AXAY_FAILS_EVENT_013_DESC_1;The beast has noticed us and did catch up, things couldn't go wrost!;La bête nous a repérés et rattrapés, ça ne pouvais pas être pire!;;;;;;;;;x
+FIGHT_AGAINST_MONSTER_FAILS_EVENT_013_DESC_2;The fight against that beast... That bear has critically injured you...;Le combat face à la bête s'est mal passé... Cette bête... Cet ours m'a blessé fatalement...;;;;;;;;;;;;x
+BEAST_FOUND_YOUR_HIDING_EVENT_013_DESC_3;The beast found you, staying hidden was a very bad idea. Wrost it violently hurted your group;Rester cacher n'étais pas une bonne idée, la bête nous a trouvé et viollamment attaquée...;;;;;;;;;;;;x
+WE_SHOULD_PREPARE_TO_THE_WORST_EVENT_013_OPT;We should stop our investigation and recover;Nous devrions arrêter notre enquête et retourner hors de dangers...;;;;;;;;;;;;x
+RAN_AWAY_SUCCESSFULLY_EVENT_014_DESC_1;It seems that the beast didn't follow us knowing that, continuing our research could be dangerous...;La bête ne nous a pas suivi, il semblerait que l'on soit sauf pour le moment. Cela montre que continuer les recherches pourrait être dangereux;;;;;;;;;;;;;x
+AFTER_SAVIOR_CHOICE_EVENT_014_DESC_2;After that experience, the question is: what chould we do?;Après cette expérience, la question est: qu'est-ce que l'on devrait faire?;;;;;;;;;;;;x
+BEAST_GOES_AWAY_EVENT_014_DESC_3;The beast just goes away. You are now free from it. But now, what do you want to do?;La bête vient juste de partir. En sortant de la cachette, on se demande si l'on doit continuer les recherches.;;;;;;;;;;;;x
+BEAST_BEATEN_EVENT_014_DESC_4;Now that the beast is defeated, we wonder if we continue our reshearch;Maintenant que la bête est vaincu, on se demande si on devrait continuer les recherches malgré les risques;;;;;;;;;;;;x
+BEAST_KILLED_AND_HURTED_EVENT_014_DESC_5;Now that the beast is defeated but injured, we wonder if we continue our reshearch;On n'est pas sorti indemne du combat avec la bête, heuresement elle est morte. On se demande maintenant si on devrait continuer les recherches malgré les risques;;;;;;;;;;;;x
+CONTINUE_RESEARSH_EVENT_014_OPT_1;Dangerous or not, we continue;Dangereux ou pas, on continue;;;;;;;;;;;;x
+GIVE_UP_EVENT_014_OPT_2;We should stop;Nous devrions arrêter;;;;;;;;;;;;x
+RUN_AWAY_IN_HIDDING_EVENT_015_DESC;The beast did notice you, but fortunately, we are hiden from it.;La bête nous a remarqué, mais nous avons réussi à nous cacher;;;;;;;;;;;;x
+WAITING_EVENT_015_OPT_1;We should wait, the beast will certainly go away;Nous devons rester cachés, la bête va certainement partir d'elle même;;;;;;;;;;;;x
+QUIT_HIDDING_AND_FIGHT_BEAST_EVENT_015_OPT_2;Waiting here will be useless, we will fight against him;Attendre ne résoudra rien, nous allons la combatre;;;;;;;;;;;;x
+SAVED_BY_HUMAN_EVENT_016_DESC;Someone just come and hunted the beast, it is a big relief!\nBut, what should we do with the hunter?;Quelqu'un vient de chasser la bête... C'est un gros soulagement!\nComment récompenser le chasseur?;;;;;;;;;;;;x
+RECRUIT_SAVIOR_EVENT_016_OPT_1;recruit him as a champion;Le recruter comme champion;;;;;;;;;;;;x
+PAY_SAVIOR_EVENT_016_OPT_2;Pay him as thanks;Le remercier avec un cadeau;;;;;;;;;;;;x
+THANK_AND_IGNORE_EVENT_016_OPT_3;thanks and then ignore him;Le remercier puis l'ignorer;;;;;;;;;;;;x
+FEELING_NAUSEOUS_EVENT_017_DESC;You are feeling a little nauseous, but those symptoms dosn't have particularity that other known disease own...;Aprés quelques malaises il devient évident que ça ne ressemble pas à une maladie ordinaire, Mais qu'est-ce que cela pourrait être?;;;;;;;;;;;;x
+GO_SEARCH_REASON_EVENT_017_OPT;I need to find the origin fastly;On doit trouver l'origine rapidement;;;;;;;;;;;;x
+PHYSICIAN_FIRST_AIDE_EVENT_018_DESC_1;Your phycisian suggest that the nauseous might be due to the strange maze that you have breathed some months ago and suggest a cure;Le physicien de la cour suppose que le malaise vient du brouillard respiré il y a quelques mois. Pour cela, il propose un traitement...;;;;;;;;;;;;x
+CARE_WITHOUT_PHYSICIAN_EVENT_DESC_018_2;As no one could found a reason, or even a disease, you choose to do some basics treatments;Comme personne n'a pus vous aider contre ces étranges malaises, Quelques traitements basiques sont appliqués;;;;;;;;;;;;x
+GO_WITH_TREATMENT_EVENT_018_OPT_1;Go with treatments;Faisons les traitements recommandés;;;;;;;;;;;;x
+IGNORE_PHYSICIAN_TREATMENT_EVENT_018_OPT_2;The physician proposition is too risky;La proposition du physicien est trop dangereuse;;;;;;;;;;;;x
+DO_WITH_WHAT_WE_CAN_EVENT_018_OPT_2_BIS;I can only hope that I will fastly recover;Je peux seulement espérer rapidement récupérer;;;;;;;;;;;;x
+SYMPTOMS_GO_CRAZY_EVENT_019_DESC;The previous treatment dosn't seem to have much effect;Le traitement ne semble pas avoir beaucoup d'effets;;;;;;;;;;;;x
+PHYSICIAN_EFFECT_EVENT_019_OPT;At least, my physician's treatment has a little effect;Au moins, mon physicien a eu un petit effet;;;;;;;;;;;;x
+NO_BOOST_EFFECT_EVENT_019_OPT;Oh! a squirrel!;Oh! un écureil;;;;;;;;;;;;x
+GETTING_ILL_EVENT_020_DESC;Your body become strange, and your don't feel good;D'étranges sensations dans le corps s'ajoutent de plus en plus;;;;;;;;;;;;x
+IT_WAS_OBVIOUS_EVENT_020_OPT;I feel that my body is changing...;J'ai l'impression que mon corps change...;;;;;;;;;;;;x
+BECOMMING_BEAR_EVENT_021_DESC;after month of efforts, it seems that I see the end of the disease...;Après des mois de souffrances, il semble que la mistérieuse maladie prend fin...;;;;;;;;;;;;x
+BECOMMING_BEAR_PRICE_021_OPT;...At what cost?;...A quel prix?;;;;;;;;;;;;x
+FIRST_SYMPTOMS_EVENT_022_DESC;You start to feel that something is wrong;Après quelques malaises, il semblerait que quelque chose se passe mal;;;;;;;;;;;;x
+GET_MALAISE_TRAIT_EVENT_022_OPT;It is nothing... probably?;C'est rien... probablement?;;;;;;;;;;;;x
+GET_ILNESS_TRAIT_EVENT_023_DESC;No one know what they can do against that strange disease;Personne ne semble savoir que faire contre cette étrange maladie, même les physiciens les plus réputés;;;;;;;;;;;;x
+GET_ILLNESS_EVENT_023_OPT;I hope it will fastly pass;J'espère que ça va vite passer;;;;;;;;;;;;x
+GETTING_BEAR_APPEARANCE_EVENT_024_DESC;It seems that your body has a fur growing...;Il semble qu'une fourrure pousse sur le corps;;;;;;;;;;;x
+TRANSFORMATION_EVENT_024_OPT;What does that mean?!;Qu'est-ce que ça veut dire?!;;;;;;;;;;;;x
+GETTING_BEAR_CULTURE_025_DESC;After month of pain, the illness is finally over;Après des mois de souffrance la maladie est enfin guerri;;;;;;;;;;;;x
+WHY_BEAR_EVENT_025_OPT;But my mind has also changed...;Mais mon esprit a définitvement changé...;;;;;;;;;;;;x
+LAUNCHING_QUEST_BEAR_CONVERSION_EVENT_026;You heard that some strange incident happens to some of your provinces;Une rumeur dis que d'étranges incidents apparraissent dans certaines de vos provinces;;;;;;;;;;;;x
+TRY_RESEARCH_EVENT_026_OPT1;Let me hear more;Allons en savoir plus;;;;;;;;;;;;x
+REFUSING_RESEARCH_026_OPT2;It is nothing;C'est rien, ignorons les;;;;;;;;;;;;x
+STEP_1_CONVERSION_EVENT_027_DESC_1;The peasants seems to have some difficulty to do their usual work in [This.GetName];Il semblerait que quelques paysans de [This.GetName] commencent à faire des malaises;;;;;;;;;;;;x
+START_PROVINCE_CONVERSION_027_OPT;It should pass soon;Ce n'est pas important;;;;;;;;;;;;x
+STEP_2_CONVERSION_EVENT_027_DESC_2;The malaise in [This.GetName] become more frequent and violent!;Les malaises de [This.GetName] deviennent plus fréquents et plus violents.;;;;;;;;;;;;x
+INCREASE_MALAISE_SENTIMENT_027_OPT;What is this disease?;Est-ce seulement une maladie?;;;;;;;;;;;;x
+FINAL_STEP_CONVERSION_EVENT_027_DESC_3;The peasants in [This.GetName] seems to have mutated into bear appearance, but their body are still weak;Les paysans de [This.GetName] se sont transformer en ours, même s'ils restent grandement affaiblis;;;;;;;;;;;;x
+BIG_INCREASE_MALAISE_SENTIMENT_027_OPT;It means that...;Cela veut dire que...;;;;;;;;;;;;x
+STOP_PROVINCE_CONVERSION_EVENT_028_DESC_1;After a month of work, a war stopped the progress in [This.GetName];Après un mois de travaille acharné, une guerre a interrompu le travail en [This.GetName].;;;;;;;;;;;;x
+START_AGAIN_EVENT_028_OPT;We have to start over again;Nous devons recommencer...;;;;;;;;;;;;x
+CONFIRM_BEAR_COLONISASITION_EVENT_028_DESC_2;After a month of colonization, it seems that your tribe has been successfully implanted in [This.GetName];après un mois de colonisation, l'implantation du clan a été un succés en [This.GetName].;;;;;;;;;;;;x
+CONFIRM_BEAR_EXTERMINATION_EVENT_028_DESC_3;After a month of hunting, all the bears in [This.GetName] have been exterminated;Après un mois de chasse, tous les ours en [This.GetName] ont été exterminés;;;;;;;;;;;;x
+FINALLY_EVENT_028_OPT;Finally;Enfin!;;;;;;;;;;;;x
+CONSTRUCTION_FINISHED_EVENT_030_DESC_1;The construction of the great building is finally completed. Your province in [This.GetName] has now a great fortification similar to theodisan wall;La construction de la grande fortification est terminé en [This.GetName].Il y a maintenant des fortifications similaire Ã  celles des murs théodosiens.;;;;;;;;;;;x
+CONSTRUCTION_FINISHED_EVENT_030_DESC_2;The growth of the great tree is finished in [This.GetName];La croissance du grand arbre est terminé en [This.GetName];;;;;;;;;;;;x
+CONSTRUCTION_FINISHED_EVENT_030_DESC_3;The golden fortification are totally finished. Now your province [This.GetName] has a wealthly fortification;la fortification doré de [This.GetName] est terminé. Maintenant, la richesse de la province [This.GetName] est assuré!;;;;;;;;;;;;x
+CONSTRUCTION_FINISHED_EVENT_030_DESC_4;The knoledge in [This.GetName]'s animal building has been successfully transfered into a library;Les connaissances des bâtiments animaliers en [This.GetName] ont été extrait et placé dans une librairie!;;;;;;;;;;;;x
+CONSTRUCTION_FINISHED_EVENT_030_OPT;Finally;Enfin;;;;;;;;;;;;x
+START_SUCCESSION_TOURNMENT_EVENT_032_DESC;The preparation for the succession battle start now. They should end in about 1 month.;Les preparations pour le tournoi de succession commencent. Le tournois commencera dans 1 mois;;;;;;;;;;;;x
+LET_GET_STARTED_EVENT_032_OPT;We will send invitations;Envoyons les invitations;;;;;;;;;;;;x
+STARTING_BATTLE_EVENT_034_DESC_1;The preparation are finished. The succession battles will soon start.;Les préparations du tournois de succession sont finis. Le tournois va bientôt démarer!;;;;;;;;;;;;x
+START_EVENT_ANNOUNCMENT_EVENT_034_OPT;Let the 2 first fighter come!;Laisser les 2 premiers combattant venir s'affronter;;;;;;;;;;;;x
+FIGHTER_ONE_WON_PREV_BATTLE_EVENT_033_DESC_2;[bear_tournament_fighter_one.GetTitledName] just won the last battle!;[bear_tournament_fighter_one] vient de gagner le dernier duel;;;;;;;;;;;;x
+FIGHTER_TWO_WON_PREV_BATTLE_EVENT_033_DESC_2_bis;[bear_tournament_fighter_two.GetTitledName] just won the last battle!;[bear_tournament_fighter_two.GetTitledName] vient de gagner le dernier duel;;;;;;;;;;;;x
+WAITING_NEXT_FIGHT_EVENT_034_OPT;It was a good show!;Le meilleur a gagné!;;;;;;;;;;;;x
+WE_HAVE_A_WINNER_EVENT_034_DESC_1;It seems that all the children have fight,The winner is [bear_tournament_fighter_one.GetTitledName]!;Tous les enfants ont commbattu dans le tournois! Le gagnant est [bear_tournament_fighter_one.GetTitledName]!;;;;;;;;;;;;x
+CONGRATULATION_EVENT_034_OPT;Congratulation [bear_tournament_fighter_one.GetTitledName]!;Félicitations à [bear_tournament_fighter_one.GetTitledName]!;;;;;;;;;;;;x
+FIGHT_BETWEEN_2_CANDIDATS_034_DESC_2;[bear_tournament_fighter_one.GetTitledName] and [bear_tournament_fighter_two.GetTitledName] has been chosen as the next two fighter;[bear_tournament_fighter_one.GetTitledName] et [bear_tournament_fighter_two.GetTitledName] ont été choisis comme les 2 prochains combattants du tournoi!;;;;;;;;;;;;x
+THE_FIGHTING_START_EVENT_034_OPT;It will be a good show!;ça va être un beau combat!;;;;;;;;;;;;x
+NOTIF_GETTING_TRIBUTARY_BEAR_EVENT_036;Because of the lack of family link, I declare that i do not have to serve you!;Comme nos liens familiaux ne sont pas assez importants, j'ai décidé de devenir indépendant;;;;;;;;;;;;x
+BEAR_EVENT_036_OPT;Ok....;Ok....;;;;;;;;;;;;x
+NOTIF_GETTING_NEW_VASSAL_BEAR_EVENT_036;After many time being your tributary, and your diplomatic ability, I choose to serve you!;Après beaucoup de temps en tant que tributaire et au vu des actions diplomatiques, je choisis de devenir vassal!;;;;;;;;;;;;x
+COUNTY_FAMILY_EVENT_037_DESC;Your family has influenced the county of [This.GetName].;Le comté de [This.GetName] a été influencé l'aura familiale;;;;;;;;;;;;x
+FAMILY_INFLUENCE_EVENT_037_OPT;Hope it is a good fortune;J'éspère que c'est un bon présage;;;;;;;;;;;;x
+GAIN_BONUS_FAMILY_EVENT_038_DESC;Your family reputation gave you something;Ma réputation familliale m'a rapporté quelque chose...;;;;;;;;;;;;x
+GAIN_BONUS_FAMILY_EVENT_038_OPT;...;;;;;;;;;;;;;x
+HIBERNATION_PLOT_EVENT_039_DESC_1;During the hibernation, the gards keeping you safe seems to be on alert!;Pendant l'hibernation, les gardes redoublent d'efforts!;;;;;;;;;;;;x
+HIBERNATION_PLOT_EVENT_039_OPT_1;They should do a great job!;Ils devraient faire un bon boulot!;;;;;;;;;;;;x
+HIBERNATION_HEALTH_EVENT_039_DESC_2;Your hibernation has allowed you to increase your health!;Mon hibernation a permis d'améliorer ma santé!;;;;;;;;;;;;x
+HIBERNATION_HEALTH_EVENT_039_OPT_2;I will be healthly longer;Je vais rester en forme pendant plus longtemps;;;;;;;;;;;;x
+HIBERNATION_STAT_EVENT_039_DESC_3;Your hibernation refreshed you and allowedto increase your ability;L'hibernation a permis de renforcer vos capacités;;;;;;;;;;;;x
+HIBERNATION_STAT_EVENT_039_OPT_3;This improvement is good, I suppose;Cette amélioration de capacité est une bonne chose, non?;;;;;;;;;;;;x
+HIBERNATION_IMMOR_EVENT_039_DESC_4;Your hibernation seems to go wrong, you don't feel right!;L'hibernation ne se passe pas bien, une odeur de maladie est dans l'aire!;;;;;;;;;;;;x
+HIBERNATION_IMMOR_EVENT_039_OPT_4;Am i ill?!;Une maladie?!;;;;;;;;;;;;x
+ULTIMATUM_BEAR_EVENT_040_DESC;You just receive word that you have to give full right to your liege because you do not have his religion...;Une missive vient d'arriver disant que les droits absolues allaient devenir obligatoire...;;;;;;;;;;;;x
+HAVE_FULL_RIGT_EVENT_040_OPT_1;Then, we shall give him...;Dans ce cas, on lui donne...;;;;;;;;;;;;x
+NEGOCIATE_RELIGIOUS_RIGHT_EVENT_040_OPT_2;We can negociate it!;Une négociation s'impose!;;;;;;;;;;;;x
+I_HAVe_FAVOR_EVENT_040_OPT_3;I should use my favor to avoid the worst;Je devrais utiliser ma faveur pour éviter le pire;;;;;;;;;;;;x
+NOTIF_LOOSING_FULL_RIGHT_VASSALS_EVENT_042_DESC;I claim what should be mine: my religious rights!;Je récupère ce qui était sensé être mien: mes droits religieux!;;;;;;;;;;;;x
+OKAY_EVENT_042_OPT;Okay;Ok;;;;;;;;;;;;x
+SUCCESS_CHANCELLOR_REPRESSION_EVENT_046_DESC_1;With influence of [From.GetName], [bear_chancellor_pretender.GetName] claims that he should receive a county!;Sous l'influence de [From.GetName], [bear_chancellor_pretender.GetName] prétend qu'il devrait recevoir un comté!;;;;;;;;;;;;x
+I_GIVE_UP_ON_LAND_EVENT_046_OPT_1;let's give him;Il en recevra un!;;;;;;;;;;;;x
+I_DONT_GIVE_UP_EVENT_046_OPT_2;He should not have one;Il n'en aura pas!;;;;;;;;;;;;x
+FAILED_CHANCELLOR_REPRESSION_EVENT_046_DESC_2;I have some reports saying that [From.GetName] tried to sabotate my relation with my family!;Des rapports sont arrivés disant que [From.GetName] a essayé de ruiner mes relations avec ma famille!;;;;;;;;;;;;x
+JOB_CHANCELLOR_FAILED_EVENT_046_OPT_3;What a ...;Quel fripon!;;;;;;;;;;;;x
+LETTER_BEAR_CHANCELLOR_SUCCEED_EVENT_047_DESC_1;Your councillor has tried to sabotate my gouvernance, it is a big insult!;Ton conseillé a essayé de saboter mes relations avec mes sujets, ce qui est inexcusable!;;;;;;;;;;;;x
+#LETTER_BEAR_CHANCELLOR_FAILED_EVENT_047_DESC_2
+OKAY_EVENT_046_OPT; ;;;;;;;;;;;;x
+TEXT_INSULT_STEWARD_FAIL_EVENT_052_DESC;Your steward seems to do some unconventionnal work in my court! It is absolutely unnactepable!;Ton intendant a essayé de répendre de fausses rumeurs au sein de ma cour, ce qui est totalement innaceptable!;;;;;;;;;;;;x
+EVENT_052_OPT;It must be an error;Ce doit être une erreur;;;;;;;;;;;;x
+AN_ANIMAL_HORD_APPEAR_EVENT_055_DESC_1;An animal hord just started to break an havoc on my county...;Une horde d'animal vient d'apparaître dans un de mes comtés et de vient le piller;;;;;;;;;;;;x
+ORGANIZE_A_BIG_HUNT_EVENT_056_OPT_1;I shall pay some hunter to take them down even if they are weak!;Je devrais engager des chasseurs dans l'urgence!;;;;;;;;;;;;x
+LET_THEM_BE_EVENT_056_OPT_2;I can't take them down anymore!;Je ne peux rien faire pour protéger ce comté!;;;;;;;;;;;;x
+SPYMASTER_CAUTCH_EVENT_056_DESC_2;I received report that an animal spymaster has be shemming something horrible in my domain!;J'ai reçu des rapports que le maître espion d'un animal essaie de comploter pour ruiner l'un de mes comté!;;;;;;;;;;;;x
+IMPRIOSON_HIM_EVENT_056_OPT_3;Il va être emprisoner!;Il aura sa place dans mes cachots!;;;;;;;;;;;;x
+TEXT_IMPRISON_SPYMASTER_EVENT_056_DESC;I have found that your spymaster has been doing some strange thing in my counties, so I took the liberty to imprison him!;J'ai découvert que ton maître espion était en train de comploter quelque chose, j'ai donc décidé de l'emprisonner;;;;;;;;;;;;x
+EVENT_056_OPT;Okay...;;;;;;;;;;;;;x
+NOTIF_GET_ANIMAL_SYMPATHY_EVENT_059_DESC;[From.GetName] have worked well to convince you that animal are good;[From.GetName] a travaillé dure pour me convaincre que les animaux sont bienveillant!;;;;;;;;;;;;x
+I_LOVE_ANIMAL_EVENT_059_OPT_1;I shall accept them as my one;Je vais les accepter comme des amis!;;;;;;;;;;;;x
+HE_MUST_BE_DREAMING_EVENT_059_OPT_2;I will never become friendly with animal;Je ne deviendrais jamais l'amis d'animaux!;;;;;;;;;;;;x
+
+
+#####Tooltip localisation
+won_fight_against_bear;won battle against beast;la tuer sans blessure;;;;;;;;;;;;x
+won_fight_against_bear_injured;beat the beast injured;réussir à la battre en essuyant des blessures;;;;;;;;;;;;x
+lost_fight_against_bear;loose the fight;perdre le combat contre la bête;;;;;;;;;;;;x
+dying_bear_conversion;die from the disease;mourir de la maladie;;;;;;;;;;;;x
+FIGHT_SUCC_WON;[bear_tournament_fighter_one.GetTitledName] won the fight;[bear_tournament_fighter_one.GetTitledName] gagne le combat;;;;;;;;;;;;x
+FIGHT_SUCC_WON_bis;[bear_tournament_fighter_two.GetTitledName] won the fight;[bear_tournament_fighter_two.GetTitledName] gagne le combat;;;;;;;;;;;;x
+FAIN_BONUS_STAT_POINT_BEAR_HIB;You gain §G1§! random ability point!;Gain d'§G1§! point de compétence aléatoire;;;;;;;;;;;;x
+GAIN_GENETIC_TRAIT_BEAR_HIB;You gain §G1§! genetic trait;Gain d'§G1§! trait génétique;;;;;;;;;;;;x
+BEAR_GIVE_RELIGIOUS_RIGHT;Negociations fails;Les négociations échoues;;;;;;;;;;;;x
+BEAR_RELIGIOUS_TRAITORS;We are seen as traitors;Les négociations sont vu comme de la trahison!;;;;;;;;;;;;x
+SUCCESSFUL_BEAR_REL_NEGOCIATION;Negociations are successfull!;Les négociations réussissent!;;;;;;;;;;;;x
+
+
+####job events names
+CHANCELLOR_EVENT_SUCCEED_REPRIMATE;§GSend a missive to give up a county§!;§GAbandonner d'un comté§!;;;;;;;;;;;;x
+CHANCELLOR_EVENT_FAILED_REPRIMATE;§RWork is considered as an insult§!;§RActions échouées§!;;;;;;;;;;;;x
+NOBLE_TRAINED_EVENT_048_TITLE;Noble successfully trained;Noble a eu un bon entraînement;;;;;;;;;;;;x
+NOBLE_INJURED_EVENT_049_TITLE;Noble injured;Noble blessé;;;;;;;;;;;;x
+CHILD_CONVERTED_EVENT_050_TITLE;Successfully convince a young noble;Réussi à convaincre un jeune noble;;;;;;;;;;;;x
+CHILD_UNCONVVERTED_051_TITLE;Nobles take steward action as an insult;Les nobles prennent les actions de l'intendant comme une insulte;;;;;;;;;;;;x
+INVASION_ANIMAL_EVENT_053_TITLE;Hord successfully created;Horde animale créée;;;;;;;;;;;;
+IMPRISON_SPYMASTER_EVENT_054_TITLE;Spymaster cotch and imprisoned;Le maître-espion est démasqué;;;;;;;;;;;;x
+CHARACTER_ACCEPT_ANIMALS_EVENT_057_TITLE;Religious sympathy created;Sympathie religieuse créée;;;;;;;;;;;;x
+A_LOCAL_LORD_GET_ZEALOUS_EVENT_058_TITLE;Animal zeal created;zèle animalier créé;;;;;;;;;;;;x
