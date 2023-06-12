@@ -206,6 +206,8 @@ start_eleph_conv_quest;Evaluate cat number;Constater un nombre important de chat
 start_eleph_conv_quest_desc;As cats started to migrate in the province, verifying that they are not over-numbered is a must-go.;Avec les chats qui commencent à devenir nombreux dans la province, il peut être utile d'y regarder de plus près pour éviter des risques inutiles;;;;;;;;;;;;x
 adopt_cat_religion;Adopt cats' religion;Adopter la religion des chats;;;;;;;;;;;;x
 adopt_cat_religion_desc;As a cat, you can freely choose to convert yourself to the associated religion;En tant que chat, tu peux librement choisir de te convertir à la religion associé;;;;;;;;;;;;;x
+Force_cat_invasion;Force an invasion;Forcer une invasion de chat;;;;;;;;;;;;x
+Force_cat_invasion_desc;By using the religion influence, a cat can force an invasion and fastly changing province culture;En utilisant l'influence de sa religion, un chat peut facilement forcer une invasion et ainsi changer la culture local de la province;;;;;;;;;;;;x
 
 #TOOLTIPS
 CAT_TT_COOLDOWN;Cats are not in action;Aucun chat n'a de comportements étranges;;;;;;;;;;;;x
