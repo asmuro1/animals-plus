@@ -500,3 +500,88 @@ character_event = {
 
 
 
+### province cultural change (start invasion by siege or looting)
+#event 128: (on_action) launch province culture notification
+#event 129: notification for province holder (use invasion mechanisms from conversion quest)
+
+#event 128
+character_event = {
+    id = ani_plus.128
+
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        ROOT = {
+            culture_group = cat_group
+        }
+        FROM = {
+            is_capital = no
+            location = {
+                NOT = { culture_group = cat_group }
+                num_of_empty_holdings = 1
+            }
+        }
+    }
+    
+    immediate = {
+        FROM = {
+            location = {
+                holder_scope = {
+                    character_event = { id = ani_plus.129 }
+                }
+            }
+        }
+    }
+}
+
+#event 129
+character_event = {
+    id = ani_plus.129
+
+    is_triggered_only = yes
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    desc = DESC_129_START_INVASION
+
+    option = {
+        name = {
+            text = OPTA_129_I_HATE_THAT
+            trigger = {
+                NOT = { culture_group = cat_group }
+            }
+        }
+        name = {
+            text = OPTB_129_I_LIKE_THAT
+            trigger = {
+                culture_group = cat_group
+            }
+        }
+
+        FROMFROM = {
+            location = {
+                create_character = {
+                    fertility = 1.5
+                    female = no
+                    religion = FROM
+                    culture = FROM
+                    dynasty = none
+                }
+                location = {
+                    show_scope_change = no
+                    build_holding = {
+                        type = tribal
+                        holder = new_character
+                    }
+                }
+                hidden_tooltip = {
+                    new_character = { set_defacto_liege = FROM }
+                    location = {
+                        cat_new_holding_created_by_cats_effect = yes
+                    }
+                }
+            }
+        }
+    }
+}

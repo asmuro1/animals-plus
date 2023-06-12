@@ -28,6 +28,12 @@ on_loot_settlement = {
 		ani_plus.066 # hedgehog province modifier
 		ani_plus.107 # reduce development level for duck
 	}
+	random_events = {
+		cat_invasion_start = {
+			5 = ani_plus.128
+			95 = 0
+		}
+	}
 }
 
 #fire for besiege settlement
@@ -36,6 +42,12 @@ on_siege_over_winner = {
 		ani_plus.031 # deletting big construction  (theodosian wall etc.)
 		ani_plus.068 # hedgehog province modifier
 		ani_plus.107 # reduce development level for duck
+	}
+	random_events = {
+		cat_invasion_start = {
+			15 = ani_plus.128
+			85 = 0
+		}
 	}
 }
 
