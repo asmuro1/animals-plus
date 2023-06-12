@@ -1,7 +1,6 @@
-	name="Animals +"
-	path="mod/animals_update"
-	tags=
-	{
-		animals gameplay 
-	}
+name="Animals +"
+path="mod/animals_update"
+tags=
+{
+	animals gameplay 
 }
