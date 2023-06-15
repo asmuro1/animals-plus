@@ -31,7 +31,7 @@ sea_master_mercs = {
 }
 
 immortal_herd = {
-	levy_size = 2.5
+	levy_size = 4.5
 	war_elephants = 500
 	knights = 50
 }
