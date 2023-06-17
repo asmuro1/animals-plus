@@ -612,3 +612,7 @@ cat_no_decadence_penalty_revolt = {
 	icon = 106
 	global_revolt_risk = 0.10
 }
+cat_decadence_bonus = {
+	icon = 18
+	vassal_opinion = 25
+}

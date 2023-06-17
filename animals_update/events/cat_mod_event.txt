@@ -592,13 +592,14 @@ character_event = {
 # event 130: increase decadence level for cat ruler (or give them maluses if wrong government type)
 # event 131: events for very high or very low level of decadence for cat
 
+#event 130
 character_event = {
     id = ani_plus.130
 
     border = GFX_event_normal_frame_diplomacy
     picture = GFX_evt_council
 
-    only_capable = yes
+    only_playable = yes
 
     trigger = {
         culture_group = cat_group
@@ -649,6 +650,298 @@ character_event = {
                 add_character_modifier = {
                     name = cat_no_decadence_penalty_revolt
                     months = 3
+                }
+            }
+        }
+    }
+}
+
+#event 131
+character_event = {
+    id = ani_plus.131
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = DESC_131_DECADENCE_EVENT
+
+    only_playable = yes
+
+    trigger = {
+        government = cat_feudal_gov
+
+        OR = {
+            decadence > 75
+            decadence < 15
+        }
+
+        NOT = {
+			any_war = {
+				defender = { character = ROOT }
+				using_cb = decadence_invasion # Already under tribal invasion
+			}
+		}
+    }
+
+    mean_time_to_happen = {
+        years = 20
+
+        modifier = {
+            factor = 0.25
+            
+            decadence > 75
+        }
+
+        modifier = {
+            factor = 0.2
+            decadence >= 90
+        }
+
+        modifier = {
+            factor = 0.2
+            decadence = 100
+        }
+    }
+
+    option = {
+        trigger = {
+            decadence < 15
+        }
+
+        name = OPTA_131_DECADENCE_BONUSES
+
+        add_character_modifier = {
+            name = cat_decadence_bonus
+            months = 5
+        }
+    }
+
+    option = {
+        trigger = {
+            decadence > 75
+            OR = {
+                decadence < 90
+                tier = count
+                independent = no
+            }
+        }
+
+        name = OPTB_131_DECADENCE_MALUS
+
+        random_list = {
+            1 = {
+                trigger = {
+                    NOT = { has_character_modifier = cat_no_decadence_penalty_opinion }
+                }
+                add_character_modifier = {
+                    name = cat_no_decadence_penalty_opinion
+                    months = 6
+                }
+            }
+            1 = {
+                trigger = {
+                    NOT = { has_character_modifier = cat_no_decadence_penalty_revolt }
+                }
+                add_character_modifier = {
+                    name = cat_no_decadence_penalty_revolt
+                    months = 4
+                }
+            }
+        }
+    }
+
+    option = {
+        trigger = {
+            decadence >= 90
+            higher_tier_than = count
+            independent = yes
+        }
+
+        name = OPTC_131_DECADENCE_INVASION
+
+        # usual decadence invasion
+        # for most part: copy-past from vanilla event
+
+        custom_tooltip = {
+            text = CAT_DECADENCE_INVASION
+            random_potential_tribal_county = { # A county suitable for tribal takeover
+                location = {
+                    create_character = {
+                        random_traits = yes
+                        dynasty = random
+                        religion = ROOT
+                        culture = ROOT
+                        female = no
+                        age = 25
+                        attributes = {
+                            martial = 5
+                            diplomacy = 15
+                        }
+                        trait = skilled_tactician
+                    }
+
+                    new_character = {
+                        create_title = {
+                            tier = DUKE
+                            landless = yes
+                            temporary = yes
+                            culture = ROOT
+                            name = "DECADENCE_REVOLT"
+                            holder = THIS
+                        }
+
+
+                        wealth = 2000
+
+                        spawn_unit = {
+                            province = PREV
+                            home = PREV
+                            owner = THIS
+                            leader = THIS
+                            match_character = ROOT
+                            match_mult = 0.2
+                            earmark = decadence_revolters
+                            reinforces = yes
+                            reinforce_rate_multiplier = 0.25
+                        }
+                        create_character = {
+                            random_traits = yes
+                            dynasty = THIS
+                            religion = ROOT
+                            culture = ROOT
+                            female = no
+                            age = 18
+                            attributes = {
+                                martial = 7
+                            }
+                            trait = skilled_tactician
+                        }
+                        new_character = {
+                            set_father = PREV
+                            spawn_unit = {
+                                province = PREVPREV
+                                home = PREVPREV
+                                owner = PREV
+                                #leader = THIS
+                                match_character = ROOT
+                                match_mult = 0.2
+                                earmark = decadence_revolters
+                                reinforces = yes
+                                reinforce_rate_multiplier = 0.25
+                            }
+                        }
+
+
+                        create_character = {
+                            random_traits = yes
+                            dynasty = THIS
+                            religion = ROOT
+                            culture = ROOT
+                            female = no
+                            age = 20
+                            attributes = {
+                                martial = 7
+                            }
+                            trait = skilled_tactician
+                        }
+                        new_character = {
+                            spawn_unit = {
+                                province = PREVPREV
+                                home = PREVPREV
+                                owner = PREV
+                                #leader = THIS
+                                match_character = ROOT
+                                match_mult = 0.2
+                                earmark = decadence_revolters
+                                reinforces = yes
+                                reinforce_rate_multiplier = 0.25
+                            }
+                        }
+
+                        create_character = {
+                            random_traits = yes
+                            dynasty = NONE
+                            religion = ROOT
+                            culture = ROOT
+                            female = no
+                            age = 20
+                            attributes = {
+                                martial = 7
+                            }
+                            trait = skilled_tactician
+                        }
+                        new_character = {
+                            spawn_unit = {
+                                province = PREVPREV
+                                home = PREVPREV
+                                owner = PREV
+                                #leader = THIS
+                                match_character = ROOT
+                                match_mult = 0.2
+                                earmark = decadence_revolters
+                                reinforces = yes
+                                reinforce_rate_multiplier = 0.25
+                            }
+                        }
+
+                        create_character = {
+                            random_traits = yes
+                            dynasty = NONE
+                            religion = ROOT
+                            culture = ROOT
+                            female = no
+                            age = 22
+                            attributes = {
+                                martial = 7
+                            }
+                            trait = skilled_tactician
+                        }
+                        new_character = {
+                            spawn_unit = {
+                                province = PREVPREV
+                                home = PREVPREV
+                                owner = PREV
+                                #leader = THIS
+                                match_character = ROOT
+                                match_mult = 0.2
+                                earmark = decadence_revolters
+                                reinforces = yes
+                                reinforce_rate_multiplier = 0.25
+                            }
+                        }
+
+                        create_character = {
+                            random_traits = yes
+                            dynasty = NONE
+                            religion = ROOT
+                            culture = ROOT
+                            female = no
+                            age = 22
+                            attributes = {
+                                martial = 7
+                            }
+                            trait = skilled_tactician
+                        }
+                        new_character = {
+                            spawn_unit = {
+                                province = PREVPREV
+                                home = PREVPREV
+                                owner = PREV
+                                #leader = THIS
+                                match_character = ROOT
+                                match_mult = 0.2
+                                earmark = decadence_revolters
+                                reinforces = yes
+                                reinforce_rate_multiplier = 0.25
+                            }
+                        }
+
+                        set_character_flag = decadence_invader
+                        war = {
+                            target = ROOT
+                            casus_belli = decadence_invasion
+                        }
+                        clr_character_flag = decadence_invader
+                    }
                 }
             }
         }
