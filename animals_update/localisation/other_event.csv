@@ -110,6 +110,10 @@ OPTB_129_I_LIKE_THAT;They will finally become cats?!;Ils vont enfin devenir des 
 DESC_130_INCREASE_DECADENCE;As a cat, stability isn't a given...;En tant que chat, tout le monde sait que la stabilité est loin d'être assuré...;;;;;;;;;;;;x
 OPTA_130_INCREASE_DEC;Sooner or later, my decadence will decrease.;Tôt ou tard, ma décadence va redescendre.;;;;;;;;;;;;x
 OPTB_130_UNVAILABLE_DEC;I hope it won't worsen;J'espère que ça ne va pas s'aggraver;;;;;;;;;;;;x
+DESC_131_DECADENCE_EVENT;decadence is a big part in the life of a cat;La décadence a beaucoup d'influence sur la vit d'un chat;;;;;;;;;;;;x
+OPTA_131_DECADENCE_BONUSES;A low decadence for a stable realm;Un petit niveau de décadence pour une contré prospère;;;;;;;;;;;;x
+OPTB_131_DECADENCE_MALUS;Does it means that problems will come?;Est-ce que ça veut dire que des problèmes vont arriver?;;;;;;;;;;;;x
+OPTC_131_DECADENCE_INVASION;A big problems is near;Un gros problème arrive;;;;;;;;;;;;x
 
 
 ##tooltips
@@ -123,3 +127,4 @@ CAT_TT_RUN;The cats goes away;Les chats partent;;;;;;;;;;;;x
 CAT_TT_CONSTRUCT_THEIR_TRIBE;The cats build their own tribe;Les chats construisent leur propre tribu;;;;;;;;;;;;x
 CAT_TT_DECLARE_WAR;The cats start a revolt;Les chats se rebellent;;;;;;;;;;;;x
 CAT_TT_HUNTER_INJURED;Many adult are injured by ferocious cats;Beaucoup d'adulte sont blessés par des chats enragé;;;;;;;;;;;;x
+CAT_DECADENCE_INVASION;A decadence invasion begins;Une révolte de décadence commence;;;;;;;;;;;;x
