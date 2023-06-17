@@ -1857,7 +1857,6 @@ castle = {
                     panda_vassal_bureau_active_trigger = yes
                 }
             }
-            is_capital = yes
         }
         trigger = {
             TECH_CASTLE_CONSTRUCTION = 6

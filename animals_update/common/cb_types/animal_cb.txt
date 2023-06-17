@@ -330,7 +330,7 @@ independance_bear_tributary_cb = {
 
 #hedgehog conversion quest by hostility
 hedgehog_hostility_province_war = {
-    # name = CB_NAME_HEDGE_INVASION
+    name = CB_NAME_HEDGE_INVASION
     war_name = WAR_NAME_HEDGE_INVASION
     sprite = 1
 

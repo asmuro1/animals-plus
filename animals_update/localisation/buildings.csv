@@ -366,6 +366,8 @@ ho_eleph_techno_lab_desc;Laboratory where technology are researched; laboratoire
 ho_eleph_climat_lab_desc;Laboratory allowing climate change to reduce the province supply and taxs;Laboratoire permettant de réduire l'approvisionnement de la province;;;;;;;;;;;;x
 ho_eleph_disease_lab_desc;Laboratory creating epidemies;Laboratoire qui crée des épidémies;;;;;;;;;;;;x
 
+#tooltip
+ELEPH_TT_STARTED_ELEPH_STUDY;Did start to study elephant;A commencé des recherches sur les éléphants.;;;;;;;;;;;;x
 
 ### cat update
 ca_cat_army_1;Barraks;Casernes;;;;;;;;;;;;x

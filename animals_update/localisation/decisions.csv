@@ -202,8 +202,8 @@ ELEPH_TT_DISEASE_SPAWN;An epidemic start;Une épidémie commence;;;;;;;;;;;;x
 
 #### CAT UPDATE
 
-start_eleph_conv_quest;Evaluate cat number;Constater un nombre important de chats;;;;;;;;;;;;x
-start_eleph_conv_quest_desc;As cats started to migrate in the province, verifying that they are not over-numbered is a must-go.;Avec les chats qui commencent à devenir nombreux dans la province, il peut être utile d'y regarder de plus près pour éviter des risques inutiles;;;;;;;;;;;;x
+start_cat_conversion_quest;Evaluate cat number;Constater un nombre important de chats;;;;;;;;;;;;x
+start_cat_conversion_quest_desc;As cats started to migrate in the province, verifying that they are not over-numbered is a must-go.;Avec les chats qui commencent à devenir nombreux dans la province, il peut être utile d'y regarder de plus près pour éviter des risques inutiles;;;;;;;;;;;;x
 adopt_cat_religion;Adopt cats' religion;Adopter la religion des chats;;;;;;;;;;;;x
 adopt_cat_religion_desc;As a cat, you can freely choose to convert yourself to the associated religion;En tant que chat, tu peux librement choisir de te convertir à la religion associé;;;;;;;;;;;;;x
 Force_cat_invasion;Force an invasion;Forcer une invasion de chat;;;;;;;;;;;;x
@@ -211,5 +211,6 @@ Force_cat_invasion_desc;By using the religion influence, a cat can force an inva
 
 #TOOLTIPS
 CAT_TT_COOLDOWN;Cats are not in action;Aucun chat n'a de comportements étranges;;;;;;;;;;;;x
+CAT_NOT_PRESENT;The cats are unable to invade again;Les chats ne peuvent pas revenir;;;;;;;;;;;;x
 No_cat_invasion_tt;No cat is settled in the province;Aucun chat ne s'est installé dans la province;;;;;;;;;;;;x
 CREATED_HOLY_ORDER_CAT_TOOLTIP;[d_Invasive_order.GetName] created;[d_Invasive_order.GetName] sont créée;;;;;;;;;;;;x

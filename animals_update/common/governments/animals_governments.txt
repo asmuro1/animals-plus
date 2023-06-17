@@ -265,7 +265,7 @@ feudal_governments = {
         capital_move_delay = 240
         aggression = 1.95
 
-        builds_with_piety = { temple }
-        builds_with_prestige = { tribal }
+        builds_with_piety = { TEMPLE }
+        builds_with_prestige = { TRIBAL }
     }
 }

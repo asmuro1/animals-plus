@@ -15,10 +15,7 @@ title_bear_children = {
         # is_female = no
     }
     allowed_to_grant = {
-        OR = {
-            government = Bear_feudal_gov
-            government = Bear_theocracy_gov
-        }
+        government = Bear_feudal_gov
         has_regent = no
         is_incapable = no
     }

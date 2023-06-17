@@ -104,6 +104,7 @@ DESC_126_CAT_INVADE;The cats of [This.GetName] did reproduce. At some point, the
 OPT_126_CAT_TARGET;Is this a new kind of plague?;Est-ce un nouveau fléau?;;;;;;;;;;;;x
 DESC_127_USURP_ID;The cats living in [location.GetName] successfully imprisoned me then ...;Les chats de [location.GetName] ont réussi à m'emprisonner puis à ...;;;;;;;;;;;;x
 OPT_127_USURP_ID;At some point, I feel like a cat...;Je commence à me sentir vivre comme un chat...;;;;;;;;;;;;x
+DESC_129_START_INVASION;After the cat's siege on [FROMFROM.GetName], cat started an invasion there;Après l'occupation de [FROMFROM.GetName], les chats démarrent leurs invasions;;;;;;;;;;;;x
 OPTA_129_I_HATE_THAT;Hope they don't do too much;J'espère qu'ils n'en feront pas trop;;;;;;;;;;;;x
 OPTB_129_I_LIKE_THAT;They will finally become cats?!;Ils vont enfin devenir des chats?!;;;;;;;;;;;x
 DESC_130_INCREASE_DECADENCE;As a cat, stability isn't a given...;En tant que chat, tout le monde sait que la stabilité est loin d'être assuré...;;;;;;;;;;;;x
@@ -115,8 +116,9 @@ OPTB_130_UNVAILABLE_DEC;I hope it won't worsen;J'espère que ça ne va pas s'aggra
 
 CAT_TT_DIE_IN_EPIDEMY;The cats die in a new epidemy;Les chats meurent tous dans une nouvelle épidémie;;;;;;;;;;;;x
 CAT_TT_TAKE_UNFORTIFIED_HOLDING;The cats take control of an existiong holding;Les chats prennent le contre d'une possession;;;;;;;;;;;;x
-CAT_TT_TOO_LATE;The hunt started to late;La chasse a commencé trop tard
+CAT_TT_TOO_LATE;The hunt started to late;La chasse a commencé trop tard;;;;;;;;;;;;x
 CAT_TT_ARE_GONE;The cat are exterminated;Les chats sont exterminés;;;;;;;;;;;;x
+CAT_TT_HUNT_ACCIDENT;The hunt goes wrong;Un accident de chasse arrive;;;;;;;;;;;;x
 CAT_TT_RUN;The cats goes away;Les chats partent;;;;;;;;;;;;x
 CAT_TT_CONSTRUCT_THEIR_TRIBE;The cats build their own tribe;Les chats construisent leur propre tribu;;;;;;;;;;;;x
 CAT_TT_DECLARE_WAR;The cats start a revolt;Les chats se rebellent;;;;;;;;;;;;x

@@ -78,16 +78,22 @@ province_event = {
 
             modifier = {
                 factor = 10
-                OR = {
-                    trait = patient
-                    trait = content
+
+                holder_scope ={
+                    OR = {
+                        trait = patient
+                        trait = content
+                    }
                 }
             }
             modifier = {
                 factor = 0
-                OR = {
-                    trait = wroth
-                    trait = ambitious
+
+                holder_scope = {
+                    OR = {
+                        trait = wroth
+                        trait = ambitious
+                    }
                 }
             }
         }
@@ -99,9 +105,13 @@ province_event = {
             factor = 8
             modifier = {
                 factor = 0.625
-                OR = {
-                    trait = patient
-                    trait = content
+
+                holder_scope = 
+                {
+                    OR = {
+                        trait = patient
+                        trait = content
+                    }
                 }
             }
         }
@@ -150,7 +160,7 @@ province_event = {
     option = {
         name = OPT2_120_START_A_HUNT
 
-        wealth = -50
+        holder_scope = { wealth = -50 }
         random_list = {
             1 = {
                 custom_tooltip = {
