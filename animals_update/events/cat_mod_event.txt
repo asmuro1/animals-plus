@@ -561,13 +561,18 @@ character_event = {
 
         FROMFROM = {
             
-            #hidden_tooltip = {
-                holder_scope = { culture = ROOT_FROM }
-                add_holding_modifier = {
-                    name = cat_controlled_holding
-                    years = 10
-                }
-            #}
+            create_character = {
+                fertility = 1.5
+                female = no
+                religion = ROOT_FROM
+                culture = ROOT_FROM
+                dynasty = none
+            }
+            new_character = { gain_title = PREV }
+            add_holding_modifier = {
+                name = cat_controlled_holding
+                years = 10
+            }
         }
     }
 }
