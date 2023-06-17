@@ -603,3 +603,12 @@ cat_controlled_holding = {
 	garrison_size = 1.10
 	levy_size = 0.85
 }
+
+cat_no_decadence_penalty_opinion = {
+	icon = 
+	vassal_opinion = -25
+}
+cat_no_decadence_penalty_revolt = {
+	icon = 
+	global_revolt_risk = 0.10
+}

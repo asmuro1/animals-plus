@@ -571,3 +571,71 @@ character_event = {
         }
     }
 }
+
+
+###decadence events
+# event 130: increase decadence level for cat ruler (or give them maluses if wrong government type)
+# event 131: events for very high or very low level of decadence for cat
+
+character_event = {
+    id = ani_plus.130
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    only_capable = yes
+
+    trigger = {
+        culture_group = cat_group
+        is_playable = yes
+    }
+
+    mean_time_to_happen = {
+        months = 12
+
+        modifier = {
+            factor = 1.4
+            NOT = {
+                government = cat_feudal_gov
+            }
+        }
+    }
+
+    desc = DESC_130_INCREASE_DECADENCE
+
+    option = {
+        trigger = {
+            government = cat_feudal_gov
+        }
+        name = OPTA_130_INCREASE_DEC
+        decadence = 10
+    }
+
+    option = {
+        trigger = {
+            NOT = { government = cat_feudal_gov }
+        }
+
+        name = OPTB_130_UNVAILABLE_DEC
+        random_list = {
+            1 = {
+                trigger = {
+                    NOT = { has_character_modifier = cat_no_decadence_penalty_opinion }
+                }
+                add_character_modifier = {
+                    name = cat_no_decadence_penalty_opinion
+                    months = 6
+                }
+            }
+            1 = {
+                trigger = {
+                    NOT = { has_character_modifier = cat_no_decadence_penalty_revolt }
+                }
+                add_character_modifier = {
+                    name = cat_no_decadence_penalty_revolt
+                    months = 3
+                }
+            }
+        }
+    }
+}
