@@ -102,8 +102,14 @@ DESC_125_HOLDER_CHANGE;As the holder of [From.GetName] change, the cats living t
 OPT_125_WAR;The extermination shall starts;L'extermination des chats est inévitable;;;;;;;;;;;;x
 DESC_126_CAT_INVADE;The cats of [This.GetName] did reproduce. At some point, they had to take control of another part of the county;Les chats de [This.GetName] se reproduisent énormément. Ils sont devenus tellement nombreux qu'ils ont réussi sans difficulté à envahir une nouvelle partie du comté;;;;;;;;;;;;x
 OPT_126_CAT_TARGET;Is this a new kind of plague?;Est-ce un nouveau fléau?;;;;;;;;;;;;x
-DESC_127_USURP_ID;
-OPT_127_USURP_ID;
+DESC_127_USURP_ID;The cats living in [location.GetName] successfully imprisoned me then ...;Les chats de [location.GetName] ont réussi à m'emprisonner puis à ...;;;;;;;;;;;;x
+OPT_127_USURP_ID;At some point, I feel like a cat...;Je commence à me sentir vivre comme un chat...;;;;;;;;;;;;x
+OPTA_129_I_HATE_THAT;Hope they don't do too much;J'espère qu'ils n'en feront pas trop;;;;;;;;;;;;x
+OPTB_129_I_LIKE_THAT;They will finally become cats?!;Ils vont enfin devenir des chats?!;;;;;;;;;;;x
+DESC_130_INCREASE_DECADENCE;As a cat, stability isn't a given...;En tant que chat, tout le monde sait que la stabilité est loin d'être assuré...;;;;;;;;;;;;x
+OPTA_130_INCREASE_DEC;Sooner or later, my decadence will decrease.;Tôt ou tard, ma décadence va redescendre.;;;;;;;;;;;;x
+OPTB_130_UNVAILABLE_DEC;I hope it won't worsen;J'espère que ça ne va pas s'aggraver;;;;;;;;;;;;x
+
 
 ##tooltips
 

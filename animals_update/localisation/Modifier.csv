@@ -183,5 +183,9 @@ eleph_forced_conversion;Forced conversion;Conversion forcé;;;;;;;;;;;;x
 
 #### cat update
 
+#character modifier
+cat_no_decadence_penalty_opinion;Public decadence;Décadance publique;;;;;;;;;;;;x
+cat_no_decadence_penalty_revolt;Popular decadence;Décadance populaire;;;;;;;;;;;;x
+
 #holding modifier
 cat_controlled_holding;Controlled by cats;Contrôlé par des chats;;;;;;;;;;;;x

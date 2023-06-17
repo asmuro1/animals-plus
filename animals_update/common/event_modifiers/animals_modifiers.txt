@@ -605,10 +605,10 @@ cat_controlled_holding = {
 }
 
 cat_no_decadence_penalty_opinion = {
-	icon = 
+	icon = 36
 	vassal_opinion = -25
 }
 cat_no_decadence_penalty_revolt = {
-	icon = 
+	icon = 106
 	global_revolt_risk = 0.10
 }
