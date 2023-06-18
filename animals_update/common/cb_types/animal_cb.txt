@@ -544,7 +544,9 @@ panda_cb_faction_independence = {
                     limit = {
                         has_law = panda_vassal_all_allowed
                     }
-                    add_law = panda_vassal_count_allowed # can't have strong vassals anymore
+                    primary_title = {
+                        add_law = panda_vassal_count_allowed # can't have strong vassals anymore
+                    }
                 }
             }
         	any_attacker = {

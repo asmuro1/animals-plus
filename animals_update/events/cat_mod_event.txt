@@ -440,7 +440,7 @@ province_event = {
 
         random_province_holding = {
             limit = {
-                NOT = { has_province_modifier = cat_controlled_holding }
+                NOT = { has_holding_modifier = cat_controlled_holding }
             }
             preferred_limit = {
                 is_capital = no
