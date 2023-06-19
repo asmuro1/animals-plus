@@ -1,7 +1,7 @@
 namespace = ani_plus
 
 ###### cat update events
-### event 119 - 127?
+### event 119 - 131?
 
 #### conversion quest:
 # event 119: launching quest by event rule
