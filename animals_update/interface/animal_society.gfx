@@ -1,4 +1,6 @@
 spriteTypes = {
+
+    # intrigue society
     spriteType = { 
         name = "GFX_society_main_background_cat_intrigue_society"
         texturefile = "gfx\\interface\\societies\\society_bg_monastic_order_jain.dds"
@@ -30,65 +32,67 @@ spriteTypes = {
         texturefile = "gfx\\interface\\societies\\society_currency_monastic_order_jain.dds"
     }
 
+    # prosperity society
     spriteType = { 
         name = "GFX_society_main_background_cat_prosperity_society"
-        texturefile = "gfx\\interface\\societies\\society_bg_monastic_order_jain.dds"
+        texturefile = "gfx\\interface\\societies\\society_bg_monastic_order_hindu.dds"
     }
 
     spriteType = { 
         name = "GFX_society_expansion_background_cat_prosperity_society"
-        texturefile = "gfx\\interface\\societies\\society_exp_bg_monastic_order_jain.dds"
+        texturefile = "gfx\\interface\\societies\\society_exp_bg_monastic_order_hindu.dds"
     }
 
     spriteType = { 
         name = "GFX_icon_small_cat_prosperity_society"
-        texturefile = "gfx\\interface\\societies\\symbol_small_monastic_order_jain.dds"
+        texturefile = "gfx\\interface\\societies\\symbol_small_monastic_order_hindu.dds"
         noOfFrames = 2
     }
 
     spriteType = { 
         name = "GFX_society_portrait_ring_cat_prosperity_society"
-        texturefile = "gfx\\interface\\societies\\portrait_ring_monastic_order_jain.dds"
+        texturefile = "gfx\\interface\\societies\\portrait_ring_monastic_order_hindu.dds"
     }
 
     spriteType = { 
         name = "GFX_society_portrait_ring_small_cat_prosperity_society"
-        texturefile = "gfx\\interface\\societies\\portrait_ring_small_monastic_order_jain.dds"
+        texturefile = "gfx\\interface\\societies\\portrait_ring_small_monastic_order_hindu.dds"
     }
 
     spriteType = { 
         name = "GFX_society_currency_cat_prosperity_society"
-        texturefile = "gfx\\interface\\societies\\society_currency_monastic_order_jain.dds"
+        texturefile = "gfx\\interface\\societies\\society_currency_monastic_order_hindu.dds"
     }
 
+    # reputation society
     spriteType = { 
         name = "GFX_society_main_background_cat_reputation_society"
-        texturefile = "gfx\\interface\\societies\\society_bg_monastic_order_jain.dds"
+        texturefile = "gfx\\interface\\societies\\society_bg_monastic_order_buddhist.dds"
     }
 
     spriteType = { 
         name = "GFX_society_expansion_background_cat_reputation_society"
-        texturefile = "gfx\\interface\\societies\\society_exp_bg_monastic_order_jain.dds"
+        texturefile = "gfx\\interface\\societies\\society_exp_bg_monastic_order_buddhist.dds"
     }
 
     spriteType = { 
         name = "GFX_icon_small_cat_reputation_society"
-        texturefile = "gfx\\interface\\societies\\symbol_small_monastic_order_jain.dds"
+        texturefile = "gfx\\interface\\societies\\symbol_small_monastic_order_buddhist.dds"
         noOfFrames = 2
     }
 
     spriteType = { 
         name = "GFX_society_portrait_ring_cat_reputation_society"
-        texturefile = "gfx\\interface\\societies\\portrait_ring_monastic_order_jain.dds"
+        texturefile = "gfx\\interface\\societies\\portrait_ring_monastic_order_buddhist.dds"
     }
 
     spriteType = { 
         name = "GFX_society_portrait_ring_small_cat_reputation_society"
-        texturefile = "gfx\\interface\\societies\\portrait_ring_small_monastic_order_jain.dds"
+        texturefile = "gfx\\interface\\societies\\portrait_ring_small_monastic_order_buddhist.dds"
     }
 
     spriteType = { 
         name = "GFX_society_currency_cat_reputation_society"
-        texturefile = "gfx\\interface\\societies\\society_currency_monastic_order_jain.dds"
+        texturefile = "gfx\\interface\\societies\\society_currency_monastic_order_buddhist.dds"
     }
 }
