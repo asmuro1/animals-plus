@@ -947,3 +947,76 @@ character_event = {
         }
     }
 }
+
+###society related event
+# event 132: on_society_failed_to_find_new_leader event
+
+character_event = {
+    id = ani_plus.132
+
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        ROOT = {
+            OR = {
+                is_society = cat_intrigue_society
+                is_society = cat_prosperity_society
+                is_society = cat_reputation_society
+            }
+        }
+    }
+
+
+    immediate = {
+        if = {
+            limit = {
+                ROOT = {
+                    is_society = cat_intrigue_society
+                }
+            }
+            create_character = {
+                random_traits = yes
+                female = 10
+                religion = Cat_religion
+                culture = black_cat
+            }
+
+            new_character = {
+                join_society = cat_intrigue_society
+                set_society_grandmaster = yes
+            }
+        }
+        else_if = {
+            limit = {
+                ROOT = {
+                    is_society = cat_prosperity_society
+                }
+            }
+            create_character = {
+                random_traits = yes
+                female = 10
+                religion = Cat_religion
+                culture = white_cat
+            }
+
+            new_character = {
+                join_society = cat_prosperity_society
+                set_society_grandmaster = yes
+            }
+        }
+        else = {
+            create_character = {
+                random_traits = yes
+                female = 10
+                religion = Cat_religion
+                culture = cat
+            }
+
+            new_character = {
+                join_society = cat_reputation_society
+                set_society_grandmaster = yes
+            }
+        }
+    }
+}

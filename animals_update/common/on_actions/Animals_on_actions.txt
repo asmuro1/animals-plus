@@ -110,3 +110,9 @@ on_yearly_pulse = {
 		ani_plus.105 #updating duck dev maximum potential
 	}
 }
+
+on_society_failed_to_find_new_leader = {
+	events = {
+		ani_plus.132 #generating a new leader
+	}
+}
