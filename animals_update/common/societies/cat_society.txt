@@ -78,7 +78,7 @@ cat_intrigue_society = {
         limit = 150
         startup_limit = 10
         modifier = {
-            intrigue = 4
+            intrigue = 3
         }
         decisions = {
         }
@@ -89,7 +89,7 @@ cat_intrigue_society = {
         limit = 1 
         startup_limit = 1
         modifier = { 
-            intrigue = 6
+            intrigue = 5
         }
         decisions = {
         }
@@ -303,7 +303,7 @@ cat_prosperity_society = {
         limit = 300
         startup_limit = 20
         modifier = { 
-            church_opinion = -5
+            
         }
         decisions = {
         }
@@ -314,7 +314,8 @@ cat_prosperity_society = {
         limit = 250
         startup_limit = 15
         modifier = { 
-            church_opinion = -10
+            learning = 1
+            stewardship = 1
         }
         decisions = {
         }
@@ -325,7 +326,8 @@ cat_prosperity_society = {
         limit = 150
         startup_limit = 10
         modifier = {
-            church_opinion = -15
+            learning = 2
+            stewardship = 2
         }
         decisions = {
         }
@@ -336,7 +338,8 @@ cat_prosperity_society = {
         limit = 1 
         startup_limit = 1
         modifier = { 
-            church_opinion = -20
+            learning = 3
+            stewardship = 3
         }
         decisions = {
         }
@@ -346,24 +349,218 @@ cat_prosperity_society = {
 	}
 	
 	monthly_currency_gain = { 
-        name = tutorial_society_currency
+        name = cat_animal_society_currency
+
+        society_rank = {
+            rank = 1
+            value = 10
+        }
+        society_rank = {
+            rank = 2
+            value = 20
+        }
+        society_rank = {
+            rank = 3
+            value = 30
+        }
+        society_rank = {
+            rank = 4
+            value = 40
+        }
+
+        per_attribute = {
+            name = learning
+            value = 0.5
+        }
+        per_attribute = {
+            name = stewardship
+            value = 0.5
+        }
+
+        triggered_gain = {
+            desc = society_no_learning_8
+            trigger = {
+                NOT = { learning = 8 }
+            }
+            value = -10
+        }
+
+        triggered_gain = {
+            desc = society_no_stewardship_8
+            trigger = {
+                NOT = { stewardship = 8 }
+            }
+            value = -10
+        }
     }
 
-    member_score_per_attribute = 3
-    member_score_per_rank = 100
-
+    member_score_per_attribute = 0
+    member_score_per_rank = 35
     member_score = {
         value = 10
 
+        additive_modifier = {
+            learning = 2
+
+            value = 10
+        }
+        additive_modifier = {
+            learning = 4
+
+            value = 10
+        }
+        additive_modifier = {
+            learning = 6
+
+            value = 10
+        }
+        additive_modifier = {
+            learning = 8
+
+            value = 10
+        }
+        additive_modifier = {
+            learning = 10
+
+            value = 10
+        }
+        additive_modifier = {
+            learning = 12
+
+            value = 10
+        }
+        additive_modifier = {
+            learning = 14
+
+            value = 10
+        }
+        additive_modifier = {
+            learning = 16
+
+            value = 10
+        }
+        additive_modifier = {
+            learning = 18
+
+            value = 10
+        }
+        additive_modifier = {
+            learning = 20
+
+            value = 10
+        }
+        additive_modifier = {
+            learning = 22
+
+            value = 10
+        }
+        additive_modifier = {
+            learning = 24
+
+            value = 10
+        }
+        additive_modifier = {
+            learning = 26
+
+            value = 10
+        }
+        additive_modifier = {
+            learning = 28
+
+            value = 10
+        }
+        additive_modifier = {
+            learning = 30
+
+            value = 10
+        }
+        additive_modifier = {
+            stewardship = 2
+
+            value = 10
+        }
+        additive_modifier = {
+            stewardship = 4
+
+            value = 10
+        }
+        additive_modifier = {
+            stewardship = 6
+
+            value = 10
+        }
+        additive_modifier = {
+            stewardship = 8
+
+            value = 10
+        }
+        additive_modifier = {
+            stewardship = 10
+
+            value = 10
+        }
+        additive_modifier = {
+            stewardship = 12
+
+            value = 10
+        }
+        additive_modifier = {
+            stewardship = 14
+
+            value = 10
+        }
+        additive_modifier = {
+            stewardship = 16
+
+            value = 10
+        }
+        additive_modifier = {
+            stewardship = 18
+
+            value = 10
+        }
+        additive_modifier = {
+            stewardship = 20
+
+            value = 10
+        }
+        additive_modifier = {
+            stewardship = 22
+
+            value = 10
+        }
+        additive_modifier = {
+            stewardship = 24
+
+            value = 10
+        }
+        additive_modifier = {
+            stewardship = 26
+
+            value = 10
+        }
+        additive_modifier = {
+            stewardship = 28
+
+            value = 10
+        }
+        additive_modifier = {
+            stewardship = 30
+
+            value = 10
+        }
+
         modifier = {
-            factor = 3
-            trait = strong
+            culture = cat
+
+            factor = 0.5
         }
         modifier = {
-            factor = -3
-            trait = weak
+            culture = white_cat
+
+            factor = 0.25
         }
-     }
+    }
         
     startup_populate = { 
         trigger = {
@@ -446,7 +643,8 @@ cat_reputation_society = {
         limit = 250
         startup_limit = 15
         modifier = { 
-            church_opinion = -10
+            diplomacy = 1
+            martial = 1
         }
         decisions = {
         }
@@ -457,7 +655,8 @@ cat_reputation_society = {
         limit = 150
         startup_limit = 10
         modifier = {
-            church_opinion = -15
+            diplomacy = 2
+            martial = 2
         }
         decisions = {
         }
@@ -468,7 +667,8 @@ cat_reputation_society = {
         limit = 1 
         startup_limit = 1
         modifier = { 
-            church_opinion = -20
+            diplomacy = 3
+            martial = 3
         }
         decisions = {
         }
@@ -478,24 +678,218 @@ cat_reputation_society = {
 	}
 	
 	monthly_currency_gain = { 
-        name = tutorial_society_currency 
+        name = cat_animal_society_currency
+
+        society_rank = {
+            rank = 1
+            value = 10
+        }
+        society_rank = {
+            rank = 2
+            value = 20
+        }
+        society_rank = {
+            rank = 3
+            value = 30
+        }
+        society_rank = {
+            rank = 4
+            value = 40
+        }
+
+        per_attribute = {
+            name = martial
+            value = 0.5
+        }
+        per_attribute = {
+            name = diplomacy
+            value = 0.5
+        }
+
+        triggered_gain = {
+            desc = society_no_marital_8
+            trigger = {
+                NOT = { martial = 8 }
+            }
+            value = -10
+        }
+
+        triggered_gain = {
+            desc = society_no_diplomacy_8
+            trigger = {
+                NOT = { diplomacy = 8 }
+            }
+            value = -10
+        }
     }
 
-    member_score_per_attribute = 3 
-    member_score_per_rank = 100
-
+    member_score_per_attribute = 0
+    member_score_per_rank = 35
     member_score = {
         value = 10
 
+        additive_modifier = {
+            diplomacy = 2
+
+            value = 10
+        }
+        additive_modifier = {
+            diplomacy = 4
+
+            value = 10
+        }
+        additive_modifier = {
+            diplomacy = 6
+
+            value = 10
+        }
+        additive_modifier = {
+            diplomacy = 8
+
+            value = 10
+        }
+        additive_modifier = {
+            diplomacy = 10
+
+            value = 10
+        }
+        additive_modifier = {
+            diplomacy = 12
+
+            value = 10
+        }
+        additive_modifier = {
+            diplomacy = 14
+
+            value = 10
+        }
+        additive_modifier = {
+            diplomacy = 16
+
+            value = 10
+        }
+        additive_modifier = {
+            diplomacy = 18
+
+            value = 10
+        }
+        additive_modifier = {
+            diplomacy = 20
+
+            value = 10
+        }
+        additive_modifier = {
+            diplomacy = 22
+
+            value = 10
+        }
+        additive_modifier = {
+            diplomacy = 24
+
+            value = 10
+        }
+        additive_modifier = {
+            diplomacy = 26
+
+            value = 10
+        }
+        additive_modifier = {
+            diplomacy = 28
+
+            value = 10
+        }
+        additive_modifier = {
+            diplomacy = 30
+
+            value = 10
+        }
+        additive_modifier = {
+            martial = 2
+
+            value = 10
+        }
+        additive_modifier = {
+            martial = 4
+
+            value = 10
+        }
+        additive_modifier = {
+            martial = 6
+
+            value = 10
+        }
+        additive_modifier = {
+            martial = 8
+
+            value = 10
+        }
+        additive_modifier = {
+            martial = 10
+
+            value = 10
+        }
+        additive_modifier = {
+            martial = 12
+
+            value = 10
+        }
+        additive_modifier = {
+            martial = 14
+
+            value = 10
+        }
+        additive_modifier = {
+            martial = 16
+
+            value = 10
+        }
+        additive_modifier = {
+            martial = 18
+
+            value = 10
+        }
+        additive_modifier = {
+            martial = 20
+
+            value = 10
+        }
+        additive_modifier = {
+            martial = 22
+
+            value = 10
+        }
+        additive_modifier = {
+            martial = 24
+
+            value = 10
+        }
+        additive_modifier = {
+            martial = 26
+
+            value = 10
+        }
+        additive_modifier = {
+            martial = 28
+
+            value = 10
+        }
+        additive_modifier = {
+            martial = 30
+
+            value = 10
+        }
+
         modifier = {
-            factor = 3
-            trait = strong
+            culture = cat
+
+            factor = 0.5
         }
         modifier = {
-            factor = -3
-            trait = weak
+            culture = white_cat
+
+            factor = 0.25
         }
-     }
+    }
         
     startup_populate = { 
         trigger = {
