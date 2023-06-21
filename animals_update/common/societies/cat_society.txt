@@ -140,21 +140,98 @@ cat_intrigue_society = {
         }
     }
 
-    member_score_per_attribute = 3 
-    member_score_per_rank = 100
-
+    member_score_per_attribute = 0.5
+    member_score_per_rank = 20
     member_score = {
         value = 10
 
+        additive_modifier = {
+            intrigue = 2
+
+            value = 10
+        }
+        additive_modifier = {
+            intrigue = 4
+
+            value = 10
+        }
+        additive_modifier = {
+            intrigue = 6
+
+            value = 10
+        }
+        additive_modifier = {
+            intrigue = 8
+
+            value = 10
+        }
+        additive_modifier = {
+            intrigue = 10
+
+            value = 10
+        }
+        additive_modifier = {
+            intrigue = 12
+
+            value = 10
+        }
+        additive_modifier = {
+            intrigue = 14
+
+            value = 10
+        }
+        additive_modifier = {
+            intrigue = 16
+
+            value = 10
+        }
+        additive_modifier = {
+            intrigue = 18
+
+            value = 10
+        }
+        additive_modifier = {
+            intrigue = 20
+
+            value = 10
+        }
+        additive_modifier = {
+            intrigue = 22
+
+            value = 10
+        }
+        additive_modifier = {
+            intrigue = 24
+
+            value = 10
+        }
+        additive_modifier = {
+            intrigue = 26
+
+            value = 10
+        }
+        additive_modifier = {
+            intrigue = 28
+
+            value = 10
+        }
+        additive_modifier = {
+            intrigue = 30
+
+            value = 10
+        }
+
         modifier = {
-            factor = 3
-            trait = strong
+            culture = cat
+
+            factor = 0.5
         }
         modifier = {
-            factor = -3
-            trait = weak
+            culture = white_cat
+
+            factor = 0.25
         }
-     }
+    }
         
     startup_populate = {  
         trigger = {
