@@ -56,7 +56,7 @@ cat_intrigue_society = {
         limit = 300 
         startup_limit = 20 
         modifier = { 
-            church_opinion = -5
+
         }
         decisions = {
         }
@@ -67,7 +67,7 @@ cat_intrigue_society = {
         limit = 250
         startup_limit = 15
         modifier = { 
-            church_opinion = -10
+            intrigue = 2
         }
         decisions = {
         }
@@ -78,7 +78,7 @@ cat_intrigue_society = {
         limit = 150
         startup_limit = 10
         modifier = {
-            church_opinion = -15
+            intrigue = 4
         }
         decisions = {
         }
@@ -89,7 +89,7 @@ cat_intrigue_society = {
         limit = 1 
         startup_limit = 1
         modifier = { 
-            church_opinion = -20
+            intrigue = 6
         }
         decisions = {
         }
