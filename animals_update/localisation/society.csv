@@ -1,0 +1,16 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+
+###intrigue society
+cat_intrigue_society;Intrigue society;Société d'intrigue;;;;;;;;;;;;x
+cat_intrigue_society_desc;Society formed by cat to make intrigues;Société formé par les chats pour créer des intrigues;;;;;;;;;;;;x
+cat_intrigue_society_rank_1_male;Student;Étudiant;;;;;;;;;;;;x
+cat_intrigue_society_rank_1_female;Student;Étudiante;;;;;;;;;;;;x
+cat_intrigue_society_rank_2_male;Member;Membre;;;;;;;;;;;;x
+cat_intrigue_society_rank_2_female;Membre;Membre;;;;;;;;;;;;x
+cat_intrigue_society_rank_3_male;Responsable;Responsable;;;;;;;;;;;;x
+cat_intrigue_society_rank_3_female;Responsable;Responsable;;;;;;;;;;;;x
+cat_intrigue_society_rank_4_male;Grandmaster;Grand maître;;;;;;;;;;;;x
+cat_intrigue_society_rank_4_female;Grandmaster;Grande maîtresse;;;;;;;;;;;;x
+society_no_intrigue_10;Has §Y10§! in intrigue: §R-10§!;A §Y10§! d'intrigue: §R-10§!;;;;;;;;;;;;x
+society_no_intrigue_5;Has §Y5§! in intrigue: §R-10§!;A §Y5§! d'intrigue: §R-10§!;;;;;;;;;;;;x
+cat_animal_society_currency;Cat's credit;Crédit de chat;;;;;;;;;;;;x
