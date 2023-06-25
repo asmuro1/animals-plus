@@ -1072,7 +1072,7 @@ letter_event = {
     id = ani_plus.135
     is_triggered_only = yes
 
-    border = GFX_event_letter_frame_diplomacy*
+    border = GFX_event_letter_frame_diplomacy
 
     desc = DESC_135_SOCIETY_JOIN
 

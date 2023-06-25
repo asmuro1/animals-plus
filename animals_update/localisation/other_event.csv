@@ -114,6 +114,9 @@ DESC_131_DECADENCE_EVENT;decadence is a big part in the life of a cat;La décaden
 OPTA_131_DECADENCE_BONUSES;A low decadence for a stable realm;Un petit niveau de décadence pour une contré prospère;;;;;;;;;;;;x
 OPTB_131_DECADENCE_MALUS;Does it means that problems will come?;Est-ce que ça veut dire que des problèmes vont arriver?;;;;;;;;;;;;x
 OPTC_131_DECADENCE_INVASION;A big problems is near;Un gros problème arrive;;;;;;;;;;;;x
+DESC_135_SOCIETY_JOIN;I humbly accept you into my society;Tu as toutes les qualités attendu pour rejoindre ma société;;;;;;;;;;;;x
+OPT_135_SOCIETY_JOIN;I am a proper cat;Je suis maintenant un vrai chat;;;;;;;;;;;;x
+OPT_135_NO_JOIN;It is too soon to enter a society;C'est trop tôt pour rentrer dans une société;;;;;;;;;;;;x
 
 
 ##tooltips
