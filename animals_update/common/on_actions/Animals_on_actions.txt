@@ -116,3 +116,9 @@ on_society_failed_to_find_new_leader = {
 		ani_plus.132 #generating a new leader
 	}
 }
+
+on_character_ask_to_join_society = {
+	events = {
+		ani_plus.133 # letting cat enter one of their society 
+	}
+}

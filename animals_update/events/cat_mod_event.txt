@@ -949,8 +949,11 @@ character_event = {
 }
 
 ###society related event
-# event 132: on_society_failed_to_find_new_leader event
+# event 132: on action event - on_society_failed_to_find_new_leader event
+# event 133: on action event - on_character_ask_to_join_society
+# event 134 - 135: event chain: accepting player into the society
 
+#event 132
 character_event = {
     id = ani_plus.132
 
@@ -1018,5 +1021,73 @@ character_event = {
                 set_society_grandmaster = yes
             }
         }
+    }
+}
+
+#event 133
+character_event = {
+    id = ani_plus.133
+
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        FROM = {
+            OR = {
+                is_society = cat_intrigue_society
+                is_society = cat_prosperity_society
+                is_society = cat_reputation_society
+            }
+        }
+    }
+
+    immediate = {
+        ROOT = {
+            set_character_flag = society_join_block
+        }
+        FROM  = {
+            leader = {
+                character_event = { id = ani_plus.134 }
+            }
+        }
+    }
+}
+
+#event 134
+character_event = {
+    id = ani_plus.134
+
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        FROM = {
+            letter_event = { id = ani_plus.135 }
+        }
+    }
+}
+
+#event 135
+letter_event = {
+    id = ani_plus.135
+    is_triggered_only = yes
+
+    border = GFX_event_letter_frame_diplomacy*
+
+    desc = DESC_135_SOCIETY_JOIN
+
+    option = {
+        name = OPT_135_SOCIETY_JOIN
+
+        join_society = FROMFROMFROM
+    }
+    option = {
+        name = OPT_135_NO_JOIN
+
+        #nothing
+    }
+
+    after = {
+        clr_character_flag = society_join_block
     }
 }

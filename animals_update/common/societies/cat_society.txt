@@ -33,6 +33,9 @@ cat_intrigue_society = {
         }
     }
     can_join_society = {
+        hidden_tooltip = {
+            has_character_flag = society_join_block
+        }
         OR = {
             is_playable = yes
             religion = Cat_religion
@@ -278,6 +281,9 @@ cat_prosperity_society = {
         }
     }
     can_join_society = {
+        hidden_tooltip = {
+            has_character_flag = society_join_block
+        }
         OR = {
             is_playable = yes
             religion = Cat_religion
@@ -607,6 +613,9 @@ cat_reputation_society = {
         }
     }
     can_join_society = {
+        hidden_tooltip = {
+            has_character_flag = society_join_block
+        }
         OR = {
             is_playable = yes
             religion = Cat_religion
