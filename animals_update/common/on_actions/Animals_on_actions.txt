@@ -122,3 +122,9 @@ on_character_ask_to_join_society = {
 		ani_plus.133 # letting cat enter one of their society 
 	}
 }
+
+on_bi_yearly_pulse = {
+	events = {
+		ani_plus.136 #force cat ai to join one of its society 
+	}
+}

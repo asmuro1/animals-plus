@@ -952,6 +952,8 @@ character_event = {
 # event 132: on action event - on_society_failed_to_find_new_leader event
 # event 133: on action event - on_character_ask_to_join_society
 # event 134 - 135: event chain: accepting player into the society
+# event 136: on action event - force cat ai to join cat society (if he can)
+
 
 #event 132
 character_event = {
@@ -1089,5 +1091,46 @@ letter_event = {
 
     after = {
         clr_character_flag = society_join_block
+    }
+}
+
+#event 136
+character_event = {
+    id = ani_plus.136
+
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        is_in_society = no
+        ai = yes
+        OR = {
+            can_join_society = cat_intrigue_society
+            can_join_society = cat_prosperity_society
+            can_join_society = cat_reputation_society
+        }
+    }
+
+    immediate = {
+        random_list = {
+            1 = {
+                trigger = {
+                    can_join_society = cat_intrigue_society
+                }
+                join_society = cat_intrigue_society
+            }
+            1 = {
+                trigger = {
+                    can_join_society = cat_prosperity_society
+                }
+                join_society = cat_prosperity_society
+            }
+            1 = {
+                trigger = {
+                    can_join_society = cat_reputation_society
+                }
+                join_society = cat_reputation_society
+            }
+        }
     }
 }
