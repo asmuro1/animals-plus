@@ -974,54 +974,37 @@ character_event = {
 
 
     immediate = {
-        if = {
-            limit = {
-                ROOT = {
-                    is_society = cat_intrigue_society
-                }
-            }
-            create_character = {
-                random_traits = yes
-                female = 10
-                religion = Cat_religion
-                culture = black_cat
-            }
-
-            new_character = {
-                join_society = cat_intrigue_society
-                set_society_grandmaster = yes
-            }
+        create_character = {
+            random_traits = yes
+            female = 10
+            religion = Cat_religion
+            culture = black_cat
         }
-        else_if = {
+        
+        if = {
             limit = {
                 ROOT = {
                     is_society = cat_prosperity_society
                 }
             }
-            create_character = {
-                random_traits = yes
-                female = 10
-                religion = Cat_religion
+
+            new_character = {
                 culture = white_cat
             }
-
-            new_character = {
-                join_society = cat_prosperity_society
-                set_society_grandmaster = yes
-            }
         }
-        else = {
-            create_character = {
-                random_traits = yes
-                female = 10
-                religion = Cat_religion
+        else_if = {
+            limit = {
+                ROOT = {
+                    is_society = cat_reputation_society
+                }
+            }
+            new_character = {
                 culture = cat
             }
-
-            new_character = {
-                join_society = cat_reputation_society
-                set_society_grandmaster = yes
-            }
+        }
+        new_character = {
+            join_society = ROOT
+            set_society_grandmaster = yes
         }
     }
 }
