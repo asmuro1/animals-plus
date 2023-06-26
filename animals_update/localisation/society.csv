@@ -13,7 +13,6 @@ cat_intrigue_society_rank_4_male;Grandmaster;Grand maître;;;;;;;;;;;;x
 cat_intrigue_society_rank_4_female;Grandmaster;Grande maîtresse;;;;;;;;;;;;x
 society_no_intrigue_10;Do not have §Y10§! in intrigue: §R-10§!;N'a pas §Y10§! d'intrigue: §R-10§!;;;;;;;;;;;;x
 society_no_intrigue_5;Do not have §Y5§! in intrigue: §R-10§!;N'a pas §Y5§! d'intrigue: §R-10§!;;;;;;;;;;;;x
-cat_animal_society_currency;Cat's credit;Crédit de chat;;;;;;;;;;;;x
 
 ### prosperity society
 cat_prosperity_society;Prosperity society;Société de prospérité;;;;;;;;;;;;x
@@ -42,3 +41,12 @@ cat_reputation_society_rank_4_male;Grandmaster;Grand maître;;;;;;;;;;;;x
 cat_reputation_society_rank_4_female;Grandmaster;Grande maîtresse;;;;;;;;;;;;x
 society_no_marital_8;Do not have §Y8§! in martial: §R-10§!;N'a pas §Y8§! de martial: §R-10§!;;;;;;;;;;;;x
 society_no_diplomacy_8;Do not have §Y8§! in diplomacy: §R-10§!;N'a pas §Y8§! de diplomatie: §R-10§!;;;;;;;;;;;;x
+
+
+## common loc
+cat_animal_society_currency;Cat's credit;Crédit de chat;;;;;;;;;;;;x
+request_to_rank_up_cat_societies;Rank up;Augmenter son rang;;;;;;;;;;;;x
+request_to_rank_up_cat_societies_desc;rank up within cat society;Augmenter son rang dans une société de chat;;;;;;;;;;;;x
+IS_OLD_ENOUGH_CAT_TT;Has at least 5 years in current rank;A au moins 5 ans dans le rang actuel;;;;;;;;;;;;x
+DO_NOT_ALREADY_ASK_TO_RANK_UP_CAT_TT;Did not recently ask to rank up;N'a pas récemment demmander à monter de rang;;;;;;;;;;;;x
+HAVE_A_GRANDMASTER_CAT_TT;The society has a grandmaster;La société a un chef;;;;;;;;;;;;x
