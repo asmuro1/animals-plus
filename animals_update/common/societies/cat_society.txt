@@ -35,7 +35,6 @@ cat_intrigue_society = {
             is_playable = yes
             religion = Cat_religion
         }
-        is_in_society = no
     }
     can_join_society = {
         hidden_tooltip = {
@@ -292,7 +291,6 @@ cat_prosperity_society = {
             is_playable = yes
             religion = Cat_religion
         }
-        is_in_society = no
     }
     can_join_society = {
         hidden_tooltip = {
@@ -633,7 +631,6 @@ cat_reputation_society = {
             is_playable = yes
             religion = Cat_religion
         }
-        is_in_society = no
     }
     can_join_society = {
         hidden_tooltip = {

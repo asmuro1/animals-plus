@@ -444,6 +444,7 @@ society_decisions = {
         }
 
         effect = {
+            set_character_flag = cat_rank_up_possible
             society = {
                 leader = {
                     character_event = { id = ani_plus.137 random = 7 days = 1 }
