@@ -397,3 +397,58 @@ decisions = {
         }
     }
 }
+
+society_decisions = {
+    request_to_rank_up_cat_societies = {
+
+        hide_in_decisions_list = yes
+
+        potential = {
+            hidden_tooltip = {
+                NOT = {society_rank = 3 }
+                is_in_society = yes
+                society = {
+                    OR = {
+                        is_society = cat_intrigue_society
+                        is_society = cat_prosperity_society
+                        is_society = cat_reputation_society
+                    }
+                }
+                OR = {
+                    ai = no
+                    AND = {
+                        ai = yes
+                        society_can_rank_up = yes
+                    }
+                }
+            }
+        }
+        allow = {
+            custom_tooltip = {
+                text = IS_OLD_ENOUGH_CAT_TT
+                days_at_current_society_rank = 1805 # 5 years
+            }
+            
+            custom_tooltip = {
+                text = DO_NOT_ALREADY_ASK_TO_RANK_UP_CAT_TT
+                NOT = { has_character_flag = cat_rank_up_possible}
+            }
+
+            custom_tooltip = {
+                text = HAVE_A_GRANDMASTER_CAT_TT
+                any_society_member = {
+                    is_society_grandmaster = yes
+                    same_society_as = ROOT
+                }
+            }
+        }
+
+        effect = {
+            society = {
+                leader = {
+                    character_event = { id = ani_plus.137 random = 7 days = 1 }
+                }
+            }
+        }
+    }
+}

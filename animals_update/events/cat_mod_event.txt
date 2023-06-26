@@ -948,12 +948,13 @@ character_event = {
     }
 }
 
-###society related event
+###society related event (on_action event + rank up decision)
 # event 132: on action event - on_society_failed_to_find_new_leader event
 # event 133: on action event - on_character_ask_to_join_society
 # event 134 - 135: event chain: accepting player into the society
 # event 136: on action event - force cat ai to join cat society (if he can)
-
+# event 137: rank up event: pin society master to allow rank up
+# event 138: player notification to allow rank up
 
 #event 132
 character_event = {
@@ -1115,5 +1116,32 @@ character_event = {
                 join_society = cat_reputation_society
             }
         }
+    }
+}
+
+#event 137
+character_event = {
+    id = ani_plus.137
+
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        FROM = { letter_event = { id = ani_plus.138 } }
+    }
+}
+
+#event 138
+letter_event = {
+    id = ani_plus.138
+
+    border = GFX_event_letter_frame_diplomacy
+
+    desc = DESC_138_SOCIETY_RU
+
+    option = {
+        name = OPT_138_SOCIETY_RU
+
+        set_character_flag = cat_rank_up_possible
     }
 }

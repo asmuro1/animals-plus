@@ -9,7 +9,7 @@ cat_intrigue_society = {
     opinion_to_perceived_members = +1
     opinion_per_rank_above = +15
 
-    # society_rank_up_decision = to_do_nom_de_dec
+    society_rank_up_decision = request_to_rank_up_cat_societies
     sound = monastic_orders_indian_interface
     society_ranks_gfx = generic_ranks 
 
@@ -266,7 +266,7 @@ cat_prosperity_society = {
     opinion_to_perceived_members = 0
     opinion_per_rank_above = 15
 
-    # society_rank_up_decision = to_do_nom_de_dec
+    society_rank_up_decision = request_to_rank_up_cat_societies
     sound = monastic_orders_indian_interface
     society_ranks_gfx = generic_ranks
 
@@ -607,7 +607,7 @@ cat_reputation_society = {
     opinion_to_perceived_members = 0
     opinion_per_rank_above = 15
 
-    # society_rank_up_decision = to_do_nom_de_dec
+    society_rank_up_decision = request_to_rank_up_cat_societies
     sound = monastic_orders_indian_interface
     society_ranks_gfx = generic_ranks 
 
