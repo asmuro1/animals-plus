@@ -119,6 +119,8 @@ OPT_135_SOCIETY_JOIN;I am a proper cat;Je suis maintenant un vrai chat;;;;;;;;;;
 OPT_135_NO_JOIN;It is too soon to enter a society;C'est trop tôt pour rentrer dans une société;;;;;;;;;;;;x
 DESC_138_SOCIETY_RU;You will soon receive a quest to assure your promotion inside our society;Tu vas bientôt passer une épreuve pour avoir une promotion au sein de notre société;;;;;;;;;;;;x
 OPT_138_SOCIETY_RU;I am waiting for it;Je l'attend avec impatience;;;;;;;;;;;;x
+DESC_139_CONVERT;As your are living in a land of cat, you will become a cat;En vivant sur des terres de chats, tu es forcé de devenir un chat!;;;;;;;;;;;;x
+OPT_139_CONVERT;Do I have a choice?;Ai-je le choix?;;;;;;;;;;;;x
 
 
 ##tooltips

@@ -495,9 +495,11 @@ targetted_decisions = {
                 change_society_currency = -75
             }
 
-            custom_tooltip = {
-                text = CAT_TT_CONVERT_POWER
-                character_event = { id = ani_plus.139 }
+            ROOT = {
+                custom_tooltip = {
+                    text = CAT_TT_CONVERT_POWER
+                    character_event = { id = ani_plus.139 }
+                }
             }
         }
     }

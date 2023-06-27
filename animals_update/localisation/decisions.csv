@@ -208,9 +208,13 @@ adopt_cat_religion;Adopt cats' religion;Adopter la religion des chats;;;;;;;;;;;
 adopt_cat_religion_desc;As a cat, you can freely choose to convert yourself to the associated religion;En tant que chat, tu peux librement choisir de te convertir à la religion associé;;;;;;;;;;;;;x
 Force_cat_invasion;Force an invasion;Forcer une invasion de chat;;;;;;;;;;;;x
 Force_cat_invasion_desc;By using the religion influence, a cat can force an invasion and fastly changing province culture;En utilisant l'influence de sa religion, un chat peut facilement forcer une invasion et ainsi changer la culture local de la province;;;;;;;;;;;;x
+cat_society_general_convert_one;Transform someone into a cat;Transforme quelqu'un en chat;;;;;;;;;;;;x
+cat_society_general_convert_one_desc;By using society influence, you can force the conversion of someone into a cat;En utilisant l'influence de la société, il est possible de forcer la conversion en chat de quelqu'un;;;;;;;;;;;;x
+
 
 #TOOLTIPS
 CAT_TT_COOLDOWN;Cats are not in action;Aucun chat n'a de comportements étranges;;;;;;;;;;;;x
 CAT_NOT_PRESENT;The cats are unable to invade again;Les chats ne peuvent pas revenir;;;;;;;;;;;;x
 No_cat_invasion_tt;No cat is settled in the province;Aucun chat ne s'est installé dans la province;;;;;;;;;;;;x
 CREATED_HOLY_ORDER_CAT_TOOLTIP;[d_Invasive_order.GetName] created;[d_Invasive_order.GetName] sont créée;;;;;;;;;;;;x
+CAT_TT_CONVERT_POWER;Is changed into a cat;Est changé en chat;;;;;;;;;;;;x
