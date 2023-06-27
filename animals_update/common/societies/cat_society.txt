@@ -69,6 +69,7 @@ cat_intrigue_society = {
 
         }
         decisions = {
+            cat_society_general_convert_one
         }
     }
 
@@ -327,6 +328,8 @@ cat_prosperity_society = {
             
         }
         decisions = {
+            cat_society_general_convert_one
+
         }
     }
         
@@ -667,6 +670,7 @@ cat_reputation_society = {
             church_opinion = -5
         }
         decisions = {
+            cat_society_general_convert_one
         }
     }
         

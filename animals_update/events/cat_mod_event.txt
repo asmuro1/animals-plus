@@ -1146,3 +1146,24 @@ letter_event = {
 
     }
 }
+
+###society power events
+# event 139: notification for conversion quest
+
+
+#event 139
+character_event = {
+    id = ani_plus.139
+
+    is_triggered_only = yes
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = DESC_139_CONVERT
+
+    option = {
+        name = OPT_139_CONVERT
+
+        culture = FROMFROM
+    }
+}

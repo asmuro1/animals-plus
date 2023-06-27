@@ -453,3 +453,52 @@ society_decisions = {
         }
     }
 }
+
+targetted_decisions = {
+    cat_society_general_convert_one = {
+
+        is_high_prio = no
+        ai_check_interval = 50
+
+        filter = sub_realm
+        ai_target_filter = none
+
+        from_potential = {
+            is_in_society = yes
+            society = {
+                OR = {
+                    is_society = cat_intrigue_society
+                    is_society = cat_reputation_society
+                    is_society = cat_prosperity_society
+                }
+            }
+        }
+        potential = {
+            NOT = {
+                culture_group = cat_group
+            }
+        }
+
+        allow = {
+            FROM = {
+                society_rank = 1
+                society_currency = 75
+            }
+            ROOT = {
+                NOT = { culture_group = cat_group }
+                location = { culture_group = cat_group }
+            }
+        }
+
+        effect = {
+            FROM = {
+                change_society_currency = -75
+            }
+
+            custom_tooltip = {
+                text = CAT_TT_CONVERT_POWER
+                character_event = { id = ani_plus.139 }
+            }
+        }
+    }
+}
