@@ -616,3 +616,9 @@ cat_decadence_bonus = {
 	icon = 18
 	vassal_opinion = 25
 }
+
+cat_mod_society_intrigue_1 = {
+	icon = 23
+	defensive_plot_power_modifier = -0.10
+	health_penalty = -0.5
+}

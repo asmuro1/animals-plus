@@ -1149,7 +1149,7 @@ letter_event = {
 
 ###society power events
 # event 139: notification for conversion quest
-
+# event 140: notification for power 1 sabotage quest
 
 #event 139
 character_event = {
@@ -1165,5 +1165,25 @@ character_event = {
         name = OPT_139_CONVERT
 
         culture = FROMFROM
+    }
+}
+
+#event 140
+character_event = {
+    id = ani_plus.140
+
+    is_triggered_only = yes
+    
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = DESC_140_NOTIF_SABO1
+
+    option = {
+        name = OPT_140_NOTIF_SABO1
+
+        add_character_modifier = {
+            name = cat_mod_society_intrigue_1
+            years = 2
+        }
     }
 }

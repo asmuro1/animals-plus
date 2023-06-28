@@ -482,7 +482,7 @@ targetted_decisions = {
         allow = {
             FROM = {
                 society_rank = 1
-                society_currency = 75
+                society_currency = 150
             }
             ROOT = {
                 NOT = { culture_group = cat_group }
@@ -492,7 +492,7 @@ targetted_decisions = {
 
         effect = {
             FROM = {
-                change_society_currency = -75
+                change_society_currency = -150
             }
 
             ROOT = {
@@ -501,6 +501,80 @@ targetted_decisions = {
                     character_event = { id = ani_plus.139 }
                 }
             }
+        }
+    }
+
+    cat_society_sabo_power_A = {
+        is_high_prio = no
+
+        ai_check_interval = 6
+
+        filter = all
+        ai_target_filter = rivals
+
+        from_potential = {
+            is_in_society = yes
+            society = {
+                is_society = cat_intrigue_society
+            }
+            society_rank = 1
+        }
+        potential = {
+            NOT = {
+                has_character_modifier = cat_mod_society_intrigue_1
+            }
+        }
+
+        allow = {
+            FROM = {
+                OR = {
+                    AND = {
+                        society_currency = 120
+                        is_liege_or_above_of = ROOT
+                    }
+                    AND = {
+                        society_currency = 180
+                        is_vassal_or_below_of = ROOT
+                    }
+                    society_currency = 245
+                }
+            }
+            ROOT = {
+                NOT = {
+                    has_character_modifier = cat_mod_society_intrigue_1
+                }
+                is_adult = yes
+            }
+        }
+
+        effect = {
+            if = {
+                limit = {
+                    is_vassal_or_below_of = FROM
+                }
+                change_society_currency = -120
+            }
+            else_if = {
+                limit = {
+                    is_liege_or_above_of = FROM
+                }
+                change_society_currency = -180
+            }
+            else = {
+                change_society_currency = -245
+            }
+
+            character_event = { id = ani_plus.140 key = CAT_TT_SET_INTR1_NOTIF }
+        }
+
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0.05
+                always = yes
+            }
+            #other modifier will be done for quest
         }
     }
 }
