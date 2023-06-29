@@ -564,6 +564,17 @@ targetted_decisions = {
                 change_society_currency = -245
             }
 
+            random = {
+                chance = 25
+
+                cat_intrigue_duel_score = yes
+
+                custom_tooltip = {
+                    text = CAT_TT_PLOT_DISCOVERY
+                    set_character_flag = Discover_autor
+                }
+            }
+
             character_event = { id = ani_plus.140 key = CAT_TT_SET_INTR1_NOTIF }
         }
 

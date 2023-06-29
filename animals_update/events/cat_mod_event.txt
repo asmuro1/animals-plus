@@ -1185,5 +1185,22 @@ character_event = {
             name = cat_mod_society_intrigue_1
             years = 2
         }
+        
+        if = {
+            limit = {
+                has_character_flag = Discover_autor
+            }
+
+            custom_tooltip = {
+                text = CAT_TT_ORIGIN_FOUND
+            }
+            opinion = {
+                name = cat_intrigue_power_1_denounced
+                who = FROMFROM
+                years = 10
+            }
+
+            clr_character_flag = Discover_autor
+        }
     }
 }

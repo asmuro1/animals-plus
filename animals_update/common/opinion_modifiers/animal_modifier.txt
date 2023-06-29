@@ -68,3 +68,9 @@ eleph_forced_conversion = {
     years = 3
     crime = yes
 }
+
+cat_intrigue_power_1_denounced = {
+    opinion = -35
+    crime = yes
+    years = 10
+}
