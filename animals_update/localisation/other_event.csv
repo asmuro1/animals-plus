@@ -121,6 +121,8 @@ DESC_138_SOCIETY_RU;You will soon receive a quest to assure your promotion insid
 OPT_138_SOCIETY_RU;I am waiting for it;Je l'attend avec impatience;;;;;;;;;;;;x
 DESC_139_CONVERT;As your are living in a land of cat, you will become a cat;En vivant sur des terres de chats, tu es forcé de devenir un chat!;;;;;;;;;;;;x
 OPT_139_CONVERT;Do I have a choice?;Ai-je le choix?;;;;;;;;;;;;x
+DESC_140_NOTIF_SABO1;You just received a bad gift;Tu viens de recevoir une mauvaise nouvelle;;;;;;;;;;;;x
+OPT_140_NOTIF_SABO1;Why do i feel so bad?;Pourquoi est-ce que je me sens mal?;;;;;;;;;;;;x
 
 
 ##tooltips
@@ -135,3 +137,4 @@ CAT_TT_CONSTRUCT_THEIR_TRIBE;The cats build their own tribe;Les chats construise
 CAT_TT_DECLARE_WAR;The cats start a revolt;Les chats se rebellent;;;;;;;;;;;;x
 CAT_TT_HUNTER_INJURED;Many adult are injured by ferocious cats;Beaucoup d'adulte sont blessés par des chats enragé;;;;;;;;;;;;x
 CAT_DECADENCE_INVASION;A decadence invasion begins;Une révolte de décadence commence;;;;;;;;;;;;x
+CAT_TT_ORIGIN_FOUND;I should be warry of [Fromfrom.GetFirstName], he must be the sender;Je devrais me méfier de [Fromfrom.GetFirstName], il est trop louche dans cette histoire;;;;;;;;;;;;x

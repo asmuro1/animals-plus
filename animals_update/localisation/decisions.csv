@@ -210,6 +210,8 @@ Force_cat_invasion;Force an invasion;Forcer une invasion de chat;;;;;;;;;;;;x
 Force_cat_invasion_desc;By using the religion influence, a cat can force an invasion and fastly changing province culture;En utilisant l'influence de sa religion, un chat peut facilement forcer une invasion et ainsi changer la culture local de la province;;;;;;;;;;;;x
 cat_society_general_convert_one;Transform someone into a cat;Transforme quelqu'un en chat;;;;;;;;;;;;x
 cat_society_general_convert_one_desc;By using society influence, you can force the conversion of someone into a cat;En utilisant l'influence de la société, il est possible de forcer la conversion en chat de quelqu'un;;;;;;;;;;;;x
+cat_society_sabo_power_A;Give a bad omen;Envoyer un mauvais présage;;;;;;;;;;;;x
+cat_society_sabo_power_A_desc;As an intrigue cat, you can give a bad omen;En tant que chat intriguant, il est possible de donner un mauvais présage à quelqu'un;;;;;;;;;;;;x
 
 
 #TOOLTIPS
@@ -218,3 +220,5 @@ CAT_NOT_PRESENT;The cats are unable to invade again;Les chats ne peuvent pas rev
 No_cat_invasion_tt;No cat is settled in the province;Aucun chat ne s'est installé dans la province;;;;;;;;;;;;x
 CREATED_HOLY_ORDER_CAT_TOOLTIP;[d_Invasive_order.GetName] created;[d_Invasive_order.GetName] sont créée;;;;;;;;;;;;x
 CAT_TT_CONVERT_POWER;Is changed into a cat;Est changé en chat;;;;;;;;;;;;x
+CAT_TT_SET_INTR1_NOTIF;Receive a bad omen;Reçoit un mauvais présage;;;;;;;;;;;;x
+CAT_TT_PLOT_DISCOVERY;be discovered;être découvert;;;;;;;;;;;;x

@@ -187,6 +187,10 @@ eleph_forced_conversion;Forced conversion;Conversion forcé;;;;;;;;;;;;x
 cat_no_decadence_penalty_opinion;Public decadence;Décadance publique;;;;;;;;;;;;x
 cat_no_decadence_penalty_revolt;Popular decadence;Décadance populaire;;;;;;;;;;;;x
 cat_decadence_bonus;Popular cat;Chat populaire;;;;;;;;;;;;x
+cat_mod_society_intrigue_1;bad omen;Mauvais présage;;;;;;;;;;;;x
+
+#opinion modifier
+cat_intrigue_power_1_denounced;Bad omen creator;Créateur de mauvais présages;;;;;;;;;;;;x
 
 #holding modifier
 cat_controlled_holding;Controlled by cats;Contrôlé par des chats;;;;;;;;;;;;x
