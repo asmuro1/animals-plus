@@ -13,7 +13,10 @@ temple = {
 		conditional_tooltip = {
 			trigger = { FROM = { culture_group = panda_group } }
 		}
-		has_temple = no
+		OR = {
+			has_temple = no
+			NOT = { FROM = {culture_group = panda_group } }
+		}
 	}
 }
 
