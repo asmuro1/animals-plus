@@ -504,6 +504,7 @@ targetted_decisions = {
         }
     }
 
+
     cat_society_sabo_power_A = {
         is_high_prio = no
 
@@ -582,10 +583,68 @@ targetted_decisions = {
             factor = 1
 
             modifier = {
+                factor = 0
+                
+                NOT = { is_foe = FROM }
+            }
+            modifier = {
                 factor = 0.05
                 always = yes
             }
             #other modifier will be done for quest
+        }
+    }
+
+    cat_start_epidemy_power_B = {
+        is_high_prio = yes
+
+        ai_check_interval = 9
+
+        only_rulers = yes
+        filter = sub_realm
+        ai_target_filter = sub_realm
+
+        from_potential = {
+            is_in_society = yes
+            society = {
+                is_society = car_intrigue_society
+            }
+            society_rank = 2
+        }
+        potential = {
+            location = {
+                has_epidemic = no
+            }
+        }
+        allow = {
+            FROM = {
+                society_currency = 300
+            }
+            ROOT = {
+                location = {
+                    has_epidemic = no
+                }
+            }
+        }
+        effect = {
+            custom_tooltip = {
+                text = CAT_TT_START_EPIDEMY
+                eleph_start_epidemy_effect = yes
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+                
+                NOT = { is_foe = FROM }
+            }
+            modifier = {
+                factor = 0.05
+                always = yes
+            }
         }
     }
 }

@@ -82,6 +82,7 @@ cat_intrigue_society = {
             intrigue = 2
         }
         decisions = {
+            cat_start_epidemy_power_B
         }
     }
 
