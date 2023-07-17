@@ -607,7 +607,7 @@ targetted_decisions = {
         from_potential = {
             is_in_society = yes
             society = {
-                is_society = car_intrigue_society
+                is_society = cat_intrigue_society
             }
             society_rank = 2
         }
@@ -629,7 +629,9 @@ targetted_decisions = {
         effect = {
             custom_tooltip = {
                 text = CAT_TT_START_EPIDEMY
-                eleph_start_epidemy_effect = yes
+                location = {
+                    eleph_start_epidemy_effect = yes
+                }
             }
         }
 
