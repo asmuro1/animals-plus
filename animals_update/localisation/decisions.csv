@@ -214,6 +214,8 @@ cat_society_sabo_power_A;Give a bad omen;Envoyer un mauvais présage;;;;;;;;;;;;x
 cat_society_sabo_power_A_desc;As an intrigue cat, you can give a bad omen;En tant que chat intriguant, il est possible de donner un mauvais présage à quelqu'un;;;;;;;;;;;;x
 cat_start_epidemy_power_B;Start an epidemy;Débuter une épidémie;;;;;;;;;;;;x
 cat_start_epidemy_power_B_desc;As an intrigue cat, it is possible to start an apidemy where a target character live;En tant que chat intriguant, il est possible de débuter une épidémie à l'emplacement d'un personnage;;;;;;;;;;;;x
+cat_revolt_risk_power_C;Sabotage county;Saboter le comter;;;;;;;;;;;;x
+cat_revolt_risk_power_C_desc;You can force a discord between peasant and their liege;Forcer une discorde entre les paysans d'une province et de leur seigneur liege;;;;;;;;;;;;x
 
 #TOOLTIPS
 CAT_TT_COOLDOWN;Cats are not in action;Aucun chat n'a de comportements étranges;;;;;;;;;;;;x
@@ -224,3 +226,4 @@ CAT_TT_CONVERT_POWER;Is changed into a cat;Est changé en chat;;;;;;;;;;;;x
 CAT_TT_SET_INTR1_NOTIF;Receive a bad omen;Reçoit un mauvais présage;;;;;;;;;;;;x
 CAT_TT_PLOT_DISCOVERY;be discovered;être découvert;;;;;;;;;;;;x
 CAT_TT_START_EPIDEMY;An epidemy start;Une épidémie commence;;;;;;;;;;;;x
+CAT_TT_DID_NOT_SABOTAGE;The county isn't already sabotaged;Le comté n'est pas saboté;;;;;;;;;;;;x
