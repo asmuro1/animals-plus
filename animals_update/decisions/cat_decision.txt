@@ -183,6 +183,70 @@ title_decisions = {
             }
         }
     }
+
+    cat_revolt_risk_power_C = {
+        is_high_prio = yes
+        is_in_society = yes
+        
+        ai_check_interval = 9
+
+        filter = realm_owned
+        ai_target_filter = sub_realm_owned
+
+        from_potential = {
+            is_in_society = yes
+            society = {
+                is_society = cat_intrigue_society
+            }
+            society_rank = 2
+        }
+        potential = {
+            tier = COUNT
+            same_realm = FROM
+            NOT = {
+                location = {
+                    has_province_modifier = eleph_province_hostility
+                }
+            }
+        }
+
+        trigger = {
+            FROM = {
+                society_currency = 360
+            }
+            location = {
+                custom_tooltip = {
+                    text = CAT_TT_DID_NOT_SABOTAGE
+                    NOT = {
+                        has_province_modifier = eleph_province_hostility
+                    }
+                }
+            }
+        }
+        effect = {
+            location = {
+                add_province_modifier = eleph_province_hostility
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+                
+                NOT = {
+                    holder_scope = {
+                        is_foe = FROM
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.05
+                always = yes
+            }
+        }
+    }
 }
 
 decisions = {
