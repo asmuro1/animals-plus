@@ -219,6 +219,19 @@ cat_start_epidemy_power_B_power_desc;As an intrigue cat, it is possible to start
 cat_revolt_risk_power_C;Sabotage county;Saboter le comter;;;;;;;;;;;;x
 cat_revolt_risk_power_C_desc;You can force a discord between peasant and their liege;Forcer une discorde entre les paysans d'une province et de leur seigneur liege;;;;;;;;;;;;x
 cat_revolt_risk_power_C_power_desc;You can force a discord between peasant and their liege;Forcer une discorde entre les paysans d'une province et de leur seigneur liege;;;;;;;;;;;;x
+cat_destroy_buildings_power_D;Sabotage a building;Saboter un bâtiment;;;;;;;;;;;;x
+cat_destroy_buildings_power_D_desc;You can sabotage the settlement and destroy a random building;Il est possible de saboter la cité et ainsi détruire un bâtiment aléatoire;;;;;;;;;;;;x
+cat_destroy_buildings_power_D_power_desc;With your influence, it became possible to destroy a settlement development;Avec l'influence de la société, il est possible de détruire le développement d'un lieu de vie;;;;;;;;;;;;x
+cat_make_incapable_power_E;Make incapable;Rendre incapable;;;;;;;;;;;;x
+cat_make_incapable_power_E_desc;Make him incapable;Le rendre incapable;;;;;;;;;;;;x
+cat_make_incapable_power_E_power_desc;By using influence, it is possible to make non-cat incapable;Grâce à l'influence dans la société, il est maintenant possible de rendre incapable d'autres personnes non-chat;;;;;;;;;;;;x
+cat_charm_someone_power_F;charm someone;Séduire quelqu'un;;;;;;;;;;;;x
+cat_charm_someone_power_F_desc;You can charm only one person, making him loyal;Il n'est possible de ne charmer qu'une seule personne, pour le rendre loyal;;;;;;;;;;;;x
+cat_charm_someone_power_F_power_desc;A chief must have at least one faithful vassal.;Un chef doit avoir au moins un fidèle sujet.;;;;;;;;;;;;x
+cat_banish_someone_power_G;Banish someone from society;Bannir quelqu'un de la société;;;;;;;;;;;;x
+cat_banish_someone_power_G_desc;Banish someone definetly from the cat society;Bannir quelqu'un définitivement d'une société de chat;;;;;;;;;;;;x
+cat_banish_someone_power_G_power_desc;As the society chief, it is possible to banish someone from the cat society;En tant que chef, il est possible de bannir quelqu'un de la société;;;;;;;;;;;;x
+
 
 #TOOLTIPS
 CAT_TT_COOLDOWN;Cats are not in action;Aucun chat n'a de comportements étranges;;;;;;;;;;;;x
