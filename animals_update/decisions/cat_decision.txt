@@ -234,6 +234,9 @@ title_decisions = {
                     years = 1
                 }
             }
+            FROM = {
+                change_society_currency = -360
+            }
         }
 
         ai_will_do = {
@@ -698,6 +701,9 @@ targetted_decisions = {
             }
         }
         effect = {
+            FROM = {
+                change_society_currency = -300
+            }
             custom_tooltip = {
                 text = CAT_TT_START_EPIDEMY
                 location = {
@@ -719,5 +725,74 @@ targetted_decisions = {
                 always = yes
             }
         }
+    }
+}
+
+settlement_decisions = {
+    cat_destroy_buildings_power_D = {
+        is_high_prio = no
+
+        ai_check_interval = 10
+
+        only_rulers = yes
+        filter = realm_owned
+        ai_target_filter = vassal_owned
+
+        from_potential = {
+            is_in_society = yes
+            society {
+                is_society = cat_intrigue_society
+            }
+            society_rank = 3
+        }
+        potential = {
+            always = yes
+        }
+        allow = {
+            FROM = {
+                society_currency = 700
+            }
+            has_any_building = yes
+        }
+
+        effect = {
+            custom_tooltip = {
+                text = CAT_TT_BUILDING_SABOTAGE
+                destroy_random_building = yes
+            }
+            holder_scope = {
+                show_scope_change = no
+                opinion = {
+                    name = cat_intrigue_angry
+                    who = FROM
+                    years = 8
+                }
+                letter_event = {
+                    id = ani_plus.141
+                    days = 1
+                }
+            }
+            FROM = {
+                change_society_currency = -700
+            }
+        }
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+                
+                NOT = {
+                    holder_scope = {
+                        is_foe = FROM
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.015
+                always = yes
+            }
+        }
+
     }
 }
