@@ -1150,6 +1150,7 @@ letter_event = {
 ###society power events
 # event 139: notification for conversion quest
 # event 140: notification for power 1 sabotage quest
+# event 141: notification for holding destroyed
 
 #event 139
 character_event = {
@@ -1201,6 +1202,26 @@ character_event = {
             }
 
             clr_character_flag = Discover_autor
+        }
+    }
+}
+
+#event 141
+letter_event = {
+    id = ani_plus.141
+
+    is_triggered_only = yes
+
+    border = GFX_event_letter_frame_diplomacy
+    desc = DESC_141_NOTIF_BUILDING_DESTROYED
+
+    option = {
+        name = OPT_141_NOTIF_OPTION
+
+        opinion = {
+            name = cat_intrigue_angry
+            who = FROMFROM
+            years = 8
         }
     }
 }
