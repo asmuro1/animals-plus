@@ -123,6 +123,8 @@ DESC_139_CONVERT;As your are living in a land of cat, you will become a cat;En v
 OPT_139_CONVERT;Do I have a choice?;Ai-je le choix?;;;;;;;;;;;;x
 DESC_140_NOTIF_SABO1;You just received a bad gift;Tu viens de recevoir une mauvaise nouvelle;;;;;;;;;;;;x
 OPT_140_NOTIF_SABO1;Why do i feel so bad?;Pourquoi est-ce que je me sens mal?;;;;;;;;;;;;x
+DESC_141_NOTIF_BUILDING_DESTROYED;Someone just sabotaged [From.GetBaseName].!;Quelqu'un vient de provoquer la destruction d'un de mes bâtiment à [From.GetBaseName].;;;;;;;;;;;;x
+OPT_141_NOTIF_OPTION;I know who is behind it;Je sais qui est dérrière cet accident!;;;;;;;;;;;;x
 
 
 ##tooltips

@@ -220,7 +220,7 @@ cat_revolt_risk_power_C;Sabotage county;Saboter le comter;;;;;;;;;;;;x
 cat_revolt_risk_power_C_desc;You can force a discord between peasant and their liege;Forcer une discorde entre les paysans d'une province et de leur seigneur liege;;;;;;;;;;;;x
 cat_revolt_risk_power_C_power_desc;You can force a discord between peasant and their liege;Forcer une discorde entre les paysans d'une province et de leur seigneur liege;;;;;;;;;;;;x
 cat_destroy_buildings_power_D;Sabotage a building;Saboter un bâtiment;;;;;;;;;;;;x
-cat_destroy_buildings_power_D_desc;You can sabotage the settlement and destroy a random building;Il est possible de saboter la cité et ainsi détruire un bâtiment aléatoire;;;;;;;;;;;;x
+cat_destroy_buildings_power_D_desc;You can sabotage the settlement and destroy a random building;Il est possible de saboter le lieu et ainsi détruire un bâtiment aléatoire;;;;;;;;;;;;x
 cat_destroy_buildings_power_D_power_desc;With your influence, it became possible to destroy a settlement development;Avec l'influence de la société, il est possible de détruire le développement d'un lieu de vie;;;;;;;;;;;;x
 cat_make_incapable_power_E;Make incapable;Rendre incapable;;;;;;;;;;;;x
 cat_make_incapable_power_E_desc;Make him incapable;Le rendre incapable;;;;;;;;;;;;x
@@ -243,3 +243,4 @@ CAT_TT_SET_INTR1_NOTIF;Receive a bad omen;Reçoit un mauvais présage;;;;;;;;;;;;x
 CAT_TT_PLOT_DISCOVERY;be discovered;être découvert;;;;;;;;;;;;x
 CAT_TT_START_EPIDEMY;An epidemy start;Une épidémie commence;;;;;;;;;;;;x
 CAT_TT_DID_NOT_SABOTAGE;The county isn't already sabotaged;Le comté n'est pas saboté;;;;;;;;;;;;x
+CAT_TT_BUILDING_SABOTAGE;Destroy a random building;Détruit un bâtiment aléatoire;;;;;;;;;;;;x
