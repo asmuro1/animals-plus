@@ -74,3 +74,8 @@ cat_intrigue_power_1_denounced = {
     crime = yes
     years = 10
 }
+
+cat_intrigue_angry = {
+    opinion = -90
+    crime = yes
+}
