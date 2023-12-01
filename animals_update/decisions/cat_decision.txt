@@ -185,8 +185,7 @@ title_decisions = {
     }
 
     cat_revolt_risk_power_C = {
-        is_high_prio = yes
-        is_in_society = yes
+        #is_high_prio = yes
         
         ai_check_interval = 9
 
@@ -201,8 +200,13 @@ title_decisions = {
             society_rank = 2
         }
         potential = {
-            tier = COUNT
-            same_realm = FROM
+            OR = {
+                tier = COUNT
+                tier = BARON
+            }
+            holder_scope = {
+                same_realm = FROM
+            }
             NOT = {
                 location = {
                     has_province_modifier = eleph_province_hostility
@@ -210,7 +214,7 @@ title_decisions = {
             }
         }
 
-        trigger = {
+        allow = {
             FROM = {
                 society_currency = 360
             }
@@ -225,7 +229,10 @@ title_decisions = {
         }
         effect = {
             location = {
-                add_province_modifier = eleph_province_hostility
+                add_province_modifier = {
+                    name = eleph_province_hostility
+                    years = 1
+                }
             }
         }
 
@@ -242,7 +249,7 @@ title_decisions = {
                 }
             }
             modifier = {
-                factor = 0.05
+                factor = 0.025
                 always = yes
             }
         }
