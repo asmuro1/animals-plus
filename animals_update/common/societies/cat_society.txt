@@ -95,6 +95,8 @@ cat_intrigue_society = {
             intrigue = 3
         }
         decisions = {
+            cat_destroy_buildings_power_D
+            cat_make_incapable_power_E
         }
     }
 
@@ -106,6 +108,8 @@ cat_intrigue_society = {
             intrigue = 5
         }
         decisions = {
+            cat_charm_someone_power_F
+            cat_banish_someone_power_G
         }
     }
 
