@@ -50,3 +50,4 @@ request_to_rank_up_cat_societies_desc;rank up within cat society;Augmenter son r
 IS_OLD_ENOUGH_CAT_TT;Has at least 5 years in current rank;A au moins 5 ans dans le rang actuel;;;;;;;;;;;;x
 DO_NOT_ALREADY_ASK_TO_RANK_UP_CAT_TT;Did not recently ask to rank up;N'a pas récemment demmander à monter de rang;;;;;;;;;;;;x
 HAVE_A_GRANDMASTER_CAT_TT;The society has a grandmaster;La société a un chef;;;;;;;;;;;;x
+CAT_TT_BANNED_FROM_SOCIETY;Did not get banned from the society;N'a pas été déjà banni de la société;;;;;;;;;;;;x
