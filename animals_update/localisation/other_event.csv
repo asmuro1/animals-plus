@@ -125,6 +125,8 @@ DESC_140_NOTIF_SABO1;You just received a bad gift;Tu viens de recevoir une mauva
 OPT_140_NOTIF_SABO1;Why do i feel so bad?;Pourquoi est-ce que je me sens mal?;;;;;;;;;;;;x
 DESC_141_NOTIF_BUILDING_DESTROYED;Someone just sabotaged [From.GetBaseName].!;Quelqu'un vient de provoquer la destruction d'un de mes bâtiment à [From.GetBaseName].;;;;;;;;;;;;x
 OPT_141_NOTIF_OPTION;I know who is behind it;Je sais qui est dérrière cet accident!;;;;;;;;;;;;x
+DESC_142_BECOME_INCAPABLE;I don't feel good, something amiss.;Ces derniers jours, je ne me sens pas bien.;;;;;;;;;;;;x
+OPT_142_BECOME_INCAPABLE;It must be those cat, they are everywhere;Ce doit être ces chats là, ils sont partotu!;;;;;;;;;;;;x
 
 
 ##tooltips

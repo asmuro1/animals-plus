@@ -244,3 +244,6 @@ CAT_TT_PLOT_DISCOVERY;be discovered;être découvert;;;;;;;;;;;;x
 CAT_TT_START_EPIDEMY;An epidemy start;Une épidémie commence;;;;;;;;;;;;x
 CAT_TT_DID_NOT_SABOTAGE;The county isn't already sabotaged;Le comté n'est pas saboté;;;;;;;;;;;;x
 CAT_TT_BUILDING_SABOTAGE;Destroy a random building;Détruit un bâtiment aléatoire;;;;;;;;;;;;x
+CAT_TT_BECOMING_INCAPABLE;become incapable;devient incapable;;;;;;;;;;;;x
+
+
