@@ -1152,6 +1152,7 @@ letter_event = {
 # event 140: notification for power 1 sabotage quest
 # event 141: notification for holding destroyed
 # event 142: becoming incapable
+# event 143: banished from cat society (power G of each society)
 
 #event 139
 character_event = {
@@ -1242,5 +1243,20 @@ character_event = {
         name = OPT_142_BECOME_INCAPABLE
 
         add_trait = incapable
+    }
+}
+
+#event 143
+letter_event = {
+    id = ani_plus.143
+
+    is_triggered_only = yes
+    border = GFX_event_letter_frame_diplomacy
+    desc = DESC_143_NOTIF_GETTING_BANISHED
+
+    option = {
+        name = OPT_143_GETTING_BANISHED
+
+        leave_society = yes
     }
 }
