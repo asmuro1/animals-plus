@@ -79,3 +79,9 @@ cat_intrigue_angry = {
     opinion = -90
     crime = yes
 }
+
+cat_intrigue_charmed = {
+    opinion = 100
+    obedient = yes
+    months = 1200
+}
