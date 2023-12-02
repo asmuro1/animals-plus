@@ -355,86 +355,11 @@ cat_prosperity_society = {
         }
     }
 
-    member_score_per_attribute = 0
+    member_score_per_attribute = 5
     member_score_per_rank = 35
     member_score = {
         value = 10
 
-        additive_modifier = {
-            learning = 2
-
-            value = 10
-        }
-        additive_modifier = {
-            learning = 4
-
-            value = 10
-        }
-        additive_modifier = {
-            learning = 6
-
-            value = 10
-        }
-        additive_modifier = {
-            learning = 8
-
-            value = 10
-        }
-        additive_modifier = {
-            learning = 10
-
-            value = 10
-        }
-        additive_modifier = {
-            learning = 12
-
-            value = 10
-        }
-        additive_modifier = {
-            learning = 14
-
-            value = 10
-        }
-        additive_modifier = {
-            learning = 16
-
-            value = 10
-        }
-        additive_modifier = {
-            learning = 18
-
-            value = 10
-        }
-        additive_modifier = {
-            learning = 20
-
-            value = 10
-        }
-        additive_modifier = {
-            learning = 22
-
-            value = 10
-        }
-        additive_modifier = {
-            learning = 24
-
-            value = 10
-        }
-        additive_modifier = {
-            learning = 26
-
-            value = 10
-        }
-        additive_modifier = {
-            learning = 28
-
-            value = 10
-        }
-        additive_modifier = {
-            learning = 30
-
-            value = 10
-        }
         additive_modifier = {
             stewardship = 2
 
