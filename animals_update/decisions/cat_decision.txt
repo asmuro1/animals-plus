@@ -754,6 +754,7 @@ targetted_decisions = {
             }
             ROOT = {
                 is_incapable = no
+                is_society_grandmaster = no
             }
         }
 
@@ -808,6 +809,17 @@ targetted_decisions = {
                     }
                 }
             }
+            modifier = {
+                factor = 0
+
+                is_in_society = yes
+                FROM = {
+                    is_society_grandmaster = yes
+                }
+                society = {
+                    is_society = cat_intrigue_society
+                }
+            }
         }
     }
 
@@ -847,6 +859,64 @@ targetted_decisions = {
                     name = cat_intrigue_charmed
                     who = FROM
                     years = 1000
+                }
+            }
+        }
+    }
+
+    cat_banish_someone_power_G = {
+        is_high_prio = no
+        ai_check_interval = 13
+
+        is_in_society = yes
+        filter = society
+        ai_target_filter = society
+
+        from_potential = {
+            is_in_society = yes
+            society = {
+                is_society = cat_intrigue_society
+            }
+            society_rank = 4
+        }
+        potential = {
+            is_in_society = yes
+            society = {
+                is_society = cat_intrigue_society
+            }
+            NOT = {
+                society_rank = 4
+                }
+        }
+        allow = {
+            FROM = {
+                society_currency = 2500
+            }
+        }
+
+        effect = {
+            FROM = {
+                change_society_currency = -2500
+            }
+            ROOT = {
+                custom_tooltip = {
+                    text = CAT_TT_BANISH_FROM_SOCIETY
+
+                    set_character_flag = CAT_BANNED_FROM_INTRIGUE
+                    letter_event = { id = ani_plus.143 }
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+                
+                NOT = {
+                    holder_scope = {
+                        is_foe = FROM
+                    }
                 }
             }
         }
