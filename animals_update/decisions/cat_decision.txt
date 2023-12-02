@@ -185,7 +185,7 @@ title_decisions = {
     }
 
     cat_revolt_risk_power_C = {
-        #is_high_prio = yes
+        is_high_prio = no
         
         ai_check_interval = 9
 
@@ -670,7 +670,7 @@ targetted_decisions = {
     }
 
     cat_start_epidemy_power_B = {
-        is_high_prio = yes
+        is_high_prio = no
 
         ai_check_interval = 9
 
@@ -723,6 +723,87 @@ targetted_decisions = {
             modifier = {
                 factor = 0.05
                 always = yes
+            }
+        }
+    }
+
+    cat_make_incapable_power_E = {
+        is_high_prio = no
+        ai_check_interval = 12
+
+        is_in_society = yes
+        filter = all
+        ai_target_filter = rivals
+
+        from_potential = {
+            is_in_society = yes
+            society = {
+                is_society = cat_intrigue_society
+            }
+            society_rank = 3
+        }
+        potential = {
+            is_incapable = no
+        }
+        allow = {
+            FROM = {
+                society_currency = 700
+            }
+            ROOT = {
+                is_incapable = no
+            }
+        }
+
+        effect = {
+            FROM = {
+                change_society_currency = -700
+            }
+            ROOT = {
+                random_list = {
+                    50 = {
+                        modifier = {
+                            factor = 0.5
+                            intrigue >= 20
+                        }
+                        modifier = {
+                            factor = 1.5
+                            intrigue < 10
+                        }
+                        modifier = {
+                            factor= 2
+                            intrigue < 5
+                        }
+                        custom_tooltip = {
+                            text = CAT_TT_BECOMING_INCAPABLE
+                            character_event = { id = ani_plus.142 days = 1  }
+                        }
+                    }
+
+                    50 = {
+                        modifier = {
+                            factor = 0
+                            intrigue < FROM
+                        }
+                        modifier = {
+                            factor = 0.3
+                            intrigue == FROM
+                        }
+                    }
+                }
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+                
+                NOT = {
+                    holder_scope = {
+                        is_foe = FROM
+                    }
+                }
             }
         }
     }
@@ -793,6 +874,5 @@ settlement_decisions = {
                 always = yes
             }
         }
-
     }
 }
