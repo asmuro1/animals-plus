@@ -650,7 +650,10 @@ targetted_decisions = {
                 }
             }
 
-            character_event = { id = ani_plus.140 key = CAT_TT_SET_INTR1_NOTIF }
+            custom_tooltip = {
+                text = CAT_TT_SET_INTR1_NOTIF
+                character_event = { id = ani_plus.140 }
+            }
         }
 
         ai_will_do = {
@@ -803,6 +806,47 @@ targetted_decisions = {
                     holder_scope = {
                         is_foe = FROM
                     }
+                }
+            }
+        }
+    }
+
+    cat_charm_someone_power_F = {
+        is_high_prio = no
+        ai_check_interval = 100
+
+        filter = all
+        ai_target_filter = none
+
+        from_potential = {
+            is_in_society = yes
+            society = {
+                is_society = cat_intrigue_society
+            }
+            society_rank = 4
+        }
+        potential = {
+            ai = yes
+        }
+        allow = {
+            FROM = {
+                society_currency = 1234
+                NOT = {
+                    has_character_flag = CAT_CHARMED_SOMEONE
+                }
+            }
+        }
+
+        effect = {
+            FROM = {
+                change_society_currency = -1234
+                set_character_flag = CAT_CHARMED_SOMEONE
+            }
+            ROOT = {
+                opinion = {
+                    name = cat_intrigue_charmed
+                    who = FROM
+                    years = 1000
                 }
             }
         }
