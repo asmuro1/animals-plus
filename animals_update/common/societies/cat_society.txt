@@ -39,8 +39,14 @@ cat_intrigue_society = {
     can_join_society = {
         hidden_tooltip = {
             NOR  = { 
-                has_character_flag = society_join_block
+                # has_character_flag = CAT_BANNED_FROM_INTRIGUE
                 is_in_society = yes
+            }
+        }
+        NOT = {
+            custom_tooltip = {
+                text = CAT_TT_BANNED_FROM_SOCIETY
+                has_character_flag = CAT_BANNED_FROM_INTRIGUE
             }
         }
         OR = {
