@@ -634,3 +634,8 @@ cat_mod_society_prosperity_epidemic_defense = {
 	icon = 8
 	disease_defence = 0.4
 }
+cat_mod_increased_wealth_province = {
+	icon = 6
+	local_tax_modifier = 0.15
+	city_tax_modifier = 0.20
+}

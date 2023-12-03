@@ -259,6 +259,72 @@ title_decisions = {
         }
     }
 
+    cat_wealth_from_county_power_C = {
+        is_high_prio = no
+
+        ai_check_interval = 10
+
+        is_in_society = yes
+        filter = realm_owned
+        ai_target_filter = owned
+
+        from_potential = {
+            is_in_society = yes
+            society = {
+                is_society = cat_prosperity_society
+            }
+            society_rank = 2
+        }
+        potential = {
+            tier = COUNT
+            holder_scope = {
+                same_realm = FROM
+            }
+
+            OR = {
+                FROM = { ai = no }
+                holder_scope = { character = FROM }
+            }
+
+            NOT = {
+                location = {
+                    has_province_modifier = cat_mod_increased_wealth_province
+                }
+            }
+        }
+        allow = {
+            FROM = {
+                society_currency = 360
+            }
+            location = {
+                show_scope_change = no
+                NOT = { has_province_modifier = cat_mod_increased_wealth_province }
+            }
+        }
+        effect = {
+            FROM = {
+                change_society_currency = -360
+            }
+            location = {
+                show_scope_change = no
+                add_province_modifier = {
+                    name = cat_mod_increased_wealth_province
+                    months = 25
+                }
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+
+            additive_modifier = {
+                value = 0.3
+
+                wealth < 0
+            }
+        }
+    }
+
     cat_county_epidemic_resistance_power_D = {
         is_high_prio = no
 
@@ -280,13 +346,13 @@ title_decisions = {
             tier = COUNT
             OR = {
                 AND = {
-                    ai = yes
+                    FROM = { ai = yes }
                     holder_scope = {
                         character = FROM
                     }
                 }
                 AND = {
-                    ai = no
+                    FROM = { ai = no }
                     holder_scope = {
                         same_realm = FROM
                     }

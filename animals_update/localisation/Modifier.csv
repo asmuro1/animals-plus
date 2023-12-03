@@ -183,19 +183,20 @@ eleph_forced_conversion;Forced conversion;Conversion forcé;;;;;;;;;;;;x
 
 #### cat update
 
-#character modifier
+#event modifier
 cat_no_decadence_penalty_opinion;Public decadence;Décadance publique;;;;;;;;;;;;x
 cat_no_decadence_penalty_revolt;Popular decadence;Décadance populaire;;;;;;;;;;;;x
 cat_decadence_bonus;Popular cat;Chat populaire;;;;;;;;;;;;x
 cat_mod_society_intrigue_1;bad omen;Mauvais présage;;;;;;;;;;;;x
+cat_mod_society_prosperity_illness;illness defense;Résistance à la maladie;;;;;;;;;;;;x
+cat_mod_society_prosperity_life_bonus;longer life expectancy;Éspérence de vie augmenté;;;;;;;;;;;;x
+cat_mod_society_prosperity_epidemic_defense;Less epidemic outbreak;Moins d'épidémie présente;;;;;;;;;;;;x
+cat_mod_increased_wealth_province;More income;Plus de revenu;;;;;;;;;;;;x
 
 #opinion modifier
 cat_intrigue_power_1_denounced;Bad omen creator;Créateur de mauvais présages;;;;;;;;;;;;x
 cat_intrigue_angry;Sabotage;Saboté;;;;;;;;;;;;x
 cat_intrigue_charmed;under charm;sous le charme;;;;;;;;;;;;x
-cat_mod_society_prosperity_illness;illness defense;Résistance à la maladie;;;;;;;;;;;;x
-cat_mod_society_prosperity_life_bonus;longer life expectancy;Éspérence de vie augmenté;;;;;;;;;;;;x
-cat_mod_society_prosperity_epidemic_defense;Less epidemic outbreak;Moins d'épidémie présente;;;;;;;;;;;;x
 
 #holding modifier
 cat_controlled_holding;Controlled by cats;Contrôlé par des chats;;;;;;;;;;;;x
