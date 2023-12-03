@@ -210,6 +210,7 @@ Force_cat_invasion;Force an invasion;Forcer une invasion de chat;;;;;;;;;;;;x
 Force_cat_invasion_desc;By using the religion influence, a cat can force an invasion and fastly changing province culture;En utilisant l'influence de sa religion, un chat peut facilement forcer une invasion et ainsi changer la culture local de la province;;;;;;;;;;;;x
 cat_society_general_convert_one;Transform someone into a cat;Transformer en chat;;;;;;;;;;;;x
 cat_society_general_convert_one_desc;By using society influence, you can force the conversion of someone into a cat;En utilisant l'influence de la société, il est possible de forcer la conversion en chat de quelqu'un;;;;;;;;;;;;x
+cat_society_general_convert_one_power_desc;By using society influence, you can force the conversion of someone into a cat;En utilisant l'influence de la société, il est possible de forcer la conversion en chat de quelqu'un;;;;;;;;;;;;x
 cat_society_sabo_power_A;Give a bad omen;Envoyer un mauvais présage;;;;;;;;;;;;x
 cat_society_sabo_power_A_desc;As an intrigue cat, you can give a bad omen;En tant que chat intriguant, il est possible de donner un mauvais présage à quelqu'un;;;;;;;;;;;;x
 cat_society_sabo_power_A_power_desc;As an intrigue cat, you can give a bad omen;En tant que chat intriguant, il est possible de donner un mauvais présage à quelqu'un;;;;;;;;;;;;x
@@ -235,8 +236,8 @@ cat_illness_resistance_power_A;Increased illness resistance;meilleur résistance 
 cat_illness_resistance_power_A_desc;By using your society power, you can lessen disease impact on your life;En utilisant le pouvoir de la société, il est possible de réduire les effets d'une maladie;;;;;;;;;;;;x
 cat_illness_resistance_power_A_power_desc;Life is important, so increase the resistance of lord against disease is important;La vie est très importante, permettre aux dirigeants de résister aux maladies aussi;;;;;;;;;;;;x
 cat_more_health_power_B;Increase your life expectancy;Augmenter son espérence de vie;;;;;;;;;;;;x
-cat_more_health_power_B_desc;;;;;;;;;;;;;;x
-cat_more_health_power_B_power_desc;;;;;;;;;;;;;;x
+cat_more_health_power_B_desc; ; ;;;;;;;;;;;;x
+cat_more_health_power_B_power_desc; ; ;;;;;;;;;;;;x
 cat_wealth_from_county_power_C;Increase county revenue;Augmenter les revenus d'une province;;;;;;;;;;;;x
 cat_wealth_from_county_power_C_desc;Increase county tax and cities;Augmente les taxes du comtés et des cités;;;;;;;;;;;x
 cat_wealth_from_county_power_C_power_desc;Increase wealth of a province;Augment la richesse d'une province;;;;;;;;;;;x

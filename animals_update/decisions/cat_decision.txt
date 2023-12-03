@@ -678,6 +678,66 @@ targetted_decisions = {
         }
     }
 
+    cat_illness_resistance_power_A = {
+        is_high_prio = no
+        ai_check_interval = 6
+
+        filter = all_including_me
+        ai_target_filter = court_including_me
+
+        from_potential = {
+            is_in_society = yes
+            society = {
+                is_society = cat_prosperity_society
+            }
+            society_rank = 1
+        }
+        potential = {
+            NOT = {
+                has_character_modifier = cat_mod_society_prosperity_illness
+            }
+        }
+        allow = {
+            FROM = {
+                society_currency = 120
+            }
+            ROOT = {
+                is_ill = yes
+                NOT = {
+                    has_character_modifier = cat_mod_society_prosperity_illness
+                } 
+            }
+        }
+
+        effect = {
+            FROM = {
+                change_society_currency = -120
+            }
+            ROOT = {
+                add_character_modifier = {
+                    name = cat_mod_society_prosperity_illness
+                    months = 25
+                }
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0.025
+
+                always = yes
+            }
+
+            modifier = {
+                factor = 2
+
+                character = FROM
+            }
+        }
+    }
+
     cat_start_epidemy_power_B = {
         is_high_prio = no
 

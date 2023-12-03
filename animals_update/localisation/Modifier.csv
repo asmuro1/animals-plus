@@ -193,6 +193,7 @@ cat_mod_society_intrigue_1;bad omen;Mauvais présage;;;;;;;;;;;;x
 cat_intrigue_power_1_denounced;Bad omen creator;Créateur de mauvais présages;;;;;;;;;;;;x
 cat_intrigue_angry;Sabotage;Saboté;;;;;;;;;;;;x
 cat_intrigue_charmed;under charm;sous le charme;;;;;;;;;;;;x
+cat_mod_society_prosperity_illness;illness defense;Résistance à la maladie;;;;;;;;;;;;x
 
 #holding modifier
 cat_controlled_holding;Controlled by cats;Contrôlé par des chats;;;;;;;;;;;;x

@@ -622,3 +622,7 @@ cat_mod_society_intrigue_1 = {
 	defensive_plot_power_modifier = -0.10
 	health_penalty = -0.5
 }
+cat_mod_society_prosperity_illness = {
+	icon = 50
+	health_penalty = 2
+}
