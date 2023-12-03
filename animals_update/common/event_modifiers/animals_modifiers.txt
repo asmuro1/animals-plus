@@ -630,3 +630,7 @@ cat_mod_society_prosperity_life_bonus = {
 	icon = 8
 	health = 3
 }
+cat_mod_society_prosperity_epidemic_defense = {
+	icon = 8
+	disease_defence = 0.4
+}

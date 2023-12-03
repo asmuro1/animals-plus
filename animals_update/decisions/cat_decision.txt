@@ -258,6 +258,76 @@ title_decisions = {
             }
         }
     }
+
+    cat_county_epidemic_resistance_power_D = {
+        is_high_prio = no
+
+        ai_check_interval = 11
+
+        is_in_society = yes
+        filter = realm_owned
+        ai_target_filter = owned
+
+        from_potential = {
+            is_in_society = yes
+            society = {
+                is_society = cat_prosperity_society
+            }
+            society_rank = 3
+            has_dlc = "Reapers"
+        }
+        potential = {
+            tier = COUNT
+            OR = {
+                AND = {
+                    ai = yes
+                    holder_scope = {
+                        character = FROM
+                    }
+                }
+                AND = {
+                    ai = no
+                    holder_scope = {
+                        same_realm = FROM
+                    }
+                }
+            }
+        }
+        allow = {
+            FROM = {
+                society_currency = 750
+            }
+            location = {
+                show_scope_change = no
+                has_hospital = yes
+                NOT = {
+                    has_province_modifier = cat_mod_society_prosperity_epidemic_defense
+                }
+            }
+        }
+        effect = {
+            FROM = {
+                change_society_currency =  -750
+            }
+            location = {
+                show_scope_change = no
+                add_province_modifier = {
+                    name = cat_mod_society_prosperity_epidemic_defense
+                    years = 5
+                }
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+
+                always = yes #will be changed with quests
+            }
+        }
+    }
 }
 
 decisions = {
