@@ -627,16 +627,22 @@ targetted_decisions = {
                 limit = {
                     is_vassal_or_below_of = FROM
                 }
-                change_society_currency = -120
+                FROM = {
+                    change_society_currency = -120
+                }
             }
             else_if = {
                 limit = {
                     is_liege_or_above_of = FROM
                 }
-                change_society_currency = -180
+                FROM = {
+                    change_society_currency = -180
+                }
             }
             else = {
-                change_society_currency = -245
+                FROM = {
+                    change_society_currency = -245
+                }
             }
 
             random = {
