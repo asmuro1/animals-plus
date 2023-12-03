@@ -266,7 +266,7 @@ cat_prosperity_society = {
         }
         decisions = {
             cat_society_general_convert_one
-
+            cat_illness_resistance_power_A
         }
     }
         
@@ -279,6 +279,8 @@ cat_prosperity_society = {
             stewardship = 1
         }
         decisions = {
+            cat_more_health_power_B
+            cat_wealth_from_county_power_C
         }
     }
         
@@ -291,6 +293,8 @@ cat_prosperity_society = {
             stewardship = 2
         }
         decisions = {
+            cat_county_epidemic_resistance_power_D
+            cat_create_new_holding_power_E
         }
     }
 
@@ -303,6 +307,8 @@ cat_prosperity_society = {
             stewardship = 3
         }
         decisions = {
+            cat_increase_prosperity_level_power_F
+            cat_banish_someone_power_G
         }
     }
 	
