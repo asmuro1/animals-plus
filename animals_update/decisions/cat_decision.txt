@@ -394,6 +394,57 @@ title_decisions = {
             }
         }
     }
+
+    cat_create_new_holding_power_E = {
+        is_high_prio = no
+
+        ai_check_interval = 10
+
+        is_in_society = yes
+        filter = owned
+        ai_target_filter = owned
+
+        from_potential = {
+            is_in_society = yes
+            society = {
+                is_society = cat_prosperity_society
+            }
+            society_rank = 3
+        }
+        potential = {
+            tier = COUNT
+            
+            holder_scope = {
+                character = FROM
+            }
+        }
+        allow = {
+            FROM = {
+                society_currency = 850
+            }
+            location = {
+                has_empty_holding = yes
+                has_settlement_construction = no
+            }
+        }
+        effect = {
+            FROM = {
+                change_society_currency = -850
+            }
+            location = {
+                show_scope_change = no
+                
+                build_holding = {
+                    type = tribal
+                    holder = FROM
+                }
+            }
+        }
+
+        ai_will_do = {
+            factor = 0 #prefer to use prestige
+        }
+    }
 }
 
 decisions = {
