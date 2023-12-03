@@ -626,3 +626,7 @@ cat_mod_society_prosperity_illness = {
 	icon = 50
 	health_penalty = 2
 }
+cat_mod_society_prosperity_life_bonus = {
+	icon = 8
+	health = 3
+}
