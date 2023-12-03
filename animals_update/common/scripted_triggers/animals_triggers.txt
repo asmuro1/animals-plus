@@ -671,3 +671,10 @@ Cat_can_live_here_trigger = {
         terrain = forest        # red cat
     }
 }
+Cat_province_not_depopulated_trigger = {
+    OR = {
+        has_province_modifier = depopulated_1
+        has_province_modifier = depopulated_2
+        has_province_modifier = depopulated_3
+    }
+}

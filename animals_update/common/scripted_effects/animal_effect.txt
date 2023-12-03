@@ -505,7 +505,7 @@ duck_calculate_max_dev_level_effect = {
             value = 1
         }
     }
-        #prosperity modifiers
+    #prosperity modifiers
     if = {
         limit = {
             has_province_modifier = prosperity_modifier_3
@@ -517,11 +517,7 @@ duck_calculate_max_dev_level_effect = {
     }
     if = {
         limit = {
-            OR = {
-                has_province_modifier = depopulated_1
-                has_province_modifier = depopulated_2
-                has_province_modifier = depopulated_3
-            }
+            Cat_province_not_depopulated_trigger = yes
         }
         subtract_variable = {
             which = Max_duck_dev_level
@@ -732,11 +728,7 @@ duck_calculate_max_potential_dev_level_effect = {
     }
     if = {
         limit = {
-            OR = {
-                has_province_modifier = depopulated_1
-                has_province_modifier = depopulated_2
-                has_province_modifier = depopulated_3
-            }
+            Cat_province_not_depopulated_trigger = yes
         }
         subtract_variable = {
             which = local_max_dev_potential_level

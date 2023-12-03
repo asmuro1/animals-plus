@@ -445,6 +445,77 @@ title_decisions = {
             factor = 0 #prefer to use prestige
         }
     }
+
+    cat_increase_prosperity_level_power_F = {
+        is_high_prio = no
+        ai_check_interval = 12
+
+        is_in_society = yes
+        filter = realm_owned
+        ai_target_filter = owned
+
+        from_potential = {
+            has_dlc = "Reapers"
+            is_in_society = yes
+            society = {
+                is_society = cat_prosperity_society
+            }
+            society_rank = 4
+        }
+        potential = {
+            tier = COUNT
+
+            holder_scope = {
+                OR = {
+                    character = FROM
+                    AND = {
+                        FROM = { ai = no }
+                        same_realm = FROM
+                    }
+                }
+            }
+        }
+        allow = {
+            FROM = {
+                society_currency = 1250
+            }
+            
+            location = {
+                has_epidemic = no
+
+                custom_tooltip = {
+                    text = CAT_TT_PROVINCE_NOT_DEPOPULATED
+                    NOT = {
+                        Cat_province_not_depopulated_trigger = yes
+                    }
+                }
+
+                custom_tooltip = {
+                    text = CAT_TT_MAX_PROSPERITY_NOT_ATTAINED
+                    NOT = {
+                        has_province_modifier = prosperity_modifier_3
+                    }
+                }
+            }
+        }
+
+        effect = {
+            FROM = {
+                change_society_currency = 1250
+            }
+
+            location = {
+                custom_tooltip = {
+                    text = CAT_TT_INCREASE_PROSPERITY
+                    increase_prosperity_effect = yes
+                }
+            }
+        }
+        
+        ai_will_do = {
+            factor = 0
+        }
+    }
 }
 
 decisions = {
@@ -1180,6 +1251,10 @@ targetted_decisions = {
                 }
             }
         }
+
+        ai_will_do = {
+            factor = 0
+        }
     }
 
     cat_banish_someone_power_G = {
@@ -1191,7 +1266,7 @@ targetted_decisions = {
         ai_target_filter = society
 
         from_potential = {
-           #moved to potential
+           # moved to potential
         }
         potential = {
             is_in_society = yes
