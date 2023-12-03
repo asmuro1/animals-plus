@@ -433,7 +433,7 @@ title_decisions = {
             }
             location = {
                 show_scope_change = no
-                
+
                 build_holding = {
                     type = tribal
                     holder = FROM
@@ -1191,20 +1191,30 @@ targetted_decisions = {
         ai_target_filter = society
 
         from_potential = {
-            is_in_society = yes
-            society = {
-                is_society = cat_intrigue_society
-            }
-            society_rank = 4
+           #moved to potential
         }
         potential = {
             is_in_society = yes
-            society = {
-                is_society = cat_intrigue_society
-            }
+            FROM = { is_in_society = yes }
             NOT = {
                 society_rank = 4
+            }
+            FROM = {
+                society_rank = 4
+            }
+            society = {
+                OR = {
+                    is_society = cat_intrigue_society
+                    is_society = cat_prosperity_society
+                    is_society = cat_reputation_society
                 }
+
+                FROM = {
+                    society = {
+                        is_society = PREVPREV
+                    }
+                }
+            }
         }
         allow = {
             FROM = {
@@ -1220,7 +1230,31 @@ targetted_decisions = {
                 custom_tooltip = {
                     text = CAT_TT_BANISH_FROM_SOCIETY
 
-                    set_character_flag = CAT_BANNED_FROM_INTRIGUE
+                    if = {
+                        limit = {
+                            society = {
+                                is_society = cat_intrigue_society
+                            }
+                        }
+                        set_character_flag = CAT_BANNED_FROM_INTRIGUE
+                    }
+                    if = {
+                        limit = {
+                            society = {
+                                is_society = cat_prosperity_society
+                            }
+                        }
+                        set_character_flag = CAT_BANNED_FROM_PROSPERITY
+                    }
+                    if = {
+                        limit = {
+                            society = {
+                                is_society = cat_reputation_society
+                            }
+                        }
+                        set_character_flag = CAT_BANNED_FROM_REPUTATION
+                    }
+
                     letter_event = { id = ani_plus.143 }
                 }
             }
