@@ -250,6 +250,24 @@ cat_create_new_holding_power_E_power_desc;Increase a province prosperity by crea
 cat_increase_prosperity_level_power_F;Increase a province's prosperity level;Augmenter la prosperité d'une province;;;;;;;;;;;;x
 cat_increase_prosperity_level_power_F_desc;If no issue happens, making a province prosperous assure the whole country prosperity;Lorsque la province n'es pas en trouble, il est possible d'améliorer sa prospérité et ainsi celle du pays;;;;;;;;;;;;x
 cat_increase_prosperity_level_power_F_power_desc;If no issue happens, making a province prosperous assure the whole country prosperity;Lorsque la province n'es pas en trouble, il est possible d'améliorer sa prospérité et ainsi celle du pays;;;;;;;;;;;;x
+cat_piety_gain_power_A;Wildness gain;Gain de sauvagerie;;;;;;;;;;;;x
+cat_piety_gain_power_A_desc; ; ;;;;;;;;;;;;x
+cat_piety_gain_power_A_power_desc;Cats without Wildness are not good cat;Des chats sans sauvagerie ne sont pas de bon chats;;;;;;;;;;;;x 
+cat_prestige_gain_power_B;Prestige gain;Gain de prestige;;;;;;;;;;;;x
+cat_prestige_gain_power_B_desc; ; ;;;;;;;;;;;;x
+cat_prestige_gain_power_B_power_desc;A reputation is made with its prestige;Un réputation se caractérise par son prestige;;;;;;;;;;;;x
+cat_vassal_opinion_power_C;Install reputation to vassals;Imposer sa réputation aux vassaux;;;;;;;;;;;;x
+cat_vassal_opinion_power_C_desc;A true cat lord must be able to stabilize its realm;Un vrai dirigeant chat se doit de stabiliser son territoire;;;;;;;;;;;;x
+cat_vassal_opinion_power_C_power_desc;Become able to improve your reputation to your vassals;Devient capable d'improuver sa réputation auprès des vassaux;;;;;;;;;;;;x
+cat_levy_gain_power_D;motivate young cats fighter;Motive de jeunes chats combatants;;;;;;;;;;;;x
+cat_levy_gain_power_D_desc;A lord need levy to make itself famous;Un dirigeant a besoin de troupe pour se faire connu;;;;;;;;;;;;x
+cat_levy_gain_power_D_power_desc;A big army makes one respected amongst its enemy;Un grande armée rend un dirigeant respecté auprès de ses ennemis;;;;;;;;;;;;x
+cat_general_opinion_power_E;Improve your global reputation;Augmente ta réputation globale;;;;;;;;;;;;x
+cat_general_opinion_power_E_desc;improve your reputation from everyone;Augmente ta relation auprès de tout le monde;;;;;;;;;;;;x
+cat_general_opinion_power_E_power_desc;A reputation is to convince everyone of your abilities;Une réputation permet de convaincre tout le monde de tes capacités;;;;;;;;;;;;x
+cat_force_alliance_power_F;Impose an alliance;Imposer une alliance;;;;;;;;;;;;x
+cat_force_alliance_power_F_desc;By using your reputation, you can become allied to another cat ruler;Avec ta réputation, il est possible d'imposer une alliance avec un autre dirigeant;;;;;;;;;;;;x
+cat_force_alliance_power_F_power_desc;The biggest proof of a good reputation is caracterized by its allies;La forme la plus avancé d'une bonne réputation se montre par ses alliés;;;;;;;;;;;;x
 
 
 #TOOLTIPS

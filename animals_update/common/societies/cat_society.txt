@@ -449,12 +449,12 @@ cat_prosperity_society = {
         }
 
         modifier = {
-            culture = cat
+            culture = black_cat
 
             factor = 0.5
         }
         modifier = {
-            culture = white_cat
+            culture = cat
 
             factor = 0.25
         }
@@ -552,6 +552,7 @@ cat_reputation_society = {
         }
         decisions = {
             cat_society_general_convert_one
+            cat_piety_gain_power_A
         }
     }
         
@@ -564,6 +565,8 @@ cat_reputation_society = {
             martial = 1
         }
         decisions = {
+            cat_prestige_gain_power_B
+            cat_vassal_opinion_power_C
         }
     }
         
@@ -576,6 +579,8 @@ cat_reputation_society = {
             martial = 2
         }
         decisions = {
+            cat_levy_gain_power_D
+            cat_general_opinion_power_E
         }
     }
 
@@ -588,6 +593,8 @@ cat_reputation_society = {
             martial = 3
         }
         decisions = {
+            cat_force_alliance_power_F
+            cat_banish_someone_power_G
         }
     }
 	
@@ -640,7 +647,7 @@ cat_reputation_society = {
         }
     }
 
-    member_score_per_attribute = 0
+    member_score_per_attribute = 5
     member_score_per_rank = 35
     member_score = {
         value = 10
@@ -720,89 +727,14 @@ cat_reputation_society = {
 
             value = 10
         }
-        additive_modifier = {
-            martial = 2
-
-            value = 10
-        }
-        additive_modifier = {
-            martial = 4
-
-            value = 10
-        }
-        additive_modifier = {
-            martial = 6
-
-            value = 10
-        }
-        additive_modifier = {
-            martial = 8
-
-            value = 10
-        }
-        additive_modifier = {
-            martial = 10
-
-            value = 10
-        }
-        additive_modifier = {
-            martial = 12
-
-            value = 10
-        }
-        additive_modifier = {
-            martial = 14
-
-            value = 10
-        }
-        additive_modifier = {
-            martial = 16
-
-            value = 10
-        }
-        additive_modifier = {
-            martial = 18
-
-            value = 10
-        }
-        additive_modifier = {
-            martial = 20
-
-            value = 10
-        }
-        additive_modifier = {
-            martial = 22
-
-            value = 10
-        }
-        additive_modifier = {
-            martial = 24
-
-            value = 10
-        }
-        additive_modifier = {
-            martial = 26
-
-            value = 10
-        }
-        additive_modifier = {
-            martial = 28
-
-            value = 10
-        }
-        additive_modifier = {
-            martial = 30
-
-            value = 10
-        }
 
         modifier = {
-            culture = cat
+            culture = white_cat
 
             factor = 0.5
         }
         modifier = {
-            culture = white_cat
+            culture = black_cat
 
             factor = 0.25
         }
