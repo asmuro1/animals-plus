@@ -85,3 +85,8 @@ cat_intrigue_charmed = {
     obedient = yes
     months = 1200
 }
+
+cat_forced_alliance = {
+    opinion = 5
+    non_aggression_pact = yes
+}

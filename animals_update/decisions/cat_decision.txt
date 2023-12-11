@@ -1397,6 +1397,85 @@ targetted_decisions = {
         }
     }
 
+    cat_force_alliance_power_F = {
+        is_high_prio = no
+        ai_check_interval = 7
+
+        is_in_society = yes
+        filter = independent_rulers
+        ai_target_filter = independent_rulers
+
+        from_potential = {
+            is_in_society = yes
+            society = {
+                is_society = cat_reputation_society
+            }
+            society_rank = 4
+        }
+        potential = {
+            NOT = {
+                has_opinion_modifier =  {
+                    name = cat_forced_alliance
+                    who = FROM
+                }
+            }
+        }
+        allow = {
+            FROM = {
+                society_currency = 1000
+            }
+            ROOT = {
+                NOT = {
+                    has_opinion_modifier =  {
+                        name = cat_forced_alliance
+                        who = FROM
+                    }
+                }
+            }
+        }
+
+        effect = {
+            FROM = {
+                change_society_currency = -1000
+            }
+            ROOT = {
+                opinion = {
+                    name = cat_forced_alliance
+                    who = FROM
+                    years = 5
+                }
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0.005
+
+                always = yes
+            }
+
+            modifier = {
+                factor = 0
+
+                relative_power = {
+                    who = FROM
+                    power <= 0.25
+                }
+            }
+
+            modifier = {
+                factor = 3
+
+                relative_power = {
+                    who = FROM
+                    power = 1.25
+                }
+            }
+        }
+    }
+
     cat_banish_someone_power_G = {
         is_high_prio = no
         ai_check_interval = 13
