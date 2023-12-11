@@ -1118,6 +1118,76 @@ targetted_decisions = {
         }
     }
 
+    cat_vassal_opinion_power_C = {
+        is_high_prio = no
+        ai_check_interval = 7
+
+        is_in_society = yes
+        filter = all_including_me
+        ai_target_filter = realm_including_me
+
+        from_potential = {
+            is_in_society = yes
+            society = {
+                is_society = cat_reputation_society
+            }
+            society_rank = 2
+        }
+        potential = {
+            NOT = {
+                has_character_modifier = cat_mod_reputation_vassal
+            }
+        }
+        allow = {
+            FROM = {
+                society_currency = 360
+            }
+            ROOT = {
+                NOT = {
+                    has_character_modifier = cat_mod_reputation_vassal
+                }
+            }
+        }
+
+        effect = {
+            FROM = {
+                change_society_currency = -360
+            }
+            ROOT = {
+                add_character_modifier = {
+                    name = cat_mod_reputation_vassal
+                    years = 5
+                }
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0.005
+
+                always = yes
+            }
+
+            modifier = {
+                factor = 10
+
+                OR = {
+                    character = FROM
+                    is_friend = FROM
+                    is_close_relative = FROM
+                }
+            }
+
+            modifier = {
+                factor = 0
+
+                is_foe = FROM
+            }
+        }
+    }
+
     cat_make_incapable_power_E = {
         is_high_prio = no
         ai_check_interval = 12
@@ -1207,6 +1277,76 @@ targetted_decisions = {
                 society = {
                     is_society = cat_intrigue_society
                 }
+            }
+        }
+    }
+
+    cat_general_opinion_power_E = {
+        is_high_prio = no
+        ai_check_interval = 7
+
+        is_in_society = yes
+        filter = all_including_me
+        ai_target_filter = realm_including_me
+
+        from_potential = {
+            is_in_society = yes
+            society = {
+                is_society = cat_reputation_society
+            }
+            society_rank = 3
+        }
+        potential = {
+            NOT = {
+                has_character_modifier = cat_mod_reputation_cats
+            }
+        }
+        allow = {
+            FROM = {
+                society_currency = 750
+            }
+            ROOT = {
+                NOT = {
+                    has_character_modifier = cat_mod_reputation_cats
+                }
+            }
+        }
+
+        effect = {
+            FROM = {
+                change_society_currency = -750
+            }
+            ROOT = {
+                add_character_modifier = {
+                    name = cat_mod_reputation_cats
+                    years = 5
+                }
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0.005
+
+                always = yes
+            }
+
+            modifier = {
+                factor = 10
+
+                OR = {
+                    character = FROM
+                    is_friend = FROM
+                    is_close_relative = FROM
+                }
+            }
+
+            modifier = {
+                factor = 0
+                
+                is_foe = FROM
             }
         }
     }

@@ -639,3 +639,12 @@ cat_mod_increased_wealth_province = {
 	local_tax_modifier = 0.15
 	city_tax_modifier = 0.20
 }
+cat_mod_reputation_vassal = {
+	icon = 3
+	vassal_opinion = 10
+}
+
+cat_mod_reputation_cats = {
+	icon = 46
+	cat_group_opinion = 10
+}
