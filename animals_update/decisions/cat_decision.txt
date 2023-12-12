@@ -761,6 +761,38 @@ decisions = {
             }
         }
     }
+
+    cat_prestige_gain_power_B = {
+        is_high_prio = no
+        ai_check_interval = 6
+
+        is_in_society = yes
+
+        potential = {
+            is_in_society = yes
+            society = {
+                is_society = cat_reputation_society
+            }
+            society_rank = 2
+        }
+        allow = {
+            society_currency = 300
+        }
+
+        effect = {
+            change_society_currency = -300
+            piety = 1000
+        }
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0.001
+
+                always = yes
+            }
+        }
+    }
 }
 
 society_decisions = {
