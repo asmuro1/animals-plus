@@ -6,8 +6,8 @@ province_animal_conversion;Establish an animal colony;Implanter une colonie anim
 province_animal_conversion_desc;Establish your animal culture in the county to allow the use of the animal upgraded buildings;établir la culture animalière dans le comté pour autoriser l'utilisation des bâtiments animaliers améliorés;;;;;;;;;;;;;x
 hide_human_buildings;Hide human buildings;Cacher les bâtiments humains;;;;;;;;;;;;;x
 show_human_building;Show human buildings;Montrer les bâtiments humains;;;;;;;;;;;;;x
-hide_human_buildings_desc;;;;;;;;;;;;;;;x
-show_human_building_desc;;;;;;;;;;;;;;;x
+hide_human_buildings_desc; ;;;;;;;;;;;;;;x
+show_human_building_desc; ;;;;;;;;;;;;;;x
 cursed_text_cat;[ROOT.GetTitledName] will be cursed;[ROOT.GetTitledName] va être maudit;;;;;;;;;;;;;x
 cat_building_curse;Curse this person;Maudire cette personne;;;;;;;;;;;;;x
 cat_building_curse_desc;Curse this person. It takes up to a month to take effect.;Maudire cette personne. Cela peut prendre jusqu'à un mois pour prendre effet.;;;;;;;;;;;;;x

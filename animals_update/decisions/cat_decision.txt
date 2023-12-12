@@ -729,6 +729,38 @@ decisions = {
             }
         }
     }
+    
+    cat_piety_gain_power_A = {
+        is_high_prio = no
+        ai_check_interval = 6
+
+        is_in_society = yes
+
+        potential = {
+            is_in_society = yes
+            society = {
+                is_society = cat_reputation_society
+            }
+            society_rank = 1
+        }
+        allow = {
+            society_currency = 120
+        }
+
+        effect = {
+            change_society_currency = -120
+            piety = 450
+        }
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0.001
+
+                always = yes
+            }
+        }
+    }
 }
 
 society_decisions = {
