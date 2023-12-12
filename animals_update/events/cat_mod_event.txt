@@ -948,7 +948,7 @@ character_event = {
     }
 }
 
-###society related event (on_action event + rank up decision)
+###society related event (on_action event (quest not concerned) + rank up decision)
 # event 132: on action event - on_society_failed_to_find_new_leader event
 # event 133: on action event - on_character_ask_to_join_society
 # event 134 - 135: event chain: accepting player into the society
@@ -1258,5 +1258,74 @@ letter_event = {
         name = OPT_143_GETTING_BANISHED
 
         leave_society = yes
+    }
+}
+
+
+### society quest event
+# event 144: on_action quest tombola
+
+#event 144
+character_event = {
+    id = ani_plus.144
+    hide_window = yes
+
+    is_triggered_only = yes
+    
+    trigger = {
+        OR = {
+            society_member_of = cat_intrigue_society
+            society_member_of = cat_reputation_society
+            society_member_of = cat_prosperity_society
+        }
+        OR = {
+            government = cat_feudal_gov
+            has_character_flag = cat_rank_up_possible
+        }
+        has_any_quest = no
+        prisoner = no
+        society = {
+            any_society_member = {
+                NOT = { character = ROOT }
+                prisoner = no
+                is_within_diplo_range = ROOT
+                opinion = { who = ROOT value = 0 }
+            }
+        }
+    }
+
+    immediate = {
+        society = {
+            random_society_member = {
+                limit = {
+                    NOT = { character = ROOT }
+                    prisoner = no
+                    is_within_diplo_range = ROOT
+                    opinion = { who = ROOT value = 0 }
+                }
+                preferred_limit = { same_realm = ROOT }
+
+                save_event_target_as = quest_collaborator
+            }
+
+            if = {
+                limit = {
+                    ai = no
+                }
+                if = {
+                    limit = {
+                        has_character_flag = cat_rank_up_possible
+                    }
+                    society_rank_up = 1
+                    clr_character_flag = cat_rank_up_possible
+                }
+                change_society_currency = -250
+                decadence = -8
+            }
+            else = {
+                # to do
+            }
+            
+        }
     }
 }
