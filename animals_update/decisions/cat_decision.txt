@@ -577,7 +577,7 @@ decisions = {
                         owner = ROOT
                         leader = none
                         troops = {
-                            light_infantry = { 7000 7000 }
+                            light_infantry = { 10000 10000 }
                         }
                         attrition = 0.1
                         maintenance = no
@@ -597,7 +597,7 @@ decisions = {
                         owner = ROOT
                         leader = none
                         troops = {
-                            light_infantry = { 15000 15000 }
+                            light_infantry = { 20000 20000 }
                         }
                         attrition = 0.05
                         maintenance = no
@@ -782,6 +782,51 @@ decisions = {
         effect = {
             change_society_currency = -300
             piety = 1000
+        }
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0.001
+
+                always = yes
+            }
+        }
+    }
+
+    cat_levy_gain_power_D = {
+        is_high_prio = no
+        ai_check_interval = 12
+
+        is_in_society = yes
+
+        potential = {
+            is_in_society = yes
+            society = {
+                is_society = cat_reputation_society
+            }
+            society_rank = 3
+        }
+        allow = {
+            society_currency = 750
+            war = yes
+        }
+
+        effect = {
+            change_society_currency = -750
+            spawn_unit = {
+                    province = capital_scope
+                    home = capital_scope
+                    owner = ROOT
+                    leader = none
+                    troops = {
+                        heavy_infantry = { 1500 1500 }
+                    }
+                    attrition = 0.1
+                    maintenance = yes
+                    reinforce_rate_multiplier = 0.05
+                    disband_on_peace = yes
+                }
         }
         ai_will_do = {
             factor = 1
