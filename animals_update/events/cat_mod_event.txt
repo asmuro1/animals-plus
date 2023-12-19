@@ -1310,7 +1310,7 @@ character_event = {
 
             if = {
                 limit = {
-                    ai = no
+                    ai = yes
                 }
                 if = {
                     limit = {
@@ -1319,11 +1319,16 @@ character_event = {
                     society_rank_up = 1
                     clr_character_flag = cat_rank_up_possible
                 }
+                if = {
+                    limit = {
+                        is_playable = yes
+                    }
+                    decadence = -8
+                }
                 change_society_currency = -250
-                decadence = -8
             }
             else = {
-                # to do
+                # ai = no so player only
             }
             
         }
