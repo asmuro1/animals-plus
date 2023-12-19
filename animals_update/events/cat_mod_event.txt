@@ -1339,7 +1339,7 @@ character_event = {
                         }
                     }
                     event_target:quest_collaborator = {
-                    character_event = { id = ani_plus.145 }
+                        character_event = { id = ani_plus.145 }
                     }
                 }
                 #10 = {
