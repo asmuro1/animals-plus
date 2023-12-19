@@ -13,7 +13,6 @@ cat_intrigue_society_rank_4_male;Grandmaster;Grand maître;;;;;;;;;;;;x
 cat_intrigue_society_rank_4_female;Grandmaster;Grande maîtresse;;;;;;;;;;;;x
 society_no_intrigue_10;Do not have §Y10§! in intrigue: §R-10§!;N'a pas §Y10§! d'intrigue: §R-10§!;;;;;;;;;;;;x
 society_no_intrigue_5;Do not have §Y5§! in intrigue: §R-10§!;N'a pas §Y5§! d'intrigue: §R-10§!;;;;;;;;;;;;x
-
 cat_quest_intrigue_1_fallback;put a curse on someone;Maudire quelqu'un;;;;;;;;;;;;x
 cat_quest_intrigue_1_desc;By using your power to curse someone, one way or another you can have the quest rewards;Pour cette quête, il va falloir maudire quelqu'un d'une manière ou d'une autre;;;;;;;;;;;;x
 cat_quest_intrigue_1_tooltip;You can complete this quest by doing it's related society power;Tu peux réussir cette guerre en utilisant les pouvoirs de sociétés associé à la quête.;;;;;;;;;;;;x
@@ -48,7 +47,7 @@ cat_reputation_society_rank_4_male;Grandmaster;Grand maître;;;;;;;;;;;;x
 cat_reputation_society_rank_4_female;Grandmaster;Grande maîtresse;;;;;;;;;;;;x
 society_no_marital_8;Do not have §Y8§! in martial: §R-10§!;N'a pas §Y8§! de martial: §R-10§!;;;;;;;;;;;;x
 society_no_diplomacy_8;Do not have §Y8§! in diplomacy: §R-10§!;N'a pas §Y8§! de diplomatie: §R-10§!;;;;;;;;;;;;x
-cat_quest_reputation_1_fallback;Increase your feats;Obtien plus de succès;;;;;;;;;;;;x
+cat_quest_reputation_1_fallback;Increase your feats;Obtient plus de succès;;;;;;;;;;;;x
 cat_quest_reputation_1_desc;By using feats power, you can win this quest;En utilisant tes pouvoirs militaires, tu peux réussir cette quête.;;;;;;;;;;;;x
 cat_quest_reputation_1_tooltip;You can complete this quest by doing it's related society power;Tu peux réussir cette guerre en utilisant les pouvoirs de sociétés associé à la quête.;;;;;;;;;;;;x
 

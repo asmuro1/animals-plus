@@ -763,11 +763,11 @@ decisions = {
 
             if = {
                 limit = {
-                    has_quest = cat_quest_prosperity_1
+                    has_quest = cat_quest_reputation_1
                 }
                 custom_tooltip = {
                     text = CAT_TT_QUEST_COMPLETE
-                    clr_quest = cat_quest_prosperity_1
+                    clr_quest = cat_quest_reputation_1
                 }
                 decadence = -7.5
             }
@@ -806,11 +806,11 @@ decisions = {
             
             if = {
                 limit = {
-                    has_quest = cat_quest_prosperity_1
+                    has_quest = cat_quest_reputation_1
                 }
                 custom_tooltip = {
                     text = CAT_TT_QUEST_COMPLETE
-                    clr_quest = cat_quest_prosperity_1
+                    clr_quest = cat_quest_reputation_1
                 }
                 decadence = -9.5
             }
@@ -861,11 +861,11 @@ decisions = {
             }
             if = {
                 limit = {
-                    has_quest = cat_quest_prosperity_1
+                    has_quest = cat_quest_reputation_1
                 }
                 custom_tooltip = {
                     text = CAT_TT_QUEST_COMPLETE
-                    clr_quest = cat_quest_prosperity_1
+                    clr_quest = cat_quest_reputation_1
                 }
                 decadence = -11.5
             }
