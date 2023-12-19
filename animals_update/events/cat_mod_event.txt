@@ -1343,17 +1343,17 @@ character_event = {
                         character_event = { id = ani_plus.145 }
                     }
                 }
-                #10 = {
-                #    limit = {
-                #        society_rank = 2
-                #        NOT = {
-                #            has_character_flag = cat_rank_up_possible
-                #        }
-                #    }
-                #    event_target:quest_collaborator = {
-                #        character_event = { id = ani_plus.146 }
-                #    }
-                #}
+                10 = {
+                    limit = {
+                        society_rank = 2
+                        NOT = {
+                            has_character_flag = cat_rank_up_possible
+                        }
+                    }
+                    event_target:quest_collaborator = {
+                        character_event = { id = ani_plus.146 }
+                    }
+                }
                 #1 = {
                 #    limit = {
                 #        has_character_flag = cat_rank_up_possible
@@ -1377,7 +1377,21 @@ character_event = {
         FROM = {
             society_quest_event = {
                 id = ani_plus.148
-                random = 31
+            }
+        }
+    }
+}
+
+#event 146
+character_event = {
+    id = ani_plus.146
+
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = {
+        FROM = {
+            society_quest_event = {
+                id = ani_plus.149
             }
         }
     }
@@ -1413,6 +1427,42 @@ society_quest_event = {
         else = {
             # prosperity society
             set_quest = cat_quest_prosperity_1
+        }
+    }
+    option = {
+        name = DECLINE
+    }
+}
+
+#event 149
+society_quest_event = {
+    id = ani_plus.149
+    desc = DESC_CAT_GLOBAL_QUEST
+
+    is_triggered_only = yes
+
+    option = {
+        name = ACCEPT
+
+        if = {
+            limit = {
+                society = {
+                    is_society = cat_intrigue_society
+                }
+            }
+            set_quest = cat_quest_intrigue_2
+        }
+        else_if = {
+            limit = {
+                society = {
+                    is_society = cat_reputation_society
+                }
+            }
+            set_quest = cat_quest_reputation_2
+        }
+        else = {
+            # prosperity society
+            set_quest = cat_quest_prosperity_2
         }
     }
     option = {

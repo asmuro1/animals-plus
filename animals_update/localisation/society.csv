@@ -16,6 +16,9 @@ society_no_intrigue_5;Do not have §Y5§! in intrigue: §R-10§!;N'a pas §Y5§! d'int
 cat_quest_intrigue_1_fallback;put a curse on someone;Maudire quelqu'un;;;;;;;;;;;;x
 cat_quest_intrigue_1_desc;By using your power to curse someone, one way or another you can have the quest rewards;Pour cette quête, il va falloir maudire quelqu'un d'une manière ou d'une autre;;;;;;;;;;;;x
 cat_quest_intrigue_1_tooltip;You can complete this quest by doing it's related society power;Tu peux réussir cette guerre en utilisant les pouvoirs de sociétés associé à la quête.;;;;;;;;;;;;x
+cat_quest_intrigue_2_fallback;sabotage a county;saboter un comté;;;;;;;;;;;;x
+cat_quest_intrigue_2_desc;By using your power to sabotage a county, you can get what is necessary;Pour cette quête, il va falloir saboter l'exploitation d'un comté.;;;;;;;;;;;;x
+cat_quest_intrigue_2_tooltip;You can complete this quest by doing it's related society power;Tu peux réussir cette guerre en utilisant les pouvoirs de sociétés associé à la quête.;;;;;;;;;;;;x
 
 ### prosperity society
 cat_prosperity_society;Prosperity society;Société de prospérité;;;;;;;;;;;;x
@@ -33,6 +36,9 @@ society_no_stewardship_8;Do not have §Y8§! in stewardship: §R-10§!;N'a pas §Y8§!
 cat_quest_prosperity_1_fallback;Better health;une meilleur santé;;;;;;;;;;;;x
 cat_quest_prosperity_1_desc;By using your health power, you can success this quest;En utilisant tes pouvoirs de santé, tu peux réussir cette quête.;;;;;;;;;;;;x
 cat_quest_prosperity_1_tooltip;You can complete this quest by doing it's related society power;Tu peux réussir cette guerre en utilisant les pouvoirs de sociétés associé à la quête.;;;;;;;;;;;;x
+cat_quest_prosperity_2_fallback;County prosperity;Plus de prospérité de comté;;;;;;;;;;;;x
+cat_quest_prosperity_2_desc;By using your county power, you can success this quest;En utilisant tes pouvoirs de comté, tu peux réussir cette quête.;;;;;;;;;;;;x
+cat_quest_prosperity_2_tooltip;You can complete this quest by doing it's related society power;Tu peux réussir cette guerre en utilisant les pouvoirs de sociétés associé à la quête.;;;;;;;;;;;;x
 
 ### reputation society
 cat_reputation_society;Reputation society;Société de réputation;;;;;;;;;;;;x
@@ -50,6 +56,9 @@ society_no_diplomacy_8;Do not have §Y8§! in diplomacy: §R-10§!;N'a pas §Y8§! de 
 cat_quest_reputation_1_fallback;Increase your feats;Obtient plus de succès;;;;;;;;;;;;x
 cat_quest_reputation_1_desc;By using feats power, you can win this quest;En utilisant tes pouvoirs militaires, tu peux réussir cette quête.;;;;;;;;;;;;x
 cat_quest_reputation_1_tooltip;You can complete this quest by doing it's related society power;Tu peux réussir cette guerre en utilisant les pouvoirs de sociétés associé à la quête.;;;;;;;;;;;;x
+cat_quest_reputation_2_fallback;Increase your socials standing;Augmente ta réputation sociale;;;;;;;;;;;;x
+cat_quest_reputation_2_desc;By using social powers, you can win this quest;En utilisant tes pouvoirs diplomatiques, tu peux réussir cette quête.;;;;;;;;;;;;x
+cat_quest_reputation_2_tooltip;You can complete this quest by doing it's related society power;Tu peux réussir cette guerre en utilisant les pouvoirs de sociétés associé à la quête.;;;;;;;;;;;;x
 
 ## common loc
 cat_animal_society_currency;Cat's credit;Crédit de chat;;;;;;;;;;;;x
