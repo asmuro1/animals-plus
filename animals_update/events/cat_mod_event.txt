@@ -1309,60 +1309,59 @@ character_event = {
 
                 save_event_target_as = quest_collaborator
             }
-
+        }
+        if = {
+            limit = {
+                ai = yes
+            }
             if = {
                 limit = {
-                    ai = yes
+                    has_character_flag = cat_rank_up_possible
                 }
-                if = {
-                    limit = {
-                        has_character_flag = cat_rank_up_possible
-                    }
-                    society_rank_up = 1
-                    clr_character_flag = cat_rank_up_possible
-                }
-                if = {
-                    limit = {
-                        is_playable = yes
-                    }
-                    decadence = -8
-                }
-                change_society_currency = -250
+                society_rank_up = 1
+                clr_character_flag = cat_rank_up_possible
             }
-            else = {
-                # ai = no so player only
-                random_list = {
-                    10 = {
-                        limit = {
-                            NOT = {
-                                has_character_flag = cat_rank_up_possible
-                            }
-                        }
-                        event_target:quest_collaborator = {
-                            character_event = { id = ani_plus.145 }
-                        }
-                    }
-                    10 = {
-                        limit = {
-                            society_rank = 2
-                            NOT = {
-                                has_character_flag = cat_rank_up_possible
-                            }
-                        }
-                        event_target:quest_collaborator = {
-                            character_event = { id = ani_plus.146 }
-                        }
-                    }
-                    1 = {
-                        limit = {
+            if = {
+                limit = {
+                    is_playable = yes
+                }
+                decadence = -8
+            }
+            change_society_currency = -250
+        }
+        else = {
+            # ai = no so player only
+            random_list = {
+                10 = {
+                    limit = {
+                        NOT = {
                             has_character_flag = cat_rank_up_possible
                         }
-                        event_target:quest_collaborator = {
-                            character_event = { id = ani_plus.147 }
-                        }
+                    }
+                    event_target:quest_collaborator = {
+                    character_event = { id = ani_plus.145 }
                     }
                 }
-            } 
+                #10 = {
+                #    limit = {
+                #        society_rank = 2
+                #        NOT = {
+                #            has_character_flag = cat_rank_up_possible
+                #        }
+                #    }
+                #    event_target:quest_collaborator = {
+                #        character_event = { id = ani_plus.146 }
+                #    }
+                #}
+                #1 = {
+                #    limit = {
+                #        has_character_flag = cat_rank_up_possible
+                #    }
+                #    event_target:quest_collaborator = {
+                #        character_event = { id = ani_plus.147 }
+                #    }
+                #}
+            }
         }
     }
 }
