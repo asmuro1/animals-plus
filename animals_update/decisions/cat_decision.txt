@@ -501,7 +501,7 @@ title_decisions = {
 
         effect = {
             FROM = {
-                change_society_currency = 1250
+                change_society_currency = -1250
             }
 
             location = {
