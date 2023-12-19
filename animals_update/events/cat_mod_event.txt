@@ -1320,6 +1320,7 @@ character_event = {
                 }
                 society_rank_up = 1
                 clr_character_flag = cat_rank_up_possible
+                decadence = -25
             }
             if = {
                 limit = {
