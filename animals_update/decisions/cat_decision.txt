@@ -1260,11 +1260,11 @@ targetted_decisions = {
                 change_society_currency = -300
                 if = {
                     limit = {
-                        has_quest = cat_quest_prosperity_2
+                        has_quest = cat_quest_intrigue_2
                     }
                     custom_tooltip = {
                         text = CAT_TT_QUEST_COMPLETE
-                        clr_quest = cat_quest_prosperity_2
+                        clr_quest = cat_quest_intrigue_2
                     }
                     decadence = -9.5
                 }
@@ -1315,16 +1315,6 @@ targetted_decisions = {
         allow = {
             FROM = {
                 society_currency = 300
-                if = {
-                    limit = {
-                        has_quest = cat_quest_prosperity_1
-                    }
-                    custom_tooltip = {
-                        text = CAT_TT_QUEST_COMPLETE
-                        clr_quest = cat_quest_prosperity_1
-                    }
-                    decadence = -9.5
-                }
             }
             ROOT = {
                 NOT = {
@@ -1336,6 +1326,17 @@ targetted_decisions = {
         effect = {
             FROM = {
                 change_society_currency = -300
+
+                if = {
+                    limit = {
+                        has_quest = cat_quest_prosperity_1
+                    }
+                    custom_tooltip = {
+                        text = CAT_TT_QUEST_COMPLETE
+                        clr_quest = cat_quest_prosperity_1
+                    }
+                    decadence = -9.5
+                }
             }
             ROOT = {
                 add_character_modifier = {
@@ -1465,16 +1466,6 @@ targetted_decisions = {
         allow = {
             FROM = {
                 society_currency = 700
-                if = {
-                    limit = {
-                        has_quest = cat_quest_intrigue_1
-                    }
-                    custom_tooltip = {
-                        text = CAT_TT_QUEST_COMPLETE
-                        clr_quest = cat_quest_intrigue_1
-                    }
-                    decadence = -11.5
-                }
             }
             ROOT = {
                 is_incapable = no
@@ -1485,6 +1476,17 @@ targetted_decisions = {
         effect = {
             FROM = {
                 change_society_currency = -700
+
+                if = {
+                    limit = {
+                        has_quest = cat_quest_intrigue_1
+                    }
+                    custom_tooltip = {
+                        text = CAT_TT_QUEST_COMPLETE
+                        clr_quest = cat_quest_intrigue_1
+                    }
+                    decadence = -11.5
+                }
             }
             ROOT = {
                 random_list = {
@@ -1916,11 +1918,11 @@ settlement_decisions = {
                 change_society_currency = -700
                 if = {
                     limit = {
-                        has_quest = cat_quest_prosperity_2
+                        has_quest = cat_quest_intrigue_2
                     }
                     custom_tooltip = {
                         text = CAT_TT_QUEST_COMPLETE
-                        clr_quest = cat_quest_prosperity_2
+                        clr_quest = cat_quest_intrigue_2
                     }
                     decadence = -11.5
                 }
