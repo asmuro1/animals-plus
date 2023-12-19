@@ -1362,8 +1362,60 @@ character_event = {
                         }
                     }
                 }
-            }
-            
+            } 
         }
+    }
+}
+
+#event 145
+character_event = {
+    id = ani_plus.145
+
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = {
+        FROM = {
+            society_quest_event = {
+                id = ani_plus.148
+                random = 31
+            }
+        }
+    }
+}
+
+
+#event 148
+society_quest_event = {
+    id = ani_plus.148
+    desc = DESC_CAT_GLOBAL_QUEST
+
+    is_triggered_only = yes
+
+    option = {
+        name = ACCEPT
+
+        if = {
+            limit = {
+                society = {
+                    is_society = cat_intrigue_society
+                }
+            }
+            set_quest = cat_quest_intrigue_1
+        }
+        else_if = {
+            limit = {
+                society = {
+                    is_society = cat_reputation_society
+                }
+            }
+            set_quest = cat_quest_reputation_1
+        }
+        else = {
+            # prosperity society
+            set_quest = cat_quest_prosperity_1
+        }
+    }
+    option = {
+        name = DECLINE
     }
 }
