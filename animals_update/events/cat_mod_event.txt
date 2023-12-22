@@ -19,11 +19,11 @@ namespace = ani_plus
 # event 124: An accident happens with cat
 #           -> can lead to a war
 #           -> can kill many adults and add occupied holding
-# event 125: (on_action): a cat bastion (tribe or castle) loose its can owner
+# event 125 (on_action): a cat bastion (tribe or castle) loose its can owner
 #           -> high chance to lead to a war (if garrison is complete)
-# event 126: (MTTH) force a new holding to be a living place to cat - can transform its owner into a cat
+# event 126 (MTTH): force a new holding to be a living place to cat - can transform its owner into a cat
 #           -> can be triggered only if an existing holding is controlled (assieged or controlled) by cats
-# event 127: (MTTH) transform a character into cat if province culture is cat
+# event 127 (MTTH): transform a character into cat if province culture is cat
 
 
 #event 119
@@ -511,7 +511,7 @@ character_event = {
 
 
 ### province cultural change (start invasion by siege or looting)
-#event 128: (on_action) launch province culture notification
+#event 128 (on_action): launch province culture notification
 #event 129: notification for province holder (use invasion mechanisms from conversion quest)
 
 #event 128
@@ -1267,6 +1267,9 @@ letter_event = {
 # event 145-147: preparing sending quests
 # event 148-150: 3 event quest (2 versions per societies + rank up quest)
 # event 151-152: rank up quest failed
+# event 153-154 (on_action): redirection to event 155 with god character
+# event 155: prosprity quest success
+
 #event 144
 character_event = {
     id = ani_plus.144
@@ -1580,5 +1583,58 @@ letter_event = {
     option = {
         name = OPT_152
         decadence = 100
+    }
+}
+
+#event 153
+character_event = {
+    id = ani_plus.153
+
+    is_triggered_only = yes
+    hide_window = yes
+
+    immediate = {
+        FROM = {
+            character_event = { id = ani_plus.155 }
+        }
+    }
+}
+
+#event 154
+character_event = {
+    id = ani_plus.154
+
+    is_triggered_only = yes
+    hide_window = yes
+
+    immediate = {
+        ROOT = {
+            character_event = { id = ani_plus.155 }
+        }
+    }
+}
+
+#event 155
+character_event = {
+    id = ani_plus.155
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    desc = DESC_155_REPUTATION_QUEST_RU_SUCCESS
+
+    trigger = {
+        has_quest = cat_quest_reputation_3
+    }
+
+    option = {
+        name = OPT_155_RANK_UP
+        custom_tooltip = {
+            text = CAT_TT_SUCCESS_QUEST_3
+            clr_quest = cat_quest_reputation_3
+            clr_character_flag = cat_quest_rank_up
+        }
+        society_rank_up = 1
+        decadence = -100
     }
 }

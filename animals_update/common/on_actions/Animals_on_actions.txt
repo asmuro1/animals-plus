@@ -72,25 +72,26 @@ on_chronicle_start = {
 	}
 }
 
-####event 76
 on_war_ended_victory = {
 	events = {
-		ani_plus.076
+		ani_plus.076 # hedgehogg - removing war modifiers
+		ani_plus.153 # cat - prosperity quest rank up
 	}
 }
 on_war_ended_invalid = {
 	events = {
-		ani_plus.076
+		ani_plus.076 #hedgehogg - removing war modifiers
 	}
 }
 on_war_ended_whitepeace = {
 	events = {
-		ani_plus.076
+		ani_plus.076 #hedgehogg - removing war modifiers
 	}
 }
 on_war_ended_defeat = {
 	events = {
-		ani_plus.076
+		ani_plus.076 #hedgehogg - removing war modifiers
+		ani_plus.154 # cat - prosperity quest rank up
 	}
 }
 
