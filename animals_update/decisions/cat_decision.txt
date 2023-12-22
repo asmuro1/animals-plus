@@ -958,7 +958,10 @@ society_decisions = {
             
             custom_tooltip = {
                 text = DO_NOT_ALREADY_ASK_TO_RANK_UP_CAT_TT
-                NOT = { has_character_flag = cat_rank_up_possible}
+                NOR = {
+                    has_character_flag = cat_rank_up_possible
+                    has_character_flag = cat_quest_rank_up    
+                }
             }
 
             custom_tooltip = {
