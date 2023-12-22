@@ -19,6 +19,9 @@ cat_quest_intrigue_1_tooltip;You can complete this quest by doing it's related s
 cat_quest_intrigue_2_fallback;sabotage a county;saboter un comté;;;;;;;;;;;;x
 cat_quest_intrigue_2_desc;By using your power to sabotage a county, you can get what is necessary;Pour cette quête, il va falloir saboter l'exploitation d'un comté.;;;;;;;;;;;;x
 cat_quest_intrigue_2_tooltip;You can complete this quest by doing it's related society power;Tu peux réussir cette guerre en utilisant les pouvoirs de sociétés associé à la quête.;;;;;;;;;;;;x
+cat_quest_intrigue_3_fallback;rank up quest;quête de monté de niveau;;;;;;;;;;;;x
+cat_quest_intrigue_3_desc;To gain rank and show your superiority, you have to give a bad omen without being caugh;Pour monter de rang, il te faut envoyer un mauvais présage sans être découvert.;;;;;;;;;;;;x
+cat_quest_intrigue_3_tooltip;You can complete this quest by doing it's related society power;Tu peux réussir cette guerre en utilisant les pouvoirs de sociétés associé à la quête.;;;;;;;;;;;;x
 
 ### prosperity society
 cat_prosperity_society;Prosperity society;Société de prospérité;;;;;;;;;;;;x
@@ -39,6 +42,9 @@ cat_quest_prosperity_1_tooltip;You can complete this quest by doing it's related
 cat_quest_prosperity_2_fallback;County prosperity;Plus de prospérité de comté;;;;;;;;;;;;x
 cat_quest_prosperity_2_desc;By using your county power, you can success this quest;En utilisant tes pouvoirs de comté, tu peux réussir cette quête.;;;;;;;;;;;;x
 cat_quest_prosperity_2_tooltip;You can complete this quest by doing it's related society power;Tu peux réussir cette guerre en utilisant les pouvoirs de sociétés associé à la quête.;;;;;;;;;;;;x
+cat_quest_prosperity_3_fallback;rank up quest;quête de monté de niveau;;;;;;;;;;;;x
+cat_quest_prosperity_3_desc;To gain rank and show your superiority, you have to increase the health of a pregnant women;Pour monter de rang, il te faut augmenter la santé d'une femme enceinte.;;;;;;;;;;;;x
+cat_quest_prosperity_3_tooltip;You can complete this quest by doing it's related society power;Tu peux réussir cette guerre en utilisant les pouvoirs de sociétés associé à la quête.;;;;;;;;;;;;x
 
 ### reputation society
 cat_reputation_society;Reputation society;Société de réputation;;;;;;;;;;;;x
@@ -59,6 +65,9 @@ cat_quest_reputation_1_tooltip;You can complete this quest by doing it's related
 cat_quest_reputation_2_fallback;Increase your socials standing;Augmente ta réputation sociale;;;;;;;;;;;;x
 cat_quest_reputation_2_desc;By using social powers, you can win this quest;En utilisant tes pouvoirs diplomatiques, tu peux réussir cette quête.;;;;;;;;;;;;x
 cat_quest_reputation_2_tooltip;You can complete this quest by doing it's related society power;Tu peux réussir cette guerre en utilisant les pouvoirs de sociétés associé à la quête.;;;;;;;;;;;;x
+cat_quest_reputation_3_fallback;rank up quest;quête de monté de niveau;;;;;;;;;;;;x
+cat_quest_reputation_3_desc;To gain rank and show your superiority, you have to to win a war.;Pour monter de rang, il te faut gagner une guerre.;;;;;;;;;;;;x
+cat_quest_reputation_3_tooltip;You can complete this quest by doing it's related society power;Tu peux réussir cette guerre en utilisant les pouvoirs de sociétés associé à la quête.;;;;;;;;;;;;x
 
 ## common loc
 cat_animal_society_currency;Cat's credit;Crédit de chat;;;;;;;;;;;;x

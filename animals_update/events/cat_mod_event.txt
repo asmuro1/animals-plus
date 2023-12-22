@@ -1354,14 +1354,14 @@ character_event = {
                         character_event = { id = ani_plus.146 }
                     }
                 }
-                #1 = {
-                #    limit = {
-                #        has_character_flag = cat_rank_up_possible
-                #    }
-                #    event_target:quest_collaborator = {
-                #        character_event = { id = ani_plus.147 }
-                #    }
-                #}
+                1 = {
+                    limit = {
+                        has_character_flag = cat_rank_up_possible
+                    }
+                    event_target:quest_collaborator = {
+                        character_event = { id = ani_plus.147 }
+                    }
+                }
             }
         }
     }
@@ -1392,6 +1392,21 @@ character_event = {
         FROM = {
             society_quest_event = {
                 id = ani_plus.149
+            }
+        }
+    }
+}
+
+#event 147
+character_event = {
+    id = ani_plus.147
+
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = {
+        FROM = {
+            society_quest_event = {
+                id = ani_plus.150
             }
         }
     }
@@ -1467,5 +1482,54 @@ society_quest_event = {
     }
     option = {
         name = DECLINE
+    }
+}
+
+#event 150
+society_quest_event = {
+    id = ani_plus.150
+    desc = DESC_150_RANK_UP_QUEST
+
+    is_triggered_only = yes
+
+
+    immediate = {
+        clr_character_flag = cat_rank_up_possible
+    }
+
+    option = {
+        name = ACCEPT
+        if = {
+            limit = {
+                society = {
+                    is_society = cat_intrigue_society
+                }
+            }
+            set_quest = cat_quest_intrigue_3
+        }
+        else_if = {
+            limit = {
+                society = {
+                    is_society = cat_reputation_society
+                }
+            }
+            set_quest = cat_quest_reputation_3
+        }
+        else = {
+            # prosperity society
+            set_quest = cat_quest_prosperity_3
+        }
+    }
+    option = {
+        name = DECLINE
+        change_society_currency = -750
+        decadence = -100
+
+        if = {
+            limit = {
+                society_rank = 2
+            }
+            society_rank_down = 1
+        }
     }
 }

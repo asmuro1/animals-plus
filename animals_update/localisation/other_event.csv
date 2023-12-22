@@ -130,6 +130,7 @@ OPT_142_BECOME_INCAPABLE;It must be those cat, they are everywhere;Ce doit être 
 DESC_143_NOTIF_GETTING_BANISHED;I, as the grandmaster, decide to banish you. You have no reason to be a member of my glorious society;En tant que chef de la société, je décide de te bannir de la société. Il n'y a aucun intérêt pour que tu restes dedans.;;;;;;;;;;;;x
 OPT_143_GETTING_BANISHED;...;;;;;;;;;;;;;x
 DESC_CAT_GLOBAL_QUEST;As a cat ruler, you must show your ability...; En tant que dirigeant chat, tu dois de t'en montrer digne...;;;;;;;;;;;;x
+DESC_150_RANK_UP_QUEST;You asked to gain fame in our society. So you have 3 years to show your abilities!;Tu as demandé de monter de rang dans notre société. Il ne te reste qu'à t'en montrer digne d'ici les 3 prochaines années...;;;;;;;;;;;;x
 
 
 ##tooltips
