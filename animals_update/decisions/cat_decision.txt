@@ -1120,6 +1120,10 @@ targetted_decisions = {
                     text = CAT_TT_PLOT_DISCOVERY
                     set_character_flag = Discover_autor
                 }
+                custom_tooltip = {
+                    text = CAT_TT_FAIL_QUEST_3
+                    clr_quest = cat_quest_intrigue_3
+                }
             }
 
             custom_tooltip = {
@@ -1136,6 +1140,22 @@ targetted_decisions = {
                         clr_quest = cat_quest_intrigue_1
                     }
                     decadence = -7.5
+                }
+                if = {
+                    limit = {
+                        has_quest = cat_quest_intrigue_3
+                    }
+                    custom_tooltip = {
+                        text = CAT_TT_RU_QUEST_SUCCESS_IF
+                    }
+                    custom_tooltip = {
+                        text = CAT_TT_SUCCESS_QUEST_3
+
+                        clr_quest = cat_quest_intrigue_3
+                        clr_character_flag = cat_quest_rank_up
+                    }
+                    society_rank_up = 1
+                    decadence = -100
                 }
             }
         }
