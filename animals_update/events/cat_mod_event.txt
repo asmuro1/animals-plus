@@ -1264,9 +1264,9 @@ letter_event = {
 
 ### society quest event
 # event 144: on_action quest tombola
-# event 145-147 preparing sending quests
-# event 148-150 3 event quest (2 versions per societies + rank up quest)
-
+# event 145-147: preparing sending quests
+# event 148-150: 3 event quest (2 versions per societies + rank up quest)
+# event 151-152: rank up quest failed
 #event 144
 character_event = {
     id = ani_plus.144
@@ -1499,6 +1499,7 @@ society_quest_event = {
 
     option = {
         name = ACCEPT
+        set_character_flag = cat_quest_rank_up
         if = {
             limit = {
                 society = {
@@ -1519,6 +1520,13 @@ society_quest_event = {
             # prosperity society
             set_quest = cat_quest_prosperity_3
         }
+
+        FROM = {
+            character_event = { # fail quest notification
+                id = ani_plus.151
+                years = 3
+            }
+        }
     }
     option = {
         name = DECLINE
@@ -1531,5 +1539,46 @@ society_quest_event = {
             }
             society_rank_down = 1
         }
+    }
+}
+
+#event 151
+character_event = {
+    id = ani_plus.151
+
+    is_triggered_only = yes
+    hide_window = yes
+
+    immediate = {
+        FROM = {
+            if = {
+                limit = {
+                    has_character_flag = cat_quest_rank_up
+                }
+
+                clr_character_flag = cat_quest_rank_up
+                clr_quest = cat_quest_intrigue_3
+                clr_quest = cat_quest_reputation_3
+                clr_quest = cat_quest_prosperity_3
+
+                letter_event = {
+                    id = ani_plus.152
+                }
+            }
+        }
+    }
+}
+
+#event 152
+letter_event = {
+    id = ani_plus.152
+    
+    is_triggered_only = yes
+    border = GFX_event_letter_frame_diplomacy
+    desc = DESC_152_QUEST_RU_FAILED
+
+    option = {
+        name = OPT_152
+        decadence = 100
     }
 }

@@ -131,6 +131,8 @@ DESC_143_NOTIF_GETTING_BANISHED;I, as the grandmaster, decide to banish you. You
 OPT_143_GETTING_BANISHED;...;;;;;;;;;;;;;x
 DESC_CAT_GLOBAL_QUEST;As a cat ruler, you must show your ability...; En tant que dirigeant chat, tu dois de t'en montrer digne...;;;;;;;;;;;;x
 DESC_150_RANK_UP_QUEST;You asked to gain fame in our society. So you have 3 years to show your abilities!;Tu as demandé de monter de rang dans notre société. Il ne te reste qu'à t'en montrer digne d'ici les 3 prochaines années...;;;;;;;;;;;;x
+DESC_152_QUEST_RU_FAILED;We gave you a quest to show your ability 3 years ago. But you did not have the abilities to make it successful. I regret, but you show yourself unable to rank up.;Il y a 3 ans, tu as reçu des instructions pour pouvoir monter de rang au sein de notre société. Comme tu as été incapable de les réaliser, j'ai le regret de t'apprendre que tu n'as pas ce qu'il faut pour monter de niveau.;;;;;;;;;;;;x
+OPT_152;I should have done it sooner;J'aurais du me concentrer dessus plus rapidement;;;;;;;;;;;;x
 
 
 ##tooltips
