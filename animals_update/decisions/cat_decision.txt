@@ -1201,6 +1201,23 @@ targetted_decisions = {
                     }
                     decadence = -7.5
                 }
+                if = {
+                    limit = {
+                        has_quest = cat_quest_prosperity_3 #rank up quest
+                        ROOT = {
+                            is_pregnant = yes
+                        }
+                    }
+
+                    custom_tooltip = {
+                        text = CAT_TT_SUCCESS_QUEST_3
+
+                        clr_quest = cat_quest_prosperity_3
+                        clr_character_flag = cat_quest_rank_up
+                    }
+                    society_rank_up = 1
+                    decadence = -100
+                }
             }
             ROOT = {
                 add_character_modifier = {

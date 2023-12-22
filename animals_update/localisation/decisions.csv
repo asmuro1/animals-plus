@@ -287,3 +287,5 @@ CAT_TT_PROVINCE_NOT_DEPOPULATED;The province isn't under depopulation effect;La 
 CAT_TT_MAX_PROSPERITY_NOT_ATTAINED;The prosperity level can increase;Le niveau de prospérité augmente;;;;;;;;;;;;x
 CAT_TT_INCREASE_PROSPERITY;The prosperity level increase;Le niveau de prospérité augmente;;;;;;;;;;;;x
 CAT_TT_QUEST_COMPLETE;complete the quest;Réussi la quête;;;;;;;;;;;;x
+CAT_TT_SUCCESS_QUEST_3;Rank up quest completed;Quête de montée de rang réussi;;;;;;;;;;;;x
+CAT_TT_FAIL_QUEST_3;Rank up quest failed;Quête de montée de rang échoué;;;;;;;;;;;;x
