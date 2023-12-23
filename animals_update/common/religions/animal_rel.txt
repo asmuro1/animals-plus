@@ -4,7 +4,7 @@
 
 Animals_grups = {
 	color = { 0.38 0.38 0.38 }
-	graphical_culture = beargfx #no idea to what i can do here
+	graphical_culture = africangfx #no idea to what i can do here
 	has_coa_on_barony_only = yes
 	crusade_cb = crusade
 
@@ -126,8 +126,6 @@ Animals_grups = {
 		landed_kin_prestige_bonus = yes
 	}
 	Duck_religion = {
-		graphical_culture = duckgfx
-
 		icon = 63
 		heresy_icon = 1 #No heresy
 		color = { 0.63 0.65 0.80 }
@@ -163,8 +161,6 @@ Animals_grups = {
 		landed_kin_prestige_bonus = yes
 	}
 	Eleph_religion = {
-		graphical_culture = elephantgfx
-
 		icon = 64
 		heresy_icon = 1 #No heresy
 		color = { 0.4 0.4 0.4 }
@@ -198,8 +194,6 @@ Animals_grups = {
 		peace_prestige_loss	= no
 	}
 	Cat_religion = {
-		graphical_culture = catgfx
-
 		icon = 65
 		heresy_icon = 1 #No heresy
 		color = { 0.2 0.7 0.3 }
