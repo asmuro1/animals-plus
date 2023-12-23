@@ -56,6 +56,10 @@ on_new_holder_inheritance = {
 	events = {
 		ani_plus.035 # tournament winner: loosing associated trait
 		ani_plus.116 # updating elephant law
+	}
+}
+on_new_holder = {
+	events = {
 		ani_plus.125 # cat holder change 
 	}
 }
