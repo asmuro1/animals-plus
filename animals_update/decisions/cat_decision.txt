@@ -1191,7 +1191,10 @@ targetted_decisions = {
                 society_currency = 120
             }
             ROOT = {
-                is_ill = yes
+                OR = {
+                    is_ill = yes
+                    trait = pregnant
+                }
                 NOT = {
                     has_character_modifier = cat_mod_society_prosperity_illness
                 } 
