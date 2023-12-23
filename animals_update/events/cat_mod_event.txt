@@ -1622,6 +1622,8 @@ character_event = {
 character_event = {
     id = ani_plus.155
 
+    is_triggered_only = yes
+
     border = GFX_event_normal_frame_diplomacy
     picture = GFX_evt_council
 
