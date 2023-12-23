@@ -1247,13 +1247,20 @@ cat_start_revolt_effect = {
 
 # province scope
 cat_new_holding_created_by_cats_effect = {
-    any_province_holding = {
-        limit = {
-            NOT = { settlement_age = 3 }
-        }
-        add_holding_modifier = {
-            name = cat_controlled_holding
-            years = 10
+    holder_scope = {
+        PREV = {
+            any_province_holding = {
+                limit = {
+                    NOT = { settlement_age = 3 }
+                }
+                add_holding_modifier = {
+                    name = cat_controlled_holding
+                    years = 10
+                }
+                holder_scope = {
+                    set_defacto_liege = PREVPREVPREV
+                }
+            }
         }
     }
 }
