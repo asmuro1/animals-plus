@@ -1,7 +1,7 @@
 namespace = ani_plus
 
 ###### cat update events
-### event 119 - 150?
+### event 119 - 155?
 
 #### conversion quest:
 # event 119: launching quest by event rule
@@ -1337,20 +1337,21 @@ character_event = {
             # ai = no so player only
             random_list = {
                 10 = {
-                    limit = {
-                        NOT = {
-                            has_character_flag = cat_rank_up_possible
-                        }
+                    modifier = {
+                        factor = 0
+                        
+                        has_character_flag = cat_rank_up_possible
                     }
                     event_target:quest_collaborator = {
                         character_event = { id = ani_plus.145 }
                     }
                 }
                 10 = {
-                    limit = {
-                        society_rank = 2
-                        NOT = {
+                    modifier = {
+                        factor = 0
+                        OR = {
                             has_character_flag = cat_rank_up_possible
+                            NOT = { society_rank = 2 }
                         }
                     }
                     event_target:quest_collaborator = {
@@ -1358,8 +1359,11 @@ character_event = {
                     }
                 }
                 1 = {
-                    limit = {
-                        has_character_flag = cat_rank_up_possible
+                    modifier = {
+                        factor = 0
+                        NOT = {
+                            has_character_flag = cat_rank_up_possible
+                        }
                     }
                     event_target:quest_collaborator = {
                         character_event = { id = ani_plus.147 }
@@ -1534,7 +1538,7 @@ society_quest_event = {
     option = {
         name = DECLINE
         change_society_currency = -750
-        decadence = -100
+        decadence = 100
 
         if = {
             limit = {
