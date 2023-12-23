@@ -397,6 +397,7 @@ province_event = {
         any_province_holding = {
             has_holding_modifier = cat_controlled_holding
         }
+        NOT = { culture_group = cat_group }
     }
 
     border = GFX_event_normal_frame_diplomacy
@@ -430,6 +431,9 @@ province_event = {
     option = {
         name = OPT_126_CAT_TARGET
 
+        # county = {
+        #     save_event_target_as = new_holding_controlled
+        # }
         random_province_holding = {
             limit = {
                 NOT = { has_holding_modifier = cat_controlled_holding }
@@ -442,23 +446,27 @@ province_event = {
                 is_capital = no
                 NOT = { holding_type = castle }
             }
-            preferred_limit = {
-                is_capital = no
-            }
 
-            hidden_tooltip = {
-                random_province_lord = {
-                    limit = {
-                        culture_group = cat_group
-                    }
-                    save_event_target_as = new_culture_save
+            save_event_target_as = new_holding_controlled
+        }
+        hidden_tooltip = {
+            random_province_lord = {
+                limit = {
+                    culture_group = cat_group
                 }
+                save_event_target_as = new_culture_save
             }
+        }
+        
+        event_target:new_holding_controlled = {
             if = {
                 limit = {
+                    # tier = COUNT
                     is_capital = yes
                 }
-                culture = event_target:new_culture_save
+                location = {
+                    culture = event_target:new_culture_save
+                }
             }
             else = {
                 add_holding_modifier = {
