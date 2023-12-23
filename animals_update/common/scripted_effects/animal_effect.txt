@@ -1147,6 +1147,9 @@ create_cat_terrain_character_effect = {
             dynasty = none
         }
     }
+    new_character = {
+        save_event_target_as = new_owner_target
+    }
 }
 #holding scope
 cat_set_new_cat_owner_effect = {
@@ -1154,7 +1157,7 @@ cat_set_new_cat_owner_effect = {
         create_cat_terrain_character_effect = yes
     }
     gain_title = {
-        target = new_character
+        target = event_target:new_owner_target
         type = host
     }
 }

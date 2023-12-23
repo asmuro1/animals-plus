@@ -1,7 +1,7 @@
 namespace = ani_plus
 
 ###### cat update events
-### event 119 - 155?
+### event 119 - 156
 
 #### conversion quest:
 # event 119: launching quest by event rule
@@ -283,19 +283,11 @@ province_event = {
 
         event_target:Invasion_target = {
 
-            # if = { #should not happens as one condition to start quest is having at least 2 holding
-            #     limit = {
-            #         is_capital = yes
-            #     }
-            #     cat_terrain_change_culture_effect = yes #character culture change by event 129
-            # }
-            # else = {
-                add_holding_modifier = {
-                    name = cat_controlled_holding
-                    years = 10
-                }
-                cat_set_new_cat_owner_effect = yes
-            # }
+            add_holding_modifier = {
+                name = cat_controlled_holding
+                years = 10
+            }
+            cat_set_new_cat_owner_effect = yes
         }
         clr_province_flag = Cat_conv_quest_CD
     }

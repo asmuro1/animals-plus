@@ -86,10 +86,10 @@ eleph_unlock_reprod_lab;Can construct a laboratory on hospital;Peut construire u
 DESC_119_HIGH_CAT_NUMBER;It seems that a huge number of cat started to migrate in [This.GetName].;Il semblerai qu'un grand nombre de chats s'est installé dans la province de [This.GetName].;;;;;;;;;;;;x
 OPT1_119_OBSERVE_THEM;They are just cats.;Ce sont que des chats.;;;;;;;;;;;;x
 OPT2_119_CHASE_THEM;Kill them, they will start an epidemy!;Tuez-les, ils vont propager une épidémie!;;;;;;;;;;;;x
-DESC_120_CAT_START_RAMPAGE;The cats in [This.GetName] start to grow. They are going to threaten the peace;LEs chats de [This.GetName] commencent à devenir trop nombreux pour être ignorés;;;;;;;;;;;;x
+DESC_120_CAT_START_RAMPAGE;The cats in [This.GetName] start to grow. They are going to threaten the peace;Les chats de [This.GetName] commencent à devenir trop nombreux pour être ignorés;;;;;;;;;;;;x
 OPT_120_DO_NOTHING;Nothing can be done;Rien ne peut être fait;;;;;;;;;;;;x
 OPT2_120_START_A_HUNT;organize a massive hunt;Organiser une grande chasse aux chats;;;;;;;;;;;;x
-OPT3_120_TRY_SECLUSION;Try to isolate cats population from human population;Essayer d'isoler les chats des humains population;;;;;;;;;;;;x
+OPT3_120_TRY_SECLUSION;Try to isolate cats population from human population;Essayer d'isoler les chats des populations humaines;;;;;;;;;;;;x
 DESC_121_EPIDEMY_OUTBREAK;It seems that the cats living in [This.GetName] are dying.;Il semblerait que les chats de [This.GetName] sont en train de mourir;;;;;;;;;;;;x
 OPT_121_EPIDEMY;Is it because of an epidemy outbreak?;Est-ce à cause d'un foyer d'épidémie?;;;;;;;;;;;;x
 DESC_122_CAT_INVADE;The cats in [This.GetName] just take control of [Invasion_target.GetName].;Les chats de [This.GetName] ont pris le contrôle de [Invasion_target.GetName].;;;;;;;;;;;;x
@@ -140,7 +140,7 @@ OPT_156_EOQ;I can only hope to not have been discovered;Je ne peut espéré de ne 
 
 ##tooltips
 
-CAT_TT_DIE_IN_EPIDEMY;The cats die in a new epidemy;Les chats meurent tous dans une nouvelle épidémie;;;;;;;;;;;;x
+CAT_TT_DIE_IN_EPIDEMY;The cats die in a new epidemy;Les chats meurent dans une nouvelle épidémie;;;;;;;;;;;;x
 CAT_TT_TAKE_UNFORTIFIED_HOLDING;The cats take control of an existiong holding;Les chats prennent le contre d'une possession;;;;;;;;;;;;x
 CAT_TT_TOO_LATE;The hunt started to late;La chasse a commencé trop tard;;;;;;;;;;;;x
 CAT_TT_ARE_GONE;The cat are exterminated;Les chats sont exterminés;;;;;;;;;;;;x

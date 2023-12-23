@@ -60,7 +60,7 @@ title_decisions = {
                 Cat_can_live_here_trigger = yes
                 custom_tooltip = {
                     text = CAT_NOT_PRESENT
-                    has_province_flag = Cat_conv_quest_CD
+                    NOT = { has_province_flag = Cat_conv_quest_CD }
                 }
             }
         }
