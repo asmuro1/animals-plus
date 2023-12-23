@@ -1268,7 +1268,8 @@ letter_event = {
 # event 148-150: 3 event quest (2 versions per societies + rank up quest)
 # event 151-152: rank up quest failed
 # event 153-154 (on_action): redirection to event 155 with god character
-# event 155: prosprity quest success
+# event 155: prosprity rank up quest success
+# event 156: intrigue rank up quest rewards
 
 #event 144
 character_event = {
@@ -1642,5 +1643,42 @@ character_event = {
         }
         society_rank_up = 1
         decadence = -100
+    }
+}
+
+#event 156
+character_event = {
+    id = ani_plus.156
+
+    is_triggered_only = yes
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    desc = DESC_156_END_OF_QUEST_INTRIGUE
+
+    option = {
+        name = OPT_156_EOQ
+        hidden_tooltip = {
+            clr_quest = cat_quest_intrigue_3
+            clr_character_flag = cat_quest_rank_up
+        }
+        if = {
+            limit = {
+                has_character_flag = Discover_autor_bis
+            }
+
+            custom_tooltip = {
+                text = CAT_TT_FAIL_QUEST_3
+            }
+            decadence = 100
+            clr_character_flag = Discover_autor_bis
+        }
+        else = {
+            custom_tooltip = {
+                text = CAT_TT_SUCCESS_QUEST_3
+            }
+            society_rank_up = 1
+            decadence = -100
+        }
     }
 }

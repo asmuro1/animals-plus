@@ -135,7 +135,8 @@ DESC_152_QUEST_RU_FAILED;We gave you a quest to show your ability 3 years ago. B
 OPT_152;I should have done it sooner;J'aurais du me concentrer dessus plus rapidement;;;;;;;;;;;;x
 DESC_155_REPUTATION_QUEST_RU_SUCCESS;I finally won a war!;J'ai enfin gagné une guerre!;;;;;;;;;;;;x
 OPT_155_RANK_UP;I am a proud member of the reputation society.;Je suis un digne membre de la société de réputation.;;;;;;;;;;;;x
-
+DESC_156_END_OF_QUEST_INTRIGUE;I finnaly finished my rank up quest;J'ai enfin fini ma quête de monté de niveau;;;;;;;;;;;;x
+OPT_156_EOQ;I can only hope to not have been discovered;Je ne peut espéré de ne pas être découvert;;;;;;;;;;;;x
 
 ##tooltips
 

@@ -1119,17 +1119,10 @@ targetted_decisions = {
                 custom_tooltip = {
                     text = CAT_TT_PLOT_DISCOVERY
                     set_character_flag = Discover_autor
-                }
-                custom_tooltip = {
-                    text = CAT_TT_FAIL_QUEST_3
-                    clr_quest = cat_quest_intrigue_3
+                    FROM = { set_character_flag = Discover_autor_bis }
                 }
             }
 
-            custom_tooltip = {
-                text = CAT_TT_SET_INTR1_NOTIF
-                character_event = { id = ani_plus.140 }
-            }
             FROM = {
                 if = {
                     limit = {
@@ -1145,18 +1138,15 @@ targetted_decisions = {
                     limit = {
                         has_quest = cat_quest_intrigue_3
                     }
-                    custom_tooltip = {
-                        text = CAT_TT_RU_QUEST_SUCCESS_IF
-                    }
-                    custom_tooltip = {
-                        text = CAT_TT_SUCCESS_QUEST_3
-
-                        clr_quest = cat_quest_intrigue_3
-                        clr_character_flag = cat_quest_rank_up
-                    }
-                    society_rank_up = 1
-                    decadence = -100
+                    character_event = { id = ani_plus.156 }
                 }
+                else = {
+                    clr_character_flag = Discover_autor_bis
+                }
+            }
+            custom_tooltip = {
+                text = CAT_TT_SET_INTR1_NOTIF
+                character_event = { id = ani_plus.140 }
             }
         }
 
