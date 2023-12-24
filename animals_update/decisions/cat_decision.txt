@@ -1013,6 +1013,7 @@ targetted_decisions = {
             }
         }
         potential = {
+            is_within_diplo_range = FROM
             NOT = {
                 culture_group = cat_group
             }
@@ -1061,6 +1062,7 @@ targetted_decisions = {
             society_rank = 1
         }
         potential = {
+            is_within_diplo_range = FROM
             NOT = {
                 has_character_modifier = cat_mod_society_intrigue_1
             }
@@ -1182,6 +1184,7 @@ targetted_decisions = {
             society_rank = 1
         }
         potential = {
+            is_within_diplo_range = FROM
             NOT = {
                 has_character_modifier = cat_mod_society_prosperity_illness
             }
@@ -1274,6 +1277,7 @@ targetted_decisions = {
             society_rank = 2
         }
         potential = {
+            is_within_diplo_range = FROM
             location = {
                 has_epidemic = no
             }
@@ -1341,6 +1345,7 @@ targetted_decisions = {
             society_rank = 2
         }
         potential = {
+            is_within_diplo_range = FROM
             NOT = {
                 has_character_modifier = cat_mod_society_prosperity_life_bonus
             }
@@ -1413,6 +1418,7 @@ targetted_decisions = {
             society_rank = 2
         }
         potential = {
+            is_within_diplo_range = FROM
             NOT = {
                 has_character_modifier = cat_mod_reputation_vassal
             }
@@ -1494,6 +1500,7 @@ targetted_decisions = {
             society_rank = 3
         }
         potential = {
+            is_within_diplo_range = FROM
             is_incapable = no
         }
         allow = {
@@ -1598,6 +1605,7 @@ targetted_decisions = {
             society_rank = 3
         }
         potential = {
+            is_within_diplo_range = FROM
             NOT = {
                 has_character_modifier = cat_mod_reputation_cats
             }
@@ -1679,6 +1687,7 @@ targetted_decisions = {
             society_rank = 4
         }
         potential = {
+            is_within_diplo_range = FROM
             ai = yes
         }
         allow = {
@@ -1735,6 +1744,7 @@ targetted_decisions = {
             society_rank = 4
         }
         potential = {
+            is_within_diplo_range = FROM
             NOT = {
                 has_opinion_modifier =  {
                     name = cat_forced_alliance
@@ -1822,6 +1832,7 @@ targetted_decisions = {
         }
         potential = {
             is_in_society = yes
+            is_within_diplo_range = FROM
             FROM = { is_in_society = yes }
             NOT = {
                 society_rank = 4
