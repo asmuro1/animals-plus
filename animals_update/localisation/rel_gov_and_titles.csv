@@ -28,6 +28,10 @@ Eleph_religion;Elephant;Éléphant;;;;;;;;;;;;x
 Eleph_religion_DESC;Elephant's religion;Religion des éléphants;;;;;;;;;;;;x
 Eleph_religion_full;Elephant;Éléphant;;;;;;;;;;;;x
 ELEPH_RELIGION_HIGH_GOD;Elepha;Élépha;;;;;;;;;;;;x
+Cat_religion;Cat;Chat;;;;;;;;;;;;x
+Cat_religion_DESC;Cat's religion;Religion des chats;;;;;;;;;;;;x
+Cat_religion_full;Cat;Chat;;;;;;;;;;;;x
+CAT_RELIGION_HIGH_GOD;Cat-iph;Le Chat perché;;;;;;;;;;;;x
 
 ###government localisation
 Bear_feudal_gov;Bears feodality;féodalité oursienne;;;;;;;;;;;;x
@@ -44,6 +48,8 @@ Duck_feudal_gov;Duck's feodality;Féodalité canard;;;;;;;;;;;;x
 Duck_feudal_gov_desc;Government made by ducks for ducks;Gouvernement fait par les canards pour les canards;;;;;;;;;;;;x
 Eleph_feudal_gov;Elephant's feodality;Féodalité éléphantine;;;;;;;;;;;;x
 Eleph_feudal_gov_desc;Government made by elephant for elephant;Gouvernement fait par les éléphant pour les éléphant;;;;;;;;;;;;x
+cat_feudal_gov;Cat's feodality;Féodalité des chats;;;;;;;;;;;;x
+cat_feudal_gov_desc;Government made by cats for cats;Gouvernement fait par les chats pour les chats;;;;;;;;;;;;x
 
 ###minor titles
 title_bear_children;Honor child;Enfant d'honneur;;;;;;;;;;;;x
@@ -70,6 +76,8 @@ d_sea_master;Sea master;Maître des mer;;;;;;;;;;;;x
 d_sea_master_adj;animal;animale;;;;;;;;;;;;x
 d_immortal_herd;Immortals herds;Hordes immortelles;;;;;;;;;;;;x
 d_immortal_herd_adj;animal;animale;;;;;;;;;;;;x
+d_Invasive_order;The invasive order;L'ordre invasif;;;;;;;;;;;;x
+d_Invasive_order_adj;animal;animale;;;;;;;;;;;;x
 
 #job title names
 action_repress_vassal;Repress vassals;réprimer des vassaux;;;;;;;;;;;;x

@@ -35,3 +35,9 @@ immortal_herd = {
 	war_elephants = 500
 	knights = 50
 }
+
+Invasive_order = {
+	levy_size = 4.5
+	light_infantry = 500
+	heavy_infantry = 50
+}

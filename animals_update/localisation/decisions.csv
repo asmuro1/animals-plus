@@ -6,8 +6,8 @@ province_animal_conversion;Establish an animal colony;Implanter une colonie anim
 province_animal_conversion_desc;Establish your animal culture in the county to allow the use of the animal upgraded buildings;établir la culture animalière dans le comté pour autoriser l'utilisation des bâtiments animaliers améliorés;;;;;;;;;;;;;x
 hide_human_buildings;Hide human buildings;Cacher les bâtiments humains;;;;;;;;;;;;;x
 show_human_building;Show human buildings;Montrer les bâtiments humains;;;;;;;;;;;;;x
-hide_human_buildings_desc;;;;;;;;;;;;;;;x
-show_human_building_desc;;;;;;;;;;;;;;;x
+hide_human_buildings_desc; ;;;;;;;;;;;;;;x
+show_human_building_desc; ;;;;;;;;;;;;;;x
 cursed_text_cat;[ROOT.GetTitledName] will be cursed;[ROOT.GetTitledName] va être maudit;;;;;;;;;;;;;x
 cat_building_curse;Curse this person;Maudire cette personne;;;;;;;;;;;;;x
 cat_building_curse_desc;Curse this person. It takes up to a month to take effect.;Maudire cette personne. Cela peut prendre jusqu'à un mois pour prendre effet.;;;;;;;;;;;;;x
@@ -198,3 +198,94 @@ ELEPH_NO_ONE_CHANGE_CLIMATE;No one did change the local climate;Personne ne chan
 ELEPH_CLIMATE_TT_CHANGE_CLIMATE;[From.GetTitledNameWithNick] is currently changing the climate;[From.GetTitledNameWithNick] modifie le climat local;;;;;;;;;;;;x
 ELEPH_CLIMATE_TT_RETURN_NORMAL;Return local climate to the norms;Retourne le climat local à la normale;;;;;;;;;;;;x
 ELEPH_TT_DISEASE_SPAWN;An epidemic start;Une épidémie commence;;;;;;;;;;;;x
+
+
+#### CAT UPDATE
+
+start_cat_conversion_quest;Evaluate cat number;Constater un nombre important de chats;;;;;;;;;;;;x
+start_cat_conversion_quest_desc;As cats started to migrate in the province, verifying that they are not over-numbered is a must-go.;Avec les chats qui commencent à devenir nombreux dans la province, il peut être utile d'y regarder de plus près pour éviter des risques inutiles;;;;;;;;;;;;x
+adopt_cat_religion;Adopt cats' religion;Adopter la religion des chats;;;;;;;;;;;;x
+adopt_cat_religion_desc;As a cat, you can freely choose to convert yourself to the associated religion;En tant que chat, tu peux librement choisir de te convertir à la religion associé;;;;;;;;;;;;;x
+Force_cat_invasion;Force an invasion;Forcer une invasion de chat;;;;;;;;;;;;x
+Force_cat_invasion_desc;By using the religion influence, a cat can force an invasion and fastly changing province culture;En utilisant l'influence de sa religion, un chat peut facilement forcer une invasion et ainsi changer la culture local de la province;;;;;;;;;;;;x
+cat_society_general_convert_one;Transform someone into a cat;Transformer en chat;;;;;;;;;;;;x
+cat_society_general_convert_one_desc;By using society influence, you can force the conversion of someone into a cat;En utilisant l'influence de la société, il est possible de forcer la conversion en chat de quelqu'un;;;;;;;;;;;;x
+cat_society_general_convert_one_power_desc;By using society influence, you can force the conversion of someone into a cat;En utilisant l'influence de la société, il est possible de forcer la conversion en chat de quelqu'un;;;;;;;;;;;;x
+cat_society_sabo_power_A;Give a bad omen;Envoyer un mauvais présage;;;;;;;;;;;;x
+cat_society_sabo_power_A_desc;As an intrigue cat, you can give a bad omen;En tant que chat intriguant, il est possible de donner un mauvais présage à quelqu'un;;;;;;;;;;;;x
+cat_society_sabo_power_A_power_desc;As an intrigue cat, you can give a bad omen;En tant que chat intriguant, il est possible de donner un mauvais présage à quelqu'un;;;;;;;;;;;;x
+cat_start_epidemy_power_B;Start an epidemy;Débuter une épidémie;;;;;;;;;;;;x
+cat_start_epidemy_power_B_desc;As an intrigue cat, it is possible to start an apidemy where a target character live;En tant que chat intriguant, il est possible de débuter une épidémie à l'emplacement d'un personnage;;;;;;;;;;;;x
+cat_start_epidemy_power_B_power_desc;As an intrigue cat, it is possible to start an apidemy where a target character live;En tant que chat intriguant, il est possible de débuter une épidémie à l'emplacement d'un personnage;;;;;;;;;;;;x
+cat_revolt_risk_power_C;Sabotage county;Saboter le comter;;;;;;;;;;;;x
+cat_revolt_risk_power_C_desc;You can force a discord between peasant and their liege;Forcer une discorde entre les paysans d'une province et de leur seigneur liege;;;;;;;;;;;;x
+cat_revolt_risk_power_C_power_desc;You can force a discord between peasant and their liege;Forcer une discorde entre les paysans d'une province et de leur seigneur liege;;;;;;;;;;;;x
+cat_destroy_buildings_power_D;Sabotage a building;Saboter un bâtiment;;;;;;;;;;;;x
+cat_destroy_buildings_power_D_desc;You can sabotage the settlement and destroy a random building;Il est possible de saboter le lieu et ainsi détruire un bâtiment aléatoire;;;;;;;;;;;;x
+cat_destroy_buildings_power_D_power_desc;With your influence, it became possible to destroy a settlement development;Avec l'influence de la société, il est possible de détruire le développement d'un lieu de vie;;;;;;;;;;;;x
+cat_make_incapable_power_E;Make incapable;Rendre incapable;;;;;;;;;;;;x
+cat_make_incapable_power_E_desc;Make him incapable;Le rendre incapable;;;;;;;;;;;;x
+cat_make_incapable_power_E_power_desc;By using influence, it is possible to make non-cat incapable;Grâce à l'influence dans la société, il est maintenant possible de rendre incapable d'autres personnes non-chat;;;;;;;;;;;;x
+cat_charm_someone_power_F;charm someone;Séduire quelqu'un;;;;;;;;;;;;x
+cat_charm_someone_power_F_desc;You can charm only one person, making him loyal;Il n'est possible de ne charmer qu'une seule personne, pour le rendre loyal;;;;;;;;;;;;x
+cat_charm_someone_power_F_power_desc;A chief must have at least one faithful vassal.;Un chef doit avoir au moins un fidèle sujet.;;;;;;;;;;;;x
+cat_banish_someone_power_G;Banish someone from society;Bannir quelqu'un de la société;;;;;;;;;;;;x
+cat_banish_someone_power_G_desc;Banish someone definetly from the cat society;Bannir quelqu'un définitivement d'une société de chat;;;;;;;;;;;;x
+cat_banish_someone_power_G_power_desc;As the society chief, it is possible to banish someone from the cat society;En tant que chef, il est possible de bannir quelqu'un de la société;;;;;;;;;;;;x
+cat_illness_resistance_power_A;Increased illness resistance;meilleur résistance à la maladie;;;;;;;;;;;;x
+cat_illness_resistance_power_A_desc;By using your society power, you can lessen disease impact on your life;En utilisant le pouvoir de la société, il est possible de réduire les effets d'une maladie;;;;;;;;;;;;x
+cat_illness_resistance_power_A_power_desc;Life is important, so increase the resistance of lord against disease is important;La vie est très importante, permettre aux dirigeants de résister aux maladies aussi;;;;;;;;;;;;x
+cat_more_health_power_B;Increase your life expectancy;Augmenter son espérence de vie;;;;;;;;;;;;x
+cat_more_health_power_B_desc; ; ;;;;;;;;;;;;x
+cat_more_health_power_B_power_desc; ; ;;;;;;;;;;;;x
+cat_wealth_from_county_power_C;Increase county revenue;Augmenter les revenus d'une province;;;;;;;;;;;;x
+cat_wealth_from_county_power_C_desc;Increase county tax and cities;Augmente les taxes du comtés et des cités;;;;;;;;;;;x
+cat_wealth_from_county_power_C_power_desc;Increase wealth of a province;Augment la richesse d'une province;;;;;;;;;;;x
+cat_county_epidemic_resistance_power_D;less epidemic;Moins d'épidémie;;;;;;;;;;;;x
+cat_county_epidemic_resistance_power_D_desc;Reduce epidemy outbreak chance;Réduire le nombre d'épidémie dans la province;;;;;;;;;;;;x
+cat_county_epidemic_resistance_power_D_power_desc;Reduce epidemic outbreak on specific provinces;Réduis le nombre d'épidémies dans les provinces au choix;;;;;;;;;;;;x
+cat_create_new_holding_power_E;Create a new tribe;Créer une nouvelle tribu;;;;;;;;;;;;x
+cat_create_new_holding_power_E_desc;Create a new cat tribe in the province;Crée une nouvelle tribu de chat dans la province;;;;;;;;;;;;x
+cat_create_new_holding_power_E_power_desc;Increase a province prosperity by creating a new tribe;Augmenter la prospérité de la province en créant une nouvelle tribu;;;;;;;;;;;;x
+cat_increase_prosperity_level_power_F;Increase a province's prosperity level;Augmenter la prosperité d'une province;;;;;;;;;;;;x
+cat_increase_prosperity_level_power_F_desc;If no issue happens, making a province prosperous assure the whole country prosperity;Lorsque la province n'es pas en trouble, il est possible d'améliorer sa prospérité et ainsi celle du pays;;;;;;;;;;;;x
+cat_increase_prosperity_level_power_F_power_desc;If no issue happens, making a province prosperous assure the whole country prosperity;Lorsque la province n'es pas en trouble, il est possible d'améliorer sa prospérité et ainsi celle du pays;;;;;;;;;;;;x
+cat_piety_gain_power_A;Wildness gain;Gain de sauvagerie;;;;;;;;;;;;x
+cat_piety_gain_power_A_desc; ; ;;;;;;;;;;;;x
+cat_piety_gain_power_A_power_desc;Cats without Wildness are not good cat;Des chats sans sauvagerie ne sont pas de bon chats;;;;;;;;;;;;x 
+cat_prestige_gain_power_B;Prestige gain;Gain de prestige;;;;;;;;;;;;x
+cat_prestige_gain_power_B_desc; ; ;;;;;;;;;;;;x
+cat_prestige_gain_power_B_power_desc;A reputation is made with its prestige;Un réputation se caractérise par son prestige;;;;;;;;;;;;x
+cat_vassal_opinion_power_C;Install reputation to vassals;Imposer sa réputation aux vassaux;;;;;;;;;;;;x
+cat_vassal_opinion_power_C_desc;A true cat lord must be able to stabilize its realm;Un vrai dirigeant chat se doit de stabiliser son territoire;;;;;;;;;;;;x
+cat_vassal_opinion_power_C_power_desc;Become able to improve your reputation to your vassals;Devient capable d'improuver sa réputation auprès des vassaux;;;;;;;;;;;;x
+cat_levy_gain_power_D;motivate young cats fighter;Motive de jeunes chats combatants;;;;;;;;;;;;x
+cat_levy_gain_power_D_desc;A lord need levy to make itself famous;Un dirigeant a besoin de troupe pour se faire connu;;;;;;;;;;;;x
+cat_levy_gain_power_D_power_desc;A big army makes one respected amongst its enemy;Un grande armée rend un dirigeant respecté auprès de ses ennemis;;;;;;;;;;;;x
+cat_general_opinion_power_E;Improve your global reputation;Augmente ta réputation globale;;;;;;;;;;;;x
+cat_general_opinion_power_E_desc;improve your reputation from everyone;Augmente ta relation auprès de tout le monde;;;;;;;;;;;;x
+cat_general_opinion_power_E_power_desc;A reputation is to convince everyone of your abilities;Une réputation permet de convaincre tout le monde de tes capacités;;;;;;;;;;;;x
+cat_force_alliance_power_F;Impose an alliance;Imposer une alliance;;;;;;;;;;;;x
+cat_force_alliance_power_F_desc;By using your reputation, you can become allied to another cat ruler;Avec ta réputation, il est possible d'imposer une alliance avec un autre dirigeant;;;;;;;;;;;;x
+cat_force_alliance_power_F_power_desc;The biggest proof of a good reputation is caracterized by its allies;La forme la plus avancé d'une bonne réputation se montre par ses alliés;;;;;;;;;;;;x
+
+
+#TOOLTIPS
+CAT_TT_COOLDOWN;Cats are not in action;Aucun chat n'a de comportements étranges;;;;;;;;;;;;x
+CAT_NOT_PRESENT;The cats are unable to invade again;Les chats ne peuvent pas revenir;;;;;;;;;;;;x
+No_cat_invasion_tt;No cat is settled in the province;Aucun chat ne s'est installé dans la province;;;;;;;;;;;;x
+CREATED_HOLY_ORDER_CAT_TOOLTIP;[d_Invasive_order.GetName] created;[d_Invasive_order.GetName] sont créée;;;;;;;;;;;;x
+CAT_TT_CONVERT_POWER;Is changed into a cat;Est changé en chat;;;;;;;;;;;;x
+CAT_TT_SET_INTR1_NOTIF;Receive a bad omen;Reçoit un mauvais présage;;;;;;;;;;;;x
+CAT_TT_PLOT_DISCOVERY;be discovered;être découvert;;;;;;;;;;;;x
+CAT_TT_START_EPIDEMY;An epidemy start;Une épidémie commence;;;;;;;;;;;;x
+CAT_TT_DID_NOT_SABOTAGE;The county isn't already sabotaged;Le comté n'est pas saboté;;;;;;;;;;;;x
+CAT_TT_BUILDING_SABOTAGE;Destroy a random building;Détruit un bâtiment aléatoire;;;;;;;;;;;;x
+CAT_TT_BECOMING_INCAPABLE;become incapable;devient incapable;;;;;;;;;;;;x
+CAT_TT_BANISH_FROM_SOCIETY;is banned from the society;est banni de la société;;;;;;;;;;;;x
+CAT_TT_PROVINCE_NOT_DEPOPULATED;The province isn't under depopulation effect;La province n'est sous l'effet d'une dépopulation;;;;;;;;;;;;x
+CAT_TT_MAX_PROSPERITY_NOT_ATTAINED;The prosperity level can increase;Le niveau de prospérité augmente;;;;;;;;;;;;x
+CAT_TT_INCREASE_PROSPERITY;The prosperity level increase;Le niveau de prospérité augmente;;;;;;;;;;;;x
+CAT_TT_QUEST_COMPLETE;complete the quest;Réussi la quête;;;;;;;;;;;;x
+CAT_TT_SUCCESS_QUEST_3;Rank up quest completed;Quête de montée de rang réussi;;;;;;;;;;;;x
+CAT_TT_FAIL_QUEST_3;Rank up quest failed;Quête de montée de rang échoué;;;;;;;;;;;;x

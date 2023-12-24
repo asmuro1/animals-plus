@@ -1,0 +1,79 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+
+###intrigue society
+cat_intrigue_society;Intrigue society;Société d'intrigue;;;;;;;;;;;;x
+cat_intrigue_society_desc;Society formed by cat to make intrigues;Société formé par les chats pour créer des intrigues;;;;;;;;;;;;x
+cat_intrigue_society_rank_1_male;Student;Étudiant;;;;;;;;;;;;x
+cat_intrigue_society_rank_1_female;Student;Étudiante;;;;;;;;;;;;x
+cat_intrigue_society_rank_2_male;Member;Membre;;;;;;;;;;;;x
+cat_intrigue_society_rank_2_female;Member;Membre;;;;;;;;;;;;x
+cat_intrigue_society_rank_3_male;Responsable;Responsable;;;;;;;;;;;;x
+cat_intrigue_society_rank_3_female;Responsable;Responsable;;;;;;;;;;;;x
+cat_intrigue_society_rank_4_male;Grandmaster;Grand maître;;;;;;;;;;;;x
+cat_intrigue_society_rank_4_female;Grandmaster;Grande maîtresse;;;;;;;;;;;;x
+society_no_intrigue_10;Do not have §Y10§! in intrigue: §R-10§!;N'a pas §Y10§! d'intrigue: §R-10§!;;;;;;;;;;;;x
+society_no_intrigue_5;Do not have §Y5§! in intrigue: §R-10§!;N'a pas §Y5§! d'intrigue: §R-10§!;;;;;;;;;;;;x
+cat_quest_intrigue_1_fallback;put a curse on someone;Maudire quelqu'un;;;;;;;;;;;;x
+cat_quest_intrigue_1_tooltip;By using your power to curse someone, one way or another you can success the quest;Pour réussir cette quête, il va falloir maudire quelqu'un d'une manière ou d'une autre.;;;;;;;;;;;;x
+cat_quest_intrigue_1_desc;You can complete this quest by doing it's related society power;Tu peux réussir cette quête en utilisant les pouvoirs de sociétés associé.;;;;;;;;;;;;x
+cat_quest_intrigue_2_fallback;sabotage a county;saboter un comté;;;;;;;;;;;;x
+cat_quest_intrigue_2_tooltip;By using your power to sabotage a county, you can success the quest;Pour réussir cette quête, il va falloir saboter l'exploitation d'un comté.;;;;;;;;;;;;x
+cat_quest_intrigue_2_desc;You can complete this quest by doing it's related society power;Tu peux réussir cette quête en utilisant les pouvoirs de sociétés associé.;;;;;;;;;;;;x
+cat_quest_intrigue_3_fallback;rank up quest;quête de monté de niveau;;;;;;;;;;;;x
+cat_quest_intrigue_3_tooltip;To gain rank and show your superiority, you have to give a bad omen without being caugh;Pour monter de rang, il te faut envoyer un mauvais présage sans être découvert.;;;;;;;;;;;;x
+cat_quest_intrigue_3_desc;You can rank up by giving a bad omen.;Tu peux monter de rang en envoyant un mauvais présage.;;;;;;;;;;;;x
+
+### prosperity society
+cat_prosperity_society;Prosperity society;Société de prospérité;;;;;;;;;;;;x
+cat_prosperity_society_desc;Society formed by cat to make prosperous countries;Société formé par les chats pour faire prospérer les pays;;;;;;;;;;;;x
+cat_prosperity_society_rank_1_male;Student;Étudiant;;;;;;;;;;;;x
+cat_prosperity_society_rank_1_female;Student;Étudiante;;;;;;;;;;;;x
+cat_prosperity_society_rank_2_male;Member;Membre;;;;;;;;;;;;x
+cat_prosperity_society_rank_2_female;Member;Membre;;;;;;;;;;;;x
+cat_prosperity_society_rank_3_male;Responsable;Responsable;;;;;;;;;;;;x
+cat_prosperity_society_rank_3_female;Responsable;Responsable;;;;;;;;;;;;x
+cat_prosperity_society_rank_4_male;Grandmaster;Grand maître;;;;;;;;;;;;x
+cat_prosperity_society_rank_4_female;Grandmaster;Grande maîtresse;;;;;;;;;;;;x
+society_no_learning_8;Do not have §Y8§! in learning: §R-10§!;N'a pas §Y8§! d'érudition: §R-10§!;;;;;;;;;;;;x
+society_no_stewardship_8;Do not have §Y8§! in stewardship: §R-10§!;N'a pas §Y8§! d'intendance: §R-10§!;;;;;;;;;;;;x
+cat_quest_prosperity_1_fallback;Better health;une meilleur santé;;;;;;;;;;;;x
+cat_quest_prosperity_1_tooltip;By using your health power, you can success this quest;Tu peux réussir la quête en utilisant tes pouvoirs de santé.;;;;;;;;;;;;x
+cat_quest_prosperity_1_desc;You can complete this quest by doing it's related society power;Tu peux réussir cette quête en utilisant les pouvoirs de sociétés associé.;;;;;;;;;;;;x
+cat_quest_prosperity_2_fallback;County prosperity;Plus de prospérité de comté;;;;;;;;;;;;x
+cat_quest_prosperity_2_desc;You can complete this quest by doing it's related society power;Tu peux réussir cette quête en utilisant les pouvoirs de sociétés associé.;;;;;;;;;;;;x
+cat_quest_prosperity_2_tooltip;You have to increase prosperity to a county;Pour réussir cette quête, tu dois augmenter la prospérité d'un comté.;;;;;;;;;;;;x
+cat_quest_prosperity_3_fallback;rank up quest;quête de monté de niveau;;;;;;;;;;;;x
+cat_quest_prosperity_3_tooltip;To gain rank and show your superiority, you have to increase the health of a pregnant women;Pour monter de rang, il te faut augmenter la santé d'une femme enceinte.;;;;;;;;;;;;x
+cat_quest_prosperity_3_desc;You can rank up by increasing the health of a pregnant women.;Tu peux monter de rang en augmentant la santé d'une femmen enceinte.;;;;;;;;;;;;x
+
+### reputation society
+cat_reputation_society;Reputation society;Société de réputation;;;;;;;;;;;;x
+cat_reputation_society_desc;Society formed by cat to make the member famous;Société formé par les chats pour rendre les membres connus;;;;;;;;;;;;x
+cat_reputation_society_rank_1_male;Student;Étudiant;;;;;;;;;;;;x
+cat_reputation_society_rank_1_female;Student;Étudiante;;;;;;;;;;;;x
+cat_reputation_society_rank_2_male;Member;Membre;;;;;;;;;;;;x
+cat_reputation_society_rank_2_female;Member;Membre;;;;;;;;;;;;x
+cat_reputation_society_rank_3_male;Responsable;Responsable;;;;;;;;;;;;x
+cat_reputation_society_rank_3_female;Responsable;Responsable;;;;;;;;;;;;x
+cat_reputation_society_rank_4_male;Grandmaster;Grand maître;;;;;;;;;;;;x
+cat_reputation_society_rank_4_female;Grandmaster;Grande maîtresse;;;;;;;;;;;;x
+society_no_marital_8;Do not have §Y8§! in martial: §R-10§!;N'a pas §Y8§! de martial: §R-10§!;;;;;;;;;;;;x
+society_no_diplomacy_8;Do not have §Y8§! in diplomacy: §R-10§!;N'a pas §Y8§! de diplomatie: §R-10§!;;;;;;;;;;;;x
+cat_quest_reputation_1_fallback;Increase your feats;Obtient plus de succès;;;;;;;;;;;;x
+cat_quest_reputation_1_tooltip;By using feats power, you can win this quest;Pour réussir cette quête, tu dois augmenter tes prouesses.;;;;;;;;;;;;x
+cat_quest_reputation_1_desc;You can complete this quest by doing it's related society power;Tu peux réussir cette quête en utilisant les pouvoirs de sociétés associé à la quête.;;;;;;;;;;;;x
+cat_quest_reputation_2_fallback;Increase your socials standing;Augmente ta réputation sociale;;;;;;;;;;;;x
+cat_quest_reputation_2_desc;You can complete this quest by doing it's related society power;Tu peux réussir cette quête en utilisant les pouvoirs de sociétés associé à la quête.;;;;;;;;;;;;x
+cat_quest_reputation_2_tooltip;By using social powers, you can win this quest;Pour réussir cette quête, tu dois augmenter ta réputation sociale.;;;;;;;;;;;;x
+cat_quest_reputation_3_fallback;rank up quest;quête de monté de niveau;;;;;;;;;;;;x
+cat_quest_reputation_3_tooltip;To gain rank and show your superiority, you have to to win a war.;Pour monter de rang, il te faut gagner une guerre.;;;;;;;;;;;;x
+cat_quest_reputation_3_desc;you can rank up by winning a war;Tu monter de rang en gagnant une guerre.;;;;;;;;;;;;x
+
+## common loc
+cat_animal_society_currency;Cat's credit;Crédit de chat;;;;;;;;;;;;x
+request_to_rank_up_cat_societies;Rank up;Augmenter son rang;;;;;;;;;;;;x
+request_to_rank_up_cat_societies_desc;rank up within cat society;Augmenter son rang dans une société de chat;;;;;;;;;;;;x
+IS_OLD_ENOUGH_CAT_TT;Has at least 5 years in current rank;A au moins 5 ans dans le rang actuel;;;;;;;;;;;;x
+DO_NOT_ALREADY_ASK_TO_RANK_UP_CAT_TT;Did not recently ask to rank up;N'a pas récemment demmander à monter de rang;;;;;;;;;;;;x
+HAVE_A_GRANDMASTER_CAT_TT;The society has a grandmaster;La société a un chef;;;;;;;;;;;;x
+CAT_TT_BANNED_FROM_SOCIETY;Did not get banned from the society;N'a pas été déjà banni de la société;;;;;;;;;;;;x

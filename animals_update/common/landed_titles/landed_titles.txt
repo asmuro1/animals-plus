@@ -7540,6 +7540,7 @@ e_byzantium = {
 				holy_site = Panda_religion
 				holy_site = Duck_religion
 				holy_site = Eleph_religion
+				holy_site = Cat_religion
 
 				b_durazzo = {
 					greek = "Dyrrhachion"
@@ -13047,6 +13048,8 @@ e_scandinavia = {
 			c_fyn = {
 				color={ 216 55 55 }
 				color2={ 255 255 255 }
+
+				holy_site = Cat_religion
 
 				b_svendborg = {
 				}
@@ -30227,6 +30230,8 @@ e_france = {
 				color={ 28 175 230 }
 				color2={ 255 255 255 }
 
+				holy_site = Cat_religion
+
 				b_grezes = {
 				}
 				b_mende = {
@@ -38807,6 +38812,8 @@ e_britannia = {
 				color={ 241 95 45 }
 				color2={ 255 255 255 }
 
+				holy_site = Cat_religion
+
 				b_wilton = {
 				}
 				b_sarum = {
@@ -45424,6 +45431,8 @@ e_rajastan = {
 			c_medantaka = {
 				color={ 194 67 30 }
 				color2={ 255 255 255 }
+
+				holy_site = Cat_religion
 
 				b_medantaka = {
 				}

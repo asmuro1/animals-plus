@@ -35,8 +35,8 @@ province_event = {
         }
         Eleph_can_live_here_trigger = yes
         has_hospital = yes
-        NOT = { has_province_flag = eleph_herd_in_prov }
         is_capital = yes
+        NOT = { has_province_flag = eleph_herd_in_prov }
         holder_scope = {
             is_adult = yes
             is_incapable = no
@@ -74,7 +74,9 @@ province_event = {
     }
     option = {
         name = OPT2_EVT111_CHASE_THEM
-        wealth = -10
+        holder_scope = {
+            wealth = -10
+        }
 
         ai_chance = {
             factor = 3
@@ -379,6 +381,8 @@ character_event = {
 
     hide_window = yes
     is_triggered_only = yes
+
+    culture_group = elephant_group
 
     trigger = {
         government = Eleph_feudal_gov

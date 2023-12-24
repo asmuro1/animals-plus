@@ -24,7 +24,7 @@ castle = {
         is_active_trigger = {
             culture = horse
         }
-        prerequisites = { ca_ani_castle_tower_1 }
+        prerequisites = { ca_ani_castle_tower_01 }
         # not_if_x_exists = {  }
         # upgrades_from	=
 
@@ -54,7 +54,7 @@ castle = {
         is_active_trigger = {
             culture = horse
         }
-        prerequisites = { ca_ani_castle_tower_2 }
+        prerequisites = { ca_ani_castle_tower_03 }
         # not_if_x_exists = {  }
         upgrades_from	= ca_horse_stable_1
 
@@ -84,7 +84,7 @@ castle = {
         is_active_trigger = {
             culture = horse
         }
-        prerequisites = { ca_ani_castle_tower_3 }
+        prerequisites = { ca_ani_castle_tower_05 }
         # not_if_x_exists = {  }
         upgrades_from	= ca_horse_stable_2
 
@@ -98,92 +98,6 @@ castle = {
         light_cavalry = 90
         knights = 10
         global_movement_speed = 0.05
-    }
-
-    ###cat building
-    ca_cat_regiment_1 = {
-        add_number_to_name = yes
-
-        potential = {
-            OR = {
-                has_building = ca_cat_regiment_1
-                culture = cat
-            }
-        }
-        trigger = {
-            culture = cat
-            TECH_CASTLE_CONSTRUCTION = 0
-        }
-        is_active_trigger = {
-            culture = cat
-        }
-        prerequisites = { ca_ani_castle_tower_1 }
-        # not_if_x_exists = {  }
-        # upgrades_from	=
-
-        gold_cost = 125
-        build_time = 360
-        ai_creation_factor = 30
-        ai_feudal_modifier = 50
-        extra_tech_building_start = 1.5
-
-        light_infantry = 160
-    }
-    ca_cat_regiment_2 = {
-        add_number_to_name = yes
-
-        potential = {
-            OR = {
-                has_building = ca_cat_regiment_2
-                culture = cat
-            }
-        }
-        trigger = {
-            culture = cat
-            TECH_CASTLE_CONSTRUCTION = 1
-        }
-        is_active_trigger = {
-            culture = cat
-        }
-        prerequisites = { ca_ani_castle_tower_2 }
-        # not_if_x_exists = {  }
-        upgrades_from	= ca_cat_regiment_1
-
-        gold_cost = 250
-        build_time = 720
-        ai_creation_factor = 30
-        ai_feudal_modifier = 50
-        extra_tech_building_start = 1.6
-
-        light_infantry = 175
-    }
-    ca_cat_regiment_3 = {
-        add_number_to_name = yes
-
-        potential = {
-            OR = {
-                has_building = ca_cat_regiment_3
-                culture = cat
-            }
-        }
-        trigger = {
-            culture = cat
-            TECH_CASTLE_CONSTRUCTION = 2
-        }
-        is_active_trigger = {
-            culture = cat
-        }
-        prerequisites = { ca_ani_castle_tower_3 }
-        # not_if_x_exists = {  }
-        upgrades_from	= ca_cat_regiment_2
-
-        gold_cost = 375
-        build_time = 1080
-        ai_creation_factor = 30
-        ai_feudal_modifier = 50
-        extra_tech_building_start = 1.7
-
-        light_infantry = 200
     }
 
     ###dragon building
@@ -203,7 +117,7 @@ castle = {
         is_active_trigger = {
             culture = dragon_culture
         }
-        prerequisites = { ca_ani_castle_tower_1 }
+        prerequisites = { ca_ani_castle_tower_01 }
         # not_if_x_exists = {  }
         # upgrades_from	=
 
@@ -235,7 +149,7 @@ castle = {
         is_active_trigger = {
             culture = dragon_culture
         }
-        prerequisites = { ca_ani_castle_tower_2 }
+        prerequisites = { ca_ani_castle_tower_03 }
         # not_if_x_exists = {  }
         upgrades_from	= ca_dragon_fortification_1
 
@@ -267,7 +181,7 @@ castle = {
         is_active_trigger = {
             culture = dragon_culture
         }
-        prerequisites = { ca_ani_castle_tower_3 }
+        prerequisites = { ca_ani_castle_tower_05 }
         # not_if_x_exists = {  }
         upgrades_from	= ca_dragon_fortification_2
 
@@ -301,7 +215,7 @@ castle = {
         is_active_trigger = {
             culture = dog_culture
         }
-        prerequisites = { ca_ani_castle_tower_1 }
+        prerequisites = { ca_ani_castle_tower_01 }
         # not_if_x_exists = {  }
         # upgrades_from	=
 
@@ -329,7 +243,7 @@ castle = {
         is_active_trigger = {
             culture = dog_culture
         }
-        prerequisites = { ca_ani_castle_tower_2 }
+        prerequisites = { ca_ani_castle_tower_03 }
         # not_if_x_exists = {  }
         upgrades_from	= ca_dog_infantery_1
 
@@ -358,7 +272,7 @@ castle = {
         is_active_trigger = {
             culture = dog_culture
         }
-        prerequisites = { ca_ani_castle_tower_3 }
+        prerequisites = { ca_ani_castle_tower_05 }
         # not_if_x_exists = {  }
         upgrades_from	= ca_dog_infantery_2
 
@@ -393,7 +307,7 @@ castle = {
         is_active_trigger = {
             culture = horse
         }
-        prerequisites = { ca_ani_castle_tower_3 }
+        prerequisites = { ca_ani_castle_tower_05 }
         # not_if_x_exists = {  }
         # upgrades_from	=
 
@@ -422,7 +336,7 @@ castle = {
         is_active_trigger = {
             culture = horse
         }
-        prerequisites = { ca_ani_castle_tower_4 }
+        prerequisites = { ca_ani_castle_tower_07 }
         # not_if_x_exists = {  }
         upgrades_from	= ca_horse_archer_1
 
@@ -451,7 +365,7 @@ castle = {
         is_active_trigger = {
             culture = horse
         }
-        prerequisites = { ca_ani_castle_tower_5 }
+        prerequisites = { ca_ani_castle_tower_09 }
         # not_if_x_exists = {  }
         upgrades_from	= ca_horse_archer_2
 
@@ -464,94 +378,6 @@ castle = {
         fort_level = -0.1
         horse_archers = 80
         global_movement_speed = 0.05
-    }
-
-    ###cat building
-    ca_cat_influence_1 = {
-        add_number_to_name = yes
-
-        potential = {
-            OR = {
-                has_building = ca_cat_influence_1
-                culture = cat
-            }
-        }
-        trigger = {
-            culture = cat
-            TECH_CASTLE_CONSTRUCTION = 2
-        }
-        is_active_trigger = {
-            culture = cat
-        }
-        prerequisites = { ca_ani_castle_tower_3 }
-        # not_if_x_exists = {  }
-        # upgrades_from	=
-
-        gold_cost = 250
-        build_time = 420
-        ai_creation_factor = 30
-        ai_feudal_modifier = 50
-        extra_tech_building_start = 1.5
-
-        archers = 120
-    }
-    ca_cat_influence_2 = {
-        add_number_to_name = yes
-
-        potential = {
-            OR = {
-                has_building = ca_cat_influence_2
-                culture = cat
-            }
-        }
-        trigger = {
-            culture = cat
-            TECH_CASTLE_CONSTRUCTION = 3
-        }
-        is_active_trigger = {
-            culture = cat
-        }
-        prerequisites = { ca_ani_castle_tower_4 }
-        # not_if_x_exists = {  }
-        upgrades_from	= ca_cat_influence_1
-
-        gold_cost = 500
-        build_time = 630
-        ai_creation_factor = 30
-        ai_feudal_modifier = 50
-        extra_tech_building_start = 1.6
-
-        archers = 145
-        desc = cat_curse
-    }
-    ca_cat_influence_3 = {
-        add_number_to_name = yes
-
-        potential = {
-            OR = {
-                has_building = ca_cat_influence_3
-                culture = cat
-            }
-        }
-        trigger = {
-            culture = cat
-            TECH_CASTLE_CONSTRUCTION = 4
-        }
-        is_active_trigger = {
-            culture = cat
-        }
-        prerequisites = { ca_ani_castle_tower_5 }
-        # not_if_x_exists = {  }
-        upgrades_from	= ca_cat_influence_2
-
-        gold_cost = 750
-        build_time = 840
-        ai_creation_factor = 30
-        ai_feudal_modifier = 50
-        extra_tech_building_start = 1.7
-
-        archers = 185
-        # desc = cat_kills
     }
 
     ###dog building
@@ -571,7 +397,7 @@ castle = {
         is_active_trigger = {
             culture = dog_culture
         }
-        prerequisites = { ca_ani_castle_tower_3 }
+        prerequisites = { ca_ani_castle_tower_05 }
         # not_if_x_exists = {  }
         # upgrades_from	=
 
@@ -600,7 +426,7 @@ castle = {
         is_active_trigger = {
             culture = dog_culture
         }
-        prerequisites = { ca_ani_castle_tower_4 }
+        prerequisites = { ca_ani_castle_tower_07 }
         # not_if_x_exists = {  }
         upgrades_from = ca_dog_weapons_1
 
@@ -629,7 +455,7 @@ castle = {
         is_active_trigger = {
             culture = dog_culture
         }
-        prerequisites = { ca_ani_castle_tower_5 }
+        prerequisites = { ca_ani_castle_tower_09 }
         # not_if_x_exists = {  }
         upgrades_from	= ca_dog_weapons_2
 
@@ -660,7 +486,7 @@ castle = {
         is_active_trigger = {
             culture = dragon_culture
         }
-        prerequisites = { ca_ani_castle_tower_3 }
+        prerequisites = { ca_ani_castle_tower_05 }
         # not_if_x_exists = {  }
         # upgrades_from	=
 
@@ -690,7 +516,7 @@ castle = {
         is_active_trigger = {
             culture = dragon_culture
         }
-        prerequisites = { ca_ani_castle_tower_4 }
+        prerequisites = { ca_ani_castle_tower_07 }
         # not_if_x_exists = {  }
         upgrades_from	= ca_dragon_treasury_1
 
@@ -722,7 +548,7 @@ castle = {
         is_active_trigger = {
             culture = dragon_culture
         }
-        prerequisites = { ca_ani_castle_tower_5 }
+        prerequisites = { ca_ani_castle_tower_09 }
         # not_if_x_exists = {  }
         upgrades_from	= ca_dragon_treasury_2
 
@@ -763,7 +589,7 @@ castle = {
         is_active_trigger = {
             culture = horse
         }
-        prerequisites = { ca_ani_castle_tower_5 }
+        prerequisites = { ca_ani_castle_tower_09 }
         # not_if_x_exists = {  }
         # upgrades_from	=
 
@@ -794,7 +620,7 @@ castle = {
         is_active_trigger = {
             culture = horse
         }
-        prerequisites = { ca_ani_castle_tower_6 }
+        prerequisites = { ca_ani_castle_tower_11 }
         # not_if_x_exists = {  }
         upgrades_from	= ca_horse_armor_1
 
@@ -809,64 +635,6 @@ castle = {
         light_cavalry = 50
         horse_archers = 45
         global_movement_speed = 0.05
-    }
-
-    ###cat building
-    ca_cat_stable_1 = {
-        add_number_to_name = yes
-
-        potential = {
-            OR = {
-                has_building = ca_cat_stable_1
-                culture = cat
-            }
-        }
-        trigger = {
-            culture = cat
-            TECH_CASTLE_CONSTRUCTION = 4
-        }
-        is_active_trigger = {
-            culture = cat
-        }
-        prerequisites = { ca_ani_castle_tower_5 }
-        # not_if_x_exists = {  }
-        # upgrades_from	=
-
-        gold_cost = 375
-        build_time = 350
-        ai_creation_factor = 30
-        ai_feudal_modifier = 50
-        extra_tech_building_start = 1.5
-
-        light_cavalry = 135
-    }
-    ca_cat_stable_2 = {
-        add_number_to_name = yes
-
-        potential = {
-            OR = {
-                has_building = ca_cat_stable_2
-                culture = cat
-            }
-        }
-        trigger = {
-            culture = cat
-            TECH_CASTLE_CONSTRUCTION = 5
-        }
-        is_active_trigger = {
-            culture = cat
-        }
-        prerequisites = { ca_ani_castle_tower_6 }
-        # not_if_x_exists = {  }
-        upgrades_from	= ca_cat_stable_1
-
-        gold_cost = 750
-        build_time = 700
-        ai_creation_factor = 30
-        ai_feudal_modifier = 50
-        extra_tech_building_start = 1.6
-
-        light_cavalry = 160
     }
 
     ###dog building
@@ -886,7 +654,7 @@ castle = {
         is_active_trigger = {
             culture = dog_culture
         }
-        prerequisites = { ca_ani_castle_tower_5 }
+        prerequisites = { ca_ani_castle_tower_09 }
         # not_if_x_exists = {  }
         # upgrades_from	=
 
@@ -914,7 +682,7 @@ castle = {
         is_active_trigger = {
             culture = dog_culture
         }
-        prerequisites = { ca_ani_castle_tower_6 }
+        prerequisites = { ca_ani_castle_tower_11 }
         # not_if_x_exists = {  }
         upgrades_from = ca_dog_stable_1
 
@@ -944,7 +712,7 @@ castle = {
         is_active_trigger = {
             culture = dragon_culture
         }
-        prerequisites = { ca_ani_castle_tower_5 }
+        prerequisites = { ca_ani_castle_tower_09 }
         # not_if_x_exists = {  }
         # upgrades_from	=
 
@@ -973,7 +741,7 @@ castle = {
         is_active_trigger = {
             culture = dragon_culture
         }
-        prerequisites = { ca_ani_castle_tower_6 }
+        prerequisites = { ca_ani_castle_tower_11 }
         # not_if_x_exists = {  }
         upgrades_from = ca_dragon_stable_1
 
@@ -1009,7 +777,7 @@ castle = {
         is_active_trigger = {
             culture = horse
         }
-        prerequisites = { ca_ani_castle_tower_7 }
+        prerequisites = { ca_ani_castle_tower_13 }
         # not_if_x_exists = {  }
         # upgrades_from	=
 
@@ -1040,7 +808,7 @@ castle = {
         is_active_trigger = {
             culture = horse
         }
-        prerequisites = { ca_ani_castle_tower_8 }
+        prerequisites = { ca_ani_castle_tower_15 }
         # not_if_x_exists = {  }
         upgrades_from	= ca_horse_retinue_1
 
@@ -1054,68 +822,6 @@ castle = {
         light_cavalry = 100
         global_movement_speed = 0.20
         retinuesize = 50
-    }
-
-    ###cat building
-    ca_cat_retinue_1 = {
-        add_number_to_name = yes
-
-        potential = {
-            OR = {
-                has_building = ca_cat_retinue_1
-                culture = cat
-            }
-        }
-        trigger = {
-            culture = cat
-            TECH_CASTLE_CONSTRUCTION = 6
-        }
-        is_active_trigger = {
-            culture = cat
-        }
-        prerequisites = { ca_ani_castle_tower_7 }
-        # not_if_x_exists = {  }
-        # upgrades_from	=
-
-        gold_cost = 500
-        build_time = 785
-        ai_creation_factor = 30
-        ai_feudal_modifier = 50
-        extra_tech_building_start = 1.5
-
-        light_infantry = 120
-        retinuesize = 30
-        # desc = cat_Use_money_favor
-    }
-    ca_cat_retinue_2 = {
-        add_number_to_name = yes
-
-        potential = {
-            OR = {
-                has_building = ca_cat_retinue_2
-                culture = cat
-            }
-        }
-        trigger = {
-            culture = cat
-            TECH_CASTLE_CONSTRUCTION = 7
-        }
-        is_active_trigger = {
-            culture = cat
-        }
-        prerequisites = { ca_ani_castle_tower_8 }
-        # not_if_x_exists = {  }
-        upgrades_from	= ca_cat_retinue_1
-
-        gold_cost = 750
-        build_time = 1014
-        ai_creation_factor = 30
-        ai_feudal_modifier = 50
-        extra_tech_building_start = 1.6
-
-        light_infantry = 175
-        retinuesize = 50
-        desc = cat_Favor_harasses
     }
 
     ###dog building
@@ -1135,7 +841,7 @@ castle = {
         is_active_trigger = {
             culture = dog_culture
         }
-        prerequisites = { ca_ani_castle_tower_7 }
+        prerequisites = { ca_ani_castle_tower_13 }
         # not_if_x_exists = {  }
         # upgrades_from	=
 
@@ -1165,7 +871,7 @@ castle = {
         is_active_trigger = {
             culture = dog_culture
         }
-        prerequisites = { ca_ani_castle_tower_8 }
+        prerequisites = { ca_ani_castle_tower_15 }
         # not_if_x_exists = {  }
         upgrades_from = ca_dog_retinue_1
 
@@ -1197,7 +903,7 @@ castle = {
         is_active_trigger = {
             culture = dragon_culture
         }
-        prerequisites = { ca_ani_castle_tower_7 }
+        prerequisites = { ca_ani_castle_tower_13 }
         # not_if_x_exists = {  }
         # upgrades_from	=
 
@@ -1227,7 +933,7 @@ castle = {
         is_active_trigger = {
             culture = dragon_culture
         }
-        prerequisites = { ca_ani_castle_tower_8 }
+        prerequisites = { ca_ani_castle_tower_15 }
         # not_if_x_exists = {  }
         upgrades_from = ca_dragon_retinue_1
 
@@ -1263,7 +969,7 @@ castle = {
         is_active_trigger = {
             culture = horse
         }
-        prerequisites = { ca_ani_castle_tower_8 }
+        prerequisites = { ca_ani_castle_tower_15 }
         # not_if_x_exists = {  }
         # upgrades_from	=
 
@@ -1294,7 +1000,7 @@ castle = {
         is_active_trigger = {
             culture = horse
         }
-        prerequisites = { ca_ani_castle_tower_9 }
+        prerequisites = { ca_ani_castle_tower_16 }
         # not_if_x_exists = {  }
         upgrades_from	= ca_horse_garrison_1
 
@@ -1308,64 +1014,6 @@ castle = {
         levy_size = 0.35
         global_movement_speed = 0.05
         horse_archers = 45
-    }
-
-    ###cat building
-    ca_cat_armored_1 = {
-        add_number_to_name = yes
-
-        potential = {
-            OR = {
-                has_building = ca_cat_armored_1
-                culture = cat
-            }
-        }
-        trigger = {
-            culture = cat
-            TECH_CASTLE_CONSTRUCTION = 7
-        }
-        is_active_trigger = {
-            culture = cat
-        }
-        prerequisites = { ca_ani_castle_tower_8 }
-        # not_if_x_exists = {  }
-        # upgrades_from	=
-
-        gold_cost = 600
-        build_time = 785
-        ai_creation_factor = 30
-        ai_feudal_modifier = 50
-        extra_tech_building_start = 1.5
-
-        heavy_infantry = 65
-    }
-    ca_cat_armored_2 = {
-        add_number_to_name = yes
-
-        potential = {
-            OR = {
-                has_building = ca_cat_armored_2
-                culture = cat
-            }
-        }
-        trigger = {
-            culture = cat
-            TECH_CASTLE_CONSTRUCTION = 8
-        }
-        is_active_trigger = {
-            culture = cat
-        }
-        prerequisites = { ca_ani_castle_tower_9 }
-        # not_if_x_exists = {  }
-        upgrades_from	= ca_cat_armored_1
-
-        gold_cost = 750
-        build_time = 1014
-        ai_creation_factor = 30
-        ai_feudal_modifier = 50
-        extra_tech_building_start = 1.6
-
-        heavy_infantry = 85
     }
 
     ###dog building
@@ -1385,7 +1033,7 @@ castle = {
         is_active_trigger = {
             culture = dog_culture
         }
-        prerequisites = { ca_ani_castle_tower_8 }
+        prerequisites = { ca_ani_castle_tower_15 }
         # not_if_x_exists = {  }
         # upgrades_from	=
 
@@ -1414,7 +1062,7 @@ castle = {
         is_active_trigger = {
             culture = dog_culture
         }
-        prerequisites = { ca_ani_castle_tower_9 }
+        prerequisites = { ca_ani_castle_tower_16 }
         # not_if_x_exists = {  }
         upgrades_from = ca_dog_garrison_1
 
@@ -1445,7 +1093,7 @@ castle = {
         is_active_trigger = {
             culture = dragon_culture
         }
-        prerequisites = { ca_ani_castle_tower_8 }
+        prerequisites = { ca_ani_castle_tower_15 }
         # not_if_x_exists = {  }
         # upgrades_from	=
 
@@ -1475,7 +1123,7 @@ castle = {
         is_active_trigger = {
             culture = dragon_culture
         }
-        prerequisites = { ca_ani_castle_tower_9 }
+        prerequisites = { ca_ani_castle_tower_16 }
         # not_if_x_exists = {  }
         upgrades_from = ca_dragon_archery_1
 
@@ -1510,7 +1158,7 @@ castle = {
             is_capital = yes
             culture = horse
         }
-        prerequisites = { ca_ani_castle_tower_9 }
+        prerequisites = { ca_ani_castle_tower_16 }
         # not_if_x_exists = {  }
         # upgrades_from	=
 
@@ -1524,38 +1172,6 @@ castle = {
         levy_size = 0.35
         global_movement_speed = 0.35
         knights = 60
-    }
-
-    ###cat building
-    ca_cat_speciality = {
-        add_number_to_name = yes
-
-        potential = {
-            is_capital = yes
-            culture = cat
-        }
-        trigger = {
-            culture = cat
-            TECH_CASTLE_CONSTRUCTION = 8
-        }
-        is_active_trigger = {
-            is_capital = yes
-            culture = cat
-        }
-        prerequisites = { ca_ani_castle_tower_9 }
-        # not_if_x_exists = {  }
-        # upgrades_from	=
-
-        gold_cost = 1000
-        build_time = 1500
-        ai_creation_factor = 30
-        ai_feudal_modifier = 50
-        extra_tech_building_start = 1.0
-
-
-        pikemen = 150
-        desc = cat_sabotage_action
-        garrison_size = 0.50
     }
 
     ###dog building
@@ -1577,7 +1193,7 @@ castle = {
                 holder_scope = { culture = dog_culture }
             }
         }
-        prerequisites = { ca_ani_castle_tower_9 }
+        prerequisites = { ca_ani_castle_tower_16 }
         # not_if_x_exists = {  }
         # upgrades_from	=
 
@@ -1608,7 +1224,7 @@ castle = {
             is_capital = yes
             culture = dragon_culture
         }
-        prerequisites = { ca_ani_castle_tower_9 }
+        prerequisites = { ca_ani_castle_tower_16 }
         # not_if_x_exists = {  }
         # upgrades_from	=
 

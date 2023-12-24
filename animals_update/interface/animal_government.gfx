@@ -25,4 +25,8 @@ spriteTypes = {
     name = "GFX_icon_Eleph_feudal_gov"
     texturefile = "gfx\\interface\\government_icon_confucian_bureaucracy.dds"
   }
+  spriteType = {
+    name = "GFX_icon_cat_feudal_gov"
+    texturefile = "gfx\\interface\\government_icon_confucian_bureaucracy.dds"
+  }
 }

@@ -10,10 +10,6 @@ EVTDESCanimal_plus_mod402;It is time to upgrade the loyalty of ...;C'est le mome
 EVTOPTAanimal_plus_mod402;... [dog_gift_one.GetTitledFirstName] !;... [dog_gift_one.GetTitledFirstName] !;;;;;;;;;;;;x
 EVTOPTBanimal_plus_mod402;... [dog_gift_two.GetTitledFirstName] !;... [dog_gift_two.GetTitledFirstName] !;;;;;;;;;;;;x
 EVTOPTCanimal_plus_mod402;... [dog_gift_three.GetTitledFirstName] !;... [dog_gift_three.GetTitledFirstName] !;;;;;;;;;;;;x
-EVTDESCanimal_plus_mod104;By using the fact that he has a favor, [For_localisation.GetTitledName] recalls you the loyalty you need to express every days. I'm going to go crazy ...;Prétextant de sa faveur, [For_localisation.GetTitledName] se permet de me rappeler tous les jours le devoir de loyauté que je lui dois en tant que vassal. Cela va finir par me rendre fou ...;;;;;;;;;;;;x
-EVTOPTAanimal_plus_mod104;It will end badly if this continues;ça va mal finir si ça continue;;;;;;;;;;;;x
-EVTDESCanimal_plus_mod102;You just see a black cat ...;Un chat noir vient de passer devant vous ...;;;;;;;;;;;;x
-EVTOPTAanimal_plus_mod102;It is a sign of bad luck ...;C'est un signe de mauvaise chance;;;;;;;;;;;;x
 EVTDESCanimal_plus_mod801;The colonization in [This.GetName] is over !;La colonisation en [This.GetName] est terminée !;;;;;;;;;;;;x
 
 

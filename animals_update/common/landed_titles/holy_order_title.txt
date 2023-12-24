@@ -113,3 +113,26 @@ d_immortal_herd = {
 
     monthly_income = 2
 }
+
+d_Invasive_order = {
+    color = { 95 95 95 }
+    color2 = { 255 255 255 }
+
+    graphical_culture = elephantgfx
+
+    title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+
+    holy_order = yes
+    mercenary_type = Invasive_order
+    landless = yes
+
+    short_name = yes
+
+    religion = Cat_religion
+    culture = cat
+
+    primary = yes
+
+    monthly_income = 2
+}

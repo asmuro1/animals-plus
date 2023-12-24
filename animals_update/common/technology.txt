@@ -81,7 +81,7 @@ TECH_GROUP_ECONOMY = {
 			add_building = no_elephant_camp_2
 			add_building = no_elephant_camp_3
 
-			add_building = ca_ani_castle_tower_1
+			add_building = ca_ani_castle_tower_01
 		}
 		2 = {
 			add_building = ca_stable_3
@@ -102,7 +102,7 @@ TECH_GROUP_ECONOMY = {
 			add_building = no_camel_breeder_4
 			add_building = no_elephant_camp_4
 
-			add_building = ca_ani_castle_tower_2
+			add_building = ca_ani_castle_tower_03
 		}
 		3 = {
 			add_building = ca_barracks_4
@@ -118,7 +118,7 @@ TECH_GROUP_ECONOMY = {
 			add_building = no_camel_breeder_5
 			add_building = no_elephant_camp_5
 
-			add_building = ca_ani_castle_tower_3
+			add_building = ca_ani_castle_tower_05
 		}
 		4 = {
 			add_building = ca_stable_4
@@ -132,7 +132,7 @@ TECH_GROUP_ECONOMY = {
 			add_building = no_camel_breeder_6
 			add_building = no_elephant_camp_6
 
-			add_building = ca_ani_castle_tower_4
+			add_building = ca_ani_castle_tower_07
 		}
 		5 = {
 			add_building = ca_barracks_5
@@ -144,7 +144,7 @@ TECH_GROUP_ECONOMY = {
 			add_building = no_camel_breeder_7
 			add_building = no_elephant_camp_7
 
-			add_building = ca_ani_castle_tower_5
+			add_building = ca_ani_castle_tower_09
 		}
 		6 = {
 			add_building = ca_stable_5
@@ -156,20 +156,20 @@ TECH_GROUP_ECONOMY = {
 			add_building = no_camel_breeder_8
 			add_building = no_elephant_camp_8
 
-			add_building = ca_ani_castle_tower_6
+			add_building = ca_ani_castle_tower_11
 		}
 		7 = {
 			add_building = ca_barracks_6
 			add_building = ca_militia_barracks_4
 			add_building = no_composite_bow_crafter_8
 
-			add_building = ca_ani_castle_tower_7
+			add_building = ca_ani_castle_tower_13
 		}
 		8 = {
 			add_building = ca_stable_6
 			add_building = ca_town_6
 
-			add_building = ca_ani_castle_tower_8
+			add_building = ca_ani_castle_tower_15
 		}
 	}
 	TECH_CITY_CONSTRUCTION = { #city buildings
@@ -314,7 +314,7 @@ TECH_GROUP_ECONOMY = {
 			add_building = no_camp_fortifications_3
 			add_building = no_camp_fortifications_4
 
-			add_building = ca_ani_castle_tower_1_bis
+			add_building = ca_ani_castle_tower_02
 		}
 		2 = {
 			add_building = ca_keep_3
@@ -325,7 +325,7 @@ TECH_GROUP_ECONOMY = {
 			add_building = no_baghatur_council_3
 			add_building = no_camp_fortifications_5
 
-			add_building = ca_ani_castle_tower_2_bis
+			add_building = ca_ani_castle_tower_04
 		}
 		3 = {
 			add_building = ca_wall_q_3
@@ -335,7 +335,7 @@ TECH_GROUP_ECONOMY = {
 			add_building = no_baghatur_council_5
 			add_building = no_camp_fortifications_6
 
-			add_building = ca_ani_castle_tower_3_bis
+			add_building = ca_ani_castle_tower_06
 		}
 		4 = {
 			add_building = ca_keep_4
@@ -345,7 +345,7 @@ TECH_GROUP_ECONOMY = {
 			add_building = no_baghatur_council_6
 			add_building = no_camp_fortifications_7
 
-			add_building = ca_ani_castle_tower_4_bis
+			add_building = ca_ani_castle_tower_08
 		}
 		5 = {
 			add_building = ca_wall_q_4
@@ -354,7 +354,7 @@ TECH_GROUP_ECONOMY = {
 			add_building = no_baghatur_council_7
 			add_building = no_camp_fortifications_8
 
-			add_building = ca_ani_castle_tower_5_bis
+			add_building = ca_ani_castle_tower_10
 		}
 		6 = {
 			add_building = ca_keep_5
@@ -363,14 +363,14 @@ TECH_GROUP_ECONOMY = {
 			add_building = tp_wall_4
 			add_building = no_baghatur_council_8
 
-			add_building = ca_ani_castle_tower_6_bis
+			add_building = ca_ani_castle_tower_12
 		}
 		7 = {
 			add_building = ca_wall_q_5
 			add_building = ct_wall_q_5
 			add_building = tp_wall_q_5
 
-			add_building = ca_ani_castle_tower_7_bis
+			add_building = ca_ani_castle_tower_14
 		}
 		8 = {
 			add_building = ca_keep_6
@@ -378,7 +378,7 @@ TECH_GROUP_ECONOMY = {
 			add_building = ct_wall_5
 			add_building = tp_wall_5
 
-			add_building = ca_ani_castle_tower_9
+			add_building = ca_ani_castle_tower_16
 		}
 	}
 	TECH_TRADE_PRACTICES = {

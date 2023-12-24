@@ -16,7 +16,7 @@ DESC_EVT_103_FREE_FROM_FOG;After some months, maybe years, the fog finally disap
 OPT_EVT_103_FINALLY_FREE;Why did so much thing happened?;Que s'est-til passé au juste?;;;;;;;;;;;;x
 DESC_EVT_104_DUCK_FOG;the fog is starting to lift in [This.GetName]. As a duck, you have to take this opportunity to make [This.GetName] inhabited by ducks, even if seen as aggressive;Un brouillard se lève en [This.GetName]. En tant que canard, je dois utiliser cette opportunité pour rendre [This.GetName] habité par des canards, même si c'est d'une manière qui semble aggressif.;;;;;;;;;;;;x
 OPT_EVT_103_FINALLY_DUCK;I have to do it!;Je dois le faire!;;;;;;;;;;;;x
-DESC_EVT_106_CHANGE_DEV;After times, the development level of [This.GetName] did changed.;Après suffisemment de temps, le niveau de développement de [This.GetName] vien de changer.;;;;;;;;;;;;x
+DESC_EVT_106_CHANGE_DEV;After times, the development level of [This.GetName] did changed.;Après suffisemment de temps, le niveau de développement de [This.GetName] vient de changer.;;;;;;;;;;;;x
 OPT1_EVT_106_DECREASE_DEV;Did it just decreased?!;Est-ce qu'il vient juste de diminuer?!;;;;;;;;;;;;x
 OPT2_EVT_106_INCREASE_DEV;Did it just increased?!;Est-ce qu'il vient juste d'augmenter?;;;;;;;;;;;;x
 DESC_EVT_109_START_INVESTISSMENT;As [This.GetName] start to weaken against potential enemy, it is time to make it shine!;Comme [This.GetName] commence à faiblir face aux différentes forces ennemis, il devient important d'investir pour faire briller la province à nouveau!;;;;;;;;;;;;x
@@ -79,3 +79,75 @@ OPT_EVT118_ELEPH_ILLNESS;Does that means that I will became an elephant?!;Je vai
 ##tooltip
 
 eleph_unlock_reprod_lab;Can construct a laboratory on hospital;Peut construire un laboratoire dans l'hôpital;;;;;;;;;;;;x
+
+
+#CAT UPDATE
+
+DESC_119_HIGH_CAT_NUMBER;It seems that a huge number of cat started to migrate in [This.GetName].;Il semblerai qu'un grand nombre de chats s'est installé dans la province de [This.GetName].;;;;;;;;;;;;x
+OPT1_119_OBSERVE_THEM;They are just cats.;Ce sont que des chats.;;;;;;;;;;;;x
+OPT2_119_CHASE_THEM;Kill them, they will start an epidemy!;Tuez-les, ils vont propager une épidémie!;;;;;;;;;;;;x
+DESC_120_CAT_START_RAMPAGE;The cats in [This.GetName] start to grow. They are going to threaten the peace;Les chats de [This.GetName] commencent à devenir trop nombreux pour être ignorés;;;;;;;;;;;;x
+OPT_120_DO_NOTHING;Nothing can be done;Rien ne peut être fait;;;;;;;;;;;;x
+OPT2_120_START_A_HUNT;organize a massive hunt;Organiser une grande chasse aux chats;;;;;;;;;;;;x
+OPT3_120_TRY_SECLUSION;Try to isolate cats population from human population;Essayer d'isoler les chats des populations humaines;;;;;;;;;;;;x
+DESC_121_EPIDEMY_OUTBREAK;It seems that the cats living in [This.GetName] are dying.;Il semblerait que les chats de [This.GetName] sont en train de mourir;;;;;;;;;;;;x
+OPT_121_EPIDEMY;Is it because of an epidemy outbreak?;Est-ce à cause d'un foyer d'épidémie?;;;;;;;;;;;;x
+DESC_122_CAT_INVADE;The cats in [This.GetName] just take control of [Invasion_target.GetName].;Les chats de [This.GetName] ont pris le contrôle de [Invasion_target.GetName].;;;;;;;;;;;;x
+OPT_122_CAT_INVADE;We should do something;Nous devrions faire quelque chose;;;;;;;;;;;;x
+DESC_123_CREATE_TRIBE;The cat decided to settle in e new tribe;Les chats ont décidé de s'installer dans une nouvelle tribu;;;;;;;;;;;;x
+OPT_123_CREATE_TRIBE;How did they construct it?;Comment l'ont ils construite?;;;;;;;;;;;;x
+DESC_124_HOSTILITY;The cats in [This.GetName] are taking hostile actions against human;Les chats de [This.GetName] commencent à devenir aggressifs;;;;;;;;;;;;x
+OPT_124_HOSTILITY;Who's the hunter responsible?!;Où est le chasseur qui en est responçable?!;;;;;;;;;;;;x
+DESC_125_HOLDER_CHANGE;As the holder of [From.GetName] change, the cats living there are unhappy;Avec le changement de dirigeant en [From.GetName], les chats qui y vivent sont en colère;;;;;;;;;;;;x
+OPT_125_WAR;The extermination shall starts;L'extermination des chats est inévitable;;;;;;;;;;;;x
+DESC_126_CAT_INVADE;The cats of [This.GetName] did reproduce. At some point, they had to take control of another part of the county;Les chats de [This.GetName] se reproduisent énormément. Ils sont devenus tellement nombreux qu'ils ont réussi sans difficulté à envahir une nouvelle partie du comté;;;;;;;;;;;;x
+OPT_126_CAT_TARGET;Is this a new kind of plague?;Est-ce un nouveau fléau?;;;;;;;;;;;;x
+DESC_127_USURP_ID;The cats living in [location.GetName] successfully imprisoned me then ...;Les chats de [location.GetName] ont réussi à m'emprisonner puis à ...;;;;;;;;;;;;x
+OPT_127_USURP_ID;At some point, I feel like a cat...;Je commence à me sentir vivre comme un chat...;;;;;;;;;;;;x
+DESC_129_START_INVASION;After the cat's siege on [FROMFROM.GetName], cat started an invasion there;Après l'occupation de [FROMFROM.GetName], les chats démarrent leurs invasions;;;;;;;;;;;;x
+OPTA_129_I_HATE_THAT;Hope they don't do too much;J'espère qu'ils n'en feront pas trop;;;;;;;;;;;;x
+OPTB_129_I_LIKE_THAT;They will finally become cats?!;Ils vont enfin devenir des chats?!;;;;;;;;;;;x
+DESC_130_INCREASE_DECADENCE;As a cat, stability isn't a given...;En tant que chat, tout le monde sait que la stabilité est loin d'être assuré...;;;;;;;;;;;;x
+OPTA_130_INCREASE_DEC;Sooner or later, my decadence will decrease.;Tôt ou tard, ma décadence va redescendre.;;;;;;;;;;;;x
+OPTB_130_UNVAILABLE_DEC;I hope it won't worsen;J'espère que ça ne va pas s'aggraver;;;;;;;;;;;;x
+DESC_131_DECADENCE_EVENT;decadence is a big part in the life of a cat;La décadence a beaucoup d'influence sur la vit d'un chat;;;;;;;;;;;;x
+OPTA_131_DECADENCE_BONUSES;A low decadence for a stable realm;Un petit niveau de décadence pour une contré prospère;;;;;;;;;;;;x
+OPTB_131_DECADENCE_MALUS;Does it means that problems will come?;Est-ce que ça veut dire que des problèmes vont arriver?;;;;;;;;;;;;x
+OPTC_131_DECADENCE_INVASION;A big problems is near;Un gros problème arrive;;;;;;;;;;;;x
+DESC_135_SOCIETY_JOIN;I humbly accept you into my society;Tu as toutes les qualités attendu pour rejoindre ma société;;;;;;;;;;;;x
+OPT_135_SOCIETY_JOIN;I am a proper cat;Je suis maintenant un vrai chat;;;;;;;;;;;;x
+OPT_135_NO_JOIN;It is too soon to enter a society;C'est trop tôt pour rentrer dans une société;;;;;;;;;;;;x
+DESC_138_SOCIETY_RU;You will soon receive a quest to assure your promotion inside our society;Tu vas bientôt passer une épreuve pour avoir une promotion au sein de notre société;;;;;;;;;;;;x
+OPT_138_SOCIETY_RU;I am waiting for it;Je l'attend avec impatience;;;;;;;;;;;;x
+DESC_139_CONVERT;As your are living in a land of cat, you will become a cat;En vivant sur des terres de chats, tu es forcé de devenir un chat!;;;;;;;;;;;;x
+OPT_139_CONVERT;Do I have a choice?;Ai-je le choix?;;;;;;;;;;;;x
+DESC_140_NOTIF_SABO1;You just received a bad gift;Tu viens de recevoir une mauvaise nouvelle;;;;;;;;;;;;x
+OPT_140_NOTIF_SABO1;Why do i feel so bad?;Pourquoi est-ce que je me sens mal?;;;;;;;;;;;;x
+DESC_141_NOTIF_BUILDING_DESTROYED;Someone just sabotaged [From.GetBaseName].!;Quelqu'un vient de provoquer la destruction d'un de mes bâtiment à [From.GetBaseName].;;;;;;;;;;;;x
+OPT_141_NOTIF_OPTION;I know who is behind it;Je sais qui est dérrière cet accident!;;;;;;;;;;;;x
+DESC_142_BECOME_INCAPABLE;I don't feel good, something amiss.;Ces derniers jours, je ne me sens pas bien.;;;;;;;;;;;;x
+OPT_142_BECOME_INCAPABLE;It must be those cat, they are everywhere;Ce doit être ces chats là, ils sont partotu!;;;;;;;;;;;;x
+DESC_143_NOTIF_GETTING_BANISHED;I, as the grandmaster, decide to banish you. You have no reason to be a member of my glorious society;En tant que chef de la société, je décide de te bannir de la société. Il n'y a aucun intérêt pour que tu restes dedans.;;;;;;;;;;;;x
+OPT_143_GETTING_BANISHED;...;;;;;;;;;;;;;x
+DESC_CAT_GLOBAL_QUEST;As a cat ruler, you must show your ability...; En tant que dirigeant chat, tu dois de t'en montrer digne...;;;;;;;;;;;;x
+DESC_150_RANK_UP_QUEST;You asked to gain fame in our society. So you have 3 years to show your abilities!;Tu as demandé de monter de rang dans notre société. Il ne te reste qu'à t'en montrer digne d'ici les 3 prochaines années...;;;;;;;;;;;;x
+DESC_152_QUEST_RU_FAILED;We gave you a quest to show your ability 3 years ago. But you did not have the abilities to make it successful. I regret, but you show yourself unable to rank up.;Il y a 3 ans, tu as reçu des instructions pour pouvoir monter de rang au sein de notre société. Comme tu as été incapable de les réaliser, j'ai le regret de t'apprendre que tu n'as pas ce qu'il faut pour monter de niveau.;;;;;;;;;;;;x
+OPT_152;I should have done it sooner;J'aurais du me concentrer dessus plus rapidement;;;;;;;;;;;;x
+DESC_155_REPUTATION_QUEST_RU_SUCCESS;I finally won a war!;J'ai enfin gagné une guerre!;;;;;;;;;;;;x
+OPT_155_RANK_UP;I am a proud member of the reputation society.;Je suis un digne membre de la société de réputation.;;;;;;;;;;;;x
+DESC_156_END_OF_QUEST_INTRIGUE;I finnaly finished my rank up quest;J'ai enfin fini ma quête de monté de niveau;;;;;;;;;;;;x
+OPT_156_EOQ;I can only hope to not have been discovered;Je ne peut espéré de ne pas être découvert;;;;;;;;;;;;x
+
+##tooltips
+
+CAT_TT_DIE_IN_EPIDEMY;The cats die in a new epidemy;Les chats meurent dans une nouvelle épidémie;;;;;;;;;;;;x
+CAT_TT_TAKE_UNFORTIFIED_HOLDING;The cats take control of an existiong holding;Les chats prennent le contre d'une possession;;;;;;;;;;;;x
+CAT_TT_TOO_LATE;The hunt started to late;La chasse a commencé trop tard;;;;;;;;;;;;x
+CAT_TT_ARE_GONE;The cat are exterminated;Les chats sont exterminés;;;;;;;;;;;;x
+CAT_TT_HUNT_ACCIDENT;The hunt goes wrong;Un accident de chasse arrive;;;;;;;;;;;;x
+CAT_TT_RUN;The cats goes away;Les chats partent;;;;;;;;;;;;x
+CAT_TT_CONSTRUCT_THEIR_TRIBE;The cats build their own tribe;Les chats construisent leur propre tribu;;;;;;;;;;;;x
+CAT_TT_DECLARE_WAR;The cats start a revolt;Les chats se rebellent;;;;;;;;;;;;x
+CAT_TT_HUNTER_INJURED;Many adult are injured by ferocious cats;Beaucoup d'adulte sont blessés par des chats enragé;;;;;;;;;;;;x
+CAT_DECADENCE_INVASION;A decadence invasion begins;Une révolte de décadence commence;;;;;;;;;;;;x
+CAT_TT_ORIGIN_FOUND;I should be warry of [Fromfrom.GetFirstName], he must be the sender;Je devrais me méfier de [Fromfrom.GetFirstName], il est trop louche dans cette histoire;;;;;;;;;;;;x

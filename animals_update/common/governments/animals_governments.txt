@@ -228,4 +228,44 @@ feudal_governments = {
 
         aggression = 0.3
     }
+    cat_feudal_gov = {
+        color = { 195 75 100 }
+        potential = {
+            religion = Cat_religion
+            culture_group = cat_group
+            NOT = { is_government_potential = order_government }
+        }
+        forced_contract = { feudal_government muslim_government theocratic_feudal_government roman_imperial_government theocracy_government }
+
+        can_build_forts = yes
+        can_build_castle = no
+        can_build_city = yes
+        can_build_temple = yes
+        can_build_tribal = no
+
+        accepts_liege_governments = { }
+        free_revoke_on_governments_religion = {
+			tribal_government
+		}
+        ignore_in_vassal_limit_calculation = {
+			tribal_government
+		}
+        preferred_holdings = { CASTLE }
+        allowed_holdings = { CASTLE FORT HOSPITAL }
+        allowed_holdings_culture = { TRIBAL }
+        free_revoke_on_tiers = { baron }
+
+        max_consorts = 3
+        have_gender_laws = no
+        men_can_take_consorts = no
+        women_can_take_consorts = yes
+
+        uses_decadence = yes
+        can_grant_kingdoms_and_empires_to_other_government = no
+        capital_move_delay = 240
+        aggression = 1.95
+
+        builds_with_piety = { TEMPLE }
+        builds_with_prestige = { TRIBAL }
+    }
 }

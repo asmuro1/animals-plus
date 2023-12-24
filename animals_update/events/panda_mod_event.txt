@@ -1182,10 +1182,14 @@ letter_event = {
             limit = {
                 has_law = panda_expension_size_huge
             }
-            add_law = panda_expension_size_medium
+            primary_title = {
+                add_law = panda_expension_size_medium
+            }
         }
         else = {
-            add_law = panda_expension_size_law
+            primary_title = {
+                add_law = panda_expension_size_law
+            }
         }
     }
     option = {
@@ -1271,7 +1275,9 @@ letter_event = {
                 limit = {
                     has_law = panda_vassal_all_allowed
                 }
-                add_law = panda_vassal_count_allowed # can't have strong vassals anymore
+                primary_title = {
+                    add_law = panda_vassal_count_allowed # can't have strong vassals anymore
+                }
             }
             FROM = {
     			diplomatic_immunity = no

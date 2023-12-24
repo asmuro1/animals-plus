@@ -37,6 +37,7 @@ feudal_governments = {
 				AND = { culture_group = panda_group religion = Panda_religion }
 				AND = { culture_group = duck_group  religion = Duck_religion  }
 				AND = { culture_group = elephant_group religion = Eleph_religion }
+				AND = { culture_group = cat_group religion = Cat_religion }
 			}
 			NAND = {
 				culture_group = tibetan_group

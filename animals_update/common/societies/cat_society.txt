@@ -1,0 +1,752 @@
+cat_intrigue_society = {
+    primary_attribute = intrigue
+    is_religious = no
+    criminal = no
+    is_secret = no
+    devil_worshipper = no
+    opinion_to_other_members = +1
+    opinion_to_pretenders = -5
+    opinion_to_perceived_members = +1
+    opinion_per_rank_above = +15
+
+    society_rank_up_decision = request_to_rank_up_cat_societies
+    sound = monastic_orders_indian_interface
+    society_ranks_gfx = generic_ranks 
+
+    society_influence = no
+    non_interference = {
+        always = yes
+    }
+
+    indestructible = yes
+    active = { 
+        always = yes
+    }
+    show_society = {
+        culture_group = cat_group
+        OR = {
+            is_in_society = no
+            society = { is_society = cat_intrigue_society }
+        }
+    }
+    potential = {
+        culture_group = cat_group
+        OR = {
+            is_playable = yes
+            religion = Cat_religion
+        }
+    }
+    can_join_society = {
+        hidden_tooltip = {
+            NOR  = { 
+                has_character_flag = society_join_block
+                is_in_society = yes
+            }
+        }
+        NOT = {
+            custom_tooltip = {
+                text = CAT_TT_BANNED_FROM_SOCIETY
+                has_character_flag = CAT_BANNED_FROM_INTRIGUE
+            }
+        }
+        OR = {
+            is_playable = yes
+            religion = Cat_religion
+        }
+        OR = {
+            culture = black_cat
+            AND = {
+                culture = cat
+                intrigue = 10
+            }
+            AND = {
+                culture = white_cat
+                intrigue = 15
+            }
+        }
+    }
+
+        
+    society_rank = {
+        level = 1 
+        limit = 300 
+        startup_limit = 20 
+        modifier = { 
+
+        }
+        decisions = {
+            cat_society_general_convert_one
+            cat_society_sabo_power_A
+        }
+    }
+
+    society_rank = {
+        level = 2
+        limit = 250
+        startup_limit = 15
+        modifier = { 
+            intrigue = 2
+        }
+        decisions = {
+            cat_start_epidemy_power_B
+            cat_revolt_risk_power_C
+        }
+    }
+
+    society_rank = {
+        level = 3
+        limit = 150
+        startup_limit = 10
+        modifier = {
+            intrigue = 4
+        }
+        decisions = {
+            cat_destroy_buildings_power_D
+            cat_make_incapable_power_E
+        }
+    }
+
+    society_rank = {
+        level = 4
+        limit = 1 
+        startup_limit = 1
+        modifier = { 
+            intrigue = 5
+        }
+        decisions = {
+            cat_charm_someone_power_F
+            cat_banish_someone_power_G
+        }
+    }
+
+	plots = {
+	}
+
+	monthly_currency_gain = { 
+        name = cat_animal_society_currency
+
+        society_rank = {
+            rank = 1
+            value = 10
+        }
+        society_rank = {
+            rank = 2
+            value = 20
+        }
+        society_rank = {
+            rank = 3
+            value = 30
+        }
+        society_rank = {
+            rank = 4
+            value = 40
+        }
+
+        per_attribute = {
+            name = intrigue
+            value = 1
+        }
+
+        triggered_gain = {
+            desc = society_no_intrigue_10
+            trigger = {
+                NOT = { intrigue = 10 }
+            }
+            value = -10
+        }
+
+        triggered_gain = {
+            desc = society_no_intrigue_5
+            trigger = {
+                NOT = { intrigue = 5 }
+            }
+            value = -10
+        }
+    }
+
+    member_score_per_attribute = 5
+    member_score_per_rank = 20
+    member_score = {
+        value = 10
+
+        modifier = {
+            culture = cat
+
+            factor = 0.5
+        }
+        modifier = {
+            culture = white_cat
+
+            factor = 0.25
+        }
+    }
+        
+    startup_populate = {  
+        trigger = {
+            ai = yes
+            controls_religion = no
+            age = 16
+            is_in_society = no
+            culture_group = cat_group
+        }
+    }
+}
+
+cat_prosperity_society = {
+    primary_attribute = learning
+    is_religious = no
+    criminal = no
+    is_secret = no
+    devil_worshipper = no
+    opinion_to_other_members = 0
+    opinion_to_pretenders = -5
+    opinion_to_perceived_members = 0
+    opinion_per_rank_above = 15
+
+    society_rank_up_decision = request_to_rank_up_cat_societies
+    sound = monastic_orders_indian_interface
+    society_ranks_gfx = generic_ranks
+
+    society_influence = no
+    non_interference = {
+        always = yes
+    }
+
+    indestructible = yes
+    active = { 
+        always = yes
+    }
+    show_society = {
+        culture_group = cat_group
+        OR = {
+            is_in_society = no
+            society = { is_society = cat_prosperity_society }
+        }
+    }
+    potential = {
+        culture_group = cat_group
+        OR = {
+            is_playable = yes
+            religion = Cat_religion
+        }
+    }
+    can_join_society = {
+        hidden_tooltip = {
+            NOR  = { 
+                has_character_flag = society_join_block
+                is_in_society = yes
+            }
+        }
+        NOT = {
+            custom_tooltip = {
+                text = CAT_TT_BANNED_FROM_SOCIETY
+                has_character_flag = CAT_BANNED_FROM_PROSPERITY
+            }
+        }
+        OR = {
+            is_playable = yes
+            religion = Cat_religion
+        }
+        OR = {
+            culture = white_cat
+            AND = {
+                culture = cat
+                learning = 8
+                stewardship = 8
+            }
+            AND = {
+                culture = black_cat
+                learning = 14
+                stewardship = 14
+            }
+        }
+    }
+
+        
+    society_rank = {
+        level = 1 
+        limit = 300
+        startup_limit = 20
+        modifier = { 
+            
+        }
+        decisions = {
+            cat_society_general_convert_one
+            cat_illness_resistance_power_A
+        }
+    }
+        
+    society_rank = {
+        level = 2
+        limit = 250
+        startup_limit = 15
+        modifier = { 
+            learning = 1
+            stewardship = 1
+        }
+        decisions = {
+            cat_more_health_power_B
+            cat_wealth_from_county_power_C
+        }
+    }
+        
+    society_rank = {
+        level = 3
+        limit = 150
+        startup_limit = 10
+        modifier = {
+            learning = 2
+            stewardship = 2
+        }
+        decisions = {
+            cat_county_epidemic_resistance_power_D
+            cat_create_new_holding_power_E
+        }
+    }
+
+    society_rank = {
+        level = 4
+        limit = 1 
+        startup_limit = 1
+        modifier = { 
+            learning = 3
+            stewardship = 3
+        }
+        decisions = {
+            cat_increase_prosperity_level_power_F
+            cat_banish_someone_power_G
+        }
+    }
+	
+	plots = {
+	}
+	
+	monthly_currency_gain = { 
+        name = cat_animal_society_currency
+
+        society_rank = {
+            rank = 1
+            value = 10
+        }
+        society_rank = {
+            rank = 2
+            value = 20
+        }
+        society_rank = {
+            rank = 3
+            value = 30
+        }
+        society_rank = {
+            rank = 4
+            value = 40
+        }
+
+        per_attribute = {
+            name = learning
+            value = 0.5
+        }
+        per_attribute = {
+            name = stewardship
+            value = 0.5
+        }
+
+        triggered_gain = {
+            desc = society_no_learning_8
+            trigger = {
+                NOT = { learning = 8 }
+            }
+            value = -10
+        }
+
+        triggered_gain = {
+            desc = society_no_stewardship_8
+            trigger = {
+                NOT = { stewardship = 8 }
+            }
+            value = -10
+        }
+    }
+
+    member_score_per_attribute = 5
+    member_score_per_rank = 35
+    member_score = {
+        value = 10
+
+        additive_modifier = {
+            stewardship = 2
+
+            value = 10
+        }
+        additive_modifier = {
+            stewardship = 4
+
+            value = 10
+        }
+        additive_modifier = {
+            stewardship = 6
+
+            value = 10
+        }
+        additive_modifier = {
+            stewardship = 8
+
+            value = 10
+        }
+        additive_modifier = {
+            stewardship = 10
+
+            value = 10
+        }
+        additive_modifier = {
+            stewardship = 12
+
+            value = 10
+        }
+        additive_modifier = {
+            stewardship = 14
+
+            value = 10
+        }
+        additive_modifier = {
+            stewardship = 16
+
+            value = 10
+        }
+        additive_modifier = {
+            stewardship = 18
+
+            value = 10
+        }
+        additive_modifier = {
+            stewardship = 20
+
+            value = 10
+        }
+        additive_modifier = {
+            stewardship = 22
+
+            value = 10
+        }
+        additive_modifier = {
+            stewardship = 24
+
+            value = 10
+        }
+        additive_modifier = {
+            stewardship = 26
+
+            value = 10
+        }
+        additive_modifier = {
+            stewardship = 28
+
+            value = 10
+        }
+        additive_modifier = {
+            stewardship = 30
+
+            value = 10
+        }
+
+        modifier = {
+            culture = black_cat
+
+            factor = 0.5
+        }
+        modifier = {
+            culture = cat
+
+            factor = 0.25
+        }
+    }
+        
+    startup_populate = { 
+        trigger = {
+            ai = yes
+            controls_religion = no
+            age = 16
+            is_in_society = no
+            culture_group = cat_group
+        }
+    }
+}
+
+cat_reputation_society = {
+    primary_attribute = martial
+    is_religious = no
+    criminal = no
+    is_secret = no
+    devil_worshipper = no
+    opinion_to_other_members = 0
+    opinion_to_pretenders = -5
+    opinion_to_perceived_members = 0
+    opinion_per_rank_above = 15
+
+    society_rank_up_decision = request_to_rank_up_cat_societies
+    sound = monastic_orders_indian_interface
+    society_ranks_gfx = generic_ranks 
+
+    society_influence = no
+    non_interference = {
+        always = yes
+    }
+
+    indestructible = yes
+    active = { 
+        always = yes
+    }
+    show_society = {
+        culture_group = cat_group
+        OR = {
+            is_in_society = no
+            society = { is_society = cat_reputation_society }
+        }
+    }
+    potential = {
+        culture_group = cat_group
+        OR = {
+            is_playable = yes
+            religion = Cat_religion
+        }
+    }
+    can_join_society = {
+        hidden_tooltip = {
+            NOR  = { 
+                has_character_flag = society_join_block
+                is_in_society = yes
+            }
+        }
+
+        NOT = {
+            custom_tooltip = {
+                text = CAT_TT_BANNED_FROM_SOCIETY
+                has_character_flag = CAT_BANNED_FROM_REPUTATION
+            }
+        }
+        OR = {
+            is_playable = yes
+            religion = Cat_religion
+        }
+        OR = {
+            culture = cat
+            AND = {
+                culture = white_cat
+                martial = 8
+                diplomacy = 8
+            }
+            AND = {
+                culture = black_cat
+                martial = 14
+                diplomacy = 14
+            }
+        }
+    }
+
+        
+    society_rank = {
+        level = 1
+        limit = 300
+        startup_limit = 20
+        modifier = { 
+            church_opinion = -5
+        }
+        decisions = {
+            cat_society_general_convert_one
+            cat_piety_gain_power_A
+        }
+    }
+        
+    society_rank = {
+        level = 2
+        limit = 250
+        startup_limit = 15
+        modifier = { 
+            diplomacy = 1
+            martial = 1
+        }
+        decisions = {
+            cat_prestige_gain_power_B
+            cat_vassal_opinion_power_C
+        }
+    }
+        
+    society_rank = {
+        level = 3
+        limit = 150
+        startup_limit = 10
+        modifier = {
+            diplomacy = 2
+            martial = 2
+        }
+        decisions = {
+            cat_levy_gain_power_D
+            cat_general_opinion_power_E
+        }
+    }
+
+    society_rank = {
+        level = 4
+        limit = 1 
+        startup_limit = 1
+        modifier = { 
+            diplomacy = 3
+            martial = 3
+        }
+        decisions = {
+            cat_force_alliance_power_F
+            cat_banish_someone_power_G
+        }
+    }
+	
+	plots = {
+	}
+	
+	monthly_currency_gain = { 
+        name = cat_animal_society_currency
+
+        society_rank = {
+            rank = 1
+            value = 10
+        }
+        society_rank = {
+            rank = 2
+            value = 20
+        }
+        society_rank = {
+            rank = 3
+            value = 30
+        }
+        society_rank = {
+            rank = 4
+            value = 40
+        }
+
+        per_attribute = {
+            name = martial
+            value = 0.5
+        }
+        per_attribute = {
+            name = diplomacy
+            value = 0.5
+        }
+
+        triggered_gain = {
+            desc = society_no_marital_8
+            trigger = {
+                NOT = { martial = 8 }
+            }
+            value = -10
+        }
+
+        triggered_gain = {
+            desc = society_no_diplomacy_8
+            trigger = {
+                NOT = { diplomacy = 8 }
+            }
+            value = -10
+        }
+    }
+
+    member_score_per_attribute = 5
+    member_score_per_rank = 35
+    member_score = {
+        value = 10
+
+        additive_modifier = {
+            diplomacy = 2
+
+            value = 10
+        }
+        additive_modifier = {
+            diplomacy = 4
+
+            value = 10
+        }
+        additive_modifier = {
+            diplomacy = 6
+
+            value = 10
+        }
+        additive_modifier = {
+            diplomacy = 8
+
+            value = 10
+        }
+        additive_modifier = {
+            diplomacy = 10
+
+            value = 10
+        }
+        additive_modifier = {
+            diplomacy = 12
+
+            value = 10
+        }
+        additive_modifier = {
+            diplomacy = 14
+
+            value = 10
+        }
+        additive_modifier = {
+            diplomacy = 16
+
+            value = 10
+        }
+        additive_modifier = {
+            diplomacy = 18
+
+            value = 10
+        }
+        additive_modifier = {
+            diplomacy = 20
+
+            value = 10
+        }
+        additive_modifier = {
+            diplomacy = 22
+
+            value = 10
+        }
+        additive_modifier = {
+            diplomacy = 24
+
+            value = 10
+        }
+        additive_modifier = {
+            diplomacy = 26
+
+            value = 10
+        }
+        additive_modifier = {
+            diplomacy = 28
+
+            value = 10
+        }
+        additive_modifier = {
+            diplomacy = 30
+
+            value = 10
+        }
+
+        modifier = {
+            culture = white_cat
+
+            factor = 0.5
+        }
+        modifier = {
+            culture = black_cat
+
+            factor = 0.25
+        }
+    }
+        
+    startup_populate = { 
+        trigger = {
+            ai = yes
+            controls_religion = no
+            age = 16
+            is_in_society = no
+            culture_group = cat_group
+        }
+     }
+}

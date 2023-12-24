@@ -597,3 +597,54 @@ eleph_climate_control_4 = {
 	local_tax_modifier = -0.5
 	local_revolt_risk = 0.2
 }
+
+cat_controlled_holding = {
+	icon = 46
+	garrison_size = 1.10
+	levy_size = 0.85
+}
+
+cat_no_decadence_penalty_opinion = {
+	icon = 36
+	vassal_opinion = -25
+}
+cat_no_decadence_penalty_revolt = {
+	icon = 106
+	global_revolt_risk = 0.10
+}
+cat_decadence_bonus = {
+	icon = 18
+	vassal_opinion = 25
+}
+
+cat_mod_society_intrigue_1 = {
+	icon = 23
+	defensive_plot_power_modifier = -0.10
+	health_penalty = -0.5
+}
+cat_mod_society_prosperity_illness = {
+	icon = 50
+	health_penalty = 2
+}
+cat_mod_society_prosperity_life_bonus = {
+	icon = 8
+	health = 3
+}
+cat_mod_society_prosperity_epidemic_defense = {
+	icon = 8
+	disease_defence = 0.4
+}
+cat_mod_increased_wealth_province = {
+	icon = 6
+	local_tax_modifier = 0.15
+	city_tax_modifier = 0.20
+}
+cat_mod_reputation_vassal = {
+	icon = 3
+	vassal_opinion = 10
+}
+
+cat_mod_reputation_cats = {
+	icon = 46
+	cat_group_opinion = 10
+}
