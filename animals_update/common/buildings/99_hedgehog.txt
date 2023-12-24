@@ -174,9 +174,9 @@ castle = {
         }
         is_active_trigger = {
             culture_group = hedgehog_group
-            has_building = ca_ani_castle_tower_1
+            has_building = ca_ani_castle_tower_01
         }
-        prerequisites = { ca_ani_castle_tower_1 }
+        prerequisites = { ca_ani_castle_tower_01 }
 
         gold_cost = 15
         build_time = 150
@@ -200,9 +200,9 @@ castle = {
         }
         is_active_trigger = {
             culture_group = hedgehog_group
-            has_building = ca_ani_castle_tower_1_bis
+            has_building = ca_ani_castle_tower_02
         }
-        prerequisites = { ca_ani_castle_tower_1_bis }
+        prerequisites = { ca_ani_castle_tower_02 }
         upgrades_from = ca_hedge_fortification_01
 
         gold_cost = 20
@@ -227,9 +227,9 @@ castle = {
         }
         is_active_trigger = {
             culture_group = hedgehog_group
-            has_building = ca_ani_castle_tower_2
+            has_building = ca_ani_castle_tower_03
         }
-        prerequisites = { ca_ani_castle_tower_2 }
+        prerequisites = { ca_ani_castle_tower_03 }
         upgrades_from = ca_hedge_fortification_02
 
         gold_cost = 25
@@ -254,9 +254,9 @@ castle = {
         }
         is_active_trigger = {
             culture_group = hedgehog_group
-            has_building = ca_ani_castle_tower_2_bis
+            has_building = ca_ani_castle_tower_04
         }
-        prerequisites = { ca_ani_castle_tower_2_bis }
+        prerequisites = { ca_ani_castle_tower_04 }
         upgrades_from = ca_hedge_fortification_03
 
         gold_cost = 30
@@ -281,9 +281,9 @@ castle = {
         }
         is_active_trigger = {
             culture_group = hedgehog_group
-            has_building = ca_ani_castle_tower_3
+            has_building = ca_ani_castle_tower_05
         }
-        prerequisites = { ca_ani_castle_tower_3 }
+        prerequisites = { ca_ani_castle_tower_05 }
         upgrades_from = ca_hedge_fortification_04
 
         gold_cost = 35
@@ -308,9 +308,9 @@ castle = {
         }
         is_active_trigger = {
             culture_group = hedgehog_group
-            has_building = ca_ani_castle_tower_3_bis
+            has_building = ca_ani_castle_tower_06
         }
-        prerequisites = { ca_ani_castle_tower_3_bis }
+        prerequisites = { ca_ani_castle_tower_06 }
         upgrades_from = ca_hedge_fortification_05
 
         gold_cost = 40
@@ -335,9 +335,9 @@ castle = {
         }
         is_active_trigger = {
             culture_group = hedgehog_group
-            has_building = ca_ani_castle_tower_4
+            has_building = ca_ani_castle_tower_07
         }
-        prerequisites = { ca_ani_castle_tower_4 }
+        prerequisites = { ca_ani_castle_tower_07 }
         upgrades_from = ca_hedge_fortification_06
 
         gold_cost = 45
@@ -362,9 +362,9 @@ castle = {
         }
         is_active_trigger = {
             culture_group = hedgehog_group
-            has_building = ca_ani_castle_tower_4_bis
+            has_building = ca_ani_castle_tower_08
         }
-        prerequisites = { ca_ani_castle_tower_4_bis }
+        prerequisites = { ca_ani_castle_tower_08 }
         upgrades_from = ca_hedge_fortification_07
 
         gold_cost = 50
@@ -389,9 +389,9 @@ castle = {
         }
         is_active_trigger = {
             culture_group = hedgehog_group
-            has_building = ca_ani_castle_tower_5
+            has_building = ca_ani_castle_tower_09
         }
-        prerequisites = { ca_ani_castle_tower_5 }
+        prerequisites = { ca_ani_castle_tower_09 }
         upgrades_from = ca_hedge_fortification_08
 
         gold_cost = 55
@@ -416,9 +416,9 @@ castle = {
         }
         is_active_trigger = {
             culture_group = hedgehog_group
-            has_building = ca_ani_castle_tower_5_bis
+            has_building = ca_ani_castle_tower_10
         }
-        prerequisites = { ca_ani_castle_tower_5_bis }
+        prerequisites = { ca_ani_castle_tower_10 }
         upgrades_from = ca_hedge_fortification_09
 
         gold_cost = 60
@@ -443,9 +443,9 @@ castle = {
         }
         is_active_trigger = {
             culture_group = hedgehog_group
-            has_building = ca_ani_castle_tower_6
+            has_building = ca_ani_castle_tower_11
         }
-        prerequisites = { ca_ani_castle_tower_6 }
+        prerequisites = { ca_ani_castle_tower_11 }
         upgrades_from = ca_hedge_fortification_10
 
         gold_cost = 65
@@ -470,9 +470,9 @@ castle = {
         }
         is_active_trigger = {
             culture_group = hedgehog_group
-            has_building = ca_ani_castle_tower_6_bis
+            has_building = ca_ani_castle_tower_12
         }
-        prerequisites = { ca_ani_castle_tower_6_bis }
+        prerequisites = { ca_ani_castle_tower_12 }
         upgrades_from = ca_hedge_fortification_11
 
         gold_cost = 70
@@ -497,9 +497,9 @@ castle = {
         }
         is_active_trigger = {
             culture_group = hedgehog_group
-            has_building = ca_ani_castle_tower_7
+            has_building = ca_ani_castle_tower_13
         }
-        prerequisites = { ca_ani_castle_tower_7 }
+        prerequisites = { ca_ani_castle_tower_13 }
         upgrades_from = ca_hedge_fortification_12
 
         gold_cost = 75
@@ -524,9 +524,9 @@ castle = {
         }
         is_active_trigger = {
             culture_group = hedgehog_group
-            has_building = ca_ani_castle_tower_7_bis
+            has_building = ca_ani_castle_tower_14
         }
-        prerequisites = { ca_ani_castle_tower_7_bis }
+        prerequisites = { ca_ani_castle_tower_14 }
         upgrades_from = ca_hedge_fortification_13
 
         gold_cost = 80
@@ -551,9 +551,9 @@ castle = {
         }
         is_active_trigger = {
             culture_group = hedgehog_group
-            has_building = ca_ani_castle_tower_8
+            has_building = ca_ani_castle_tower_15
         }
-        prerequisites = { ca_ani_castle_tower_8 }
+        prerequisites = { ca_ani_castle_tower_15 }
         upgrades_from = ca_hedge_fortification_14
 
         gold_cost = 85
@@ -578,9 +578,9 @@ castle = {
         }
         is_active_trigger = {
             culture_group = hedgehog_group
-            has_building = ca_ani_castle_tower_9
+            has_building = ca_ani_castle_tower_16
         }
-        prerequisites = { ca_ani_castle_tower_9 }
+        prerequisites = { ca_ani_castle_tower_16 }
         upgrades_from = ca_hedge_fortification_15
 
         gold_cost = 90
@@ -608,9 +608,9 @@ castle = {
         is_active_trigger = {
             culture_group = hedgehog_group
             hedgehog_home_01_tooltip = yes
-            has_building = ca_ani_castle_tower_1
+            has_building = ca_ani_castle_tower_01
         }
-        prerequisites = { ca_ani_castle_tower_1 }
+        prerequisites = { ca_ani_castle_tower_01 }
         # upgrades_from = BaseBuilding
 
         gold_cost = 90
@@ -637,9 +637,9 @@ castle = {
         is_active_trigger = {
             culture_group = hedgehog_group
             hedgehog_home_01_tooltip = yes
-            has_building = ca_ani_castle_tower_3
+            has_building = ca_ani_castle_tower_05
         }
-        prerequisites = { ca_ani_castle_tower_3 }
+        prerequisites = { ca_ani_castle_tower_05 }
         upgrades_from = ca_hedge_armor_01
 
         gold_cost = 130
@@ -666,9 +666,9 @@ castle = {
         is_active_trigger = {
             culture_group = hedgehog_group
             hedgehog_home_02_tooltip = yes
-            has_building = ca_ani_castle_tower_5_bis
+            has_building = ca_ani_castle_tower_10
         }
-        prerequisites = { ca_ani_castle_tower_5_bis }
+        prerequisites = { ca_ani_castle_tower_10 }
         upgrades_from = ca_hedge_armor_02
 
         gold_cost = 230
@@ -695,9 +695,9 @@ castle = {
         is_active_trigger = {
             culture_group = hedgehog_group
             hedgehog_home_02_tooltip = yes
-            has_building = ca_ani_castle_tower_7_bis
+            has_building = ca_ani_castle_tower_14
         }
-        prerequisites = { ca_ani_castle_tower_7_bis }
+        prerequisites = { ca_ani_castle_tower_14 }
         upgrades_from = ca_hedge_armor_03
 
         gold_cost = 400
@@ -725,9 +725,9 @@ castle = {
         is_active_trigger = {
             culture_group = hedgehog_group
             hedgehog_home_01_tooltip = yes
-            has_building = ca_ani_castle_tower_1
+            has_building = ca_ani_castle_tower_01
         }
-        prerequisites = { ca_ani_castle_tower_1 }
+        prerequisites = { ca_ani_castle_tower_01 }
         # upgrades_from = BaseBuilding
 
         gold_cost = 100
@@ -755,9 +755,9 @@ castle = {
         is_active_trigger = {
             culture_group = hedgehog_group
             hedgehog_home_01_tooltip = yes
-            has_building = ca_ani_castle_tower_2_bis
+            has_building = ca_ani_castle_tower_04
         }
-        prerequisites = { ca_ani_castle_tower_2_bis }
+        prerequisites = { ca_ani_castle_tower_04 }
         upgrades_from = ca_hedge_weapon_01
 
         gold_cost = 145
@@ -784,9 +784,9 @@ castle = {
         is_active_trigger = {
             culture_group = hedgehog_group
             hedgehog_home_02_tooltip = yes
-            has_building = ca_ani_castle_tower_5
+            has_building = ca_ani_castle_tower_09
         }
-        prerequisites = { ca_ani_castle_tower_5 }
+        prerequisites = { ca_ani_castle_tower_09 }
         upgrades_from = ca_hedge_weapon_02
 
         gold_cost = 235
@@ -813,9 +813,9 @@ castle = {
         is_active_trigger = {
             culture_group = hedgehog_group
             hedgehog_home_02_tooltip = yes
-            has_building = ca_ani_castle_tower_6_bis
+            has_building = ca_ani_castle_tower_12
         }
-        prerequisites = { ca_ani_castle_tower_6_bis }
+        prerequisites = { ca_ani_castle_tower_12 }
         upgrades_from = ca_hedge_weapon_03
 
         gold_cost = 360
@@ -842,9 +842,9 @@ castle = {
         }
         is_active_trigger = {
             culture_group = hedgehog_group
-            has_building = ca_ani_castle_tower_2
+            has_building = ca_ani_castle_tower_03
         }
-        prerequisites = { ca_ani_castle_tower_2 }
+        prerequisites = { ca_ani_castle_tower_03 }
         # upgrades_from = BaseBuilding
 
         gold_cost = 130
@@ -872,9 +872,9 @@ castle = {
         is_active_trigger = {
             culture_group = hedgehog_group
             hedgehog_home_01_tooltip = yes
-            has_building = ca_ani_castle_tower_3_bis
+            has_building = ca_ani_castle_tower_06
         }
-        prerequisites = { ca_ani_castle_tower_3_bis }
+        prerequisites = { ca_ani_castle_tower_06 }
         upgrades_from = ca_hedge_garrison_01
 
         gold_cost = 160
@@ -900,9 +900,9 @@ castle = {
         is_active_trigger = {
             culture_group = hedgehog_group
             hedgehog_home_02_tooltip = yes
-            has_building = ca_ani_castle_tower_7
+            has_building = ca_ani_castle_tower_13
         }
-        prerequisites = { ca_ani_castle_tower_7 }
+        prerequisites = { ca_ani_castle_tower_13 }
         upgrades_from = ca_hedge_garrison_02
 
         gold_cost = 350
@@ -929,9 +929,9 @@ castle = {
         is_active_trigger = {
             culture_group = hedgehog_group
             hedgehog_home_01_tooltip = yes
-            has_building = ca_ani_castle_tower_1_bis
+            has_building = ca_ani_castle_tower_02
         }
-        prerequisites = { ca_ani_castle_tower_1_bis }
+        prerequisites = { ca_ani_castle_tower_02 }
         # upgrades_from = BaseBuilding
 
         gold_cost = 180
@@ -959,9 +959,9 @@ castle = {
         is_active_trigger = {
             culture_group = hedgehog_group
             hedgehog_home_02_tooltip = yes
-            has_building = ca_ani_castle_tower_4
+            has_building = ca_ani_castle_tower_07
         }
-        prerequisites = { ca_ani_castle_tower_4 }
+        prerequisites = { ca_ani_castle_tower_07 }
         upgrades_from = ca_hedge_retinue_01
 
         gold_cost = 300
@@ -989,9 +989,9 @@ castle = {
         is_active_trigger = {
             culture_group = hedgehog_group
             hedgehog_home_02_tooltip = yes
-            has_building = ca_ani_castle_tower_6
+            has_building = ca_ani_castle_tower_11
         }
-        prerequisites = { ca_ani_castle_tower_6 }
+        prerequisites = { ca_ani_castle_tower_11 }
         upgrades_from = ca_hedge_retinue_02
 
         gold_cost = 450
@@ -1019,9 +1019,9 @@ castle = {
         is_active_trigger = {
             culture_group = hedgehog_group
             hedgehog_home_02_tooltip = yes
-            has_building = ca_ani_castle_tower_8
+            has_building = ca_ani_castle_tower_15
         }
-        prerequisites = { ca_ani_castle_tower_8 }
+        prerequisites = { ca_ani_castle_tower_15 }
         upgrades_from = ca_hedge_retinue_03
 
         gold_cost = 900
@@ -1051,9 +1051,9 @@ castle = {
         is_active_trigger = {
             culture_group = hedgehog_group
             # hedgehog_home_02_tooltip = yes
-            has_building = ca_ani_castle_tower_4_bis
+            has_building = ca_ani_castle_tower_08
         }
-        prerequisites = { ca_ani_castle_tower_4_bis }
+        prerequisites = { ca_ani_castle_tower_08 }
         # upgrades_from = BaseBuilding
 
         gold_cost = 500
@@ -1080,9 +1080,9 @@ castle = {
         is_active_trigger = {
             culture_group = hedgehog_group
             # hedgehog_home_02_tooltip = yes
-            has_building = ca_ani_castle_tower_9
+            has_building = ca_ani_castle_tower_16
         }
-        prerequisites = { ca_ani_castle_tower_9 }
+        prerequisites = { ca_ani_castle_tower_16 }
         upgrades_from = ca_hedge_speciality_01
 
         gold_cost = 1000

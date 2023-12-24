@@ -1,0 +1,1684 @@
+namespace = ani_plus
+
+###### cat update events
+### event 119 - 156
+
+#### conversion quest:
+# event 119: launching quest by event rule
+#            cats start a province invasion
+# event 120: Cats start to harm human
+#           -> can do nothing (create an epidemy or take control of unfortified holdings)
+#           -> can start a hunt ( can start an epidemy (too late), do nothing or provoke an accident)
+#           -> start a seclusion ( can force cat to run away, take an unfortified holding or live on a new tribe)
+# event 121: cats die on an epidemic (notification)
+#           -> start an epidemy in the province
+# event 122: cats take control of an unfortified holding
+#           -> take control of a city, temple or tribe
+# event 123: cats create their own tribal settlement
+#           ->  create and control a new city
+# event 124: An accident happens with cat
+#           -> can lead to a war
+#           -> can kill many adults and add occupied holding
+# event 125 (on_action): a cat bastion (tribe or castle) loose its can owner
+#           -> high chance to lead to a war (if garrison is complete)
+# event 126 (MTTH): force a new holding to be a living place to cat - can transform its owner into a cat
+#           -> can be triggered only if an existing holding is controlled (assieged or controlled) by cats
+# event 127 (MTTH): transform a character into cat if province culture is cat
+
+
+#event 119
+province_event = {
+    id = ani_plus.119
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    trigger = {
+        has_game_rule = {
+            name = animals_conversion_ways
+            value = animal_events
+        }
+        Is_really_animal_trigger = no
+        holder_scope = {
+            Is_really_animal_trigger = no
+            OR = {
+                lifestyle_traits == 0
+                trait = schemer
+            }
+        }
+        Cat_can_live_here_trigger = yes
+        NOT = { has_province_flag = Cat_conv_quest_CD }
+        num_of_settlements = 2
+        NOT = {
+            any_province_holding = {
+                has_holding_modifier = cat_controlled_holding
+            }
+        }
+    }
+
+    mean_time_to_happen = {
+        years = 1500
+
+        modifier = {
+            factor = 0.04  # 60 years for players
+            holder_scope = { ai = no }
+        }
+    }
+
+    desc = DESC_119_HIGH_CAT_NUMBER
+
+    option = {
+        name = OPT1_119_OBSERVE_THEM
+
+        set_province_flag = Cat_conv_quest_CD
+        province_event = { id = ani_plus.120 days = 7 random = 17 }
+
+        ai_chance = {
+            factor = 2
+
+            modifier = {
+                factor = 10
+
+                holder_scope ={
+                    OR = {
+                        trait = patient
+                        trait = content
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+
+                holder_scope = {
+                    OR = {
+                        trait = wroth
+                        trait = ambitious
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = OPT2_119_CHASE_THEM
+
+        ai_chance = {
+            factor = 8
+            modifier = {
+                factor = 0.625
+
+                holder_scope = 
+                {
+                    OR = {
+                        trait = patient
+                        trait = content
+                    }
+                }
+            }
+        }
+    }
+}
+
+#event 120
+province_event = {
+    id = ani_plus.120
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    is_triggered_only = yes
+
+    desc = DESC_120_CAT_START_RAMPAGE
+
+    option = {
+        name = OPT_120_DO_NOTHING
+
+        random_list = {
+            1 = {
+                custom_tooltip = {
+                    text = CAT_TT_DIE_IN_EPIDEMY
+                    province_event = { id = ani_plus.121 days = 1}
+                    # eleph_start_epidemy_effect = yes
+                }
+            }
+            2 = {
+                trigger = {
+                    OR = {
+                        has_city = yes
+                        has_temple = yes
+                        has_tribal = yes
+                    }
+                }
+                custom_tooltip = {
+                    text = CAT_TT_TAKE_UNFORTIFIED_HOLDING
+                    province_event = { id = ani_plus.122 days = 1}
+                }
+            }
+        }
+
+        ai_chance = { factor = 0 }
+    }
+    option = {
+        name = OPT2_120_START_A_HUNT
+
+        holder_scope = { wealth = -50 }
+        random_list = {
+            1 = {
+                custom_tooltip = {
+                    text = CAT_TT_TOO_LATE
+                    province_event = { id = ani_plus.121 days = 1}
+                    # eleph_start_epidemy_effect = yes
+                }
+            }
+            3 = {
+                custom_tooltip = {
+                    text = CAT_TT_ARE_GONE
+                    clr_province_flag = Cat_conv_quest_CD
+                }
+            }
+            1 = {
+                custom_tooltip = {
+                    text = CAT_TT_HUNT_ACCIDENT
+                    province_event = { id = ani_plus.124 days = 1}
+                }
+            }
+        }
+        ai_chance = { factor = 5 }
+    }
+    option = {
+        name = OPT3_120_TRY_SECLUSION
+
+        random_list = {
+            4 = {
+                custom_tooltip = {
+                    text = CAT_TT_RUN
+                    clr_province_flag = Cat_conv_quest_CD
+                }
+            }
+            2 = {
+                trigger = {
+                    OR = {
+                        has_city = yes
+                        has_temple = yes
+                        has_tribal = yes
+                    }
+                }
+                custom_tooltip = {
+                    text = CAT_TT_TAKE_UNFORTIFIED_HOLDING
+                    province_event = { id = ani_plus.122 days = 1}
+                }
+            }
+            1 = {
+                trigger = {
+                    num_of_empty_holdings = 2
+                }
+                custom_tooltip = {
+                    text = CAT_TT_CONSTRUCT_THEIR_TRIBE
+                    province_event = { id = ani_plus.123 days = 1}
+                }
+            }
+        }
+
+        ai_chance = { factor = 1 }
+    }
+}
+
+#event 121
+province_event = {
+    id = ani_plus.121
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    is_triggered_only = yes
+
+    desc = DESC_121_EPIDEMY_OUTBREAK
+
+    option = {
+        name = OPT_121_EPIDEMY
+
+        custom_tooltip = {
+            text = ELEPH_TT_DISEASE_SPAWN
+            eleph_start_epidemy_effect = yes
+            clr_province_flag = Cat_conv_quest_CD
+        }
+    }
+}
+
+#event 122
+province_event = {
+    id = ani_plus.122
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    is_triggered_only = yes
+
+    immediate = {
+        random_province_holding = {
+            preferred_limit = {
+                holding_type = tribal
+                is_capital = no
+            }
+            preferred_limit = {
+                holding_type = temple
+                is_capital = no
+            }
+            preferred_limit = {
+                holding_type = city
+                is_capital = no
+            }
+            preferred_limit = {
+                holding_type = castle
+                is_capital = no
+            }
+
+            save_event_target_as = Invasion_target
+        }
+    }
+
+    desc = DESC_122_CAT_INVADE
+
+    option = {
+        name = OPT_122_CAT_INVADE
+
+        event_target:Invasion_target = {
+
+            add_holding_modifier = {
+                name = cat_controlled_holding
+                years = 10
+            }
+            cat_set_new_cat_owner_effect = yes
+        }
+        clr_province_flag = Cat_conv_quest_CD
+    }
+}
+
+#event 123
+province_event = {
+    id = ani_plus.123
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    is_triggered_only = yes
+
+    desc = DESC_123_CREATE_TRIBE
+
+    option = {
+        name = OPT_123_CREATE_TRIBE
+
+        create_cat_terrain_character_effect = yes
+        build_holding = {
+            type = city
+            holder = new_character
+        }
+        hidden_tooltip = {
+            cat_new_holding_created_by_cats_effect = yes
+        }
+
+        clr_province_flag = Cat_conv_quest_CD
+    }
+}
+
+#event 124
+province_event = {
+    id = ani_plus.124
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    is_triggered_only = yes
+
+    desc = DESC_124_HOSTILITY
+
+    option = {
+        name = OPT_124_HOSTILITY
+
+        random_list = {
+            4 = {
+                custom_tooltip = {
+                    text = CAT_TT_DECLARE_WAR
+                    cat_start_revolt_effect = yes
+                }
+            }
+            1 = {
+                custom_tooltip = {
+                    text = CAT_TT_HUNTER_INJURED
+                    any_province_character = {
+                        limit = { is_adult = yes is_female = no }
+                        random_list = {
+                            2 = {}
+                            3 = { add_trait = wounded }
+                            5 = { add_trait = severely_injured }
+                        }
+                    }
+                }
+            }
+        }
+
+        clr_province_flag = Cat_conv_quest_CD
+    }
+}
+
+#event 125
+character_event = {
+    id = ani_plus.125
+
+    is_triggered_only = yes
+
+    trigger = {
+        FROM = { has_holding_modifier = cat_controlled_holding }
+        FROMFROM = { culture_group = cat_group }
+        NOT = { ROOT = { culture_group = cat_group } }
+    }
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = DESC_125_HOLDER_CHANGE
+
+    option = {
+        name = OPT_125_WAR
+        hidden_tooltip = {
+            FROM = {
+                remove_holding_modifier = cat_controlled_holding
+                location = {
+                    cat_start_revolt_effect = yes
+                }
+            }
+        }
+    }
+}
+
+#event 126
+province_event = {
+    id = ani_plus.126
+
+    trigger = {
+        any_province_holding = {
+            has_holding_modifier = cat_controlled_holding
+        }
+        NOT = { culture_group = cat_group }
+    }
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    mean_time_to_happen = {
+        years = 5
+
+        modifier = {
+            factor = 0.5
+
+            any_province_holding = {
+                has_holding_modifier = cat_controlled_holding
+                holding_type = castle
+            }
+        }
+        modifier = {
+            factor = 0.5
+            any_province_holding = {
+                has_holding_modifier = cat_controlled_holding
+                OR = {
+                    holding_type = city
+                    holding_type = temple
+                }
+            }
+        }
+    }
+
+    desc = DESC_126_CAT_INVADE
+
+    option = {
+        name = OPT_126_CAT_TARGET
+
+        # county = {
+        #     save_event_target_as = new_holding_controlled
+        # }
+        random_province_holding = {
+            limit = {
+                NOT = { has_holding_modifier = cat_controlled_holding }
+            }
+            preferred_limit = {
+                is_capital = no
+                holding_type = tribal
+            }
+            preferred_limit = {
+                is_capital = no
+                NOT = { holding_type = castle }
+            }
+
+            save_event_target_as = new_holding_controlled
+        }
+        hidden_tooltip = {
+            random_province_lord = {
+                limit = {
+                    culture_group = cat_group
+                }
+                save_event_target_as = new_culture_save
+            }
+        }
+        
+        event_target:new_holding_controlled = {
+            if = {
+                limit = {
+                    # tier = COUNT
+                    is_capital = yes
+                }
+                location = {
+                    culture = event_target:new_culture_save
+                }
+            }
+            else = {
+                add_holding_modifier = {
+                    name = cat_controlled_holding
+                    years = 10
+                }
+                cat_set_new_cat_owner_effect = yes
+                holder_scope = {
+                    culture = event_target:new_culture_save
+                }
+            }
+        }
+    }
+}
+
+#event 127
+character_event = {
+    id = ani_plus.127
+
+    war = no
+    trigger = {
+        location = { culture_group = cat_group }
+        NOT = { culture_group = cat_group }
+    }
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    mean_time_to_happen = {
+        years = 3
+    }
+
+    desc = DESC_127_USURP_ID
+
+    option = {
+        name = OPT_127_USURP_ID
+
+        culture = location
+    }
+}
+
+
+
+### province cultural change (start invasion by siege or looting)
+#event 128 (on_action): launch province culture notification
+#event 129: notification for province holder (use invasion mechanisms from conversion quest)
+
+#event 128
+character_event = {
+    id = ani_plus.128
+
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        ROOT = {
+            culture_group = cat_group
+        }
+        FROM = {
+            is_capital = no
+            location = {
+                NOT = { culture_group = cat_group }
+                # num_of_empty_holdings = 1
+            }
+        }
+    }
+    
+    immediate = {
+        FROM = {
+            location = {
+                holder_scope = {
+                    character_event = { id = ani_plus.129 }
+                }
+            }
+        }
+    }
+}
+
+#event 129
+character_event = {
+    id = ani_plus.129
+
+    is_triggered_only = yes
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    desc = DESC_129_START_INVASION
+
+    option = {
+        name = {
+            text = OPTA_129_I_HATE_THAT
+            trigger = {
+                NOT = { culture_group = cat_group }
+            }
+        }
+        name = {
+            text = OPTB_129_I_LIKE_THAT
+            trigger = {
+                culture_group = cat_group
+            }
+        }
+
+        FROMFROM = {
+            
+            create_character = {
+                fertility = 1.5
+                female = no
+                religion = ROOT_FROM
+                culture = ROOT_FROM
+                dynasty = none
+            }
+            new_character = { gain_title = PREV }
+            add_holding_modifier = {
+                name = cat_controlled_holding
+                years = 10
+            }
+        }
+    }
+}
+
+
+###decadence events
+# event 130: increase decadence level for cat ruler (or give them maluses if wrong government type)
+# event 131: events for very high or very low level of decadence for cat
+
+#event 130
+character_event = {
+    id = ani_plus.130
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    only_playable = yes
+
+    trigger = {
+        culture_group = cat_group
+        is_playable = yes
+    }
+
+    mean_time_to_happen = {
+        months = 12
+
+        modifier = {
+            factor = 1.4
+            NOT = {
+                government = cat_feudal_gov
+            }
+        }
+    }
+
+    desc = DESC_130_INCREASE_DECADENCE
+
+    option = {
+        trigger = {
+            government = cat_feudal_gov
+        }
+        name = OPTA_130_INCREASE_DEC
+        decadence = 10
+    }
+
+    option = {
+        trigger = {
+            NOT = { government = cat_feudal_gov }
+        }
+
+        name = OPTB_130_UNVAILABLE_DEC
+        random_list = {
+            1 = {
+                trigger = {
+                    NOT = { has_character_modifier = cat_no_decadence_penalty_opinion }
+                }
+                add_character_modifier = {
+                    name = cat_no_decadence_penalty_opinion
+                    months = 6
+                }
+            }
+            1 = {
+                trigger = {
+                    NOT = { has_character_modifier = cat_no_decadence_penalty_revolt }
+                }
+                add_character_modifier = {
+                    name = cat_no_decadence_penalty_revolt
+                    months = 3
+                }
+            }
+        }
+    }
+}
+
+#event 131
+character_event = {
+    id = ani_plus.131
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = DESC_131_DECADENCE_EVENT
+
+    only_playable = yes
+
+    trigger = {
+        government = cat_feudal_gov
+
+        OR = {
+            decadence > 75
+            decadence < 15
+        }
+
+        NOT = {
+			any_war = {
+				defender = { character = ROOT }
+				using_cb = decadence_invasion # Already under tribal invasion
+			}
+		}
+    }
+
+    mean_time_to_happen = {
+        years = 20
+
+        modifier = {
+            factor = 0.25
+            
+            decadence > 75
+        }
+
+        modifier = {
+            factor = 0.2
+            decadence >= 90
+        }
+
+        modifier = {
+            factor = 0.2
+            decadence = 100
+        }
+    }
+
+    option = {
+        trigger = {
+            decadence < 15
+        }
+
+        name = OPTA_131_DECADENCE_BONUSES
+
+        add_character_modifier = {
+            name = cat_decadence_bonus
+            months = 5
+        }
+    }
+
+    option = {
+        trigger = {
+            decadence > 75
+            OR = {
+                decadence < 90
+                tier = count
+                independent = no
+            }
+        }
+
+        name = OPTB_131_DECADENCE_MALUS
+
+        random_list = {
+            1 = {
+                trigger = {
+                    NOT = { has_character_modifier = cat_no_decadence_penalty_opinion }
+                }
+                add_character_modifier = {
+                    name = cat_no_decadence_penalty_opinion
+                    months = 6
+                }
+            }
+            1 = {
+                trigger = {
+                    NOT = { has_character_modifier = cat_no_decadence_penalty_revolt }
+                }
+                add_character_modifier = {
+                    name = cat_no_decadence_penalty_revolt
+                    months = 4
+                }
+            }
+        }
+    }
+
+    option = {
+        trigger = {
+            decadence >= 90
+            higher_tier_than = count
+            independent = yes
+        }
+
+        name = OPTC_131_DECADENCE_INVASION
+
+        # usual decadence invasion
+        # for most part: copy-past from vanilla event
+
+        custom_tooltip = {
+            text = CAT_DECADENCE_INVASION
+            random_potential_tribal_county = { # A county suitable for tribal takeover
+                location = {
+                    create_character = {
+                        random_traits = yes
+                        dynasty = random
+                        religion = ROOT
+                        culture = ROOT
+                        female = no
+                        age = 25
+                        attributes = {
+                            martial = 5
+                            diplomacy = 15
+                        }
+                        trait = skilled_tactician
+                    }
+
+                    new_character = {
+                        create_title = {
+                            tier = DUKE
+                            landless = yes
+                            temporary = yes
+                            culture = ROOT
+                            name = "DECADENCE_REVOLT"
+                            holder = THIS
+                        }
+
+
+                        wealth = 2000
+
+                        spawn_unit = {
+                            province = PREV
+                            home = PREV
+                            owner = THIS
+                            leader = THIS
+                            match_character = ROOT
+                            match_mult = 0.2
+                            earmark = decadence_revolters
+                            reinforces = yes
+                            reinforce_rate_multiplier = 0.25
+                        }
+                        create_character = {
+                            random_traits = yes
+                            dynasty = THIS
+                            religion = ROOT
+                            culture = ROOT
+                            female = no
+                            age = 18
+                            attributes = {
+                                martial = 7
+                            }
+                            trait = skilled_tactician
+                        }
+                        new_character = {
+                            set_father = PREV
+                            spawn_unit = {
+                                province = PREVPREV
+                                home = PREVPREV
+                                owner = PREV
+                                #leader = THIS
+                                match_character = ROOT
+                                match_mult = 0.2
+                                earmark = decadence_revolters
+                                reinforces = yes
+                                reinforce_rate_multiplier = 0.25
+                            }
+                        }
+
+
+                        create_character = {
+                            random_traits = yes
+                            dynasty = THIS
+                            religion = ROOT
+                            culture = ROOT
+                            female = no
+                            age = 20
+                            attributes = {
+                                martial = 7
+                            }
+                            trait = skilled_tactician
+                        }
+                        new_character = {
+                            spawn_unit = {
+                                province = PREVPREV
+                                home = PREVPREV
+                                owner = PREV
+                                #leader = THIS
+                                match_character = ROOT
+                                match_mult = 0.2
+                                earmark = decadence_revolters
+                                reinforces = yes
+                                reinforce_rate_multiplier = 0.25
+                            }
+                        }
+
+                        create_character = {
+                            random_traits = yes
+                            dynasty = NONE
+                            religion = ROOT
+                            culture = ROOT
+                            female = no
+                            age = 20
+                            attributes = {
+                                martial = 7
+                            }
+                            trait = skilled_tactician
+                        }
+                        new_character = {
+                            spawn_unit = {
+                                province = PREVPREV
+                                home = PREVPREV
+                                owner = PREV
+                                #leader = THIS
+                                match_character = ROOT
+                                match_mult = 0.2
+                                earmark = decadence_revolters
+                                reinforces = yes
+                                reinforce_rate_multiplier = 0.25
+                            }
+                        }
+
+                        create_character = {
+                            random_traits = yes
+                            dynasty = NONE
+                            religion = ROOT
+                            culture = ROOT
+                            female = no
+                            age = 22
+                            attributes = {
+                                martial = 7
+                            }
+                            trait = skilled_tactician
+                        }
+                        new_character = {
+                            spawn_unit = {
+                                province = PREVPREV
+                                home = PREVPREV
+                                owner = PREV
+                                #leader = THIS
+                                match_character = ROOT
+                                match_mult = 0.2
+                                earmark = decadence_revolters
+                                reinforces = yes
+                                reinforce_rate_multiplier = 0.25
+                            }
+                        }
+
+                        create_character = {
+                            random_traits = yes
+                            dynasty = NONE
+                            religion = ROOT
+                            culture = ROOT
+                            female = no
+                            age = 22
+                            attributes = {
+                                martial = 7
+                            }
+                            trait = skilled_tactician
+                        }
+                        new_character = {
+                            spawn_unit = {
+                                province = PREVPREV
+                                home = PREVPREV
+                                owner = PREV
+                                #leader = THIS
+                                match_character = ROOT
+                                match_mult = 0.2
+                                earmark = decadence_revolters
+                                reinforces = yes
+                                reinforce_rate_multiplier = 0.25
+                            }
+                        }
+
+                        set_character_flag = decadence_invader
+                        war = {
+                            target = ROOT
+                            casus_belli = decadence_invasion
+                        }
+                        clr_character_flag = decadence_invader
+                    }
+                }
+            }
+        }
+    }
+}
+
+###society related event (on_action event (quest not concerned) + rank up decision)
+# event 132: on action event - on_society_failed_to_find_new_leader event
+# event 133: on action event - on_character_ask_to_join_society
+# event 134 - 135: event chain: accepting player into the society
+# event 136: on action event - force cat ai to join cat society (if he can)
+# event 137: rank up event: pin society master to allow rank up
+# event 138: player notification to allow rank up
+
+#event 132
+character_event = {
+    id = ani_plus.132
+
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        ROOT = {
+            OR = {
+                is_society = cat_intrigue_society
+                is_society = cat_prosperity_society
+                is_society = cat_reputation_society
+            }
+        }
+    }
+
+
+    immediate = {
+        create_character = {
+            random_traits = yes
+            female = 10
+            religion = Cat_religion
+            culture = black_cat
+        }
+        
+        if = {
+            limit = {
+                ROOT = {
+                    is_society = cat_prosperity_society
+                }
+            }
+
+            new_character = {
+                culture = white_cat
+            }
+        }
+        else_if = {
+            limit = {
+                ROOT = {
+                    is_society = cat_reputation_society
+                }
+            }
+            new_character = {
+                culture = cat
+            }
+        }
+        new_character = {
+            join_society = ROOT
+            set_society_grandmaster = yes
+        }
+    }
+}
+
+#event 133
+character_event = {
+    id = ani_plus.133
+
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        FROM = {
+            OR = {
+                is_society = cat_intrigue_society
+                is_society = cat_prosperity_society
+                is_society = cat_reputation_society
+            }
+        }
+    }
+
+    immediate = {
+        ROOT = {
+            set_character_flag = society_join_block
+        }
+        FROM  = {
+            leader = {
+                character_event = { id = ani_plus.134 }
+            }
+        }
+    }
+}
+
+#event 134
+character_event = {
+    id = ani_plus.134
+
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        FROM = {
+            letter_event = { id = ani_plus.135 }
+        }
+    }
+}
+
+#event 135
+letter_event = {
+    id = ani_plus.135
+    is_triggered_only = yes
+
+    border = GFX_event_letter_frame_diplomacy
+
+    desc = DESC_135_SOCIETY_JOIN
+
+    option = {
+        name = OPT_135_SOCIETY_JOIN
+
+        join_society = FROMFROMFROM
+    }
+    option = {
+        name = OPT_135_NO_JOIN
+
+        #nothing
+    }
+
+    after = {
+        clr_character_flag = society_join_block
+    }
+}
+
+#event 136
+character_event = {
+    id = ani_plus.136
+
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        is_in_society = no
+        ai = yes
+        OR = {
+            can_join_society = cat_intrigue_society
+            can_join_society = cat_prosperity_society
+            can_join_society = cat_reputation_society
+        }
+    }
+
+    immediate = {
+        random_list = {
+            1 = {
+                trigger = {
+                    can_join_society = cat_intrigue_society
+                }
+                join_society = cat_intrigue_society
+            }
+            1 = {
+                trigger = {
+                    can_join_society = cat_prosperity_society
+                }
+                join_society = cat_prosperity_society
+            }
+            1 = {
+                trigger = {
+                    can_join_society = cat_reputation_society
+                }
+                join_society = cat_reputation_society
+            }
+        }
+    }
+}
+
+#event 137
+character_event = {
+    id = ani_plus.137
+
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        FROM = { letter_event = { id = ani_plus.138 } }
+    }
+}
+
+#event 138
+letter_event = {
+    id = ani_plus.138
+
+    is_triggered_only = yes
+
+    border = GFX_event_letter_frame_diplomacy
+
+    desc = DESC_138_SOCIETY_RU
+
+    option = {
+        name = OPT_138_SOCIETY_RU
+
+    }
+}
+
+###society power events
+# event 139: notification for conversion quest
+# event 140: notification for power 1 sabotage quest
+# event 141: notification for holding destroyed
+# event 142: becoming incapable
+# event 143: banished from cat society (power G of each society)
+
+#event 139
+character_event = {
+    id = ani_plus.139
+
+    is_triggered_only = yes
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = DESC_139_CONVERT
+
+    option = {
+        name = OPT_139_CONVERT
+
+        culture = FROMFROM
+    }
+}
+
+#event 140
+character_event = {
+    id = ani_plus.140
+
+    is_triggered_only = yes
+    
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = DESC_140_NOTIF_SABO1
+
+    option = {
+        name = OPT_140_NOTIF_SABO1
+
+        add_character_modifier = {
+            name = cat_mod_society_intrigue_1
+            years = 2
+        }
+        
+        if = {
+            limit = {
+                has_character_flag = Discover_autor
+            }
+
+            custom_tooltip = {
+                text = CAT_TT_ORIGIN_FOUND
+            }
+            opinion = {
+                name = cat_intrigue_power_1_denounced
+                who = FROMFROM
+                years = 10
+            }
+
+            clr_character_flag = Discover_autor
+        }
+    }
+}
+
+#event 141
+letter_event = {
+    id = ani_plus.141
+
+    is_triggered_only = yes
+
+    border = GFX_event_letter_frame_diplomacy
+    desc = DESC_141_NOTIF_BUILDING_DESTROYED
+
+    option = {
+        name = OPT_141_NOTIF_OPTION
+
+        opinion = {
+            name = cat_intrigue_angry
+            who = FROMFROM
+            years = 8
+        }
+    }
+}
+
+#event 142
+character_event = {
+    id = ani_plus.142
+
+    is_triggered_only = yes
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    desc = DESC_142_BECOME_INCAPABLE
+
+    option = {
+        name = OPT_142_BECOME_INCAPABLE
+
+        add_trait = incapable
+    }
+}
+
+#event 143
+letter_event = {
+    id = ani_plus.143
+
+    is_triggered_only = yes
+    border = GFX_event_letter_frame_diplomacy
+    desc = DESC_143_NOTIF_GETTING_BANISHED
+
+    option = {
+        name = OPT_143_GETTING_BANISHED
+
+        leave_society = yes
+    }
+}
+
+
+### society quest event
+# event 144: on_action quest tombola
+# event 145-147: preparing sending quests
+# event 148-150: 3 event quest (2 versions per societies + rank up quest)
+# event 151-152: rank up quest failed
+# event 153-154 (on_action): redirection to event 155 with god character
+# event 155: prosprity rank up quest success
+# event 156: intrigue rank up quest rewards
+
+#event 144
+character_event = {
+    id = ani_plus.144
+    hide_window = yes
+
+    is_triggered_only = yes
+    
+    trigger = {
+        OR = {
+            society_member_of = cat_intrigue_society
+            society_member_of = cat_reputation_society
+            society_member_of = cat_prosperity_society
+        }
+        OR = {
+            government = cat_feudal_gov
+            has_character_flag = cat_rank_up_possible
+        }
+        has_any_quest = no
+        prisoner = no
+        society = {
+            any_society_member = {
+                NOT = { character = ROOT }
+                prisoner = no
+                is_within_diplo_range = ROOT
+                opinion = { who = ROOT value = 0 }
+            }
+        }
+    }
+
+    immediate = {
+        society = {
+            random_society_member = {
+                limit = {
+                    NOT = { character = ROOT }
+                    prisoner = no
+                    is_within_diplo_range = ROOT
+                    opinion = { who = ROOT value = 0 }
+                }
+                preferred_limit = { same_realm = ROOT }
+
+                save_event_target_as = quest_collaborator
+            }
+        }
+        if = {
+            limit = {
+                ai = yes
+            }
+            if = {
+                limit = {
+                    has_character_flag = cat_rank_up_possible
+                }
+                society_rank_up = 1
+                clr_character_flag = cat_rank_up_possible
+                decadence = -25
+            }
+            if = {
+                limit = {
+                    is_playable = yes
+                }
+                decadence = -8
+            }
+            change_society_currency = -250
+        }
+        else = {
+            # ai = no so player only
+            random_list = {
+                10 = {
+                    modifier = {
+                        factor = 0
+                        
+                        has_character_flag = cat_rank_up_possible
+                    }
+                    event_target:quest_collaborator = {
+                        character_event = { id = ani_plus.145 }
+                    }
+                }
+                10 = {
+                    modifier = {
+                        factor = 0
+                        OR = {
+                            has_character_flag = cat_rank_up_possible
+                            NOT = { society_rank = 2 }
+                        }
+                    }
+                    event_target:quest_collaborator = {
+                        character_event = { id = ani_plus.146 }
+                    }
+                }
+                1 = {
+                    modifier = {
+                        factor = 0
+                        NOT = {
+                            has_character_flag = cat_rank_up_possible
+                        }
+                    }
+                    event_target:quest_collaborator = {
+                        character_event = { id = ani_plus.147 }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#event 145
+character_event = {
+    id = ani_plus.145
+
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = {
+        FROM = {
+            society_quest_event = {
+                id = ani_plus.148
+            }
+        }
+    }
+}
+
+#event 146
+character_event = {
+    id = ani_plus.146
+
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = {
+        FROM = {
+            society_quest_event = {
+                id = ani_plus.149
+            }
+        }
+    }
+}
+
+#event 147
+character_event = {
+    id = ani_plus.147
+
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = {
+        FROM = {
+            society_quest_event = {
+                id = ani_plus.150
+            }
+        }
+    }
+}
+
+
+#event 148
+society_quest_event = {
+    id = ani_plus.148
+    desc = DESC_CAT_GLOBAL_QUEST
+
+    is_triggered_only = yes
+
+    option = {
+        name = ACCEPT
+
+        if = {
+            limit = {
+                society = {
+                    is_society = cat_intrigue_society
+                }
+            }
+            set_quest = cat_quest_intrigue_1
+        }
+        else_if = {
+            limit = {
+                society = {
+                    is_society = cat_reputation_society
+                }
+            }
+            set_quest = cat_quest_reputation_1
+        }
+        else = {
+            # prosperity society
+            set_quest = cat_quest_prosperity_1
+        }
+    }
+    option = {
+        name = DECLINE
+    }
+}
+
+#event 149
+society_quest_event = {
+    id = ani_plus.149
+    desc = DESC_CAT_GLOBAL_QUEST
+
+    is_triggered_only = yes
+
+    option = {
+        name = ACCEPT
+
+        if = {
+            limit = {
+                society = {
+                    is_society = cat_intrigue_society
+                }
+            }
+            set_quest = cat_quest_intrigue_2
+        }
+        else_if = {
+            limit = {
+                society = {
+                    is_society = cat_reputation_society
+                }
+            }
+            set_quest = cat_quest_reputation_2
+        }
+        else = {
+            # prosperity society
+            set_quest = cat_quest_prosperity_2
+        }
+    }
+    option = {
+        name = DECLINE
+    }
+}
+
+#event 150
+society_quest_event = {
+    id = ani_plus.150
+    desc = DESC_150_RANK_UP_QUEST
+
+    is_triggered_only = yes
+
+
+    immediate = {
+        clr_character_flag = cat_rank_up_possible
+    }
+
+    option = {
+        name = ACCEPT
+        set_character_flag = cat_quest_rank_up
+        if = {
+            limit = {
+                society = {
+                    is_society = cat_intrigue_society
+                }
+            }
+            set_quest = cat_quest_intrigue_3
+        }
+        else_if = {
+            limit = {
+                society = {
+                    is_society = cat_reputation_society
+                }
+            }
+            set_quest = cat_quest_reputation_3
+        }
+        else = {
+            # prosperity society
+            set_quest = cat_quest_prosperity_3
+        }
+
+        FROM = {
+            character_event = { # fail quest notification
+                id = ani_plus.151
+                years = 3
+            }
+        }
+    }
+    option = {
+        name = DECLINE
+        change_society_currency = -750
+        decadence = 100
+
+        if = {
+            limit = {
+                society_rank = 2
+            }
+            society_rank_down = 1
+        }
+    }
+}
+
+#event 151
+character_event = {
+    id = ani_plus.151
+
+    is_triggered_only = yes
+    hide_window = yes
+
+    immediate = {
+        FROM = {
+            if = {
+                limit = {
+                    has_character_flag = cat_quest_rank_up
+                }
+
+                clr_character_flag = cat_quest_rank_up
+                clr_quest = cat_quest_intrigue_3
+                clr_quest = cat_quest_reputation_3
+                clr_quest = cat_quest_prosperity_3
+
+                letter_event = {
+                    id = ani_plus.152
+                }
+            }
+        }
+    }
+}
+
+#event 152
+letter_event = {
+    id = ani_plus.152
+    
+    is_triggered_only = yes
+    border = GFX_event_letter_frame_diplomacy
+    desc = DESC_152_QUEST_RU_FAILED
+
+    option = {
+        name = OPT_152
+        decadence = 100
+    }
+}
+
+#event 153
+character_event = {
+    id = ani_plus.153
+
+    is_triggered_only = yes
+    hide_window = yes
+
+    immediate = {
+        FROM = {
+            character_event = { id = ani_plus.155 }
+        }
+    }
+}
+
+#event 154
+character_event = {
+    id = ani_plus.154
+
+    is_triggered_only = yes
+    hide_window = yes
+
+    immediate = {
+        ROOT = {
+            character_event = { id = ani_plus.155 }
+        }
+    }
+}
+
+#event 155
+character_event = {
+    id = ani_plus.155
+
+    is_triggered_only = yes
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    desc = DESC_155_REPUTATION_QUEST_RU_SUCCESS
+
+    trigger = {
+        has_quest = cat_quest_reputation_3
+    }
+
+    option = {
+        name = OPT_155_RANK_UP
+        custom_tooltip = {
+            text = CAT_TT_SUCCESS_QUEST_3
+            clr_quest = cat_quest_reputation_3
+            clr_character_flag = cat_quest_rank_up
+        }
+        society_rank_up = 1
+        decadence = -100
+    }
+}
+
+#event 156
+character_event = {
+    id = ani_plus.156
+
+    is_triggered_only = yes
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    desc = DESC_156_END_OF_QUEST_INTRIGUE
+
+    option = {
+        name = OPT_156_EOQ
+        hidden_tooltip = {
+            clr_quest = cat_quest_intrigue_3
+            clr_character_flag = cat_quest_rank_up
+        }
+        if = {
+            limit = {
+                has_character_flag = Discover_autor_bis
+            }
+
+            custom_tooltip = {
+                text = CAT_TT_FAIL_QUEST_3
+            }
+            decadence = 100
+            clr_character_flag = Discover_autor_bis
+        }
+        else = {
+            custom_tooltip = {
+                text = CAT_TT_SUCCESS_QUEST_3
+            }
+            society_rank_up = 1
+            decadence = -100
+        }
+    }
+}

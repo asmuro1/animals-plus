@@ -1,55 +1,6 @@
 namespace = ani_plus
 ### 1st version event, will totally be deleted with future updates
 
-## cat
-#curse events
-character_event = {
-    id = ani_plus.999
-
-    desc = EVTDESCanimal_plus_mod102
-    border = GFX_event_normal_frame_diplomacy
-	picture = GFX_evt_council
-
-    is_triggered_only = yes
-
-    option = {
-        name = EVTOPTAanimal_plus_mod102
-
-        add_trait = possessed
-        add_trait = depressed
-    }
-}
-
-#harrassment event
-character_event = {
-    id = ani_plus.998 #to set FROM correctly
-
-    hide_window = yes
-    is_triggered_only = yes
-
-    immediate = {
-        save_event_target_as = For_localisation
-        FROM = { character_event = { id = ani_plus.997 }}
-    }
-}
-character_event = {
-    id = ani_plus.997
-
-    desc = EVTDESCanimal_plus_mod104
-    border = GFX_event_normal_frame_diplomacy
-	picture = GFX_evt_council
-
-    is_triggered_only = yes
-
-    option = {
-        name = EVTOPTAanimal_plus_mod104
-
-        add_trait = stressed
-
-        clear_event_target = For_localisation
-    }
-}
-
 ## dog
 #fidelity gifts
 character_event = {
@@ -267,9 +218,3 @@ character_event = {
         clear_event_target = dog_gift_three
     }
 }
-
-
-###increasing/decreasing colonizing step
-#event deleted
-#notice: colonization finished
-#event deleted

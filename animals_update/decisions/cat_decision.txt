@@ -1,0 +1,1993 @@
+
+title_decisions = {
+    start_cat_conversion_quest = {
+        is_high_prio = yes
+        ai_check_interval = 40
+
+        filter = owned
+        ai_target_filter = owned
+
+        potential = {
+            tier = COUNT
+            FROM = {
+                OR = {
+                    has_game_rule = {
+                        name = animals_conversion_ways
+                        value = animal_decision
+                    }
+                    AND = {
+                        has_game_rule = {
+                            name = animals_conversion_ways
+                            value = animal_instant
+                        }
+                        ai = no
+                    }
+                }
+                Is_really_animal_trigger = no
+            }
+            location = {
+                Is_really_animal_trigger = no
+                custom_tooltip = {
+                    text = CAT_TT_COOLDOWN
+                    NOT = { has_province_flag = Cat_conv_quest_CD }
+                }
+                holder_scope = {
+                    character = FROM
+                }
+                Cat_can_live_here_trigger = yes
+                custom_tooltip = {
+                    text = No_cat_invasion_tt
+                    NOT = {
+                        any_province_holding = {
+                            has_holding_modifier = cat_controlled_holding
+                        }
+                    }
+                }
+            }
+        }
+
+        allow = {
+            FROM = {
+                # is_adult = yes
+                is_incapable = no
+                has_regent = no
+                OR = {
+                    lifestyle_traits == 0
+                    trait = schemer
+                }
+            }
+            location = {
+                Cat_can_live_here_trigger = yes
+                custom_tooltip = {
+                    text = CAT_NOT_PRESENT
+                    NOT = { has_province_flag = Cat_conv_quest_CD }
+                }
+            }
+        }
+
+        effect = {
+            if = {
+                limit = {
+                    has_game_rule = {
+                        name = animals_conversion_ways
+                        value = animal_instant
+                    }
+                }
+                cat_terrain_change_culture_effect = yes
+                hidden_tooltip = {
+                    location = {
+                        FROM = { culture = PREV }
+                    }
+                }
+            }
+            else = {
+                location = {
+                    set_province_flag = Cat_conv_quest_CD
+                    province_event = { id = ani_plus.120 days = 3 random = 3 }
+                }
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0.01
+                always = yes
+            }
+            modifier = {
+                factor = 0
+                FROM = {
+                    OR = {
+                        trait = slothful
+                        trait = shy
+                    }
+                }
+            }
+        }
+    }
+    Force_cat_invasion = {
+        is_high_prio = no
+        ai_check_interval = 12
+
+        filter = owned
+        ai_target_filter = owned
+
+        potential = {
+            tier = COUNT
+            FROM = {
+                culture_group = cat_group
+                religion = Cat_religion
+            }
+            location = {
+                NOT = {
+                    culture_group = cat_group
+                }
+                holder_scope = {
+                    character = FROM
+                }
+            }
+        }
+
+        allow = {
+            FROM = {
+                culture_group = cat_group
+                prestige = 350
+                piety = 100
+            }
+            location = {
+                NOT = { culture_group = cat_group }
+                num_of_empty_holdings = 1
+            }
+            c_medantaka = {
+                location = {
+                    # religion = Cat_religion
+                    holder_scope = { religion = Cat_religion }
+                }
+            }
+        }
+        effect = {
+            create_character = {
+                fertility = 0.9
+                female = no
+                religion = FROM
+                culture = FROM
+                dynasty = none
+            }
+            location = {
+                show_scope_change = no
+                build_holding = {
+                    type = tribal
+                    holder = new_character
+                }
+            }
+            hidden_tooltip = {
+                new_character = { set_defacto_liege = FROM }
+                location = {
+                    cat_new_holding_created_by_cats_effect = yes
+                }
+            }
+
+            FROM = {
+                prestige = -350
+                piety = -100
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0.7
+                always = yes
+            }
+        }
+    }
+
+    cat_revolt_risk_power_C = {
+        is_high_prio = no
+        
+        ai_check_interval = 9
+
+        is_in_society = yes
+        filter = realm_owned
+        ai_target_filter = sub_realm_owned
+
+        from_potential = {
+            is_in_society = yes
+            society = {
+                is_society = cat_intrigue_society
+            }
+            society_rank = 2
+        }
+        potential = {
+            OR = {
+                tier = COUNT
+                tier = BARON
+            }
+            holder_scope = {
+                same_realm = FROM
+            }
+            NOT = {
+                location = {
+                    has_province_modifier = eleph_province_hostility
+                }
+            }
+        }
+
+        allow = {
+            FROM = {
+                society_currency = 360
+            }
+            location = {
+                custom_tooltip = {
+                    text = CAT_TT_DID_NOT_SABOTAGE
+                    NOT = {
+                        has_province_modifier = eleph_province_hostility
+                    }
+                }
+            }
+        }
+        effect = {
+            location = {
+                add_province_modifier = {
+                    name = eleph_province_hostility
+                    years = 1
+                }
+            }
+            FROM = {
+                change_society_currency = -360
+                if = {
+                    limit = {
+                        has_quest = cat_quest_intrigue_2
+                    }
+                    custom_tooltip = {
+                        text = CAT_TT_QUEST_COMPLETE
+                        clr_quest = cat_quest_intrigue_2
+                    }
+                    decadence = -9.5
+                }
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+                
+                NOT = {
+                    holder_scope = {
+                        is_foe = FROM
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.025
+                always = yes
+            }
+        }
+    }
+
+    cat_wealth_from_county_power_C = {
+        is_high_prio = no
+
+        ai_check_interval = 10
+
+        is_in_society = yes
+        filter = realm_owned
+        ai_target_filter = owned
+
+        from_potential = {
+            is_in_society = yes
+            society = {
+                is_society = cat_prosperity_society
+            }
+            society_rank = 2
+        }
+        potential = {
+            tier = COUNT
+            holder_scope = {
+                same_realm = FROM
+            }
+
+            OR = {
+                FROM = { ai = no }
+                holder_scope = { character = FROM }
+            }
+
+            NOT = {
+                location = {
+                    has_province_modifier = cat_mod_increased_wealth_province
+                }
+            }
+        }
+        allow = {
+            FROM = {
+                society_currency = 360
+            }
+            location = {
+                show_scope_change = no
+                NOT = { has_province_modifier = cat_mod_increased_wealth_province }
+            }
+        }
+        effect = {
+            FROM = {
+                change_society_currency = -360
+
+                if = {
+                    limit = {
+                        has_quest = cat_quest_prosperity_2
+                    }
+                    custom_tooltip = {
+                        text = CAT_TT_QUEST_COMPLETE
+                        clr_quest = cat_quest_prosperity_2
+                    }
+                    decadence = -9.5
+                }
+            }
+            location = {
+                show_scope_change = no
+                add_province_modifier = {
+                    name = cat_mod_increased_wealth_province
+                    months = 25
+                }
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+
+            additive_modifier = {
+                value = 0.3
+
+                wealth < 0
+            }
+        }
+    }
+
+    cat_county_epidemic_resistance_power_D = {
+        is_high_prio = no
+
+        ai_check_interval = 11
+
+        is_in_society = yes
+        filter = realm_owned
+        ai_target_filter = owned
+
+        from_potential = {
+            is_in_society = yes
+            society = {
+                is_society = cat_prosperity_society
+            }
+            society_rank = 3
+            has_dlc = "Reapers"
+        }
+        potential = {
+            tier = COUNT
+            OR = {
+                AND = {
+                    FROM = { ai = yes }
+                    holder_scope = {
+                        character = FROM
+                    }
+                }
+                AND = {
+                    FROM = { ai = no }
+                    holder_scope = {
+                        same_realm = FROM
+                    }
+                }
+            }
+        }
+        allow = {
+            FROM = {
+                society_currency = 750
+            }
+            location = {
+                show_scope_change = no
+                has_hospital = yes
+                NOT = {
+                    has_province_modifier = cat_mod_society_prosperity_epidemic_defense
+                }
+            }
+        }
+        effect = {
+            FROM = {
+                change_society_currency =  -750
+                if = {
+                    limit = {
+                        has_quest = cat_quest_prosperity_1
+                    }
+                    custom_tooltip = {
+                        text = CAT_TT_QUEST_COMPLETE
+                        clr_quest = cat_quest_prosperity_1
+                    }
+                    decadence = -11.5
+                }
+            }
+            location = {
+                show_scope_change = no
+                add_province_modifier = {
+                    name = cat_mod_society_prosperity_epidemic_defense
+                    years = 5
+                }
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+
+                always = yes #will be changed with quests
+            }
+        }
+    }
+
+    cat_create_new_holding_power_E = {
+        is_high_prio = no
+
+        ai_check_interval = 10
+
+        is_in_society = yes
+        filter = owned
+        ai_target_filter = owned
+
+        from_potential = {
+            is_in_society = yes
+            society = {
+                is_society = cat_prosperity_society
+            }
+            society_rank = 3
+        }
+        potential = {
+            tier = COUNT
+            
+            holder_scope = {
+                character = FROM
+            }
+        }
+        allow = {
+            FROM = {
+                society_currency = 850
+            }
+            location = {
+                has_empty_holding = yes
+                has_settlement_construction = no
+            }
+        }
+        effect = {
+            FROM = {
+                change_society_currency = -850
+
+                if = {
+                    limit = {
+                        has_quest = cat_quest_prosperity_2
+                    }
+                    custom_tooltip = {
+                        text = CAT_TT_QUEST_COMPLETE
+                        clr_quest = cat_quest_prosperity_2
+                    }
+                    decadence = -11.5
+                }
+            }
+            location = {
+                show_scope_change = no
+
+                build_holding = {
+                    type = tribal
+                    holder = FROM
+                }
+            }
+        }
+
+        ai_will_do = {
+            factor = 0 #prefer to use prestige
+        }
+    }
+
+    cat_increase_prosperity_level_power_F = {
+        is_high_prio = no
+        ai_check_interval = 12
+
+        is_in_society = yes
+        filter = realm_owned
+        ai_target_filter = owned
+
+        from_potential = {
+            has_dlc = "Reapers"
+            is_in_society = yes
+            society = {
+                is_society = cat_prosperity_society
+            }
+            society_rank = 4
+        }
+        potential = {
+            tier = COUNT
+
+            holder_scope = {
+                OR = {
+                    character = FROM
+                    AND = {
+                        FROM = { ai = no }
+                        same_realm = FROM
+                    }
+                }
+            }
+        }
+        allow = {
+            FROM = {
+                society_currency = 1250
+            }
+            
+            location = {
+                has_epidemic = no
+
+                custom_tooltip = {
+                    text = CAT_TT_PROVINCE_NOT_DEPOPULATED
+                    NOT = {
+                        Cat_province_not_depopulated_trigger = yes
+                    }
+                }
+
+                custom_tooltip = {
+                    text = CAT_TT_MAX_PROSPERITY_NOT_ATTAINED
+                    NOT = {
+                        has_province_modifier = prosperity_modifier_3
+                    }
+                }
+            }
+        }
+
+        effect = {
+            FROM = {
+                change_society_currency = -1250
+
+                if = {
+                    limit = {
+                        has_quest = cat_quest_prosperity_2
+                    }
+                    custom_tooltip = {
+                        text = CAT_TT_QUEST_COMPLETE
+                        clr_quest = cat_quest_prosperity_2
+                    }
+                    decadence = -14
+                }
+            }
+
+            location = {
+                custom_tooltip = {
+                    text = CAT_TT_INCREASE_PROSPERITY
+                    increase_prosperity_effect = yes
+                }
+            }
+        }
+        
+        ai_will_do = {
+            factor = 1
+        }
+    }
+}
+
+decisions = {
+    adopt_cat_religion = {
+        is_high_prio = yes
+        ai_check_interval = 3
+
+        potential = {
+            culture_group = cat_group
+            NOT = { religion = Cat_religion }
+            can_change_religion = yes
+        }
+        allow = {
+            is_adult = yes
+            culture_group = cat_group
+            has_regent = no
+            is_incapable = no
+            can_change_religion = yes
+        }
+        effect = {
+            religion = Cat_religion
+            if = {
+                limit = {
+                    OR = {
+                        independent = yes
+                        liege = { NOT = { religion = Cat_religion } }
+                    }
+                }
+                if = {
+                    limit = {
+                        has_game_rule = {
+                            name = animals_bonus_levy
+                            value = Few
+                        }
+                    }
+                    spawn_unit = {
+                        province = capital_scope
+                        home = capital_scope
+                        owner = ROOT
+                        leader = none
+                        troops = {
+                            light_infantry = { 2500 2500 }
+                        }
+                        attrition = 0.1
+                        maintenance = no
+
+                    }
+                }
+                else_if = {
+                    limit = {
+                        has_game_rule = {
+                            name = animals_bonus_levy
+                            value = Normal
+                        }
+                    }
+                    spawn_unit = {
+                        province = capital_scope
+                        home = capital_scope
+                        owner = ROOT
+                        leader = none
+                        troops = {
+                            light_infantry = { 10000 10000 }
+                        }
+                        attrition = 0.1
+                        maintenance = no
+
+                    }
+                }
+                else_if = {
+                    limit = {
+                        has_game_rule = {
+                            name = animals_bonus_levy
+                            value = Many
+                        }
+                    }
+                    spawn_unit = {
+                        province = capital_scope
+                        home = capital_scope
+                        owner = ROOT
+                        leader = none
+                        troops = {
+                            light_infantry = { 20000 20000 }
+                        }
+                        attrition = 0.05
+                        maintenance = no
+
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    is_feudal = yes
+                }
+                set_government_type = Duck_feudal_gov
+            }
+        }
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+
+                independent = no
+                liege = {
+                    NOT = { religion = Cat_religion }
+                }
+            }
+        }
+    }
+
+    create_Invasive_order = {
+        only_playable = yes
+        ai_check_interval = 30
+
+        is_high_prio = yes
+
+        potential = {
+            NOT = { is_title_active = d_Invasive_order }
+            independent = yes
+            religion = Cat_religion
+            culture_group = cat_group
+            NOT = {	has_alternate_start_parameter = { key = religion_names value = random } }
+        }
+        allow = {
+            higher_tier_than = DUKE
+            war = no
+            piety = 350
+        }
+        effect = {
+            piety = -350
+            prestige = 600
+            custom_tooltip = {
+                text = CREATED_HOLY_ORDER_CAT_TOOLTIP
+
+                activate_title = { title = d_Invasive_order status = yes }
+                create_character = {
+                    random_traits = no
+                    dynasty = random
+                    religion = ROOT
+                    culture = cat
+                    female = no
+                    age = 25
+                    trait = brilliant_strategist
+                    trait = zealous
+                    trait = humble
+                    trait = ambitious
+                    trait = strategist
+                    trait = holy_warrior
+                }
+                new_character = {
+                    wealth = 500
+                    d_polar_fighter = {
+                        grant_title = PREV
+                    }
+                    set_government_type = order_government
+                    create_character = {
+						random_traits = yes
+						dynasty = random
+						religion = ROOT
+						culture = ROOT
+						female = no
+						age = 20
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						religion = ROOT
+						culture = ROOT
+						female = no
+						age = 19
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						religion = ROOT
+						culture = ROOT
+						female = no
+						age = 18
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						religion = ROOT
+						culture = ROOT
+						female = no
+						age = 17
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = random
+						religion = ROOT
+						culture = ROOT
+						female = no
+						age = 16
+					}
+                }
+                any_player = {
+                    narrative_event = { id = ani_plus.070 }
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0.4
+            }
+            modifier = {
+                factor = 0.5
+                trait = cynical
+            }
+        }
+    }
+    
+    cat_piety_gain_power_A = {
+        is_high_prio = no
+        ai_check_interval = 6
+
+        is_in_society = yes
+
+        potential = {
+            is_in_society = yes
+            society = {
+                is_society = cat_reputation_society
+            }
+            society_rank = 1
+        }
+        allow = {
+            society_currency = 120
+        }
+
+        effect = {
+            change_society_currency = -120
+            piety = 450
+
+            if = {
+                limit = {
+                    has_quest = cat_quest_reputation_1
+                }
+                custom_tooltip = {
+                    text = CAT_TT_QUEST_COMPLETE
+                    clr_quest = cat_quest_reputation_1
+                }
+                decadence = -7.5
+            }
+        }
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0.001
+
+                always = yes
+            }
+        }
+    }
+
+    cat_prestige_gain_power_B = {
+        is_high_prio = no
+        ai_check_interval = 6
+
+        is_in_society = yes
+
+        potential = {
+            is_in_society = yes
+            society = {
+                is_society = cat_reputation_society
+            }
+            society_rank = 2
+        }
+        allow = {
+            society_currency = 300
+        }
+
+        effect = {
+            change_society_currency = -300
+            piety = 1000
+            
+            if = {
+                limit = {
+                    has_quest = cat_quest_reputation_1
+                }
+                custom_tooltip = {
+                    text = CAT_TT_QUEST_COMPLETE
+                    clr_quest = cat_quest_reputation_1
+                }
+                decadence = -9.5
+            }
+        }
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0.001
+
+                always = yes
+            }
+        }
+    }
+
+    cat_levy_gain_power_D = {
+        is_high_prio = no
+        ai_check_interval = 12
+
+        is_in_society = yes
+
+        potential = {
+            is_in_society = yes
+            society = {
+                is_society = cat_reputation_society
+            }
+            society_rank = 3
+        }
+        allow = {
+            society_currency = 750
+            war = yes
+        }
+
+        effect = {
+            change_society_currency = -750
+            spawn_unit = {
+                province = capital_scope
+                home = capital_scope
+                owner = ROOT
+                leader = none
+                troops = {
+                    heavy_infantry = { 1500 1500 }
+                }
+                attrition = 0.1
+                maintenance = yes
+                reinforce_rate_multiplier = 0.05
+                disband_on_peace = yes
+            }
+            if = {
+                limit = {
+                    has_quest = cat_quest_reputation_1
+                }
+                custom_tooltip = {
+                    text = CAT_TT_QUEST_COMPLETE
+                    clr_quest = cat_quest_reputation_1
+                }
+                decadence = -11.5
+            }
+        }
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0.001
+
+                always = yes
+            }
+        }
+    }
+}
+
+society_decisions = {
+    request_to_rank_up_cat_societies = {
+
+        hide_in_decisions_list = yes
+
+        potential = {
+            hidden_tooltip = {
+                NOT = {society_rank = 3 }
+                is_in_society = yes
+                society = {
+                    OR = {
+                        is_society = cat_intrigue_society
+                        is_society = cat_prosperity_society
+                        is_society = cat_reputation_society
+                    }
+                }
+                OR = {
+                    ai = no
+                    AND = {
+                        ai = yes
+                        society_can_rank_up = yes
+                    }
+                }
+            }
+        }
+        allow = {
+            custom_tooltip = {
+                text = IS_OLD_ENOUGH_CAT_TT
+                days_at_current_society_rank = 1805 # 5 years
+            }
+            
+            custom_tooltip = {
+                text = DO_NOT_ALREADY_ASK_TO_RANK_UP_CAT_TT
+                NOR = {
+                    has_character_flag = cat_rank_up_possible
+                    has_character_flag = cat_quest_rank_up    
+                }
+            }
+
+            custom_tooltip = {
+                text = HAVE_A_GRANDMASTER_CAT_TT
+                any_society_member = {
+                    is_society_grandmaster = yes
+                    same_society_as = ROOT
+                }
+            }
+        }
+
+        effect = {
+            set_character_flag = cat_rank_up_possible
+            society = {
+                leader = {
+                    character_event = { id = ani_plus.137 random = 7 days = 1 }
+                }
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0.05 # slow down a bit
+                always = yes
+            }
+        }
+    }
+}
+
+targetted_decisions = {
+    cat_society_general_convert_one = {
+
+        is_high_prio = no
+        ai_check_interval = 50
+
+        filter = sub_realm
+        ai_target_filter = none
+
+        from_potential = {
+            is_in_society = yes
+            society = {
+                OR = {
+                    is_society = cat_intrigue_society
+                    is_society = cat_reputation_society
+                    is_society = cat_prosperity_society
+                }
+            }
+        }
+        potential = {
+            is_within_diplo_range = FROM
+            NOT = {
+                culture_group = cat_group
+            }
+        }
+
+        allow = {
+            FROM = {
+                society_rank = 1
+                society_currency = 150
+            }
+            ROOT = {
+                NOT = { culture_group = cat_group }
+                location = { culture_group = cat_group }
+            }
+        }
+
+        effect = {
+            FROM = {
+                change_society_currency = -150
+            }
+
+            ROOT = {
+                custom_tooltip = {
+                    text = CAT_TT_CONVERT_POWER
+                    character_event = { id = ani_plus.139 }
+                }
+            }
+        }
+    }
+
+
+    cat_society_sabo_power_A = {
+        is_high_prio = no
+
+        ai_check_interval = 6
+
+        is_in_society = yes
+        filter = all
+        ai_target_filter = rivals
+
+        from_potential = {
+            is_in_society = yes
+            society = {
+                is_society = cat_intrigue_society
+            }
+            society_rank = 1
+        }
+        potential = {
+            is_within_diplo_range = FROM
+            NOT = {
+                has_character_modifier = cat_mod_society_intrigue_1
+            }
+        }
+
+        allow = {
+            FROM = {
+                OR = {
+                    AND = {
+                        society_currency = 120
+                        is_liege_or_above_of = ROOT
+                    }
+                    AND = {
+                        society_currency = 180
+                        is_vassal_or_below_of = ROOT
+                    }
+                    society_currency = 245
+                }
+            }
+            ROOT = {
+                NOT = {
+                    has_character_modifier = cat_mod_society_intrigue_1
+                }
+                is_adult = yes
+            }
+        }
+
+        effect = {
+            if = {
+                limit = {
+                    is_vassal_or_below_of = FROM
+                }
+                FROM = {
+                    change_society_currency = -120
+                }
+            }
+            else_if = {
+                limit = {
+                    is_liege_or_above_of = FROM
+                }
+                FROM = {
+                    change_society_currency = -180
+                }
+            }
+            else = {
+                FROM = {
+                    change_society_currency = -245
+                }
+            }
+
+            random = {
+                chance = 25
+
+                cat_intrigue_duel_score = yes
+
+                custom_tooltip = {
+                    text = CAT_TT_PLOT_DISCOVERY
+                    set_character_flag = Discover_autor
+                    FROM = { set_character_flag = Discover_autor_bis }
+                }
+            }
+
+            FROM = {
+                if = {
+                    limit = {
+                        has_quest = cat_quest_intrigue_1
+                    }
+                    custom_tooltip = {
+                        text = CAT_TT_QUEST_COMPLETE
+                        clr_quest = cat_quest_intrigue_1
+                    }
+                    decadence = -7.5
+                }
+                if = {
+                    limit = {
+                        has_quest = cat_quest_intrigue_3
+                    }
+                    character_event = { id = ani_plus.156 }
+                }
+                else = {
+                    clr_character_flag = Discover_autor_bis
+                }
+            }
+            custom_tooltip = {
+                text = CAT_TT_SET_INTR1_NOTIF
+                character_event = { id = ani_plus.140 }
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+                
+                NOT = { is_foe = FROM }
+            }
+            modifier = {
+                factor = 0.05
+                always = yes
+            }
+            #other modifier will be done for quest
+        }
+    }
+
+    cat_illness_resistance_power_A = {
+        is_high_prio = no
+        ai_check_interval = 6
+
+        is_in_society = yes
+        filter = all_including_me
+        ai_target_filter = court_including_me
+
+        from_potential = {
+            is_in_society = yes
+            society = {
+                is_society = cat_prosperity_society
+            }
+            society_rank = 1
+        }
+        potential = {
+            is_within_diplo_range = FROM
+            NOT = {
+                has_character_modifier = cat_mod_society_prosperity_illness
+            }
+        }
+        allow = {
+            FROM = {
+                society_currency = 120
+            }
+            ROOT = {
+                OR = {
+                    is_ill = yes
+                    trait = pregnant
+                }
+                NOT = {
+                    has_character_modifier = cat_mod_society_prosperity_illness
+                } 
+            }
+        }
+
+        effect = {
+            FROM = {
+                change_society_currency = -120
+                if = {
+                    limit = {
+                        has_quest = cat_quest_prosperity_1
+                    }
+                    custom_tooltip = {
+                        text = CAT_TT_QUEST_COMPLETE
+                        clr_quest = cat_quest_prosperity_1
+                    }
+                    decadence = -7.5
+                }
+                if = {
+                    limit = {
+                        has_quest = cat_quest_prosperity_3 #rank up quest
+                        ROOT = {
+                            is_pregnant = yes
+                        }
+                    }
+
+                    custom_tooltip = {
+                        text = CAT_TT_SUCCESS_QUEST_3
+
+                        clr_quest = cat_quest_prosperity_3
+                        clr_character_flag = cat_quest_rank_up
+                    }
+                    society_rank_up = 1
+                    decadence = -100
+                }
+            }
+            ROOT = {
+                add_character_modifier = {
+                    name = cat_mod_society_prosperity_illness
+                    months = 25
+                }
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0.025
+
+                always = yes
+            }
+
+            modifier = {
+                factor = 2
+
+                character = FROM
+            }
+        }
+    }
+
+    cat_start_epidemy_power_B = {
+        is_high_prio = no
+
+        ai_check_interval = 9
+
+        only_rulers = yes
+        filter = sub_realm
+        ai_target_filter = sub_realm
+
+        from_potential = {
+            is_in_society = yes
+            society = {
+                is_society = cat_intrigue_society
+            }
+            society_rank = 2
+        }
+        potential = {
+            is_within_diplo_range = FROM
+            location = {
+                has_epidemic = no
+            }
+        }
+        allow = {
+            FROM = {
+                society_currency = 300
+            }
+            ROOT = {
+                location = {
+                    has_epidemic = no
+                }
+            }
+        }
+        effect = {
+            FROM = {
+                change_society_currency = -300
+                if = {
+                    limit = {
+                        has_quest = cat_quest_intrigue_2
+                    }
+                    custom_tooltip = {
+                        text = CAT_TT_QUEST_COMPLETE
+                        clr_quest = cat_quest_intrigue_2
+                    }
+                    decadence = -9.5
+                }
+            }
+            custom_tooltip = {
+                text = CAT_TT_START_EPIDEMY
+                location = {
+                    eleph_start_epidemy_effect = yes
+                }
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+                
+                NOT = { is_foe = FROM }
+            }
+            modifier = {
+                factor = 0.05
+                always = yes
+            }
+        }
+    }
+
+    cat_more_health_power_B = {
+        is_high_prio = no
+        ai_check_interval = 6
+
+        is_in_society = yes
+        filter = all_including_me
+        ai_target_filter = court_including_me
+
+        from_potential = {
+            is_in_society = yes
+            society = {
+                is_society = cat_prosperity_society
+            }
+            society_rank = 2
+        }
+        potential = {
+            is_within_diplo_range = FROM
+            NOT = {
+                has_character_modifier = cat_mod_society_prosperity_life_bonus
+            }
+        }
+        allow = {
+            FROM = {
+                society_currency = 300
+            }
+            ROOT = {
+                NOT = {
+                    has_character_modifier = cat_mod_society_prosperity_life_bonus
+                }
+            }
+        }
+
+        effect = {
+            FROM = {
+                change_society_currency = -300
+
+                if = {
+                    limit = {
+                        has_quest = cat_quest_prosperity_1
+                    }
+                    custom_tooltip = {
+                        text = CAT_TT_QUEST_COMPLETE
+                        clr_quest = cat_quest_prosperity_1
+                    }
+                    decadence = -9.5
+                }
+            }
+            ROOT = {
+                add_character_modifier = {
+                    name = cat_mod_society_prosperity_life_bonus
+                    months = 25
+                }
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0.005
+
+                always = yes
+            }
+
+            modifier = {
+                factor = 3
+
+                character = FROM
+                age = 60
+            }
+        }
+    }
+
+    cat_vassal_opinion_power_C = {
+        is_high_prio = no
+        ai_check_interval = 7
+
+        is_in_society = yes
+        filter = all_including_me
+        ai_target_filter = realm_including_me
+
+        from_potential = {
+            is_in_society = yes
+            society = {
+                is_society = cat_reputation_society
+            }
+            society_rank = 2
+        }
+        potential = {
+            is_within_diplo_range = FROM
+            NOT = {
+                has_character_modifier = cat_mod_reputation_vassal
+            }
+        }
+        allow = {
+            FROM = {
+                society_currency = 360
+            }
+            ROOT = {
+                NOT = {
+                    has_character_modifier = cat_mod_reputation_vassal
+                }
+            }
+        }
+
+        effect = {
+            FROM = {
+                change_society_currency = -360
+
+                if = {
+                    limit = {
+                        has_quest = cat_quest_reputation_2
+                    }
+                    custom_tooltip = {
+                        text = CAT_TT_QUEST_COMPLETE
+                        clr_quest = cat_quest_reputation_2
+                    }
+                    decadence = -9.5
+                }
+            }
+            ROOT = {
+                add_character_modifier = {
+                    name = cat_mod_reputation_vassal
+                    years = 5
+                }
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0.005
+
+                always = yes
+            }
+
+            modifier = {
+                factor = 10
+
+                OR = {
+                    character = FROM
+                    is_friend = FROM
+                    is_close_relative = FROM
+                }
+            }
+
+            modifier = {
+                factor = 0
+
+                is_foe = FROM
+            }
+        }
+    }
+
+    cat_make_incapable_power_E = {
+        is_high_prio = no
+        ai_check_interval = 12
+
+        is_in_society = yes
+        filter = all
+        ai_target_filter = rivals
+
+        from_potential = {
+            is_in_society = yes
+            society = {
+                is_society = cat_intrigue_society
+            }
+            society_rank = 3
+        }
+        potential = {
+            is_within_diplo_range = FROM
+            is_incapable = no
+        }
+        allow = {
+            FROM = {
+                society_currency = 700
+            }
+            ROOT = {
+                is_incapable = no
+                is_society_grandmaster = no
+            }
+        }
+
+        effect = {
+            FROM = {
+                change_society_currency = -700
+
+                if = {
+                    limit = {
+                        has_quest = cat_quest_intrigue_1
+                    }
+                    custom_tooltip = {
+                        text = CAT_TT_QUEST_COMPLETE
+                        clr_quest = cat_quest_intrigue_1
+                    }
+                    decadence = -11.5
+                }
+            }
+            ROOT = {
+                random_list = {
+                    50 = {
+                        modifier = {
+                            factor = 0.5
+                            intrigue >= 20
+                        }
+                        modifier = {
+                            factor = 1.5
+                            intrigue < 10
+                        }
+                        modifier = {
+                            factor= 2
+                            intrigue < 5
+                        }
+                        custom_tooltip = {
+                            text = CAT_TT_BECOMING_INCAPABLE
+                            character_event = { id = ani_plus.142 days = 1  }
+                        }
+                    }
+
+                    50 = {
+                        modifier = {
+                            factor = 0
+                            intrigue < FROM
+                        }
+                        modifier = {
+                            factor = 0.3
+                            intrigue == FROM
+                        }
+                    }
+                }
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+                
+                NOT = {
+                    holder_scope = {
+                        is_foe = FROM
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+
+                is_in_society = yes
+                FROM = {
+                    is_society_grandmaster = yes
+                }
+                society = {
+                    is_society = cat_intrigue_society
+                }
+            }
+        }
+    }
+
+    cat_general_opinion_power_E = {
+        is_high_prio = no
+        ai_check_interval = 7
+
+        is_in_society = yes
+        filter = all_including_me
+        ai_target_filter = realm_including_me
+
+        from_potential = {
+            is_in_society = yes
+            society = {
+                is_society = cat_reputation_society
+            }
+            society_rank = 3
+        }
+        potential = {
+            is_within_diplo_range = FROM
+            NOT = {
+                has_character_modifier = cat_mod_reputation_cats
+            }
+        }
+        allow = {
+            FROM = {
+                society_currency = 750
+            }
+            ROOT = {
+                NOT = {
+                    has_character_modifier = cat_mod_reputation_cats
+                }
+            }
+        }
+
+        effect = {
+            FROM = {
+                change_society_currency = -750
+
+                if = {
+                    limit = {
+                        has_quest = cat_quest_reputation_2
+                    }
+                    custom_tooltip = {
+                        text = CAT_TT_QUEST_COMPLETE
+                        clr_quest = cat_quest_reputation_2
+                    }
+                    decadence = -11.5
+                }
+            }
+            ROOT = {
+                add_character_modifier = {
+                    name = cat_mod_reputation_cats
+                    years = 5
+                }
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0.005
+
+                always = yes
+            }
+
+            modifier = {
+                factor = 10
+
+                OR = {
+                    character = FROM
+                    is_friend = FROM
+                    is_close_relative = FROM
+                }
+            }
+
+            modifier = {
+                factor = 0
+                
+                is_foe = FROM
+            }
+        }
+    }
+
+    cat_charm_someone_power_F = {
+        is_high_prio = no
+        ai_check_interval = 100
+
+        is_in_society = yes
+        filter = all
+        ai_target_filter = none
+
+        from_potential = {
+            is_in_society = yes
+            society = {
+                is_society = cat_intrigue_society
+            }
+            society_rank = 4
+        }
+        potential = {
+            is_within_diplo_range = FROM
+            ai = yes
+        }
+        allow = {
+            FROM = {
+                society_currency = 1234
+                NOT = {
+                    has_character_flag = CAT_CHARMED_SOMEONE
+                }
+            }
+        }
+
+        effect = {
+            FROM = {
+                change_society_currency = -1234
+                set_character_flag = CAT_CHARMED_SOMEONE
+                if = {
+                    limit = {
+                        has_quest = cat_quest_intrigue_1
+                    }
+                    custom_tooltip = {
+                        text = CAT_TT_QUEST_COMPLETE
+                        clr_quest = cat_quest_intrigue_1
+                    }
+                    decadence = -14
+                }
+            }
+            ROOT = {
+                opinion = {
+                    name = cat_intrigue_charmed
+                    who = FROM
+                    years = 1000
+                }
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+        }
+    }
+
+    cat_force_alliance_power_F = {
+        is_high_prio = no
+        ai_check_interval = 7
+
+        is_in_society = yes
+        filter = independent_rulers
+        ai_target_filter = independent_rulers
+
+        from_potential = {
+            is_in_society = yes
+            society = {
+                is_society = cat_reputation_society
+            }
+            society_rank = 4
+        }
+        potential = {
+            is_within_diplo_range = FROM
+            NOT = {
+                has_opinion_modifier =  {
+                    name = cat_forced_alliance
+                    who = FROM
+                }
+            }
+        }
+        allow = {
+            FROM = {
+                society_currency = 1000
+            }
+            ROOT = {
+                NOT = {
+                    has_opinion_modifier =  {
+                        name = cat_forced_alliance
+                        who = FROM
+                    }
+                }
+            }
+        }
+
+        effect = {
+            FROM = {
+                change_society_currency = -1000
+
+                if = {
+                    limit = {
+                        has_quest = cat_quest_reputation_2
+                    }
+                    custom_tooltip = {
+                        text = CAT_TT_QUEST_COMPLETE
+                        clr_quest = cat_quest_reputation_2
+                    }
+                    decadence = -14
+                }
+            }
+            ROOT = {
+                opinion = {
+                    name = cat_forced_alliance
+                    who = FROM
+                    years = 5
+                }
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0.005
+
+                always = yes
+            }
+
+            modifier = {
+                factor = 0
+
+                relative_power = {
+                    who = FROM
+                    power <= 0.25
+                }
+            }
+
+            modifier = {
+                factor = 3
+
+                relative_power = {
+                    who = FROM
+                    power = 1.25
+                }
+            }
+        }
+    }
+
+    cat_banish_someone_power_G = {
+        is_high_prio = no
+        ai_check_interval = 13
+
+        is_in_society = yes
+        filter = society
+        ai_target_filter = society
+
+        from_potential = {
+           # moved to potential
+        }
+        potential = {
+            is_in_society = yes
+            is_within_diplo_range = FROM
+            FROM = { is_in_society = yes }
+            NOT = {
+                society_rank = 4
+            }
+            FROM = {
+                society_rank = 4
+            }
+            society = {
+                OR = {
+                    is_society = cat_intrigue_society
+                    is_society = cat_prosperity_society
+                    is_society = cat_reputation_society
+                }
+
+                FROM = {
+                    society = {
+                        is_society = PREVPREV
+                    }
+                }
+            }
+        }
+        allow = {
+            FROM = {
+                society_currency = 2500
+            }
+        }
+
+        effect = {
+            FROM = {
+                change_society_currency = -2500
+            }
+            ROOT = {
+                custom_tooltip = {
+                    text = CAT_TT_BANISH_FROM_SOCIETY
+
+                    if = {
+                        limit = {
+                            society = {
+                                is_society = cat_intrigue_society
+                            }
+                        }
+                        set_character_flag = CAT_BANNED_FROM_INTRIGUE
+                    }
+                    if = {
+                        limit = {
+                            society = {
+                                is_society = cat_prosperity_society
+                            }
+                        }
+                        set_character_flag = CAT_BANNED_FROM_PROSPERITY
+                    }
+                    if = {
+                        limit = {
+                            society = {
+                                is_society = cat_reputation_society
+                            }
+                        }
+                        set_character_flag = CAT_BANNED_FROM_REPUTATION
+                    }
+
+                    letter_event = { id = ani_plus.143 }
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+                
+                NOT = {
+                    holder_scope = {
+                        is_foe = FROM
+                    }
+                }
+            }
+        }
+    }
+}
+
+settlement_decisions = {
+    cat_destroy_buildings_power_D = {
+        is_high_prio = no
+
+        ai_check_interval = 10
+
+        is_in_society = yes
+        only_rulers = yes
+        filter = realm_owned
+        ai_target_filter = vassal_owned
+
+        from_potential = {
+            is_in_society = yes
+            society {
+                is_society = cat_intrigue_society
+            }
+            society_rank = 3
+        }
+        potential = {
+            always = yes
+        }
+        allow = {
+            FROM = {
+                society_currency = 700
+            }
+            has_any_building = yes
+        }
+
+        effect = {
+            custom_tooltip = {
+                text = CAT_TT_BUILDING_SABOTAGE
+                destroy_random_building = yes
+            }
+            holder_scope = {
+                show_scope_change = no
+                opinion = {
+                    name = cat_intrigue_angry
+                    who = FROM
+                    years = 8
+                }
+                letter_event = {
+                    id = ani_plus.141
+                    days = 1
+                }
+            }
+            FROM = {
+                change_society_currency = -700
+                if = {
+                    limit = {
+                        has_quest = cat_quest_intrigue_2
+                    }
+                    custom_tooltip = {
+                        text = CAT_TT_QUEST_COMPLETE
+                        clr_quest = cat_quest_intrigue_2
+                    }
+                    decadence = -11.5
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+                
+                NOT = {
+                    holder_scope = {
+                        is_foe = FROM
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.015
+                always = yes
+            }
+        }
+    }
+}

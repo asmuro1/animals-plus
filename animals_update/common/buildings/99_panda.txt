@@ -153,7 +153,7 @@ castle = {
             TECH_CASTLE_CONSTRUCTION = 1
             TECH_FORTIFICATIONS_CONSTRUCTION = 1
         }
-        prerequisites = { ca_ani_castle_tower_1_bis }
+        prerequisites = { ca_ani_castle_tower_02 }
 
         is_active_trigger = {
             culture_group = panda_group
@@ -171,7 +171,7 @@ castle = {
                     }
                 }
             }
-            has_building = ca_ani_castle_tower_1_bis
+            has_building = ca_ani_castle_tower_02
         }
         # upgrades_from =
 
@@ -205,7 +205,7 @@ castle = {
             TECH_CASTLE_CONSTRUCTION = 2
             TECH_FORTIFICATIONS_CONSTRUCTION = 2
         }
-        prerequisites = { ca_ani_castle_tower_2_bis }
+        prerequisites = { ca_ani_castle_tower_04 }
 
         is_active_trigger = {
             culture_group = panda_group
@@ -213,7 +213,7 @@ castle = {
                 has_building = ca_panda_common_bureau
                 has_building = ca_panda_vassal_bureau
             }
-            has_building = ca_ani_castle_tower_2_bis
+            has_building = ca_ani_castle_tower_04
         }
         upgrades_from = ca_panda_common_retinue_01
 
@@ -247,7 +247,7 @@ castle = {
             TECH_CASTLE_CONSTRUCTION = 3
             TECH_FORTIFICATIONS_CONSTRUCTION = 3
         }
-        prerequisites = { ca_ani_castle_tower_3_bis }
+        prerequisites = { ca_ani_castle_tower_06 }
 
         is_active_trigger = {
             culture_group = panda_group
@@ -255,7 +255,7 @@ castle = {
                 has_building = ca_panda_common_bureau
                 has_building = ca_panda_vassal_bureau
             }
-            has_building = ca_ani_castle_tower_3_bis
+            has_building = ca_ani_castle_tower_06
         }
         upgrades_from = ca_panda_common_retinue_02
 
@@ -289,7 +289,7 @@ castle = {
             TECH_CASTLE_CONSTRUCTION = 4
             TECH_FORTIFICATIONS_CONSTRUCTION = 4
         }
-        prerequisites = { ca_ani_castle_tower_4_bis }
+        prerequisites = { ca_ani_castle_tower_08 }
 
         is_active_trigger = {
             culture_group = panda_group
@@ -297,7 +297,7 @@ castle = {
                 has_building = ca_panda_common_bureau
                 has_building = ca_panda_vassal_bureau
             }
-            has_building = ca_ani_castle_tower_4_bis
+            has_building = ca_ani_castle_tower_08
         }
         upgrades_from = ca_panda_common_retinue_03
 
@@ -331,7 +331,7 @@ castle = {
             TECH_CASTLE_CONSTRUCTION = 5
             TECH_FORTIFICATIONS_CONSTRUCTION = 5
         }
-        prerequisites = { ca_ani_castle_tower_5_bis }
+        prerequisites = { ca_ani_castle_tower_10 }
 
         is_active_trigger = {
             culture_group = panda_group
@@ -339,7 +339,7 @@ castle = {
                 has_building = ca_panda_common_bureau
                 has_building = ca_panda_vassal_bureau
             }
-            has_building = ca_ani_castle_tower_5_bis
+            has_building = ca_ani_castle_tower_10
         }
         upgrades_from = ca_panda_common_retinue_04
 
@@ -373,7 +373,7 @@ castle = {
             TECH_CASTLE_CONSTRUCTION = 6
             TECH_FORTIFICATIONS_CONSTRUCTION = 6
         }
-        prerequisites = { ca_ani_castle_tower_6_bis }
+        prerequisites = { ca_ani_castle_tower_12 }
 
         is_active_trigger = {
             culture_group = panda_group
@@ -381,7 +381,7 @@ castle = {
                 has_building = ca_panda_common_bureau
                 has_building = ca_panda_vassal_bureau
             }
-            has_building = ca_ani_castle_tower_6_bis
+            has_building = ca_ani_castle_tower_12
         }
         upgrades_from = ca_panda_common_retinue_05
 
@@ -415,7 +415,7 @@ castle = {
             TECH_CASTLE_CONSTRUCTION = 7
             TECH_FORTIFICATIONS_CONSTRUCTION = 7
         }
-        prerequisites = { ca_ani_castle_tower_7_bis }
+        prerequisites = { ca_ani_castle_tower_14 }
 
         is_active_trigger = {
             culture_group = panda_group
@@ -423,7 +423,7 @@ castle = {
                 has_building = ca_panda_common_bureau
                 has_building = ca_panda_vassal_bureau
             }
-            has_building = ca_ani_castle_tower_7_bis
+            has_building = ca_ani_castle_tower_14
         }
         upgrades_from = ca_panda_common_retinue_06
 
@@ -457,7 +457,7 @@ castle = {
             TECH_CASTLE_CONSTRUCTION = 8
             TECH_FORTIFICATIONS_CONSTRUCTION = 8
         }
-        prerequisites = { ca_ani_castle_tower_9 }
+        prerequisites = { ca_ani_castle_tower_16 }
 
         is_active_trigger = {
             culture_group = panda_group
@@ -465,7 +465,7 @@ castle = {
                 has_building = ca_panda_common_bureau
                 has_building = ca_panda_vassal_bureau
             }
-            has_building = ca_ani_castle_tower_9
+            has_building = ca_ani_castle_tower_16
         }
         upgrades_from = ca_panda_common_retinue_07
 
@@ -491,10 +491,10 @@ castle = {
             TECH_CASTLE_CONSTRUCTION = 2
             TECH_FORTIFICATIONS_CONSTRUCTION = 1
         }
-        prerequisites = { ca_ani_castle_tower_2 }
+        prerequisites = { ca_ani_castle_tower_03 }
         is_active_trigger = {
             culture_group = panda_group
-            has_building = ca_ani_castle_tower_2
+            has_building = ca_ani_castle_tower_03
         }
 
         gold_cost = 150
@@ -518,10 +518,10 @@ castle = {
             TECH_CASTLE_CONSTRUCTION = 5
             TECH_FORTIFICATIONS_CONSTRUCTION = 4
         }
-        prerequisites = { ca_ani_castle_tower_5 }
+        prerequisites = { ca_ani_castle_tower_09 }
         is_active_trigger = {
             culture_group = panda_group
-            has_building = ca_ani_castle_tower_5
+            has_building = ca_ani_castle_tower_09
         }
         upgrades_from = ca_panda_capital_speciality_1
 
@@ -546,10 +546,10 @@ castle = {
             TECH_CASTLE_CONSTRUCTION = 6
             TECH_FORTIFICATIONS_CONSTRUCTION = 5
         }
-        prerequisites = { ca_ani_castle_tower_6 }
+        prerequisites = { ca_ani_castle_tower_11 }
         is_active_trigger = {
             culture_group = panda_group
-            has_building = ca_ani_castle_tower_6
+            has_building = ca_ani_castle_tower_11
         }
         upgrades_from = ca_panda_capital_speciality_2
 
@@ -574,10 +574,10 @@ castle = {
             TECH_CASTLE_CONSTRUCTION = 8
             TECH_FORTIFICATIONS_CONSTRUCTION = 8
         }
-        prerequisites = { ca_ani_castle_tower_9 }
+        prerequisites = { ca_ani_castle_tower_16 }
         is_active_trigger = {
             culture_group = panda_group
-            has_building = ca_ani_castle_tower_9
+            has_building = ca_ani_castle_tower_16
         }
         upgrades_from = ca_panda_capital_speciality_3
 
@@ -603,10 +603,10 @@ castle = {
             culture = red_panda
             TECH_CASTLE_CONSTRUCTION = 1
         }
-        prerequisites = { ca_ani_castle_tower_1 }
+        prerequisites = { ca_ani_castle_tower_01 }
         is_active_trigger = {
             culture = red_panda
-            has_building = ca_ani_castle_tower_1
+            has_building = ca_ani_castle_tower_01
         }
 
         gold_cost = 100
@@ -630,10 +630,10 @@ castle = {
             TECH_CASTLE_CONSTRUCTION = 3
             TECH_FORTIFICATIONS_CONSTRUCTION = 2
         }
-        prerequisites = { ca_ani_castle_tower_3 }
+        prerequisites = { ca_ani_castle_tower_05 }
         is_active_trigger = {
             culture = red_panda
-            has_building = ca_ani_castle_tower_3
+            has_building = ca_ani_castle_tower_05
         }
         upgrades_from = ca_red_capital_stable_01
 
@@ -658,10 +658,10 @@ castle = {
             TECH_CASTLE_CONSTRUCTION = 5
             TECH_FORTIFICATIONS_CONSTRUCTION = 5
         }
-        prerequisites = { ca_ani_castle_tower_5_bis }
+        prerequisites = { ca_ani_castle_tower_10 }
         is_active_trigger = {
             culture = red_panda
-            has_building = ca_ani_castle_tower_5_bis
+            has_building = ca_ani_castle_tower_10
         }
         upgrades_from = ca_red_capital_stable_02
 
@@ -686,10 +686,10 @@ castle = {
             TECH_CASTLE_CONSTRUCTION = 7
             TECH_FORTIFICATIONS_CONSTRUCTION = 7
         }
-        prerequisites = { ca_ani_castle_tower_7_bis }
+        prerequisites = { ca_ani_castle_tower_14 }
         is_active_trigger = {
             culture = red_panda
-            has_building = ca_ani_castle_tower_7_bis
+            has_building = ca_ani_castle_tower_14
         }
         upgrades_from = ca_red_capital_stable_03
 
@@ -714,10 +714,10 @@ castle = {
             culture = red_panda
             TECH_CASTLE_CONSTRUCTION = 1
         }
-        prerequisites = { ca_ani_castle_tower_1 }
+        prerequisites = { ca_ani_castle_tower_01 }
         is_active_trigger = {
             culture = red_panda
-            has_building = ca_ani_castle_tower_1
+            has_building = ca_ani_castle_tower_01
         }
 
         gold_cost = 100
@@ -742,10 +742,10 @@ castle = {
             TECH_CASTLE_CONSTRUCTION = 4
             TECH_FORTIFICATIONS_CONSTRUCTION = 3
         }
-        prerequisites = { ca_ani_castle_tower_4 }
+        prerequisites = { ca_ani_castle_tower_07 }
         is_active_trigger = {
             culture = red_panda
-            has_building = ca_ani_castle_tower_4
+            has_building = ca_ani_castle_tower_07
         }
         upgrades_from = ca_red_capital_armors_01
 
@@ -771,10 +771,10 @@ castle = {
             TECH_CASTLE_CONSTRUCTION = 7
             TECH_FORTIFICATIONS_CONSTRUCTION = 6
         }
-        prerequisites = { ca_ani_castle_tower_7 }
+        prerequisites = { ca_ani_castle_tower_13 }
         is_active_trigger = {
             culture = red_panda
-            has_building = ca_ani_castle_tower_7
+            has_building = ca_ani_castle_tower_13
         }
         upgrades_from = ca_red_capital_armors_02
 
@@ -800,10 +800,10 @@ castle = {
             TECH_CASTLE_CONSTRUCTION = 8
             TECH_FORTIFICATIONS_CONSTRUCTION = 7
         }
-        prerequisites = { ca_ani_castle_tower_8 }
+        prerequisites = { ca_ani_castle_tower_15 }
         is_active_trigger = {
             culture = red_panda
-            has_building = ca_ani_castle_tower_8
+            has_building = ca_ani_castle_tower_15
         }
         upgrades_from = ca_red_capital_armors_03
 
@@ -830,11 +830,11 @@ castle = {
             culture = red_panda
             TECH_CASTLE_CONSTRUCTION = 1
         }
-        prerequisites = { ca_ani_castle_tower_1 }
+        prerequisites = { ca_ani_castle_tower_01 }
         is_active_trigger = {
             culture = red_panda
             has_building = ca_panda_vassal_bureau
-            has_building = ca_ani_castle_tower_1
+            has_building = ca_ani_castle_tower_01
         }
 
         gold_cost = 120
@@ -858,11 +858,11 @@ castle = {
             TECH_CASTLE_CONSTRUCTION = 2
             TECH_FORTIFICATIONS_CONSTRUCTION = 1
         }
-        prerequisites = { ca_ani_castle_tower_2 }
+        prerequisites = { ca_ani_castle_tower_03 }
         is_active_trigger = {
             culture = red_panda
             has_building = ca_panda_vassal_bureau
-            has_building = ca_ani_castle_tower_2
+            has_building = ca_ani_castle_tower_03
         }
         upgrades_from = ca_red_vassal_stable_01
 
@@ -887,11 +887,11 @@ castle = {
             TECH_CASTLE_CONSTRUCTION = 3
             TECH_FORTIFICATIONS_CONSTRUCTION = 2
         }
-        prerequisites = { ca_ani_castle_tower_3 }
+        prerequisites = { ca_ani_castle_tower_05 }
         is_active_trigger = {
             culture = red_panda
             has_building = ca_panda_vassal_bureau
-            has_building = ca_ani_castle_tower_3
+            has_building = ca_ani_castle_tower_05
         }
         upgrades_from = ca_red_vassal_stable_02
 
@@ -916,11 +916,11 @@ castle = {
             TECH_CASTLE_CONSTRUCTION = 4
             TECH_FORTIFICATIONS_CONSTRUCTION = 3
         }
-        prerequisites = { ca_ani_castle_tower_4 }
+        prerequisites = { ca_ani_castle_tower_07 }
         is_active_trigger = {
             culture = red_panda
             has_building = ca_panda_vassal_bureau
-            has_building = ca_ani_castle_tower_4
+            has_building = ca_ani_castle_tower_07
         }
         upgrades_from = ca_red_vassal_stable_03
 
@@ -945,11 +945,11 @@ castle = {
             TECH_CASTLE_CONSTRUCTION = 5
             TECH_FORTIFICATIONS_CONSTRUCTION = 4
         }
-        prerequisites = { ca_ani_castle_tower_5 }
+        prerequisites = { ca_ani_castle_tower_09 }
         is_active_trigger = {
             culture = red_panda
             has_building = ca_panda_vassal_bureau
-            has_building = ca_ani_castle_tower_5
+            has_building = ca_ani_castle_tower_09
         }
         upgrades_from = ca_red_vassal_stable_04
 
@@ -974,11 +974,11 @@ castle = {
             TECH_CASTLE_CONSTRUCTION = 6
             TECH_FORTIFICATIONS_CONSTRUCTION = 5
         }
-        prerequisites = { ca_ani_castle_tower_6 }
+        prerequisites = { ca_ani_castle_tower_11 }
         is_active_trigger = {
             culture = red_panda
             has_building = ca_panda_vassal_bureau
-            has_building = ca_ani_castle_tower_6
+            has_building = ca_ani_castle_tower_11
         }
         upgrades_from = ca_red_vassal_stable_05
 
@@ -1003,11 +1003,11 @@ castle = {
             TECH_CASTLE_CONSTRUCTION = 7
             TECH_FORTIFICATIONS_CONSTRUCTION = 6
         }
-        prerequisites = { ca_ani_castle_tower_7 }
+        prerequisites = { ca_ani_castle_tower_13 }
         is_active_trigger = {
             culture = red_panda
             has_building = ca_panda_vassal_bureau
-            has_building = ca_ani_castle_tower_7
+            has_building = ca_ani_castle_tower_13
         }
         upgrades_from = ca_red_vassal_stable_06
 
@@ -1032,11 +1032,11 @@ castle = {
             TECH_CASTLE_CONSTRUCTION = 8
             TECH_FORTIFICATIONS_CONSTRUCTION = 7
         }
-        prerequisites = { ca_ani_castle_tower_8 }
+        prerequisites = { ca_ani_castle_tower_15 }
         is_active_trigger = {
             culture = red_panda
             has_building = ca_panda_vassal_bureau
-            has_building = ca_ani_castle_tower_8
+            has_building = ca_ani_castle_tower_15
         }
         upgrades_from = ca_red_vassal_stable_07
 
@@ -1061,11 +1061,11 @@ castle = {
             culture = red_panda
             TECH_CASTLE_CONSTRUCTION = 1
         }
-        prerequisites = { ca_ani_castle_tower_1 }
+        prerequisites = { ca_ani_castle_tower_01 }
         is_active_trigger = {
             culture = red_panda
             has_building = ca_panda_vassal_bureau
-            has_building = ca_ani_castle_tower_1
+            has_building = ca_ani_castle_tower_01
         }
 
         gold_cost = 120
@@ -1091,11 +1091,11 @@ castle = {
             TECH_CASTLE_CONSTRUCTION = 2
             TECH_FORTIFICATIONS_CONSTRUCTION = 1
         }
-        prerequisites = { ca_ani_castle_tower_2 }
+        prerequisites = { ca_ani_castle_tower_03 }
         is_active_trigger = {
             culture = red_panda
             has_building = ca_panda_vassal_bureau
-            has_building = ca_ani_castle_tower_2
+            has_building = ca_ani_castle_tower_03
         }
         upgrades_from = ca_red_vassal_weapon_01
 
@@ -1122,11 +1122,11 @@ castle = {
             TECH_CASTLE_CONSTRUCTION = 3
             TECH_FORTIFICATIONS_CONSTRUCTION = 2
         }
-        prerequisites = { ca_ani_castle_tower_3 }
+        prerequisites = { ca_ani_castle_tower_05 }
         is_active_trigger = {
             culture = red_panda
             has_building = ca_panda_vassal_bureau
-            has_building = ca_ani_castle_tower_3
+            has_building = ca_ani_castle_tower_05
         }
         upgrades_from = ca_red_vassal_weapon_02
 
@@ -1153,11 +1153,11 @@ castle = {
             TECH_CASTLE_CONSTRUCTION = 4
             TECH_FORTIFICATIONS_CONSTRUCTION = 3
         }
-        prerequisites = { ca_ani_castle_tower_4 }
+        prerequisites = { ca_ani_castle_tower_07 }
         is_active_trigger = {
             culture = red_panda
             has_building = ca_panda_vassal_bureau
-            has_building = ca_ani_castle_tower_4
+            has_building = ca_ani_castle_tower_07
         }
         upgrades_from = ca_red_vassal_weapon_03
 
@@ -1184,11 +1184,11 @@ castle = {
             TECH_CASTLE_CONSTRUCTION = 5
             TECH_FORTIFICATIONS_CONSTRUCTION = 4
         }
-        prerequisites = { ca_ani_castle_tower_5 }
+        prerequisites = { ca_ani_castle_tower_09 }
         is_active_trigger = {
             culture = red_panda
             has_building = ca_panda_vassal_bureau
-            has_building = ca_ani_castle_tower_5
+            has_building = ca_ani_castle_tower_09
         }
         upgrades_from = ca_red_vassal_weapon_04
 
@@ -1215,11 +1215,11 @@ castle = {
             TECH_CASTLE_CONSTRUCTION = 6
             TECH_FORTIFICATIONS_CONSTRUCTION = 5
         }
-        prerequisites = { ca_ani_castle_tower_6 }
+        prerequisites = { ca_ani_castle_tower_11 }
         is_active_trigger = {
             culture = red_panda
             has_building = ca_panda_vassal_bureau
-            has_building = ca_ani_castle_tower_6
+            has_building = ca_ani_castle_tower_11
         }
         upgrades_from = ca_red_vassal_weapon_05
 
@@ -1246,11 +1246,11 @@ castle = {
             TECH_CASTLE_CONSTRUCTION = 7
             TECH_FORTIFICATIONS_CONSTRUCTION = 6
         }
-        prerequisites = { ca_ani_castle_tower_7 }
+        prerequisites = { ca_ani_castle_tower_13 }
         is_active_trigger = {
             culture = red_panda
             has_building = ca_panda_vassal_bureau
-            has_building = ca_ani_castle_tower_7
+            has_building = ca_ani_castle_tower_13
         }
         upgrades_from = ca_red_vassal_weapon_06
 
@@ -1277,11 +1277,11 @@ castle = {
             TECH_CASTLE_CONSTRUCTION = 8
             TECH_FORTIFICATIONS_CONSTRUCTION = 7
         }
-        prerequisites = { ca_ani_castle_tower_8 }
+        prerequisites = { ca_ani_castle_tower_15 }
         is_active_trigger = {
             culture = red_panda
             has_building = ca_panda_vassal_bureau
-            has_building = ca_ani_castle_tower_8
+            has_building = ca_ani_castle_tower_15
         }
         upgrades_from = ca_red_vassal_weapon_07
 
@@ -1309,10 +1309,10 @@ castle = {
             culture = giant_panda
             TECH_CASTLE_CONSTRUCTION = 1
         }
-        prerequisites = { ca_ani_castle_tower_1 }
+        prerequisites = { ca_ani_castle_tower_01 }
         is_active_trigger = {
             culture = giant_panda
-            has_building = ca_ani_castle_tower_1
+            has_building = ca_ani_castle_tower_01
         }
 
         gold_cost = 100
@@ -1337,10 +1337,10 @@ castle = {
             TECH_CASTLE_CONSTRUCTION = 3
             TECH_FORTIFICATIONS_CONSTRUCTION = 2
         }
-        prerequisites = { ca_ani_castle_tower_3 }
+        prerequisites = { ca_ani_castle_tower_05 }
         is_active_trigger = {
             culture = giant_panda
-            has_building = ca_ani_castle_tower_3
+            has_building = ca_ani_castle_tower_05
         }
         upgrades_from = ca_giant_capital_stable_1
 
@@ -1366,10 +1366,10 @@ castle = {
             TECH_CASTLE_CONSTRUCTION = 5
             TECH_FORTIFICATIONS_CONSTRUCTION = 5
         }
-        prerequisites = { ca_ani_castle_tower_5_bis }
+        prerequisites = { ca_ani_castle_tower_10 }
         is_active_trigger = {
             culture = giant_panda
-            has_building = ca_ani_castle_tower_5_bis
+            has_building = ca_ani_castle_tower_10
         }
         upgrades_from = ca_giant_capital_stable_2
 
@@ -1395,10 +1395,10 @@ castle = {
             TECH_CASTLE_CONSTRUCTION = 7
             TECH_FORTIFICATIONS_CONSTRUCTION = 7
         }
-        prerequisites = { ca_ani_castle_tower_7_bis }
+        prerequisites = { ca_ani_castle_tower_14 }
         is_active_trigger = {
             culture = giant_panda
-            has_building = ca_ani_castle_tower_7_bis
+            has_building = ca_ani_castle_tower_14
         }
         upgrades_from = ca_giant_capital_stable_3
 
@@ -1424,10 +1424,10 @@ castle = {
             culture = giant_panda
             TECH_CASTLE_CONSTRUCTION = 1
         }
-        prerequisites = { ca_ani_castle_tower_1 }
+        prerequisites = { ca_ani_castle_tower_01 }
         is_active_trigger = {
             culture = giant_panda
-            has_building = ca_ani_castle_tower_1
+            has_building = ca_ani_castle_tower_01
         }
 
         gold_cost = 100
@@ -1451,10 +1451,10 @@ castle = {
             TECH_CASTLE_CONSTRUCTION = 4
             TECH_FORTIFICATIONS_CONSTRUCTION = 3
         }
-        prerequisites = { ca_ani_castle_tower_4 }
+        prerequisites = { ca_ani_castle_tower_07 }
         is_active_trigger = {
             culture = giant_panda
-            has_building = ca_ani_castle_tower_4
+            has_building = ca_ani_castle_tower_07
         }
         upgrades_from = ca_giant_capital_armors_1
 
@@ -1479,10 +1479,10 @@ castle = {
             TECH_CASTLE_CONSTRUCTION = 7
             TECH_FORTIFICATIONS_CONSTRUCTION = 6
         }
-        prerequisites = { ca_ani_castle_tower_7 }
+        prerequisites = { ca_ani_castle_tower_13 }
         is_active_trigger = {
             culture = giant_panda
-            has_building = ca_ani_castle_tower_7
+            has_building = ca_ani_castle_tower_13
         }
         upgrades_from = ca_giant_capital_armors_2
 
@@ -1507,10 +1507,10 @@ castle = {
             TECH_CASTLE_CONSTRUCTION = 8
             TECH_FORTIFICATIONS_CONSTRUCTION = 7
         }
-        prerequisites = { ca_ani_castle_tower_8 }
+        prerequisites = { ca_ani_castle_tower_15 }
         is_active_trigger = {
             culture = giant_panda
-            has_building = ca_ani_castle_tower_8
+            has_building = ca_ani_castle_tower_15
         }
         upgrades_from = ca_giant_capital_armors_3
 
@@ -1535,11 +1535,11 @@ castle = {
             culture = giant_panda
             TECH_CASTLE_CONSTRUCTION = 1
         }
-        prerequisites = { ca_ani_castle_tower_1 }
+        prerequisites = { ca_ani_castle_tower_01 }
         is_active_trigger = {
             culture = giant_panda
             has_building = ca_panda_vassal_bureau
-            has_building = ca_ani_castle_tower_1
+            has_building = ca_ani_castle_tower_01
         }
 
         gold_cost = 120
@@ -1564,11 +1564,11 @@ castle = {
             TECH_CASTLE_CONSTRUCTION = 2
             TECH_FORTIFICATIONS_CONSTRUCTION = 1
         }
-        prerequisites = { ca_ani_castle_tower_2 }
+        prerequisites = { ca_ani_castle_tower_03 }
         is_active_trigger = {
             culture = giant_panda
             has_building = ca_panda_vassal_bureau
-            has_building = ca_ani_castle_tower_2
+            has_building = ca_ani_castle_tower_03
         }
         upgrades_from = ca_giant_vassal_stable_1
 
@@ -1594,11 +1594,11 @@ castle = {
             TECH_CASTLE_CONSTRUCTION = 3
             TECH_FORTIFICATIONS_CONSTRUCTION = 2
         }
-        prerequisites = { ca_ani_castle_tower_3 }
+        prerequisites = { ca_ani_castle_tower_05 }
         is_active_trigger = {
             culture = giant_panda
             has_building = ca_panda_vassal_bureau
-            has_building = ca_ani_castle_tower_3
+            has_building = ca_ani_castle_tower_05
         }
         upgrades_from = ca_giant_vassal_stable_2
 
@@ -1624,11 +1624,11 @@ castle = {
             TECH_CASTLE_CONSTRUCTION = 4
             TECH_FORTIFICATIONS_CONSTRUCTION = 3
         }
-        prerequisites = { ca_ani_castle_tower_4 }
+        prerequisites = { ca_ani_castle_tower_07 }
         is_active_trigger = {
             culture = giant_panda
             has_building = ca_panda_vassal_bureau
-            has_building = ca_ani_castle_tower_4
+            has_building = ca_ani_castle_tower_07
         }
         upgrades_from = ca_giant_vassal_stable_3
 
@@ -1654,11 +1654,11 @@ castle = {
             TECH_CASTLE_CONSTRUCTION = 5
             TECH_FORTIFICATIONS_CONSTRUCTION = 4
         }
-        prerequisites = { ca_ani_castle_tower_5 }
+        prerequisites = { ca_ani_castle_tower_09 }
         is_active_trigger = {
             culture = giant_panda
             has_building = ca_panda_vassal_bureau
-            has_building = ca_ani_castle_tower_5
+            has_building = ca_ani_castle_tower_09
         }
         upgrades_from = ca_giant_vassal_stable_4
 
@@ -1684,11 +1684,11 @@ castle = {
             TECH_CASTLE_CONSTRUCTION = 6
             TECH_FORTIFICATIONS_CONSTRUCTION = 5
         }
-        prerequisites = { ca_ani_castle_tower_6 }
+        prerequisites = { ca_ani_castle_tower_11 }
         is_active_trigger = {
             culture = giant_panda
             has_building = ca_panda_vassal_bureau
-            has_building = ca_ani_castle_tower_6
+            has_building = ca_ani_castle_tower_11
         }
         upgrades_from = ca_giant_vassal_stable_5
 
@@ -1714,11 +1714,11 @@ castle = {
             TECH_CASTLE_CONSTRUCTION = 7
             TECH_FORTIFICATIONS_CONSTRUCTION = 6
         }
-        prerequisites = { ca_ani_castle_tower_7 }
+        prerequisites = { ca_ani_castle_tower_13 }
         is_active_trigger = {
             culture = giant_panda
             has_building = ca_panda_vassal_bureau
-            has_building = ca_ani_castle_tower_7
+            has_building = ca_ani_castle_tower_13
         }
         upgrades_from = ca_giant_vassal_stable_6
 
@@ -1744,11 +1744,11 @@ castle = {
             TECH_CASTLE_CONSTRUCTION = 8
             TECH_FORTIFICATIONS_CONSTRUCTION = 7
         }
-        prerequisites = { ca_ani_castle_tower_8 }
+        prerequisites = { ca_ani_castle_tower_15 }
         is_active_trigger = {
             culture = giant_panda
             has_building = ca_panda_vassal_bureau
-            has_building = ca_ani_castle_tower_8
+            has_building = ca_ani_castle_tower_15
         }
         upgrades_from = ca_giant_vassal_stable_7
 
@@ -1774,11 +1774,11 @@ castle = {
             culture = giant_panda
             TECH_CASTLE_CONSTRUCTION = 1
         }
-        prerequisites = { ca_ani_castle_tower_1 }
+        prerequisites = { ca_ani_castle_tower_01 }
         is_active_trigger = {
             culture = giant_panda
             has_building = ca_panda_vassal_bureau
-            has_building = ca_ani_castle_tower_1
+            has_building = ca_ani_castle_tower_01
         }
 
         gold_cost = 120
@@ -1804,11 +1804,11 @@ castle = {
             TECH_CASTLE_CONSTRUCTION = 2
             TECH_FORTIFICATIONS_CONSTRUCTION = 1
         }
-        prerequisites = { ca_ani_castle_tower_2 }
+        prerequisites = { ca_ani_castle_tower_03 }
         is_active_trigger = {
             culture = giant_panda
             has_building = ca_panda_vassal_bureau
-            has_building = ca_ani_castle_tower_2
+            has_building = ca_ani_castle_tower_03
         }
         upgrades_from = ca_giant_vassal_armors_1
 
@@ -1835,11 +1835,11 @@ castle = {
             TECH_CASTLE_CONSTRUCTION = 3
             TECH_FORTIFICATIONS_CONSTRUCTION = 2
         }
-        prerequisites = { ca_ani_castle_tower_3 }
+        prerequisites = { ca_ani_castle_tower_05 }
         is_active_trigger = {
             culture = giant_panda
             has_building = ca_panda_vassal_bureau
-            has_building = ca_ani_castle_tower_3
+            has_building = ca_ani_castle_tower_05
         }
         upgrades_from = ca_giant_vassal_armors_2
 
@@ -1866,11 +1866,11 @@ castle = {
             TECH_CASTLE_CONSTRUCTION = 4
             TECH_FORTIFICATIONS_CONSTRUCTION = 3
         }
-        prerequisites = { ca_ani_castle_tower_4 }
+        prerequisites = { ca_ani_castle_tower_07 }
         is_active_trigger = {
             culture = giant_panda
             has_building = ca_panda_vassal_bureau
-            has_building = ca_ani_castle_tower_4
+            has_building = ca_ani_castle_tower_07
         }
         upgrades_from = ca_giant_vassal_armors_3
 
@@ -1897,11 +1897,11 @@ castle = {
             TECH_CASTLE_CONSTRUCTION = 5
             TECH_FORTIFICATIONS_CONSTRUCTION = 4
         }
-        prerequisites = { ca_ani_castle_tower_5 }
+        prerequisites = { ca_ani_castle_tower_09 }
         is_active_trigger = {
             culture = giant_panda
             has_building = ca_panda_vassal_bureau
-            has_building = ca_ani_castle_tower_5
+            has_building = ca_ani_castle_tower_09
         }
         upgrades_from = ca_giant_vassal_armors_4
 
@@ -1928,11 +1928,11 @@ castle = {
             TECH_CASTLE_CONSTRUCTION = 6
             TECH_FORTIFICATIONS_CONSTRUCTION = 5
         }
-        prerequisites = { ca_ani_castle_tower_6 }
+        prerequisites = { ca_ani_castle_tower_11 }
         is_active_trigger = {
             culture = giant_panda
             has_building = ca_panda_vassal_bureau
-            has_building = ca_ani_castle_tower_6
+            has_building = ca_ani_castle_tower_11
         }
         upgrades_from = ca_giant_vassal_armors_5
 
@@ -1959,11 +1959,11 @@ castle = {
             TECH_CASTLE_CONSTRUCTION = 7
             TECH_FORTIFICATIONS_CONSTRUCTION = 6
         }
-        prerequisites = { ca_ani_castle_tower_7 }
+        prerequisites = { ca_ani_castle_tower_13 }
         is_active_trigger = {
             culture = giant_panda
             has_building = ca_panda_vassal_bureau
-            has_building = ca_ani_castle_tower_7
+            has_building = ca_ani_castle_tower_13
         }
         upgrades_from = ca_giant_vassal_armors_6
 
@@ -1990,11 +1990,11 @@ castle = {
             TECH_CASTLE_CONSTRUCTION = 8
             TECH_FORTIFICATIONS_CONSTRUCTION = 7
         }
-        prerequisites = { ca_ani_castle_tower_8 }
+        prerequisites = { ca_ani_castle_tower_15 }
         is_active_trigger = {
             culture = giant_panda
             has_building = ca_panda_vassal_bureau
-            has_building = ca_ani_castle_tower_8
+            has_building = ca_ani_castle_tower_15
         }
         upgrades_from = ca_giant_vassal_armors_7
 

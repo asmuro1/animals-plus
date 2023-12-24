@@ -165,7 +165,7 @@ duck_dev_speed_increase;Development Growth;Croissance du développement;;;;;;;;;;
 
 #### elephant update
 eleph_fertility_bonus;Elephant accidient;Accident éléphantin;;;;;;;;;;;;x
-eleph_province_hostility;Elephant tension;Tension éléphantine;;;;;;;;;;;;x
+eleph_province_hostility;cultural tensions;Tensions cuturels;;;;;;;;;;;;x
 eleph_researsh_bonus;Successful study;études réussites;;;;;;;;;;;;x
 eleph_epidemic_unrest;Ruler unrespected;Seigneur non respecté;;;;;;;;;;;;x
 eleph_epidemic_garrison;Undisciplined peasant;Paysants indiscipliné;;;;;;;;;;;;x
@@ -178,3 +178,29 @@ eleph_climate_control_4;Very harsh climate;Climat très rude;;;;;;;;;;;;x
 
 #opinion modifier
 eleph_forced_conversion;Forced conversion;Conversion forcé;;;;;;;;;;;;x
+
+
+
+#### cat update
+
+#event modifier
+cat_no_decadence_penalty_opinion;Public decadence;Décadance publique;;;;;;;;;;;;x
+cat_no_decadence_penalty_revolt;Popular decadence;Décadance populaire;;;;;;;;;;;;x
+cat_decadence_bonus;Popular cat;Chat populaire;;;;;;;;;;;;x
+cat_mod_society_intrigue_1;bad omen;Mauvais présage;;;;;;;;;;;;x
+cat_mod_society_prosperity_illness;illness defense;Résistance à la maladie;;;;;;;;;;;;x
+cat_mod_society_prosperity_life_bonus;longer life expectancy;Éspérence de vie augmenté;;;;;;;;;;;;x
+cat_mod_society_prosperity_epidemic_defense;Less epidemic outbreak;Moins d'épidémie présente;;;;;;;;;;;;x
+cat_mod_increased_wealth_province;More income;Plus de revenu;;;;;;;;;;;;x
+cat_mod_reputation_vassal;Vassal reputation;Réputation des vassaux;;;;;;;;;;;;x
+cat_mod_reputation_cats;Global reputation;Réputation globale;;;;;;;;;;;;x
+
+#opinion modifier
+cat_intrigue_power_1_denounced;Bad omen creator;Créateur de mauvais présages;;;;;;;;;;;;x
+cat_intrigue_angry;Sabotage;Saboté;;;;;;;;;;;;x
+cat_intrigue_charmed;under charm;sous le charme;;;;;;;;;;;;x
+cat_group_opinion;Cats' opinion;Opinion des chats;;;;;;;;;;;;x
+cat_forced_alliance;Forced alliance;Alliance forcé;;;;;;;;;;;;x
+
+#holding modifier
+cat_controlled_holding;Controlled by cats;Contrôlé par des chats;;;;;;;;;;;;x

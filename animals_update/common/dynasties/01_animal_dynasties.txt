@@ -288,11 +288,11 @@
 }
 2000072 = {
 	name="Kitten"
-	culture="cat"
+	culture="white_cat"
 }
 2000073 = {
 	name="Felix"
-	culture="cat"
+	culture="black_cat"
 }
 2000074 = {
 	name="Feline"
@@ -300,11 +300,11 @@
 }
 2000075 = {
 	name="Felis Catus"
-	culture="cat"
+	culture="white_cat"
 }
 2000076 = {
 	name="Feral"
-	culture="cat"
+	culture="black_cat"
 }
 2000077 = {
 	name="Felidae"
@@ -312,11 +312,11 @@
 }
 2000078 = {
 	name="Furry"
-	culture="cat"
+	culture="white_cat"
 }
 2000079 = {
 	name="Vermin"
-	culture="cat"
+	culture="black_cat"
 }
 2000080 = {
 	name="Lion"
@@ -324,11 +324,11 @@
 }
 2000081 = {
 	name="Tiger"
-	culture="cat"
+	culture="white_cat"
 }
 2000082 = {
 	name="Leopard"
-	culture="cat"
+	culture="black_cat"
 }
 2000083 = {
 	name="Cat"
@@ -336,11 +336,11 @@
 }
 2000084 = {
 	name="Pusekatt"
-	culture="cat"
+	culture="white_cat"
 }
 2000085 = {
 	name="Wildcat"
-	culture="cat"
+	culture="black_cat"
 }
 2000086 = {
 	name="Ratcatcher"
@@ -348,11 +348,11 @@
 }
 2000087 = {
 	name="Dewclaw"
-	culture="cat"
+	culture="white_cat"
 }
 2000088 = {
 	name="Jumper"
-	culture="cat"
+	culture="black_cat"
 }
 2000089 = {
 	name="Night"
@@ -360,11 +360,11 @@
 }
 2000090 = {
 	name="Ears"
-	culture="cat"
+	culture="white_cat"
 }
 2000091 = {
 	name="Manx"
-	culture="cat"
+	culture="black_cat"
 }
 2000092 = {
 	name="Purr"
@@ -372,11 +372,11 @@
 }
 2000093 = {
 	name="Hiss"
-	culture="cat"
+	culture="white_cat"
 }
 2000094 = {
 	name="Meow"
-	culture="cat"
+	culture="black_cat"
 }
 2000095 = {
 	name="Jaguar"
@@ -384,11 +384,11 @@
 }
 2000096 = {
 	name="Hairball"
-	culture="cat"
+	culture="white_cat"
 }
 2000097 = {
 	name="Tabby"
-	culture="cat"
+	culture="black_cat"
 }
 2000098 = {
 	name="Stalker"
@@ -396,11 +396,11 @@
 }
 2000099 = {
 	name="Familiar"
-	culture="cat"
+	culture="white_cat"
 }
 2000100 = {
 	name="Freyja"
-	culture="cat"
+	culture="black_cat"
 }
 2000101 = {
 	name="Atelerix"
@@ -796,7 +796,7 @@
 }
 2000195 = {
 	name="Heavyside"
-	culture="cat"
+	culture="white_cat"
 }
 2000196 = {
 	name="Pollicle"
@@ -864,7 +864,7 @@
 }
 2000212 = {
 	name="O'Malley"
-	culture="cat"
+	culture="black_cat"
 }
 2000213 = {
 	name="Pala"
@@ -892,11 +892,11 @@
 }
 2000219 = {
 	name="Pallava"
-	culture="elephant_culture"
+	culture="african_elephant"
 }
 2000220 = {
 	name="Doot"
-	culture="elephant_culture"
+	culture="african_elephant"
 }
 2000221 = {
 	name="Marely"
@@ -949,12 +949,12 @@
 }
 2000233 = {
 	name="Maine Coons"
-	culture="cat"
+	culture="white_cat"
 
 }
 2000234 = {
 	name="Sphynxes"
-	culture="cat"
+	culture="black_cat"
 
 }
 2000235 = {
@@ -964,12 +964,12 @@
 }
 2000236 = {
 	name="Tom"
-	culture="cat"
+	culture="white_cat"
 
 }
 2000237 = {
 	name="-in-Boots"
-	culture="cat"
+	culture="black_cat"
 
 }
 2000238 = {
@@ -979,12 +979,12 @@
 }
 2000239 = {
 	name="Fivewhiskers"
-	culture="cat"
+	culture="white_cat"
 
 }
 2000240 = {
 	name="Rateater"
-	culture="cat"
+	culture="black_cat"
 
 }
 2000241 = {
@@ -994,12 +994,12 @@
 }
 2000242 = {
 	name="Naps-in-Shade"
-	culture="cat"
+	culture="white_cat"
 
 }
 2000243 = {
 	name="Bramblepelt"
-	culture="cat"
+	culture="black_cat"
 
 }
 2000244 = {
@@ -1009,12 +1009,12 @@
 }
 2000245 = {
 	name="Bahari"
-	culture="cat"
+	culture="white_cat"
 
 }
 2000246 = {
 	name="von Furrington"
-	culture="cat"
+	culture="black_cat"
 
 }
 2000247 = {
@@ -1129,22 +1129,22 @@
 }
 2000269 = {
 	name="Tusk"
-	culture="elephant_culture"
+	culture="african_elephant"
 
 }
 2000270 = {
 	name="Ivory"
-	culture="elephant_culture"
+	culture="african_elephant"
 
 }
 2000271 = {
 	name="Rumbler"
-	culture="elephant_culture"
+	culture="african_elephant"
 
 }
 2000272 = {
 	name="Haathee"
-	culture="elephant_culture"
+	culture="african_elephant"
 
 }
 2000273 = {

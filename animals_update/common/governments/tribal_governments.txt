@@ -21,6 +21,7 @@ tribal_governments = {
 			Hedge_feudal_gov
 			panda_bureaucratic_gov panda_bureaucratic_gov_bis
 			Duck_feudal_gov
+			cat_feudal_gov
 		}
 		vassal_call_to_arms = {
 			tribal_government

@@ -33,3 +33,8 @@ giant_panda;Giant panda;Panda géant;;;;;;;;;;;;x
 #### elephant update
 elephant_culture;Asian elephant;Éléphant d'Asie;;;;;;;;;;;;x
 african_elephant;African elephant;Éléphant d'Afrique;;;;;;;;;;;;x
+
+#cat update
+cat;Red cat;Chat roux;;;;;;;;;;;;x
+white_cat;White cat;Chat blanc;;;;;;;;;;;;x
+black_cat;Black cat;Chat noir;;;;;;;;;;;;x

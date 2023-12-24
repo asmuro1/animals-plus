@@ -4,7 +4,7 @@
 
 Animals_grups = {
 	color = { 0.38 0.38 0.38 }
-	graphical_culture = beargfx #no idea to what i can do here
+	graphical_culture = africangfx #no idea to what i can do here
 	has_coa_on_barony_only = yes
 	crusade_cb = crusade
 
@@ -126,8 +126,6 @@ Animals_grups = {
 		landed_kin_prestige_bonus = yes
 	}
 	Duck_religion = {
-		graphical_culture = duckgfx
-
 		icon = 63
 		heresy_icon = 1 #No heresy
 		color = { 0.63 0.65 0.80 }
@@ -163,9 +161,7 @@ Animals_grups = {
 		landed_kin_prestige_bonus = yes
 	}
 	Eleph_religion = {
-		graphical_culture = elephantgfx
-
-		icon = 64 #to do
+		icon = 64
 		heresy_icon = 1 #No heresy
 		color = { 0.4 0.4 0.4 }
 		alternate_start = { always = no }
@@ -194,6 +190,38 @@ Animals_grups = {
 		defensive_attrition = no
 		ignores_defensive_attrition = yes
 		join_crusade_if_bordering_hostile = yes
+
+		peace_prestige_loss	= no
+	}
+	Cat_religion = {
+		icon = 65
+		heresy_icon = 1 #No heresy
+		color = { 0.2 0.7 0.3 }
+		alternate_start = { always = no }
+
+		piety_name = SAVAGIOUS
+		priest_title = ELDERS
+		high_god_name = CAT_RELIGION_HIGH_GOD
+
+		can_demand_religious_conversion = no #Personalized decision
+		# can_retire_to_monastery = no
+
+		priests_can_marry = no
+		priests_can_inherit = no
+		female_temple_holders = no
+
+		max_wives = 1
+
+		men_can_take_consorts = yes
+		women_can_take_consorts = yes
+
+		allow_looting = yes
+		has_heir_designation = no
+		aggression = 2.3
+		defensive_attrition = no
+		ignores_defensive_attrition = no
+		join_crusade_if_bordering_hostile = yes
+		uses_decadence = yes
 
 		peace_prestige_loss	= no
 	}

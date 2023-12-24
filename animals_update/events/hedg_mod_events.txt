@@ -890,26 +890,7 @@ character_event = {
     desc = DESC_EVENT074_GETTING_LIFESTYLE_TRAIT
 
     option = {
-        name = {
-            trigger = { culture_group = bear_group }
-            text = OPTA_EVENT074_GETTING_BEAR_TRAIT
-        }
-        name = {
-            trigger = { culture_group = hedgehog_group }
-            text = OPTB_EVENT074_GETTING_HEDGE_TRAIT
-        }
-        name = {
-            trigger = { culture_group = panda_group }
-            text = OPTC_EVENT074_GETTING_PANDA_TRAIT
-        }
-        name = {
-            trigger = { culture_group = duck_group }
-            text = OPTD_EVENT074_GETTING_DUCK_TRAIT
-        }
-        name = {
-            trigger = { culture_group = elephant_group }
-            text = OPTE_EVENT074_GETTING_ELEPH_TRAIT
-        }
+        name = OPT_EVENT074_GETTING_ANI_TRAIT
 
 
         if = {
@@ -931,6 +912,10 @@ character_event = {
         else_if = {
             limit = { culture_group = elephant_group }
             add_trait = scholar
+        }
+        else_if = {
+            limit = { culture_group = cat_group }
+            add_trait = schemer
         }
     }
 }

@@ -28,6 +28,7 @@ theocracy_governments = {
 			panda_bureaucratic_gov panda_bureaucratic_gov_bis
 			Duck_feudal_gov
 			Eleph_feudal_gov
+			cat_feudal_gov
 		}
 		frame_suffix = "_theocracy"
 		title_prefix = "temple_"

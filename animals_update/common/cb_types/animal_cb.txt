@@ -1,6 +1,6 @@
 
 
-### dragon loot war
+### dragon loot war (beta version cb)
 dragon_cb_loot = {
     name = DRAGON_LOOT_CB
     war_name = DRAGON_LOOT_WAR_NAME
@@ -169,6 +169,7 @@ dragon_cb_loot = {
     # ai_will_do = {}
 }
 
+#independance war from bear tributary
 independance_bear_tributary_cb = {
     name = CB_NAME_LIBERTY
     war_name = WAR_NAME_LIBERTY
@@ -327,8 +328,9 @@ independance_bear_tributary_cb = {
     }
 }
 
+#hedgehog conversion quest by hostility
 hedgehog_hostility_province_war = {
-    # name = CB_NAME_HEDGE_INVASION
+    name = CB_NAME_HEDGE_INVASION
     war_name = WAR_NAME_HEDGE_INVASION
     sprite = 1
 
@@ -354,7 +356,7 @@ hedgehog_hostility_province_war = {
 		factor = 100
 	}
     att_ticking_war_score_multiplier = 2.5
-    def_ticking_war_score_multiplier = 2.5
+    def_ticking_war_score_multiplier = 1.75
 
     can_use_title = {
         tier = COUNT
@@ -380,7 +382,7 @@ hedgehog_hostility_province_war = {
     #         has_earmarked_regiments = hedge_hostility_revolt_army
     #     }
     # }
-    on_success_title = { #hedgehogg wins /!\ custom tooltip à faire
+    on_success_title = { #hedgehogg wins
         location = { remove_province_modifier = hedge_hedgehog_hostile_inhabitant }
 
         custom_tooltip = {
@@ -444,7 +446,7 @@ hedgehog_hostility_province_war = {
             reverse_imprison = ROOT
         }
     }
-    on_attacker_leader_death = { # to complete?
+    on_attacker_leader_death = {
         end_war = invalid
     }
     on_invalidation = {
@@ -456,6 +458,7 @@ hedgehog_hostility_province_war = {
     }
 }
 
+#panda faction CB
 panda_cb_faction_independence = {
 	name = CB_NAME_INDEPENDENCE
 	war_name = WAR_NAME_FACTION_INDEPENDENCE
@@ -473,6 +476,9 @@ panda_cb_faction_independence = {
         ROOT = {
             vassal_of = FROM
             mercenary = no
+        }
+        FROM = {
+            government = panda_bureaucratic_gov
         }
     }
 	can_use_gui = {
@@ -538,7 +544,9 @@ panda_cb_faction_independence = {
                     limit = {
                         has_law = panda_vassal_all_allowed
                     }
-                    add_law = panda_vassal_count_allowed # can't have strong vassals anymore
+                    primary_title = {
+                        add_law = panda_vassal_count_allowed # can't have strong vassals anymore
+                    }
                 }
             }
         	any_attacker = {
@@ -628,5 +636,115 @@ panda_cb_faction_independence = {
 	on_attacker_leader_death = {
 		end_war = invalid
 	}
+}
 
+#cat conversion quest CB
+cat_basic_revolt_cb = {
+    name = CB_CAT_REVOLT
+    war_name = CB_CAT_REVOLT_NAME
+
+    sprite = 1
+    truce_days = 360
+    is_permanent = no
+
+    hostile_against_others = yes
+    full_hostility = yes
+    can_ask_to_join_war = yes
+
+    can_call_allies = yes
+    can_call_vassals = yes
+    attacker_ai_victory_worth = {
+        factor = -1 # always accept
+    }
+	attacker_ai_defeat_worth = {
+		factor = 100
+	}
+	defender_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	defender_ai_defeat_worth = {
+		factor = 100
+	}
+
+    capturing_attacker_is_complete_victory = yes
+    capturing_defender_is_complete_victory = no
+
+
+
+    can_use_title = {
+        OR = {
+            tier = COUNT
+            tier = BARON
+        }
+    }
+    can_use = {
+        ROOT = {
+            culture_group = cat_group
+        }
+        FROM = {
+            NOT = { culture_group = cat_group }
+        }
+    }
+    is_valid = {
+        ROOT = {
+            culture_group = cat_group
+        }
+        FROM = {
+            NOT = { culture_group = cat_group }
+        }
+    }
+    is_valid_title = { always = yes }
+    on_add = { }
+    on_add_title = { }
+    on_success = {
+        ROOT = {
+            prestige = 350
+        }
+        FROM = {
+            prestige = -500
+        }
+    }
+    on_success_title = {
+        grant_title = {
+            target = ROOT
+            type = revolt
+        }
+        if = {
+            limit = {
+                tier = BARON
+            }
+            county = {
+                grant_title = {
+                    target = ROOT
+                    type = revolt
+                }
+            }
+        }
+        location = {
+            culture = ROOT
+        }
+    }
+    on_fail = {
+        FROM = { prestige = -100}
+    }
+    on_fail_title = {
+        location = {
+            culture = ROOT
+        }
+    }
+    on_reverse_demand = {
+        FROM = { prestige = 500 }
+    }
+    on_reverse_demand_title = {
+        location = {
+            any_province_holding = {
+                remove_holding_modifier = cat_controlled_holding
+            }
+        }
+    }
+    on_attacker_leader_death = {
+        end_war = invalid
+    }
+    on_invalidation = {
+    }
 }

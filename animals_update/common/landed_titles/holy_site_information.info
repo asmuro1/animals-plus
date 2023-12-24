@@ -19,8 +19,8 @@ PANDA:
   c_lumbini                   : giant panda holy site (plot transformation can't immune someone)
   c_paro                      : red panda holy site (plot transformation can't immune someone)
   c_kasmira                   : expansion holy site (dosn't seem to work as intended. Won't change as panda has enough gold without)
-  c_markam                    : China interaction unlocked
-                                (need to replace the one removed because old one not-RP, if a correct one is found)
+  c_markam                    : Removed - effects
+
 DUCK:
   c_dyrrachion                : central groups religious center
   c_wight                     : unlock 10th development level
@@ -34,3 +34,10 @@ ELEPHANT:
   c_gezira                    : African elephant immigration
   c_kondana                   : Asian elephant immigration
   c_radha                     : Unlocked spawning disease laboratory
+
+ CAT:
+  c_dyrrachion                : central groups religious center
+  c_medantaka                 : Allow cats to force invasion
+  c_wiltshire                 : Allow black cat to reduce decadence gain
+  c_gevaudan                  : Allow red cat to reduce decadence gain
+  c_fyn                       : Allow white cat to reduce decadence gain
