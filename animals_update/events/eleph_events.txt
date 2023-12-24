@@ -382,6 +382,8 @@ character_event = {
     hide_window = yes
     is_triggered_only = yes
 
+    culture_group = elephant_group
+
     trigger = {
         government = Eleph_feudal_gov
     }
