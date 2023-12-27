@@ -1,7 +1,8 @@
 namespace = ani_plus
 
 ###### cat update events
-### event 119 - 156
+### event 119 - 157
+# event 157 isn't at the end of file because appear to patch a bug after a specific event
 
 #### conversion quest:
 # event 119: launching quest by event rule
@@ -950,6 +951,7 @@ character_event = {
 
 ###society related event (on_action event (quest not concerned) + rank up decision)
 # event 132: on action event - on_society_failed_to_find_new_leader event
+# event 157: on action event - create a society grand master on start of game
 # event 133: on action event - on_character_ask_to_join_society
 # event 134 - 135: event chain: accepting player into the society
 # event 136: on action event - force cat ai to join cat society (if he can)
@@ -1006,6 +1008,79 @@ character_event = {
         new_character = {
             join_society = ROOT
             set_society_grandmaster = yes
+        }
+    }
+}
+
+character_event = {
+    id = ani_plus.157
+
+    is_triggered_only = yes
+    hide_window = yes
+
+    immediate = {
+        cat_prosperity_society = {
+            if = {
+                limit = {
+                    NOT = {
+                        any_society_member = {
+                            is_society_grandmaster = yes
+                        }
+                    }
+                }
+                create_character = {
+                    random_traits = yes
+                    female = 10
+                    religion = Cat_religion
+                    culture = cat
+                }
+                new_character = {
+                    join_society = PREV
+                    set_society_grandmaster = yes
+                }
+            }
+        }
+        cat_intrigue_society = {
+            if = {
+                limit = {
+                    NOT = {
+                        any_society_member = {
+                            is_society_grandmaster = yes
+                        }
+                    }
+                }
+                create_character = {
+                    random_traits = yes
+                    female = 10
+                    religion = Cat_religion
+                    culture = black_cat
+                }
+                new_character = {
+                    join_society = PREV
+                    set_society_grandmaster = yes
+                }
+            }
+        }
+        cat_reputation_society = {
+            if = {
+                limit = {
+                    NOT = {
+                        any_society_member = {
+                            is_society_grandmaster = yes
+                        }
+                    }
+                }
+                create_character = {
+                    random_traits = yes
+                    female = 10
+                    religion = Cat_religion
+                    culture = white_cat
+                }
+                new_character = {
+                    join_society = PREV
+                    set_society_grandmaster = yes
+                }
+            }
         }
     }
 }
