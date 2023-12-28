@@ -1,8 +1,8 @@
 namespace = ani_plus
 
 ###### cat update events
-### event 119 - 157
-# event 157 isn't at the end of file because appear to patch a bug after a specific event
+### event 119 - 158
+# event 157 and 158 isn't at the end of file because appear to patch a bug after a specific event
 
 #### conversion quest:
 # event 119: launching quest by event rule
@@ -608,10 +608,10 @@ character_event = {
     }
 
     mean_time_to_happen = {
-        months = 12
+        months = 15 # 1 year and 3 months 
 
         modifier = {
-            factor = 1.4
+            factor = 1.1
             NOT = {
                 government = cat_feudal_gov
             }
@@ -949,7 +949,7 @@ character_event = {
     }
 }
 
-###society related event (on_action event (quest not concerned) + rank up decision)
+### on action and rank up society event
 # event 132: on action event - on_society_failed_to_find_new_leader event
 # event 157: on action event - create a society grand master on start of game
 # event 133: on action event - on_character_ask_to_join_society
@@ -1232,7 +1232,7 @@ letter_event = {
 # event 141: notification for holding destroyed
 # event 142: becoming incapable
 # event 143: banished from cat society (power G of each society)
-
+# event 158: notification for being at top of society
 #event 139
 character_event = {
     id = ani_plus.139
@@ -1340,6 +1340,19 @@ letter_event = {
     }
 }
 
+#event 158
+letter_event = {
+    id = ani_plus.158
+
+    is_triggered_only = yes
+    border = GFX_event_letter_frame_diplomacy
+
+    desc = DESC_158_NOTIF_INVITED
+
+    option = {
+        name = OPT_158_INVITED
+    }
+}
 
 ### society quest event
 # event 144: on_action quest tombola

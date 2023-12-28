@@ -53,6 +53,7 @@ cat_intrigue_society = {
             is_playable = yes
             religion = Cat_religion
         }
+        is_adult = yes
         OR = {
             culture = black_cat
             AND = {
@@ -66,7 +67,7 @@ cat_intrigue_society = {
         }
     }
 
-        
+    # society power localisation is in decision.csv
     society_rank = {
         level = 1 
         limit = 300 
@@ -116,6 +117,7 @@ cat_intrigue_society = {
         decisions = {
             cat_charm_someone_power_F
             cat_banish_someone_power_G
+            cat_invit_someone_power_H
         }
     }
 
@@ -169,6 +171,11 @@ cat_intrigue_society = {
     member_score = {
         value = 10
 
+        additive_modifier = {
+            value = -20
+            society_rank = 4
+        }
+        
         modifier = {
             culture = cat
 
@@ -247,6 +254,7 @@ cat_prosperity_society = {
             is_playable = yes
             religion = Cat_religion
         }
+        is_adult = yes
         OR = {
             culture = white_cat
             AND = {
@@ -315,6 +323,7 @@ cat_prosperity_society = {
         decisions = {
             cat_increase_prosperity_level_power_F
             cat_banish_someone_power_G
+            cat_invit_someone_power_H
         }
     }
 	
@@ -447,6 +456,10 @@ cat_prosperity_society = {
 
             value = 10
         }
+        additive_modifier = {
+            value = -20
+            society_rank = 4
+        }
 
         modifier = {
             culture = black_cat
@@ -527,6 +540,7 @@ cat_reputation_society = {
             is_playable = yes
             religion = Cat_religion
         }
+        is_adult = yes
         OR = {
             culture = cat
             AND = {
@@ -595,6 +609,7 @@ cat_reputation_society = {
         decisions = {
             cat_force_alliance_power_F
             cat_banish_someone_power_G
+            cat_invit_someone_power_H
         }
     }
 	
@@ -726,6 +741,10 @@ cat_reputation_society = {
             diplomacy = 30
 
             value = 10
+        }
+        additive_modifier = {
+            value = -20
+            society_rank = 4
         }
 
         modifier = {

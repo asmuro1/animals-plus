@@ -139,11 +139,14 @@ title_decisions = {
                 NOT = { culture_group = cat_group }
                 num_of_empty_holdings = 1
             }
-            c_medantaka = {
-                location = {
-                    # religion = Cat_religion
-                    holder_scope = { religion = Cat_religion }
+            OR = {
+                c_medantaka = {
+                    location = {
+                        # religion = Cat_religion
+                        holder_scope = { religion = Cat_religion }
+                    }
                 }
+                FROM = { society_rank = 4 }
             }
         }
         effect = {
@@ -520,6 +523,7 @@ title_decisions = {
         allow = {
             FROM = {
                 society_currency = 1250
+                is_society_grandmaster = yes
             }
             
             location = {
@@ -951,9 +955,15 @@ society_decisions = {
             }
         }
         allow = {
+            hidden_tooltip = {
+                OR = {
+                    ai = no
+                    days_at_current_society_rank = 5415 # 15 years
+                }
+            }
             custom_tooltip = {
                 text = IS_OLD_ENOUGH_CAT_TT
-                days_at_current_society_rank = 1805 # 5 years
+                days_at_current_society_rank = 3610 # 10 years
             }
             
             custom_tooltip = {
@@ -1486,7 +1496,7 @@ targetted_decisions = {
 
     cat_make_incapable_power_E = {
         is_high_prio = no
-        ai_check_interval = 12
+        ai_check_interval = 9
 
         is_in_society = yes
         filter = all
@@ -1570,26 +1580,19 @@ targetted_decisions = {
                 factor = 0
                 
                 NOT = {
-                    holder_scope = {
-                        is_foe = FROM
-                    }
                     is_foe = FROM
                 }
             }
             modifier = {
                 factor = 0
 
-                is_in_society = yes
                 society_member_of = cat_intrigue_society
                 FROM = {
                     is_society_grandmaster = yes
                 }
-                society = {
-                    is_society = cat_intrigue_society
-                }
             }
             modifier = {
-                factor = 0.025
+                factor = 0.05
 
                 always = yes
             }
@@ -1703,6 +1706,7 @@ targetted_decisions = {
                 NOT = {
                     has_character_flag = CAT_CHARMED_SOMEONE
                 }
+                is_society_grandmaster = yes
             }
         }
 
@@ -1762,6 +1766,7 @@ targetted_decisions = {
         allow = {
             FROM = {
                 society_currency = 1000
+                is_society_grandmaster = yes
             }
             ROOT = {
                 NOT = {
@@ -1864,6 +1869,7 @@ targetted_decisions = {
         allow = {
             FROM = {
                 society_currency = 2500
+                is_society_grandmaster = yes
             }
         }
 
@@ -1916,6 +1922,83 @@ targetted_decisions = {
                     }
                 }
             }
+        }
+    }
+
+    cat_invit_someone_power_H = {
+        is_high_prio = no
+        ai_check_interval = 13
+
+        is_in_society = yes
+        filter = all
+        ai_target_filter = none
+
+        from_potential = {
+            is_in_society = yes
+            OR = {
+                society_member_of = cat_intrigue_society
+                society_member_of = cat_prosperity_society
+                society_member_of = cat_reputation_society
+            }
+            society_rank = 4
+        }
+        potential = {
+            is_within_diplo_range = FROM
+            culture_group = cat_group
+            NOT = {
+                society_rank = 4
+            }
+            OR = {
+                is_in_society = no
+                
+                society = {
+                    FROM = {
+                        society = {
+                            is_society = PREVPREV
+                        }
+                    }
+                }
+
+            }
+        }
+        allow = {
+            FROM = {
+                society_currency = 2500
+                is_society_grandmaster = yes
+            }
+        }
+
+        effect = {
+            FROM = {
+                change_society_currency = -2500
+            }
+            ROOT = {
+                if = {
+                    limit = {
+                        is_in_society = no
+                    }
+                    FROM = {
+                        show_scope_change = no
+
+                        society = {
+                            show_scope_change = no
+
+                            ROOT = {
+                                show_scope_change = no
+
+                                join_society = PREV
+                            }
+                        }
+                    }
+                }
+
+                society_rank_up = 4
+
+                letter_event = { id = ani_plus.158 }
+            }
+        }
+        ai_will_do = {
+            factor = 0
         }
     }
 }

@@ -229,9 +229,6 @@ cat_make_incapable_power_E_power_desc;By using influence, it is possible to make
 cat_charm_someone_power_F;charm someone;Séduire quelqu'un;;;;;;;;;;;;x
 cat_charm_someone_power_F_desc;You can charm only one person, making him loyal;Il n'est possible de ne charmer qu'une seule personne, pour le rendre loyal;;;;;;;;;;;;x
 cat_charm_someone_power_F_power_desc;A chief must have at least one faithful vassal.;Un chef doit avoir au moins un fidèle sujet.;;;;;;;;;;;;x
-cat_banish_someone_power_G;Banish someone from society;Bannir quelqu'un de la société;;;;;;;;;;;;x
-cat_banish_someone_power_G_desc;Banish someone definetly from the cat society;Bannir quelqu'un définitivement d'une société de chat;;;;;;;;;;;;x
-cat_banish_someone_power_G_power_desc;As the society chief, it is possible to banish someone from the cat society;En tant que chef, il est possible de bannir quelqu'un de la société;;;;;;;;;;;;x
 cat_illness_resistance_power_A;Increased illness resistance;meilleur résistance à la maladie;;;;;;;;;;;;x
 cat_illness_resistance_power_A_desc;By using your society power, you can lessen disease impact on your life;En utilisant le pouvoir de la société, il est possible de réduire les effets d'une maladie;;;;;;;;;;;;x
 cat_illness_resistance_power_A_power_desc;Life is important, so increase the resistance of lord against disease is important;La vie est très importante, permettre aux dirigeants de résister aux maladies aussi;;;;;;;;;;;;x
@@ -268,6 +265,12 @@ cat_general_opinion_power_E_power_desc;A reputation is to convince everyone of y
 cat_force_alliance_power_F;Impose an alliance;Imposer une alliance;;;;;;;;;;;;x
 cat_force_alliance_power_F_desc;By using your reputation, you can become allied to another cat ruler;Avec ta réputation, il est possible d'imposer une alliance avec un autre dirigeant;;;;;;;;;;;;x
 cat_force_alliance_power_F_power_desc;The biggest proof of a good reputation is caracterized by its allies;La forme la plus avancé d'une bonne réputation se montre par ses alliés;;;;;;;;;;;;x
+cat_banish_someone_power_G;Banish someone from society;Bannir quelqu'un de la société;;;;;;;;;;;;x
+cat_banish_someone_power_G_desc;Banish someone definetly from the cat society;Bannir quelqu'un définitivement d'une société de chat;;;;;;;;;;;;x
+cat_banish_someone_power_G_power_desc;As the society chief, it is possible to banish someone from the cat society;En tant que chef, il est possible de bannir quelqu'un de la société;;;;;;;;;;;;x
+cat_invit_someone_power_H;Invite someone into your rank;Inviter quelqu'un à mon rang;;;;;;;;;;;;x
+cat_invit_someone_power_H_desc;By using your position, you can force a cat to join your rank, and even your society if he isn't part of any.;En utilisant ton influence, tu peux inviter un chat à ton rang dans la société, voir même dans la société elle-même;;;;;;;;;;;;x
+cat_invit_someone_power_H_power_desc;As the society chief, it is possible to name a potential future grandmaster;En tant que chef, il est possible de nommer le potentiel nouveau grand maître.;;;;;;;;;;;;x
 
 
 #TOOLTIPS
