@@ -1573,18 +1573,25 @@ targetted_decisions = {
                     holder_scope = {
                         is_foe = FROM
                     }
+                    is_foe = FROM
                 }
             }
             modifier = {
                 factor = 0
 
                 is_in_society = yes
+                society_member_of = cat_intrigue_society
                 FROM = {
                     is_society_grandmaster = yes
                 }
                 society = {
                     is_society = cat_intrigue_society
                 }
+            }
+            modifier = {
+                factor = 0.025
+
+                always = yes
             }
         }
     }

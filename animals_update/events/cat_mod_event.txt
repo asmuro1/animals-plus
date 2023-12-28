@@ -1018,6 +1018,10 @@ character_event = {
     is_triggered_only = yes
     hide_window = yes
 
+    trigger = {
+        ai = no
+    }
+
     immediate = {
         cat_prosperity_society = {
             if = {
