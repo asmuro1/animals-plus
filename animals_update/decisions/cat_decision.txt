@@ -955,15 +955,13 @@ society_decisions = {
             }
         }
         allow = {
-            hidden_tooltip = {
+            custom_tooltip = {
+                text = IS_OLD_ENOUGH_CAT_TT
+                days_at_current_society_rank = 3610 # 10 years
                 OR = {
                     ai = no
                     days_at_current_society_rank = 5415 # 15 years
                 }
-            }
-            custom_tooltip = {
-                text = IS_OLD_ENOUGH_CAT_TT
-                days_at_current_society_rank = 3610 # 10 years
             }
             
             custom_tooltip = {

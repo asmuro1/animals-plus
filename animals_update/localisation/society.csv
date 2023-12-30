@@ -73,7 +73,7 @@ cat_quest_reputation_3_desc;you can rank up by winning a war;Tu monter de rang e
 cat_animal_society_currency;Cat's credit;Crédit de chat;;;;;;;;;;;;x
 request_to_rank_up_cat_societies;Rank up;Augmenter son rang;;;;;;;;;;;;x
 request_to_rank_up_cat_societies_desc;rank up within cat society;Augmenter son rang dans une société de chat;;;;;;;;;;;;x
-IS_OLD_ENOUGH_CAT_TT;Has at least 5 years in current rank;A au moins 5 ans dans le rang actuel;;;;;;;;;;;;x
+IS_OLD_ENOUGH_CAT_TT;Has at least §Y10§! years in current rank;A au moins §Y10§! ans dans le rang actuel;;;;;;;;;;;;x
 DO_NOT_ALREADY_ASK_TO_RANK_UP_CAT_TT;Did not recently ask to rank up;N'a pas récemment demmander à monter de rang;;;;;;;;;;;;x
 HAVE_A_GRANDMASTER_CAT_TT;The society has a grandmaster;La société a un chef;;;;;;;;;;;;x
 CAT_TT_BANNED_FROM_SOCIETY;Did not get banned from the society;N'a pas été déjà banni de la société;;;;;;;;;;;;x

@@ -137,6 +137,8 @@ DESC_155_REPUTATION_QUEST_RU_SUCCESS;I finally won a war!;J'ai enfin gagné une g
 OPT_155_RANK_UP;I am a proud member of the reputation society.;Je suis un digne membre de la société de réputation.;;;;;;;;;;;;x
 DESC_156_END_OF_QUEST_INTRIGUE;I finnaly finished my rank up quest;J'ai enfin fini ma quête de monté de niveau;;;;;;;;;;;;x
 OPT_156_EOQ;I can only hope to not have been discovered;Je ne peut espéré de ne pas être découvert;;;;;;;;;;;;x
+DESC_158_NOTIF_INVITED;I choose you as a diciple to my society;Je t'ai choisi en tant que disciple dans ma société;;;;;;;;;;;;x
+OPT_158_INVITED;Good;Bien!;;;;;;;;;;;;x
 
 ##tooltips
 

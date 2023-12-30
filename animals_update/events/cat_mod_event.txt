@@ -675,12 +675,18 @@ character_event = {
             decadence < 15
         }
 
-        NOT = {
+        NOR = {
 			any_war = {
 				defender = { character = ROOT }
 				using_cb = decadence_invasion # Already under tribal invasion
 			}
-		}
+            has_character_flag = CAT_DEC_INV
+        }
+    }
+
+    immediate = {
+        #added for avoiding event pop multitime in multiplayer
+        set_character_flag = CAT_DEC_INV
     }
 
     mean_time_to_happen = {
@@ -946,6 +952,10 @@ character_event = {
                 }
             }
         }
+    }
+
+    after = {
+        clr_character_flag = CAT_DEC_INV
     }
 }
 
