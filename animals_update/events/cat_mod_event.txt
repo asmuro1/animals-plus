@@ -1432,7 +1432,28 @@ character_event = {
                 limit = {
                     is_playable = yes
                 }
-                decadence = -8
+
+                if = {
+                    limit = {
+                        society_rank = 4
+                    }
+                    decadence = -15
+                }
+                else_if = {
+                    limit = {
+                        society_rank = 3
+                    }
+                    decadence = -9.75
+                }
+                else_if = {
+                    limit = {
+                        society_rank = 2
+                    }
+                    decadence = -8.75
+                }
+                else = {
+                    decadence = -8
+                }
             }
             change_society_currency = -250
         }
