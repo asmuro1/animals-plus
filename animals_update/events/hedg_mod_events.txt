@@ -884,7 +884,7 @@ character_event = {
         lifestyle_traits == 0
     }
     mean_time_to_happen = {
-        years = 14
+        years = 15
     }
 
     desc = DESC_EVENT074_GETTING_LIFESTYLE_TRAIT
@@ -916,6 +916,10 @@ character_event = {
         else_if = {
             limit = { culture_group = cat_group }
             add_trait = schemer
+        }
+        else_if = {
+            limit = { culture_group = dog_group }
+            add_trait = socializer
         }
     }
 }
