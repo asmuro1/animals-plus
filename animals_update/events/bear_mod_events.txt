@@ -238,9 +238,17 @@ character_event = {
         }
         else_if = {
             limit = {
-                culture = dog_culture
+                culture_group = dog_group
             }
-            set_graphical_culture = dog_culture
+            if = {
+                limit = {
+                    culture = dog_culture
+                }
+                set_graphical_culture = dog_culture
+            }
+            else = {
+                set_graphical_culture = steppe_dog
+            }
         }
         else_if = {
             limit = {
