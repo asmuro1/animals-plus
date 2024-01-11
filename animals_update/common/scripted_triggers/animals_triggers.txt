@@ -1,7 +1,6 @@
 Is_animal_trigger = {
     OR = {
         culture = horse
-        culture = dog_culture
         culture = dragon_culture
     }
 }
@@ -10,7 +9,7 @@ Is_really_animal_trigger = {
     OR = {
         culture = dragon_culture
         culture = horse
-        culture = dog_culture
+        culture_group = dog_group
         culture_group = bear_group
         culture_group = hedgehog_group
         culture_group = panda_group
