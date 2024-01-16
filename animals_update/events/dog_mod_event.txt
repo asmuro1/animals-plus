@@ -1,0 +1,76 @@
+namespace = ani_plus
+
+###### dog update event
+### event 159 - ?
+
+
+## conversion quest
+# event 159: event to launch quest by event rule
+# event 160: the dog seems weak (lead by option to one of the 3 events below)
+# event 161: notification dog healed (quest failed)
+# event 162: dog killed by decision (quest failed)
+# event 163: dog bite while treating dog (lead to event 164 or 165, by chance or immunity)
+# event 164: the dog and yourself are healed (triggered if immune to disease)
+# event 165: the infection become virulent (can lead to immunity, transformation into dog or death)
+
+character_event = {
+    id = ani_plus.159
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    only_playable = yes
+
+    trigger = {
+         has_game_rule = {
+            name = animals_conversion_ways
+            value = animal_events
+        }
+        NOT = { has_character_modifier = panda_conversion_quest_cooldown }
+        
+        Is_really_animal_trigger = no
+        OR = {
+            lifestyle_traits == 0
+            trait = socializer
+        }
+        any_demesne_province = {
+            dog_can_live_here_trigger = yes
+        }
+
+        OR = {
+            has_assigned_minor_title = title_master_of_the_hunt
+            has_character_modifier = pet_house_dog
+            has_character_modifier = guard_dogs
+            has_character_modifier = pet_hunting_dog
+            has_character_modifier = guide_dog
+        }
+    }
+
+    mean_time_to_happen = {
+        years = 1250
+
+        modifier = {
+            factor = 0.04 # 50 years for players
+            ai = no
+        }
+    }
+
+    desc = dog_desc_159
+
+    option = {
+        name = dog_optA_159
+        add_character_modifier = {
+            name = panda_conversion_quest_cooldown
+            years = 5
+            hidden = yes
+        }
+
+        # character_event = {
+        #     id = ani_plus.160
+        #     days = 1
+        # }
+    }
+    option = {
+        name = dog_optB_159
+    }
+}
