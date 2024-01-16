@@ -164,3 +164,9 @@ dog_desc_161;the dog was only tired, nothing wrong;Le chien était juste très fat
 dog_opt_161;I was really overthinking...;Je suis vraiment devenu parano...;;;;;;;;;;;;x
 dog_desc_162;The dog just bite me! He is definetly not well;Le chien vien de me mordre, j'avais raison de m'inquiéter;;;;;;;;;;;;x
 dog_opt_162;I need to get a treatment;J'ai besoin d'un traitement!;;;;;;;;;;;;x
+dog_desc_163;My wound is less painfull...;Ma morsure me fait maintenant beaucoup moins mal...;;;;;;;;;;;;x
+dog_optA_163;I am finnaly in form;Je suis à nouveau en forme;;;;;;;;;;;;x
+dog_optB_163;I hope it was nothing;Ce ne dois rien être de grave;;;;;;;;;;;;x
+
+## tooltip
+DOG_HEALED_TT;healing from his wound;guérit totalement de la blessure;;;;;;;;;;;;x

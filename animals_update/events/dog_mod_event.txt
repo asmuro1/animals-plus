@@ -121,7 +121,7 @@ character_event = {
 character_event = {
     id = ani_plus.162
 
-    border = GFX_event_letter_frame_diplomacy
+    border = GFX_event_normal_frame_diplomacy
     picture = GFX_evt_council
 
     is_triggered_only = yes
@@ -130,9 +130,81 @@ character_event = {
 
     option = {
         name = dog_opt_162
-        
+
         add_trait = wounded
         character_event = { id = ani_plus.163 days = 5  random = 3 }
     }
 }
 
+#event 163
+character_event = {
+    id = ani_plus.163
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    is_triggered_only = yes
+
+    desc = dog_desc_163
+
+    option = {
+        trigger = {
+            has_character_flag = immune_to_dog_quest_conv
+        }
+        name = dog_optA_163
+    }
+    option = {
+        trigger = {
+            NOT = {
+                has_character_flag = immune_to_dog_quest_conv
+            }
+        }
+        name = dog_optB_163
+
+        random_list = {
+            2 = {
+                custom_tooltip = {
+                    text = DOG_HEALED_TT
+                    set_character_flag = immune_to_dog_quest_conv
+                }
+            }
+            3 = {
+                death = yes
+            }
+            5 = {
+                trigger = {
+                    any_demesne_province = {
+                        terrain = steppe
+                    }
+                }
+                modifier = {
+                    factor = 0.5
+                    
+                    any_demesne_province = {
+                        terrain = hills
+                    }
+                }
+                culture = steppe_dog
+            }
+            5 = {
+                trigger = {
+                    any_demesne_province = {
+                        terrain = hills
+                    }
+                }
+                modifier = {
+                    factor = 0.5
+                    
+                    any_demesne_province = {
+                        terrain = steppe
+                    }
+                }
+                culture = dog_culture
+            }
+        }
+    }
+
+    after = {
+        remove_trait = wounded
+    }
+}
