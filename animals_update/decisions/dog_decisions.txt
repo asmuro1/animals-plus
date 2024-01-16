@@ -30,7 +30,7 @@ decisions = {
             is_incapable = no
             has_regent = no
             OR = {
-                has_trait = socializer
+                trait = socializer
                 lifestyle_traits == 0
             }
             any_demesne_province = {
@@ -71,8 +71,8 @@ decisions = {
                             any_demesne_province = {
                                 terrain = steppe
                             }
-                            culture = steppe_dog
                         }
+                        culture = steppe_dog
                     }
                     1 = {
                         trigger = {
