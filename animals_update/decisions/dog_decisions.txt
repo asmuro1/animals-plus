@@ -1,0 +1,98 @@
+decisions = {
+    dog_conversion_quest = {
+        is_high_prio = yes
+        ai_check_interval = 60
+        only_playable = yes
+
+        potential = {
+            OR = {
+                has_game_rule = {
+                    name = animals_conversion_ways
+                    value = animal_decision
+                }
+                AND = {
+                    has_game_rule = {
+                        name = animals_conversion_ways
+                        value = animal_instant
+                    }
+                    ai = no
+                }
+            }
+            any_realm_province = {
+                dog_can_live_here_trigger = yes
+            }
+            Is_really_animal_trigger = no
+            NOT = { has_character_modifier = panda_conversion_quest_cooldown }
+        }
+
+        allow = {
+            is_adult = yes
+            is_incapable = no
+            has_regent = no
+            OR = {
+                has_trait = socializer
+                lifestyle_traits == 0
+            }
+            any_demesne_province = {
+                dog_can_live_here_trigger = yes
+            }
+            OR = {
+                has_assigned_minor_title = title_master_of_the_hunt
+                has_character_modifier = pet_house_dog
+                has_character_modifier = guard_dogs
+                has_character_modifier = pet_hunting_dog
+                has_character_modifier = guide_dog
+            }
+        }
+
+        effect = {
+            if = {
+                limit = {
+                    has_game_rule = {
+                        name = animals_conversion_ways
+                        value = animal_decision
+                    }
+                }
+                add_character_modifier = {
+                    name = panda_conversion_quest_cooldown
+                    years = 5
+                    hidden = yes
+                }
+
+                # character_event = {
+                #     id = ani_plus.160
+                #     days = 1
+                # }
+            }
+            else = {
+                random_list = {
+                    1 = {
+                        trigger = {
+                            any_demesne_province = {
+                                terrain = steppe
+                            }
+                            culture = steppe_dog
+                        }
+                    }
+                    1 = {
+                        trigger = {
+                            any_demesne_province = {
+                                terrain = hills
+                            }
+                        }
+                        culture = dog_culture
+                    }
+                }
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+
+            modifier = { 
+                factor = 0.01
+                always = yes 
+            }
+        }
+    }
+}

@@ -677,3 +677,13 @@ Cat_province_not_depopulated_trigger = {
         has_province_modifier = depopulated_3
     }
 }
+
+### dog trigger
+
+# province scope
+dog_can_live_here_trigger = {
+    OR = {
+        terrain = steppe
+        terrain = hills
+    }
+}
