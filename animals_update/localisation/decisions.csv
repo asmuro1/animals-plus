@@ -292,3 +292,9 @@ CAT_TT_INCREASE_PROSPERITY;The prosperity level increase;Le niveau de prospérité
 CAT_TT_QUEST_COMPLETE;complete the quest;Réussi la quête;;;;;;;;;;;;x
 CAT_TT_SUCCESS_QUEST_3;Rank up quest completed;Quête de montée de rang réussi;;;;;;;;;;;;x
 CAT_TT_FAIL_QUEST_3;Rank up quest failed;Quête de montée de rang échoué;;;;;;;;;;;;x
+
+
+#### CAT UPDATE
+
+dog_conversion_quest;examine your dog;Prendre soin de son chien;;;;;;;;;;;;x
+dog_conversion_quest_desc;Your dog seems sometimes weak...;Quand mon chien semble faible...;;;;;;;;;;;;x
