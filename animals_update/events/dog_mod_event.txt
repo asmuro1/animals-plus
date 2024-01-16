@@ -90,8 +90,30 @@ character_event = {
         name = dog_opt_160
 
         random_list = {
-            1 = { character_event = { id = ani_plus.161 days = 2 } }
-            4 = { character_event = { id = ani_plus.162 days = 1 } }
+            1 = {
+                 character_event = { id = ani_plus.161 days = 7 random = 7 }
+            }
+            4 = {
+                trigger = {
+                    NOT = { has_character_flag = immune_dog_conversion }
+                }
+                character_event = { id = ani_plus.162 days = 1 }    
+            }
         }
+    }
+}
+
+character_event = {
+    id = ani_plus.161
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    is_triggered_only = yes
+
+    desc = dog_desc_161
+
+    option = {
+        name = dog_opt_161
     }
 }
