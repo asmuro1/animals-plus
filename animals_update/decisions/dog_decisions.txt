@@ -59,10 +59,10 @@ decisions = {
                     hidden = yes
                 }
 
-                # character_event = {
-                #     id = ani_plus.160
-                #     days = 1
-                # }
+                character_event = {
+                    id = ani_plus.160
+                    days = 1
+                }
             }
             else = {
                 random_list = {
