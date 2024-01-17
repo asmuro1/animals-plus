@@ -1,6 +1,5 @@
 ###This file only countain buildings common for all animal culture
-###Those building was on this mod's beta version, but reworked on this one,
-###so building code are juste copy-past can have no relation with actual bonuses
+###Those building was on this mod's beta version, but reworked on this one.
 
 castle = {
     #Castle tower: building that unlock every other animal building
