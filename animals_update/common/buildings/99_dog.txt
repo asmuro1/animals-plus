@@ -1,4 +1,88 @@
 castle = {
+    ca_dog_retinue_1 = {
+        add_number_to_name = yes
+
+        potential = {
+            OR = {
+                has_building = ca_dog_retinue_1
+                culture = dog_culture
+            }
+        }
+        trigger = {
+            culture = dog_culture
+            TECH_CASTLE_CONSTRUCTION = 6
+        }
+        is_active_trigger = {
+            culture = dog_culture
+        }
+        prerequisites = { ca_ani_castle_tower_03 }
+
+        gold_cost = 134
+        build_time = 365
+        ai_creation_factor = 30
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 1.5
+
+        knights = 15
+        retinuesize = 20
+    }
+    ca_dog_retinue_2 = {
+        add_number_to_name = yes
+
+        potential = {
+            OR = {
+                has_building = ca_dog_retinue_2
+                culture = dog_culture
+            }
+        }
+        trigger = {
+            culture = dog_culture
+            TECH_CASTLE_CONSTRUCTION = 7
+        }
+        is_active_trigger = {
+            culture = dog_culture
+        }
+        prerequisites = { ca_ani_castle_tower_07 }
+        upgrades_from = ca_dog_retinue_1
+
+        gold_cost = 450
+        build_time = 900
+        ai_creation_factor = 30
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 1.6
+
+        knights = 20
+        retinuesize = 20
+    }
+    ca_dog_retinue_3 = {
+        add_number_to_name = yes
+
+        potential = {
+            OR = {
+                has_building = ca_dog_retinue_3
+                culture = dog_culture
+            }
+        }
+        trigger = {
+            culture = dog_culture
+            TECH_CASTLE_CONSTRUCTION = 7
+        }
+        is_active_trigger = {
+            culture = dog_culture
+        }
+        prerequisites = { ca_ani_castle_tower_15 }
+        upgrades_from = ca_dog_retinue_2
+
+        gold_cost = 1000
+        build_time = 1500
+        ai_creation_factor = 30
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 1.7
+
+        knights = 30
+        retinuesize = 30
+    }
+
     ca_dog_speciality_1 = {
         add_number_to_name = yes
 
