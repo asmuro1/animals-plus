@@ -37,7 +37,13 @@ immortal_herd = {
 }
 
 Invasive_order = {
-	levy_size = 4.5
+	levy_size = 5
 	light_infantry = 500
 	heavy_infantry = 50
+}
+
+hunting_gards_mercs = {
+	levy_size = 3.5
+	light_cavalry = 450
+	knights = 50
 }
