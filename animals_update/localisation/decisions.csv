@@ -208,6 +208,8 @@ adopt_cat_religion;Adopt cats' religion;Adopter la religion des chats;;;;;;;;;;;
 adopt_cat_religion_desc;As a cat, you can freely choose to convert yourself to the associated religion;En tant que chat, tu peux librement choisir de te convertir à la religion associé;;;;;;;;;;;;x
 Force_cat_invasion;Force an invasion;Forcer une invasion de chat;;;;;;;;;;;;x
 Force_cat_invasion_desc;By using the religion influence, a cat can force an invasion and fastly changing province culture;En utilisant l'influence de sa religion, un chat peut facilement forcer une invasion et ainsi changer la culture local de la province;;;;;;;;;;;;x
+create_Invasive_order;Form the [d_Invasive_order.GetName];Former les [d_Invasive_order.GetName];;;;;;;;;;;;x
+create_Invasive_order_desc;By using your influence, you can defend your religion with a veteran groups of soldiers;En utilisant mon influence personnel, il est possible de créer une troupe de mercennaires afin de défendre les terres de ma religion;;;;;;;;;;;;x
 cat_society_general_convert_one;Transform someone into a cat;Transformer en chat;;;;;;;;;;;;x
 cat_society_general_convert_one_desc;By using society influence, you can force the conversion of someone into a cat;En utilisant l'influence de la société, il est possible de forcer la conversion en chat de quelqu'un;;;;;;;;;;;;x
 cat_society_general_convert_one_power_desc;By using society influence, you can force the conversion of someone into a cat;En utilisant l'influence de la société, il est possible de forcer la conversion en chat de quelqu'un;;;;;;;;;;;;x
@@ -300,3 +302,8 @@ dog_conversion_quest;examine your dog;Prendre soin de son chien;;;;;;;;;;;;x
 dog_conversion_quest_desc;Your dog seems sometimes weak...;Quand mon chien semble faible...;;;;;;;;;;;;x
 adopt_dog_religion;Adopt dogs' religion;Adopter la religion des chiens;;;;;;;;;;;;x
 adopt_dog_religion_desc;As a dog, you can freely choose to convert yourself to the associated religion;En tant que chien, tu peux librement choisir de te convertir à la religion associé;;;;;;;;;;;;x
+create_hunting_gards;Form the [d_hunting_gards.GetName];Former les [d_hunting_gards.GetName];;;;;;;;;;;;x
+create_hunting_gards_desc;By using your influence, you can defend your religion with a veteran groups of soldiers;En utilisant mon influence personnel, il est possible de créer une troupe de mercennaires afin de défendre les terres de ma religion;;;;;;;;;;;;x
+
+### tooltip
+CREATED_HOLY_ORDER_DOG_TOOLTIP;[d_hunting_gards.GetName] created;[d_hunting_gards.GetName] sont créée;;;;;;;;;;;;x
