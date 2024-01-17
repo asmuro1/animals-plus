@@ -205,7 +205,7 @@ ELEPH_TT_DISEASE_SPAWN;An epidemic start;Une épidémie commence;;;;;;;;;;;;x
 start_cat_conversion_quest;Evaluate cat number;Constater un nombre important de chats;;;;;;;;;;;;x
 start_cat_conversion_quest_desc;As cats started to migrate in the province, verifying that they are not over-numbered is a must-go.;Avec les chats qui commencent à devenir nombreux dans la province, il peut être utile d'y regarder de plus près pour éviter des risques inutiles;;;;;;;;;;;;x
 adopt_cat_religion;Adopt cats' religion;Adopter la religion des chats;;;;;;;;;;;;x
-adopt_cat_religion_desc;As a cat, you can freely choose to convert yourself to the associated religion;En tant que chat, tu peux librement choisir de te convertir à la religion associé;;;;;;;;;;;;;x
+adopt_cat_religion_desc;As a cat, you can freely choose to convert yourself to the associated religion;En tant que chat, tu peux librement choisir de te convertir à la religion associé;;;;;;;;;;;;x
 Force_cat_invasion;Force an invasion;Forcer une invasion de chat;;;;;;;;;;;;x
 Force_cat_invasion_desc;By using the religion influence, a cat can force an invasion and fastly changing province culture;En utilisant l'influence de sa religion, un chat peut facilement forcer une invasion et ainsi changer la culture local de la province;;;;;;;;;;;;x
 cat_society_general_convert_one;Transform someone into a cat;Transformer en chat;;;;;;;;;;;;x
@@ -294,7 +294,9 @@ CAT_TT_SUCCESS_QUEST_3;Rank up quest completed;Quête de montée de rang réussi;;;
 CAT_TT_FAIL_QUEST_3;Rank up quest failed;Quête de montée de rang échoué;;;;;;;;;;;;x
 
 
-#### CAT UPDATE
+#### DOG UPDATE
 
 dog_conversion_quest;examine your dog;Prendre soin de son chien;;;;;;;;;;;;x
 dog_conversion_quest_desc;Your dog seems sometimes weak...;Quand mon chien semble faible...;;;;;;;;;;;;x
+adopt_dog_religion;Adopt dogs' religion;Adopter la religion des chiens;;;;;;;;;;;;x
+adopt_dog_religion_desc;As a dog, you can freely choose to convert yourself to the associated religion;En tant que chien, tu peux librement choisir de te convertir à la religion associé;;;;;;;;;;;;x

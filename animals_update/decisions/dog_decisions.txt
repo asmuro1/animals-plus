@@ -95,4 +95,111 @@ decisions = {
             }
         }
     }
+
+    adopt_dog_religion = {
+        is_high_prio = yes
+        ai_check_interval = 3
+
+        potential = {
+            culture_group = dog_group
+            NOT = { religion = Dog_religion }
+            can_change_religion = yes
+        }
+        allow = {
+            is_adult = yes
+            culture_group = dog_group
+            has_regent = no
+            is_incapable = no
+            can_change_religion = yes
+        }
+        effect = {
+            religion = Dog_religion
+            if = {
+                limit = {
+                    OR = {
+                        independent = yes
+                        liege = { NOT = { religion = Dog_religion } }
+                    }
+                }
+                if = {
+                    limit = {
+                        has_game_rule = {
+                            name = animals_bonus_levy
+                            value = Few
+                        }
+                    }
+                    spawn_unit = {
+                        province = capital_scope
+                        home = capital_scope
+                        owner = ROOT
+                        leader = none
+                        troops = {
+                            light_cavalry = { 2000 2000 }
+                        }
+                        attrition = 0.1
+                        maintenance = no
+
+                    }
+                }
+                else_if = {
+                    limit = {
+                        has_game_rule = {
+                            name = animals_bonus_levy
+                            value = Normal
+                        }
+                    }
+                    spawn_unit = {
+                        province = capital_scope
+                        home = capital_scope
+                        owner = ROOT
+                        leader = none
+                        troops = {
+                            light_cavalry = { 5000 5000 }
+                        }
+                        attrition = 0.1
+                        maintenance = no
+
+                    }
+                }
+                else_if = {
+                    limit = {
+                        has_game_rule = {
+                            name = animals_bonus_levy
+                            value = Many
+                        }
+                    }
+                    spawn_unit = {
+                        province = capital_scope
+                        home = capital_scope
+                        owner = ROOT
+                        leader = none
+                        troops = {
+                            light_cavalry = { 10000 10000 }
+                        }
+                        attrition = 0.05
+                        maintenance = no
+
+                    }
+                }
+            }
+            # if = {
+            #     limit = {
+            #         is_feudal = yes
+            #     }
+            #     set_government_type = 
+            # }
+        }
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+
+                independent = no
+                liege = {
+                    NOT = { religion = Dog_religion }
+                }
+            }
+        }
+    }
 }
