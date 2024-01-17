@@ -4035,6 +4035,14 @@ province_event = {
                     culture_group = cat_group
                 }
             }
+            AND = {
+                culture_group = dog_group
+                NOT = { religion = Dog_religion }
+                holder_scope = {
+                    religion = Dog_religion
+                    culture_group = dog_group
+                }
+            }
         }
     }
 
@@ -4078,6 +4086,12 @@ province_event = {
                 culture_group = cat_group
             }
             religion = Cat_religion
+        }
+        else_if = {
+            limit = {
+                culture_group = dog_group
+            }
+            religion = Dog_religion
         }
     }
 }
