@@ -224,6 +224,210 @@ castle = {
         knights = 45
     }
 
+    ca_dog_shop_1 = {
+        add_number_to_name = yes
+
+        potential = {
+            OR = {
+                has_building = ca_dog_shop_1
+                culture = dog_culture
+            }
+        }
+        trigger = {
+            culture = dog_culture
+            TECH_CASTLE_CONSTRUCTION = 0
+        }
+        is_active_trigger = {
+            culture = dog_culture
+        }
+        prerequisites = {  }
+
+        gold_cost = 95
+        build_time = 335
+        ai_creation_factor = 30
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 1.5
+
+        light_infantry = 75
+    }
+    ca_dog_shop_2 = {
+        add_number_to_name = yes
+
+        potential = {
+            OR = {
+                has_building = ca_dog_shop_2
+                culture = dog_culture
+            }
+        }
+        trigger = {
+            culture = dog_culture
+            TECH_CASTLE_CONSTRUCTION = 1
+            TECH_FORTIFICATIONS_CONSTRUCTION = 1
+        }
+        is_active_trigger = {
+            culture = dog_culture
+        }
+        prerequisites = { ca_ani_castle_tower_02 }
+        upgrades_from = ca_dog_shop_1
+
+        gold_cost = 150
+        build_time = 675
+        ai_creation_factor = 30
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 1.6
+
+        light_infantry = 100
+        archers = 20
+    }
+    ca_dog_shop_3 = {
+        add_number_to_name = yes
+
+        potential = {
+            OR = {
+                has_building = ca_dog_stable_2
+                culture = dog_culture
+            }
+        }
+        trigger = {
+            culture = dog_culture
+            TECH_CASTLE_CONSTRUCTION = 2
+            TECH_FORTIFICATIONS_CONSTRUCTION = 2
+        }
+        is_active_trigger = {
+            culture = dog_culture
+        }
+        prerequisites = { ca_ani_castle_tower_04 }
+        upgrades_from = ca_dog_shop_2
+
+        gold_cost = 250
+        build_time = 900
+        ai_creation_factor = 30
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 1.6
+
+        light_infantry = 150
+        pikemen = 20
+        archers = 30
+    }
+    ca_dog_shop_4 = {
+        add_number_to_name = yes
+
+        potential = {
+            OR = {
+                has_building = ca_dog_shop_4
+                culture = dog_culture
+            }
+        }
+        trigger = {
+            culture = dog_culture
+            TECH_CASTLE_CONSTRUCTION = 3
+            TECH_FORTIFICATIONS_CONSTRUCTION = 3
+        }
+        is_active_trigger = {
+            culture = dog_culture
+        }
+        prerequisites = { ca_ani_castle_tower_06 }
+        upgrades_from = ca_dog_shop_3
+
+        gold_cost = 350
+        build_time = 1100
+        ai_creation_factor = 30
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 1.6
+
+        heavy_infantry = 15
+        pikemen = 30
+        archers = 50
+    }
+    ca_dog_shop_5 = {
+        add_number_to_name = yes
+
+        potential = {
+            OR = {
+                has_building = ca_dog_shop_5
+                culture = dog_culture
+            }
+        }
+        trigger = {
+            culture = dog_culture
+            TECH_CASTLE_CONSTRUCTION = 4
+            TECH_FORTIFICATIONS_CONSTRUCTION = 4
+        }
+        is_active_trigger = {
+            culture = dog_culture
+        }
+        prerequisites = { ca_ani_castle_tower_08 }
+        upgrades_from = ca_dog_shop_4
+
+        gold_cost = 450
+        build_time = 1300
+        ai_creation_factor = 30
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 1.6
+
+        heavy_infantry = 20
+        pikemen = 50
+    }
+    ca_dog_shop_6 = {
+        add_number_to_name = yes
+
+        potential = {
+            OR = {
+                has_building = ca_dog_shop_6
+                culture = dog_culture
+            }
+        }
+        trigger = {
+            culture = dog_culture
+            TECH_CASTLE_CONSTRUCTION = 5
+            TECH_FORTIFICATIONS_CONSTRUCTION = 5
+        }
+        is_active_trigger = {
+            culture = dog_culture
+        }
+        prerequisites = { ca_ani_castle_tower_10 }
+        upgrades_from = ca_dog_shop_5
+
+        gold_cost = 600
+        build_time = 1500
+        ai_creation_factor = 30
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 1.6
+
+        heavy_infantry = 25
+        pikemen = 50
+        archers = 50
+    }
+    ca_dog_shop_7 = {
+        add_number_to_name = yes
+
+        potential = {
+            OR = {
+                has_building = ca_dog_shop_7
+                culture = dog_culture
+            }
+        }
+        trigger = {
+            culture = dog_culture
+            TECH_CASTLE_CONSTRUCTION = 6
+            TECH_FORTIFICATIONS_CONSTRUCTION = 6
+        }
+        is_active_trigger = {
+            culture = dog_culture
+        }
+        prerequisites = { ca_ani_castle_tower_12 }
+        upgrades_from = ca_dog_shop_6
+
+        gold_cost = 750
+        build_time = 1900
+        ai_creation_factor = 30
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 1.6
+
+        heavy_infantry = 40
+        archers = 50
+    }
+
     ca_dog_retinue_1 = {
         add_number_to_name = yes
 
