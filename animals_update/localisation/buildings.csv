@@ -389,6 +389,10 @@ tb_cat_stable_3;Stables;Étable;;;;;;;;;;;;x
 tb_cat_stable_4;Stables;Étable;;;;;;;;;;;;x
 
 ### DOG update
+ca_dog_field_1;Military field;Terrain militaire;;;;;;;;;;;;x
+ca_dog_field_2;Military field;Terrain militaire;;;;;;;;;;;;x
+ca_dog_field_3;Military field;Terrain militaire;;;;;;;;;;;;x
+ca_dog_field_4;Military field;Terrain militaire;;;;;;;;;;;;x
 ca_dog_retinue_1;Dogs clan;Clan des chiens;;;;;;;;;;;;x
 ca_dog_retinue_2;Dogs clan;Clan des chiens;;;;;;;;;;;;x
 ca_dog_retinue_3;Dogs clan;Clan des chiens;;;;;;;;;;;;x
