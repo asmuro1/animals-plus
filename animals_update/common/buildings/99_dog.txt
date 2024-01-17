@@ -1,0 +1,65 @@
+castle = {
+    ca_dog_speciality_1 = {
+        add_number_to_name = yes
+
+        potential = {
+            is_capital = yes
+            culture = dog_culture
+        }
+        trigger = {
+            culture = dog_culture
+            TECH_CASTLE_CONSTRUCTION = 4
+            TECH_FORTIFICATIONS_CONSTRUCTION = 4
+        }
+        is_active_trigger = {
+            is_capital = yes
+            OR = {
+                culture = dog_culture
+                holder_scope = { culture = dog_culture }
+            }
+        }
+        prerequisites = { ca_ani_castle_tower_08 }
+
+        gold_cost = 370
+        build_time = 750
+        ai_creation_factor = 30
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 1.0
+
+        land_morale = 0.10
+        monthly_character_prestige = 0.4
+        monthly_character_piety = 0.2
+    }
+    ca_dog_speciality_2 = {
+        add_number_to_name = yes
+
+        potential = {
+            is_capital = yes
+            culture = dog_culture
+        }
+        trigger = {
+            culture = dog_culture
+            TECH_CASTLE_CONSTRUCTION = 8
+            TECH_FORTIFICATIONS_CONSTRUCTION = 8
+        }
+        is_active_trigger = {
+            is_capital = yes
+            OR = {
+                culture = dog_culture
+                holder_scope = { culture = dog_culture }
+            }
+        }
+        prerequisites = { ca_ani_castle_tower_16 }
+        upgrades_from = ca_dog_speciality_1
+
+        gold_cost = 1700
+        build_time = 1750
+        ai_creation_factor = 30
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 1.7
+
+        land_morale = 0.15
+        monthly_character_prestige = 0.6
+        monthly_character_piety = 0.3
+    }
+}
