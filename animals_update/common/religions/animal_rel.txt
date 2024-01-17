@@ -21,7 +21,7 @@ Animals_grups = {
 
 	Bears_religion = {
 		icon = 60
-		heresy_icon = 1 #No heresiys
+		heresy_icon = 1 #No heresies
 		color = { 0.80 0.80 0.80}
 
 		piety_name = SAVAGIOUS
@@ -56,7 +56,7 @@ Animals_grups = {
 	}
 	Hedge_religion = {
 		icon = 61
-		heresy_icon = 1 #No heresiys
+		heresy_icon = 1 #No heresies
 		color = { 0.20 0.85 0.80}
 
 		piety_name = SAVAGIOUS
@@ -92,7 +92,7 @@ Animals_grups = {
 	}
 	Panda_religion = {
 		icon = 62
-		heresy_icon = 1 #No heresiys
+		heresy_icon = 1 #No heresies
 		color = { 0.75 0.85 0.80}
 
 		piety_name = SAVAGIOUS
@@ -224,5 +224,35 @@ Animals_grups = {
 		uses_decadence = yes
 
 		peace_prestige_loss	= no
+	}
+	Dog_religion = {
+		icon = 66
+		heresy_icon = 1 # No heresies
+		color = { 0 0.25 0.9 }
+		alternate_start = { always = no }
+
+		piety_name = SAVAGIOUS
+		priest_title = ELDERS
+		high_god_name = DOG_RELIGION_HIGH_GOD
+
+		can_demand_religious_conversion = no #Personalized decision
+		can_retire_to_monastery = yes
+
+		priests_can_marry = yes
+		priests_can_inherit = no
+		female_temple_holders = no
+
+		max_wives = 1
+		men_can_take_consorts = no
+		women_can_take_consorts = no
+
+		allow_looting = no
+		has_heir_designation = yes
+		aggression = 0.95
+		defensive_attrition = no
+		ignores_defensive_attrition = no
+		join_crusade_if_bordering_hostile = yes
+
+		peace_prestige_loss = no
 	}
 }

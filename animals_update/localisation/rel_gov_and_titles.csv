@@ -32,6 +32,10 @@ Cat_religion;Cat;Chat;;;;;;;;;;;;x
 Cat_religion_DESC;Cat's religion;Religion des chats;;;;;;;;;;;;x
 Cat_religion_full;Cat;Chat;;;;;;;;;;;;x
 CAT_RELIGION_HIGH_GOD;Cat-iph;Le Chat perché;;;;;;;;;;;;x
+Dog_religion;Dog;Chien;;;;;;;;;;;;x
+Dog_religion_DESC;Dogs' religion;Religion des chiens;;;;;;;;;;;;x
+Dog_religion_full;Dog;Chien;;;;;;;;;;;;x
+DOG_RELIGION_HIGH_GOD;Scooby-Doo;Scoubidou;;;;;;;;;;;;x
 
 ###government localisation
 Bear_feudal_gov;Bears feodality;féodalité oursienne;;;;;;;;;;;;x
