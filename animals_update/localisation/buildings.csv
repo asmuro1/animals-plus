@@ -393,6 +393,10 @@ ca_dog_field_1;Military field;Terrain militaire;;;;;;;;;;;;x
 ca_dog_field_2;Military field;Terrain militaire;;;;;;;;;;;;x
 ca_dog_field_3;Military field;Terrain militaire;;;;;;;;;;;;x
 ca_dog_field_4;Military field;Terrain militaire;;;;;;;;;;;;x
+ca_dog_knights_1;Training field;Terrain d'entraînement;;;;;;;;;;;;x
+ca_dog_knights_2;Training field;Terrain d'entraînement;;;;;;;;;;;;x
+ca_dog_knights_3;Training field;Terrain d'entraînement;;;;;;;;;;;;x
+ca_dog_knights_4;Training field;Terrain d'entraînement;;;;;;;;;;;;x
 ca_dog_retinue_1;Dogs clan;Clan des chiens;;;;;;;;;;;;x
 ca_dog_retinue_2;Dogs clan;Clan des chiens;;;;;;;;;;;;x
 ca_dog_retinue_3;Dogs clan;Clan des chiens;;;;;;;;;;;;x
