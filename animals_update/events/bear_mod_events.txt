@@ -1579,10 +1579,8 @@ province_event = {
                 remove_building = ca_ani_tech_4
 
                 remove_building = ca_horse_garrison_2
-                remove_building = ca_dog_garrison_2
                 remove_building = ca_dragon_archery_2
                 remove_building = ca_horse_speciality
-                remove_building = ca_dog_speciality
                 remove_building = ca_dragon_speciality
             }
         }
@@ -1600,10 +1598,8 @@ province_event = {
                 remove_building = ca_ani_castle_tower_15
 
                 remove_building = ca_horse_retinue_2
-                remove_building = ca_dog_retinue_2
                 remove_building = ca_dragon_retinue_2
                 remove_building = ca_horse_garrison_1
-                remove_building = ca_dog_garrison_1
                 remove_building = ca_dragon_archery_1
             }
         }
@@ -1638,7 +1634,6 @@ province_event = {
                 remove_building = ca_ani_castle_tower_13
 
                 remove_building = ca_horse_retinue_1
-                remove_building = ca_dog_retinue_1
                 remove_building = ca_dragon_retinue_1
             }
         }
@@ -1673,7 +1668,6 @@ province_event = {
                 remove_building = ca_ani_castle_tower_11
 
                 remove_building = ca_horse_armor_2
-                remove_building = ca_dog_stable_2
                 remove_building = ca_dragon_stable_2
             }
         }
@@ -1711,11 +1705,9 @@ province_event = {
                 remove_building = ca_ani_tech_2
 
                 remove_building = ca_horse_archer_3
-                remove_building = ca_dog_weapons_3
                 remove_building = ca_dragon_treasury_3
                 remove_building = ca_horse_armor_1
                 remove_building = ca_dragon_stable_1
-                remove_building = ca_dog_stable_1
             }
         }
         else_if = {
@@ -1749,7 +1741,6 @@ province_event = {
                 remove_building = ca_ani_castle_tower_07
 
                 remove_building = ca_horse_archer_2
-                remove_building = ca_dog_weapons_2
                 remove_building = ca_dragon_treasury_2
             }
         }
@@ -1788,10 +1779,8 @@ province_event = {
 
                 remove_building = ca_horse_stable_3
                 remove_building = ca_dragon_fortification_3
-                remove_building = ca_dog_infantery_3
                 remove_building = ca_horse_archer_1
                 remove_building = ca_dragon_treasury_1
-                remove_building = ca_dog_weapons_1
             }
         }
         else_if = {
@@ -1829,7 +1818,6 @@ province_event = {
 
                 remove_building = ca_horse_stable_2
                 remove_building = ca_dragon_fortification_2
-                remove_building = ca_dog_infantery_2
             }
         }
         else_if = {
@@ -1867,7 +1855,6 @@ province_event = {
 
                 remove_building = ca_horse_stable_1
                 remove_building = ca_dragon_fortification_1
-                remove_building = ca_dog_infantery_1
             }
         }
         else = {
