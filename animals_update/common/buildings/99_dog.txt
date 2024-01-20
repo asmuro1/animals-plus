@@ -5,15 +5,15 @@ castle = {
         potential = {
             OR = {
                 has_building = ca_dog_field_1
-                culture = dog_culture
+                culture_group = dog_group
             }
         }
         trigger = {
-            culture = dog_culture
+            culture_group = dog_group
             TECH_CASTLE_CONSTRUCTION = 0
         }
         is_active_trigger = {
-            culture = dog_culture
+            culture_group = dog_group
         }
         prerequisites = { }
 
@@ -31,16 +31,16 @@ castle = {
         potential = {
             OR = {
                 has_building = ca_dog_field_2
-                culture = dog_culture
+                culture_group = dog_group
             }
         }
         trigger = {
-            culture = dog_culture
+            culture_group = dog_group
             TECH_CASTLE_CONSTRUCTION = 1
             TECH_FORTIFICATIONS_CONSTRUCTION = 1
         }
         is_active_trigger = {
-            culture = dog_culture
+            culture_group = dog_group
         }
         prerequisites = { ca_ani_castle_tower_02 }
         # not_if_x_exists = {  }
@@ -60,16 +60,16 @@ castle = {
         potential = {
             OR = {
                 has_building = ca_dog_field_3
-                culture = dog_culture
+                culture_group = dog_group
             }
         }
         trigger = {
-            culture = dog_culture
+            culture_group = dog_group
             TECH_CASTLE_CONSTRUCTION = 3
             TECH_FORTIFICATIONS_CONSTRUCTION = 2
         }
         is_active_trigger = {
-            culture = dog_culture
+            culture_group = dog_group
         }
         prerequisites = { ca_ani_castle_tower_05 }
         # not_if_x_exists = {  }
@@ -89,16 +89,16 @@ castle = {
         potential = {
             OR = {
                 has_building = ca_dog_field_4
-                culture = dog_culture
+                culture_group = dog_group
             }
         }
         trigger = {
-            culture = dog_culture
+            culture_group = dog_group
             TECH_CASTLE_CONSTRUCTION = 6
             TECH_FORTIFICATIONS_CONSTRUCTION = 5
         }
         is_active_trigger = {
-            culture = dog_culture
+            culture_group = dog_group
         }
         prerequisites = { ca_ani_castle_tower_11 }
         # not_if_x_exists = {  }
@@ -119,15 +119,15 @@ castle = {
         potential = {
             OR = {
                 has_building = ca_dog_knights_1
-                culture = dog_culture
+                culture_group = dog_group
             }
         }
         trigger = {
-            culture = dog_culture
+            culture_group = dog_group
             TECH_CASTLE_CONSTRUCTION = 1
         }
         is_active_trigger = {
-            culture = dog_culture
+            culture_group = dog_group
         }
         prerequisites = { ca_ani_castle_tower_01 ca_dog_field_1 }
 
@@ -145,16 +145,16 @@ castle = {
         potential = {
             OR = {
                 has_building = ca_dog_knights_2
-                culture = dog_culture
+                culture_group = dog_group
             }
         }
         trigger = {
-            culture = dog_culture
+            culture_group = dog_group
             TECH_CASTLE_CONSTRUCTION = 2
             TECH_FORTIFICATIONS_CONSTRUCTION = 2
         }
         is_active_trigger = {
-            culture = dog_culture
+            culture_group = dog_group
         }
         prerequisites = { ca_ani_castle_tower_04 ca_dog_field_2 }
         upgrades_from = ca_dog_knights_1
@@ -173,16 +173,16 @@ castle = {
         potential = {
             OR = {
                 has_building = ca_dog_knights_3
-                culture = dog_culture
+                culture_group = dog_group
             }
         }
         trigger = {
-            culture = dog_culture
+            culture_group = dog_group
             TECH_CASTLE_CONSTRUCTION = 5
             TECH_FORTIFICATIONS_CONSTRUCTION = 4
         }
         is_active_trigger = {
-            culture = dog_culture
+            culture_group = dog_group
         }
         prerequisites = { ca_ani_castle_tower_09 ca_dog_field_3 }
         upgrades_from = ca_dog_knights_2
@@ -201,16 +201,16 @@ castle = {
         potential = {
             OR = {
                 has_building = ca_dog_knights_4
-                culture = dog_culture
+                culture_group = dog_group
             }
         }
         trigger = {
-            culture = dog_culture
+            culture_group = dog_group
             TECH_CASTLE_CONSTRUCTION = 7
             TECH_FORTIFICATIONS_CONSTRUCTION = 7
         }
         is_active_trigger = {
-            culture = dog_culture
+            culture_group = dog_group
         }
         prerequisites = { ca_ani_castle_tower_14 ca_dog_field_4 }
         upgrades_from = ca_dog_knights_3
@@ -230,15 +230,15 @@ castle = {
         potential = {
             OR = {
                 has_building = ca_dog_shop_1
-                culture = dog_culture
+                culture_group = dog_group
             }
         }
         trigger = {
-            culture = dog_culture
+            culture_group = dog_group
             TECH_CASTLE_CONSTRUCTION = 0
         }
         is_active_trigger = {
-            culture = dog_culture
+            culture_group = dog_group
         }
         prerequisites = {  }
 
@@ -256,16 +256,16 @@ castle = {
         potential = {
             OR = {
                 has_building = ca_dog_shop_2
-                culture = dog_culture
+                culture_group = dog_group
             }
         }
         trigger = {
-            culture = dog_culture
+            culture_group = dog_group
             TECH_CASTLE_CONSTRUCTION = 1
             TECH_FORTIFICATIONS_CONSTRUCTION = 1
         }
         is_active_trigger = {
-            culture = dog_culture
+            culture_group = dog_group
         }
         prerequisites = { ca_ani_castle_tower_02 }
         upgrades_from = ca_dog_shop_1
@@ -285,16 +285,16 @@ castle = {
         potential = {
             OR = {
                 has_building = ca_dog_stable_2
-                culture = dog_culture
+                culture_group = dog_group
             }
         }
         trigger = {
-            culture = dog_culture
+            culture_group = dog_group
             TECH_CASTLE_CONSTRUCTION = 2
             TECH_FORTIFICATIONS_CONSTRUCTION = 2
         }
         is_active_trigger = {
-            culture = dog_culture
+            culture_group = dog_group
         }
         prerequisites = { ca_ani_castle_tower_04 }
         upgrades_from = ca_dog_shop_2
@@ -315,16 +315,16 @@ castle = {
         potential = {
             OR = {
                 has_building = ca_dog_shop_4
-                culture = dog_culture
+                culture_group = dog_group
             }
         }
         trigger = {
-            culture = dog_culture
+            culture_group = dog_group
             TECH_CASTLE_CONSTRUCTION = 3
             TECH_FORTIFICATIONS_CONSTRUCTION = 3
         }
         is_active_trigger = {
-            culture = dog_culture
+            culture_group = dog_group
         }
         prerequisites = { ca_ani_castle_tower_06 }
         upgrades_from = ca_dog_shop_3
@@ -345,16 +345,16 @@ castle = {
         potential = {
             OR = {
                 has_building = ca_dog_shop_5
-                culture = dog_culture
+                culture_group = dog_group
             }
         }
         trigger = {
-            culture = dog_culture
+            culture_group = dog_group
             TECH_CASTLE_CONSTRUCTION = 4
             TECH_FORTIFICATIONS_CONSTRUCTION = 4
         }
         is_active_trigger = {
-            culture = dog_culture
+            culture_group = dog_group
         }
         prerequisites = { ca_ani_castle_tower_08 }
         upgrades_from = ca_dog_shop_4
@@ -374,16 +374,16 @@ castle = {
         potential = {
             OR = {
                 has_building = ca_dog_shop_6
-                culture = dog_culture
+                culture_group = dog_group
             }
         }
         trigger = {
-            culture = dog_culture
+            culture_group = dog_group
             TECH_CASTLE_CONSTRUCTION = 5
             TECH_FORTIFICATIONS_CONSTRUCTION = 5
         }
         is_active_trigger = {
-            culture = dog_culture
+            culture_group = dog_group
         }
         prerequisites = { ca_ani_castle_tower_10 }
         upgrades_from = ca_dog_shop_5
@@ -404,16 +404,16 @@ castle = {
         potential = {
             OR = {
                 has_building = ca_dog_shop_7
-                culture = dog_culture
+                culture_group = dog_group
             }
         }
         trigger = {
-            culture = dog_culture
+            culture_group = dog_group
             TECH_CASTLE_CONSTRUCTION = 6
             TECH_FORTIFICATIONS_CONSTRUCTION = 6
         }
         is_active_trigger = {
-            culture = dog_culture
+            culture_group = dog_group
         }
         prerequisites = { ca_ani_castle_tower_12 }
         upgrades_from = ca_dog_shop_6
@@ -434,15 +434,15 @@ castle = {
         potential = {
             OR = {
                 has_building = ca_dog_retinue_1
-                culture = dog_culture
+                culture_group = dog_group
             }
         }
         trigger = {
-            culture = dog_culture
+            culture_group = dog_group
             TECH_CASTLE_CONSTRUCTION = 6
         }
         is_active_trigger = {
-            culture = dog_culture
+            culture_group = dog_group
         }
         prerequisites = { ca_ani_castle_tower_03 }
 
@@ -461,15 +461,15 @@ castle = {
         potential = {
             OR = {
                 has_building = ca_dog_retinue_2
-                culture = dog_culture
+                culture_group = dog_group
             }
         }
         trigger = {
-            culture = dog_culture
+            culture_group = dog_group
             TECH_CASTLE_CONSTRUCTION = 7
         }
         is_active_trigger = {
-            culture = dog_culture
+            culture_group = dog_group
         }
         prerequisites = { ca_ani_castle_tower_07 }
         upgrades_from = ca_dog_retinue_1
@@ -489,15 +489,15 @@ castle = {
         potential = {
             OR = {
                 has_building = ca_dog_retinue_3
-                culture = dog_culture
+                culture_group = dog_group
             }
         }
         trigger = {
-            culture = dog_culture
+            culture_group = dog_group
             TECH_CASTLE_CONSTRUCTION = 7
         }
         is_active_trigger = {
-            culture = dog_culture
+            culture_group = dog_group
         }
         prerequisites = { ca_ani_castle_tower_15 }
         upgrades_from = ca_dog_retinue_2
@@ -517,18 +517,18 @@ castle = {
 
         potential = {
             is_capital = yes
-            culture = dog_culture
+            culture_group = dog_group
         }
         trigger = {
-            culture = dog_culture
+            culture_group = dog_group
             TECH_CASTLE_CONSTRUCTION = 4
             TECH_FORTIFICATIONS_CONSTRUCTION = 4
         }
         is_active_trigger = {
             is_capital = yes
             OR = {
-                culture = dog_culture
-                holder_scope = { culture = dog_culture }
+                culture_group = dog_group
+                holder_scope = { culture_group = dog_group }
             }
         }
         prerequisites = { ca_ani_castle_tower_08 }
@@ -548,18 +548,18 @@ castle = {
 
         potential = {
             is_capital = yes
-            culture = dog_culture
+            culture_group = dog_group
         }
         trigger = {
-            culture = dog_culture
+            culture_group = dog_group
             TECH_CASTLE_CONSTRUCTION = 8
             TECH_FORTIFICATIONS_CONSTRUCTION = 8
         }
         is_active_trigger = {
             is_capital = yes
             OR = {
-                culture = dog_culture
-                holder_scope = { culture = dog_culture }
+                culture_group = dog_group
+                holder_scope = { culture_group = dog_group }
             }
         }
         prerequisites = { ca_ani_castle_tower_16 }
