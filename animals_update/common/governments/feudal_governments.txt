@@ -31,13 +31,9 @@ feudal_governments = {
 			NOT = {	religion_group = muslim	}
 			NOT = { is_government_potential = roman_imperial_government }
 			NOT = { is_government_potential = order_government }
-			NOR = {
-				AND = { culture_group = bear_group  religion = Bears_religion }
-				AND = { culture_group = hedgehog_group religion = Hedge_religion }
-				AND = { culture_group = panda_group religion = Panda_religion }
-				AND = { culture_group = duck_group  religion = Duck_religion  }
-				AND = { culture_group = elephant_group religion = Eleph_religion }
-				AND = { culture_group = cat_group religion = Cat_religion }
+			NAND = {
+				Is_really_animal_trigger = yes
+				religion_group = Animals_grups
 			}
 			NAND = {
 				culture_group = tibetan_group
