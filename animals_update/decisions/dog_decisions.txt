@@ -182,12 +182,12 @@ decisions = {
                     }
                 }
             }
-            # if = {
-            #     limit = {
-            #         is_feudal = yes
-            #     }
-            #     set_government_type = 
-            # }
+            if = {
+                limit = {
+                    is_feudal = yes
+                }
+                set_government_type = dog_feudal_gov
+            }
         }
         ai_will_do = {
             factor = 1
