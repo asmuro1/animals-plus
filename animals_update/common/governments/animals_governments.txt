@@ -268,7 +268,6 @@ feudal_governments = {
         builds_with_piety = { TEMPLE }
         builds_with_prestige = { TRIBAL }
     }
-
     dog_feudal_gov = {
         color = { 155 100 193 }
         potential = {
