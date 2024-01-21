@@ -52,4 +52,52 @@ laws = {
             }
         }
     }
+
+    dog_unity_character_conv = {
+        group = dog_unity_laws
+        default = no
+
+        potential = {
+            higher_real_tier_than = baron
+            holder_scope = {
+                government = dog_feudal_gov
+            }
+            is_primary_holder_title = yes
+        }
+        allow = {
+            holder_scope = {
+                NOT = {
+                    custom_tooltip = {
+                        text = dog_tt_unity_recent_change
+                        had_character_flag = {
+                            flag = dog_recent_unity_change
+                            years < 5
+                        }
+                    }
+                }
+                has_regent = no
+            }
+        }
+        revoke_allowed = {
+            NOT = {
+                has_law = dog_unity_price
+            }
+        }
+        ai_will_revoke = {
+            factor = 0
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        pass_effect = {
+            holder_scope = {
+                set_character_flag = dog_recent_unity_change
+            }
+        }
+        effect = {
+            custom_tooltip = {
+                text = dog_tt_allow_character_conversion
+            }
+        }
+    }
 }

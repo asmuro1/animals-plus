@@ -40,6 +40,8 @@ panda_expension_size_huge_desc;Big expension allowed;Grande expension autorisé;;
 dog_unity_laws;Cultural unity;Unité culturel;;;;;;;;;;;;x
 dog_unity_county_conv;County;Comté;;;;;;;;;;;;x
 dog_unity_county_conv_desc;Allow county cultural unity improvment;Permet l'unité culturel au sein d'un comté;;;;;;;;;;;;x
+dog_unity_character_conv;Humans;Humains;;;;;;;;;;;;x
+dog_unity_character_conv_desc;Allow cultural unity in your court;Permet l'unité culturel au sein de votre court;;;;;;;;;;;;x
 
 ##laws tooltip
 ALL_BUREAUCRATIC_VASSAL_UNACCEPTED;All panda bureaucratic vassal now count as vassal;Tous les vassaux bureaucratiques pandas comptent en tant que vassal;;;;;;;;;;;;x
@@ -50,4 +52,5 @@ PANDA_INSTABILITY_FACT_TRIGGER;Did not recently loose autority from instability 
 PANDA_INDEPENDENCE_ELVOLVED;Independences factions now lower vassal acceptance law;Les factions d'indépendance réduisent maintenant le niveau de la loi d'acceptation de vassaux;;;;;;;;;;;;x
 
 dog_tt_unity_recent_change;Did not recently change an unity law;N'a pas récemment changé de loi d'unité;
-dog_tt_allow_county_conversion
+dog_tt_allow_county_conversion;Allow the cultural conversion on counties;Permet la conversion culturel des comtés;;;;;;;;;;;;x
+dog_tt_allow_character_conversion;Allow character transformation into dogs;Permet de transformer des humains en chiens;;;;;;;;;;;;x
