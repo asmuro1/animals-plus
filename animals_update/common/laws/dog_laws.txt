@@ -18,15 +18,15 @@ laws = {
         }
         allow = {
             holder_scope = {
-                NOT = {
-                    custom_tooltip = {
-                        text = dog_tt_unity_recent_change
-                        had_character_flag = {
-                            flag = dog_recent_unity_change
-                            years < 5
-                        }
-                    }
-                }
+                # NOT = { # the game itself impose a limit of 10 years
+                #     custom_tooltip = {
+                #         text = dog_tt_unity_recent_change
+                #         had_character_flag = {
+                #             flag = dog_recent_unity_change
+                #             years < 5
+                #         }
+                #     }
+                # }
                 has_regent = no
             }
         }
@@ -66,15 +66,15 @@ laws = {
         }
         allow = {
             holder_scope = {
-                NOT = {
-                    custom_tooltip = {
-                        text = dog_tt_unity_recent_change
-                        had_character_flag = {
-                            flag = dog_recent_unity_change
-                            years < 5
-                        }
-                    }
-                }
+                # NOT = { # the game itself impose a limit of 10 years
+                #     custom_tooltip = {
+                #         text = dog_tt_unity_recent_change
+                #         had_character_flag = {
+                #             flag = dog_recent_unity_change
+                #             years < 5
+                #         }
+                #     }
+                # }
                 has_regent = no
             }
         }
