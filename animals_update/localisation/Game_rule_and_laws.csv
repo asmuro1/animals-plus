@@ -37,6 +37,10 @@ panda_expension_size_medium_desc;Medium expension allowed;Moyenne expension auto
 panda_expension_size_huge;Big;Grande;;;;;;;;;;;;s
 panda_expension_size_huge_desc;Big expension allowed;Grande expension autorisé;;;;;;;;;;;;x
 
+dog_unity_laws;Cultural unity;Unité culturel;;;;;;;;;;;;x
+dog_unity_county_conv;County;Comté;;;;;;;;;;;;x
+dog_unity_county_conv_desc;Allow county cultural unity improvment;Permet l'unité culturel au sein d'un comté;;;;;;;;;;;;x
+
 ##laws tooltip
 ALL_BUREAUCRATIC_VASSAL_UNACCEPTED;All panda bureaucratic vassal now count as vassal;Tous les vassaux bureaucratiques pandas comptent en tant que vassal;;;;;;;;;;;;x
 PANDA_TT_ALL_BUREAUCRATIC_COUNT_ACCEPTED;Only panda duke and king vassal count as vassal;Seulement les ducs et les rois pandas comptent en tant que vassaux;;;;;;;;;;;;x
@@ -44,3 +48,6 @@ PANDA_TT_ALL_BUREAUCRATIC_VASSAL_ACCEPTED;No panda bureaucratic vassals count in
 PANDA_UNLOCK_INSTABILITY_FACTION;Vassals can create or join instability faction;Les vassaux peuvent créer ou rejoindre les factions d'instabilité;;;;;;;;;;;;x
 PANDA_INSTABILITY_FACT_TRIGGER;Did not recently loose autority from instability faction;N'a pas récemment perdu de l'autorité dû à la faction d'instabilité;;;;;;;;;;;;x
 PANDA_INDEPENDENCE_ELVOLVED;Independences factions now lower vassal acceptance law;Les factions d'indépendance réduisent maintenant le niveau de la loi d'acceptation de vassaux;;;;;;;;;;;;x
+
+dog_tt_unity_recent_change;Did not recently change an unity law;N'a pas récemment changé de loi d'unité;
+dog_tt_allow_county_conversion
