@@ -2014,7 +2014,7 @@ settlement_decisions = {
 
         from_potential = {
             is_in_society = yes
-            society {
+            society = {
                 is_society = cat_intrigue_society
             }
             society_rank = 3

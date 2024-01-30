@@ -54,7 +54,7 @@ PANDA_UNLOCK_INSTABILITY_FACTION;Vassals can create or join instability faction;
 PANDA_INSTABILITY_FACT_TRIGGER;Did not recently loose autority from instability faction;N'a pas récemment perdu de l'autorité dû à la faction d'instabilité;;;;;;;;;;;;x
 PANDA_INDEPENDENCE_ELVOLVED;Independences factions now lower vassal acceptance law;Les factions d'indépendance réduisent maintenant le niveau de la loi d'acceptation de vassaux;;;;;;;;;;;;x
 
-dog_tt_unity_recent_change;Did not recently change an unity law;N'a pas récemment changé de loi d'unité;
+dog_tt_unity_recent_change;Did not recently change an unity law;N'a pas récemment changé de loi d'unité;;;;;;;;;;;;x
 dog_tt_allow_county_conversion;Allow the cultural conversion on counties;Permet la conversion culturel des comtés;;;;;;;;;;;;x
 dog_tt_allow_character_conversion;Allow character transformation into dogs;Permet de transformer des humains en chiens;;;;;;;;;;;;x
 dog_tt_price_cost_conv_reduction;Remove the prestige or wildness cost to unite the country;Retire le coût de prestige ou de sauvegerie pour unifier le domaine;;;;;;;;;;;;x
