@@ -208,3 +208,20 @@ character_event = {
         remove_trait = wounded
     }
 }
+
+## law event
+# event 164: removing unity law on inheritance
+character_event = {
+    id = ani_plus.164
+
+    is_triggered_only = yes
+    hide_window = yes
+
+    immediate = {
+        FROM = {
+            revoke_law = dog_unity_county_conv
+            revoke_law = dog_unity_character_conv
+            revoke_law = dog_unity_reputation_cost
+        }
+    }
+}
