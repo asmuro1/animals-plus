@@ -304,6 +304,8 @@ adopt_dog_religion;Adopt dogs' religion;Adopter la religion des chiens;;;;;;;;;;
 adopt_dog_religion_desc;As a dog, you can freely choose to convert yourself to the associated religion;En tant que chien, tu peux librement choisir de te convertir à la religion associé;;;;;;;;;;;;x
 create_hunting_gards;Form the [d_hunting_gards.GetName];Former les [d_hunting_gards.GetName];;;;;;;;;;;;x
 create_hunting_gards_desc;By using your influence, you can defend your religion with a veteran groups of soldiers;En utilisant mon influence personnel, il est possible de créer une troupe de mercennaires afin de défendre les terres de ma religion;;;;;;;;;;;;x
+promote_county_unity;Promote county unity;Promouvoir l'unité comtale;;;;;;;;;;;;x
+promote_county_unity_desc;Promote unity to convert the county culture;Promouvoir l'unité pour convertir la culture comtale;;;;;;;;;;;;x
 
 ### tooltip
 CREATED_HOLY_ORDER_DOG_TOOLTIP;[d_hunting_gards.GetName] created;[d_hunting_gards.GetName] sont créée;;;;;;;;;;;;x

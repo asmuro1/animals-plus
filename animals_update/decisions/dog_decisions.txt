@@ -307,3 +307,116 @@ decisions = {
         }
     }
 }
+
+title_decisions = {
+    promote_county_unity = {
+        is_high_prio = no
+        ai_check_interval = 11
+
+        filter = owned
+        ai_target_filter = owned
+
+        potential = {
+            tier = COUNT
+            FROM = {
+                culture_group = dog_group
+                religion = Dog_religion
+                has_law = dog_unity_county_conv
+            }
+            location = {
+                NOT = {
+                    culture = FROM
+                }
+            }
+            holder_scope = {
+                OR = {
+                    character = FROM
+                    is_vassal_or_below_of = FROM
+                }
+            }
+        }
+        allow = {
+            FROM = {
+                has_regent = no
+                OR = {
+                    prestige = 300
+                    has_law = dog_unity_reputation_cost
+                }
+                OR = {
+                    religion_authority = 0.15
+                    conditional_tooltip = {
+                        trigger = {
+                            culture = dog_culture
+                        }
+                        c_reggio = {
+                            holder_scope = { religion = Dog_religion }
+                        }
+                    }
+                    conditional_tooltip = {
+                        trigger = {
+                            culture = steppe_dog    
+                        }
+                        c_sarkel = {
+                            holder_scope = { religion = Dog_religion }
+                        }
+                    }
+                }
+            }
+        }
+
+        effect = {
+            location = {
+                culture = FROM
+            }
+            FROM = {
+                if = {
+                    limit = {
+                        NOT = {
+                           has_law = dog_unity_reputation_cost
+                        }
+                    }
+                    prestige = -300
+                }
+                if = {
+                    limit = {
+                        OR = {
+                            AND = {
+                                culture = dog_culture
+                                NOT = {
+                                    c_reggio = {
+                                        holder_scope = { religion = Dog_religion }
+                                    }
+                                }
+                            }
+                            AND = {
+                                culture = steppe_dog
+                                NOT = {
+                                    c_sarkel = {
+                                        holder_scope = { religion = Dog_religion }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    religion_authority = {
+                        name = dog_rel_unity_penality
+                        months = 30
+                    }
+                }
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0.25
+                
+                holder_scope = {
+                    NOT = { character = FROM }
+                }
+            }
+        }
+    }
+}

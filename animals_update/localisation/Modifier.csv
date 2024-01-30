@@ -204,3 +204,8 @@ cat_forced_alliance;Forced alliance;Alliance forcé;;;;;;;;;;;;x
 
 #holding modifier
 cat_controlled_holding;Controlled by cats;Contrôlé par des chats;;;;;;;;;;;;x
+
+##### dog modifier
+
+#religion modifier
+dog_rel_unity_penality;Forced conversion;Conversion forcé;;;;;;;;;;;;x
