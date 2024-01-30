@@ -96,4 +96,39 @@ laws = {
             }
         }
     }
+
+    dog_unity_reputation_cost = {
+        group = dog_unity_laws
+        default = no
+
+        potential = {
+            higher_real_tier_than = baron
+            holder_scope = {
+                government = dog_feudal_gov
+            }
+            is_primary_holder_title = yes
+        }
+        allow = {
+            holder_scope = {
+                has_regent = no
+            }
+        }
+        revoke_allowed = {
+            always = no
+        }
+        ai_will_revoke = {
+            always = no
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        pass_effect = {
+            # nothing
+        }
+        effect = {
+            custom_tooltip = {
+                text = dog_tt_price_cost_conv_reduction
+            }
+        }
+    }
 }
