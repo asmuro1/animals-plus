@@ -306,6 +306,8 @@ create_hunting_gards;Form the [d_hunting_gards.GetName];Former les [d_hunting_ga
 create_hunting_gards_desc;By using your influence, you can defend your religion with a veteran groups of soldiers;En utilisant mon influence personnel, il est possible de créer une troupe de mercennaires afin de défendre les terres de ma religion;;;;;;;;;;;;x
 promote_county_unity;Promote county unity;Promouvoir l'unité comtale;;;;;;;;;;;;x
 promote_county_unity_desc;Promote unity to convert the county culture;Promouvoir l'unité pour convertir la culture comtale;;;;;;;;;;;;x
+promote_character_unity;Impose unity;Imposer l'unité;;;;;;;;;;;;x
+promote_character_unity_desc;Impose your unity on someone, transforming him into a dog;Imposer l'unité culturel à quelqu'un, le transformant ainsi en chien;;;;;;;;;;;;x
 
 ### tooltip
 CREATED_HOLY_ORDER_DOG_TOOLTIP;[d_hunting_gards.GetName] created;[d_hunting_gards.GetName] sont créée;;;;;;;;;;;;x

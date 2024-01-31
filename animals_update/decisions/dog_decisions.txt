@@ -420,3 +420,107 @@ title_decisions = {
         }
     }
 }
+
+targetted_decisions = {
+    promote_character_unity = {
+        is_high_prio = no
+        ai_check_interval = 11
+
+        filter = sub_realm
+        ai_target_filter = vassals
+
+        potential = {
+            FROM = {
+                culture_group = dog_group
+                religion = Dog_religion
+                has_law = dog_unity_character_conv
+            }
+            NOT = {
+                culture = FROM
+            }
+        }
+        allow = {
+            is_adult = yes
+            FROM = {
+                has_regent = no
+                OR = {
+                    piety = 190
+                    has_law = dog_unity_reputation_cost
+                }
+                OR = {
+                    religion_authority = 0.07
+                    conditional_tooltip = {
+                        trigger = {
+                            culture = dog_culture
+                        }
+                        c_st_gallen = {
+                            holder_scope = { religion = Dog_religion }
+                        }
+                    }
+                    conditional_tooltip = {
+                        trigger = {
+                            culture = steppe_dog    
+                        }
+                        c_peresechen = {
+                            holder_scope = { religion = Dog_religion }
+                        }
+                    }
+                }
+            }
+        }
+
+        effect = {
+            culture = FROM
+
+            FROM = {
+                if = {
+                    limit = {
+                        NOT = {
+                           has_law = dog_unity_reputation_cost
+                        }
+                    }
+                    piety = -190
+                }
+                if = {
+                    limit = {
+                        OR = {
+                            AND = {
+                                culture = dog_culture
+                                NOT = {
+                                    c_st_gallen = {
+                                        holder_scope = { religion = Dog_religion }
+                                    }
+                                }
+                            }
+                            AND = {
+                                culture = steppe_dog
+                                NOT = {
+                                    c_peresechen = {
+                                        holder_scope = { religion = Dog_religion }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    religion_authority = {
+                        name = dog_rel_unity_penality
+                        months = 30
+                    }
+                }
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0.25
+                
+                holder_scope = {
+                    NOT = { character = FROM }
+                }
+            }
+        }
+    }
+}
