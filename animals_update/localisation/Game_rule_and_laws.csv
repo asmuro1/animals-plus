@@ -45,6 +45,12 @@ dog_unity_character_conv;Humans;Humains;;;;;;;;;;;;x
 dog_unity_character_conv_desc;Allow cultural unity in your court;Permet l'unité culturel au sein de votre court;;;;;;;;;;;;x
 dog_unity_reputation_cost;Price;Prix;;;;;;;;;;;;x
 dog_unity_reputation_cost_desc;Allow to force unity without using prestige or wildness;Permet d'unir le peuple sans utiliser de prestige ou de piété;;;;;;;;;;;;x
+dog_political_laws;political interest;Intérêt politique;;;;;;;;;;;;x
+dog_political_laws_desc;This law characterize the politic focus a dog noble put in ruling;Cette lois caractérise l'implication politique du chien dirigeant;;;;;;;;;;;;x
+dog_economic_laws;economic interest;Intérêt économique;;;;;;;;;;;;x
+dog_economic_laws_desc;This law characterize the economic focus a dog noble put in ruling;Cette lois caractérise l'implication économique du chien dirigeant;;;;;;;;;;;;x
+dog_war_laws;military interest;Intérêt militaire;;;;;;;;;;;;x
+dog_war_laws_desc;This law characterize the military focus a dog noble put in ruling;Cette lois caractérise l'implication militaire du chien dirigeant;;;;;;;;;;;;x
 
 ##laws tooltip
 ALL_BUREAUCRATIC_VASSAL_UNACCEPTED;All panda bureaucratic vassal now count as vassal;Tous les vassaux bureaucratiques pandas comptent en tant que vassal;;;;;;;;;;;;x

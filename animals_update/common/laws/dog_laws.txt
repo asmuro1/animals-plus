@@ -2,6 +2,16 @@ law_groups = {
     dog_unity_laws = {
         law_type = realm
     }
+
+    dog_political_laws = {
+        law_type = realm
+    }
+    dog_economic_laws = {
+        law_type = realm
+    }
+    dog_war_laws = {
+        law_type = realm
+    }
 }
 
 laws = {
@@ -131,4 +141,6 @@ laws = {
             }
         }
     }
+
+    
 }
