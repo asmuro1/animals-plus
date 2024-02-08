@@ -52,6 +52,17 @@ dog_economic_laws_desc;This law characterize the economic focus a dog noble put 
 dog_war_laws;military interest;Intérêt militaire;;;;;;;;;;;;x
 dog_war_laws_desc;This law characterize the military focus a dog noble put in ruling;Cette lois caractérise l'implication militaire du chien dirigeant;;;;;;;;;;;;x
 
+dog_law_politic_0;minimal;minime;;;;;;;;;;;;x
+dog_law_politic_0_desc; ;;;;;;;;;;;;;x
+dog_law_politic_1;small;petite;;;;;;;;;;;;x
+dog_law_politic_1_desc; ;;;;;;;;;;;;;x
+dog_law_politic_2;normal;normal;;;;;;;;;;;;x
+dog_law_politic_2_desc; ;;;;;;;;;;;;;x
+dog_law_politic_3;high;élevé;;;;;;;;;;;;x
+dog_law_politic_3_desc; ;;;;;;;;;;;;;x
+dog_law_politic_4;important;important;;;;;;;;;;;;x
+dog_law_politic_4_desc; ;;;;;;;;;;;;;x
+
 ##laws tooltip
 ALL_BUREAUCRATIC_VASSAL_UNACCEPTED;All panda bureaucratic vassal now count as vassal;Tous les vassaux bureaucratiques pandas comptent en tant que vassal;;;;;;;;;;;;x
 PANDA_TT_ALL_BUREAUCRATIC_COUNT_ACCEPTED;Only panda duke and king vassal count as vassal;Seulement les ducs et les rois pandas comptent en tant que vassaux;;;;;;;;;;;;x
