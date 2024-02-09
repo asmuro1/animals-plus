@@ -572,5 +572,218 @@ laws = {
         castle_vassal_tax_modifier = 0.35
     }
 
-    
+    dog_law_war_0 = {
+        group = dog_war_laws
+        default = no
+
+        potential = {
+            higher_real_tier_than = baron
+            holder_scope = {
+                culture_group = dog_group
+            }
+            is_primary_holder_title = yes
+        }
+        allow = {
+            holder_scope = {
+                has_regent = no
+            }
+            NOR = {
+                has_law = dog_law_war_2
+                has_law = dog_law_war_3
+                has_law = dog_law_war_4
+            }
+        }
+        revoke_allowed = {
+            always = no
+        }
+        ai_will_revoke = {
+            always = no
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        pass_effect = {
+            # nothing
+        }
+        effect = {
+            hidden_tooltip = {
+                revoke_law = dog_law_war_1
+                revoke_law = dog_law_war_2
+                revoke_law = dog_law_war_3
+                revoke_law = dog_law_war_4
+            }
+        }
+
+        global_levy_size = -0.75
+        levy_reinforce_rate = -0.50
+    }
+    dog_law_war_1 = {
+        group = dog_war_laws
+        default = no
+
+        potential = {
+            higher_real_tier_than = baron
+            holder_scope = {
+                culture_group = dog_group
+            }
+            is_primary_holder_title = yes
+        }
+        allow = {
+            holder_scope = {
+                has_regent = no
+            }
+            OR = {
+                has_law = dog_law_war_0
+                has_law = dog_law_war_2
+            }
+        }
+        revoke_allowed = {
+            always = no
+        }
+        ai_will_revoke = {
+            always = no
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        pass_effect = {
+            # nothing
+        }
+        effect = {
+            hidden_tooltip = {
+                revoke_law = dog_law_war_0
+                revoke_law = dog_law_war_2
+                revoke_law = dog_law_war_3
+                revoke_law = dog_law_war_4
+            }
+        }
+
+        global_levy_size = -0.25
+        levy_reinforce_rate = -0.10
+    }
+    dog_law_war_2 = {
+        group = dog_war_laws
+        default = no
+
+        potential = {
+            higher_real_tier_than = baron
+            holder_scope = {
+                culture_group = dog_group
+            }
+            is_primary_holder_title = yes
+        }
+        allow = {
+            holder_scope = {
+                has_regent = no
+            }
+            OR = {
+                has_law = dog_law_war_1
+                has_law = dog_law_war_3
+            }
+        }
+        revoke_allowed = {
+            always = no
+        }
+        ai_will_revoke = {
+            always = no
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        pass_effect = {
+            # nothing
+        }
+        effect = {
+            hidden_tooltip = {
+                revoke_law = dog_law_war_0
+                revoke_law = dog_law_war_1
+                revoke_law = dog_law_war_3
+                revoke_law = dog_law_war_4
+            }
+        }
+    }
+    dog_law_war_3 = {
+        group = dog_war_laws
+        default = no
+
+        potential = {
+            higher_real_tier_than = baron
+            holder_scope = {
+                culture_group = dog_group
+            }
+            is_primary_holder_title = yes
+        }
+        allow = {
+            holder_scope = {
+                has_regent = no
+            }
+            OR = {
+                has_law = dog_law_war_2
+                has_law = dog_law_war_4
+            }
+        }
+        revoke_allowed = {
+            always = no
+        }
+        ai_will_revoke = {
+            always = no
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        pass_effect = {
+            # nothing
+        }
+        effect = {
+            hidden_tooltip = {
+                revoke_law = dog_law_war_0
+                revoke_law = dog_law_war_1
+                revoke_law = dog_law_war_2
+                revoke_law = dog_law_war_4
+            }
+        }
+        global_levy_size = -0.25
+        levy_reinforce_rate = -0.05
+    }
+    dog_law_war_4 = {
+        group = dog_war_laws
+        default = no
+
+        potential = {
+            higher_real_tier_than = baron
+            holder_scope = {
+                culture_group = dog_group
+            }
+            is_primary_holder_title = yes
+        }
+        allow = {
+            holder_scope = {
+                has_regent = no
+            }
+            
+            has_law = dog_law_war_3
+        }
+        revoke_allowed = {
+            always = no
+        }
+        ai_will_revoke = {
+            always = no
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        pass_effect = {
+            # nothing
+        }
+        effect = {
+            hidden_tooltip = {
+                revoke_law = dog_law_war_0
+                revoke_law = dog_law_war_1
+                revoke_law = dog_law_war_2
+                revoke_law = dog_law_war_3
+            }
+        }
+        global_levy_size = -0.60
+        levy_reinforce_rate = -0.25
+    }
 }

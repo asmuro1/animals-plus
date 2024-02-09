@@ -72,6 +72,16 @@ dog_law_economic_3;high;élevé;;;;;;;;;;;;x
 dog_law_economic_3_desc; ;;;;;;;;;;;;;x
 dog_law_economic_4;important;important;;;;;;;;;;;;x
 dog_law_economic_4_desc; ;;;;;;;;;;;;;x
+dog_law_war_0;minimal;minime;;;;;;;;;;;;x
+dog_law_war_0_desc; ;;;;;;;;;;;;;x
+dog_law_war_1;small;petite;;;;;;;;;;;;x
+dog_law_war_1_desc; ;;;;;;;;;;;;;x
+dog_law_war_2;normal;normal;;;;;;;;;;;;x
+dog_law_war_2_desc; ;;;;;;;;;;;;;x
+dog_law_war_3;high;élevé;;;;;;;;;;;;x
+dog_law_war_3_desc; ;;;;;;;;;;;;;x
+dog_law_war_4;important;important;;;;;;;;;;;;x
+dog_law_war_4_desc; ;;;;;;;;;;;;;x
 
 ##laws tooltip
 ALL_BUREAUCRATIC_VASSAL_UNACCEPTED;All panda bureaucratic vassal now count as vassal;Tous les vassaux bureaucratiques pandas comptent en tant que vassal;;;;;;;;;;;;x
