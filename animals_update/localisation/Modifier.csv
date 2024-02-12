@@ -209,3 +209,6 @@ cat_controlled_holding;Controlled by cats;Contrôlé par des chats;;;;;;;;;;;;x
 
 #religion modifier
 dog_rel_unity_penality;Forced conversion;Conversion forcé;;;;;;;;;;;;x
+
+# custom modifier
+dog_interest_implication;governance implication;implication du dirigeant;;;;;;;;;;;;x
