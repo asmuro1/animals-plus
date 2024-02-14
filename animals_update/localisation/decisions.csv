@@ -311,3 +311,4 @@ promote_character_unity_desc;Impose your unity on someone, transforming him into
 
 ### tooltip
 CREATED_HOLY_ORDER_DOG_TOOLTIP;[d_hunting_gards.GetName] created;[d_hunting_gards.GetName] sont créée;;;;;;;;;;;;x
+dog_tt_cant_have_4_implication;Do not have §Y4§! or more implication in governance;Ne peut pas avoir §Y4§! ou plus d'implication;;;;;;;;;;;;x

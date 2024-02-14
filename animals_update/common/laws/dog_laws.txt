@@ -230,7 +230,6 @@ laws = {
 
         vassal_opinion = -20
         general_opinion = -10
-        dog_interest_implication = 1
     }
     dog_law_politic_2 = {
         group = dog_political_laws
@@ -250,6 +249,9 @@ laws = {
             OR = {
                 has_law = dog_law_politic_1
                 has_law = dog_law_politic_3
+            }
+            custom_tooltip = {
+                text = dog_tt_cant_have_4_implication
             }
         }
         revoke_allowed = {
@@ -272,7 +274,7 @@ laws = {
                 revoke_law = dog_law_politic_4
             }
         }
-        dog_interest_implication = 3
+        dog_interest_implication = 1
     }
     dog_law_politic_3 = {
         group = dog_political_laws
@@ -292,6 +294,9 @@ laws = {
             OR = {
                 has_law = dog_law_politic_2
                 has_law = dog_law_politic_4
+            }
+            custom_tooltip = {
+                text = dog_tt_cant_have_4_implication
             }
         }
         revoke_allowed = {
@@ -316,7 +321,7 @@ laws = {
         }
         vassal_opinion = 15
         general_opinion = 5
-        dog_interest_implication = 5
+        dog_interest_implication = 2
     }
     dog_law_politic_4 = {
         group = dog_political_laws
@@ -335,6 +340,9 @@ laws = {
             }
             
             has_law = dog_law_politic_3
+            custom_tooltip = {
+                text = dog_tt_cant_have_4_implication
+            }
         }
         revoke_allowed = {
             always = no
@@ -358,7 +366,7 @@ laws = {
         }
         vassal_opinion = 20
         general_opinion = 15
-        dog_interest_implication = 7
+        dog_interest_implication = 3
     }
 
     dog_law_economic_0 = {
@@ -449,7 +457,6 @@ laws = {
 
         global_tax_modifier = -0.40
         castle_vassal_tax_modifier = -0.225
-        dog_interest_implication = 1
     }
     dog_law_economic_2 = {
         group = dog_economic_laws
@@ -469,6 +476,9 @@ laws = {
             OR = {
                 has_law = dog_law_economic_1
                 has_law = dog_law_economic_3
+            }
+            custom_tooltip = {
+                text = dog_tt_cant_have_4_implication
             }
         }
         revoke_allowed = {
@@ -491,7 +501,7 @@ laws = {
                 revoke_law = dog_law_economic_4
             }
         }
-        dog_interest_implication = 3
+        dog_interest_implication = 1
     }
     dog_law_economic_3 = {
         group = dog_economic_laws
@@ -511,6 +521,9 @@ laws = {
             OR = {
                 has_law = dog_law_economic_2
                 has_law = dog_law_economic_4
+            }
+            custom_tooltip = {
+                text = dog_tt_cant_have_4_implication
             }
         }
         revoke_allowed = {
@@ -535,7 +548,7 @@ laws = {
         }
         global_tax_modifier = 0.25
         castle_vassal_tax_modifier = 0.1
-        dog_interest_implication = 5
+        dog_interest_implication = 2
     }
     dog_law_economic_4 = {
         group = dog_economic_laws
@@ -554,6 +567,9 @@ laws = {
             }
             
             has_law = dog_law_economic_3
+            custom_tooltip = {
+                text = dog_tt_cant_have_4_implication
+            }
         }
         revoke_allowed = {
             always = no
@@ -577,7 +593,7 @@ laws = {
         }
         global_tax_modifier = 0.65
         castle_vassal_tax_modifier = 0.35
-        dog_interest_implication = 7
+        dog_interest_implication = 3
     }
 
     dog_law_war_0 = {
@@ -668,7 +684,6 @@ laws = {
 
         global_levy_size = -0.25
         levy_reinforce_rate = -0.10
-        dog_interest_implication = 1
     }
     dog_law_war_2 = {
         group = dog_war_laws
@@ -688,6 +703,9 @@ laws = {
             OR = {
                 has_law = dog_law_war_1
                 has_law = dog_law_war_3
+            }
+            custom_tooltip = {
+                text = dog_tt_cant_have_4_implication
             }
         }
         revoke_allowed = {
@@ -710,7 +728,7 @@ laws = {
                 revoke_law = dog_law_war_4
             }
         }
-        dog_interest_implication = 3
+        dog_interest_implication = 1
     }
     dog_law_war_3 = {
         group = dog_war_laws
@@ -730,6 +748,9 @@ laws = {
             OR = {
                 has_law = dog_law_war_2
                 has_law = dog_law_war_4
+            }
+            custom_tooltip = {
+                text = dog_tt_cant_have_4_implication
             }
         }
         revoke_allowed = {
@@ -754,7 +775,7 @@ laws = {
         }
         global_levy_size = -0.25
         levy_reinforce_rate = -0.05
-        dog_interest_implication = 5
+        dog_interest_implication = 2
     }
     dog_law_war_4 = {
         group = dog_war_laws
@@ -773,6 +794,9 @@ laws = {
             }
             
             has_law = dog_law_war_3
+            custom_tooltip = {
+                text = dog_tt_cant_have_4_implication
+            }
         }
         revoke_allowed = {
             always = no
@@ -796,6 +820,6 @@ laws = {
         }
         global_levy_size = -0.60
         levy_reinforce_rate = -0.25
-        dog_interest_implication = 7
+        dog_interest_implication = 3
     }
 }
