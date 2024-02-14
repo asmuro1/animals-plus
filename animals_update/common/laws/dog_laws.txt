@@ -162,6 +162,12 @@ laws = {
                 has_law = dog_law_politic_3
                 has_law = dog_law_politic_4
             }
+            holder_scope = {
+                OR = {
+                    government = dog_feudal_gov
+                    is_tribal = yes
+                }
+            }
         }
         revoke_allowed = {
             always = no
@@ -212,6 +218,13 @@ laws = {
                 OR = {
                     has_law = dog_law_war_0
                     has_law = dog_law_economic_0
+                }
+            }
+
+            holder_scope = {
+                OR = {
+                    government = dog_feudal_gov
+                    is_tribal = yes
                 }
             }
         }
@@ -282,6 +295,13 @@ laws = {
                     }
                 }
             }
+
+            holder_scope = {
+                OR = {
+                    government = dog_feudal_gov
+                    is_tribal = yes
+                }
+            }
         }
         revoke_allowed = {
             always = no
@@ -346,6 +366,9 @@ laws = {
                     }
                 }
             }
+            holder_scope = {
+                government = dog_feudal_gov
+            }
         }
         revoke_allowed = {
             always = no
@@ -404,6 +427,9 @@ laws = {
                     }
                 }
             }
+            holder_scope = {
+                government = dog_feudal_gov
+            }
         }
         revoke_allowed = {
             always = no
@@ -449,6 +475,12 @@ laws = {
                 has_law = dog_law_economic_2
                 has_law = dog_law_economic_3
                 has_law = dog_law_economic_4
+            }
+            holder_scope = {
+                OR = {
+                    government = dog_feudal_gov
+                    is_tribal = yes
+                }
             }
         }
         revoke_allowed = {
@@ -500,6 +532,12 @@ laws = {
                 OR = {
                     has_law = dog_law_politic_0
                     has_law = dog_law_war_0
+                }
+            }
+            holder_scope = {
+                OR = {
+                    government = dog_feudal_gov
+                    is_tribal = yes
                 }
             }
         }
@@ -568,6 +606,12 @@ laws = {
                     }
                 }
             }
+            holder_scope = {
+                OR = {
+                    government = dog_feudal_gov
+                    is_tribal = yes
+                }
+            }
         }
         revoke_allowed = {
             always = no
@@ -632,6 +676,9 @@ laws = {
                     }
                 }
             }
+            holder_scope = {
+                government = dog_feudal_gov
+            }
         }
         revoke_allowed = {
             always = no
@@ -690,6 +737,9 @@ laws = {
                     }
                 }
             }
+            holder_scope = {
+                government = dog_feudal_gov
+            }
         }
         revoke_allowed = {
             always = no
@@ -735,6 +785,12 @@ laws = {
                 has_law = dog_law_war_2
                 has_law = dog_law_war_3
                 has_law = dog_law_war_4
+            }
+            holder_scope = {
+                OR = {
+                    government = dog_feudal_gov
+                    is_tribal = yes
+                }
             }
         }
         revoke_allowed = {
@@ -785,6 +841,12 @@ laws = {
                 OR = {
                     has_law = dog_law_politic_0
                     has_law = dog_law_economic_0
+                }
+            }
+            holder_scope = {
+                OR = {
+                    government = dog_feudal_gov
+                    is_tribal = yes
                 }
             }
         }
@@ -853,6 +915,12 @@ laws = {
                     }
                 }
             }
+            holder_scope = {
+                OR = {
+                    government = dog_feudal_gov
+                    is_tribal = yes
+                }
+            }
         }
         revoke_allowed = {
             always = no
@@ -917,6 +985,9 @@ laws = {
                     }
                 }
             }
+            holder_scope = {
+                government = dog_feudal_gov
+            }
         }
         revoke_allowed = {
             always = no
@@ -974,6 +1045,9 @@ laws = {
                         has_law = dog_law_politic_2
                     }
                 }
+            }
+            holder_scope = {
+                government = dog_feudal_gov
             }
         }
         revoke_allowed = {
