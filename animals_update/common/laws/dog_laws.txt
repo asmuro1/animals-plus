@@ -233,7 +233,7 @@ laws = {
     }
     dog_law_politic_2 = {
         group = dog_political_laws
-        default = no
+        default = yes
 
         potential = {
             higher_real_tier_than = baron
@@ -250,8 +250,29 @@ laws = {
                 has_law = dog_law_politic_1
                 has_law = dog_law_politic_3
             }
+
+            # can't have a sum of +3 implication with other laws
             custom_tooltip = {
                 text = dog_tt_cant_have_4_implication
+                NOR = {
+                    # no 2 +2 laws
+                    AND = {
+                        has_law = dog_law_economic_3
+                        has_law = dog_law_war_3
+                    }
+
+                    # no 1 +3 law and 1 +1 law
+                    AND = {
+                        OR = {
+                            has_law = dog_law_economic_2
+                            has_law = dog_law_war_2
+                        }
+                        OR = {
+                            has_law = dog_law_economic_4
+                            has_law = dog_law_war_4
+                        }
+                    }
+                }
             }
         }
         revoke_allowed = {
@@ -297,6 +318,25 @@ laws = {
             }
             custom_tooltip = {
                 text = dog_tt_cant_have_4_implication
+                
+                # can't have a sum of +3 implication with other laws
+                NOR = {
+                    # no +3 laws
+                    has_law = dog_law_economic_4
+                    has_law = dog_law_war_4
+
+                    # no 1 +1 and 1 +2
+                    AND = {
+                        OR = {
+                            has_law = dog_law_economic_2
+                            has_law = dog_law_war_2
+                        }
+                        OR = {
+                            has_law = dog_law_economic_3
+                            has_law = dog_law_war_3
+                        }
+                    }
+                }
             }
         }
         revoke_allowed = {
@@ -342,6 +382,19 @@ laws = {
             has_law = dog_law_politic_3
             custom_tooltip = {
                 text = dog_tt_cant_have_4_implication
+
+                # can't have a +2 sum of implication lvl 
+                NOR = {
+                    # no +2 law
+                    has_law = dog_law_economic_3
+                    has_law = dog_law_war_3
+
+                    # no 2 +1 law
+                    AND = {
+                        has_law = dog_law_economic_2
+                        has_law = dog_law_war_2
+                    }
+                }
             }
         }
         revoke_allowed = {
