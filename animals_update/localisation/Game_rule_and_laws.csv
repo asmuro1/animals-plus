@@ -52,35 +52,35 @@ dog_economic_laws_desc;This law characterize the economic focus a dog noble put 
 dog_war_laws;military interest;Intérêt militaire;;;;;;;;;;;;x
 dog_war_laws_desc;This law characterize the military focus a dog noble put in ruling;Cette lois caractérise l'implication militaire du chien dirigeant;;;;;;;;;;;;x
 
-dog_law_politic_0;minimal;minime;;;;;;;;;;;;x
+dog_law_politic_0;Minimal;Minime;;;;;;;;;;;;x
 dog_law_politic_0_desc; ;;;;;;;;;;;;;x
-dog_law_politic_1;small;petite;;;;;;;;;;;;x
+dog_law_politic_1;Small;Petite;;;;;;;;;;;;x
 dog_law_politic_1_desc; ;;;;;;;;;;;;;x
-dog_law_politic_2;normal;normal;;;;;;;;;;;;x
+dog_law_politic_2;Normal;Normal;;;;;;;;;;;;x
 dog_law_politic_2_desc; ;;;;;;;;;;;;;x
-dog_law_politic_3;high;élevé;;;;;;;;;;;;x
+dog_law_politic_3;High;Élevé;;;;;;;;;;;;x
 dog_law_politic_3_desc; ;;;;;;;;;;;;;x
-dog_law_politic_4;important;important;;;;;;;;;;;;x
+dog_law_politic_4;Important;Important;;;;;;;;;;;;x
 dog_law_politic_4_desc; ;;;;;;;;;;;;;x
-dog_law_economic_0;minimal;minime;;;;;;;;;;;;x
+dog_law_economic_0;Minimal;Minime;;;;;;;;;;;;x
 dog_law_economic_0_desc; ;;;;;;;;;;;;;x
-dog_law_economic_1;small;petite;;;;;;;;;;;;x
+dog_law_economic_1;Small;Petite;;;;;;;;;;;;x
 dog_law_economic_1_desc; ;;;;;;;;;;;;;x
-dog_law_economic_2;normal;normal;;;;;;;;;;;;x
+dog_law_economic_2;Normal;Normal;;;;;;;;;;;;x
 dog_law_economic_2_desc; ;;;;;;;;;;;;;x
-dog_law_economic_3;high;élevé;;;;;;;;;;;;x
+dog_law_economic_3;High;Élevé;;;;;;;;;;;;x
 dog_law_economic_3_desc; ;;;;;;;;;;;;;x
-dog_law_economic_4;important;important;;;;;;;;;;;;x
+dog_law_economic_4;Important;Important;;;;;;;;;;;;x
 dog_law_economic_4_desc; ;;;;;;;;;;;;;x
-dog_law_war_0;minimal;minime;;;;;;;;;;;;x
+dog_law_war_0;Minimal;Minime;;;;;;;;;;;;x
 dog_law_war_0_desc; ;;;;;;;;;;;;;x
-dog_law_war_1;small;petite;;;;;;;;;;;;x
+dog_law_war_1;Small;Petite;;;;;;;;;;;;x
 dog_law_war_1_desc; ;;;;;;;;;;;;;x
-dog_law_war_2;normal;normal;;;;;;;;;;;;x
+dog_law_war_2;Normal;Normal;;;;;;;;;;;;x
 dog_law_war_2_desc; ;;;;;;;;;;;;;x
-dog_law_war_3;high;élevé;;;;;;;;;;;;x
+dog_law_war_3;High;Élevé;;;;;;;;;;;;x
 dog_law_war_3_desc; ;;;;;;;;;;;;;x
-dog_law_war_4;important;important;;;;;;;;;;;;x
+dog_law_war_4;Important;Important;;;;;;;;;;;;x
 dog_law_war_4_desc; ;;;;;;;;;;;;;x
 
 ##laws tooltip
@@ -95,3 +95,5 @@ dog_tt_unity_recent_change;Did not recently change an unity law;N'a pas récemmen
 dog_tt_allow_county_conversion;Allow the cultural conversion on counties;Permet la conversion culturel des comtés;;;;;;;;;;;;x
 dog_tt_allow_character_conversion;Allow character transformation into dogs;Permet de transformer des humains en chiens;;;;;;;;;;;;x
 dog_tt_price_cost_conv_reduction;Remove the prestige or wildness cost to unite the country;Retire le coût de prestige ou de sauvegerie pour unifier le domaine;;;;;;;;;;;;x
+dog_tt_cant_have_4_implication;Do not have §Y4§! or more implication in governance;Ne peut pas avoir §Y4§! ou plus d'implication;;;;;;;;;;;;x
+dog_tt_canot_be_implicated_inall_law;Can't be implicated in more than §Y2§! interest;Ne peut pas être impliqué dans plus de §Y2§! intérêts;;;;;;;;;;;;x

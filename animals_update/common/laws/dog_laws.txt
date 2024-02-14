@@ -206,6 +206,14 @@ laws = {
                 has_law = dog_law_politic_0
                 has_law = dog_law_politic_2
             }
+
+            custom_tooltip = {
+                text = dog_tt_canot_be_implicated_inall_law
+                OR = {
+                    has_law = dog_law_war_0
+                    has_law = dog_law_economic_0
+                }
+            }
         }
         revoke_allowed = {
             always = no
@@ -486,6 +494,14 @@ laws = {
                 has_law = dog_law_economic_0
                 has_law = dog_law_economic_2
             }
+
+            custom_tooltip = {
+                text = dog_tt_canot_be_implicated_inall_law
+                OR = {
+                    has_law = dog_law_politic_0
+                    has_law = dog_law_war_0
+                }
+            }
         }
         revoke_allowed = {
             always = no
@@ -763,6 +779,13 @@ laws = {
             OR = {
                 has_law = dog_law_war_0
                 has_law = dog_law_war_2
+            }
+            custom_tooltip = {
+                text = dog_tt_canot_be_implicated_inall_law
+                OR = {
+                    has_law = dog_law_politic_0
+                    has_law = dog_law_economic_0
+                }
             }
         }
         revoke_allowed = {
