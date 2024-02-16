@@ -177,6 +177,11 @@ laws = {
         }
         ai_will_do = {
             factor = 1
+
+            modifier = {
+                factor = 0
+                has_law = dog_law_politic_1
+            }
         }
         pass_effect = {
             # nothing
@@ -236,6 +241,11 @@ laws = {
         }
         ai_will_do = {
             factor = 1
+
+            modifier = {
+                factor = 0
+                has_law = dog_law_politic_2
+            }
         }
         pass_effect = {
             # nothing
@@ -311,6 +321,11 @@ laws = {
         }
         ai_will_do = {
             factor = 1
+            
+            modifier = {
+                factor = 0
+                has_law = dog_law_politic_3
+            }
         }
         pass_effect = {
             # nothing
@@ -378,6 +393,11 @@ laws = {
         }
         ai_will_do = {
             factor = 1
+
+            modifier = {
+                factor = 0
+                has_law = dog_law_politic_4
+            }
         }
         pass_effect = {
             # nothing
@@ -491,6 +511,11 @@ laws = {
         }
         ai_will_do = {
             factor = 1
+
+            modifier = {
+                factor = 0
+                has_law = dog_law_economic_1
+            }
         }
         pass_effect = {
             # nothing
@@ -549,6 +574,11 @@ laws = {
         }
         ai_will_do = {
             factor = 1
+
+            modifier = {
+                factor = 0
+                has_law = dog_law_economic_2
+            }
         }
         pass_effect = {
             # nothing
@@ -621,6 +651,11 @@ laws = {
         }
         ai_will_do = {
             factor = 1
+
+            modifier = {
+                factor = 0
+                has_law = dog_law_economic_3
+            }
         }
         pass_effect = {
             # nothing
@@ -688,6 +723,11 @@ laws = {
         }
         ai_will_do = {
             factor = 1
+
+            modifier = {
+                factor = 0
+                has_law = dog_law_economic_4
+            }
         }
         pass_effect = {
             # nothing
@@ -801,6 +841,11 @@ laws = {
         }
         ai_will_do = {
             factor = 1
+
+            modifier = {
+                factor = 0
+                has_law = dog_law_war_1
+            }
         }
         pass_effect = {
             # nothing
@@ -858,6 +903,11 @@ laws = {
         }
         ai_will_do = {
             factor = 1
+            
+            modifier = {
+                factor = 0
+                has_law = dog_law_war_2
+            }
         }
         pass_effect = {
             # nothing
@@ -930,6 +980,11 @@ laws = {
         }
         ai_will_do = {
             factor = 1
+            
+            modifier = {
+                factor = 0
+                has_law = dog_law_war_3
+            }
         }
         pass_effect = {
             # nothing
@@ -997,6 +1052,11 @@ laws = {
         }
         ai_will_do = {
             factor = 1
+            
+            modifier = {
+                factor = 0
+                has_law = dog_law_war_4
+            }
         }
         pass_effect = {
             # nothing
