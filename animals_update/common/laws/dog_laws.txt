@@ -516,6 +516,21 @@ laws = {
                 factor = 0
                 has_law = dog_law_economic_1
             }
+            
+            modifier = {
+                factor = 0.75
+
+                holder_scope = {
+                    culture = dog_culture
+                }
+            }
+            modifier = {
+                factor = 0.25
+
+                holder_scope = {
+                    culture = steppe_dog
+                }
+            }
         }
         pass_effect = {
             # nothing
@@ -578,6 +593,21 @@ laws = {
             modifier = {
                 factor = 0
                 has_law = dog_law_economic_2
+            }
+
+            modifier = {
+                factor = 0.75
+
+                holder_scope = {
+                    culture = dog_culture
+                }
+            }
+            modifier = {
+                factor = 0.25
+
+                holder_scope = {
+                    culture = steppe_dog
+                }
             }
         }
         pass_effect = {
@@ -656,6 +686,21 @@ laws = {
                 factor = 0
                 has_law = dog_law_economic_3
             }
+
+            modifier = {
+                factor = 0.75
+
+                holder_scope = {
+                    culture = dog_culture
+                }
+            }
+            modifier = {
+                factor = 0.25
+
+                holder_scope = {
+                    culture = steppe_dog
+                }
+            }
         }
         pass_effect = {
             # nothing
@@ -728,6 +773,21 @@ laws = {
                 factor = 0
                 has_law = dog_law_economic_4
             }
+
+            modifier = {
+                factor = 0.75
+
+                holder_scope = {
+                    culture = dog_culture
+                }
+            }
+            modifier = {
+                factor = 0.25
+
+                holder_scope = {
+                    culture = steppe_dog
+                }
+            }
         }
         pass_effect = {
             # nothing
@@ -789,6 +849,21 @@ laws = {
         }
         ai_will_do = {
             factor = 1
+
+            modifier = {
+                factor = 0.75
+
+                holder_scope = {
+                    culture = dog_culture
+                }
+            }
+            modifier = {
+                factor = 0.25
+
+                holder_scope = {
+                    culture = steppe_dog
+                }
+            }
         }
         pass_effect = {
             # nothing
@@ -845,6 +920,21 @@ laws = {
             modifier = {
                 factor = 0
                 has_law = dog_law_war_1
+            }
+
+            modifier = {
+                factor = 0.25
+
+                holder_scope = {
+                    culture = dog_culture
+                }
+            }
+            modifier = {
+                factor = 0.75
+
+                holder_scope = {
+                    culture = steppe_dog
+                }
             }
         }
         pass_effect = {
@@ -907,6 +997,21 @@ laws = {
             modifier = {
                 factor = 0
                 has_law = dog_law_war_2
+            }
+
+            modifier = {
+                factor = 0.25
+
+                holder_scope = {
+                    culture = dog_culture
+                }
+            }
+            modifier = {
+                factor = 0.75
+
+                holder_scope = {
+                    culture = steppe_dog
+                }
             }
         }
         pass_effect = {
@@ -985,6 +1090,21 @@ laws = {
                 factor = 0
                 has_law = dog_law_war_3
             }
+
+            modifier = {
+                factor = 0.25
+
+                holder_scope = {
+                    culture = dog_culture
+                }
+            }
+            modifier = {
+                factor = 0.75
+
+                holder_scope = {
+                    culture = steppe_dog
+                }
+            }
         }
         pass_effect = {
             # nothing
@@ -1057,6 +1177,21 @@ laws = {
                 factor = 0
                 has_law = dog_law_war_4
             }
+
+            modifier = {
+                factor = 0.25
+
+                holder_scope = {
+                    culture = dog_culture
+                }
+            }
+            modifier = {
+                factor = 0.75
+
+                holder_scope = {
+                    culture = steppe_dog
+                }
+            }
         }
         pass_effect = {
             # nothing
@@ -1118,6 +1253,21 @@ laws = {
         }
         ai_will_do = {
             factor = 1
+
+            modifier = {
+                factor = 0.25
+
+                holder_scope = {
+                    culture = dog_culture
+                }
+            }
+            modifier = {
+                factor = 0.75
+
+                holder_scope = {
+                    culture = steppe_dog
+                }
+            }
         }
         pass_effect = {
             # nothing
