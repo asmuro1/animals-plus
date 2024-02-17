@@ -211,6 +211,10 @@ character_event = {
 
 ## law event
 # event 164: removing unity law on inheritance
+# event 165: removing interest laws if not dog
+# event 166: adding interest laws if dog
+
+#event 164
 character_event = {
     id = ani_plus.164
 
@@ -222,6 +226,91 @@ character_event = {
             revoke_law = dog_unity_county_conv
             revoke_law = dog_unity_character_conv
             revoke_law = dog_unity_reputation_cost
+        }
+    }
+}
+
+#event 165
+character_event = {
+    id = ani_plus.165
+
+    hide_window = yes
+
+    only_playable = yes
+    war = no
+
+    trigger = {
+        NOT = {
+            culture_group = dog_group
+        }
+        OR = { #only test one interest as the other are linked
+            has_law = dog_law_politic_0
+            has_law = dog_law_politic_1
+            has_law = dog_law_politic_2
+            has_law = dog_law_politic_3
+            has_law = dog_law_politic_4
+        }
+    }
+    mean_time_to_happen = {
+        days = 1
+    }
+
+    immediate = {
+        revoke_law = dog_law_politic_0
+        revoke_law = dog_law_politic_1
+        revoke_law = dog_law_politic_2
+        revoke_law = dog_law_politic_3
+        revoke_law = dog_law_politic_4
+        revoke_law = dog_law_economic_0
+        revoke_law = dog_law_economic_1
+        revoke_law = dog_law_economic_2
+        revoke_law = dog_law_economic_3
+        revoke_law = dog_law_economic_4
+        revoke_law = dog_law_war_0
+        revoke_law = dog_law_war_1
+        revoke_law = dog_law_war_2
+        revoke_law = dog_law_war_3
+        revoke_law = dog_law_war_4
+    }
+}
+
+#event 166
+character_event = {
+    id = ani_plus.165
+
+    hide_window = yes
+
+    only_playable = yes
+    war = no
+    culture_group = dog_group
+
+    trigger = {
+        culture_group = dog_group
+        
+        NOR = {
+            has_law = dog_law_economic_0
+            has_law = dog_law_economic_1
+            has_law = dog_law_economic_2
+            has_law = dog_law_economic_3
+            has_law = dog_law_economic_4
+        }
+    }
+    mean_time_to_happen = {
+        days = 1
+    }
+
+    immediate = {
+        add_law = dog_law_politic_3
+        if = {
+            limit = {
+                culture = steppe_dog
+            }
+            add_law = dog_law_economic_0
+            add_law = dog_law_war_1
+        }
+        else = {    
+            add_law = dog_law_economic_1
+            add_law = dog_law_war_0
         }
     }
 }

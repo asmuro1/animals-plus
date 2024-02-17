@@ -478,7 +478,7 @@ laws = {
 
     dog_law_economic_0 = {
         group = dog_economic_laws
-        default = yes
+        # default = yes
 
         potential = {
             higher_real_tier_than = baron
@@ -883,7 +883,7 @@ laws = {
 
     dog_law_war_0 = {
         group = dog_war_laws
-        default = yes
+        # default = yes
 
         potential = {
             higher_real_tier_than = baron
