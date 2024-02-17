@@ -1204,8 +1204,8 @@ laws = {
                 revoke_law = dog_law_war_4
             }
         }
-        global_levy_size = -0.25
-        levy_reinforce_rate = -0.05
+        global_levy_size = 0.25
+        levy_reinforce_rate = 0.05
         dog_interest_implication = 2
     }
     dog_law_war_4 = {
@@ -1280,8 +1280,8 @@ laws = {
                 revoke_law = dog_law_war_3
             }
         }
-        global_levy_size = -0.60
-        levy_reinforce_rate = -0.25
+        global_levy_size = 0.60
+        levy_reinforce_rate = 0.25
         dog_interest_implication = 3
     }
 }
