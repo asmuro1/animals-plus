@@ -397,15 +397,24 @@ character_event = {
     desc = dog_desc_167
 
     option = {
-
+        trigger = {
+            has_character_flag = DOG_POLI_CHANGE
+        }
+        name = dog_opt_167
     }
 
     option = {
-        
+        trigger = {
+            has_character_flag = DOG_ECO_CHANGE
+        }
+        name = dog_opt_167
     }
 
     option = {
-        
+        trigger = {
+            has_character_flag = DOG_WAR_CHANGE
+        }
+        name = dog_opt_167
     }
 
     after = {

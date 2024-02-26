@@ -168,6 +168,7 @@ dog_desc_163;My wound is less painfull...;Ma morsure me fait maintenant beaucoup
 dog_optA_163;I am finnaly in form;Je suis à nouveau en forme;;;;;;;;;;;;x
 dog_optB_163;I hope it was nothing;Ce ne dois rien être de grave;;;;;;;;;;;;x
 dog_desc_167;Because of pressure from local nobles, I have to change my implication;Suite aux actions des différents nobles locaux, je suis contraint de changer mon implication en politique;;;;;;;;;;;;x
+dog_opt_167;Then, change has to made!;Des changements deviennent obligatoires;;;;;;;;;;;;x
 
 ## tooltip
 DOG_HEALED_TT;healing from his wound;guérit totalement de la blessure;;;;;;;;;;;;x
