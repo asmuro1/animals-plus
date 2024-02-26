@@ -167,6 +167,7 @@ dog_opt_162;I need to get a treatment;J'ai besoin d'un traitement!;;;;;;;;;;;;x
 dog_desc_163;My wound is less painfull...;Ma morsure me fait maintenant beaucoup moins mal...;;;;;;;;;;;;x
 dog_optA_163;I am finnaly in form;Je suis à nouveau en forme;;;;;;;;;;;;x
 dog_optB_163;I hope it was nothing;Ce ne dois rien être de grave;;;;;;;;;;;;x
+dog_desc_167;Because of pressure from local nobles, I have to change my implication;Suite aux actions des différents nobles locaux, je suis contraint de changer mon implication en politique;;;;;;;;;;;;x
 
 ## tooltip
 DOG_HEALED_TT;healing from his wound;guérit totalement de la blessure;;;;;;;;;;;;x
