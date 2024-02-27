@@ -403,35 +403,39 @@ character_event = {
                     has_law = dog_law_politic_0
                 }
 
-                if = {
-                    limit = {
-                        has_law = dog_law_politic_1
+                custom_tooltip = {
+                    text = DOG_TT_POLI_LEVEL_DOWN
+
+                    if = {
+                        limit = {
+                            has_law = dog_law_politic_1
+                        }
+                        add_law = dog_law_politic_0
                     }
-                    add_law = dog_law_politic_0
-                }
-                if = {
-                    limit = {
-                        has_law = dog_law_politic_2
+                    if = {
+                        limit = {
+                            has_law = dog_law_politic_2
+                        }
+                        add_law = dog_law_politic_1
                     }
-                    add_law = dog_law_politic_1
-                }
-                if = {
-                    limit = {
-                        has_law = dog_law_politic_3
+                    if = {
+                        limit = {
+                            has_law = dog_law_politic_3
+                        }
+                        add_law = dog_law_politic_2
                     }
-                    add_law = dog_law_politic_2
-                }
-                if = {
-                    limit = {
-                        has_law = dog_law_politic_4
+                    if = {
+                        limit = {
+                            has_law = dog_law_politic_4
+                        }
+                        add_law = dog_law_politic_3
                     }
-                    add_law = dog_law_politic_3
-                }
-                if = {
-                    limit = {
-                        has_law = dog_law_politic_5
+                    if = {
+                        limit = {
+                            has_law = dog_law_politic_5
+                        }
+                        add_law = dog_law_politic_4
                     }
-                    add_law = dog_law_politic_4
                 }
             }
             2 = {
@@ -459,29 +463,33 @@ character_event = {
                     }
                 }
 
-                if = {
-                    limit = {
-                        has_law = dog_law_politic_3
+                custom_tooltip = {
+                    text = DOG_TT_POLI_LEVEL_UP
+
+                    if = {
+                        limit = {
+                            has_law = dog_law_politic_3
+                        }
+                        add_law = dog_law_politic_4
                     }
-                    add_law = dog_law_politic_4
-                }
-                if = {
-                    limit = {
-                        has_law = dog_law_politic_2
+                    if = {
+                        limit = {
+                            has_law = dog_law_politic_2
+                        }
+                        add_law = dog_law_politic_3
                     }
-                    add_law = dog_law_politic_3
-                }
-                if = {
-                    limit = {
-                        has_law = dog_law_politic_1
+                    if = {
+                        limit = {
+                            has_law = dog_law_politic_1
+                        }
+                        add_law = dog_law_politic_2
                     }
-                    add_law = dog_law_politic_2
-                }
-                if = {
-                    limit = {
-                        has_law = dog_law_politic_0
+                    if = {
+                        limit = {
+                            has_law = dog_law_politic_0
+                        }
+                        add_law = dog_law_politic_1
                     }
-                    add_law = dog_law_politic_1
                 }
             }
         }
@@ -501,35 +509,38 @@ character_event = {
                     has_law = dog_law_economic_0
                 }
 
-                if = {
-                    limit = {
-                        has_law = dog_law_economic_1
+                custom_tooltip = {
+                    text = DOG_TT_ECO_LEVEL_DOWN
+                    if = {
+                        limit = {
+                            has_law = dog_law_economic_1
+                        }
+                        add_law = dog_law_economic_0
                     }
-                    add_law = dog_law_economic_0
-                }
-                if = {
-                    limit = {
-                        has_law = dog_law_economic_2
+                    if = {
+                        limit = {
+                            has_law = dog_law_economic_2
+                        }
+                        add_law = dog_law_economic_1
                     }
-                    add_law = dog_law_economic_1
-                }
-                if = {
-                    limit = {
-                        has_law = dog_law_economic_3
+                    if = {
+                        limit = {
+                            has_law = dog_law_economic_3
+                        }
+                        add_law = dog_law_economic_2
                     }
-                    add_law = dog_law_economic_2
-                }
-                if = {
-                    limit = {
-                        has_law = dog_law_economic_4
+                    if = {
+                        limit = {
+                            has_law = dog_law_economic_4
+                        }
+                        add_law = dog_law_economic_3
                     }
-                    add_law = dog_law_economic_3
-                }
-                if = {
-                    limit = {
-                        has_law = dog_law_economic_5
+                    if = {
+                        limit = {
+                            has_law = dog_law_economic_5
+                        }
+                        add_law = dog_law_economic_4
                     }
-                    add_law = dog_law_economic_4
                 }
             }
             2 = {
@@ -557,29 +568,34 @@ character_event = {
                     }
                 }
 
-                if = {
-                    limit = {
-                        has_law = dog_law_economic_3
+                custom_tooltip = {
+                    text = DOG_TT_ECO_LEVEL_UP
+
+
+                    if = {
+                        limit = {
+                            has_law = dog_law_economic_3
+                        }
+                        add_law = dog_law_economic_4
                     }
-                    add_law = dog_law_economic_4
-                }
-                if = {
-                    limit = {
-                        has_law = dog_law_economic_2
+                    if = {
+                        limit = {
+                            has_law = dog_law_economic_2
+                        }
+                        add_law = dog_law_economic_3
                     }
-                    add_law = dog_law_economic_3
-                }
-                if = {
-                    limit = {
-                        has_law = dog_law_economic_1
+                    if = {
+                        limit = {
+                            has_law = dog_law_economic_1
+                        }
+                        add_law = dog_law_economic_2
                     }
-                    add_law = dog_law_economic_2
-                }
-                if = {
-                    limit = {
-                        has_law = dog_law_economic_0
+                    if = {
+                        limit = {
+                            has_law = dog_law_economic_0
+                        }
+                        add_law = dog_law_economic_1
                     }
-                    add_law = dog_law_economic_1
                 }
             }
         }
@@ -599,35 +615,40 @@ character_event = {
                     has_law = dog_law_war_0
                 }
 
-                if = {
-                    limit = {
-                        has_law = dog_law_war_1
+                custom_tooltip = {
+                    text = DOG_TT_WAR_LEVEL_DOWN
+
+
+                    if = {
+                        limit = {
+                            has_law = dog_law_war_1
+                        }
+                        add_law = dog_law_war_0
                     }
-                    add_law = dog_law_war_0
-                }
-                if = {
-                    limit = {
-                        has_law = dog_law_war_2
+                    if = {
+                        limit = {
+                            has_law = dog_law_war_2
+                        }
+                        add_law = dog_law_war_1
                     }
-                    add_law = dog_law_war_1
-                }
-                if = {
-                    limit = {
-                        has_law = dog_law_war_3
+                    if = {
+                        limit = {
+                            has_law = dog_law_war_3
+                        }
+                        add_law = dog_law_war_2
                     }
-                    add_law = dog_law_war_2
-                }
-                if = {
-                    limit = {
-                        has_law = dog_law_war_4
+                    if = {
+                        limit = {
+                            has_law = dog_law_war_4
+                        }
+                        add_law = dog_law_war_3
                     }
-                    add_law = dog_law_war_3
-                }
-                if = {
-                    limit = {
-                        has_law = dog_law_war_5
+                    if = {
+                        limit = {
+                            has_law = dog_law_war_5
+                        }
+                        add_law = dog_law_war_4
                     }
-                    add_law = dog_law_war_4
                 }
             }
             2 = {
@@ -655,29 +676,34 @@ character_event = {
                     }
                 }
 
-                if = {
-                    limit = {
-                        has_law = dog_law_war_3
+                custom_tooltip = {
+                    text = DOG_TT_WAR_LEVEL_UP
+
+
+                    if = {
+                        limit = {
+                            has_law = dog_law_war_3
+                        }
+                        add_law = dog_law_war_4
                     }
-                    add_law = dog_law_war_4
-                }
-                if = {
-                    limit = {
-                        has_law = dog_law_war_2
+                    if = {
+                        limit = {
+                            has_law = dog_law_war_2
+                        }
+                        add_law = dog_law_war_3
                     }
-                    add_law = dog_law_war_3
-                }
-                if = {
-                    limit = {
-                        has_law = dog_law_war_1
+                    if = {
+                        limit = {
+                            has_law = dog_law_war_1
+                        }
+                        add_law = dog_law_war_2
                     }
-                    add_law = dog_law_war_2
-                }
-                if = {
-                    limit = {
-                        has_law = dog_law_war_0
+                    if = {
+                        limit = {
+                            has_law = dog_law_war_0
+                        }
+                        add_law = dog_law_war_1
                     }
-                    add_law = dog_law_war_1
                 }
             }
         }

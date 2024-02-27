@@ -172,3 +172,9 @@ dog_opt_167;Then, change has to made!;Des changements deviennent obligatoires;;;
 
 ## tooltip
 DOG_HEALED_TT;healing from his wound;guérit totalement de la blessure;;;;;;;;;;;;x
+DOG_TT_POLI_LEVEL_UP;Reduce your political implication;Réduit l'implication politique;;;;;;;;;;;;x
+DOG_TT_POLI_LEVEL_DOWN;Increase your political implication;Augmente l'implication politique;;;;;;;;;;;;x
+DOG_TT_ECO_LEVEL_UP;Reduce your economic implication;Réduit l'implication économique;;;;;;;;;;;;x
+DOG_TT_ECO_LEVEL_DOWN;Increase your economic implication;Augmente l'implication économique;;;;;;;;;;;;x
+DOG_TT_WAR_LEVEL_UP;Reduce your military implication;Réduit l'implication militaire;;;;;;;;;;;;x
+DOG_TT_WAR_LEVEL_DOWN;Increase your military implication;Augmente l'implication militaire;;;;;;;;;;;;x
