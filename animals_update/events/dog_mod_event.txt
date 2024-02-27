@@ -344,13 +344,6 @@ character_event = {
 
             is_tribal = yes
         }
-
-        modifier = {
-            factor = 0.4
-
-            is_tribal = no
-            NOT = { government = dog_feudal_gov }
-        }
     }
 
     immediate = {
@@ -401,6 +394,97 @@ character_event = {
             has_character_flag = DOG_POLI_CHANGE
         }
         name = dog_opt_167
+
+        random_list = {
+            3 = {
+                # loose 1 level
+                modifier = {
+                    factor = 0
+                    has_law = dog_law_politic_0
+                }
+
+                if = {
+                    limit = {
+                        has_law = dog_law_politic_1
+                    }
+                    add_law = dog_law_politic_0
+                }
+                if = {
+                    limit = {
+                        has_law = dog_law_politic_2
+                    }
+                    add_law = dog_law_politic_1
+                }
+                if = {
+                    limit = {
+                        has_law = dog_law_politic_3
+                    }
+                    add_law = dog_law_politic_2
+                }
+                if = {
+                    limit = {
+                        has_law = dog_law_politic_4
+                    }
+                    add_law = dog_law_politic_3
+                }
+                if = {
+                    limit = {
+                        has_law = dog_law_politic_5
+                    }
+                    add_law = dog_law_politic_4
+                }
+            }
+            2 = {
+                # gain 1 level
+                modifier = {
+                    factor = 0
+
+                    OR = {
+                        AND = {
+                            has_law = dog_law_politic_0
+                            is_law_allowed = dog_law_politic_1
+                        }
+                        AND = {
+                            has_law = dog_law_politic_1
+                            is_law_allowed = dog_law_politic_2
+                        }
+                        AND = {
+                            has_law = dog_law_politic_2
+                            is_law_allowed = dog_law_politic_3
+                        }
+                        AND = {
+                            has_law = dog_law_politic_3
+                            is_law_allowed = dog_law_politic_4
+                        }
+                    }
+                }
+
+                if = {
+                    limit = {
+                        has_law = dog_law_politic_3
+                    }
+                    add_law = dog_law_politic_4
+                }
+                if = {
+                    limit = {
+                        has_law = dog_law_politic_2
+                    }
+                    add_law = dog_law_politic_3
+                }
+                if = {
+                    limit = {
+                        has_law = dog_law_politic_1
+                    }
+                    add_law = dog_law_politic_2
+                }
+                if = {
+                    limit = {
+                        has_law = dog_law_politic_0
+                    }
+                    add_law = dog_law_politic_1
+                }
+            }
+        }
     }
 
     option = {
