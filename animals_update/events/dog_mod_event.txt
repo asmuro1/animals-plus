@@ -492,6 +492,97 @@ character_event = {
             has_character_flag = DOG_ECO_CHANGE
         }
         name = dog_opt_167
+
+        random_list = {
+            3 = {
+                # loose 1 level
+                modifier = {
+                    factor = 0
+                    has_law = dog_law_economic_0
+                }
+
+                if = {
+                    limit = {
+                        has_law = dog_law_economic_1
+                    }
+                    add_law = dog_law_economic_0
+                }
+                if = {
+                    limit = {
+                        has_law = dog_law_economic_2
+                    }
+                    add_law = dog_law_economic_1
+                }
+                if = {
+                    limit = {
+                        has_law = dog_law_economic_3
+                    }
+                    add_law = dog_law_economic_2
+                }
+                if = {
+                    limit = {
+                        has_law = dog_law_economic_4
+                    }
+                    add_law = dog_law_economic_3
+                }
+                if = {
+                    limit = {
+                        has_law = dog_law_economic_5
+                    }
+                    add_law = dog_law_economic_4
+                }
+            }
+            2 = {
+                # gain 1 level
+                modifier = {
+                    factor = 0
+
+                    OR = {
+                        AND = {
+                            has_law = dog_law_economic_0
+                            is_law_allowed = dog_law_economic_1
+                        }
+                        AND = {
+                            has_law = dog_law_economic_1
+                            is_law_allowed = dog_law_economic_2
+                        }
+                        AND = {
+                            has_law = dog_law_economic_2
+                            is_law_allowed = dog_law_economic_3
+                        }
+                        AND = {
+                            has_law = dog_law_economic_3
+                            is_law_allowed = dog_law_economic_4
+                        }
+                    }
+                }
+
+                if = {
+                    limit = {
+                        has_law = dog_law_economic_3
+                    }
+                    add_law = dog_law_economic_4
+                }
+                if = {
+                    limit = {
+                        has_law = dog_law_economic_2
+                    }
+                    add_law = dog_law_economic_3
+                }
+                if = {
+                    limit = {
+                        has_law = dog_law_economic_1
+                    }
+                    add_law = dog_law_economic_2
+                }
+                if = {
+                    limit = {
+                        has_law = dog_law_economic_0
+                    }
+                    add_law = dog_law_economic_1
+                }
+            }
+        }
     }
 
     option = {
@@ -499,6 +590,97 @@ character_event = {
             has_character_flag = DOG_WAR_CHANGE
         }
         name = dog_opt_167
+
+        random_list = {
+            3 = {
+                # loose 1 level
+                modifier = {
+                    factor = 0
+                    has_law = dog_law_war_0
+                }
+
+                if = {
+                    limit = {
+                        has_law = dog_law_war_1
+                    }
+                    add_law = dog_law_war_0
+                }
+                if = {
+                    limit = {
+                        has_law = dog_law_war_2
+                    }
+                    add_law = dog_law_war_1
+                }
+                if = {
+                    limit = {
+                        has_law = dog_law_war_3
+                    }
+                    add_law = dog_law_war_2
+                }
+                if = {
+                    limit = {
+                        has_law = dog_law_war_4
+                    }
+                    add_law = dog_law_war_3
+                }
+                if = {
+                    limit = {
+                        has_law = dog_law_war_5
+                    }
+                    add_law = dog_law_war_4
+                }
+            }
+            2 = {
+                # gain 1 level
+                modifier = {
+                    factor = 0
+
+                    OR = {
+                        AND = {
+                            has_law = dog_law_war_0
+                            is_law_allowed = dog_law_war_1
+                        }
+                        AND = {
+                            has_law = dog_law_war_1
+                            is_law_allowed = dog_law_war_2
+                        }
+                        AND = {
+                            has_law = dog_law_war_2
+                            is_law_allowed = dog_law_war_3
+                        }
+                        AND = {
+                            has_law = dog_law_war_3
+                            is_law_allowed = dog_law_war_4
+                        }
+                    }
+                }
+
+                if = {
+                    limit = {
+                        has_law = dog_law_war_3
+                    }
+                    add_law = dog_law_war_4
+                }
+                if = {
+                    limit = {
+                        has_law = dog_law_war_2
+                    }
+                    add_law = dog_law_war_3
+                }
+                if = {
+                    limit = {
+                        has_law = dog_law_war_1
+                    }
+                    add_law = dog_law_war_2
+                }
+                if = {
+                    limit = {
+                        has_law = dog_law_war_0
+                    }
+                    add_law = dog_law_war_1
+                }
+            }
+        }
     }
 
     after = {
