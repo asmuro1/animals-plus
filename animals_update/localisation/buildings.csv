@@ -423,4 +423,5 @@ tb_dog_retinue_3;Dogs' clan;Clan des chiens;;;;;;;;;;;;x
 tb_dog_retinue_4;Dogs' clan;Clan des chiens;;;;;;;;;;;;x
 
 ## tooltip
-DOG_TT_HAS_ECO_IMPL;Has enough implication in economic field;Est suffisament impliquï¿½ en ï¿½conomie;;;;;;;;;;;;x
+DOG_TT_HAS_ECO_IMPL;Has enough implication in economic field;Est suffisament impliqué en économie;;;;;;;;;;;;x
+DOG_TT_HAS_MIL_IMPL;Has enough implication in military field;Est suffisament impliqué en militaire;;;;;;;;;;;;x
