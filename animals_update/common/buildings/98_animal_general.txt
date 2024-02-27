@@ -1695,6 +1695,23 @@ castle = {
                     check_variable = { which=duck_dev_var value=3 }
                 }
             }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = dog_group
+                }
+                
+                custom_tooltip = {
+                    text = DOG_TT_HAS_ECO_IMPL
+                    holder_scope = {
+                        OR = {
+                            has_law = dog_law_economic_1
+                            has_law = dog_law_economic_2
+                            has_law = dog_law_economic_3
+                            has_law = dog_law_economic_4
+                        }
+                    }
+                }
+            }
         }
         prerequisites = { ca_ani_castle_tower_02 }
         not_if_x_exists = { ca_ani_trade_build_1 ca_ani_desmene_1}
@@ -1758,6 +1775,16 @@ castle = {
                     check_variable = { which=duck_dev_var value=5 }
                 }
             }
+            custom_tooltip = {
+                    text = DOG_TT_HAS_ECO_IMPL
+                    holder_scope = {
+                        OR = {
+                            has_law = dog_law_economic_2
+                            has_law = dog_law_economic_3
+                            has_law = dog_law_economic_4
+                        }
+                    }
+                }
         }
         prerequisites = { ca_ani_castle_tower_05 }
         not_if_x_exists = { ca_ani_trade_build_1 ca_ani_desmene_1}
@@ -1823,6 +1850,15 @@ castle = {
                     check_variable = { which=duck_dev_var value=7 }
                 }
             }
+            custom_tooltip = {
+                    text = DOG_TT_HAS_ECO_IMPL
+                    holder_scope = {
+                        OR = {
+                            has_law = dog_law_economic_3
+                            has_law = dog_law_economic_4
+                        }
+                    }
+                }
         }
         prerequisites = { ca_ani_castle_tower_08 }
         not_if_x_exists = { ca_ani_trade_build_1 ca_ani_desmene_1}
@@ -1888,6 +1924,12 @@ castle = {
                     check_variable = { which=duck_dev_var value=9 }
                 }
             }
+            custom_tooltip = {
+                    text = DOG_TT_HAS_ECO_IMPL
+                    holder_scope = {
+                        has_law = dog_law_economic_4
+                    }
+                }
         }
 
         prerequisites = { ca_ani_castle_tower_12 }
