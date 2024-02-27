@@ -439,7 +439,7 @@ character_event = {
                 modifier = {
                     factor = 0
 
-                    OR = {
+                    NOR = {
                         AND = {
                             has_law = dog_law_politic_0
                             is_law_allowed = dog_law_politic_1
@@ -537,7 +537,7 @@ character_event = {
                 modifier = {
                     factor = 0
 
-                    OR = {
+                    NOR = {
                         AND = {
                             has_law = dog_law_economic_0
                             is_law_allowed = dog_law_economic_1
@@ -635,7 +635,7 @@ character_event = {
                 modifier = {
                     factor = 0
 
-                    OR = {
+                    NOR = {
                         AND = {
                             has_law = dog_law_war_0
                             is_law_allowed = dog_law_war_1
