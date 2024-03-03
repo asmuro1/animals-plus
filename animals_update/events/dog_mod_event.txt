@@ -214,6 +214,7 @@ character_event = {
 # event 165: removing interest laws if not dog
 # event 166: adding interest laws if dog
 # event 167: modifying level of one of the interest law
+# event 168: giving malus if modying interest law is impossible (no council rights)
 
 #event 164
 character_event = {
@@ -727,5 +728,67 @@ character_event = {
         clr_character_flag = DOG_POLI_CHANGE
         clr_character_flag = DOG_ECO_CHANGE
         clr_character_flag = DOG_WAR_CHANGE
+    }
+}
+
+#event 168
+character_event = {
+    id = ani_plus.168
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    only_playable = yes
+    has_dlc = "Zeus"
+
+    trigger = {
+        has_dlc = "Zeus"
+        culture_group = dog_group
+        NOT = { has_law = law_voting_power_1 }
+        NAND = {
+            has_character_modifier = dog_penalty_popular
+            has_character_modifier = dog_penalty_economic
+            has_character_modifier = dog_penalty_military
+        }
+    }
+
+    mean_time_to_happen = {
+        years = 4 
+    }
+
+    desc = dog_desc_168
+
+    option = {
+
+        name = dog_opt_168
+        random_list = {
+            1 = {
+                trigger = {
+                    NOT = { has_character_modifier = dog_penalty_popular }
+                }
+                add_character_modifier = {
+                    name = dog_penalty_popular
+                    year = 3
+                }
+            }
+            1 = {
+                trigger = {
+                    NOT = { has_character_modifier = dog_penalty_economic }
+                }
+                add_character_modifier = {
+                    name = dog_penalty_economic
+                    year = 3
+                }
+            }
+            1 = {
+                trigger = {
+                    NOT = { has_character_modifier = dog_penalty_military }
+                }
+                add_character_modifier = {
+                    name = dog_penalty_military
+                    year = 3
+                }
+            }
+        }
     }
 }
