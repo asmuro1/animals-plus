@@ -334,6 +334,10 @@ character_event = {
             has_character_flag = DOG_ECO_CHANGE
             has_character_flag = DOG_WAR_CHANGE
         }
+        OR = {
+            NOT = { has_dlc = "Zeus" }
+            has_law = law_voting_power_1
+        }
     }
 
     mean_time_to_happen = {
