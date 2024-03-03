@@ -169,6 +169,8 @@ dog_optA_163;I am finnaly in form;Je suis à nouveau en forme;;;;;;;;;;;;x
 dog_optB_163;I hope it was nothing;Ce ne dois rien être de grave;;;;;;;;;;;;x
 dog_desc_167;Because of pressure from local nobles, I have to change my implication;Suite aux actions des différents nobles locaux, je suis contraint de changer mon implication en politique;;;;;;;;;;;;x
 dog_opt_167;Then, change has to made!;Des changements deviennent obligatoires;;;;;;;;;;;;x
+dog_desc_168;Noble are complaining about the concil's lack of power;Les nobles commencent à se rebeller à cause du manque de pouvoir du conseil;;;;;;;;;;;;x
+dog_opt_168;My reputation will take a hit;Ma réputation va en prendre un coup;;;;;;;;;;;;x
 
 ## tooltip
 DOG_HEALED_TT;healing from his wound;guérit totalement de la blessure;;;;;;;;;;;;x
