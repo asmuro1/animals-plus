@@ -687,3 +687,8 @@ dog_can_live_here_trigger = {
         terrain = hills
     }
 }
+
+# title scope
+dog_has_council_laws_trigger = {
+    has_law = law_voting_power_1
+}

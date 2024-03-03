@@ -168,6 +168,13 @@ laws = {
                     is_tribal = yes
                 }
             }
+
+            conditional_tooltip = {
+                trigger = {
+                    has_dlc = "Zeus"
+                }
+                dog_has_council_laws_trigger = yes
+            }
         }
         revoke_allowed = {
             always = no
@@ -231,6 +238,13 @@ laws = {
                     government = dog_feudal_gov
                     is_tribal = yes
                 }
+            }
+
+            conditional_tooltip = {
+                trigger = {
+                    has_dlc = "Zeus"
+                }
+                dog_has_council_laws_trigger = yes
             }
         }
         revoke_allowed = {
@@ -312,6 +326,13 @@ laws = {
                     is_tribal = yes
                 }
             }
+
+            conditional_tooltip = {
+                trigger = {
+                    has_dlc = "Zeus"
+                }
+                dog_has_council_laws_trigger = yes
+            }
         }
         revoke_allowed = {
             always = no
@@ -384,6 +405,13 @@ laws = {
             holder_scope = {
                 government = dog_feudal_gov
             }
+
+            conditional_tooltip = {
+                trigger = {
+                    has_dlc = "Zeus"
+                }
+                dog_has_council_laws_trigger = yes
+            }
         }
         revoke_allowed = {
             always = no
@@ -450,6 +478,13 @@ laws = {
             holder_scope = {
                 government = dog_feudal_gov
             }
+
+            conditional_tooltip = {
+                trigger = {
+                    has_dlc = "Zeus"
+                }
+                dog_has_council_laws_trigger = yes
+            }
         }
         revoke_allowed = {
             always = no
@@ -501,6 +536,13 @@ laws = {
                     government = dog_feudal_gov
                     is_tribal = yes
                 }
+            }
+
+            conditional_tooltip = {
+                trigger = {
+                    has_dlc = "Zeus"
+                }
+                dog_has_council_laws_trigger = yes
             }
         }
         revoke_allowed = {
@@ -579,6 +621,13 @@ laws = {
                     government = dog_feudal_gov
                     is_tribal = yes
                 }
+            }
+
+            conditional_tooltip = {
+                trigger = {
+                    has_dlc = "Zeus"
+                }
+                dog_has_council_laws_trigger = yes
             }
         }
         revoke_allowed = {
@@ -672,6 +721,13 @@ laws = {
                     is_tribal = yes
                 }
             }
+
+            conditional_tooltip = {
+                trigger = {
+                    has_dlc = "Zeus"
+                }
+                dog_has_council_laws_trigger = yes
+            }
         }
         revoke_allowed = {
             always = no
@@ -759,6 +815,13 @@ laws = {
             holder_scope = {
                 government = dog_feudal_gov
             }
+
+            conditional_tooltip = {
+                trigger = {
+                    has_dlc = "Zeus"
+                }
+                dog_has_council_laws_trigger = yes
+            }
         }
         revoke_allowed = {
             always = no
@@ -840,6 +903,13 @@ laws = {
             holder_scope = {
                 government = dog_feudal_gov
             }
+
+            conditional_tooltip = {
+                trigger = {
+                    has_dlc = "Zeus"
+                }
+                dog_has_council_laws_trigger = yes
+            }
         }
         revoke_allowed = {
             always = no
@@ -906,6 +976,13 @@ laws = {
                     government = dog_feudal_gov
                     is_tribal = yes
                 }
+            }
+
+            conditional_tooltip = {
+                trigger = {
+                    has_dlc = "Zeus"
+                }
+                dog_has_council_laws_trigger = yes
             }
         }
         revoke_allowed = {
@@ -983,6 +1060,13 @@ laws = {
                     government = dog_feudal_gov
                     is_tribal = yes
                 }
+            }
+
+            conditional_tooltip = {
+                trigger = {
+                    has_dlc = "Zeus"
+                }
+                dog_has_council_laws_trigger = yes
             }
         }
         revoke_allowed = {
@@ -1076,6 +1160,13 @@ laws = {
                     is_tribal = yes
                 }
             }
+
+            conditional_tooltip = {
+                trigger = {
+                    has_dlc = "Zeus"
+                }
+                dog_has_council_laws_trigger = yes
+            }
         }
         revoke_allowed = {
             always = no
@@ -1163,6 +1254,13 @@ laws = {
             holder_scope = {
                 government = dog_feudal_gov
             }
+
+            conditional_tooltip = {
+                trigger = {
+                    has_dlc = "Zeus"
+                }
+                dog_has_council_laws_trigger = yes
+            }
         }
         revoke_allowed = {
             always = no
@@ -1243,6 +1341,13 @@ laws = {
             }
             holder_scope = {
                 government = dog_feudal_gov
+            }
+
+            conditional_tooltip = {
+                trigger = {
+                    has_dlc = "Zeus"
+                }
+                dog_has_council_laws_trigger = yes
             }
         }
         revoke_allowed = {
