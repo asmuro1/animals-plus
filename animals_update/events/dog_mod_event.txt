@@ -278,7 +278,7 @@ character_event = {
 
 #event 166
 character_event = {
-    id = ani_plus.165
+    id = ani_plus.166
 
     hide_window = yes
 
@@ -768,7 +768,7 @@ character_event = {
                 }
                 add_character_modifier = {
                     name = dog_penalty_popular
-                    year = 3
+                    years = 3
                 }
             }
             1 = {
@@ -777,7 +777,7 @@ character_event = {
                 }
                 add_character_modifier = {
                     name = dog_penalty_economic
-                    year = 3
+                    years = 3
                 }
             }
             1 = {
@@ -786,7 +786,7 @@ character_event = {
                 }
                 add_character_modifier = {
                     name = dog_penalty_military
-                    year = 3
+                    years = 3
                 }
             }
         }
