@@ -118,6 +118,13 @@ malcontent = {
 				has_law = dog_law_politic_0
 			}
 		}
+		additive_modifier = {
+			value = -150
+
+			liege = {
+				has_law = dog_law_politic_4
+			}
+		}
 	}
 	
 	voting_patterns = {

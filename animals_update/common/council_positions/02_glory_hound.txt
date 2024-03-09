@@ -86,6 +86,13 @@ glory_hound = {
 				has_law = dog_law_war_4
 			}
 		}
+		additive_modifier = {
+			value = -150
+		
+			liege = {
+				has_law = dog_law_war_0
+			}
+		}
 	}
 	
 	war_target = {
