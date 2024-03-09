@@ -96,6 +96,8 @@ dog_law_war_3_desc; ;;;;;;;;;;;;;x
 dog_law_war_4;Important military interest;Intérêt militaire important;;;;;;;;;;;;x
 dog_law_war_4_option;Important;Important;;;;;;;;;;;;x
 dog_law_war_4_desc; ;;;;;;;;;;;;;x
+dog_council_laws;Extended council;Conseil étendu;;;;;;;;;;;;x
+dog_council_laws_desc;As a dog, you can name councillors to lower your some dog's restrictions;En tant que chien, tu as la possibilité de nommer de nouveaux conseillés pour réduire les différentes complications lié au conseil;;;;;;;;;;;;x
 
 ##laws tooltip
 ALL_BUREAUCRATIC_VASSAL_UNACCEPTED;All panda bureaucratic vassal now count as vassal;Tous les vassaux bureaucratiques pandas comptent en tant que vassal;;;;;;;;;;;;x

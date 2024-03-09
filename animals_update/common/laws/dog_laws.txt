@@ -12,6 +12,11 @@ law_groups = {
     dog_war_laws = {
         law_type = realm
     }
+
+    dog_council_laws = {
+		law_type = council
+		allowed_for_councillors = yes
+	}
 }
 
 laws = {
