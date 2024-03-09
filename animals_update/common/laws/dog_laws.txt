@@ -1394,4 +1394,125 @@ laws = {
         levy_reinforce_rate = 0.25
         dog_interest_implication = 3
     }
+
+    dog_law_war_council = {
+        group = dog_council_laws
+
+        default = no
+
+        allow = {
+            government = dog_feudal_gov
+            higher_tier_than = baron
+        }
+        potential = {
+            has_dlc = "Zeus"
+            culture_group = dog_group
+        }
+        revoke_allowed = {
+            always = no
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        ai_will_revoke = {
+            factor = 0
+        }
+        effect = {}
+    }
+    dog_law_eco_council = {
+        group = dog_council_laws
+
+        default = no
+
+        allow = {
+            government = dog_feudal_gov
+            higher_tier_than = baron
+        }
+        potential = {
+            has_dlc = "Zeus"
+            culture_group = dog_group
+        }
+        revoke_allowed = {
+            always = no
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        ai_will_revoke = {
+            factor = 0
+        }
+        effect = {}
+    }
+    dog_law_pol_council = {
+        group = dog_council_laws
+
+        default = no
+
+        allow = {
+            government = dog_feudal_gov
+            higher_tier_than = baron
+        }
+        potential = {
+            has_dlc = "Zeus"
+            culture_group = dog_group
+        }
+        revoke_allowed = {
+            always = no
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        ai_will_revoke = {
+            factor = 0
+        }
+        effect = {}
+    }
+    dog_law_eve_council = {
+        group = dog_council_laws
+
+        default = no
+
+        allow = {
+            government = dog_feudal_gov
+            higher_tier_than = baron
+        }
+        potential = {
+            has_dlc = "Zeus"
+            culture_group = dog_group
+        }
+        revoke_allowed = {
+            always = no
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        ai_will_revoke = {
+            factor = 0
+        }
+        effect = {}
+    }
+    dog_law_res_council = {
+        group = dog_council_laws
+
+        default = no
+
+        allow = {
+            government = dog_feudal_gov
+            higher_tier_than = baron
+        }
+        potential = {
+            has_dlc = "Zeus"
+            culture_group = dog_group
+        }
+        revoke_allowed = {
+            always = no
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        ai_will_revoke = {
+            factor = 0
+        }
+        effect = {}
+    }
 }

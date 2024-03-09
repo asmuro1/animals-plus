@@ -98,6 +98,22 @@ dog_law_war_4_option;Important;Important;;;;;;;;;;;;x
 dog_law_war_4_desc; ;;;;;;;;;;;;;x
 dog_council_laws;Extended council;Conseil étendu;;;;;;;;;;;;x
 dog_council_laws_desc;As a dog, you can name councillors to lower your some dog's restrictions;En tant que chien, tu as la possibilité de nommer de nouveaux conseillés pour réduire les différentes complications lié au conseil;;;;;;;;;;;;x
+dog_law_war_council;Military councillor;Conseiller militaire;;;;;;;;;;;;x
+dog_law_war_council_option;Military;Militaire;;;;;;;;;;;;x
+dog_law_war_council_desc;Allow a new councillor to generate more troops from its liege domains;Permet au conseillé de former plus de troupes dans le domaine de son seigneur;;;;;;;;;;;;x
+dog_law_eco_council;Economic Councillor;Conseiller économique;;;;;;;;;;;;x
+dog_law_eco_council_option;Economic;Économic;;;;;;;;;;;;x
+dog_law_eco_council_desc;Allow to a councillor to increaser its liege revenue;Permet à un conseiller d'augmenter les revenus de son seigneur;;;;;;;;;;;;x
+dog_law_pol_council;Political councillor;Conseiller politique;;;;;;;;;;;;x
+dog_law_pol_council_option;Politic;Politique;;;;;;;;;;;;x
+dog_law_pol_council_desc;Allow a councillor to increase its co-vassal opinion of its liege;Permet au conseiller d'augmenter l'opinion des vassaux de son seigneur envers lui;;;;;;;;;;;;x
+dog_law_eve_council;Noble's Representative;Représentant des noble;;;;;;;;;;;;x
+dog_law_eve_council_option;Noble;Noble;;;;;;;;;;;;x
+dog_law_eve_council_desc;Allow a councillor to prevent local noble to force implication change of their liege;Permet au conseiller d'empêcher des nobles locaux de forcer le changement d'implication de son seigneur liege;;;;;;;;;;;;x
+dog_law_res_council;Implication councillor;Counseiller d'implication;;;;;;;;;;;;x
+dog_law_res_council_option;Implication;Implication;;;;;;;;;;;;x
+dog_law_res_council_desc;Allow a councillor to remove the 2 implication restriction maximum of their liege;Permet au conseiller de retiré la restriction des 2 implications au grand maximum de son seigneur liege;;;;;;;;;;;;x
+
 
 ##laws tooltip
 ALL_BUREAUCRATIC_VASSAL_UNACCEPTED;All panda bureaucratic vassal now count as vassal;Tous les vassaux bureaucratiques pandas comptent en tant que vassal;;;;;;;;;;;;x
