@@ -127,7 +127,7 @@ laws = {
             always = no
         }
         ai_will_revoke = {
-            always = no
+            factor = 0
         }
         ai_will_do = {
             factor = 1
@@ -180,7 +180,7 @@ laws = {
             always = no
         }
         ai_will_revoke = {
-            always = no
+            factor = 0
         }
         ai_will_do = {
             factor = 1
@@ -251,7 +251,7 @@ laws = {
             always = no
         }
         ai_will_revoke = {
-            always = no
+            factor = 0
         }
         ai_will_do = {
             factor = 1
@@ -338,7 +338,7 @@ laws = {
             always = no
         }
         ai_will_revoke = {
-            always = no
+            factor = 0
         }
         ai_will_do = {
             factor = 1
@@ -417,7 +417,7 @@ laws = {
             always = no
         }
         ai_will_revoke = {
-            always = no
+            factor = 0
         }
         ai_will_do = {
             factor = 1
@@ -490,7 +490,7 @@ laws = {
             always = no
         }
         ai_will_revoke = {
-            always = no
+            factor = 0
         }
         ai_will_do = {
             factor = 1
@@ -549,7 +549,7 @@ laws = {
             always = no
         }
         ai_will_revoke = {
-            always = no
+            factor = 0
         }
         ai_will_do = {
             factor = 1
@@ -634,7 +634,7 @@ laws = {
             always = no
         }
         ai_will_revoke = {
-            always = no
+            factor = 0
         }
         ai_will_do = {
             factor = 1
@@ -733,7 +733,7 @@ laws = {
             always = no
         }
         ai_will_revoke = {
-            always = no
+            factor = 0
         }
         ai_will_do = {
             factor = 1
@@ -827,7 +827,7 @@ laws = {
             always = no
         }
         ai_will_revoke = {
-            always = no
+            factor = 0
         }
         ai_will_do = {
             factor = 1
@@ -915,7 +915,7 @@ laws = {
             always = no
         }
         ai_will_revoke = {
-            always = no
+            factor = 0
         }
         ai_will_do = {
             factor = 1
@@ -989,7 +989,7 @@ laws = {
             always = no
         }
         ai_will_revoke = {
-            always = no
+            factor = 0
         }
         ai_will_do = {
             factor = 1
@@ -1073,7 +1073,7 @@ laws = {
             always = no
         }
         ai_will_revoke = {
-            always = no
+            factor = 0
         }
         ai_will_do = {
             factor = 1
@@ -1172,7 +1172,7 @@ laws = {
             always = no
         }
         ai_will_revoke = {
-            always = no
+            factor = 0
         }
         ai_will_do = {
             factor = 1
@@ -1266,7 +1266,7 @@ laws = {
             always = no
         }
         ai_will_revoke = {
-            always = no
+            factor = 0
         }
         ai_will_do = {
             factor = 1
@@ -1354,7 +1354,7 @@ laws = {
             always = no
         }
         ai_will_revoke = {
-            always = no
+            factor = 0
         }
         ai_will_do = {
             factor = 1

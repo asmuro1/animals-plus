@@ -51,36 +51,50 @@ dog_economic_laws;economic interest;Intérêt économique;;;;;;;;;;;;x
 dog_economic_laws_desc;This law characterize the economic focus a dog noble put in ruling;Cette lois caractérise l'implication économique du chien dirigeant;;;;;;;;;;;;x
 dog_war_laws;military interest;Intérêt militaire;;;;;;;;;;;;x
 dog_war_laws_desc;This law characterize the military focus a dog noble put in ruling;Cette lois caractérise l'implication militaire du chien dirigeant;;;;;;;;;;;;x
-
-dog_law_politic_0;Minimal;Minime;;;;;;;;;;;;x
+dog_law_politic_0;Minimal politic interest;Intérêt politique minimal;;;;;;;;;;;;x
+dog_law_politic_0_option;Minimal;Minime;;;;;;;;;;;;x
 dog_law_politic_0_desc; ;;;;;;;;;;;;;x
-dog_law_politic_1;Small;Petite;;;;;;;;;;;;x
+dog_law_politic_1;Small politic interest;Intérêt politique petit;;;;;;;;;;;;x
+dog_law_politic_1_option;Small;Petite;;;;;;;;;;;;x
 dog_law_politic_1_desc; ;;;;;;;;;;;;;x
-dog_law_politic_2;Normal;Normal;;;;;;;;;;;;x
+dog_law_politic_2;Normal politic interest;Intérêt politique normal;;;;;;;;;;;;x
+dog_law_politic_2_option;Normal;Normal;;;;;;;;;;;;x
 dog_law_politic_2_desc; ;;;;;;;;;;;;;x
-dog_law_politic_3;High;Élevé;;;;;;;;;;;;x
+dog_law_politic_3;High politic interest;Intérêt politique élevé;;;;;;;;;;;;x
+dog_law_politic_3_option;High;Élevé;;;;;;;;;;;;x
 dog_law_politic_3_desc; ;;;;;;;;;;;;;x
-dog_law_politic_4;Important;Important;;;;;;;;;;;;x
+dog_law_politic_4;Important politic interest;Intérêt politique important;;;;;;;;;;;;x
+dog_law_politic_4_option;Important;Important;;;;;;;;;;;;x
 dog_law_politic_4_desc; ;;;;;;;;;;;;;x
-dog_law_economic_0;Minimal;Minime;;;;;;;;;;;;x
+dog_law_economic_0;Minimal economic interest;Intérêt économique minimal;;;;;;;;;;;;x
+dog_law_economic_0_option;Minimal;Minime;;;;;;;;;;;;x
 dog_law_economic_0_desc; ;;;;;;;;;;;;;x
-dog_law_economic_1;Small;Petite;;;;;;;;;;;;x
+dog_law_economic_1;Small economic interest;Intérêt économique petit;;;;;;;;;;;;x
+dog_law_economic_1_option;Small;Petite;;;;;;;;;;;;x
 dog_law_economic_1_desc; ;;;;;;;;;;;;;x
-dog_law_economic_2;Normal;Normal;;;;;;;;;;;;x
+dog_law_economic_2;Normal economic interest;Intérêt économique normal;;;;;;;;;;;;x
+dog_law_economic_2_option;Normal;Normal;;;;;;;;;;;;x
 dog_law_economic_2_desc; ;;;;;;;;;;;;;x
-dog_law_economic_3;High;Élevé;;;;;;;;;;;;x
+dog_law_economic_3;High economic interest;Intérêt économique élevé;;;;;;;;;;;;x
+dog_law_economic_3_option;High;Élevé;;;;;;;;;;;;x
 dog_law_economic_3_desc; ;;;;;;;;;;;;;x
-dog_law_economic_4;Important;Important;;;;;;;;;;;;x
+dog_law_economic_4;Important economic interest;Intérêt économique important;;;;;;;;;;;;x
+dog_law_economic_4_option;Important;Important;;;;;;;;;;;;x
 dog_law_economic_4_desc; ;;;;;;;;;;;;;x
-dog_law_war_0;Minimal;Minime;;;;;;;;;;;;x
+dog_law_war_0;Minimal military interest;Intérêt militaire minimal;;;;;;;;;;;;x
+dog_law_war_0_option;Minimal;Minime;;;;;;;;;;;;x
 dog_law_war_0_desc; ;;;;;;;;;;;;;x
-dog_law_war_1;Small;Petite;;;;;;;;;;;;x
+dog_law_war_1;Small military interest;Intérêt militaire petit;;;;;;;;;;;;x
+dog_law_war_1_option;Small;Petite;;;;;;;;;;;;x
 dog_law_war_1_desc; ;;;;;;;;;;;;;x
-dog_law_war_2;Normal;Normal;;;;;;;;;;;;x
+dog_law_war_2;Normal military interest;Intérêt militaire normal;;;;;;;;;;;;x
+dog_law_war_2_option;Normal;Normal;;;;;;;;;;;;x
 dog_law_war_2_desc; ;;;;;;;;;;;;;x
-dog_law_war_3;High;Élevé;;;;;;;;;;;;x
+dog_law_war_3;High military interest;Intérêt militaire élevé;;;;;;;;;;;;x
+dog_law_war_3_option;High;Élevé;;;;;;;;;;;;x
 dog_law_war_3_desc; ;;;;;;;;;;;;;x
-dog_law_war_4;Important;Important;;;;;;;;;;;;x
+dog_law_war_4;Important military interest;Intérêt militaire important;;;;;;;;;;;;x
+dog_law_war_4_option;Important;Important;;;;;;;;;;;;x
 dog_law_war_4_desc; ;;;;;;;;;;;;;x
 
 ##laws tooltip
