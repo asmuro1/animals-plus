@@ -27,9 +27,11 @@ pragmatist = {
 		NOT = { trait = horse }
 		NOT = { trait = cat }
 
-		NAND = {
-			culture_group = dog_group
-			has_law = dog_law_economic_0
+		liege = {
+			NAND = {
+				culture_group = dog_group
+				has_law = dog_law_economic_0
+			}
 		}
 	}
 	
@@ -95,7 +97,9 @@ pragmatist = {
 	  	}
 		additive_modifier = {
 			value = 50
-			has_law = dog_law_economic_4
+			liege = {
+				has_law = dog_law_economic_4
+			}
 		}
 	}
 	

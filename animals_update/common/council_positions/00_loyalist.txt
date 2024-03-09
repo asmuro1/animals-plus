@@ -31,9 +31,11 @@ loyalist = {
 			trait = horse
 		}
 
-		NAND = {
-			culture_group = dog_group
-			has_law = dog_law_politic_0
+		liege = {
+			NAND = {
+				culture_group = dog_group
+				has_law = dog_law_politic_0
+			}
 		}
 	}
 	
@@ -97,12 +99,11 @@ loyalist = {
 				}
 			}
 		}
-		modifier = {
-			factor = -1
+		additive_modifier = {
+			value = 50
 
-			AND = {
-				culture_group = dog_group
-				has_law = dog_law_politic_0
+			liege = {
+				has_law = dog_law_politic_4
 			}
 		}
 	}

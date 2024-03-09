@@ -26,9 +26,11 @@ malcontent = {
 		NOT = { trait = horse }
 		NOT = { trait = cat }
 		
-		NAND = {
-			culture_group = dog_group
-			has_law = dog_law_politic_4
+		liege = {
+			NAND = {
+				culture_group = dog_group
+				has_law = dog_law_politic_4
+			}
 		}
 		
 	}
@@ -110,11 +112,10 @@ malcontent = {
 	   		}
 	  	}
 		additive_modifier = {
-			value = -1000
+			value = 50
 
-			AND = {
-				culture_group = dog_group
-				has_law = dog_law_politic_4
+			liege = {
+				has_law = dog_law_politic_0
 			}
 		}
 	}

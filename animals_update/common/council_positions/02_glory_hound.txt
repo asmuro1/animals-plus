@@ -26,9 +26,11 @@ glory_hound = {
 		#NOT = { trait = craven } #added negative modifier instead
 		NOT = { trait = horse }
 		NOT = { trait = cat }
-		NAND = {
-			culture_group = dog_group
-			has_law = dog_law_war_0
+		liege = {
+			NAND = {
+				culture_group = dog_group
+				has_law = dog_law_war_0
+			}
 		}
 	}
 	
@@ -80,7 +82,9 @@ glory_hound = {
 		additive_modifier = {
 			value = 50
 		
-			has_law = dog_law_war_4
+			liege = {
+				has_law = dog_law_war_4
+			}
 		}
 	}
 	
