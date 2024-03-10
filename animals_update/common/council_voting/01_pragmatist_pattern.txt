@@ -13,7 +13,7 @@ pragmatist_pattern_for = {
 			custom_tooltip = {
 				text = pattern_pragmatist_weak_opponent_custom_tooltip
 				hidden_tooltip = {
-					AND = { # Attacking a weak opponent for land
+					#AND = { # Attacking a weak opponent for land
 						FROM = { # Attacker
 							relative_power_including_allies_attacker = {
 								who = ROOT_FROMFROM # Defender
@@ -24,13 +24,13 @@ pragmatist_pattern_for = {
 							stored_token_trigger = other_claim
 							stored_token_trigger = other_claim_on_liege
 						}
-					}
+					#}
 				}
 			}
 			custom_tooltip = {
 				text = pattern_pragmatist_de_jure_or_culture_custom_tooltip
 				hidden_tooltip = {
-					AND = { # Attacking de-jure or culture-group provinces
+					#AND = { # Attacking de-jure or culture-group provinces
 						FROM = { # Attacker
 							relative_power_including_allies_attacker = {
 								who = ROOT_FROMFROM # Defender
@@ -75,7 +75,7 @@ pragmatist_pattern_for = {
 								}
 							}
 						}
-					}
+					#}
 				}
 			}
 		}

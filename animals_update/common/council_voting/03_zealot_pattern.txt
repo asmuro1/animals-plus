@@ -8,7 +8,7 @@ zealot_pattern_for = {
 				text = pattern_zealot_depose_wicked_pope_custom_tooltip
 				hidden_tooltip = {
 					FROMFROMFROM = { # Gainer
-						AND = { # Deposing a wicked pope
+						#AND = { # Deposing a wicked pope
 							rightful_religious_head_scope = {
 								character = PREV
 								NOT = { trait = bad_priest_christian }
@@ -17,14 +17,14 @@ zealot_pattern_for = {
 								character = ROOT_FROMFROM # Defender
 								trait = bad_priest_christian
 							}
-						}
+						#}
 					}
 				}
 			}
 			custom_tooltip = {
 				text = pattern_zealot_dislikes_heathens_heretics_custom_tooltip
 				hidden_tooltip = {
-					AND = { # or taking titles from heretics or heathens
+					#AND = { # or taking titles from heretics or heathens
 						OR = {
 							FROMFROM = { # Defender
 								NOT = {
@@ -39,13 +39,13 @@ zealot_pattern_for = {
 								}
 							}
 						}
-					}
+					#}
 				}
 			}
 			custom_tooltip = {
 				text = pattern_attacking_excom_or_antipope_custom_tooltip
 				hidden_tooltip = {
-					AND = { # or attacking an excommunicated member of the faith or an antipope
+					#AND = { # or attacking an excommunicated member of the faith or an antipope
 						FROMFROM = { # Defender
 							religion = ROOT
 							OR = {
@@ -55,7 +55,7 @@ zealot_pattern_for = {
 								}
 							}
 						}
-					}
+					#}
 				}
 			}
 		}
