@@ -517,9 +517,9 @@ targetted_decisions = {
             modifier = {
                 factor = 0.25
                 
-                holder_scope = {
+                #holder_scope = {
                     NOT = { character = FROM }
-                }
+                #}
             }
         }
     }

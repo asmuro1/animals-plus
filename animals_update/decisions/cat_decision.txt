@@ -344,7 +344,7 @@ title_decisions = {
             additive_modifier = {
                 value = 0.3
 
-                wealth < 0
+                FROM = { wealth < 0 }
             }
         }
     }
@@ -1915,9 +1915,9 @@ targetted_decisions = {
                 factor = 0
                 
                 NOT = {
-                    holder_scope = {
+                    #holder_scope = {
                         is_foe = FROM
-                    }
+                    #}
                 }
             }
         }
