@@ -2,6 +2,27 @@ loyalist_pattern_for = {
 	icon = 3
 	pattern_type = for
 
+	dog_law_politic_0 = { liege = { character = FROM } }
+	dog_law_politic_1 = { liege = { character = FROM } }
+	dog_law_politic_2 = { liege = { character = FROM } }
+	dog_law_politic_3 = { liege = { character = FROM } }
+	dog_law_politic_4 = { liege = { character = FROM } }
+	dog_law_economic_0 = { liege = { character = FROM } }
+	dog_law_economic_1 = { liege = { character = FROM } }
+	dog_law_economic_2 = { liege = { character = FROM } }
+	dog_law_economic_3 = { liege = { character = FROM } }
+	dog_law_economic_4 = { liege = { character = FROM } }
+	dog_law_war_0 = { liege = { character = FROM } }
+	dog_law_war_1 = { liege = { character = FROM } }
+	dog_law_war_2 = { liege = { character = FROM } }
+	dog_law_war_3 = { liege = { character = FROM } }
+	dog_law_war_4 = { liege = { character = FROM } }
+	dog_law_war_council = { liege = { character = FROM } }
+	dog_law_pol_council = { liege = { character = FROM } }
+	dog_law_eco_council = { liege = { character = FROM } }
+	dog_law_eve_council = { liege = { character = FROM } }
+	dog_law_res_council = { liege = { character = FROM } }
+
 	panda_vassal_unallowed = { liege = { character = FROM } }
 	panda_vassal_count_allowed = { liege = { character = FROM } }
 	panda_vassal_all_allowed = { liege = { character = FROM } }
@@ -271,6 +292,28 @@ loyalist_pattern_for = {
 loyalist_pattern_against = {
 	icon = 3
 	pattern_type = against
+
+	dog_law_politic_0 = { NOT = { liege = { character = FROM } } }
+	dog_law_politic_1 = { NOT = { liege = { character = FROM } } }
+	dog_law_politic_2 = { NOT = { liege = { character = FROM } } }
+	dog_law_politic_3 = { NOT = { liege = { character = FROM } } }
+	dog_law_politic_4 = { NOT = { liege = { character = FROM } } }
+	dog_law_economic_0 = { NOT = { liege = { character = FROM } } }
+	dog_law_economic_1 = { NOT = { liege = { character = FROM } } }
+	dog_law_economic_2 = { NOT = { liege = { character = FROM } } }
+	dog_law_economic_3 = { NOT = { liege = { character = FROM } } }
+	dog_law_economic_4 = { NOT = { liege = { character = FROM } } }
+	dog_law_war_0 = { NOT = { liege = { character = FROM } } }
+	dog_law_war_1 = { NOT = { liege = { character = FROM } } }
+	dog_law_war_2 = { NOT = { liege = { character = FROM } } }
+	dog_law_war_3 = { NOT = { liege = { character = FROM } } }
+	dog_law_war_4 = { NOT = { liege = { character = FROM } } }
+	dog_law_war_council = { NOT = { liege = { character = FROM } } }
+	dog_law_pol_council = { NOT = { liege = { character = FROM } } }
+	dog_law_eco_council = { NOT = { liege = { character = FROM } } }
+	dog_law_eve_council = { NOT = { liege = { character = FROM } } }
+	dog_law_res_council = { NOT = { liege = { character = FROM } } }
+
 
 	panda_vassal_unallowed = { NOT = { liege = { character = FROM } } }
 	panda_vassal_count_allowed = { NOT = { liege = { character = FROM } } }
