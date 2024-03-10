@@ -70,6 +70,8 @@ title_panda_plot_official;Intrigue official;Bureaucrate intriguant;;;;;;;;;;;;x
 title_panda_plot_official_desc;Intrigue official has a big impact on vassals joining instability faction;Le bureaucrate intriguant a de l'impact pour limiter l'adhésions à la factions d'instabilité ;;;;;;;;;;;;x
 title_panda_religious_official;Religious official;Bureaucrate religieux;;;;;;;;;;;;x
 title_panda_religious_official_desc;Religious official has a big impact on vassals joining  independence faction;Le bureaucrate religieux a de l'impact pour limiter l'adhésions à la faction d'indépendance;;;;;;;;;;;;x
+title_dog_war_councillor;War advisor;Conseiller de guerre;;;;;;;;;;;;x
+title_dog_war_councillor_desc;Advisor promoted to increase military power;Ce conseiller promeut le pouvoir militaire du royaume;;;;;;;;;;;;x
 
 ###holy order titles
 d_polar_fighter;The polar warriors;Les chevaliers de la banquise;;;;;;;;;;;;x

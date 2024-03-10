@@ -138,3 +138,31 @@ title_panda_religious_official = {
 
     message = yes
 }
+
+title_dog_war_councillor = {
+    is_high_prio = yes
+    is_voter = yes
+    dignity = 1.0
+    attribute = martial
+    grant_limit = 1
+    opinion_effect = 15
+    monthly_salary = 0.1
+    monthly_prestige = 0.25
+    is_unique = yes
+
+    allowed_to_hold = {
+        demesne_size = 1
+    }
+    allowed_to_grant = {
+        has_law = dog_law_war_council
+    }
+
+    gain_effect = {}
+    lose_effect = {}
+    retire_effect = {}
+    death_effect = {}
+    
+    revoke_trigger = { always = yes }
+    
+    message = yes
+}
