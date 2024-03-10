@@ -75,7 +75,9 @@ title_dog_war_councillor_desc;Advisor promoted to increase military power;Ce con
 title_dog_pol_councillor;Political advisor;Conseiller politique;;;;;;;;;;;;x
 title_dog_pol_councillor_desc;Advisor promoted to increase your reputation;Ce conseiller promeut la réputation de son seigneur auprès de ses vassaux;;;;;;;;;;;;x
 title_dog_eco_councillor;Economic advisor;Conseiller économique;;;;;;;;;;;;x
-title_dog_eco_councillor_desc;Adviser promoted to increase economy;Ce conseiller promeut l'économie du royaume;;;;;;;;;;;;x
+title_dog_eco_councillor_desc;Advisor promoted to increase economy;Ce conseiller promeut l'économie du royaume;;;;;;;;;;;;x
+title_dog_eve_councillor;Intrigue advisor;Conseiller d'intrigue;;;;;;;;;;;;x
+title_dog_eve_councillor_desc;Advisor promoted to prevent interest change;Ce conseiller empêche le changement d'intérêt impromptu;;;;;;;;;;;;x
 
 ###holy order titles
 d_polar_fighter;The polar warriors;Les chevaliers de la banquise;;;;;;;;;;;;x

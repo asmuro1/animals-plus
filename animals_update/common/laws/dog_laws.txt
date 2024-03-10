@@ -1481,6 +1481,7 @@ laws = {
         allow = {
             government = dog_feudal_gov
             higher_tier_than = baron
+            has_law = execution_voting_power_1
         }
         potential = {
             has_dlc = "Zeus"

@@ -344,6 +344,7 @@ character_event = {
             NOT = { has_dlc = "Zeus" }
             has_law = law_voting_power_1
         }
+        NOT = { has_assigned_minor_title = title_dog_eve_councillor }
     }
 
     mean_time_to_happen = {

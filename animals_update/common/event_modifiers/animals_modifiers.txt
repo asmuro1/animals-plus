@@ -680,3 +680,7 @@ dog_economic_council = {
 	stewardship = 2
 	global_tax_modifier = 0.1
 }
+dog_intrigue_council = {
+	icon = 5
+	intrigue = 2
+}
