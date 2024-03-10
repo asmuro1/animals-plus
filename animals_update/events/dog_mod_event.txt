@@ -301,7 +301,7 @@ character_event = {
     culture_group = dog_group
 
     trigger = {
-        culture_group = dog_group
+        #culture_group = dog_group
         
         NOR = {
             has_law = dog_law_economic_0
@@ -342,7 +342,7 @@ character_event = {
     only_playable = yes
 
     trigger = {
-        culture_group = dog_group
+        #culture_group = dog_group
         is_playable = yes
         NOR = {
             has_character_flag = DOG_POLI_CHANGE
@@ -753,12 +753,13 @@ character_event = {
     border = GFX_event_normal_frame_diplomacy
     picture = GFX_evt_council
 
+    culture_group = dog_group
     only_playable = yes
     has_dlc = "Zeus"
 
     trigger = {
         has_dlc = "Zeus"
-        culture_group = dog_group
+        # culture_group = dog_group
         NOT = { has_law = law_voting_power_1 }
         NAND = {
             has_character_modifier = dog_penalty_popular
