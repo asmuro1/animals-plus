@@ -209,6 +209,7 @@ cat_controlled_holding;Controlled by cats;Contrôlé par des chats;;;;;;;;;;;;x
 dog_penalty_popular;unsatified council;Conseil insatisfait;;;;;;;;;;;;x
 dog_penalty_economic;unsatified council;Conseil insatisfait;;;;;;;;;;;;x
 dog_penalty_military;unsatified council;Conseil insatisfait;;;;;;;;;;;;x
+dog_military_council;military advisor;Conseiller militaire;;;;;;;;;;;;x
 
 #religion modifier
 dog_rel_unity_penality;Forced conversion;Conversion forcé;;;;;;;;;;;;x
