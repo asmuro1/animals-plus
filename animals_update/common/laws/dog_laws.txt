@@ -1419,7 +1419,7 @@ laws = {
         default = no
 
         allow = {
-            government = dog_feudal_gov
+            holder_scope = { government = dog_feudal_gov }
             higher_tier_than = baron
             has_law = war_voting_power_1
             NOT = { has_law = dog_law_war_0 }
@@ -1445,7 +1445,7 @@ laws = {
         default = no
 
         allow = {
-            government = dog_feudal_gov
+            holder_scope = { government = dog_feudal_gov }
             higher_tier_than = baron
             has_law = revoke_title_voting_power_1
             NOT = { has_law = dog_law_politic_0 }
@@ -1471,7 +1471,7 @@ laws = {
         default = no
 
         allow = {
-            government = dog_feudal_gov
+            holder_scope = { government = dog_feudal_gov }
             higher_tier_than = baron
             has_law = grant_title_voting_power_1
             NOT = { has_law = dog_law_economic_0 }
@@ -1497,7 +1497,7 @@ laws = {
         default = no
 
         allow = {
-            government = dog_feudal_gov
+            holder_scope = { government = dog_feudal_gov }
             higher_tier_than = baron
             has_law = execution_voting_power_1
         }
@@ -1522,7 +1522,7 @@ laws = {
         default = no
 
         allow = {
-            government = dog_feudal_gov
+            holder_scope = { government = dog_feudal_gov }
             higher_tier_than = baron
         }
         potential = {
