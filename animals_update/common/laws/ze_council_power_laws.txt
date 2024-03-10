@@ -345,9 +345,9 @@ laws = {
 			}
 			additive_modifier = { 
 				value = 10			
-				OR = {
+				#OR = {
 					holder_scope = { is_nomadic = yes }	
-				}
+				#}
 			}
 		}
 		
@@ -520,9 +520,9 @@ laws = {
 			}
 			additive_modifier = { 
 				value = 10			
-				OR = {
+				#OR = {
 					holder_scope = { is_nomadic = yes }	
-				}
+				#}
 			}
 		}
 		
@@ -690,9 +690,9 @@ laws = {
 			}
 			additive_modifier = { 
 				value = 10			
-				OR = {
+				#OR = {
 					holder_scope = { is_nomadic = yes }	
-				}
+				#}
 			}
 		}
 		
@@ -860,9 +860,9 @@ laws = {
 			}
 			additive_modifier = { 
 				value = 10			
-				OR = {
+				#OR = {
 					holder_scope = { is_nomadic = yes }	
-				}
+				#}
 			}
 		}
 		
