@@ -228,6 +228,11 @@ character_event = {
             revoke_law = dog_unity_county_conv
             revoke_law = dog_unity_character_conv
             revoke_law = dog_unity_reputation_cost
+            revoke_law = dog_law_war_council
+            revoke_law = dog_law_eco_council
+            revoke_law = dog_law_pol_council
+            revoke_law = dog_law_eve_council
+            revoke_law = dog_law_res_council
         }
     }
 }

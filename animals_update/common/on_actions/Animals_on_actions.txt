@@ -53,7 +53,7 @@ on_siege_over_winner = {
 
 on_new_holder = {
 	events = {
-		ani_plus.164 # removing dog unity law on holder change
+		ani_plus.164 # removing dog unity and council laws on holder change 
 	}
 }
 on_new_holder_inheritance = {
