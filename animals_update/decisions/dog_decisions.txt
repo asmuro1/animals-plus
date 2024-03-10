@@ -1,0 +1,526 @@
+decisions = {
+    dog_conversion_quest = {
+        is_high_prio = yes
+        ai_check_interval = 60
+        only_playable = yes
+
+        potential = {
+            OR = {
+                has_game_rule = {
+                    name = animals_conversion_ways
+                    value = animal_decision
+                }
+                AND = {
+                    has_game_rule = {
+                        name = animals_conversion_ways
+                        value = animal_instant
+                    }
+                    ai = no
+                }
+            }
+            any_realm_province = {
+                dog_can_live_here_trigger = yes
+            }
+            Is_really_animal_trigger = no
+            NOT = { has_character_modifier = panda_conversion_quest_cooldown }
+        }
+
+        allow = {
+            is_adult = yes
+            is_incapable = no
+            has_regent = no
+            OR = {
+                trait = socializer
+                lifestyle_traits == 0
+            }
+            any_demesne_province = {
+                dog_can_live_here_trigger = yes
+            }
+            OR = {
+                has_assigned_minor_title = title_master_of_the_hunt
+                has_character_modifier = pet_house_dog
+                has_character_modifier = guard_dogs
+                has_character_modifier = pet_hunting_dog
+                has_character_modifier = guide_dog
+            }
+        }
+
+        effect = {
+            if = {
+                limit = {
+                    has_game_rule = {
+                        name = animals_conversion_ways
+                        value = animal_decision
+                    }
+                }
+                add_character_modifier = {
+                    name = panda_conversion_quest_cooldown
+                    years = 5
+                    hidden = yes
+                }
+
+                character_event = {
+                    id = ani_plus.160
+                    days = 1
+                }
+            }
+            else = {
+                random_list = {
+                    1 = {
+                        trigger = {
+                            any_demesne_province = {
+                                terrain = steppe
+                            }
+                        }
+                        culture = steppe_dog
+                    }
+                    1 = {
+                        trigger = {
+                            any_demesne_province = {
+                                terrain = hills
+                            }
+                        }
+                        culture = dog_culture
+                    }
+                }
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+
+            modifier = { 
+                factor = 0.01
+                always = yes 
+            }
+        }
+    }
+
+    adopt_dog_religion = {
+        is_high_prio = yes
+        ai_check_interval = 3
+
+        potential = {
+            culture_group = dog_group
+            NOT = { religion = Dog_religion }
+            can_change_religion = yes
+        }
+        allow = {
+            is_adult = yes
+            culture_group = dog_group
+            has_regent = no
+            is_incapable = no
+            can_change_religion = yes
+        }
+        effect = {
+            religion = Dog_religion
+            if = {
+                limit = {
+                    OR = {
+                        independent = yes
+                        liege = { NOT = { religion = Dog_religion } }
+                    }
+                }
+                if = {
+                    limit = {
+                        has_game_rule = {
+                            name = animals_bonus_levy
+                            value = Few
+                        }
+                    }
+                    spawn_unit = {
+                        province = capital_scope
+                        home = capital_scope
+                        owner = ROOT
+                        leader = none
+                        troops = {
+                            light_cavalry = { 2000 2000 }
+                        }
+                        attrition = 0.1
+                        maintenance = no
+
+                    }
+                }
+                else_if = {
+                    limit = {
+                        has_game_rule = {
+                            name = animals_bonus_levy
+                            value = Normal
+                        }
+                    }
+                    spawn_unit = {
+                        province = capital_scope
+                        home = capital_scope
+                        owner = ROOT
+                        leader = none
+                        troops = {
+                            light_cavalry = { 5000 5000 }
+                        }
+                        attrition = 0.1
+                        maintenance = no
+
+                    }
+                }
+                else_if = {
+                    limit = {
+                        has_game_rule = {
+                            name = animals_bonus_levy
+                            value = Many
+                        }
+                    }
+                    spawn_unit = {
+                        province = capital_scope
+                        home = capital_scope
+                        owner = ROOT
+                        leader = none
+                        troops = {
+                            light_cavalry = { 10000 10000 }
+                        }
+                        attrition = 0.05
+                        maintenance = no
+
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    is_feudal = yes
+                }
+                set_government_type = dog_feudal_gov
+            }
+        }
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+
+                independent = no
+                liege = {
+                    NOT = { religion = Dog_religion }
+                }
+            }
+        }
+    }
+
+    create_hunting_gards = {
+        only_playable = yes
+        ai_check_interval = 80
+
+        is_high_prio = yes
+
+        potential = {
+            NOT = { is_title_active = d_hunting_gards }
+            independent = yes
+            religion = Dog_religion
+            culture_group = dog_group
+            NOT = {    has_alternate_start_parameter = { key = religion_names value = random } }
+        }
+        allow = {
+            higher_tier_than = DUKE
+            war = no
+            piety = 350
+        }
+        effect = {
+            piety = -350
+            prestige = 600
+            custom_tooltip = {
+                text = CREATED_HOLY_ORDER_DOG_TOOLTIP
+
+                activate_title = { title = d_hunting_gards status = yes }
+                create_character = {
+                    random_traits = no
+                    dynasty = random
+                    religion = ROOT
+                    culture = dog_culture
+                    female = no
+                    age = 25
+                    trait = brilliant_strategist
+                    trait = zealous
+                    trait = humble
+                    trait = ambitious
+                    trait = strategist
+                    trait = holy_warrior
+                }
+                new_character = {
+                    wealth = 500
+                    d_hunting_gards = {
+                        grant_title = PREV
+                    }
+                    set_government_type = order_government
+                    create_character = {
+                        random_traits = yes
+                        dynasty = random
+                        religion = ROOT
+                        culture = ROOT
+                        female = no
+                        age = 20
+                    }
+                    create_character = {
+                        random_traits = yes
+                        dynasty = random
+                        religion = ROOT
+                        culture = ROOT
+                        female = no
+                        age = 19
+                    }
+                    create_character = {
+                        random_traits = yes
+                        dynasty = random
+                        religion = ROOT
+                        culture = ROOT
+                        female = no
+                        age = 18
+                    }
+                    create_character = {
+                        random_traits = yes
+                        dynasty = random
+                        religion = ROOT
+                        culture = ROOT
+                        female = no
+                        age = 17
+                    }
+                    create_character = {
+                        random_traits = yes
+                        dynasty = random
+                        religion = ROOT
+                        culture = ROOT
+                        female = no
+                        age = 16
+                    }
+                }
+                any_player = {
+                    narrative_event = { id = ani_plus.070 }
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0.4
+            }
+            modifier = {
+                factor = 0.5
+                trait = cynical
+            }
+        }
+    }
+}
+
+title_decisions = {
+    promote_county_unity = {
+        is_high_prio = no
+        ai_check_interval = 11
+
+        filter = owned
+        ai_target_filter = owned
+
+        potential = {
+            tier = COUNT
+            FROM = {
+                culture_group = dog_group
+                religion = Dog_religion
+                has_law = dog_unity_county_conv
+            }
+            location = {
+                NOT = {
+                    culture = FROM
+                }
+            }
+            holder_scope = {
+                OR = {
+                    character = FROM
+                    is_vassal_or_below_of = FROM
+                }
+            }
+        }
+        allow = {
+            FROM = {
+                has_regent = no
+                OR = {
+                    prestige = 300
+                    has_law = dog_unity_reputation_cost
+                }
+                OR = {
+                    religion_authority = 0.15
+                    conditional_tooltip = {
+                        trigger = {
+                            culture = dog_culture
+                        }
+                        c_reggio = {
+                            holder_scope = { religion = Dog_religion }
+                        }
+                    }
+                    conditional_tooltip = {
+                        trigger = {
+                            culture = steppe_dog    
+                        }
+                        c_sarkel = {
+                            holder_scope = { religion = Dog_religion }
+                        }
+                    }
+                }
+            }
+        }
+
+        effect = {
+            location = {
+                culture = FROM
+            }
+            FROM = {
+                if = {
+                    limit = {
+                        NOT = {
+                           has_law = dog_unity_reputation_cost
+                        }
+                    }
+                    prestige = -300
+                }
+                if = {
+                    limit = {
+                        OR = {
+                            AND = {
+                                culture = dog_culture
+                                NOT = {
+                                    c_reggio = {
+                                        holder_scope = { religion = Dog_religion }
+                                    }
+                                }
+                            }
+                            AND = {
+                                culture = steppe_dog
+                                NOT = {
+                                    c_sarkel = {
+                                        holder_scope = { religion = Dog_religion }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    religion_authority = {
+                        name = dog_rel_unity_penality
+                        months = 30
+                    }
+                }
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0.25
+                
+                holder_scope = {
+                    NOT = { character = FROM }
+                }
+            }
+        }
+    }
+}
+
+targetted_decisions = {
+    promote_character_unity = {
+        is_high_prio = no
+        ai_check_interval = 11
+
+        filter = sub_realm
+        ai_target_filter = vassals
+
+        potential = {
+            FROM = {
+                culture_group = dog_group
+                religion = Dog_religion
+                has_law = dog_unity_character_conv
+            }
+            NOT = {
+                culture = FROM
+            }
+        }
+        allow = {
+            is_adult = yes
+            FROM = {
+                has_regent = no
+                OR = {
+                    piety = 190
+                    has_law = dog_unity_reputation_cost
+                }
+                OR = {
+                    religion_authority = 0.07
+                    conditional_tooltip = {
+                        trigger = {
+                            culture = dog_culture
+                        }
+                        c_st_gallen = {
+                            holder_scope = { religion = Dog_religion }
+                        }
+                    }
+                    conditional_tooltip = {
+                        trigger = {
+                            culture = steppe_dog    
+                        }
+                        c_peresechen = {
+                            holder_scope = { religion = Dog_religion }
+                        }
+                    }
+                }
+            }
+        }
+
+        effect = {
+            culture = FROM
+
+            FROM = {
+                if = {
+                    limit = {
+                        NOT = {
+                           has_law = dog_unity_reputation_cost
+                        }
+                    }
+                    piety = -190
+                }
+                if = {
+                    limit = {
+                        OR = {
+                            AND = {
+                                culture = dog_culture
+                                NOT = {
+                                    c_st_gallen = {
+                                        holder_scope = { religion = Dog_religion }
+                                    }
+                                }
+                            }
+                            AND = {
+                                culture = steppe_dog
+                                NOT = {
+                                    c_peresechen = {
+                                        holder_scope = { religion = Dog_religion }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    religion_authority = {
+                        name = dog_rel_unity_penality
+                        months = 30
+                    }
+                }
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0.25
+                
+                #holder_scope = {
+                    NOT = { character = FROM }
+                #}
+            }
+        }
+    }
+}

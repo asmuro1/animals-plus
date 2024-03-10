@@ -706,20 +706,12 @@
 }
 2000175 = {
 	name="Terrier"
-	culture="dog_culture"
+	culture="steppe_dog"
 }
 2000176 = {
 	name="Loenberger"
-	culture="dog_culture"
+	culture="steppe_dog"
 }
-# 2000176 = {
-# 	name="Maltese"
-# 	culture="dog_culture"
-# }
-# 2000176 = {
-# 	name="Maltipoo"
-# 	culture="dog_culture"
-# }
 
 2000177 = {
 	name="Noighyd"
@@ -788,7 +780,7 @@
 }
 2000193 = {
 	name="Doggo"
-	culture="dog_culture"
+	culture="steppe_dog"
 }
 2000194 = {
 	name="Jellicle"
@@ -800,7 +792,7 @@
 }
 2000196 = {
 	name="Pollicle"
-	culture="dog_culture"
+	culture="steppe_dog"
 }
 2000197 = {
 	name="Malta"
@@ -812,19 +804,19 @@
 }
 2000199 = {
 	name="Goodboye"
-	culture="dog_culture"
+	culture="steppe_dog"
 }
 2000200 = {
 	name="Woofer"
-	culture="dog_culture"
+	culture="steppe_dog"
 }
 2000201 = {
 	name="Bork"
-	culture="dog_culture"
+	culture="steppe_dog"
 }
 2000202 = {
 	name="Dog"
-	culture="dog_culture"
+	culture="steppe_dog"
 }
 2000203 = {
 	name="Quackel"
@@ -832,23 +824,23 @@
 }
 2000204 = {
 	name="Boy"
-	culture="dog_culture"
+	culture="steppe_dog"
 }
 2000205 = {
 	name="Girl"
-	culture="dog_culture"
+	culture="steppe_dog"
 }
 2000206 = {
 	name="Pupper"
-	culture="dog_culture"
+	culture="steppe_dog"
 }
 2000207 = {
 	name="Puppy"
-	culture="dog_culture"
+	culture="steppe_dog"
 }
 2000208 = {
 	name="Yeller"
-	culture="dog_culture"
+	culture="steppe_dog"
 }
 2000209 = {
 	name="Runner"
@@ -1084,47 +1076,47 @@
 }
 2000260 = {
 	name="Goodboy"
-	culture="dog_culture"
+	culture="steppe_dog"
 
 }
 2000261 = {
 	name="Baskerville"
-	culture="dog_culture"
+	culture="steppe_dog"
 
 }
 2000262 = {
 	name="McDogface"
-	culture="dog_culture"
+	culture="steppe_dog"
 
 }
 2000263 = {
 	name="Howler"
-	culture="dog_culture"
+	culture="steppe_dog"
 
 }
 2000264 = {
 	name="Pawser"
-	culture="dog_culture"
+	culture="steppe_dog"
 
 }
 2000265 = {
 	name="Goldenboi"
-	culture="dog_culture"
+	culture="steppe_dog"
 
 }
 2000266 = {
 	name="Woofington"
-	culture="dog_culture"
+	culture="steppe_dog"
 
 }
 2000267 = {
 	name="Blepper"
-	culture="dog_culture"
+	culture="steppe_dog"
 
 }
 2000268 = {
 	name="von Sploot"
-	culture="dog_culture"
+	culture="steppe_dog"
 
 }
 2000269 = {

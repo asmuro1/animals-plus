@@ -1,0 +1,1544 @@
+law_groups = {
+    dog_unity_laws = {
+        law_type = realm
+    }
+
+    dog_political_laws = {
+        law_type = realm
+    }
+    dog_economic_laws = {
+        law_type = realm
+    }
+    dog_war_laws = {
+        law_type = realm
+    }
+
+    dog_council_laws = {
+		law_type = council
+		allowed_for_councillors = yes
+	}
+}
+
+laws = {
+    dog_unity_county_conv = {
+        group = dog_unity_laws
+        default = no
+
+        potential = {
+            higher_real_tier_than = baron
+            holder_scope = {
+                government = dog_feudal_gov
+            }
+            is_primary_holder_title = yes
+        }
+        allow = {
+            holder_scope = {
+                # NOT = { # the game itself impose a limit of 10 years
+                #     custom_tooltip = {
+                #         text = dog_tt_unity_recent_change
+                #         had_character_flag = {
+                #             flag = dog_recent_unity_change
+                #             years < 5
+                #         }
+                #     }
+                # }
+                has_regent = no
+            }
+        }
+        revoke_allowed = {
+            always = no
+        }
+        ai_will_revoke = {
+            factor = 0
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        pass_effect = {
+            holder_scope = {
+                set_character_flag = dog_recent_unity_change
+            }
+        }
+        effect = {
+            custom_tooltip = {
+                text = dog_tt_allow_county_conversion
+            }
+        }
+    }
+
+    dog_unity_character_conv = {
+        group = dog_unity_laws
+        default = no
+
+        potential = {
+            higher_real_tier_than = baron
+            holder_scope = {
+                government = dog_feudal_gov
+            }
+            is_primary_holder_title = yes
+        }
+        allow = {
+            holder_scope = {
+                # NOT = { # the game itself impose a limit of 10 years
+                #     custom_tooltip = {
+                #         text = dog_tt_unity_recent_change
+                #         had_character_flag = {
+                #             flag = dog_recent_unity_change
+                #             years < 5
+                #         }
+                #     }
+                # }
+                has_regent = no
+            }
+        }
+        revoke_allowed = {
+            always = no
+        }
+        ai_will_revoke = {
+            factor = 0
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        pass_effect = {
+            holder_scope = {
+                set_character_flag = dog_recent_unity_change
+            }
+        }
+        effect = {
+            custom_tooltip = {
+                text = dog_tt_allow_character_conversion
+            }
+        }
+    }
+
+    dog_unity_reputation_cost = {
+        group = dog_unity_laws
+        default = no
+
+        potential = {
+            higher_real_tier_than = baron
+            holder_scope = {
+                government = dog_feudal_gov
+            }
+            is_primary_holder_title = yes
+        }
+        allow = {
+            holder_scope = {
+                has_regent = no
+            }
+        }
+        revoke_allowed = {
+            always = no
+        }
+        ai_will_revoke = {
+            factor = 0
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        pass_effect = {
+            # nothing
+        }
+        effect = {
+            custom_tooltip = {
+                text = dog_tt_price_cost_conv_reduction
+            }
+        }
+    }
+
+    dog_law_politic_0 = {
+        group = dog_political_laws
+        default = no
+
+        potential = {
+            higher_real_tier_than = baron
+            holder_scope = {
+                culture_group = dog_group
+            }
+            is_primary_holder_title = yes
+        }
+        allow = {
+            holder_scope = {
+                has_regent = no
+            }
+            NOR = {
+                has_law = dog_law_politic_2
+                has_law = dog_law_politic_3
+                has_law = dog_law_politic_4
+            }
+            holder_scope = {
+                OR = {
+                    government = dog_feudal_gov
+                    is_tribal = yes
+                }
+            }
+
+            conditional_tooltip = {
+                trigger = {
+                    has_dlc = "Zeus"
+                }
+                dog_has_council_laws_trigger = yes
+            }
+        }
+        revoke_allowed = {
+            always = no
+        }
+        ai_will_revoke = {
+            factor = 0
+        }
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+                has_law = dog_law_politic_1
+            }
+        }
+        pass_effect = {
+            # nothing
+        }
+        effect = {
+            hidden_tooltip = {
+                revoke_law = dog_law_politic_1
+                revoke_law = dog_law_politic_2
+                revoke_law = dog_law_politic_3
+                revoke_law = dog_law_politic_4
+            }
+        }
+
+        vassal_opinion = -30
+        general_opinion = -30
+    }
+    dog_law_politic_1 = {
+        group = dog_political_laws
+        default = no
+
+        potential = {
+            higher_real_tier_than = baron
+            holder_scope = {
+                culture_group = dog_group
+            }
+            is_primary_holder_title = yes
+        }
+        allow = {
+            holder_scope = {
+                has_regent = no
+            }
+            OR = {
+                has_law = dog_law_politic_0
+                has_law = dog_law_politic_2
+            }
+
+            OR = {
+                conditional_tooltip = {
+                    trigger = { has_dlc = "Zeus" }
+                    has_law = dog_law_res_council
+                }
+                custom_tooltip = {
+                    text = dog_tt_canot_be_implicated_inall_law
+                    OR = {
+                        has_law = dog_law_war_0
+                        has_law = dog_law_economic_0
+                    }
+                }
+            }
+
+            holder_scope = {
+                OR = {
+                    government = dog_feudal_gov
+                    is_tribal = yes
+                }
+            }
+
+            conditional_tooltip = {
+                trigger = {
+                    has_dlc = "Zeus"
+                }
+                dog_has_council_laws_trigger = yes
+            }
+        }
+        revoke_allowed = {
+            always = no
+        }
+        ai_will_revoke = {
+            factor = 0
+        }
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+                has_law = dog_law_politic_2
+            }
+        }
+        pass_effect = {
+            # nothing
+        }
+        effect = {
+            hidden_tooltip = {
+                revoke_law = dog_law_politic_0
+                revoke_law = dog_law_politic_2
+                revoke_law = dog_law_politic_3
+                revoke_law = dog_law_politic_4
+            }
+        }
+
+        vassal_opinion = -20
+        general_opinion = -10
+    }
+    dog_law_politic_2 = {
+        group = dog_political_laws
+        default = yes
+
+        potential = {
+            higher_real_tier_than = baron
+            holder_scope = {
+                culture_group = dog_group
+            }
+            is_primary_holder_title = yes
+        }
+        allow = {
+            holder_scope = {
+                has_regent = no
+            }
+            OR = {
+                has_law = dog_law_politic_1
+                has_law = dog_law_politic_3
+            }
+
+            # can't have a sum of +3 implication with other laws
+            custom_tooltip = {
+                text = dog_tt_cant_have_4_implication
+                NOR = {
+                    # no 2 +2 laws
+                    AND = {
+                        has_law = dog_law_economic_3
+                        has_law = dog_law_war_3
+                    }
+
+                    # no 1 +3 law and 1 +1 law
+                    AND = {
+                        OR = {
+                            has_law = dog_law_economic_2
+                            has_law = dog_law_war_2
+                        }
+                        OR = {
+                            has_law = dog_law_economic_4
+                            has_law = dog_law_war_4
+                        }
+                    }
+                }
+            }
+
+            holder_scope = {
+                OR = {
+                    government = dog_feudal_gov
+                    is_tribal = yes
+                }
+            }
+
+            conditional_tooltip = {
+                trigger = {
+                    has_dlc = "Zeus"
+                }
+                dog_has_council_laws_trigger = yes
+            }
+        }
+        revoke_allowed = {
+            always = no
+        }
+        ai_will_revoke = {
+            factor = 0
+        }
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                has_law = dog_law_politic_3
+            }
+        }
+        pass_effect = {
+            # nothing
+        }
+        effect = {
+            hidden_tooltip = {
+                revoke_law = dog_law_politic_0
+                revoke_law = dog_law_politic_1
+                revoke_law = dog_law_politic_3
+                revoke_law = dog_law_politic_4
+            }
+        }
+        dog_interest_implication = 1
+    }
+    dog_law_politic_3 = {
+        group = dog_political_laws
+        default = no
+
+        potential = {
+            higher_real_tier_than = baron
+            holder_scope = {
+                culture_group = dog_group
+            }
+            is_primary_holder_title = yes
+        }
+        allow = {
+            holder_scope = {
+                has_regent = no
+            }
+            OR = {
+                has_law = dog_law_politic_2
+                has_law = dog_law_politic_4
+            }
+            custom_tooltip = {
+                text = dog_tt_cant_have_4_implication
+                
+                # can't have a sum of +3 implication with other laws
+                NOR = {
+                    # no +3 laws
+                    has_law = dog_law_economic_4
+                    has_law = dog_law_war_4
+
+                    # no 1 +1 and 1 +2
+                    AND = {
+                        OR = {
+                            has_law = dog_law_economic_2
+                            has_law = dog_law_war_2
+                        }
+                        OR = {
+                            has_law = dog_law_economic_3
+                            has_law = dog_law_war_3
+                        }
+                    }
+                }
+            }
+            holder_scope = {
+                government = dog_feudal_gov
+            }
+
+            conditional_tooltip = {
+                trigger = {
+                    has_dlc = "Zeus"
+                }
+                dog_has_council_laws_trigger = yes
+            }
+        }
+        revoke_allowed = {
+            always = no
+        }
+        ai_will_revoke = {
+            factor = 0
+        }
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+                has_law = dog_law_politic_4
+            }
+        }
+        pass_effect = {
+            # nothing
+        }
+        effect = {
+            hidden_tooltip = {
+                revoke_law = dog_law_politic_0
+                revoke_law = dog_law_politic_1
+                revoke_law = dog_law_politic_2
+                revoke_law = dog_law_politic_4
+            }
+        }
+        vassal_opinion = 15
+        general_opinion = 5
+        dog_interest_implication = 2
+    }
+    dog_law_politic_4 = {
+        group = dog_political_laws
+        default = no
+
+        potential = {
+            higher_real_tier_than = baron
+            holder_scope = {
+                culture_group = dog_group
+            }
+            is_primary_holder_title = yes
+        }
+        allow = {
+            holder_scope = {
+                has_regent = no
+            }
+            
+            has_law = dog_law_politic_3
+            custom_tooltip = {
+                text = dog_tt_cant_have_4_implication
+
+                # can't have a +2 sum of implication lvl 
+                NOR = {
+                    # no +2 law
+                    has_law = dog_law_economic_3
+                    has_law = dog_law_war_3
+
+                    # no 2 +1 law
+                    AND = {
+                        has_law = dog_law_economic_2
+                        has_law = dog_law_war_2
+                    }
+                }
+            }
+            holder_scope = {
+                government = dog_feudal_gov
+            }
+
+            conditional_tooltip = {
+                trigger = {
+                    has_dlc = "Zeus"
+                }
+                dog_has_council_laws_trigger = yes
+            }
+        }
+        revoke_allowed = {
+            always = no
+        }
+        ai_will_revoke = {
+            factor = 0
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        pass_effect = {
+            # nothing
+        }
+        effect = {
+            hidden_tooltip = {
+                revoke_law = dog_law_politic_0
+                revoke_law = dog_law_politic_1
+                revoke_law = dog_law_politic_2
+                revoke_law = dog_law_politic_3
+            }
+        }
+        vassal_opinion = 20
+        general_opinion = 15
+        dog_interest_implication = 3
+    }
+
+    dog_law_economic_0 = {
+        group = dog_economic_laws
+        # default = yes
+
+        potential = {
+            higher_real_tier_than = baron
+            holder_scope = {
+                culture_group = dog_group
+            }
+            is_primary_holder_title = yes
+        }
+        allow = {
+            holder_scope = {
+                has_regent = no
+            }
+            NOR = {
+                has_law = dog_law_economic_2
+                has_law = dog_law_economic_3
+                has_law = dog_law_economic_4
+            }
+            holder_scope = {
+                OR = {
+                    government = dog_feudal_gov
+                    is_tribal = yes
+                }
+            }
+
+            conditional_tooltip = {
+                trigger = {
+                    has_dlc = "Zeus"
+                }
+                dog_has_council_laws_trigger = yes
+            }
+        }
+        revoke_allowed = {
+            always = no
+        }
+        ai_will_revoke = {
+            factor = 0
+        }
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+                has_law = dog_law_economic_1
+            }
+            
+            modifier = {
+                factor = 0.75
+
+                holder_scope = {
+                    culture = dog_culture
+                }
+            }
+            modifier = {
+                factor = 0.25
+
+                holder_scope = {
+                    culture = steppe_dog
+                }
+            }
+        }
+        pass_effect = {
+            # nothing
+        }
+        effect = {
+            hidden_tooltip = {
+                revoke_law = dog_law_economic_1
+                revoke_law = dog_law_economic_2
+                revoke_law = dog_law_economic_3
+                revoke_law = dog_law_economic_4
+            }
+        }
+
+        global_tax_modifier = -0.75
+        castle_vassal_tax_modifier = -0.50
+    }
+    dog_law_economic_1 = {
+        group = dog_economic_laws
+        default = no
+
+        potential = {
+            higher_real_tier_than = baron
+            holder_scope = {
+                culture_group = dog_group
+            }
+            is_primary_holder_title = yes
+        }
+        allow = {
+            holder_scope = {
+                has_regent = no
+            }
+            OR = {
+                has_law = dog_law_economic_0
+                has_law = dog_law_economic_2
+            }
+
+            OR = {
+                conditional_tooltip = {
+                    trigger = { has_dlc = "Zeus" }
+                    has_law = dog_law_res_council
+                }
+                custom_tooltip = {
+                    text = dog_tt_canot_be_implicated_inall_law
+                    OR = {
+                        has_law = dog_law_politic_0
+                        has_law = dog_law_war_0
+                    }
+                }
+            }
+            holder_scope = {
+                OR = {
+                    government = dog_feudal_gov
+                    is_tribal = yes
+                }
+            }
+
+            conditional_tooltip = {
+                trigger = {
+                    has_dlc = "Zeus"
+                }
+                dog_has_council_laws_trigger = yes
+            }
+        }
+        revoke_allowed = {
+            always = no
+        }
+        ai_will_revoke = {
+            factor = 0
+        }
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+                has_law = dog_law_economic_2
+            }
+
+            modifier = {
+                factor = 0.75
+
+                holder_scope = {
+                    culture = dog_culture
+                }
+            }
+            modifier = {
+                factor = 0.25
+
+                holder_scope = {
+                    culture = steppe_dog
+                }
+            }
+        }
+        pass_effect = {
+            # nothing
+        }
+        effect = {
+            hidden_tooltip = {
+                revoke_law = dog_law_economic_0
+                revoke_law = dog_law_economic_2
+                revoke_law = dog_law_economic_3
+                revoke_law = dog_law_economic_4
+            }
+        }
+
+        global_tax_modifier = -0.40
+        castle_vassal_tax_modifier = -0.225
+    }
+    dog_law_economic_2 = {
+        group = dog_economic_laws
+        default = no
+
+        potential = {
+            higher_real_tier_than = baron
+            holder_scope = {
+                culture_group = dog_group
+            }
+            is_primary_holder_title = yes
+        }
+        allow = {
+            holder_scope = {
+                has_regent = no
+            }
+            OR = {
+                has_law = dog_law_economic_1
+                has_law = dog_law_economic_3
+            }
+            custom_tooltip = {
+                text = dog_tt_cant_have_4_implication
+                NOR = {
+                    # no 2 +2 laws
+                    AND = {
+                        has_law = dog_law_politic_3
+                        has_law = dog_law_war_3
+                    }
+
+                    # no 1 +3 law and 1 +1 law
+                    AND = {
+                        OR = {
+                            has_law = dog_law_politic_2
+                            has_law = dog_law_war_2
+                        }
+                        OR = {
+                            has_law = dog_law_politic_4
+                            has_law = dog_law_war_4
+                        }
+                    }
+                }
+            }
+            holder_scope = {
+                OR = {
+                    government = dog_feudal_gov
+                    is_tribal = yes
+                }
+            }
+
+            conditional_tooltip = {
+                trigger = {
+                    has_dlc = "Zeus"
+                }
+                dog_has_council_laws_trigger = yes
+            }
+        }
+        revoke_allowed = {
+            always = no
+        }
+        ai_will_revoke = {
+            factor = 0
+        }
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+                has_law = dog_law_economic_3
+            }
+
+            modifier = {
+                factor = 0.75
+
+                holder_scope = {
+                    culture = dog_culture
+                }
+            }
+            modifier = {
+                factor = 0.25
+
+                holder_scope = {
+                    culture = steppe_dog
+                }
+            }
+        }
+        pass_effect = {
+            # nothing
+        }
+        effect = {
+            hidden_tooltip = {
+                revoke_law = dog_law_economic_0
+                revoke_law = dog_law_economic_1
+                revoke_law = dog_law_economic_3
+                revoke_law = dog_law_economic_4
+            }
+        }
+        dog_interest_implication = 1
+    }
+    dog_law_economic_3 = {
+        group = dog_economic_laws
+        default = no
+
+        potential = {
+            higher_real_tier_than = baron
+            holder_scope = {
+                culture_group = dog_group
+            }
+            is_primary_holder_title = yes
+        }
+        allow = {
+            holder_scope = {
+                has_regent = no
+            }
+            OR = {
+                has_law = dog_law_economic_2
+                has_law = dog_law_economic_4
+            }
+            custom_tooltip = {
+                text = dog_tt_cant_have_4_implication
+
+                # can't have a sum of +3 implication with other laws
+                NOR = {
+                    # no +3 laws
+                    has_law = dog_law_politic_4
+                    has_law = dog_law_war_4
+
+                    # no 1 +1 and 1 +2
+                    AND = {
+                        OR = {
+                            has_law = dog_law_politic_2
+                            has_law = dog_law_war_2
+                        }
+                        OR = {
+                            has_law = dog_law_politic_3
+                            has_law = dog_law_war_3
+                        }
+                    }
+                }
+            }
+            holder_scope = {
+                government = dog_feudal_gov
+            }
+
+            conditional_tooltip = {
+                trigger = {
+                    has_dlc = "Zeus"
+                }
+                dog_has_council_laws_trigger = yes
+            }
+        }
+        revoke_allowed = {
+            always = no
+        }
+        ai_will_revoke = {
+            factor = 0
+        }
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+                has_law = dog_law_economic_4
+            }
+
+            modifier = {
+                factor = 0.75
+
+                holder_scope = {
+                    culture = dog_culture
+                }
+            }
+            modifier = {
+                factor = 0.25
+
+                holder_scope = {
+                    culture = steppe_dog
+                }
+            }
+        }
+        pass_effect = {
+            # nothing
+        }
+        effect = {
+            hidden_tooltip = {
+                revoke_law = dog_law_economic_0
+                revoke_law = dog_law_economic_1
+                revoke_law = dog_law_economic_2
+                revoke_law = dog_law_economic_4
+            }
+        }
+        global_tax_modifier = 0.25
+        castle_vassal_tax_modifier = 0.1
+        dog_interest_implication = 2
+    }
+    dog_law_economic_4 = {
+        group = dog_economic_laws
+        default = no
+
+        potential = {
+            higher_real_tier_than = baron
+            holder_scope = {
+                culture_group = dog_group
+            }
+            is_primary_holder_title = yes
+        }
+        allow = {
+            holder_scope = {
+                has_regent = no
+            }
+            
+            has_law = dog_law_economic_3
+            custom_tooltip = {
+                text = dog_tt_cant_have_4_implication
+
+                # can't have a +2 sum of implication lvl 
+                NOR = {
+                    # no +2 law
+                    has_law = dog_law_politic_3
+                    has_law = dog_law_war_3
+
+                    # no 2 +1 law
+                    AND = {
+                        has_law = dog_law_politic_2
+                        has_law = dog_law_war_2
+                    }
+                }
+            }
+            holder_scope = {
+                government = dog_feudal_gov
+            }
+
+            conditional_tooltip = {
+                trigger = {
+                    has_dlc = "Zeus"
+                }
+                dog_has_council_laws_trigger = yes
+            }
+        }
+        revoke_allowed = {
+            always = no
+        }
+        ai_will_revoke = {
+            factor = 0
+        }
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0.75
+
+                holder_scope = {
+                    culture = dog_culture
+                }
+            }
+            modifier = {
+                factor = 0.25
+
+                holder_scope = {
+                    culture = steppe_dog
+                }
+            }
+        }
+        pass_effect = {
+            # nothing
+        }
+        effect = {
+            hidden_tooltip = {
+                revoke_law = dog_law_economic_0
+                revoke_law = dog_law_economic_1
+                revoke_law = dog_law_economic_2
+                revoke_law = dog_law_economic_3
+            }
+        }
+        global_tax_modifier = 0.65
+        castle_vassal_tax_modifier = 0.35
+        dog_interest_implication = 3
+    }
+
+    dog_law_war_0 = {
+        group = dog_war_laws
+        # default = yes
+
+        potential = {
+            higher_real_tier_than = baron
+            holder_scope = {
+                culture_group = dog_group
+            }
+            is_primary_holder_title = yes
+        }
+        allow = {
+            holder_scope = {
+                has_regent = no
+            }
+            NOR = {
+                has_law = dog_law_war_2
+                has_law = dog_law_war_3
+                has_law = dog_law_war_4
+            }
+            holder_scope = {
+                OR = {
+                    government = dog_feudal_gov
+                    is_tribal = yes
+                }
+            }
+
+            conditional_tooltip = {
+                trigger = {
+                    has_dlc = "Zeus"
+                }
+                dog_has_council_laws_trigger = yes
+            }
+        }
+        revoke_allowed = {
+            always = no
+        }
+        ai_will_revoke = {
+            factor = 0
+        }
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+                has_law = dog_law_war_1
+            }
+
+            modifier = {
+                factor = 0.25
+
+                holder_scope = {
+                    culture = dog_culture
+                }
+            }
+            modifier = {
+                factor = 0.75
+
+                holder_scope = {
+                    culture = steppe_dog
+                }
+            }
+        }
+        pass_effect = {
+            # nothing
+        }
+        effect = {
+            hidden_tooltip = {
+                revoke_law = dog_law_war_1
+                revoke_law = dog_law_war_2
+                revoke_law = dog_law_war_3
+                revoke_law = dog_law_war_4
+            }
+        }
+
+        global_levy_size = -0.75
+        levy_reinforce_rate = -0.50
+    }
+    dog_law_war_1 = {
+        group = dog_war_laws
+        default = no
+
+        potential = {
+            higher_real_tier_than = baron
+            holder_scope = {
+                culture_group = dog_group
+            }
+            is_primary_holder_title = yes
+        }
+        allow = {
+            holder_scope = {
+                has_regent = no
+            }
+            OR = {
+                has_law = dog_law_war_0
+                has_law = dog_law_war_2
+            }
+            OR = {
+                conditional_tooltip = {
+                    trigger = { has_dlc = "Zeus" }
+                    has_law = dog_law_res_council
+                }
+                custom_tooltip = {
+                    text = dog_tt_canot_be_implicated_inall_law
+                    OR = {
+                        has_law = dog_law_politic_0
+                        has_law = dog_law_economic_0
+                    }
+                }
+            }
+            holder_scope = {
+                OR = {
+                    government = dog_feudal_gov
+                    is_tribal = yes
+                }
+            }
+
+            conditional_tooltip = {
+                trigger = {
+                    has_dlc = "Zeus"
+                }
+                dog_has_council_laws_trigger = yes
+            }
+        }
+        revoke_allowed = {
+            always = no
+        }
+        ai_will_revoke = {
+            factor = 0
+        }
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                has_law = dog_law_war_2
+            }
+
+            modifier = {
+                factor = 0.25
+
+                holder_scope = {
+                    culture = dog_culture
+                }
+            }
+            modifier = {
+                factor = 0.75
+
+                holder_scope = {
+                    culture = steppe_dog
+                }
+            }
+        }
+        pass_effect = {
+            # nothing
+        }
+        effect = {
+            hidden_tooltip = {
+                revoke_law = dog_law_war_0
+                revoke_law = dog_law_war_2
+                revoke_law = dog_law_war_3
+                revoke_law = dog_law_war_4
+            }
+        }
+
+        global_levy_size = -0.25
+        levy_reinforce_rate = -0.10
+    }
+    dog_law_war_2 = {
+        group = dog_war_laws
+        default = no
+
+        potential = {
+            higher_real_tier_than = baron
+            holder_scope = {
+                culture_group = dog_group
+            }
+            is_primary_holder_title = yes
+        }
+        allow = {
+            holder_scope = {
+                has_regent = no
+            }
+            OR = {
+                has_law = dog_law_war_1
+                has_law = dog_law_war_3
+            }
+            custom_tooltip = {
+                text = dog_tt_cant_have_4_implication
+                NOR = {
+                    # no 2 +2 laws
+                    AND = {
+                        has_law = dog_law_economic_3
+                        has_law = dog_law_politic_3
+                    }
+
+                    # no 1 +3 law and 1 +1 law
+                    AND = {
+                        OR = {
+                            has_law = dog_law_economic_2
+                            has_law = dog_law_politic_2
+                        }
+                        OR = {
+                            has_law = dog_law_economic_4
+                            has_law = dog_law_politic_4
+                        }
+                    }
+                }
+            }
+            holder_scope = {
+                OR = {
+                    government = dog_feudal_gov
+                    is_tribal = yes
+                }
+            }
+
+            conditional_tooltip = {
+                trigger = {
+                    has_dlc = "Zeus"
+                }
+                dog_has_council_laws_trigger = yes
+            }
+        }
+        revoke_allowed = {
+            always = no
+        }
+        ai_will_revoke = {
+            factor = 0
+        }
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                has_law = dog_law_war_3
+            }
+
+            modifier = {
+                factor = 0.25
+
+                holder_scope = {
+                    culture = dog_culture
+                }
+            }
+            modifier = {
+                factor = 0.75
+
+                holder_scope = {
+                    culture = steppe_dog
+                }
+            }
+        }
+        pass_effect = {
+            # nothing
+        }
+        effect = {
+            hidden_tooltip = {
+                revoke_law = dog_law_war_0
+                revoke_law = dog_law_war_1
+                revoke_law = dog_law_war_3
+                revoke_law = dog_law_war_4
+            }
+        }
+        dog_interest_implication = 1
+    }
+    dog_law_war_3 = {
+        group = dog_war_laws
+        default = no
+
+        potential = {
+            higher_real_tier_than = baron
+            holder_scope = {
+                culture_group = dog_group
+            }
+            is_primary_holder_title = yes
+        }
+        allow = {
+            holder_scope = {
+                has_regent = no
+            }
+            OR = {
+                has_law = dog_law_war_2
+                has_law = dog_law_war_4
+            }
+            custom_tooltip = {
+                text = dog_tt_cant_have_4_implication
+
+                # can't have a sum of +3 implication with other laws
+                NOR = {
+                    # no +3 laws
+                    has_law = dog_law_economic_4
+                    has_law = dog_law_politic_4
+
+                    # no 1 +1 and 1 +2
+                    AND = {
+                        OR = {
+                            has_law = dog_law_economic_2
+                            has_law = dog_law_politic_2
+                        }
+                        OR = {
+                            has_law = dog_law_economic_3
+                            has_law = dog_law_politic_4
+                        }
+                    }
+                }
+            }
+            holder_scope = {
+                government = dog_feudal_gov
+            }
+
+            conditional_tooltip = {
+                trigger = {
+                    has_dlc = "Zeus"
+                }
+                dog_has_council_laws_trigger = yes
+            }
+        }
+        revoke_allowed = {
+            always = no
+        }
+        ai_will_revoke = {
+            factor = 0
+        }
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0
+                has_law = dog_law_war_4
+            }
+
+            modifier = {
+                factor = 0.25
+
+                holder_scope = {
+                    culture = dog_culture
+                }
+            }
+            modifier = {
+                factor = 0.75
+
+                holder_scope = {
+                    culture = steppe_dog
+                }
+            }
+        }
+        pass_effect = {
+            # nothing
+        }
+        effect = {
+            hidden_tooltip = {
+                revoke_law = dog_law_war_0
+                revoke_law = dog_law_war_1
+                revoke_law = dog_law_war_2
+                revoke_law = dog_law_war_4
+            }
+        }
+        global_levy_size = 0.25
+        levy_reinforce_rate = 0.05
+        dog_interest_implication = 2
+    }
+    dog_law_war_4 = {
+        group = dog_war_laws
+        default = no
+
+        potential = {
+            higher_real_tier_than = baron
+            holder_scope = {
+                culture_group = dog_group
+            }
+            is_primary_holder_title = yes
+        }
+        allow = {
+            holder_scope = {
+                has_regent = no
+            }
+            
+            has_law = dog_law_war_3
+            custom_tooltip = {
+                text = dog_tt_cant_have_4_implication
+
+                # can't have a +2 sum of implication lvl 
+                NOR = {
+                    # no +2 law
+                    has_law = dog_law_economic_3
+                    has_law = dog_law_politic_3
+
+                    # no 2 +1 law
+                    AND = {
+                        has_law = dog_law_economic_2
+                        has_law = dog_law_politic_2
+                    }
+                }
+            }
+            holder_scope = {
+                government = dog_feudal_gov
+            }
+
+            conditional_tooltip = {
+                trigger = {
+                    has_dlc = "Zeus"
+                }
+                dog_has_council_laws_trigger = yes
+            }
+        }
+        revoke_allowed = {
+            always = no
+        }
+        ai_will_revoke = {
+            factor = 0
+        }
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0.25
+
+                holder_scope = {
+                    culture = dog_culture
+                }
+            }
+            modifier = {
+                factor = 0.75
+
+                holder_scope = {
+                    culture = steppe_dog
+                }
+            }
+        }
+        pass_effect = {
+            # nothing
+        }
+        effect = {
+            hidden_tooltip = {
+                revoke_law = dog_law_war_0
+                revoke_law = dog_law_war_1
+                revoke_law = dog_law_war_2
+                revoke_law = dog_law_war_3
+            }
+        }
+        global_levy_size = 0.60
+        levy_reinforce_rate = 0.25
+        dog_interest_implication = 3
+    }
+
+    dog_law_war_council = {
+        group = dog_council_laws
+
+        default = no
+
+        allow = {
+            holder_scope = { government = dog_feudal_gov }
+            higher_tier_than = baron
+            has_law = war_voting_power_1
+            NOT = { has_law = dog_law_war_0 }
+        }
+        potential = {
+            has_dlc = "Zeus"
+            culture_group = dog_group
+        }
+        revoke_allowed = {
+            always = no
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        ai_will_revoke = {
+            factor = 0
+        }
+        effect = {}
+    }
+    dog_law_pol_council = {
+        group = dog_council_laws
+
+        default = no
+
+        allow = {
+            holder_scope = { government = dog_feudal_gov }
+            higher_tier_than = baron
+            has_law = revoke_title_voting_power_1
+            NOT = { has_law = dog_law_politic_0 }
+        }
+        potential = {
+            has_dlc = "Zeus"
+            culture_group = dog_group
+        }
+        revoke_allowed = {
+            always = no
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        ai_will_revoke = {
+            factor = 0
+        }
+        effect = {}
+    }
+    dog_law_eco_council = {
+        group = dog_council_laws
+
+        default = no
+
+        allow = {
+            holder_scope = { government = dog_feudal_gov }
+            higher_tier_than = baron
+            has_law = grant_title_voting_power_1
+            NOT = { has_law = dog_law_economic_0 }
+        }
+        potential = {
+            has_dlc = "Zeus"
+            culture_group = dog_group
+        }
+        revoke_allowed = {
+            always = no
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        ai_will_revoke = {
+            factor = 0
+        }
+        effect = {}
+    }
+    dog_law_eve_council = {
+        group = dog_council_laws
+
+        default = no
+
+        allow = {
+            holder_scope = { government = dog_feudal_gov }
+            higher_tier_than = baron
+            has_law = execution_voting_power_1
+        }
+        potential = {
+            has_dlc = "Zeus"
+            culture_group = dog_group
+        }
+        revoke_allowed = {
+            always = no
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        ai_will_revoke = {
+            factor = 0
+        }
+        effect = {}
+    }
+    dog_law_res_council = {
+        group = dog_council_laws
+
+        default = no
+
+        allow = {
+            holder_scope = { government = dog_feudal_gov }
+            higher_tier_than = baron
+        }
+        potential = {
+            has_dlc = "Zeus"
+            culture_group = dog_group
+            has_law = succession_voting_power_1
+        }
+        revoke_allowed = {
+            always = no
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        ai_will_revoke = {
+            factor = 0
+        }
+        effect = {}
+    }
+}

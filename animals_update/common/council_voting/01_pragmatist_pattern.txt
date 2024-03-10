@@ -2,6 +2,28 @@ pragmatist_pattern_for = {
 	icon = 6
 	pattern_type = for
 
+	dog_law_politic_0 = { always = yes }
+	dog_law_politic_1 = { always = yes }
+	dog_law_politic_2 = { always = yes }
+	dog_law_politic_3 = { always = yes }
+	dog_law_politic_4 = { always = yes }
+	dog_law_economic_0 = { always = yes }
+	dog_law_economic_1 = { always = yes }
+	dog_law_economic_2 = { always = yes }
+	dog_law_economic_3 = { always = yes }
+	dog_law_economic_4 = { always = yes }
+	dog_law_war_0 = { always = yes }
+	dog_law_war_1 = { always = yes }
+	dog_law_war_2 = { always = yes }
+	dog_law_war_3 = { always = yes }
+	dog_law_war_4 = { always = yes }
+	dog_law_war_council = { always = yes }
+	dog_law_pol_council = { always = yes }
+	dog_law_eco_council = { always = yes }
+	dog_law_eve_council = { always = yes }
+	dog_law_res_council = { always = yes }
+
+
 	panda_vassal_unallowed = { always = yes }
 	panda_vassal_count_allowed = { liege = { has_law = panda_vassal_all_allowed } }
 	panda_vassal_all_allowed = { always = no }
@@ -13,7 +35,7 @@ pragmatist_pattern_for = {
 			custom_tooltip = {
 				text = pattern_pragmatist_weak_opponent_custom_tooltip
 				hidden_tooltip = {
-					AND = { # Attacking a weak opponent for land
+					#AND = { # Attacking a weak opponent for land
 						FROM = { # Attacker
 							relative_power_including_allies_attacker = {
 								who = ROOT_FROMFROM # Defender
@@ -24,13 +46,13 @@ pragmatist_pattern_for = {
 							stored_token_trigger = other_claim
 							stored_token_trigger = other_claim_on_liege
 						}
-					}
+					#}
 				}
 			}
 			custom_tooltip = {
 				text = pattern_pragmatist_de_jure_or_culture_custom_tooltip
 				hidden_tooltip = {
-					AND = { # Attacking de-jure or culture-group provinces
+					#AND = { # Attacking de-jure or culture-group provinces
 						FROM = { # Attacker
 							relative_power_including_allies_attacker = {
 								who = ROOT_FROMFROM # Defender
@@ -75,7 +97,7 @@ pragmatist_pattern_for = {
 								}
 							}
 						}
-					}
+					#}
 				}
 			}
 		}
@@ -452,6 +474,27 @@ pragmatist_pattern_for = {
 pragmatist_pattern_against = {
 	icon = 6
 	pattern_type = against
+
+	dog_law_politic_0 = { always = no }
+	dog_law_politic_1 = { always = no }
+	dog_law_politic_2 = { always = no }
+	dog_law_politic_3 = { always = no }
+	dog_law_politic_4 = { always = no }
+	dog_law_economic_0 = { always = no }
+	dog_law_economic_1 = { always = no }
+	dog_law_economic_2 = { always = no }
+	dog_law_economic_3 = { always = no }
+	dog_law_economic_4 = { always = no }
+	dog_law_war_0 = { always = no }
+	dog_law_war_1 = { always = no }
+	dog_law_war_2 = { always = no }
+	dog_law_war_3 = { always = no }
+	dog_law_war_4 = { always = no }
+	dog_law_war_council = { always = no }
+	dog_law_pol_council = { always = no }
+	dog_law_eco_council = { always = no }
+	dog_law_eve_council = { always = no }
+	dog_law_res_council = { always = no }
 
 	panda_vassal_unallowed = { always = no }
 	panda_vassal_count_allowed = { liege = { has_law = panda_vassal_unallowed } }

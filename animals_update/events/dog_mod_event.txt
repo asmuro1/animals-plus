@@ -1,0 +1,810 @@
+namespace = ani_plus
+
+###### dog update event
+### event 159 - 168
+
+
+## conversion quest
+# event 159: event to launch quest by event rule
+# event 160: the dog seems weak (lead by option to one of the 2 events below)
+# event 161: notification dog healed (quest failed)
+# event 162: dog bite while treating dog (lead to event 163)
+# event 163:
+#       the dog and yourself are healed (triggered if immune to disease) or
+#       the infection become virulent (can lead to immunity, transformation into dog or death)
+
+#event 159
+character_event = {
+    id = ani_plus.159
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    only_playable = yes
+
+    trigger = {
+         has_game_rule = {
+            name = animals_conversion_ways
+            value = animal_events
+        }
+        NOT = { has_character_modifier = panda_conversion_quest_cooldown }
+        
+        Is_really_animal_trigger = no
+        OR = {
+            lifestyle_traits == 0
+            trait = socializer
+        }
+        any_demesne_province = {
+            dog_can_live_here_trigger = yes
+        }
+
+        OR = {
+            has_assigned_minor_title = title_master_of_the_hunt
+            has_character_modifier = pet_house_dog
+            has_character_modifier = guard_dogs
+            has_character_modifier = pet_hunting_dog
+            has_character_modifier = guide_dog
+        }
+    }
+
+    mean_time_to_happen = {
+        years = 1250
+
+        modifier = {
+            factor = 0.04 # 50 years for players
+            ai = no
+        }
+    }
+
+    desc = dog_desc_159
+
+    option = {
+        name = dog_optA_159
+        add_character_modifier = {
+            name = panda_conversion_quest_cooldown
+            years = 5
+            hidden = yes
+        }
+
+        character_event = {
+            id = ani_plus.160
+            days = 1
+        }
+    }
+    option = {
+        name = dog_optB_159
+    }
+}
+
+#event 160
+character_event = {
+    id = ani_plus.160
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    is_triggered_only = yes
+
+    desc = dog_desc_160
+
+    option = {
+        name = dog_opt_160
+
+        random_list = {
+            1 = {
+                 character_event = { id = ani_plus.161 days = 7 random = 7 }
+            }
+            4 = {
+                character_event = { id = ani_plus.162 days = 1 }    
+            }
+        }
+    }
+}
+
+#event 161
+character_event = {
+    id = ani_plus.161
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    is_triggered_only = yes
+
+    desc = dog_desc_161
+
+    option = {
+        name = dog_opt_161
+    }
+}
+
+#event 162
+character_event = {
+    id = ani_plus.162
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    is_triggered_only = yes
+
+    desc = dog_desc_162
+
+    option = {
+        name = dog_opt_162
+
+        add_trait = wounded
+        character_event = { id = ani_plus.163 days = 5  random = 3 }
+    }
+}
+
+#event 163
+character_event = {
+    id = ani_plus.163
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    is_triggered_only = yes
+
+    desc = dog_desc_163
+
+    option = {
+        trigger = {
+            has_character_flag = immune_to_dog_quest_conv
+        }
+        name = dog_optA_163
+    }
+    option = {
+        trigger = {
+            NOT = {
+                has_character_flag = immune_to_dog_quest_conv
+            }
+        }
+        name = dog_optB_163
+
+        random_list = {
+            2 = {
+                custom_tooltip = {
+                    text = DOG_HEALED_TT
+                    set_character_flag = immune_to_dog_quest_conv
+                }
+            }
+            3 = {
+                death = yes
+            }
+            5 = {
+                trigger = {
+                    any_demesne_province = {
+                        terrain = steppe
+                    }
+                }
+                modifier = {
+                    factor = 0.5
+                    
+                    any_demesne_province = {
+                        terrain = hills
+                    }
+                }
+                culture = steppe_dog
+            }
+            5 = {
+                trigger = {
+                    any_demesne_province = {
+                        terrain = hills
+                    }
+                }
+                modifier = {
+                    factor = 0.5
+                    
+                    any_demesne_province = {
+                        terrain = steppe
+                    }
+                }
+                culture = dog_culture
+            }
+        }
+    }
+
+    after = {
+        remove_trait = wounded
+    }
+}
+
+## law event
+# event 164: removing unity and council laws on inheritance
+# event 165: removing interest laws if not dog
+# event 166: adding interest laws if dog
+# event 167: modifying level of one of the interest law
+# event 168: giving malus if modying interest law is impossible (no council rights)
+
+#event 164
+character_event = {
+    id = ani_plus.164
+
+    is_triggered_only = yes
+    hide_window = yes
+
+    immediate = {
+        FROM = {
+            revoke_law = dog_unity_county_conv
+            revoke_law = dog_unity_character_conv
+            revoke_law = dog_unity_reputation_cost
+            revoke_law = dog_law_war_council
+            revoke_law = dog_law_eco_council
+            revoke_law = dog_law_pol_council
+            revoke_law = dog_law_eve_council
+            if = {
+                limit = {
+                    NOR = {
+                        has_law = dog_law_war_0
+                        has_law = dog_law_economic_0
+                        has_law = dog_law_politic_0
+                    }
+                }
+                revoke_law = dog_law_res_council
+            }
+        }
+    }
+}
+
+#event 165
+character_event = {
+    id = ani_plus.165
+
+    hide_window = yes
+
+    only_playable = yes
+    war = no
+
+    trigger = {
+        NOT = {
+            culture_group = dog_group
+        }
+        OR = { #only test one interest as the other are linked
+            has_law = dog_law_politic_0
+            has_law = dog_law_politic_1
+            has_law = dog_law_politic_2
+            has_law = dog_law_politic_3
+            has_law = dog_law_politic_4
+        }
+    }
+    mean_time_to_happen = {
+        days = 1
+    }
+
+    immediate = {
+        revoke_law = dog_law_politic_0
+        revoke_law = dog_law_politic_1
+        revoke_law = dog_law_politic_2
+        revoke_law = dog_law_politic_3
+        revoke_law = dog_law_politic_4
+        revoke_law = dog_law_economic_0
+        revoke_law = dog_law_economic_1
+        revoke_law = dog_law_economic_2
+        revoke_law = dog_law_economic_3
+        revoke_law = dog_law_economic_4
+        revoke_law = dog_law_war_0
+        revoke_law = dog_law_war_1
+        revoke_law = dog_law_war_2
+        revoke_law = dog_law_war_3
+        revoke_law = dog_law_war_4
+    }
+}
+
+#event 166
+character_event = {
+    id = ani_plus.166
+
+    hide_window = yes
+
+    only_playable = yes
+    war = no
+    culture_group = dog_group
+
+    trigger = {
+        #culture_group = dog_group
+        
+        NOR = {
+            has_law = dog_law_economic_0
+            has_law = dog_law_economic_1
+            has_law = dog_law_economic_2
+            has_law = dog_law_economic_3
+            has_law = dog_law_economic_4
+        }
+    }
+    mean_time_to_happen = {
+        days = 1
+    }
+
+    immediate = {
+        add_law = dog_law_politic_3
+        if = {
+            limit = {
+                culture = steppe_dog
+            }
+            add_law = dog_law_economic_0
+            add_law = dog_law_war_1
+        }
+        else = {    
+            add_law = dog_law_economic_1
+            add_law = dog_law_war_0
+        }
+    }
+}
+
+#event 167
+character_event = {
+    id = ani_plus.167
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    culture_group = dog_group
+    only_playable = yes
+
+    trigger = {
+        #culture_group = dog_group
+        is_playable = yes
+        NOR = {
+            has_character_flag = DOG_POLI_CHANGE
+            has_character_flag = DOG_ECO_CHANGE
+            has_character_flag = DOG_WAR_CHANGE
+        }
+        OR = {
+            NOT = { has_dlc = "Zeus" }
+            has_law = law_voting_power_1
+        }
+        NOT = { has_assigned_minor_title = title_dog_eve_councillor }
+    }
+
+    mean_time_to_happen = {
+        years = 5
+
+        modifier = {
+            factor = 0.75
+
+            is_tribal = yes
+        }
+    }
+
+    immediate = {
+        random_list = {
+            100 = {
+                modifier = {
+                    factor = 0
+
+                    has_law = dog_law_politic_0
+                    NOT = { is_law_allowed = dog_law_politic_1 }
+                }
+
+                set_character_flag = DOG_POLI_CHANGE
+            }
+            33 = {
+                modifier = {
+                    factor = 0
+
+                    has_law = dog_law_economic_0
+                    NOT = { is_law_allowed = dog_law_economic_1 }
+                }
+                modifier = {
+                    factor = 2
+                    culture = dog_culture
+                }
+                set_character_flag = DOG_ECO_CHANGE
+            }
+            33 = {
+                modifier = {
+                    factor = 0
+
+                    has_law = dog_law_war_0
+                    NOT = { is_law_allowed = dog_law_war_1 }
+                }
+                modifier = {
+                    factor = 2
+                    culture = steppe_dog
+                }
+                set_character_flag = DOG_WAR_CHANGE
+            }
+        }
+    }
+
+    desc = dog_desc_167
+
+    option = {
+        trigger = {
+            has_character_flag = DOG_POLI_CHANGE
+        }
+        name = dog_opt_167
+
+        random_list = {
+            3 = {
+                # loose 1 level
+                modifier = {
+                    factor = 0
+                    has_law = dog_law_politic_0
+                }
+
+                custom_tooltip = {
+                    text = DOG_TT_POLI_LEVEL_DOWN
+
+                    primary_title = {
+                        if = {
+                            limit = {
+                                has_law = dog_law_politic_1
+                            }
+                            add_law = dog_law_politic_0
+                        }
+                        if = {
+                            limit = {
+                                has_law = dog_law_politic_2
+                            }
+                            add_law = dog_law_politic_1
+                        }
+                        if = {
+                            limit = {
+                                has_law = dog_law_politic_3
+                            }
+                            add_law = dog_law_politic_2
+                        }
+                        if = {
+                            limit = {
+                                has_law = dog_law_politic_4
+                            }
+                            add_law = dog_law_politic_3
+                        }
+                        if = {
+                            limit = {
+                                has_law = dog_law_politic_5
+                            }
+                            add_law = dog_law_politic_4
+                        }
+                    }
+                }
+            }
+            2 = {
+                # gain 1 level
+                modifier = {
+                    factor = 0
+
+                    NOR = {
+                        AND = {
+                            has_law = dog_law_politic_0
+                            is_law_allowed = dog_law_politic_1
+                        }
+                        AND = {
+                            has_law = dog_law_politic_1
+                            is_law_allowed = dog_law_politic_2
+                        }
+                        AND = {
+                            has_law = dog_law_politic_2
+                            is_law_allowed = dog_law_politic_3
+                        }
+                        AND = {
+                            has_law = dog_law_politic_3
+                            is_law_allowed = dog_law_politic_4
+                        }
+                    }
+                }
+
+                custom_tooltip = {
+                    text = DOG_TT_POLI_LEVEL_UP
+
+                    primary_title = {
+                        if = {
+                            limit = {
+                                has_law = dog_law_politic_3
+                            }
+                            add_law = dog_law_politic_4
+                        }
+                        if = {
+                            limit = {
+                                has_law = dog_law_politic_2
+                            }
+                            add_law = dog_law_politic_3
+                        }
+                        if = {
+                            limit = {
+                                has_law = dog_law_politic_1
+                            }
+                            add_law = dog_law_politic_2
+                        }
+                        if = {
+                            limit = {
+                                has_law = dog_law_politic_0
+                            }
+                            add_law = dog_law_politic_1
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    option = {
+        trigger = {
+            has_character_flag = DOG_ECO_CHANGE
+        }
+        name = dog_opt_167
+
+        random_list = {
+            3 = {
+                # loose 1 level
+                modifier = {
+                    factor = 0
+                    has_law = dog_law_economic_0
+                }
+
+                custom_tooltip = {
+                    text = DOG_TT_ECO_LEVEL_DOWN
+
+                    primary_title = {
+                        if = {
+                            limit = {
+                                has_law = dog_law_economic_1
+                            }
+                            add_law = dog_law_economic_0
+                        }
+                        if = {
+                            limit = {
+                                has_law = dog_law_economic_2
+                            }
+                            add_law = dog_law_economic_1
+                        }
+                        if = {
+                            limit = {
+                                has_law = dog_law_economic_3
+                            }
+                            add_law = dog_law_economic_2
+                        }
+                        if = {
+                            limit = {
+                                has_law = dog_law_economic_4
+                            }
+                            add_law = dog_law_economic_3
+                        }
+                        if = {
+                            limit = {
+                                has_law = dog_law_economic_5
+                            }
+                            add_law = dog_law_economic_4
+                        }
+                    }
+                }
+            }
+            2 = {
+                # gain 1 level
+                modifier = {
+                    factor = 0
+
+                    NOR = {
+                        AND = {
+                            has_law = dog_law_economic_0
+                            is_law_allowed = dog_law_economic_1
+                        }
+                        AND = {
+                            has_law = dog_law_economic_1
+                            is_law_allowed = dog_law_economic_2
+                        }
+                        AND = {
+                            has_law = dog_law_economic_2
+                            is_law_allowed = dog_law_economic_3
+                        }
+                        AND = {
+                            has_law = dog_law_economic_3
+                            is_law_allowed = dog_law_economic_4
+                        }
+                    }
+                }
+
+                custom_tooltip = {
+                    text = DOG_TT_ECO_LEVEL_UP
+
+                    primary_title = {
+                        if = {
+                            limit = {
+                                has_law = dog_law_economic_3
+                            }
+                            add_law = dog_law_economic_4
+                        }
+                        if = {
+                            limit = {
+                                has_law = dog_law_economic_2
+                            }
+                            add_law = dog_law_economic_3
+                        }
+                        if = {
+                            limit = {
+                                has_law = dog_law_economic_1
+                            }
+                            add_law = dog_law_economic_2
+                        }
+                        if = {
+                            limit = {
+                                has_law = dog_law_economic_0
+                            }
+                            add_law = dog_law_economic_1
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    option = {
+        trigger = {
+            has_character_flag = DOG_WAR_CHANGE
+        }
+        name = dog_opt_167
+
+        random_list = {
+            3 = {
+                # loose 1 level
+                modifier = {
+                    factor = 0
+                    has_law = dog_law_war_0
+                }
+
+                custom_tooltip = {
+                    text = DOG_TT_WAR_LEVEL_DOWN
+
+                    primary_title = {
+                        if = {
+                            limit = {
+                                has_law = dog_law_war_1
+                            }
+                            add_law = dog_law_war_0
+                        }
+                        if = {
+                            limit = {
+                                has_law = dog_law_war_2
+                            }
+                            add_law = dog_law_war_1
+                        }
+                        if = {
+                            limit = {
+                                has_law = dog_law_war_3
+                            }
+                            add_law = dog_law_war_2
+                        }
+                        if = {
+                            limit = {
+                                has_law = dog_law_war_4
+                            }
+                            add_law = dog_law_war_3
+                        }
+                        if = {
+                            limit = {
+                                has_law = dog_law_war_5
+                            }
+                            add_law = dog_law_war_4
+                        }
+                    }
+                }
+            }
+            2 = {
+                # gain 1 level
+                modifier = {
+                    factor = 0
+
+                    NOR = {
+                        AND = {
+                            has_law = dog_law_war_0
+                            is_law_allowed = dog_law_war_1
+                        }
+                        AND = {
+                            has_law = dog_law_war_1
+                            is_law_allowed = dog_law_war_2
+                        }
+                        AND = {
+                            has_law = dog_law_war_2
+                            is_law_allowed = dog_law_war_3
+                        }
+                        AND = {
+                            has_law = dog_law_war_3
+                            is_law_allowed = dog_law_war_4
+                        }
+                    }
+                }
+
+                custom_tooltip = {
+                    text = DOG_TT_WAR_LEVEL_UP
+
+                    primary_title = {
+                        if = {
+                            limit = {
+                                has_law = dog_law_war_3
+                            }
+                            add_law = dog_law_war_4
+                        }
+                        if = {
+                            limit = {
+                                has_law = dog_law_war_2
+                            }
+                            add_law = dog_law_war_3
+                        }
+                        if = {
+                            limit = {
+                                has_law = dog_law_war_1
+                            }
+                            add_law = dog_law_war_2
+                        }
+                        if = {
+                            limit = {
+                                has_law = dog_law_war_0
+                            }
+                            add_law = dog_law_war_1
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    after = {
+        clr_character_flag = DOG_POLI_CHANGE
+        clr_character_flag = DOG_ECO_CHANGE
+        clr_character_flag = DOG_WAR_CHANGE
+    }
+}
+
+#event 168
+character_event = {
+    id = ani_plus.168
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    culture_group = dog_group
+    only_playable = yes
+    has_dlc = "Zeus"
+
+    trigger = {
+        has_dlc = "Zeus"
+        # culture_group = dog_group
+        NOT = { has_law = law_voting_power_1 }
+        NAND = {
+            has_character_modifier = dog_penalty_popular
+            has_character_modifier = dog_penalty_economic
+            has_character_modifier = dog_penalty_military
+        }
+    }
+
+    mean_time_to_happen = {
+        years = 4 
+    }
+
+    desc = dog_desc_168
+
+    option = {
+
+        name = dog_opt_168
+        random_list = {
+            1 = {
+                trigger = {
+                    NOT = { has_character_modifier = dog_penalty_popular }
+                }
+                add_character_modifier = {
+                    name = dog_penalty_popular
+                    years = 3
+                }
+            }
+            1 = {
+                trigger = {
+                    NOT = { has_character_modifier = dog_penalty_economic }
+                }
+                add_character_modifier = {
+                    name = dog_penalty_economic
+                    years = 3
+                }
+            }
+            1 = {
+                trigger = {
+                    NOT = { has_character_modifier = dog_penalty_military }
+                }
+                add_character_modifier = {
+                    name = dog_penalty_military
+                    years = 3
+                }
+            }
+        }
+    }
+}

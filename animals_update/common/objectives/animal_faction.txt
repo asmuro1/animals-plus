@@ -32,9 +32,9 @@ faction_panda_instability = {
         is_panda_government_trigger = yes
 
 		liege = {
-			OR = {
+			#OR = {
 				NOT = { has_character_modifier = panda_instability_war_cooldown }
-			}
+			#}
 		}
     }
 
@@ -154,12 +154,14 @@ faction_panda_independence = {
 
     # Target scope
     allow = {
-		primary_title = { higher_real_tier_than = BARON }
-		NOT = { has_character_modifier = faction_independence_ultimatum_timer }
-		NOT = {
-			has_opinion_modifier = {
-				who = LIEGE
-				modifier = opinion_coerced_into_leaving_faction
+		higher_real_tier_than = BARON
+		holder_scope = {
+			NOT = { has_character_modifier = faction_independence_ultimatum_timer }
+			NOT = {
+				has_opinion_modifier = {
+					who = LIEGE
+					modifier = opinion_coerced_into_leaving_faction
+				}
 			}
 		}
     }

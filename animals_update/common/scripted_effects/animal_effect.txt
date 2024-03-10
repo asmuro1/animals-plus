@@ -1075,7 +1075,7 @@ duck_update_dev_growth_counter_effect = {
         }
         multiply_variable = {
             which = local_duck_dev_growth_change
-            factor = 1.33
+            value = 1.33
         }
     }
 

@@ -1046,7 +1046,7 @@ character_event = {
 ###### balance events
 
 #event 93: removing or adding expension law if not supposed to have associated modifiers
-#           modifier can be added if pana title pass non-panda (inheritence of head of faith,
+#           modifier can be added if panda title pass to non-panda (inheritence of head of faith,
 #           or having a non-panda heir )
 character_event = {
     id = ani_plus.093

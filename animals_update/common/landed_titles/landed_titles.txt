@@ -6059,6 +6059,8 @@ e_germany = {
 				frankish = "Thurgovie"
 				italian = "Turgovia"
 
+				holy_site = Dog_religion
+
 				b_rheineck = {
 				}
 				b_stgallen = {
@@ -7541,6 +7543,7 @@ e_byzantium = {
 				holy_site = Duck_religion
 				holy_site = Eleph_religion
 				holy_site = Cat_religion
+				holy_site = Dog_religion
 
 				b_durazzo = {
 					greek = "Dyrrhachion"
@@ -10047,6 +10050,8 @@ e_byzantium = {
 				color2={ 255 255 255 }
 
 				greek = "Rhegion"
+
+				holy_site = Dog_religion
 
 				b_reggio = {
 					greek = "Rhegion"
@@ -20363,6 +20368,8 @@ e_pontic_steppe = {
 				color={ 244 208 113 }
 				color2={ 255 255 255 }
 
+				holy_site = Dog_religion
+
 				b_kazarki = {
 				}
 				b_sarkel = {
@@ -27633,6 +27640,8 @@ e_carpathia = {
 				color={ 225 204 147 }
 				color2={ 255 255 255 }
 
+				holy_site = Dog_religion
+				
 				b_soroca = {
 				}
 				b_orhei = {

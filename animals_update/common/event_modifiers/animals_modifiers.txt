@@ -648,3 +648,43 @@ cat_mod_reputation_cats = {
 	icon = 46
 	cat_group_opinion = 10
 }
+
+dog_penalty_popular = {
+	icon = 21
+	diplomacy_penalty = -2
+	general_opinion = -25
+}
+dog_penalty_economic = {
+	icon = 22
+	stewardship_penalty = -2
+	tax_income = -5
+}
+dog_penalty_military = {
+	icon = 19
+	martial_penalty = -2
+	levy_size = -0.50
+}
+
+dog_military_council = {
+	icon = 1
+	martial = 2
+	levy_size = 0.20
+}
+dog_political_council = {
+	icon = 3
+	diplomacy = 2
+	vassal_opinion = 20
+}
+dog_economic_council = {
+	icon = 4
+	stewardship = 2
+	global_tax_modifier = 0.1
+}
+dog_intrigue_council = {
+	icon = 5
+	intrigue = 2
+}
+dog_learning_council = {
+	icon = 2
+	learning = 2
+}

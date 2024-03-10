@@ -13,20 +13,29 @@ spriteTypes = {
     name = "GFX_icon_panda_bureaucratic_gov"
     texturefile = "gfx\\interface\\government_icon_confucian_bureaucracy.dds"
   }
+
   spriteType = {
     name = "GFX_icon_panda_bureaucratic_gov_bis"
     texturefile = "gfx\\interface\\government_icon_confucian_bureaucracy.dds"
   }
+  
   spriteType = {
     name = "GFX_icon_Duck_feudal_gov"
     texturefile = "gfx\\interface\\government_icon_confucian_bureaucracy.dds"
   }
+  
   spriteType = {
     name = "GFX_icon_Eleph_feudal_gov"
     texturefile = "gfx\\interface\\government_icon_confucian_bureaucracy.dds"
   }
+  
   spriteType = {
     name = "GFX_icon_cat_feudal_gov"
+    texturefile = "gfx\\interface\\government_icon_confucian_bureaucracy.dds"
+  }
+
+  spriteType = {
+    name = "GFX_icon_dog_feudal_gov"
     texturefile = "gfx\\interface\\government_icon_confucian_bureaucracy.dds"
   }
 }

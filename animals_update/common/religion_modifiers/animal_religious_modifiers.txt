@@ -4,3 +4,8 @@ animal_central_holy_site = {
     authority = 20
     years = 10
 }
+
+dog_rel_unity_penality = {
+    authority = -3
+    years = 3
+}

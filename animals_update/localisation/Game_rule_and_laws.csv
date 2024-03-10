@@ -37,6 +37,84 @@ panda_expension_size_medium_desc;Medium expension allowed;Moyenne expension auto
 panda_expension_size_huge;Big;Grande;;;;;;;;;;;;s
 panda_expension_size_huge_desc;Big expension allowed;Grande expension autorisé;;;;;;;;;;;;x
 
+dog_unity_laws;Cultural unity;Unité culturel;;;;;;;;;;;;x
+dog_unity_laws_desc;Those law are used to authorize a dog ruler to promote cultural unity inside is land;Ces lois sont faite pour permettre à un dirigeant chien de promouvoir l'unité culturel au sein de ses terres;;;;;;;;;;;;x
+dog_unity_county_conv;County;Comté;;;;;;;;;;;;x
+dog_unity_county_conv_desc;Allow county cultural unity improvment;Permet l'unité culturel au sein d'un comté;;;;;;;;;;;;x
+dog_unity_character_conv;Humans;Humains;;;;;;;;;;;;x
+dog_unity_character_conv_desc;Allow cultural unity in your court;Permet l'unité culturel au sein de votre court;;;;;;;;;;;;x
+dog_unity_reputation_cost;Price;Prix;;;;;;;;;;;;x
+dog_unity_reputation_cost_desc;Allow to force unity without using prestige or wildness;Permet d'unir le peuple sans utiliser de prestige ou de piété;;;;;;;;;;;;x
+dog_political_laws;political interest;Intérêt politique;;;;;;;;;;;;x
+dog_political_laws_desc;This law characterize the politic focus a dog noble put in ruling;Cette lois caractérise l'implication politique du chien dirigeant;;;;;;;;;;;;x
+dog_economic_laws;economic interest;Intérêt économique;;;;;;;;;;;;x
+dog_economic_laws_desc;This law characterize the economic focus a dog noble put in ruling;Cette lois caractérise l'implication économique du chien dirigeant;;;;;;;;;;;;x
+dog_war_laws;military interest;Intérêt militaire;;;;;;;;;;;;x
+dog_war_laws_desc;This law characterize the military focus a dog noble put in ruling;Cette lois caractérise l'implication militaire du chien dirigeant;;;;;;;;;;;;x
+dog_law_politic_0;Minimal politic interest;Intérêt politique minimal;;;;;;;;;;;;x
+dog_law_politic_0_option;Minimal;Minime;;;;;;;;;;;;x
+dog_law_politic_0_desc; ;;;;;;;;;;;;;x
+dog_law_politic_1;Small politic interest;Intérêt politique petit;;;;;;;;;;;;x
+dog_law_politic_1_option;Small;Petite;;;;;;;;;;;;x
+dog_law_politic_1_desc; ;;;;;;;;;;;;;x
+dog_law_politic_2;Normal politic interest;Intérêt politique normal;;;;;;;;;;;;x
+dog_law_politic_2_option;Normal;Normal;;;;;;;;;;;;x
+dog_law_politic_2_desc; ;;;;;;;;;;;;;x
+dog_law_politic_3;High politic interest;Intérêt politique élevé;;;;;;;;;;;;x
+dog_law_politic_3_option;High;Élevé;;;;;;;;;;;;x
+dog_law_politic_3_desc; ;;;;;;;;;;;;;x
+dog_law_politic_4;Important politic interest;Intérêt politique important;;;;;;;;;;;;x
+dog_law_politic_4_option;Important;Important;;;;;;;;;;;;x
+dog_law_politic_4_desc; ;;;;;;;;;;;;;x
+dog_law_economic_0;Minimal economic interest;Intérêt économique minimal;;;;;;;;;;;;x
+dog_law_economic_0_option;Minimal;Minime;;;;;;;;;;;;x
+dog_law_economic_0_desc; ;;;;;;;;;;;;;x
+dog_law_economic_1;Small economic interest;Intérêt économique petit;;;;;;;;;;;;x
+dog_law_economic_1_option;Small;Petite;;;;;;;;;;;;x
+dog_law_economic_1_desc; ;;;;;;;;;;;;;x
+dog_law_economic_2;Normal economic interest;Intérêt économique normal;;;;;;;;;;;;x
+dog_law_economic_2_option;Normal;Normal;;;;;;;;;;;;x
+dog_law_economic_2_desc; ;;;;;;;;;;;;;x
+dog_law_economic_3;High economic interest;Intérêt économique élevé;;;;;;;;;;;;x
+dog_law_economic_3_option;High;Élevé;;;;;;;;;;;;x
+dog_law_economic_3_desc; ;;;;;;;;;;;;;x
+dog_law_economic_4;Important economic interest;Intérêt économique important;;;;;;;;;;;;x
+dog_law_economic_4_option;Important;Important;;;;;;;;;;;;x
+dog_law_economic_4_desc; ;;;;;;;;;;;;;x
+dog_law_war_0;Minimal military interest;Intérêt militaire minimal;;;;;;;;;;;;x
+dog_law_war_0_option;Minimal;Minime;;;;;;;;;;;;x
+dog_law_war_0_desc; ;;;;;;;;;;;;;x
+dog_law_war_1;Small military interest;Intérêt militaire petit;;;;;;;;;;;;x
+dog_law_war_1_option;Small;Petite;;;;;;;;;;;;x
+dog_law_war_1_desc; ;;;;;;;;;;;;;x
+dog_law_war_2;Normal military interest;Intérêt militaire normal;;;;;;;;;;;;x
+dog_law_war_2_option;Normal;Normal;;;;;;;;;;;;x
+dog_law_war_2_desc; ;;;;;;;;;;;;;x
+dog_law_war_3;High military interest;Intérêt militaire élevé;;;;;;;;;;;;x
+dog_law_war_3_option;High;Élevé;;;;;;;;;;;;x
+dog_law_war_3_desc; ;;;;;;;;;;;;;x
+dog_law_war_4;Important military interest;Intérêt militaire important;;;;;;;;;;;;x
+dog_law_war_4_option;Important;Important;;;;;;;;;;;;x
+dog_law_war_4_desc; ;;;;;;;;;;;;;x
+dog_council_laws;Extended council;Conseil étendu;;;;;;;;;;;;x
+dog_council_laws_desc;As a dog, you can name councillors to lower your some dog's restrictions;En tant que chien, tu as la possibilité de nommer de nouveaux conseillés pour réduire les différentes complications lié au conseil;;;;;;;;;;;;x
+dog_law_war_council;Military councillor;Conseiller militaire;;;;;;;;;;;;x
+dog_law_war_council_option;Military;Militaire;;;;;;;;;;;;x
+dog_law_war_council_desc;Allow a new councillor to generate more troops from its liege domains;Permet au conseillé de former plus de troupes dans le domaine de son seigneur;;;;;;;;;;;;x
+dog_law_eco_council;Economic Councillor;Conseiller économique;;;;;;;;;;;;x
+dog_law_eco_council_option;Economic;Économic;;;;;;;;;;;;x
+dog_law_eco_council_desc;Allow to a councillor to increaser its liege revenue;Permet à un conseiller d'augmenter les revenus de son seigneur;;;;;;;;;;;;x
+dog_law_pol_council;Political councillor;Conseiller politique;;;;;;;;;;;;x
+dog_law_pol_council_option;Politic;Politique;;;;;;;;;;;;x
+dog_law_pol_council_desc;Allow a councillor to increase its co-vassal opinion of its liege;Permet au conseiller d'augmenter l'opinion des vassaux de son seigneur envers lui;;;;;;;;;;;;x
+dog_law_eve_council;Noble's Representative;Représentant des noble;;;;;;;;;;;;x
+dog_law_eve_council_option;Noble;Noble;;;;;;;;;;;;x
+dog_law_eve_council_desc;Allow a councillor to prevent local noble to force implication change of their liege;Permet au conseiller d'empêcher des nobles locaux de forcer le changement d'implication de son seigneur liege;;;;;;;;;;;;x
+dog_law_res_council;Implication councillor;Counseiller d'implication;;;;;;;;;;;;x
+dog_law_res_council_option;Implication;Implication;;;;;;;;;;;;x
+dog_law_res_council_desc;Allow a councillor to remove the 2 implication restriction maximum of their liege;Permet au conseiller de retiré la restriction des 2 implications au grand maximum de son seigneur liege;;;;;;;;;;;;x
+
+
 ##laws tooltip
 ALL_BUREAUCRATIC_VASSAL_UNACCEPTED;All panda bureaucratic vassal now count as vassal;Tous les vassaux bureaucratiques pandas comptent en tant que vassal;;;;;;;;;;;;x
 PANDA_TT_ALL_BUREAUCRATIC_COUNT_ACCEPTED;Only panda duke and king vassal count as vassal;Seulement les ducs et les rois pandas comptent en tant que vassaux;;;;;;;;;;;;x
@@ -44,3 +122,10 @@ PANDA_TT_ALL_BUREAUCRATIC_VASSAL_ACCEPTED;No panda bureaucratic vassals count in
 PANDA_UNLOCK_INSTABILITY_FACTION;Vassals can create or join instability faction;Les vassaux peuvent créer ou rejoindre les factions d'instabilité;;;;;;;;;;;;x
 PANDA_INSTABILITY_FACT_TRIGGER;Did not recently loose autority from instability faction;N'a pas récemment perdu de l'autorité dû à la faction d'instabilité;;;;;;;;;;;;x
 PANDA_INDEPENDENCE_ELVOLVED;Independences factions now lower vassal acceptance law;Les factions d'indépendance réduisent maintenant le niveau de la loi d'acceptation de vassaux;;;;;;;;;;;;x
+
+dog_tt_unity_recent_change;Did not recently change an unity law;N'a pas récemment changé de loi d'unité;;;;;;;;;;;;x
+dog_tt_allow_county_conversion;Allow the cultural conversion on counties;Permet la conversion culturel des comtés;;;;;;;;;;;;x
+dog_tt_allow_character_conversion;Allow character transformation into dogs;Permet de transformer des humains en chiens;;;;;;;;;;;;x
+dog_tt_price_cost_conv_reduction;Remove the prestige or wildness cost to unite the country;Retire le coût de prestige ou de sauvegerie pour unifier le domaine;;;;;;;;;;;;x
+dog_tt_cant_have_4_implication;Do not have §Y4§! or more implication in governance;Ne peut pas avoir §Y4§! ou plus d'implication;;;;;;;;;;;;x
+dog_tt_canot_be_implicated_inall_law;Can't be implicated in more than §Y2§! interest;Ne peut pas être impliqué dans plus de §Y2§! intérêts;;;;;;;;;;;;x

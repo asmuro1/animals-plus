@@ -2755,6 +2755,7 @@ title_councilmember_king = {
 		has_dlc = "Zeus"
 		primary_title = { has_law = law_voting_power_1 }
 		NOT = { is_panda_government_trigger = yes }
+		NOT = { culture_group = dog_group }
 	}
 
 	allowed_to_hold = {
@@ -2829,6 +2830,7 @@ title_councilmember_emperor = {
 		has_dlc = "Zeus"
 		primary_title = { has_law = law_voting_power_1 }
 		NOT = { is_panda_government_trigger = yes }
+		NOT = { culture_group = dog_group }
 	}
 
 	allowed_to_hold = {
@@ -3479,9 +3481,9 @@ title_augusta = {
 
 	allowed_to_grant = {
 		is_feudal = yes
-		OR = {
+		#OR = {
 			has_landed_title = e_byzantium
-		}
+		#}
 		OR = {
 			religion_group = christian
 			religion_group = jewish_group

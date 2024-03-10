@@ -1,7 +1,6 @@
 Is_animal_trigger = {
     OR = {
         culture = horse
-        culture = dog_culture
         culture = dragon_culture
     }
 }
@@ -10,7 +9,7 @@ Is_really_animal_trigger = {
     OR = {
         culture = dragon_culture
         culture = horse
-        culture = dog_culture
+        culture_group = dog_group
         culture_group = bear_group
         culture_group = hedgehog_group
         culture_group = panda_group
@@ -677,4 +676,19 @@ Cat_province_not_depopulated_trigger = {
         has_province_modifier = depopulated_2
         has_province_modifier = depopulated_3
     }
+}
+
+### dog trigger
+
+# province scope
+dog_can_live_here_trigger = {
+    OR = {
+        terrain = steppe
+        terrain = hills
+    }
+}
+
+# title scope
+dog_has_council_laws_trigger = {
+    has_law = law_voting_power_1
 }

@@ -153,3 +153,30 @@ CAT_TT_DECLARE_WAR;The cats start a revolt;Les chats se rebellent;;;;;;;;;;;;x
 CAT_TT_HUNTER_INJURED;Many adult are injured by ferocious cats;Beaucoup d'adulte sont blessés par des chats enragé;;;;;;;;;;;;x
 CAT_DECADENCE_INVASION;A decadence invasion begins;Une révolte de décadence commence;;;;;;;;;;;;x
 CAT_TT_ORIGIN_FOUND;I should be warry of [Fromfrom.GetFirstName], he must be the sender;Je devrais me méfier de [Fromfrom.GetFirstName], il est trop louche dans cette histoire;;;;;;;;;;;;x
+
+# dog update
+dog_desc_159;Sometimes, my dog seems weak...;Mon chien semble faible de temps en temps...;;;;;;;;;;;;x
+dog_optA_159;I should look into it!;Je devrais regarder ça de plus près;;;;;;;;;;;;x
+dog_optB_159;It's just my imagination;ça doit être mon imagination;;;;;;;;;;;;x
+dog_desc_160;The dog seems a little sleepy, nothing bad;Le chien semble juste très fatigué;;;;;;;;;;;;x
+dog_opt_160;I must be overthinking things;Je dois devenir parano;;;;;;;;;;;;x
+dog_desc_161;the dog was only tired, nothing wrong;Le chien était juste très fatigué, rien de grave;;;;;;;;;;;;x
+dog_opt_161;I was really overthinking...;Je suis vraiment devenu parano...;;;;;;;;;;;;x
+dog_desc_162;The dog just bite me! He is definetly not well;Le chien vien de me mordre, j'avais raison de m'inquiéter;;;;;;;;;;;;x
+dog_opt_162;I need to get a treatment;J'ai besoin d'un traitement!;;;;;;;;;;;;x
+dog_desc_163;My wound is less painfull...;Ma morsure me fait maintenant beaucoup moins mal...;;;;;;;;;;;;x
+dog_optA_163;I am finnaly in form;Je suis à nouveau en forme;;;;;;;;;;;;x
+dog_optB_163;I hope it was nothing;Ce ne dois rien être de grave;;;;;;;;;;;;x
+dog_desc_167;Because of pressure from local nobles, I have to change my implication;Suite aux actions des différents nobles locaux, je suis contraint de changer mon implication en politique;;;;;;;;;;;;x
+dog_opt_167;Then, change has to made!;Des changements deviennent obligatoires;;;;;;;;;;;;x
+dog_desc_168;Noble are complaining about the concil's lack of power;Les nobles commencent à se rebeller à cause du manque de pouvoir du conseil;;;;;;;;;;;;x
+dog_opt_168;My reputation will take a hit;Ma réputation va en prendre un coup;;;;;;;;;;;;x
+
+## tooltip
+DOG_HEALED_TT;healing from his wound;guérit totalement de la blessure;;;;;;;;;;;;x
+DOG_TT_POLI_LEVEL_DOWN;Reduce your political implication;Réduit l'implication politique;;;;;;;;;;;;x
+DOG_TT_POLI_LEVEL_UP;Increase your political implication;Augmente l'implication politique;;;;;;;;;;;;x
+DOG_TT_ECO_LEVEL_DOWN;Reduce your economic implication;Réduit l'implication économique;;;;;;;;;;;;x
+DOG_TT_ECO_LEVEL_UP;Increase your economic implication;Augmente l'implication économique;;;;;;;;;;;;x
+DOG_TT_WAR_LEVEL_DOWN;Reduce your military implication;Réduit l'implication militaire;;;;;;;;;;;;x
+DOG_TT_WAR_LEVEL_UP;Increase your military implication;Augmente l'implication militaire;;;;;;;;;;;;x

@@ -1,6 +1,5 @@
 ###This file only countain buildings common for all animal culture
-###Those building was on this mod's beta version, but reworked on this one,
-###so building code are juste copy-past can have no relation with actual bonuses
+###Those building was on this mod's beta version, but reworked on this one.
 
 castle = {
     #Castle tower: building that unlock every other animal building
@@ -1177,6 +1176,23 @@ castle = {
                     check_variable = { which=duck_dev_var value=2 }
                 }
             }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = dog_group
+                }
+                
+                custom_tooltip = {
+                    text = DOG_TT_HAS_MIL_IMPL
+                    holder_scope = {
+                        OR = {
+                            has_law = dog_law_war_1
+                            has_law = dog_law_war_2
+                            has_law = dog_law_war_3
+                            has_law = dog_law_war_4
+                        }
+                    }
+                }
+            }
         }
         prerequisites = { ca_ani_castle_tower_01 }
         not_if_x_exists = { ca_ani_siege_1 ca_ani_fort_1}
@@ -1232,6 +1248,22 @@ castle = {
                 custom_tooltip = {
                     text = DUCK_DEV_MORE_4
                     check_variable = { which=duck_dev_var value=4 }
+                }
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = dog_group
+                }
+                
+                custom_tooltip = {
+                    text = DOG_TT_HAS_MIL_IMPL
+                    holder_scope = {
+                        OR = {
+                            has_law = dog_law_war_2
+                            has_law = dog_law_war_3
+                            has_law = dog_law_war_4
+                        }
+                    }
                 }
             }
         }
@@ -1291,6 +1323,21 @@ castle = {
                     check_variable = { which=duck_dev_var value=6 }
                 }
             }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = dog_group
+                }
+                
+                custom_tooltip = {
+                    text = DOG_TT_HAS_MIL_IMPL
+                    holder_scope = {
+                        OR = {
+                            has_law = dog_law_war_3
+                            has_law = dog_law_war_4
+                        }
+                    }
+                }
+            }
         }
         prerequisites = { ca_ani_castle_tower_06 }
         not_if_x_exists = { ca_ani_siege_1 ca_ani_fort_1}
@@ -1346,6 +1393,18 @@ castle = {
                 custom_tooltip = {
                     text = DUCK_DEV_MORE_8
                     check_variable = { which=duck_dev_var value=8 }
+                }
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = dog_group
+                }
+                
+                custom_tooltip = {
+                    text = DOG_TT_HAS_MIL_IMPL
+                    holder_scope = {
+                        has_law = dog_law_war_4
+                    }
                 }
             }
         }
@@ -1696,6 +1755,23 @@ castle = {
                     check_variable = { which=duck_dev_var value=3 }
                 }
             }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = dog_group
+                }
+                
+                custom_tooltip = {
+                    text = DOG_TT_HAS_ECO_IMPL
+                    holder_scope = {
+                        OR = {
+                            has_law = dog_law_economic_1
+                            has_law = dog_law_economic_2
+                            has_law = dog_law_economic_3
+                            has_law = dog_law_economic_4
+                        }
+                    }
+                }
+            }
         }
         prerequisites = { ca_ani_castle_tower_02 }
         not_if_x_exists = { ca_ani_trade_build_1 ca_ani_desmene_1}
@@ -1757,6 +1833,22 @@ castle = {
                 custom_tooltip = {
                     text = DUCK_DEV_MORE_5
                     check_variable = { which=duck_dev_var value=5 }
+                }
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = dog_group
+                }
+                
+                custom_tooltip = {
+                    text = DOG_TT_HAS_ECO_IMPL
+                    holder_scope = {
+                        OR = {
+                            has_law = dog_law_economic_2
+                            has_law = dog_law_economic_3
+                            has_law = dog_law_economic_4
+                        }
+                    }
                 }
             }
         }
@@ -1824,6 +1916,21 @@ castle = {
                     check_variable = { which=duck_dev_var value=7 }
                 }
             }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = dog_group
+                }
+                
+                custom_tooltip = {
+                    text = DOG_TT_HAS_ECO_IMPL
+                    holder_scope = {
+                        OR = {
+                            has_law = dog_law_economic_3
+                            has_law = dog_law_economic_4
+                        }
+                    }
+                }
+            }
         }
         prerequisites = { ca_ani_castle_tower_08 }
         not_if_x_exists = { ca_ani_trade_build_1 ca_ani_desmene_1}
@@ -1887,6 +1994,18 @@ castle = {
                 custom_tooltip = {
                     text = DUCK_DEV_MORE_9
                     check_variable = { which=duck_dev_var value=9 }
+                }
+            }
+            conditional_tooltip = {
+                trigger = {
+                    culture_group = dog_group
+                }
+                
+                custom_tooltip = {
+                    text = DOG_TT_HAS_ECO_IMPL
+                    holder_scope = {
+                        has_law = dog_law_economic_4
+                    }
                 }
             }
         }

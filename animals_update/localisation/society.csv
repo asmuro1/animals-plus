@@ -68,7 +68,9 @@ cat_quest_reputation_2_tooltip;By using social powers, you can win this quest;Po
 cat_quest_reputation_3_fallback;rank up quest;quête de monté de niveau;;;;;;;;;;;;x
 cat_quest_reputation_3_tooltip;To gain rank and show your superiority, you have to to win a war.;Pour monter de rang, il te faut gagner une guerre.;;;;;;;;;;;;x
 cat_quest_reputation_3_desc;you can rank up by winning a war;Tu monter de rang en gagnant une guerre.;;;;;;;;;;;;x
-
+currency_name_cat_reputation_society;Cat money;Argent chat;;;;;;;;;;;;x
+currency_name_cat_prosperity_society;Cat money;Argent chat;;;;;;;;;;;;x
+currency_name_cat_intrigue_society;Cat money;Argent chat;;;;;;;;;;;;x
 ## common loc
 cat_animal_society_currency;Cat's credit;Crédit de chat;;;;;;;;;;;;x
 request_to_rank_up_cat_societies;Rank up;Augmenter son rang;;;;;;;;;;;;x

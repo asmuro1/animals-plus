@@ -1,127 +1,114 @@
 #CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
 
 ###beta version building
-ca_horse_stable_1;Barn;Étable;;;;;;;;;;;;;x
-ca_horse_stable_2;Barn;Étable;;;;;;;;;;;;;x
-ca_horse_stable_3;Barn;Étable;;;;;;;;;;;;;x
-ca_horse_archer_1;Archery;Archerie;;;;;;;;;;;;;x
-ca_horse_archer_2;Archery;Archerie;;;;;;;;;;;;;x
-ca_horse_archer_3;Archery;Archerie;;;;;;;;;;;;;x
-ca_horse_armor_1;Armory;Armurerie;;;;;;;;;;;;;x
-ca_horse_armor_2;Armory;Armurerie;;;;;;;;;;;;;x
-ca_horse_retinue_1;Horse clan;Clan des chevaux;;;;;;;;;;;;;x
-ca_horse_retinue_2;Horse clan;Clan des chevaux;;;;;;;;;;;;;x
-ca_horse_garrison_1;Increased garrison;Garnison amélioré;;;;;;;;;;;;;x
-ca_horse_garrison_2;Increased garrison;Garnison amélioré;;;;;;;;;;;;;x
-ca_horse_speciality;Speed guild;Guilde de vitesse;;;;;;;;;;;;;x
-ca_dog_infantery_1;Infantry legion;Légion d’infanterie;;;;;;;;;;;;;x
-ca_dog_infantery_2;Infantry legion;Légion d’infanterie;;;;;;;;;;;;;x
-ca_dog_infantery_3;Infantry legion;Légion d’infanterie;;;;;;;;;;;;;x
-ca_dog_weapons_1;Weapons storage;Entrepôt d'armes;;;;;;;;;;;;x;
-ca_dog_weapons_2;Weapons storage;Entrepôt d'armes;;;;;;;;;;;;;x
-ca_dog_weapons_3;Weapons storage;Entrepôt d'armes;;;;;;;;;;;;;x
-ca_dog_stable_1;Barn;Étable;;;;;;;;;;;;;x
-ca_dog_stable_2;Barn;Étable;;;;;;;;;;;;;x
-ca_dog_retinue_1;Dog clan;Clan des chiens;;;;;;;;;;;;;x
-ca_dog_retinue_2;Dog clan;Clan des chiens;;;;;;;;;;;;;x
-ca_dog_garrison_1;Garrison;Garnison;;;;;;;;;;;;;x
-ca_dog_garrison_2;Garrison;Garnison;;;;;;;;;;;;;x
-ca_dog_speciality;Opinion guild;Guilde d'opinion;;;;;;;;;;;;;x
-ca_dragon_fortification_1;Thorny fortification;Fortification épineuse;;;;;;;;;;;;;x
-ca_dragon_fortification_2;Thorny fortification;Fortification épineuse;;;;;;;;;;;;;x
-ca_dragon_fortification_3;Thorny fortification;Fortification épineuse;;;;;;;;;;;;;x
-ca_dragon_treasury_1;Treasure Guards;Gardiens du trésor;;;;;;;;;;;;;x
-ca_dragon_treasury_2;Treasure Guards;Gardiens du trésor;;;;;;;;;;;;;x
-ca_dragon_treasury_3;Treasure Guards;Gardiens du trésor;;;;;;;;;;;;;x
-ca_dragon_stable_1;Barn;Étable;;;;;;;;;;;;;x
-ca_dragon_stable_2;Barn;Étable;;;;;;;;;;;;;x
-ca_dragon_retinue_1;Dragon clan;Clan des dragons;;;;;;;;;;;;;x
-ca_dragon_retinue_2;Dragon clan;Clan des dragons;;;;;;;;;;;;;x
-ca_dragon_archery_1;Archery;Archerie;;;;;;;;;;;;;x
-ca_dragon_archery_2;Archery;Archerie;;;;;;;;;;;;;x
-ca_dragon_speciality;Treasury's guilde;Guilde du trésor;;;;;;;;;;;;;x
+ca_horse_stable_1;Barn;Étable;;;;;;;;;;;;x
+ca_horse_stable_2;Barn;Étable;;;;;;;;;;;;x
+ca_horse_stable_3;Barn;Étable;;;;;;;;;;;;x
+ca_horse_archer_1;Archery;Archerie;;;;;;;;;;;;x
+ca_horse_archer_2;Archery;Archerie;;;;;;;;;;;;x
+ca_horse_archer_3;Archery;Archerie;;;;;;;;;;;;x
+ca_horse_armor_1;Armory;Armurerie;;;;;;;;;;;;x
+ca_horse_armor_2;Armory;Armurerie;;;;;;;;;;;;x
+ca_horse_retinue_1;Horse clan;Clan des chevaux;;;;;;;;;;;;x
+ca_horse_retinue_2;Horse clan;Clan des chevaux;;;;;;;;;;;;x
+ca_horse_garrison_1;Increased garrison;Garnison amélioré;;;;;;;;;;;;x
+ca_horse_garrison_2;Increased garrison;Garnison amélioré;;;;;;;;;;;;x
+ca_horse_speciality;Speed guild;Guilde de vitesse;;;;;;;;;;;;x
+ca_dragon_fortification_1;Thorny fortification;Fortification épineuse;;;;;;;;;;;;x
+ca_dragon_fortification_2;Thorny fortification;Fortification épineuse;;;;;;;;;;;;x
+ca_dragon_fortification_3;Thorny fortification;Fortification épineuse;;;;;;;;;;;;x
+ca_dragon_treasury_1;Treasure Guards;Gardiens du trésor;;;;;;;;;;;;x
+ca_dragon_treasury_2;Treasure Guards;Gardiens du trésor;;;;;;;;;;;;x
+ca_dragon_treasury_3;Treasure Guards;Gardiens du trésor;;;;;;;;;;;;x
+ca_dragon_stable_1;Barn;Étable;;;;;;;;;;;;x
+ca_dragon_stable_2;Barn;Étable;;;;;;;;;;;;x
+ca_dragon_retinue_1;Dragon clan;Clan des dragons;;;;;;;;;;;;x
+ca_dragon_retinue_2;Dragon clan;Clan des dragons;;;;;;;;;;;;x
+ca_dragon_archery_1;Archery;Archerie;;;;;;;;;;;;x
+ca_dragon_archery_2;Archery;Archerie;;;;;;;;;;;;x
+ca_dragon_speciality;Treasury's guilde;Guilde du trésor;;;;;;;;;;;;x
 
 
 ####Bear update building
-ca_ani_castle_tower_01;Animal central tower I;Tour centrale animalière I;;;;;;;;;;;;;x
-ca_ani_castle_tower_02;Animal central tower II;Tour centrale animalière II;;;;;;;;;;;;;x
-ca_ani_castle_tower_03;Animal central tower III;Tour centrale animalière III;;;;;;;;;;;;;x
-ca_ani_castle_tower_04;Animal central tower IV;Tour centrale animalière IV;;;;;;;;;;;;;x
-ca_ani_castle_tower_05;Animal central tower V;Tour centrale animalière V;;;;;;;;;;;;;x
-ca_ani_castle_tower_06;Animal central tower VI;Tour centrale animalière VI;;;;;;;;;;;;;x
-ca_ani_castle_tower_07;Animal central tower VII;Tour centrale animalière VII;;;;;;;;;;;;;x
-ca_ani_castle_tower_08;Animal central tower VIII;Tour centrale animalière VIII;;;;;;;;;;;;;x
-ca_ani_castle_tower_09;Animal central tower IX;Tour centrale animalière IX;;;;;;;;;;;;;x
-ca_ani_castle_tower_10;Animal central tower X;Tour centrale animalière X;;;;;;;;;;;;;x
-ca_ani_castle_tower_11;Animal central tower XI;Tour centrale animalière XI;;;;;;;;;;;;;x
-ca_ani_castle_tower_12;Animal central tower XII;Tour centrale animalière XII;;;;;;;;;;;;;x
-ca_ani_castle_tower_13;Animal central tower XIII;Tour centrale animalière XIII;;;;;;;;;;;;;x
-ca_ani_castle_tower_14;Animal central tower XIV;Tour centrale animalière XIV;;;;;;;;;;;;;x
-ca_ani_castle_tower_15;Animal central tower XV;Tour centrale animalière XV;;;;;;;;;;;;;x
-ca_ani_castle_tower_16;Animal central tower XVI;Tour centrale animalière XVI;;;;;;;;;;;;;x
-ca_ani_fort_1;Defensives walls;Murs défensifs;;;;;;;;;;;;;x
-ca_ani_fort_2;Defensives walls;Murs défensifs;;;;;;;;;;;;;x
-ca_ani_fort_3;Defensives walls;Murs défensifs;;;;;;;;;;;;;x
-ca_ani_fort_4;Defensives walls;Murs défensifs;;;;;;;;;;;;;x
+ca_ani_castle_tower_01;Animal central tower I;Tour centrale animalière I;;;;;;;;;;;;x
+ca_ani_castle_tower_02;Animal central tower II;Tour centrale animalière II;;;;;;;;;;;;x
+ca_ani_castle_tower_03;Animal central tower III;Tour centrale animalière III;;;;;;;;;;;;x
+ca_ani_castle_tower_04;Animal central tower IV;Tour centrale animalière IV;;;;;;;;;;;;x
+ca_ani_castle_tower_05;Animal central tower V;Tour centrale animalière V;;;;;;;;;;;;x
+ca_ani_castle_tower_06;Animal central tower VI;Tour centrale animalière VI;;;;;;;;;;;;x
+ca_ani_castle_tower_07;Animal central tower VII;Tour centrale animalière VII;;;;;;;;;;;;x
+ca_ani_castle_tower_08;Animal central tower VIII;Tour centrale animalière VIII;;;;;;;;;;;;x
+ca_ani_castle_tower_09;Animal central tower IX;Tour centrale animalière IX;;;;;;;;;;;;x
+ca_ani_castle_tower_10;Animal central tower X;Tour centrale animalière X;;;;;;;;;;;;x
+ca_ani_castle_tower_11;Animal central tower XI;Tour centrale animalière XI;;;;;;;;;;;;x
+ca_ani_castle_tower_12;Animal central tower XII;Tour centrale animalière XII;;;;;;;;;;;;x
+ca_ani_castle_tower_13;Animal central tower XIII;Tour centrale animalière XIII;;;;;;;;;;;;x
+ca_ani_castle_tower_14;Animal central tower XIV;Tour centrale animalière XIV;;;;;;;;;;;;x
+ca_ani_castle_tower_15;Animal central tower XV;Tour centrale animalière XV;;;;;;;;;;;;x
+ca_ani_castle_tower_16;Animal central tower XVI;Tour centrale animalière XVI;;;;;;;;;;;;x
+ca_ani_fort_1;Defensives walls;Murs défensifs;;;;;;;;;;;;x
+ca_ani_fort_2;Defensives walls;Murs défensifs;;;;;;;;;;;;x
+ca_ani_fort_3;Defensives walls;Murs défensifs;;;;;;;;;;;;x
+ca_ani_fort_4;Defensives walls;Murs défensifs;;;;;;;;;;;;x
 ca_ani_siege_1;Discipline hall;Hall de commandement;;;;;;;;;;;;x
 ca_ani_siege_2;Discipline hall;Hall de commandement;;;;;;;;;;;;x
 ca_ani_siege_3;Discipline hall;Hall de commandement;;;;;;;;;;;;x
 ca_ani_siege_4;Discipline hall;Hall de commandement;;;;;;;;;;;;x
-ca_ani_garrison_1;Training ground;Camp d'entraînement;;;;;;;;;;;;;x
-ca_ani_garrison_2;Training ground;Camp d'entraînement;;;;;;;;;;;;;x
-ca_ani_garrison_3;Training ground;Camp d'entraînement;;;;;;;;;;;;;x
-ca_ani_garrison_4;Training ground;Camp d'entraînement;;;;;;;;;;;;;x
-ca_ani_trade_build_1;Trade camp;Camp de commerce;;;;;;;;;;;;;x
-ca_ani_trade_build_2;Trade camp;Camp de commerce;;;;;;;;;;;;;x
-ca_ani_trade_build_3;Trade camp;Camp de commerce;;;;;;;;;;;;;x
-ca_ani_trade_build_4;Trade camp;Camp de commerce;;;;;;;;;;;;;x
-ca_ani_build_cost_1;Castle tax post;Poste de taxes du château;;;;;;;;;;;;;x
-ca_ani_build_cost_2;Castle tax post;Poste de taxes du château;;;;;;;;;;;;;x
-ca_ani_build_cost_3;Castle tax post;Poste de taxes du château;;;;;;;;;;;;;x
-ca_ani_build_cost_4;Castle tax post;Poste de taxes du château;;;;;;;;;;;;;x
-ca_ani_desmene_1;Management office;Bureau de gestion;;;;;;;;;;;;;x
-ca_ani_desmene_2;Management office;Bureau de gestion;;;;;;;;;;;;;x
-ca_ani_desmene_3;Management office;Bureau de gestion;;;;;;;;;;;;;x
-ca_ani_desmene_4;Management office;Bureau de gestion;;;;;;;;;;;;;x
-ca_ani_prest_1;Military library;Bibliothèque militaire;;;;;;;;;;;;;x
-ca_ani_prest_2;Ducal library;Bibliothèque ducale;;;;;;;;;;;;;x
-ca_ani_prest_3;Royal library;Bibliothèque royale;;;;;;;;;;;;;x
-ca_ani_prest_4;Imperial library;Bibliothèque impériale;;;;;;;;;;;;;x
-ca_ani_piety_1;Religious library;Bibliothèque religieuse;;;;;;;;;;;;;x
-ca_ani_piety_2;Ducal library;Bibliothèque ducale;;;;;;;;;;;;;x
-ca_ani_piety_3;Royal library;Bibliothèque royale;;;;;;;;;;;;;x
-ca_ani_piety_4;Imperial library;Bibliothèque impériale;;;;;;;;;;;;;x
-ca_ani_tech_1;Big library;Grande Bibliothèque;;;;;;;;;;;;;x
-ca_ani_tech_2;Ducal library;Bibliothèque ducale;;;;;;;;;;;;;x
-ca_ani_tech_3;Royal library;Bibliothèque royale;;;;;;;;;;;;;x
-ca_ani_tech_4;Imperial library;Bibliothèque impériale;;;;;;;;;;;;;x
-ca_bear_regiment_1;Training field;Salles d’entraînement;;;;;;;;;;;;;x
-ca_bear_regiment_2;Training field;Salles d’entraînement;;;;;;;;;;;;;x
-ca_bear_regiment_3;Training field;Salles d’entraînement;;;;;;;;;;;;;x
-ca_bear_regiment_4;Training field;Salles d’entraînement;;;;;;;;;;;;;x
-ca_bear_armor_1;Armory;Armurerie;;;;;;;;;;;;;x
-ca_bear_armor_2;Armory;Armurerie;;;;;;;;;;;;;x
-ca_bear_armor_3;Armory;Armurerie;;;;;;;;;;;;;x
-ca_bear_armor_4;Armory;Armurerie;;;;;;;;;;;;;x
-ca_bear_weapons_1;Forge;Forge;;;;;;;;;;;;;x
-ca_bear_weapons_2;Forge;Forge;;;;;;;;;;;;;x
-ca_bear_weapons_3;Forge;Forge;;;;;;;;;;;;;x
-ca_bear_weapons_4;Forge;Forge;;;;;;;;;;;;;x
-ca_bear_retinue_1;Bear clan;Clan des ours;;;;;;;;;;;;;x
-ca_bear_retinue_2;Bear clan;Clan des ours;;;;;;;;;;;;;x
-ca_bear_retinue_3;Bear clan;Clan des ours;;;;;;;;;;;;;x
-ca_bear_stable_1;Barn;Étable;;;;;;;;;;;;;x
-ca_bear_stable_2;Barn;Étable;;;;;;;;;;;;;x
-ca_bear_stable_3;Barn;Étable;;;;;;;;;;;;;x
-ca_bear_speciality_1;Breeding guild;Guilde de reproduction;;;;;;;;;;;;;x
-ca_bear_speciality_2;Breeding guild;Guilde de reproduction;;;;;;;;;;;;;x
+ca_ani_garrison_1;Training ground;Camp d'entraînement;;;;;;;;;;;;x
+ca_ani_garrison_2;Training ground;Camp d'entraînement;;;;;;;;;;;;x
+ca_ani_garrison_3;Training ground;Camp d'entraînement;;;;;;;;;;;;x
+ca_ani_garrison_4;Training ground;Camp d'entraînement;;;;;;;;;;;;x
+ca_ani_trade_build_1;Trade camp;Camp de commerce;;;;;;;;;;;;x
+ca_ani_trade_build_2;Trade camp;Camp de commerce;;;;;;;;;;;;x
+ca_ani_trade_build_3;Trade camp;Camp de commerce;;;;;;;;;;;;x
+ca_ani_trade_build_4;Trade camp;Camp de commerce;;;;;;;;;;;;x
+ca_ani_build_cost_1;Castle tax post;Poste de taxes du château;;;;;;;;;;;;x
+ca_ani_build_cost_2;Castle tax post;Poste de taxes du château;;;;;;;;;;;;x
+ca_ani_build_cost_3;Castle tax post;Poste de taxes du château;;;;;;;;;;;;x
+ca_ani_build_cost_4;Castle tax post;Poste de taxes du château;;;;;;;;;;;;x
+ca_ani_desmene_1;Management office;Bureau de gestion;;;;;;;;;;;;x
+ca_ani_desmene_2;Management office;Bureau de gestion;;;;;;;;;;;;x
+ca_ani_desmene_3;Management office;Bureau de gestion;;;;;;;;;;;;x
+ca_ani_desmene_4;Management office;Bureau de gestion;;;;;;;;;;;;x
+ca_ani_prest_1;Military library;Bibliothèque militaire;;;;;;;;;;;;x
+ca_ani_prest_2;Ducal library;Bibliothèque ducale;;;;;;;;;;;;x
+ca_ani_prest_3;Royal library;Bibliothèque royale;;;;;;;;;;;;x
+ca_ani_prest_4;Imperial library;Bibliothèque impériale;;;;;;;;;;;;x
+ca_ani_piety_1;Religious library;Bibliothèque religieuse;;;;;;;;;;;;x
+ca_ani_piety_2;Ducal library;Bibliothèque ducale;;;;;;;;;;;;x
+ca_ani_piety_3;Royal library;Bibliothèque royale;;;;;;;;;;;;x
+ca_ani_piety_4;Imperial library;Bibliothèque impériale;;;;;;;;;;;;x
+ca_ani_tech_1;Big library;Grande Bibliothèque;;;;;;;;;;;;x
+ca_ani_tech_2;Ducal library;Bibliothèque ducale;;;;;;;;;;;;x
+ca_ani_tech_3;Royal library;Bibliothèque royale;;;;;;;;;;;;x
+ca_ani_tech_4;Imperial library;Bibliothèque impériale;;;;;;;;;;;;x
+ca_bear_regiment_1;Training field;Salles d’entraînement;;;;;;;;;;;;x
+ca_bear_regiment_2;Training field;Salles d’entraînement;;;;;;;;;;;;x
+ca_bear_regiment_3;Training field;Salles d’entraînement;;;;;;;;;;;;x
+ca_bear_regiment_4;Training field;Salles d’entraînement;;;;;;;;;;;;x
+ca_bear_armor_1;Armory;Armurerie;;;;;;;;;;;;x
+ca_bear_armor_2;Armory;Armurerie;;;;;;;;;;;;x
+ca_bear_armor_3;Armory;Armurerie;;;;;;;;;;;;x
+ca_bear_armor_4;Armory;Armurerie;;;;;;;;;;;;x
+ca_bear_weapons_1;Forge;Forge;;;;;;;;;;;;x
+ca_bear_weapons_2;Forge;Forge;;;;;;;;;;;;x
+ca_bear_weapons_3;Forge;Forge;;;;;;;;;;;;x
+ca_bear_weapons_4;Forge;Forge;;;;;;;;;;;;x
+ca_bear_retinue_1;Bear clan;Clan des ours;;;;;;;;;;;;x
+ca_bear_retinue_2;Bear clan;Clan des ours;;;;;;;;;;;;x
+ca_bear_retinue_3;Bear clan;Clan des ours;;;;;;;;;;;;x
+ca_bear_stable_1;Barn;Étable;;;;;;;;;;;;x
+ca_bear_stable_2;Barn;Étable;;;;;;;;;;;;x
+ca_bear_stable_3;Barn;Étable;;;;;;;;;;;;x
+ca_bear_speciality_1;Breeding guild;Guilde de reproduction;;;;;;;;;;;;x
+ca_bear_speciality_2;Breeding guild;Guilde de reproduction;;;;;;;;;;;;x
 ca_con_ydragsil;Ydragsil;Ydragsil;;;;;;;;;;;;x
 ca_con_golden;golden wall;mur d'or;;;;;;;;;;;;x
 ca_con_library;Alchemy library;Bibliothèque d'alchimie;;;;;;;;;;;;x
-tb_ani_tribal_tower_1;Animal central tower I;Tour centrale animalière I;;;;;;;;;;;;;x
-tb_ani_tribal_tower_2;Animal central tower II;Tour centrale animalière II;;;;;;;;;;;;;x
-tb_ani_tribal_tower_3;Animal central tower III;Tour centrale animalière III;;;;;;;;;;;;;x
-tb_ani_tribal_tower_4;Animal central tower IV;Tour centrale animalière IV;;;;;;;;;;;;;x
+tb_ani_tribal_tower_1;Animal central tower I;Tour centrale animalière I;;;;;;;;;;;;x
+tb_ani_tribal_tower_2;Animal central tower II;Tour centrale animalière II;;;;;;;;;;;;x
+tb_ani_tribal_tower_3;Animal central tower III;Tour centrale animalière III;;;;;;;;;;;;x
+tb_ani_tribal_tower_4;Animal central tower IV;Tour centrale animalière IV;;;;;;;;;;;;x
 tb_ani_fort_1;Tribals fortifications;Fortifications tribales;;;;;;;;;;;;x
 tb_ani_fort_2;Tribals fortifications;Fortifications tribales;;;;;;;;;;;;x
 tb_ani_siege_1;Training hall;Camp d'entraînement;;;;;;;;;;;;x
@@ -220,22 +207,22 @@ ca_panda_capital_speciality_1;Retinue guild;Guilde d'escorte;;;;;;;;;;;;x
 ca_panda_capital_speciality_2;Retinue guild;Guilde d'escorte;;;;;;;;;;;;x
 ca_panda_capital_speciality_3;Retinue guild;Guilde d'escorte;;;;;;;;;;;;x
 ca_panda_capital_speciality_4;Retinue guild;Guilde d'escorte;;;;;;;;;;;;x
-ca_red_capital_stable_01;Barn;Étable;;;;;;;;;;;;;x
-ca_red_capital_stable_02;Barn;Étable;;;;;;;;;;;;;x
-ca_red_capital_stable_03;Barn;Étable;;;;;;;;;;;;;x
-ca_red_capital_stable_04;Barn;Étable;;;;;;;;;;;;;x
+ca_red_capital_stable_01;Barn;Étable;;;;;;;;;;;;x
+ca_red_capital_stable_02;Barn;Étable;;;;;;;;;;;;x
+ca_red_capital_stable_03;Barn;Étable;;;;;;;;;;;;x
+ca_red_capital_stable_04;Barn;Étable;;;;;;;;;;;;x
 ca_red_capital_armors_01;Forge;Forge;;;;;;;;;;;;x
-ca_red_capital_armors_02;Forge;Forge;;;;;;;;;;;;;x
-ca_red_capital_armors_03;Forge;Forge;;;;;;;;;;;;;x
-ca_red_capital_armors_04;Forge;Forge;;;;;;;;;;;;;x
-ca_red_vassal_stable_01;Barn;Étable;;;;;;;;;;;;;x
-ca_red_vassal_stable_02;Barn;Étable;;;;;;;;;;;;;x
-ca_red_vassal_stable_03;Barn;Étable;;;;;;;;;;;;;x
-ca_red_vassal_stable_04;Barn;Étable;;;;;;;;;;;;;x
-ca_red_vassal_stable_05;Barn;Étable;;;;;;;;;;;;;x
-ca_red_vassal_stable_06;Barn;Étable;;;;;;;;;;;;;x
-ca_red_vassal_stable_07;Barn;Étable;;;;;;;;;;;;;x
-ca_red_vassal_stable_08;Barn;Étable;;;;;;;;;;;;;x
+ca_red_capital_armors_02;Forge;Forge;;;;;;;;;;;;x
+ca_red_capital_armors_03;Forge;Forge;;;;;;;;;;;;x
+ca_red_capital_armors_04;Forge;Forge;;;;;;;;;;;;x
+ca_red_vassal_stable_01;Barn;Étable;;;;;;;;;;;;x
+ca_red_vassal_stable_02;Barn;Étable;;;;;;;;;;;;x
+ca_red_vassal_stable_03;Barn;Étable;;;;;;;;;;;;x
+ca_red_vassal_stable_04;Barn;Étable;;;;;;;;;;;;x
+ca_red_vassal_stable_05;Barn;Étable;;;;;;;;;;;;x
+ca_red_vassal_stable_06;Barn;Étable;;;;;;;;;;;;x
+ca_red_vassal_stable_07;Barn;Étable;;;;;;;;;;;;x
+ca_red_vassal_stable_08;Barn;Étable;;;;;;;;;;;;x
 ca_red_vassal_weapon_01;Training place;Lieu d'entrainement;;;;;;;;;;;;x
 ca_red_vassal_weapon_02;Training place;Lieu d'entrainement;;;;;;;;;;;;x
 ca_red_vassal_weapon_03;Training place;Lieu d'entrainement;;;;;;;;;;;;x
@@ -244,22 +231,22 @@ ca_red_vassal_weapon_05;Training place;Lieu d'entrainement;;;;;;;;;;;;x
 ca_red_vassal_weapon_06;Training place;Lieu d'entrainement;;;;;;;;;;;;x
 ca_red_vassal_weapon_07;Training place;Lieu d'entrainement;;;;;;;;;;;;x
 ca_red_vassal_weapon_08;Training place;Lieu d'entrainement;;;;;;;;;;;;x
-ca_giant_capital_stable_1;Barn;Étable;;;;;;;;;;;;;x
-ca_giant_capital_stable_2;Barn;Étable;;;;;;;;;;;;;x
-ca_giant_capital_stable_3;Barn;Étable;;;;;;;;;;;;;x
-ca_giant_capital_stable_4;Barn;Étable;;;;;;;;;;;;;x
-ca_giant_capital_armors_1;Forge;Forge;;;;;;;;;;;;;x
-ca_giant_capital_armors_2;Forge;Forge;;;;;;;;;;;;;x
-ca_giant_capital_armors_3;Forge;Forge;;;;;;;;;;;;;x
-ca_giant_capital_armors_4;Forge;Forge;;;;;;;;;;;;;x
-ca_giant_vassal_stable_1;Barn;Étable;;;;;;;;;;;;;x
-ca_giant_vassal_stable_2;Barn;Étable;;;;;;;;;;;;;x
-ca_giant_vassal_stable_3;Barn;Étable;;;;;;;;;;;;;x
-ca_giant_vassal_stable_4;Barn;Étable;;;;;;;;;;;;;x
-ca_giant_vassal_stable_5;Barn;Étable;;;;;;;;;;;;;x
-ca_giant_vassal_stable_6;Barn;Étable;;;;;;;;;;;;;x
-ca_giant_vassal_stable_7;Barn;Étable;;;;;;;;;;;;;x
-ca_giant_vassal_stable_8;Barn;Étable;;;;;;;;;;;;;x
+ca_giant_capital_stable_1;Barn;Étable;;;;;;;;;;;;x
+ca_giant_capital_stable_2;Barn;Étable;;;;;;;;;;;;x
+ca_giant_capital_stable_3;Barn;Étable;;;;;;;;;;;;x
+ca_giant_capital_stable_4;Barn;Étable;;;;;;;;;;;;x
+ca_giant_capital_armors_1;Forge;Forge;;;;;;;;;;;;x
+ca_giant_capital_armors_2;Forge;Forge;;;;;;;;;;;;x
+ca_giant_capital_armors_3;Forge;Forge;;;;;;;;;;;;x
+ca_giant_capital_armors_4;Forge;Forge;;;;;;;;;;;;x
+ca_giant_vassal_stable_1;Barn;Étable;;;;;;;;;;;;x
+ca_giant_vassal_stable_2;Barn;Étable;;;;;;;;;;;;x
+ca_giant_vassal_stable_3;Barn;Étable;;;;;;;;;;;;x
+ca_giant_vassal_stable_4;Barn;Étable;;;;;;;;;;;;x
+ca_giant_vassal_stable_5;Barn;Étable;;;;;;;;;;;;x
+ca_giant_vassal_stable_6;Barn;Étable;;;;;;;;;;;;x
+ca_giant_vassal_stable_7;Barn;Étable;;;;;;;;;;;;x
+ca_giant_vassal_stable_8;Barn;Étable;;;;;;;;;;;;x
 ca_giant_vassal_armors_1;Training place;lieu d'entrainement;;;;;;;;;;;;x
 ca_giant_vassal_armors_2;Training place;lieu d'entrainement;;;;;;;;;;;;x
 ca_giant_vassal_armors_3;Training place;lieu d'entrainement;;;;;;;;;;;;x
@@ -380,8 +367,8 @@ ca_cat_archery_3;Archery area;Zone de tir à l'arc;;;;;;;;;;;;x
 ca_cat_stable_1;Stables;Étable;;;;;;;;;;;;x
 ca_cat_stable_2;Stables;Étable;;;;;;;;;;;;x
 ca_cat_stable_3;Stables;Étable;;;;;;;;;;;;x
-ca_cat_forge_1;Forge;Forge;;;;;;;;;;;;;x
-ca_cat_forge_2;Forge;Forge;;;;;;;;;;;;;x
+ca_cat_forge_1;Forge;Forge;;;;;;;;;;;;x
+ca_cat_forge_2;Forge;Forge;;;;;;;;;;;;x
 ca_cat_retinue_1;Cats clan;Clan des chats;;;;;;;;;;;;x
 ca_cat_retinue_2;Cats clan;Clan des chats;;;;;;;;;;;;x
 ca_cat_retinue_3;Cats clan;Clan des chats;;;;;;;;;;;;x
@@ -400,3 +387,41 @@ tb_cat_stable_1;Stables;Étable;;;;;;;;;;;;x
 tb_cat_stable_2;Stables;Étable;;;;;;;;;;;;x
 tb_cat_stable_3;Stables;Étable;;;;;;;;;;;;x
 tb_cat_stable_4;Stables;Étable;;;;;;;;;;;;x
+
+### DOG update
+ca_dog_field_1;Military field;Terrain militaire;;;;;;;;;;;;x
+ca_dog_field_2;Military field;Terrain militaire;;;;;;;;;;;;x
+ca_dog_field_3;Military field;Terrain militaire;;;;;;;;;;;;x
+ca_dog_field_4;Military field;Terrain militaire;;;;;;;;;;;;x
+ca_dog_knights_1;Training field;Terrain d'entraînement;;;;;;;;;;;;x
+ca_dog_knights_2;Training field;Terrain d'entraînement;;;;;;;;;;;;x
+ca_dog_knights_3;Training field;Terrain d'entraînement;;;;;;;;;;;;x
+ca_dog_knights_4;Training field;Terrain d'entraînement;;;;;;;;;;;;x
+ca_dog_shop_1;Military shop;Commerces militaires;;;;;;;;;;;;x
+ca_dog_shop_2;Military shop;Commerces militaires;;;;;;;;;;;;x
+ca_dog_shop_3;Military shop;Commerces militaires;;;;;;;;;;;;x
+ca_dog_shop_4;Military shop;Commerces militaires;;;;;;;;;;;;x
+ca_dog_shop_5;Military shop;Commerces militaires;;;;;;;;;;;;x
+ca_dog_shop_6;Military shop;Commerces militaires;;;;;;;;;;;;x
+ca_dog_shop_7;Military shop;Commerces militaires;;;;;;;;;;;;x
+ca_dog_retinue_1;Dogs' clan;Clan des chiens;;;;;;;;;;;;x
+ca_dog_retinue_2;Dogs' clan;Clan des chiens;;;;;;;;;;;;x
+ca_dog_retinue_3;Dogs' clan;Clan des chiens;;;;;;;;;;;;x
+ca_dog_speciality_1;Prestigious statue;Statue prestigieuse;;;;;;;;;;;;x
+ca_dog_speciality_2;Prestigious statue;Statue prestigieuse;;;;;;;;;;;;x
+tb_dog_training_1;Training ground;terrains d'entraînement;;;;;;;;;;;;x
+tb_dog_training_2;Training ground;terrains d'entraînement;;;;;;;;;;;;x
+tb_dog_training_3;Training ground;terrains d'entraînement;;;;;;;;;;;;x
+tb_dog_training_4;Training ground;terrains d'entraînement;;;;;;;;;;;;x
+tb_dog_weapons_1;Weapons stock;Réserve d'armes;;;;;;;;;;;;x
+tb_dog_weapons_2;Weapons stock;Réserve d'armes;;;;;;;;;;;;x
+tb_dog_weapons_3;Weapons stock;Réserve d'armes;;;;;;;;;;;;x
+tb_dog_weapons_4;Weapons stock;Réserve d'armes;;;;;;;;;;;;x
+tb_dog_retinue_1;Dogs' clan;Clan des chiens;;;;;;;;;;;;x
+tb_dog_retinue_2;Dogs' clan;Clan des chiens;;;;;;;;;;;;x
+tb_dog_retinue_3;Dogs' clan;Clan des chiens;;;;;;;;;;;;x
+tb_dog_retinue_4;Dogs' clan;Clan des chiens;;;;;;;;;;;;x
+
+## tooltip
+DOG_TT_HAS_ECO_IMPL;Has enough implication in economic field;Est suffisament impliqué en économie;;;;;;;;;;;;x
+DOG_TT_HAS_MIL_IMPL;Has enough implication in military field;Est suffisament impliqué en militaire;;;;;;;;;;;;x
