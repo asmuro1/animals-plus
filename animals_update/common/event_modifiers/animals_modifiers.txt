@@ -675,3 +675,8 @@ dog_political_council = {
 	diplomacy = 2
 	vassal_opinion = 20
 }
+dog_economic_council = {
+	icon = 4
+	stewardship = 2
+	global_tax_modifier = 0.1
+}
