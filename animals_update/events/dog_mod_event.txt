@@ -210,7 +210,7 @@ character_event = {
 }
 
 ## law event
-# event 164: removing unity law on inheritance
+# event 164: removing unity and council laws on inheritance
 # event 165: removing interest laws if not dog
 # event 166: adding interest laws if dog
 # event 167: modifying level of one of the interest law
@@ -232,7 +232,16 @@ character_event = {
             revoke_law = dog_law_eco_council
             revoke_law = dog_law_pol_council
             revoke_law = dog_law_eve_council
-            revoke_law = dog_law_res_council
+            if = {
+                limir = {
+                    NOR = {
+                        has_law = dog_law_war_0
+                        has_law = dog_law_economic_0
+                        has_law = dog_law_politic_0
+                    }
+                }
+                revoke_law = dog_law_res_council
+            }
         }
     }
 }

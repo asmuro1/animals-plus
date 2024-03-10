@@ -213,6 +213,7 @@ dog_military_council;military advisor;Conseiller militaire;;;;;;;;;;;;x
 dog_political_council;political advisor;Conseiller politique;;;;;;;;;;;;x
 dog_economic_council;economic advisor;Conseiller économique;;;;;;;;;;;;x
 dog_intrigue_council;intrigue advisor;Conseiller d'intrigue;;;;;;;;;;;;x
+dog_learning_council;learning advisor;Conseiller érudit;;;;;;;;;;;;x
 
 #religion modifier
 dog_rel_unity_penality;Forced conversion;Conversion forcé;;;;;;;;;;;;x

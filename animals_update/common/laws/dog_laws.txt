@@ -230,11 +230,17 @@ laws = {
                 has_law = dog_law_politic_2
             }
 
-            custom_tooltip = {
-                text = dog_tt_canot_be_implicated_inall_law
-                OR = {
-                    has_law = dog_law_war_0
-                    has_law = dog_law_economic_0
+            OR = {
+                conditional_tooltip = {
+                    trigger = { has_dlc = "Zeus" }
+                    has_law = dog_law_res_council
+                }
+                custom_tooltip = {
+                    text = dog_tt_canot_be_implicated_inall_law
+                    OR = {
+                        has_law = dog_law_war_0
+                        has_law = dog_law_economic_0
+                    }
                 }
             }
 
@@ -614,11 +620,17 @@ laws = {
                 has_law = dog_law_economic_2
             }
 
-            custom_tooltip = {
-                text = dog_tt_canot_be_implicated_inall_law
-                OR = {
-                    has_law = dog_law_politic_0
-                    has_law = dog_law_war_0
+            OR = {
+                conditional_tooltip = {
+                    trigger = { has_dlc = "Zeus" }
+                    has_law = dog_law_res_council
+                }
+                custom_tooltip = {
+                    text = dog_tt_canot_be_implicated_inall_law
+                    OR = {
+                        has_law = dog_law_politic_0
+                        has_law = dog_law_war_0
+                    }
                 }
             }
             holder_scope = {
@@ -1053,11 +1065,17 @@ laws = {
                 has_law = dog_law_war_0
                 has_law = dog_law_war_2
             }
-            custom_tooltip = {
-                text = dog_tt_canot_be_implicated_inall_law
-                OR = {
-                    has_law = dog_law_politic_0
-                    has_law = dog_law_economic_0
+            OR = {
+                conditional_tooltip = {
+                    trigger = { has_dlc = "Zeus" }
+                    has_law = dog_law_res_council
+                }
+                custom_tooltip = {
+                    text = dog_tt_canot_be_implicated_inall_law
+                    OR = {
+                        has_law = dog_law_politic_0
+                        has_law = dog_law_economic_0
+                    }
                 }
             }
             holder_scope = {
@@ -1510,6 +1528,7 @@ laws = {
         potential = {
             has_dlc = "Zeus"
             culture_group = dog_group
+            has_law = succession_voting_power_1
         }
         revoke_allowed = {
             always = no

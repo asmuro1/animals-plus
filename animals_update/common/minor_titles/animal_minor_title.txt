@@ -326,3 +326,50 @@ title_dog_eve_councillor = {
     
     message = yes
 }
+
+title_dog_res_councillor = {
+    is_high_prio = yes
+    is_voter = yes
+    dignity = 1.0
+    attribute = learning
+    grant_limit = 1
+    opinion_effect = 15
+    monthly_salary = 0.1
+    monthly_prestige = 0.25
+    is_unique = yes
+
+    allowed_to_hold = {
+        demesne_size = 1
+    }
+    allowed_to_grant = {
+        has_law = dog_law_res_council
+    }
+
+    gain_effect = {
+        liege = {
+            add_character_modifier = {
+                name = dog_learning_council
+                years = -1
+            }
+        }
+    }
+    lose_effect = {
+        liege = {
+            remove_character_modifier = dog_learning_council
+        }
+    }
+    retire_effect = {
+        liege = {
+            remove_character_modifier = dog_learning_council
+        }
+    }
+    death_effect = {
+        liege = {
+            remove_character_modifier = dog_learning_council
+        }
+    }
+    
+    revoke_trigger = { always = yes }
+    
+    message = yes
+}

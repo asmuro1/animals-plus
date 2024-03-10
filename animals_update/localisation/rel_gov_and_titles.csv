@@ -78,6 +78,8 @@ title_dog_eco_councillor;Economic advisor;Conseiller économique;;;;;;;;;;;;x
 title_dog_eco_councillor_desc;Advisor promoted to increase economy;Ce conseiller promeut l'économie du royaume;;;;;;;;;;;;x
 title_dog_eve_councillor;Intrigue advisor;Conseiller d'intrigue;;;;;;;;;;;;x
 title_dog_eve_councillor_desc;Advisor promoted to prevent interest change;Ce conseiller empêche le changement d'intérêt impromptu;;;;;;;;;;;;x
+title_dog_res_councillor;Learning advisor;Conseiller érudit;;;;;;;;;;;;x
+title_dog_res_councillor_desc;Advisor promoted to remove implication limitation;Ce conseiller retire une limitation d'implication;;;;;;;;;;;;x
 
 ###holy order titles
 d_polar_fighter;The polar warriors;Les chevaliers de la banquise;;;;;;;;;;;;x

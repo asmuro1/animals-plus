@@ -684,3 +684,7 @@ dog_intrigue_council = {
 	icon = 5
 	intrigue = 2
 }
+dog_learning_council = {
+	icon = 2
+	learning = 2
+}
