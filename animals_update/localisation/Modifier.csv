@@ -210,6 +210,7 @@ dog_penalty_popular;unsatified council;Conseil insatisfait;;;;;;;;;;;;x
 dog_penalty_economic;unsatified council;Conseil insatisfait;;;;;;;;;;;;x
 dog_penalty_military;unsatified council;Conseil insatisfait;;;;;;;;;;;;x
 dog_military_council;military advisor;Conseiller militaire;;;;;;;;;;;;x
+dog_political_council;political advisor;Conseiller politique;;;;;;;;;;;;x
 
 #religion modifier
 dog_rel_unity_penality;Forced conversion;Conversion forcé;;;;;;;;;;;;x

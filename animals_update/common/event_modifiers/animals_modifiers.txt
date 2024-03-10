@@ -670,3 +670,8 @@ dog_military_council = {
 	martial = 2
 	levy_size = 0.20
 }
+dog_political_council = {
+	icon = 3
+	diplomacy = 2
+	vassal_opinion = 20
+}
