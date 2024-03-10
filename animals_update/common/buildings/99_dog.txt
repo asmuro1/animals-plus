@@ -15,7 +15,7 @@ castle = {
         is_active_trigger = {
             culture_group = dog_group
         }
-        prerequisites = { }
+        prerequisites = { ca_ani_castle_tower_01 }
 
         gold_cost = 100
         build_time = 360
@@ -42,7 +42,7 @@ castle = {
         is_active_trigger = {
             culture_group = dog_group
         }
-        prerequisites = { ca_ani_castle_tower_02 }
+        prerequisites = { ca_ani_castle_tower_03 }
         # not_if_x_exists = {  }
         upgrades_from = ca_dog_field_1
 
@@ -71,7 +71,7 @@ castle = {
         is_active_trigger = {
             culture_group = dog_group
         }
-        prerequisites = { ca_ani_castle_tower_05 }
+        prerequisites = { ca_ani_castle_tower_07 }
         # not_if_x_exists = {  }
         upgrades_from = ca_dog_field_2
 
@@ -100,7 +100,7 @@ castle = {
         is_active_trigger = {
             culture_group = dog_group
         }
-        prerequisites = { ca_ani_castle_tower_11 }
+        prerequisites = { ca_ani_castle_tower_12 }
         # not_if_x_exists = {  }
         upgrades_from = ca_dog_field_3
 
@@ -184,7 +184,7 @@ castle = {
         is_active_trigger = {
             culture_group = dog_group
         }
-        prerequisites = { ca_ani_castle_tower_09 ca_dog_field_3 }
+        prerequisites = { ca_ani_castle_tower_10 ca_dog_field_3 }
         upgrades_from = ca_dog_knights_2
 
         gold_cost = 525
@@ -240,7 +240,7 @@ castle = {
         is_active_trigger = {
             culture_group = dog_group
         }
-        prerequisites = {  }
+        prerequisites = { ca_ani_castle_tower_01 }
 
         gold_cost = 95
         build_time = 335
@@ -356,7 +356,7 @@ castle = {
         is_active_trigger = {
             culture_group = dog_group
         }
-        prerequisites = { ca_ani_castle_tower_08 }
+        prerequisites = { ca_ani_castle_tower_09 }
         upgrades_from = ca_dog_shop_4
 
         gold_cost = 450
@@ -385,7 +385,7 @@ castle = {
         is_active_trigger = {
             culture_group = dog_group
         }
-        prerequisites = { ca_ani_castle_tower_10 }
+        prerequisites = { ca_ani_castle_tower_11 }
         upgrades_from = ca_dog_shop_5
 
         gold_cost = 600
@@ -415,7 +415,7 @@ castle = {
         is_active_trigger = {
             culture_group = dog_group
         }
-        prerequisites = { ca_ani_castle_tower_12 }
+        prerequisites = { ca_ani_castle_tower_13 }
         upgrades_from = ca_dog_shop_6
 
         gold_cost = 750
@@ -444,7 +444,7 @@ castle = {
         is_active_trigger = {
             culture_group = dog_group
         }
-        prerequisites = { ca_ani_castle_tower_03 }
+        prerequisites = { ca_ani_castle_tower_02 }
 
         gold_cost = 134
         build_time = 365
@@ -471,7 +471,7 @@ castle = {
         is_active_trigger = {
             culture_group = dog_group
         }
-        prerequisites = { ca_ani_castle_tower_07 }
+        prerequisites = { ca_ani_castle_tower_05 }
         upgrades_from = ca_dog_retinue_1
 
         gold_cost = 450
