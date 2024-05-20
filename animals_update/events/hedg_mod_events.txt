@@ -921,6 +921,10 @@ character_event = {
             limit = { culture_group = dog_group }
             add_trait = socializer
         }
+        else_if = {
+            limit = { culture_group = horse_group }
+            add_trait = hunter
+        }
     }
 }
 
