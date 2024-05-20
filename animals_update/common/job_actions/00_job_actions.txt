@@ -325,7 +325,9 @@ action_cultural_acceptation = {
 	attribute = stewardship
 
 	potential = {
-		government = Bear_feudal_gov
+		FROM = {
+			government = Bear_feudal_gov
+		}
 	}
 
 	offmap = yes
@@ -456,7 +458,9 @@ action_create_animal_hord = {
 	attribute = intrigue
 
 	potential = {
-		government = Bear_feudal_gov
+		FROM = {
+			government = Bear_feudal_gov
+		}
 	}
 
 	trigger = {
