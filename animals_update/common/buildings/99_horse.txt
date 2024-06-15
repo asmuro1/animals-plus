@@ -1,5 +1,24 @@
 castle = {
+    ca_default_horse_conv_quest = {
+        potential = {
+            terrain = steppe
+            FROM = {
+                NOR = {
+                    culture_group = altaic
+                    culture_group = magyar
+                    culture = alan
+                    culture_group = iranian
+                }
+            }
+        }
+        trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+        gold_cost = 100
+        build_time = 365
 
+        ai_creation_factor = 15
+
+        extra_tech_building_start = 1.0
+    }
 }
 
 tribal = {
