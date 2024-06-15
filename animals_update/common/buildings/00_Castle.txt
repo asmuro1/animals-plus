@@ -100,13 +100,7 @@ castle = {
 	ca_wall_q_1 = {
 		desc = ca_wall_q_1_desc
         potential = {
-            OR = {
-				NOT = { Is_really_animal_trigger = yes }
-				AND = {
-					FROMFROM = { has_building = ca_wall_q_1 }
-					NOT = { holder_scope = { has_character_flag = Hide_human_building } }
-				}
-			}
+            { Is_really_animal_trigger = yes }
         }
 		trigger = {
             TECH_FORTIFICATIONS_CONSTRUCTION = 0
@@ -125,13 +119,7 @@ castle = {
 	ca_wall_q_2 = {
 		desc = ca_wall_q_2_desc
         potential = {
-			OR = {
-				NOT = { Is_really_animal_trigger = yes }
-				AND = {
-					FROMFROM = { has_building = ca_wall_q_2 }
-					NOT = { holder_scope = { has_character_flag = Hide_human_building } }
-				}
-			}
+			NOT = { Is_really_animal_trigger = yes }
         }
 		trigger = {
             TECH_FORTIFICATIONS_CONSTRUCTION = 1
@@ -152,13 +140,7 @@ castle = {
 	ca_wall_q_3 = {
 		desc = ca_wall_q_3_desc
         potential = {
-			OR = {
-				NOT = { Is_really_animal_trigger = yes }
-				AND = {
-					FROMFROM = { has_building = ca_wall_q_3 }
-					NOT = { holder_scope = { has_character_flag = Hide_human_building } }
-				}
-			}
+			NOT = { Is_really_animal_trigger = yes }
         }
 		trigger = {
             TECH_FORTIFICATIONS_CONSTRUCTION = 3
@@ -178,13 +160,7 @@ castle = {
 	ca_wall_q_4 = {
 		desc = ca_wall_q_4_desc
         potential = {
-			OR = {
-				NOT = { Is_really_animal_trigger = yes }
-				AND = {
-					FROMFROM = { has_building = ca_wall_q_4 }
-					NOT = { holder_scope = { has_character_flag = Hide_human_building } }
-				}
-			}
+			NOT = { Is_really_animal_trigger = yes }
         }
 		trigger = {
             TECH_FORTIFICATIONS_CONSTRUCTION = 5
@@ -204,13 +180,7 @@ castle = {
 	ca_wall_q_5 = {
 		desc = ca_wall_q_5_desc
         potential = {
-			OR = {
-				NOT = { Is_really_animal_trigger = yes }
-				AND = {
-					FROMFROM = { has_building = ca_wall_q_5 }
-					NOT = { holder_scope = { has_character_flag = Hide_human_building } }
-				}
-			}
+			NOT = { Is_really_animal_trigger = yes }
         }
 		trigger = {
             TECH_FORTIFICATIONS_CONSTRUCTION = 7
@@ -232,13 +202,7 @@ castle = {
 	ca_wall_1 = {
 		desc = ca_wall_1_desc
         potential = {
-			OR = {
-				NOT = { Is_really_animal_trigger = yes }
-				AND = {
-					FROMFROM = { has_building = ca_wall_1 }
-					NOT = { holder_scope = { has_character_flag = Hide_human_building } }
-				}
-			}
+			NOT = { Is_really_animal_trigger = yes }
         }
 		trigger = {
             TECH_FORTIFICATIONS_CONSTRUCTION = 0
@@ -259,13 +223,7 @@ castle = {
 	ca_wall_2 = {
 		desc = ca_wall_2_desc
         potential = {
-			OR = {
-				NOT = { Is_really_animal_trigger = yes }
-				AND = {
-					FROMFROM = { has_building = ca_wall_2 }
-					NOT = { holder_scope = { has_character_flag = Hide_human_building } }
-				}
-			}
+			NOT = { Is_really_animal_trigger = yes }
         }
 		trigger = {
             TECH_FORTIFICATIONS_CONSTRUCTION = 2
@@ -287,13 +245,7 @@ castle = {
 	ca_wall_3 = {
 		desc = ca_wall_3_desc
         potential = {
-			OR = {
-				NOT = { Is_really_animal_trigger = yes }
-				AND = {
-					FROMFROM = { has_building = ca_wall_3 }
-					NOT = { holder_scope = { has_character_flag = Hide_human_building } }
-				}
-			}
+			NOT = { Is_really_animal_trigger = yes }
         }
 		trigger = {
             TECH_FORTIFICATIONS_CONSTRUCTION = 4
@@ -315,13 +267,7 @@ castle = {
 	ca_wall_4 = {
 		desc = ca_wall_4_desc
         potential = {
-			OR = {
-				NOT = { Is_really_animal_trigger = yes }
-				AND = {
-					FROMFROM = { has_building = ca_wall_4 }
-					NOT = { holder_scope = { has_character_flag = Hide_human_building } }
-				}
-			}
+			NOT = { Is_really_animal_trigger = yes }
         }
 		trigger = {
             TECH_FORTIFICATIONS_CONSTRUCTION = 6
@@ -343,13 +289,7 @@ castle = {
 	ca_wall_5 = {
 		desc = ca_wall_5_desc
         potential = {
-			OR = {
-				NOT = { Is_really_animal_trigger = yes }
-				AND = {
-					FROMFROM = { has_building = ca_wall_5 }
-					NOT = { holder_scope = { has_character_flag = Hide_human_building } }
-				}
-			}
+			NOT = { Is_really_animal_trigger = yes }
         }
         trigger = {
             TECH_FORTIFICATIONS_CONSTRUCTION = 8
@@ -373,13 +313,7 @@ castle = {
 	ca_keep_1 = {
 		desc = ca_keep_1_desc
         potential = {
-			OR = {
-				NOT = { Is_really_animal_trigger = yes }
-				AND = {
-					FROMFROM = { has_building = ca_keep_1 }
-					NOT = { holder_scope = { has_character_flag = Hide_human_building } }
-				}
-			}
+			NOT = { Is_really_animal_trigger = yes }
         }
 		trigger = {
             TECH_FORTIFICATIONS_CONSTRUCTION = 0
@@ -399,13 +333,7 @@ castle = {
 	ca_keep_2 = {
 		desc = ca_keep_1_desc
         potential = {
-			OR = {
-				NOT = { Is_really_animal_trigger = yes }
-				AND = {
-					FROMFROM = { has_building = ca_keep_2 }
-					NOT = { holder_scope = { has_character_flag = Hide_human_building } }
-				}
-			}
+			NOT = { Is_really_animal_trigger = yes }
         }
 		trigger = {
             TECH_FORTIFICATIONS_CONSTRUCTION = 0
@@ -427,13 +355,7 @@ castle = {
 	ca_keep_3 = {
 		desc = ca_keep_1_desc
         potential = {
-			OR = {
-				NOT = { Is_really_animal_trigger = yes }
-				AND = {
-					FROMFROM = { has_building = ca_keep_3 }
-					NOT = { holder_scope = { has_character_flag = Hide_human_building } }
-				}
-			}
+			NOT = { Is_really_animal_trigger = yes }
         }
 		trigger = {
             TECH_FORTIFICATIONS_CONSTRUCTION = 2
@@ -455,13 +377,7 @@ castle = {
 	ca_keep_4 = {
 		desc = ca_keep_1_desc
         potential = {
-			OR = {
-				NOT = { Is_really_animal_trigger = yes }
-				AND = {
-					FROMFROM = { has_building = ca_keep_4 }
-					NOT = { holder_scope = { has_character_flag = Hide_human_building } }
-				}
-			}
+			NOT = { Is_really_animal_trigger = yes }
         }
 		trigger = {
             TECH_FORTIFICATIONS_CONSTRUCTION = 4
@@ -482,13 +398,7 @@ castle = {
 	ca_keep_5 = {
 		desc = ca_keep_1_desc
         potential = {
-			OR = {
-				NOT = { Is_really_animal_trigger = yes }
-				AND = {
-					FROMFROM = { has_building = ca_keep_5 }
-					NOT = { holder_scope = { has_character_flag = Hide_human_building } }
-				}
-			}
+			NOT = { Is_really_animal_trigger = yes }
         }
 		trigger = {
             TECH_FORTIFICATIONS_CONSTRUCTION = 6
@@ -509,13 +419,7 @@ castle = {
 	ca_keep_6 = {
 		desc = ca_keep_1_desc
         potential = {
-			OR = {
-				NOT = { Is_really_animal_trigger = yes }
-				AND = {
-					FROMFROM = { has_building = ca_keep_6 }
-					NOT = { holder_scope = { has_character_flag = Hide_human_building } }
-				}
-			}
+			NOT = { Is_really_animal_trigger = yes }
         }
 		trigger = {
              TECH_FORTIFICATIONS_CONSTRUCTION = 8
@@ -538,13 +442,7 @@ castle = {
 	ca_militia_barracks_1 = {
 		desc = ca_militia_barracks_1_desc
         potential = {
-			OR = {
-				NOT = { Is_really_animal_trigger = yes }
-				AND = {
-					FROMFROM = { has_building = ca_militia_barracks_1 }
-					NOT = { holder_scope = { has_character_flag = Hide_human_building } }
-				}
-			}
+			NOT = { Is_really_animal_trigger = yes }
         }
 		trigger = {
             TECH_CASTLE_CONSTRUCTION = 0
@@ -564,13 +462,7 @@ castle = {
 	ca_militia_barracks_2 = {
 		desc = ca_militia_barracks_2_desc
         potential = {
-			OR = {
-				NOT = { Is_really_animal_trigger = yes }
-				AND = {
-					FROMFROM = { has_building = ca_militia_barracks_2 }
-					NOT = { holder_scope = { has_character_flag = Hide_human_building } }
-				}
-			}
+			NOT = { Is_really_animal_trigger = yes }
         }
 		trigger = {
             TECH_CASTLE_CONSTRUCTION = 1
@@ -592,13 +484,7 @@ castle = {
 	ca_militia_barracks_3 = {
 		desc = ca_militia_barracks_3_desc
         potential = {
-			OR = {
-				NOT = { Is_really_animal_trigger = yes }
-				AND = {
-					FROMFROM = { has_building = ca_militia_barracks_3 }
-					NOT = { holder_scope = { has_character_flag = Hide_human_building } }
-				}
-			}
+			NOT = { Is_really_animal_trigger = yes }
         }
 		trigger = {
             TECH_CASTLE_CONSTRUCTION = 5
@@ -619,13 +505,7 @@ castle = {
 	ca_militia_barracks_4 = {
 		desc = ca_militia_barracks_3_desc
         potential = {
-			OR = {
-				NOT = { Is_really_animal_trigger = yes }
-				AND = {
-					FROMFROM = { has_building = ca_militia_barracks_4 }
-					NOT = { holder_scope = { has_character_flag = Hide_human_building } }
-				}
-			}
+			NOT = { Is_really_animal_trigger = yes }
         }
 		trigger = {
             TECH_CASTLE_CONSTRUCTION = 7
@@ -648,13 +528,7 @@ castle = {
 	ca_training_grounds_1 = {
 		desc = ca_training_grounds_1_desc
         potential = {
-			OR = {
-				NOT = { Is_really_animal_trigger = yes }
-				AND = {
-					FROMFROM = { has_building = ca_training_grounds_1 }
-					NOT = { holder_scope = { has_character_flag = Hide_human_building } }
-				}
-			}
+			NOT = { Is_really_animal_trigger = yes }
         }
 		trigger = {
             TECH_CASTLE_CONSTRUCTION = 0
@@ -676,13 +550,7 @@ castle = {
 	ca_training_grounds_2 = {
 		desc = ca_training_grounds_1_desc
         potential = {
-			OR = {
-				NOT = { Is_really_animal_trigger = yes }
-				AND = {
-					FROMFROM = { has_building = ca_training_grounds_2 }
-					NOT = { holder_scope = { has_character_flag = Hide_human_building } }
-				}
-			}
+			NOT = { Is_really_animal_trigger = yes }
         }
 		trigger = {
             TECH_CASTLE_CONSTRUCTION = 3
@@ -704,13 +572,7 @@ castle = {
 	ca_training_grounds_3 = {
 		desc = ca_training_grounds_1_desc
         potential = {
-			OR = {
-				NOT = { Is_really_animal_trigger = yes }
-				AND = {
-					FROMFROM = { has_building = ca_training_grounds_3 }
-					NOT = { holder_scope = { has_character_flag = Hide_human_building } }
-				}
-			}
+			NOT = { Is_really_animal_trigger = yes }
         }
 		trigger = {
             TECH_CASTLE_CONSTRUCTION = 6
@@ -734,13 +596,7 @@ castle = {
 	ca_barracks_1 = {
 		desc = ca_barracks_1_desc
         potential = {
-			OR = {
-				NOT = { Is_really_animal_trigger = yes }
-				AND = {
-					FROMFROM = { has_building = ca_barracks_1 }
-					NOT = { holder_scope = { has_character_flag = Hide_human_building } }
-				}
-			}
+			NOT = { Is_really_animal_trigger = yes }
         }
 		trigger = {
             TECH_CASTLE_CONSTRUCTION = 0
@@ -760,13 +616,7 @@ castle = {
 	ca_barracks_2 = {
 		desc = ca_barracks_1_desc
         potential = {
-			OR = {
-				NOT = { Is_really_animal_trigger = yes }
-				AND = {
-					FROMFROM = { has_building = ca_barracks_2 }
-					NOT = { holder_scope = { has_character_flag = Hide_human_building } }
-				}
-			}
+			NOT = { Is_really_animal_trigger = yes }
         }
 		trigger = {
             TECH_CASTLE_CONSTRUCTION = 0
@@ -788,13 +638,7 @@ castle = {
 	ca_barracks_3 = {
 		desc = ca_barracks_1_desc
         potential = {
-			OR = {
-				NOT = { Is_really_animal_trigger = yes }
-				AND = {
-					FROMFROM = { has_building = ca_barracks_3 }
-					NOT = { holder_scope = { has_character_flag = Hide_human_building } }
-				}
-			}
+			NOT = { Is_really_animal_trigger = yes }
         }
 		trigger = {
             TECH_CASTLE_CONSTRUCTION = 1
@@ -816,13 +660,7 @@ castle = {
 	ca_barracks_4 = {
 		desc = ca_barracks_1_desc
         potential = {
-			OR = {
-				NOT = { Is_really_animal_trigger = yes }
-				AND = {
-					FROMFROM = { has_building = ca_barracks_4 }
-					NOT = { holder_scope = { has_character_flag = Hide_human_building } }
-				}
-			}
+			NOT = { Is_really_animal_trigger = yes }
         }
 		trigger = {
             TECH_CASTLE_CONSTRUCTION = 3
@@ -843,13 +681,7 @@ castle = {
 	ca_barracks_5 = {
 		desc = ca_barracks_1_desc
         potential = {
-			OR = {
-				NOT = { Is_really_animal_trigger = yes }
-				AND = {
-					FROMFROM = { has_building = ca_barracks_5 }
-					NOT = { holder_scope = { has_character_flag = Hide_human_building } }
-				}
-			}
+			NOT = { Is_really_animal_trigger = yes }
         }
 		trigger = {
             TECH_CASTLE_CONSTRUCTION = 5
@@ -870,13 +702,7 @@ castle = {
 	ca_barracks_6 = {
 		desc = ca_barracks_1_desc
         potential = {
-			OR = {
-				NOT = { Is_really_animal_trigger = yes }
-				AND = {
-					FROMFROM = { has_building = ca_barracks_6 }
-					NOT = { holder_scope = { has_character_flag = Hide_human_building } }
-				}
-			}
+			NOT = { Is_really_animal_trigger = yes }
         }
 		trigger = {
             TECH_CASTLE_CONSTRUCTION = 7
@@ -899,13 +725,7 @@ castle = {
 	ca_stable_1 = {
 		desc = ca_stable_1_desc
         potential = {
-			OR = {
-				NOT = { Is_really_animal_trigger = yes }
-				AND = {
-					FROMFROM = { has_building = ca_stable_1 }
-					NOT = { holder_scope = { has_character_flag = Hide_human_building } }
-				}
-			}
+			NOT = { Is_really_animal_trigger = yes }
         }
 		trigger = {
             TECH_CASTLE_CONSTRUCTION = 0
@@ -924,13 +744,7 @@ castle = {
 	ca_stable_2 = {
 		desc = ca_stable_1_desc
         potential = {
-			OR = {
-				NOT = { Is_really_animal_trigger = yes }
-				AND = {
-					FROMFROM = { has_building = ca_stable_2 }
-					NOT = { holder_scope = { has_character_flag = Hide_human_building } }
-				}
-			}
+			NOT = { Is_really_animal_trigger = yes }
         }
 		trigger = {
             TECH_CASTLE_CONSTRUCTION = 0
@@ -951,13 +765,7 @@ castle = {
 	ca_stable_3 = {
 		desc = ca_stable_1_desc
         potential = {
-			OR = {
-				NOT = { Is_really_animal_trigger = yes }
-				AND = {
-					FROMFROM = { has_building = ca_stable_3 }
-					NOT = { holder_scope = { has_character_flag = Hide_human_building } }
-				}
-			}
+			NOT = { Is_really_animal_trigger = yes }
         }
 		trigger = {
             TECH_CASTLE_CONSTRUCTION = 2
@@ -978,13 +786,7 @@ castle = {
 	ca_stable_4 = {
 		desc = ca_stable_1_desc
         potential = {
-			OR = {
-				NOT = { Is_really_animal_trigger = yes }
-				AND = {
-					FROMFROM = { has_building = ca_stable_4 }
-					NOT = { holder_scope = { has_character_flag = Hide_human_building } }
-				}
-			}
+			NOT = { Is_really_animal_trigger = yes }
         }
 		trigger = {
             TECH_CASTLE_CONSTRUCTION = 4
@@ -1005,13 +807,7 @@ castle = {
 	ca_stable_5 = {
 		desc = ca_stable_1_desc
         potential = {
-			OR = {
-				NOT = { Is_really_animal_trigger = yes }
-				AND = {
-					FROMFROM = { has_building = ca_stable_5 }
-					NOT = { holder_scope = { has_character_flag = Hide_human_building } }
-				}
-			}
+			NOT = { Is_really_animal_trigger = yes }
         }
 		trigger = {
             TECH_CASTLE_CONSTRUCTION = 6
@@ -1032,13 +828,7 @@ castle = {
 	ca_stable_6 = {
 		desc = ca_stable_1_desc
         potential = {
-			OR = {
-				NOT = { Is_really_animal_trigger = yes }
-				AND = {
-					FROMFROM = { has_building = ca_stable_6 }
-					NOT = { holder_scope = { has_character_flag = Hide_human_building } }
-				}
-			}
+			NOT = { Is_really_animal_trigger = yes }
         }
 		trigger = {
             TECH_CASTLE_CONSTRUCTION = 8
@@ -1061,13 +851,7 @@ castle = {
 	ca_town_1 = {
 		desc = ca_town_1_desc
         potential = {
-			OR = {
-				NOT = { Is_really_animal_trigger = yes }
-				AND = {
-					FROMFROM = { has_building = ca_town_1 }
-					NOT = { holder_scope = { has_character_flag = Hide_human_building } }
-				}
-			}
+			NOT = { Is_really_animal_trigger = yes }
         }
 		trigger = {
             TECH_CASTLE_CONSTRUCTION = 0
@@ -1087,13 +871,7 @@ castle = {
 	ca_town_2 = {
 		desc = ca_town_2_desc
         potential = {
-			OR = {
-				NOT = { Is_really_animal_trigger = yes }
-				AND = {
-					FROMFROM = { has_building = ca_town_2 }
-					NOT = { holder_scope = { has_character_flag = Hide_human_building } }
-				}
-			}
+			NOT = { Is_really_animal_trigger = yes }
         }
 		trigger = {
             TECH_CASTLE_CONSTRUCTION = 0
@@ -1115,13 +893,7 @@ castle = {
 	ca_town_3 = {
 		desc = ca_town_3_desc
         potential = {
-			OR = {
-				NOT = { Is_really_animal_trigger = yes }
-				AND = {
-					FROMFROM = { has_building = ca_town_3 }
-					NOT = { holder_scope = { has_character_flag = Hide_human_building } }
-				}
-			}
+			NOT = { Is_really_animal_trigger = yes }
         }
 		trigger = {
             TECH_CASTLE_CONSTRUCTION = 2
@@ -1143,13 +915,7 @@ castle = {
 	ca_town_4 = {
 		desc = ca_town_4_desc
         potential = {
-			OR = {
-				NOT = { Is_really_animal_trigger = yes }
-				AND = {
-					FROMFROM = { has_building = ca_town_4 }
-					NOT = { holder_scope = { has_character_flag = Hide_human_building } }
-				}
-			}
+			NOT = { Is_really_animal_trigger = yes }
         }
 		trigger = {
             TECH_CASTLE_CONSTRUCTION = 4
@@ -1170,13 +936,7 @@ castle = {
 	ca_town_5 = {
 		desc = ca_town_4_desc
         potential = {
-			OR = {
-				NOT = { Is_really_animal_trigger = yes }
-				AND = {
-					FROMFROM = { has_building = ca_town_5 }
-					NOT = { holder_scope = { has_character_flag = Hide_human_building } }
-				}
-			}
+			NOT = { Is_really_animal_trigger = yes }
         }
 		trigger = {
             TECH_CASTLE_CONSTRUCTION = 6
@@ -1197,13 +957,7 @@ castle = {
 	ca_town_6 = {
 		desc = ca_town_5_desc
         potential = {
-			OR = {
-				NOT = { Is_really_animal_trigger = yes }
-				AND = {
-					FROMFROM = { has_building = ca_town_6 }
-					NOT = { holder_scope = { has_character_flag = Hide_human_building } }
-				}
-			}
+			NOT = { Is_really_animal_trigger = yes }
         }
 		trigger = {
             TECH_CASTLE_CONSTRUCTION = 8
