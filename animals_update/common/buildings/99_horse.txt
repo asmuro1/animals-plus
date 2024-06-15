@@ -1,0 +1,25 @@
+castle = {
+
+}
+
+tribal = {
+    tb_default_horse_conv_quest = {
+        potential = {
+            terrain = steppe
+            FROM = {
+                NOR = {
+                    culture_group = altaic
+                    culture_group = magyar
+                    culture = alan
+                }
+            }
+        }
+        trigger = { TECH_CAVALRY = 0 }
+        prestige_cost = 100
+        build_time = 365
+        
+        ai_creation_factor = 10
+
+        extra_tech_building_start = 7
+    }
+}
