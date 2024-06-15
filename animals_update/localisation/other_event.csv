@@ -180,3 +180,8 @@ DOG_TT_ECO_LEVEL_DOWN;Reduce your economic implication;Réduit l'implication écon
 DOG_TT_ECO_LEVEL_UP;Increase your economic implication;Augmente l'implication économique;;;;;;;;;;;;x
 DOG_TT_WAR_LEVEL_DOWN;Reduce your military implication;Réduit l'implication militaire;;;;;;;;;;;;x
 DOG_TT_WAR_LEVEL_UP;Increase your military implication;Augmente l'implication militaire;;;;;;;;;;;;x
+
+## HORSE UPDATE
+DESC_ani_169;The horses seems exited around our horse steppe's building in [this.GetName];Les cheveaux semblent excité autour des places réservés aux cheveaux en [THIS.GetName];;;;;;;;;;;;x
+OPTA_ani_169;It is time to use them in festivities!;C'est le moment pour une grande fête en leur honeur;;;;;;;;;;;;x
+OPTB_ani_169;They will soon come back to how they were;Ils vont bientôt revenir comme ils étaient avant;;;;;;;;;;;;x
