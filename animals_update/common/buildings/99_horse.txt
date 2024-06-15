@@ -36,6 +36,7 @@ tribal = {
         trigger = { TECH_CAVALRY = 0 }
         prestige_cost = 100
         build_time = 365
+        convert_to_castle = ca_default_horse_conv_quest
         
         ai_creation_factor = 10
 
