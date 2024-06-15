@@ -425,3 +425,8 @@ tb_dog_retinue_4;Dogs' clan;Clan des chiens;;;;;;;;;;;;x
 ## tooltip
 DOG_TT_HAS_ECO_IMPL;Has enough implication in economic field;Est suffisament impliqué en économie;;;;;;;;;;;;x
 DOG_TT_HAS_MIL_IMPL;Has enough implication in military field;Est suffisament impliqué en militaire;;;;;;;;;;;;x
+
+## HORSE UODATE
+
+ca_default_horse_conv_quest;Horse festivities place;Place des fêtes à cheval;;;;;;;;;;;;x
+tb_default_horse_conv_quest;Horse festivities place;Place des fêtes à cheval;;;;;;;;;;;;x
