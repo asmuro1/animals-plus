@@ -1,0 +1,106 @@
+spriteTypes = {
+
+
+    spriteType = {
+		name = "GFX_settlement_temple_westerngfx_africangfx"
+		texturefile = "gfx\\interface\\placeholder_temple_hellenic_western.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_muslimgfx_africangfx"
+		texturefile = "gfx\\interface\\placeholder_temple_hellenic_desert.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_norsegfx_africangfx"
+		texturefile = "gfx\\interface\\placeholder_temple_hellenic_western.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_settlement_temple_westafricangfx_africangfx"
+		texturefile = "gfx\\interface\\placeholder_temple_hellenic_african.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_persiangfx_africangfx"
+		texturefile = "gfx\\interface\\placeholder_temple_hellenic_desert.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_mongolgfx_africangfx"
+		texturefile = "gfx\\interface\\placeholder_temple_hellenic_mongol.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_bodpagfx_africangfx"
+		texturefile = "gfx\\interface\\placeholder_temple_hellenic_mongol.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_turkishgfx_africangfx"
+		texturefile = "gfx\\interface\\placeholder_temple_hellenic_mongol.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_ugricgfx_africangfx"
+		texturefile = "gfx\\interface\\placeholder_temple_hellenic_western.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_easternslavicgfx_africangfx"
+		texturefile = "gfx\\interface\\placeholder_temple_hellenic_western.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_indiangfx_africangfx"
+		texturefile = "gfx\\interface\\placeholder_temple_hellenic_indian.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_southindiangfx_africangfx"
+		texturefile = "gfx\\interface\\placeholder_temple_hellenic_indian.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_chinesegfx_africangfx"
+		texturefile = "gfx\\interface\\placeholder_temple_hellenic_mongol.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_settlement_temple_byzantinegfx_africangfx"
+		texturefile = "gfx\\interface\\placeholder_temple_hellenic_byzantine.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_settlement_temple_romangfx_africangfx"
+		texturefile = "gfx\\interface\\placeholder_temple_hellenic_byzantine.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+}

@@ -357,18 +357,70 @@ character_event = {
     }
 
     mean_time_to_happen = {
-        years = 5
+        years = 30
 
         modifier = {
-            factor = 0.75
-
+            factor = 0.5
             is_tribal = yes
+        }
+
+        modifier = {
+            factor = 0.167
+
+            has_law = dog_law_war_4
+        }
+        modifier = {
+            factor = 0.167
+
+            has_law = dog_law_economic_4
+        }
+        modifier = {
+            factor = 0.167
+
+            has_law = dog_law_war_4
+        }
+        modifier = {
+            factor = 0.33
+
+            has_law = dog_law_war_3
+        }
+        modifier = {
+            factor = 0.33
+
+            has_law = dog_law_economic_3
+        }
+        modifier = {
+            factor = 0.33
+
+            has_law = dog_law_politic_3
+        }
+        modifier = {
+            factor = 0.667
+
+            has_law = dog_law_war_2
+        }
+        modifier = {
+            factor = 0.667
+
+            has_law = dog_law_economic_2
+        }
+        modifier = {
+            factor = 0.667
+
+            has_law = dog_law_politic_2
+        }
+        modifier = {
+            factor = 0.1
+
+            has_law = dog_law_politic_0
+            has_law = dog_law_economic_0
+            has_law = dog_law_war_0
         }
     }
 
     immediate = {
         random_list = {
-            100 = {
+            66 = {
                 modifier = {
                     factor = 0
 
@@ -386,7 +438,7 @@ character_event = {
                     NOT = { is_law_allowed = dog_law_economic_1 }
                 }
                 modifier = {
-                    factor = 2
+                    factor = 1.5
                     culture = dog_culture
                 }
                 set_character_flag = DOG_ECO_CHANGE
@@ -399,7 +451,7 @@ character_event = {
                     NOT = { is_law_allowed = dog_law_war_1 }
                 }
                 modifier = {
-                    factor = 2
+                    factor = 1.5
                     culture = steppe_dog
                 }
                 set_character_flag = DOG_WAR_CHANGE

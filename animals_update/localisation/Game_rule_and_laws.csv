@@ -52,7 +52,7 @@ dog_economic_laws_desc;This law characterize the economic focus a dog noble put 
 dog_war_laws;military interest;Intérêt militaire;;;;;;;;;;;;x
 dog_war_laws_desc;This law characterize the military focus a dog noble put in ruling;Cette lois caractérise l'implication militaire du chien dirigeant;;;;;;;;;;;;x
 dog_law_politic_0;Minimal politic interest;Intérêt politique minimal;;;;;;;;;;;;x
-dog_law_politic_0_option;Minimal;Minime;;;;;;;;;;;;x
+dog_law_politic_0_option;None;Aucun;;;;;;;;;;;;x
 dog_law_politic_0_desc; ;;;;;;;;;;;;;x
 dog_law_politic_1;Small politic interest;Intérêt politique petit;;;;;;;;;;;;x
 dog_law_politic_1_option;Small;Petite;;;;;;;;;;;;x
@@ -67,7 +67,7 @@ dog_law_politic_4;Important politic interest;Intérêt politique important;;;;;;;;
 dog_law_politic_4_option;Important;Important;;;;;;;;;;;;x
 dog_law_politic_4_desc; ;;;;;;;;;;;;;x
 dog_law_economic_0;Minimal economic interest;Intérêt économique minimal;;;;;;;;;;;;x
-dog_law_economic_0_option;Minimal;Minime;;;;;;;;;;;;x
+dog_law_economic_0_option;None;Aucun;;;;;;;;;;;;x
 dog_law_economic_0_desc; ;;;;;;;;;;;;;x
 dog_law_economic_1;Small economic interest;Intérêt économique petit;;;;;;;;;;;;x
 dog_law_economic_1_option;Small;Petite;;;;;;;;;;;;x
@@ -82,7 +82,7 @@ dog_law_economic_4;Important economic interest;Intérêt économique important;;;;;
 dog_law_economic_4_option;Important;Important;;;;;;;;;;;;x
 dog_law_economic_4_desc; ;;;;;;;;;;;;;x
 dog_law_war_0;Minimal military interest;Intérêt militaire minimal;;;;;;;;;;;;x
-dog_law_war_0_option;Minimal;Minime;;;;;;;;;;;;x
+dog_law_war_0_option;None;Aucun;;;;;;;;;;;;x
 dog_law_war_0_desc; ;;;;;;;;;;;;;x
 dog_law_war_1;Small military interest;Intérêt militaire petit;;;;;;;;;;;;x
 dog_law_war_1_option;Small;Petite;;;;;;;;;;;;x
@@ -110,7 +110,7 @@ dog_law_pol_council_desc;Allow a councillor to increase its co-vassal opinion of
 dog_law_eve_council;Noble's Representative;Représentant des noble;;;;;;;;;;;;x
 dog_law_eve_council_option;Noble;Noble;;;;;;;;;;;;x
 dog_law_eve_council_desc;Allow a councillor to prevent local noble to force implication change of their liege;Permet au conseiller d'empêcher des nobles locaux de forcer le changement d'implication de son seigneur liege;;;;;;;;;;;;x
-dog_law_res_council;Implication councillor;Counseiller d'implication;;;;;;;;;;;;x
+dog_law_res_council;Implication councillor;Conseiller d'implication;;;;;;;;;;;;x
 dog_law_res_council_option;Implication;Implication;;;;;;;;;;;;x
 dog_law_res_council_desc;Allow a councillor to remove the 2 implication restriction maximum of their liege;Permet au conseiller de retiré la restriction des 2 implications au grand maximum de son seigneur liege;;;;;;;;;;;;x
 

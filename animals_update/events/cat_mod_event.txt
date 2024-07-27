@@ -498,6 +498,12 @@ character_event = {
 
     mean_time_to_happen = {
         years = 3
+
+        modifier = {
+            factor = 6.66 # 20 years
+
+            Is_really_animal_trigger = yes
+        }
     }
 
     desc = DESC_127_USURP_ID
