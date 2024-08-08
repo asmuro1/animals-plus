@@ -376,10 +376,11 @@ title_decisions = {
                         }
                     }
                 }
-                
-                religion_authority = {
-                    name = dog_rel_unity_penality
-                    months = 30
+                FROM = {
+                    religion_authority = {
+                        name = dog_rel_unity_penality
+                        months = 30
+                    }
                 }
             }
             location = {
@@ -493,9 +494,11 @@ targetted_decisions = {
                     NOT = { culture_group = FROM }
                 }
 
-                religion_authority = {
-                    name = dog_rel_unity_penality
-                    months = 30
+                FROM = {
+                    religion_authority = {
+                        name = dog_rel_unity_penality
+                        months = 30
+                    }
                 }
             }
             culture = FROM
