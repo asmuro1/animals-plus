@@ -224,23 +224,46 @@ character_event = {
     hide_window = yes
 
     immediate = {
-        FROM = {
-            revoke_law = dog_unity_county_conv
-            revoke_law = dog_unity_character_conv
-            revoke_law = dog_unity_reputation_cost
-            revoke_law = dog_law_war_council
-            revoke_law = dog_law_eco_council
-            revoke_law = dog_law_pol_council
-            revoke_law = dog_law_eve_council
-            if = {
-                limit = {
-                    NOR = {
-                        has_law = dog_law_war_0
-                        has_law = dog_law_economic_0
-                        has_law = dog_law_politic_0
+        ROOT = {
+            any_demesne_title = {
+                revoke_law = dog_unity_county_conv
+                revoke_law = dog_unity_character_conv
+                revoke_law = dog_unity_reputation_cost
+                revoke_law = dog_law_war_council
+                revoke_law = dog_law_eco_council
+                revoke_law = dog_law_pol_council
+                revoke_law = dog_law_eve_council
+                if = {
+                    limit = {
+                        NOR = {
+                            has_law = dog_law_war_0
+                            has_law = dog_law_economic_0
+                            has_law = dog_law_politic_0
+                        }
                     }
+                    revoke_law = dog_law_res_council
                 }
-                revoke_law = dog_law_res_council
+            }
+        }
+        FROMFROM = { # in case of bug in succession
+            any_demesne_title = {
+                revoke_law = dog_unity_county_conv
+                revoke_law = dog_unity_character_conv
+                revoke_law = dog_unity_reputation_cost
+                revoke_law = dog_law_war_council
+                revoke_law = dog_law_eco_council
+                revoke_law = dog_law_pol_council
+                revoke_law = dog_law_eve_council
+                if = {
+                    limit = {
+                        NOR = {
+                            has_law = dog_law_war_0
+                            has_law = dog_law_economic_0
+                            has_law = dog_law_politic_0
+                        }
+                    }
+                    revoke_law = dog_law_res_council
+                }
             }
         }
     }

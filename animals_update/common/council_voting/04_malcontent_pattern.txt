@@ -6,6 +6,9 @@ malcontent_pattern_for = {
 		always = no
 	}
 
+	dog_unity_county_conv = { NOT = { liege = { character = FROM } } }
+	dog_unity_character_conv = { NOT = { liege = { character = FROM } } }
+	dog_unity_reputation_cost = { NOT = { liege = { character = FROM } } }
 	dog_law_politic_0 = { NOT = { liege = { character = FROM } } }
 	dog_law_politic_1 = { NOT = { liege = { character = FROM } } }
 	dog_law_politic_2 = { NOT = { liege = { character = FROM } } }
@@ -135,6 +138,9 @@ malcontent_pattern_against = {
 	icon = 4
 	pattern_type = against
 
+	dog_unity_county_conv = { liege = { character = FROM } }
+	dog_unity_character_conv = { liege = { character = FROM } }
+	dog_unity_reputation_cost = { liege = { character = FROM } }
 	dog_law_politic_0 = { liege = { character = FROM } }
 	dog_law_politic_1 = { liege = { character = FROM } }
 	dog_law_politic_2 = { liege = { character = FROM } }

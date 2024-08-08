@@ -4,7 +4,7 @@ on_birth = {
 	events = {
 		ani_plus.005 #force animal portrait
 		ani_plus.006 #birth event for bear (multiple child and number of childs' bonus) and panda (multiple child, more than bear)
-		ani_plus.108
+		ani_plus.108 #giving duck holy site bonus (if relevant)
 	}
 }
 
@@ -30,7 +30,7 @@ on_loot_settlement = {
 	}
 	random_events = {
 		cat_invasion_start = {
-			5 = ani_plus.128
+			5 = ani_plus.128 # force cat invasion on sieged provinces
 			95 = 0
 		}
 	}
@@ -53,24 +53,26 @@ on_siege_over_winner = {
 
 on_new_holder = {
 	events = {
-		ani_plus.164 # removing dog unity and council laws on holder change 
+		ani_plus.164 # removing dog unity and council laws on holder change
 	}
 }
 on_new_holder_inheritance = {
 	events = {
 		ani_plus.035 # tournament winner: loosing associated trait
 		ani_plus.116 # updating elephant law
+		ani_plus.164 # removing dog unity and council laws on holder change
 	}
 }
 on_new_holder_usurpation = {
 	events = {
 		ani_plus.125 # cat holder change 
+		ani_plus.164 # removing dog unity and council laws on holder change
 	}
 }
 
 on_war_started = {
 	events = {
-		ani_plus.043 #  hedgehog morale bonuses/maluses at war start
+		ani_plus.043 # hedgehog morale bonuses/maluses at war start
 	}
 }
 
@@ -113,13 +115,12 @@ on_holding_building_start = {
 on_startup = {
 	events = {
 		ani_plus.105 #updating duck dev maximum potential
-		# ani_plus.157 # uncomment for repairing old save done without this event
 	}
 }
 on_yearly_pulse = {
 	events = {
 		ani_plus.105 #updating duck dev maximum potential
-		ani_plus.144 #quest tombola for cat society
+		ani_plus.144 #quest tombola for cat societies
 	}
 }
 

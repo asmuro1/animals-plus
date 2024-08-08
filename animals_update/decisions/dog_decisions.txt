@@ -340,7 +340,10 @@ title_decisions = {
                 has_regent = no
                 OR = {
                     prestige = 300
-                    has_law = dog_unity_reputation_cost
+                    primary_title = {
+                        show_scope_change = no
+                        has_law = dog_unity_reputation_cost
+                    }
                 }
                 OR = {
                     religion_authority = 0.15
@@ -365,6 +368,20 @@ title_decisions = {
         }
 
         effect = {
+            if = {
+                limit = {
+                    NOT = {
+                        location = {
+                            culture_group = FROM
+                        }
+                    }
+                }
+                
+                religion_authority = {
+                    name = dog_rel_unity_penality
+                    months = 30
+                }
+            }
             location = {
                 culture = FROM
             }
@@ -372,7 +389,10 @@ title_decisions = {
                 if = {
                     limit = {
                         NOT = {
-                           has_law = dog_unity_reputation_cost
+                           primary_title = {
+                                show_scope_change = no
+                                has_law = dog_unity_reputation_cost
+                            }
                         }
                     }
                     prestige = -300
@@ -397,11 +417,6 @@ title_decisions = {
                                 }
                             }
                         }
-                    }
-
-                    religion_authority = {
-                        name = dog_rel_unity_penality
-                        months = 30
                     }
                 }
             }
@@ -445,7 +460,10 @@ targetted_decisions = {
                 has_regent = no
                 OR = {
                     piety = 190
-                    has_law = dog_unity_reputation_cost
+                    primary_title = {
+                        show_scope_change = no
+                        has_law = dog_unity_reputation_cost
+                    }
                 }
                 OR = {
                     religion_authority = 0.07
@@ -470,13 +488,26 @@ targetted_decisions = {
         }
 
         effect = {
+            if = {
+                limit = {
+                    NOT = { culture_group = FROM }
+                }
+
+                religion_authority = {
+                    name = dog_rel_unity_penality
+                    months = 30
+                }
+            }
             culture = FROM
 
             FROM = {
                 if = {
                     limit = {
                         NOT = {
-                           has_law = dog_unity_reputation_cost
+                           primary_title = {
+                                show_scope_change = no
+                                has_law = dog_unity_reputation_cost
+                            }
                         }
                     }
                     piety = -190
@@ -501,11 +532,6 @@ targetted_decisions = {
                                 }
                             }
                         }
-                    }
-
-                    religion_authority = {
-                        name = dog_rel_unity_penality
-                        months = 30
                     }
                 }
             }
