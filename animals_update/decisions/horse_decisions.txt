@@ -1,0 +1,87 @@
+title_decisions = {
+    
+    start_horse_conv_quest = {
+        is_high_prio = yes
+        ai_check_interval = 40
+
+        filter = owned
+        ai_target_filter = owned
+
+        potential = {
+            tier = COUNT
+            FROM = {
+                OR = {
+                    has_game_rule = {
+                        name = animals_conversion_ways
+                        value = animal_decision
+                    }
+                    AND = {
+                        has_game_rule = {
+                            name = animals_conversion_ways
+                            value = animal_instant
+                        }
+                        ai = no
+                    }
+                }
+                Is_really_animal_trigger = no
+                is_nomadic = no
+            }
+            location = {
+                Is_really_animal_trigger = no
+                NOT = { has_province_flag = horse_conv_quest_CD }
+                terrain = steppe
+            }
+        }
+        allow = {
+            FROM = {
+                OR = {
+                    lifestyle_traits == 0
+                    trait = hunter
+                }
+                wealth = 35
+            }
+            location = {
+                OR = {
+                    has_building = tb_steppe_barracks_1
+                    has_building = tb_steppe_stable_1
+                    has_building = ca_steppe_stable_1
+                    has_building = ca_steppe_barracks_1
+                    has_building = tb_default_horse_conv_quest
+                    has_building = ca_default_horse_conv_quest
+                }
+            }
+        }
+    }
+
+    effect = {
+        FROM = {
+            wealth = -35
+            piety = -100
+        }
+
+        location = {
+
+
+            province_event = { id= ani_plus.171 years = 10 }
+        }
+    }
+
+    ai_will_do = {
+        factor = 1
+
+        modifier = {
+            factor = 0.001
+            always = yes
+        }
+
+        modifier = {
+            factor = 50 # 5%
+            OR = {
+                culture_group = altaic
+                culture_group = magyar
+                culture = alan
+                culture_group = iranian
+            }
+        }
+    }
+}

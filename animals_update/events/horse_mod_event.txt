@@ -3,6 +3,7 @@ namespace = ani_plus
 ###### horse update event
 ### event 170 - ?
 
+
 province_event = {
     id = ani_plus.170
 
@@ -21,6 +22,8 @@ province_event = {
                 lifestyle_traits == 0
                 trait = hunter
             }
+            is_nomadic = no
+            wealth = 35
         }
         terrain = steppe
         NOT = { has_province_flag = horse_conv_quest_CD }
@@ -51,13 +54,16 @@ province_event = {
 
     option = {
         name = OPTA_ani_170
+
+        wealth = -35
+        piety = -100
     }
     option = {
         name = OPTB_ani_170
     }
     
     after = {
-        province_event = { id= ani_plus.171 years = 10}
+        province_event = { id= ani_plus.171 years = 10 }
     }
 }
 
