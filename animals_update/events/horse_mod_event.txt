@@ -35,10 +35,10 @@ province_event = {
     }
 
     mean_time_to_happen = {
-        years = 100
+        years = 200
 
         modifier = {
-            factor = 0.10  # 10 years for players
+            factor = 0.25  # 50 years for players
             holder_scope = { ai = no }
         }
     }
