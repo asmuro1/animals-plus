@@ -187,6 +187,8 @@ OPTA_ani_170;It is time to use them in festivities!;C'est le moment pour une gra
 OPTB_ani_170;They will soon come back to how they were;Ils vont bientôt revenir comme ils étaient avant;;;;;;;;;;;;x
 DESC_ani_172;The ritual preparation are now over;Les préparations du rituel sont maintenant finis;;;;;;;;;;;;x
 OPT_ani_172;We can start the event;Nous pouvons enfin commencer le rituel;;;;;;;;;;;;x
+DESC_ani_173;The ritual just ended. Everything went as planned. The horse gave us some knowledge.;Le rituel vient de se finir avec succès. J'ai pu me prouver digne de diriger [THIS.GetName].;;;;;;;;;;;;x
+OPT_ani_173;Everyone is happy!;Tout le monde est satisfé!;;;;;;;;;;;;x
 
 ## TOOLTIPS
 TT_ani_172_went_well;Everything goes well;Tout se passe comme prévu;;;;;;;;;;;;x

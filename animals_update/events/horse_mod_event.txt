@@ -108,7 +108,7 @@ province_event = {
                 custom_tooltip = {
                     text = TT_ani_172_went_well
 
-                    province_event = { id = ani_plus.173 days = 1 random = 6 }
+                    province_event = { id = ani_plus.173 days = 5 random = 2 }
                 }
             }
             3 = {
@@ -129,16 +129,6 @@ province_event = {
     }
 }
 
-# event 172
-province_event = {
-    id = ani_plus.172
-
-    border = GFX_event_normal_frame_diplomacy
-    picture = GFX_evt_council
-
-    is_triggered_only = yes
-}
-
 # event 173
 province_event = {
     id = ani_plus.173
@@ -147,11 +137,33 @@ province_event = {
     picture = GFX_evt_council
 
     is_triggered_only = yes
+
+    desc = DESC_ani_173
+
+    option = {
+        name = OPT_ani_173
+
+        holder_scope = {
+            prestige = 350
+            piety = 75
+        }
+        change_random_civ_tech = 1
+    }
 }
 
 # event 174
 province_event = {
     id = ani_plus.174
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    is_triggered_only = yes
+}
+
+# event 175
+province_event = {
+    id = ani_plus.175
 
     border = GFX_event_normal_frame_diplomacy
     picture = GFX_evt_council
