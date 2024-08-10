@@ -1,6 +1,4 @@
 
-
-
 hibernation = {
     cannot_marry = yes
     pilgrimage = yes
@@ -123,9 +121,17 @@ sympathy_animals_religions = {
 	customizer = no
 	random = no
 
-    male_insult = INSULT_LOVER_OF_HEATHENS
+	male_insult = INSULT_LOVER_OF_HEATHENS
 	female_insult = INSULT_LOVER_OF_HEATHENS
 	male_insult_adj = INSULT_UNPRINCIPLED
 	female_insult_adj = INSULT_UNPRINCIPLED
 	child_insult_adj = INSULT_STUPID
+}
+
+trait_unconcious = {
+    customizer = no
+    random = no
+
+    is_illness = yes
+    incapacitating = yes
 }
