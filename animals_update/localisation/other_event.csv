@@ -185,3 +185,9 @@ DOG_TT_WAR_LEVEL_UP;Increase your military implication;Augmente l'implication mi
 DESC_ani_170;The horses seems exited around our horse steppe's building in [this.GetName];Les cheveaux semblent excité autour des places réservés aux cheveaux en [THIS.GetName];;;;;;;;;;;;x
 OPTA_ani_170;It is time to use them in festivities!;C'est le moment pour une grande fête en leur honeur;;;;;;;;;;;;x
 OPTB_ani_170;They will soon come back to how they were;Ils vont bientôt revenir comme ils étaient avant;;;;;;;;;;;;x
+DESC_ani_172;The ritual preparation are now over;Les préparations du rituel sont maintenant finis;;;;;;;;;;;;x
+OPT_ani_172;We can start the event;Nous pouvons enfin commencer le rituel;;;;;;;;;;;;x
+
+## TOOLTIPS
+TT_ani_172_went_well;Everything goes well;Tout se passe comme prévu;;;;;;;;;;;;x
+TT_ani_172_went_wrong;An accident occur;Un accident se produit;;;;;;;;;;;;x
