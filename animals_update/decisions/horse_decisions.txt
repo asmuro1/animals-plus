@@ -60,9 +60,8 @@ title_decisions = {
         }
 
         location = {
-
-
-            province_event = { id= ani_plus.171 years = 10 }
+            province_event = { id = ani_plus.172 days = 7 random = 7 }
+            province_event = { id = ani_plus.171 years = 10 }
         }
     }
 

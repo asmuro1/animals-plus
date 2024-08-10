@@ -3,7 +3,15 @@ namespace = ani_plus
 ###### horse update event
 ### event 170 - ?
 
+## conversion quest
+# event 170: event to launch quest by event rule
+# event 171: removing quest cooldown
+# event 172: finished the preparation
+#       can lead to event 173: everything went well
+#       can lead to event 174: unknown illness due to an hypnotic state
+#       can lead to event 175: an accident occure
 
+# event 170
 province_event = {
     id = ani_plus.170
 
@@ -54,19 +62,23 @@ province_event = {
 
     option = {
         name = OPTA_ani_170
+        FROM = {
+            wealth = -35
+            piety = -100
+        }
 
-        wealth = -35
-        piety = -100
+        province_event = { id = ani_plus.172 days = 7 random = 7 }
     }
     option = {
         name = OPTB_ani_170
     }
     
     after = {
-        province_event = { id= ani_plus.171 years = 10 }
+        province_event = { id = ani_plus.171 years = 10 }
     }
 }
 
+# event 171
 province_event = {
     id = ani_plus.171
     hide_window = yes
@@ -74,5 +86,21 @@ province_event = {
 
     immediate = {
         remove_province_modifier = horse_conv_quest_CD
+    }
+}
+
+# event 172
+province_event = {
+    id = ani_plus.172
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    is_triggered_only = yes
+
+    desc = DESC_ani_172
+
+    option = {
+        name = OPT_ani_172
     }
 }
