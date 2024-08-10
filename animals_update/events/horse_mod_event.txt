@@ -102,5 +102,59 @@ province_event = {
 
     option = {
         name = OPT_ani_172
+
+        random_list = {
+            2 = {
+                custom_tooltip = {
+                    text = TT_ani_172_went_well
+
+                    province_event = { id = ani_plus.173 days = 1 random = 6 }
+                }
+            }
+            3 = {
+                custom_tooltip = {
+                    text = TT_ani_172_went_wrong
+
+                    random_list = {
+                        2 =  { 
+                            province_event = { id = ani_plus.174 days = 1 random = 6}
+                        }
+                        1 =  { 
+                            province_event = { id = ani_plus.175 days = 1 random = 6}
+                        }
+                    }
+                }
+            }
+        }
     }
+}
+
+# event 172
+province_event = {
+    id = ani_plus.172
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    is_triggered_only = yes
+}
+
+# event 173
+province_event = {
+    id = ani_plus.173
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    is_triggered_only = yes
+}
+
+# event 174
+province_event = {
+    id = ani_plus.174
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    is_triggered_only = yes
 }
