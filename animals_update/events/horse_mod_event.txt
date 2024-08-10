@@ -1,10 +1,10 @@
 namespace = ani_plus
 
 ###### horse update event
-### event 169 - ?
+### event 170 - ?
 
 province_event = {
-    id = ani_plus.169
+    id = ani_plus.170
 
     border = GFX_event_normal_frame_diplomacy
     picture = GFX_evt_council
@@ -43,26 +43,26 @@ province_event = {
         }
     }
 
-    desc = DESC_ani_169
+    desc = DESC_ani_170
 
     immediate = {
         set_province_flag = horse_conv_quest_CD
     }
 
     option = {
-        name = OPTA_ani_169
+        name = OPTA_ani_170
     }
     option = {
-        name = OPTB_ani_169
+        name = OPTB_ani_170
     }
     
     after = {
-        province_event = { id= ani_plus.170 years = 10}
+        province_event = { id= ani_plus.171 years = 10}
     }
 }
 
 province_event = {
-    id = ani_plus.170
+    id = ani_plus.171
     hide_window = yes
     is_triggered_only = yes
 
