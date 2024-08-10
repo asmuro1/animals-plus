@@ -10,6 +10,10 @@ namespace = ani_plus
 #       can lead to event 173: everything went well
 #       can lead to event 174: unknown illness due to an hypnotic state
 #       can lead to event 175: an accident occure
+# event 173: everything went well
+# event 174: remain unconcious for some days, need regent, lead to event 176
+# event 175:
+# event 176: woke up as an horse
 
 # event 170
 province_event = {
@@ -159,11 +163,33 @@ province_event = {
     picture = GFX_evt_council
 
     is_triggered_only = yes
+
+    desc = DESC_ani_174
+
+    option = {
+        name = OPT_ani_174
+
+        holder_scope = {
+            prestige = -150
+            add_trait = trait_unconcious
+            character_event = { id = ani_plus.176 days = 1 random = 60 }
+        }
+    }
 }
 
 # event 175
 province_event = {
     id = ani_plus.175
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    is_triggered_only = yes
+}
+
+# event 176
+character_event = {
+    id = ani_plus.176
 
     border = GFX_event_normal_frame_diplomacy
     picture = GFX_evt_council
