@@ -195,4 +195,13 @@ character_event = {
     picture = GFX_evt_council
 
     is_triggered_only = yes
+
+    desc = DESC_ani_176
+
+    option = {
+        name = OPT_ani_176
+
+        remove_trait = trait_unconcious
+        culture = horse
+    }
 }
