@@ -1,7 +1,7 @@
 namespace = ani_plus
 
 ###### dog update event
-### event 159 - 168
+### event 159 - 169
 
 
 ## conversion quest
@@ -210,13 +210,13 @@ character_event = {
 }
 
 ## law event
-# event 164: removing unity and council laws on inheritance
+# event 164 and 169: removing unity and council laws 
 # event 165: removing interest laws if not dog
 # event 166: adding interest laws if dog
 # event 167: modifying level of one of the interest law
 # event 168: giving malus if modying interest law is impossible (no council rights)
 
-#event 164
+#event 164 had to create event 169 because on-day event didn't remove all laws
 character_event = {
     id = ani_plus.164
 
@@ -225,45 +225,35 @@ character_event = {
 
     immediate = {
         ROOT = {
-            any_demesne_title = {
-                revoke_law = dog_unity_county_conv
-                revoke_law = dog_unity_character_conv
-                revoke_law = dog_unity_reputation_cost
-                revoke_law = dog_law_war_council
-                revoke_law = dog_law_eco_council
-                revoke_law = dog_law_pol_council
-                revoke_law = dog_law_eve_council
-                if = {
-                    limit = {
-                        NOR = {
-                            has_law = dog_law_war_0
-                            has_law = dog_law_economic_0
-                            has_law = dog_law_politic_0
-                        }
-                    }
-                    revoke_law = dog_law_res_council
-                }
-            }
+            character_event = { id = ani_plus.169  days = 1 }
         }
-        FROMFROM = { # in case of bug in succession
-            any_demesne_title = {
-                revoke_law = dog_unity_county_conv
-                revoke_law = dog_unity_character_conv
-                revoke_law = dog_unity_reputation_cost
-                revoke_law = dog_law_war_council
-                revoke_law = dog_law_eco_council
-                revoke_law = dog_law_pol_council
-                revoke_law = dog_law_eve_council
-                if = {
-                    limit = {
-                        NOR = {
-                            has_law = dog_law_war_0
-                            has_law = dog_law_economic_0
-                            has_law = dog_law_politic_0
-                        }
+    }
+}
+# event 169 - removing law
+character_event = {
+    id = ani_plus.169
+
+    is_triggered_only = yes
+    hide_window = yes
+
+    immediate = {
+        FROMFROM = {
+            revoke_law = dog_unity_county_conv
+            revoke_law = dog_unity_character_conv
+            revoke_law = dog_unity_reputation_cost
+            revoke_law = dog_law_war_council
+            revoke_law = dog_law_eco_council
+            revoke_law = dog_law_pol_council
+            revoke_law = dog_law_eve_council
+            if = {
+                limit = {
+                    NOR = {
+                        has_law = dog_law_war_0
+                        has_law = dog_law_economic_0
+                        has_law = dog_law_politic_0
                     }
-                    revoke_law = dog_law_res_council
                 }
+                revoke_law = dog_law_res_council
             }
         }
     }
