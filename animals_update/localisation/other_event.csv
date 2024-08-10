@@ -189,6 +189,11 @@ DESC_ani_172;The ritual preparation are now over;Les préparations du rituel sont
 OPT_ani_172;We can start the event;Nous pouvons enfin commencer le rituel;;;;;;;;;;;;x
 DESC_ani_173;The ritual just ended. Everything went as planned. The horse gave us some knowledge.;Le rituel vient de se finir avec succès. J'ai pu me prouver digne de diriger [THIS.GetName].;;;;;;;;;;;;x
 OPT_ani_173;Everyone is happy!;Tout le monde est satisfé!;;;;;;;;;;;;x
+DESC_ani_174;The ritual gone strange. Because of an unknown cause, evoryone seems unconcious;Le rituel a soudainement pris une étrange tournure. Pour une raison inconnu, tout le monde semble inconscient.;;;;;;;;;;;;x
+OPT_ani_174;I am also...;Suis-je aussi...;;;;;;;;;;;;x
+
+DESC_ani_176;The ritual effect seems to have totally gone;Les effets du rituel semblent s'être totalement dissipé;;;;;;;;;;;;x
+OPT_ani_176;Or maby not;Ou peut-être pas;;;;;;;;;;;;x
 
 ## TOOLTIPS
 TT_ani_172_went_well;Everything goes well;Tout se passe comme prévu;;;;;;;;;;;;x
