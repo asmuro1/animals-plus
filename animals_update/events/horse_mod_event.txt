@@ -255,5 +255,18 @@ character_event = {
 
 # event 178
 character_event = {
+    id = ani_plus.178
 
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    is_triggered_only = yes
+
+    desc = DESC_ani_178
+
+    option = {
+        name = OPT_ani_178
+        remove_trait = severely_injured
+        culture = horse
+    }
 }
