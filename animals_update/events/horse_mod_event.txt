@@ -219,3 +219,41 @@ character_event = {
         culture = horse
     }
 }
+
+# event 177
+character_event = {
+    id = ani_plus.177
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    is_triggered_only = yes
+
+    desc = DESC_ani_177
+
+    option = {
+        name = OPT_ani_177
+
+        random_list = {
+            1 = {
+                custom_tooltip = {
+                    text = TT_dog_healed
+                }
+                remove_trait = wounded
+            }
+            1 = {
+                custom_tooltip = {
+                    text = TT_dog_injury_is_worst
+                    character_event = { id = ani_plus.178 days = 3 }
+                }
+                remove_trait = wounded
+                add_trait = severely_injured
+            }
+        }
+    }
+}
+
+# event 178
+character_event = {
+
+}
