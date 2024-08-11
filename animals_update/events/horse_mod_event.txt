@@ -237,13 +237,13 @@ character_event = {
         random_list = {
             1 = {
                 custom_tooltip = {
-                    text = TT_dog_healed
+                    text = TT_ani_177_healed
                 }
                 remove_trait = wounded
             }
             1 = {
                 custom_tooltip = {
-                    text = TT_dog_injury_is_worst
+                    text = TT_ani_177_injury_is_worst
                     character_event = { id = ani_plus.178 days = 3 }
                 }
                 remove_trait = wounded
@@ -266,6 +266,7 @@ character_event = {
 
     option = {
         name = OPT_ani_178
+        
         remove_trait = severely_injured
         culture = horse
     }

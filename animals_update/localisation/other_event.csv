@@ -191,10 +191,17 @@ DESC_ani_173;The ritual just ended. Everything went as planned. The horse gave u
 OPT_ani_173;Everyone is happy!;Tout le monde est satisfé!;;;;;;;;;;;;x
 DESC_ani_174;The ritual gone strange. Because of an unknown cause, evoryone seems unconcious;Le rituel a soudainement pris une étrange tournure. Pour une raison inconnu, tout le monde semble inconscient.;;;;;;;;;;;;x
 OPT_ani_174;I am also...;Suis-je aussi...;;;;;;;;;;;;x
-
+DESC_ani_175;Because of incompetent, the ritual should be cancelled.;à cause d'incompétent, le rituel s'est retrouvé annulé;;;;;;;;;;;;x   
+OPT_ani_175;Why does I have to pay the price?;Pourquoi devrais-je avoir à en payer le prix?;;;;;;;;;;;;x
 DESC_ani_176;The ritual effect seems to have totally gone;Les effets du rituel semblent s'être totalement dissipé;;;;;;;;;;;;x
 OPT_ani_176;Or maby not;Ou peut-être pas;;;;;;;;;;;;x
+DESC_ani_177It seems that no one could do anything to heal;Il semblerai que personne ne soit en mesure de me soigner;;;;;;;;;;;;x
+OPT_ani_177;I hope to be well again soon enough;J'espère rapidement récupérer.;;;;;;;;;;;;x
+DESC_ani_178;I finnaly healed from my injuries!;J'ai enfin guérit de mes blessures;;;;;;;;;;;;x
+OPT_ani_178;What happened tp my body?;Qu'est-t-il arrivé à mon corps?;;;;;;;;;;;;x
 
 ## TOOLTIPS
 TT_ani_172_went_well;Everything goes well;Tout se passe comme prévu;;;;;;;;;;;;x
 TT_ani_172_went_wrong;An accident occur;Un accident se produit;;;;;;;;;;;;x
+TT_ani_177_healed;heal from injury;Est soigné de ses blessures;;;;;;;;;;;;x
+TT_ani_177_injury_is_worst,The injuries goes wrong;Les blessures s'empirent;;;;;;;;;;;;x
