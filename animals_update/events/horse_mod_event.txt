@@ -194,7 +194,7 @@ province_event = {
         name = OPT_ani_175
 
         holder_scope = {
-            character_event = { id = 177 days = 2 random = 3}
+            character_event = { id = ani_plus.177 days = 2 random = 3}
             prestige = -20
             add_trait = wounded
         }
@@ -266,7 +266,7 @@ character_event = {
 
     option = {
         name = OPT_ani_178
-        
+
         remove_trait = severely_injured
         culture = horse
     }

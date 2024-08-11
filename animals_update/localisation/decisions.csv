@@ -315,3 +315,6 @@ CREATED_HOLY_ORDER_DOG_TOOLTIP;[d_hunting_gards.GetName] created;[d_hunting_gard
 #### HORSES UPDATE
 start_horse_conv_quest;Do a horse ritual;Organiser un rituel des chevaux;;;;;;;;;;;;x
 start_horse_conv_quest_desc;As horse have their own lifestyle, trying to understand it in a ritual is a given;Comme les chevaux ont leur propre style de vie, organiser ce rituel est l'occasion de mieux le comprendre;;;;;;;;;;;;x
+
+### tooltip
+tt_horse_horse_building;Has constructed an horse building;A construit un bâtiment de cheval;;;;;;;;;;;;x
