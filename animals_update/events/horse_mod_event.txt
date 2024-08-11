@@ -12,8 +12,10 @@ namespace = ani_plus
 #       can lead to event 175: an accident occure
 # event 173: everything went well
 # event 174: remain unconcious for some days, need regent, lead to event 176
-# event 175:
+# event 175: become injured, lead to event 177
 # event 176: woke up as an horse
+# event 177: the injuries heal or worsen (in this case, event 178)
+# event 178: heal from injuries while becoming horsesss
 
 # event 170
 province_event = {
@@ -185,6 +187,18 @@ province_event = {
     picture = GFX_evt_council
 
     is_triggered_only = yes
+
+    desc = DESC_ani_175
+
+    option = {
+        name = OPT_ani_175
+
+        holder_scope = {
+            character_event = { id = 177 days = 2 random = 3}
+            prestige = -20
+            add_trait = wounded
+        }
+    }
 }
 
 # event 176
