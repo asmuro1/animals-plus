@@ -56,14 +56,30 @@ title_decisions = {
         }
 
         effect = {
-            FROM = {
-                wealth = -35
-                piety = -100
-            }
+            if = {
+                limit = {
+                    has_game_rule = {
+                        name = animals_conversion_ways
+                        value = animal_decision
+                    }
+                }
+                FROM = {
+                    wealth = -35
+                    piety = -100
+                }
 
-            location = {
-                province_event = { id = ani_plus.172 days = 7 random = 7 }
-                province_event = { id = ani_plus.171 years = 10 }
+                location = {
+                    province_event = { id = ani_plus.172 days = 7 random = 7 }
+                    province_event = { id = ani_plus.171 years = 10 }
+                }
+            }
+            else = {
+                FROM = {
+                    culture = horse
+                }
+                location = {
+                    culture = horse
+                }
             }
         }
 
