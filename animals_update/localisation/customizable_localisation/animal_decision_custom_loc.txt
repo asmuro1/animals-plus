@@ -72,6 +72,18 @@ defined_text = {
         }
         localisation_key = Cat_religion
     }
+    text = {
+        trigger = {
+            FROM = { religion = Dog_religion }
+        }
+        localisation_key = Dog_religion
+    }
+    text = {
+        trigger = {
+            FROM = { religion = Horse_religion }
+        }
+        localisation_key = Horse_religion
+    }
 }
 
 defined_text = {
@@ -119,6 +131,20 @@ defined_text = {
 
         localisation_key = d_Invasive_order
     }
+    text = {
+        trigger = {
+            FROM = { religion = Dog_religion }
+        }
+
+        localisation_key = d_hunting_gards
+    }
+    text = {
+        trigger = {
+            FROM = { religion = Horse_religion }
+        }
+
+        localisation_key = d_war_hord
+    }
 }
 
 defined_text = {
@@ -147,5 +173,21 @@ defined_text = {
     text = {
         trigger = { culture_group = cat_group }
         localisation_key = schemer
+    }
+    text = {
+        trigger = { culture_group = cat_group }
+        localisation_key = schemer
+    }
+    text = {
+        trigger = { culture_group = cat_group }
+        localisation_key = schemer
+    }
+    text = {
+        trigger = { culture_group = dog_group }
+        localisation_key = socializer
+    }
+    text = {
+        trigger = { culture_group = horse_group }
+        localisation_key = hunter
     }
 }
