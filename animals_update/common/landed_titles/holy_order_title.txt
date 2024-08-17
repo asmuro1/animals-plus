@@ -136,6 +136,7 @@ d_Invasive_order = {
 
     monthly_income = 2
 }
+
 d_hunting_gards = {
     color = { 96 96 96 }
     color2 = { 255 255 255 }
@@ -152,7 +153,30 @@ d_hunting_gards = {
     short_name = yes
 
     religion = Dog_religion
-    culture = cat
+    culture = dog_culture
+
+    primary = yes
+
+    monthly_income = 2
+}
+
+d_war_hord = {
+    color = { 95 95 95 }
+    color2 = { 255 255 255 }
+
+    graphical_culture = horsegfx
+
+    title = "GRANDMASTER"
+    foa = "GRANDMASTER_FOA"
+
+    holy_order = yes
+    mercenary_type = war_hord_mercs
+    landless = yes
+
+    short_name = yes
+
+    religion = Horse_religion
+    culture = horse
 
     primary = yes
 

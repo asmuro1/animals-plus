@@ -48,7 +48,7 @@ hunting_gards_mercs = {
 	knights = 50
 }
 
-war_hord = {
+war_hord_mercs = {
 	levy_size = 4.25
 	light_cavalry = 350
 	knights = 50
