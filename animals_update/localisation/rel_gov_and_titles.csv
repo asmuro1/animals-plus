@@ -36,6 +36,10 @@ Dog_religion;Dog;Chien;;;;;;;;;;;;x
 Dog_religion_DESC;Dogs' religion;Religion des chiens;;;;;;;;;;;;x
 Dog_religion_full;Dog;Chien;;;;;;;;;;;;x
 DOG_RELIGION_HIGH_GOD;Scooby-Doo;Scoubidou;;;;;;;;;;;;x
+Horse_religion;Horse;Cheval;;;;;;;;;;;;x
+Horse_religion_DESC;Horses' religion;Religion des chevaux;;;;;;;;;;;;x
+Horse_religion_full;Horse;Cheval;;;;;;;;;;;;x
+HORSE_RELIGION_HIGH_GOD;Pegasus;Pégaze;;;;;;;;;;;;x
 
 ###government localisation
 Bear_feudal_gov;Bears feodality;féodalité oursienne;;;;;;;;;;;;x
