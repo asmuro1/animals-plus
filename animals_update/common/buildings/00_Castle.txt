@@ -25,6 +25,7 @@ castle = {
 				}
 				FROMFROM = { title = b_constantinople }
 			}
+			Is_really_animal_trigger = no
 		}
 		trigger = {
 			OR = {
@@ -100,7 +101,7 @@ castle = {
 	ca_wall_q_1 = {
 		desc = ca_wall_q_1_desc
         potential = {
-            Is_really_animal_trigger = yes
+            Is_really_animal_trigger = no
         }
 		trigger = {
             TECH_FORTIFICATIONS_CONSTRUCTION = 0
