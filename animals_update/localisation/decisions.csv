@@ -317,9 +317,9 @@ start_horse_conv_quest;Do a horse ritual;Organiser un rituel des chevaux;;;;;;;;
 start_horse_conv_quest_desc;As horse have their own lifestyle, trying to understand it in a ritual is a given;Comme les chevaux ont leur propre style de vie, organiser ce rituel est l'occasion de mieux le comprendre;;;;;;;;;;;;x
 adopt_horse_religion;Adopt horses' religion;Adopter la religion des chevaux;;;;;;;;;;;;x
 adopt_horse_religion_desc;As an horse, you can freely choose to convert yourself to the associated religion;En tant que cheval, tu peux librement choisir de te convertir à la religion associé;;;;;;;;;;;;x
-create_hunting_gards;Form [d_war_hord.GetName];Former [d_war_hord.GetName];;;;;;;;;;;;x
-create_hunting_gards_desc;By using your influence, you can defend your religion with a veteran groups of soldiers;En utilisant mon influence personnel, il est possible de créer une troupe de mercennaires afin de défendre les terres de ma religion;;;;;;;;;;;;x
+create_war_hord;Form [d_war_hord.GetName];Former [d_war_hord.GetName];;;;;;;;;;;;x
+create_war_hord_desc;By using your influence, you can defend your religion with a veteran groups of soldiers;En utilisant mon influence personnel, il est possible de créer une troupe de mercennaires afin de défendre les terres de ma religion;;;;;;;;;;;;x
 
 ### tooltip
 tt_horse_horse_building;Has constructed an horse building;A construit un bâtiment de cheval;;;;;;;;;;;;x
-CREATED_HOLY_ORDER_DOG_TOOLTIP;§Y[d_war_hord.GetName]§! created;§Y[d_war_hord.GetName]§! est créée;;;;;;;;;;;;x
+CREATED_HOLY_ORDER_HORSE_TOOLTIP;§Y[d_war_hord.GetName]§! created;§Y[d_war_hord.GetName]§! est créée;;;;;;;;;;;;x
