@@ -100,6 +100,8 @@ d_Invasive_order;The invasive order;L'ordre invasif;;;;;;;;;;;;x
 d_Invasive_order_adj;animal;animale;;;;;;;;;;;;x
 d_hunting_gards;The dog hunting guardians;Les gardes-chiens;;;;;;;;;;;;x
 d_hunting_gards_adj;animal;animale;;;;;;;;;;;;x
+d_war_hord;The great horse hord;La grande horde de chevaux;;;;;;;;;;;;x
+d_war_hord_adj;animal;animale;;;;;;;;;;;;x
 
 #job title names
 action_repress_vassal;Repress vassals;réprimer des vassaux;;;;;;;;;;;;x
