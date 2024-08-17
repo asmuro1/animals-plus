@@ -724,7 +724,7 @@ decisions = {
                 }
                 new_character = {
                     wealth = 500
-                    d_polar_fighter = {
+                    d_Invasive_order = {
                         grant_title = PREV
                     }
                     set_government_type = order_government
