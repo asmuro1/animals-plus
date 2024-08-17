@@ -9,6 +9,7 @@ castle = {
                     culture = alan
                     culture_group = iranian
                 }
+                Is_really_animal_trigger = no
             }
         }
         trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
@@ -18,6 +19,518 @@ castle = {
         ai_creation_factor = 15
 
         extra_tech_building_start = 9.0
+    }
+
+    ca_horse_light_1 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = horse_group
+        }
+        trigger = {
+            culture_group = horse_group
+            TECH_CASTLE_CONSTRUCTION = 1
+            TECH_FORTIFICATIONS_CONSTRUCTION = 0
+        }
+        is_active_trigger = {
+            culture_group = horse_group
+            has_building = ca_ani_castle_tower_01
+        }
+        prerequisites = { ca_ani_castle_tower_01 }
+
+        gold_cost = 84
+        build_time = 360
+        ai_creation_factor = 30
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 1.5
+
+        light_cavalry = 50
+    }
+    ca_horse_light_2 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = horse_group
+        }
+        trigger = {
+            culture_group = horse_group
+            TECH_CASTLE_CONSTRUCTION = 1
+            TECH_FORTIFICATIONS_CONSTRUCTION = 1
+        }
+        is_active_trigger = {
+            culture_group = horse_group
+            has_building = ca_ani_castle_tower_02
+        }
+        upgrades_from = ca_horse_light_1
+        prerequisites = { ca_ani_castle_tower_02 }
+
+        gold_cost = 100
+        build_time = 720
+        ai_creation_factor = 30
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 1.6
+
+        light_cavalry = 75
+    }
+    ca_horse_light_3 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = horse_group
+        }
+        trigger = {
+            culture_group = horse_group
+            TECH_CASTLE_CONSTRUCTION = 2
+            TECH_FORTIFICATIONS_CONSTRUCTION = 2
+        }
+        is_active_trigger = {
+            culture_group = horse_group
+            has_building = ca_ani_castle_tower_04
+        }
+        upgrades_from = ca_horse_light_2
+        prerequisites = { ca_ani_castle_tower_04 }
+
+        gold_cost = 217
+        build_time = 1150
+        ai_creation_factor = 30
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 1.7
+
+        light_cavalry = 100
+    }
+    ca_horse_light_4 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = horse_group
+        }
+        trigger = {
+            culture_group = horse_group
+            TECH_CASTLE_CONSTRUCTION = 4
+            TECH_FORTIFICATIONS_CONSTRUCTION = 3
+        }
+        is_active_trigger = {
+            culture_group = horse_group
+            has_building = ca_ani_castle_tower_07
+        }
+        upgrades_from = ca_horse_light_3
+        prerequisites = { ca_ani_castle_tower_07 }
+
+        gold_cost = 350
+        build_time = 1500
+        ai_creation_factor = 30
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 1.7
+
+        light_cavalry = 150
+    }
+    ca_horse_light_5 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = horse_group
+        }
+        trigger = {
+            culture_group = horse_group
+            TECH_CASTLE_CONSTRUCTION = 6
+            TECH_FORTIFICATIONS_CONSTRUCTION = 6
+        }
+        is_active_trigger = {
+            culture_group = horse_group
+            has_building = ca_ani_castle_tower_12
+        }
+        upgrades_from = ca_horse_light_4
+        prerequisites = { ca_ani_castle_tower_12 }
+
+        gold_cost = 570
+        build_time = 1850
+        ai_creation_factor = 30
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 1.8
+
+        light_cavalry = 175
+    }
+
+    ca_horse_armor_1 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = horse_group
+        }
+        trigger = {
+            culture_group = horse_group
+            TECH_CASTLE_CONSTRUCTION = 1
+            TECH_FORTIFICATIONS_CONSTRUCTION = 1
+        }
+        is_active_trigger = {
+            culture_group = horse_group
+            has_building = ca_ani_castle_tower_02
+        }
+        prerequisites = { ca_ani_castle_tower_02 }
+
+        gold_cost = 96
+        build_time = 400
+        ai_creation_factor = 30
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 1.5
+
+        knights = 30
+        light_cavalry = -40
+    }
+    ca_horse_armor_2 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = horse_group
+        }
+        trigger = {
+            culture_group = horse_group
+            TECH_CASTLE_CONSTRUCTION = 3
+            TECH_FORTIFICATIONS_CONSTRUCTION = 3
+        }
+        is_active_trigger = {
+            culture_group = horse_group
+            has_building = ca_ani_castle_tower_06
+        }
+        upgrades_from = ca_horse_armor_1
+        prerequisites = { ca_ani_castle_tower_06 }
+
+        gold_cost = 125
+        build_time = 800
+        ai_creation_factor = 30
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 1.6
+
+        knights = 55
+        light_cavalry = -50
+    }
+    ca_horse_armor_3 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = horse_group
+        }
+        trigger = {
+            culture_group = horse_group
+            TECH_CASTLE_CONSTRUCTION = 5
+            TECH_FORTIFICATIONS_CONSTRUCTION = 4
+        }
+        is_active_trigger = {
+            culture_group = horse_group
+            has_building = ca_ani_castle_tower_09
+        }
+        upgrades_from = ca_horse_armor_2
+        prerequisites = { ca_ani_castle_tower_09 }
+
+        gold_cost = 250
+        build_time = 1200
+        ai_creation_factor = 30
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 1.7
+
+        knights = 95
+        light_cavalry = -50
+    }
+    ca_horse_armor_4 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = horse_group
+        }
+        trigger = {
+            culture_group = horse_group
+            TECH_CASTLE_CONSTRUCTION = 8
+            TECH_FORTIFICATIONS_CONSTRUCTION = 7
+        }
+        is_active_trigger = {
+            culture_group = horse_group
+            has_building = ca_ani_castle_tower_15
+        }
+        upgrades_from = ca_horse_armor_3
+        prerequisites = { ca_ani_castle_tower_15 }
+
+        gold_cost = 445
+        build_time = 1600
+        ai_creation_factor = 30
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 1.5
+
+        knights = 120
+        light_cavalry = -60
+    }
+
+    ca_horse_archer_1 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = horse_group
+        }
+        trigger = {
+            culture_group = horse_group
+            TECH_CASTLE_CONSTRUCTION = 1
+            TECH_FORTIFICATIONS_CONSTRUCTION = 1
+        }
+        is_active_trigger = {
+            culture_group = horse_group
+            has_building = ca_ani_castle_tower_01
+        }
+        prerequisites = { ca_ani_castle_tower_01 }
+
+        gold_cost = 375
+        build_time = 360
+        ai_creation_factor = 30
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 1.5
+
+        horse_archers = 30
+    }
+    ca_horse_archer_2 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = horse_group
+        }
+        trigger = {
+            culture_group = horse_group
+            TECH_CASTLE_CONSTRUCTION = 2
+            TECH_FORTIFICATIONS_CONSTRUCTION = 1
+        }
+        is_active_trigger = {
+            culture_group = horse_group
+            has_building = ca_ani_castle_tower_03
+        }
+        upgrades_from = ca_horse_archer_1
+        prerequisites = { ca_ani_castle_tower_03 }
+
+        gold_cost = 200
+        build_time = 750
+        ai_creation_factor = 30
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 1.6
+     
+        horse_archers = 50
+    }
+    ca_horse_archer_3 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = horse_group
+        }
+        trigger = {
+            culture_group = horse_group
+            TECH_CASTLE_CONSTRUCTION = 3
+            TECH_FORTIFICATIONS_CONSTRUCTION = 2
+        }
+        is_active_trigger = {
+            culture_group = horse_group
+            has_building = ca_ani_castle_tower_05
+        }
+        upgrades_from = ca_horse_archer_2
+        prerequisites = { ca_ani_castle_tower_05 }
+
+        gold_cost = 350
+        build_time = 1125
+        ai_creation_factor = 30
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 1.7
+     
+        horse_archers = 70
+    }
+    ca_horse_archer_4 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = horse_group
+        }
+        trigger = {
+            culture_group = horse_group
+            TECH_CASTLE_CONSTRUCTION = 6
+            TECH_FORTIFICATIONS_CONSTRUCTION = 5
+        }
+        is_active_trigger = {
+            culture_group = horse_group
+            has_building = ca_ani_castle_tower_11
+        }
+        upgrades_from = ca_horse_archer_3
+        prerequisites = { ca_ani_castle_tower_11 }
+
+        gold_cost = 600
+        build_time = 1500
+        ai_creation_factor = 30
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 1.7
+     
+        horse_archers = 90
+    }
+    ca_horse_archer_5 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = horse_group
+        }
+        trigger = {
+            culture_group = horse_group
+            TECH_CASTLE_CONSTRUCTION = 7
+            TECH_FORTIFICATIONS_CONSTRUCTION = 7
+        }
+        is_active_trigger = {
+            culture_group = horse_group
+            has_building = ca_ani_castle_tower_14
+        }
+        upgrades_from = ca_horse_archer_4
+        prerequisites = { ca_ani_castle_tower_14 }
+
+        gold_cost = 2000
+        build_time = 360
+        ai_creation_factor = 30
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 1.8
+     
+        horse_archers = 90
+    }
+
+    ca_horse_retinue_1 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = horse_group
+        }
+        trigger = {
+            culture_group = horse_group
+            TECH_CASTLE_CONSTRUCTION = 2
+            TECH_FORTIFICATIONS_CONSTRUCTION = 1
+        }
+        is_active_trigger = {
+            culture_group = horse_group
+            has_building = ca_ani_castle_tower_03
+        }
+        prerequisites = { ca_ani_castle_tower_03 }
+
+        gold_cost = 134
+        build_time = 365
+        ai_creation_factor = 30
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 1.5
+
+        light_cavalry = 25
+        retinuesize = 20
+        light_cavalry_morale = 0.2
+    }
+    ca_horse_retinue_2 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = horse_group
+        }
+        trigger = {
+            culture_group = horse_group
+            TECH_CASTLE_CONSTRUCTION = 5
+            TECH_FORTIFICATIONS_CONSTRUCTION = 5
+        }
+        is_active_trigger = {
+            culture_group = horse_group
+            has_building = ca_ani_castle_tower_10
+        }
+        upgrades_from = ca_horse_retinue_1
+        prerequisites = { ca_ani_castle_tower_10 }
+
+        gold_cost = 500
+        build_time = 900
+        ai_creation_factor = 30
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 1.6
+
+        light_cavalry = 50
+        retinuesize = 30
+        light_cavalry_morale = 0.3
+        light_cavalry_defensive = 0.2
+    }
+    ca_horse_retinue_3 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = horse_group
+        }
+        trigger = {
+            culture_group = horse_group
+            TECH_CASTLE_CONSTRUCTION = 7
+            TECH_FORTIFICATIONS_CONSTRUCTION = 6
+        }
+        is_active_trigger = {
+            culture_group = horse_group
+            has_building = ca_ani_castle_tower_13
+        }
+        upgrades_from = ca_horse_retinue_2
+        prerequisites = { ca_ani_castle_tower_01 }
+
+        gold_cost = 1000
+        build_time = 1500
+        ai_creation_factor = 30
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 1.7
+
+        light_cavalry = 75
+        retinuesize = 30
+        light_cavalry_morale = 0.5
+        light_cavalry_defensive = 0.3
+    }
+
+    ca_horse_speciality_1 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = horse_group
+            FROMFROM = { is_capital = yes }
+        }
+        trigger = {
+            culture_group = horse_group
+            TECH_CASTLE_CONSTRUCTION = 4
+            TECH_FORTIFICATIONS_CONSTRUCTION = 4
+        }
+        is_active_trigger = {
+            culture_group = horse_group
+            has_building = ca_ani_castle_tower_08
+            FROMFROM = { is_capital = yes }
+        }
+        prerequisites = { ca_ani_castle_tower_08 }
+
+        gold_cost = 400
+        build_time = 750
+        ai_creation_factor = 30
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 1.0
+
+        levy_size = 0.05
+        global_movement_speed = 0.10
+    }
+    ca_horse_speciality_2 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = horse_group
+            FROMFROM = { is_capital = yes }
+        }
+        trigger = {
+            culture_group = horse_group
+            TECH_CASTLE_CONSTRUCTION = 8
+            TECH_FORTIFICATIONS_CONSTRUCTION = 8
+        }
+        is_active_trigger = {
+            culture_group = horse_group
+            has_building = ca_ani_castle_tower_16
+            FROMFROM = { is_capital = yes }
+        }
+        upgrades_from = ca_horse_speciality_1
+        prerequisites = { ca_ani_castle_tower_16 }
+
+        gold_cost = 2000
+        build_time = 1750
+        ai_creation_factor = 30
+        ai_feudal_modifier = 50
+        extra_tech_building_start = 1.7
+
+        levy_size = 0.10
+        global_movement_speed = 0.15
     }
 }
 
