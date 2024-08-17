@@ -103,3 +103,98 @@ title_decisions = {
         }
     }
 }
+
+decisions = {
+    adopt_horse_religion = {
+        is_high_prio = yes
+        ai_check_interval = 3
+
+        potential = {
+            culture_group = horse_group
+            NOT = { religion = Horse_religion }
+            can_change_religion = yes
+        }
+        allow = {
+            is_adult = yes
+            culture_group = horse_group
+            has_regent = no
+            is_incapable = no
+            can_change_religion = yes
+        }
+
+        effect = {
+            religion = Horse_religion
+
+            if = {
+                limit = {
+                    OR = {
+                        independent = yes
+                        liege = { NOT = { religion = Horse_religion } }
+                    }
+                }
+                if = {
+                    limit = {
+                        has_game_rule = {
+                            name = animals_bonus_levy
+                            value = Few
+                        }
+                    }
+                    spawn_unit = {
+                        province = capital_scope
+                        home = capital_scope
+                        owner = ROOT
+                        leader = none
+                        troops = {
+                            light_cavalry = 1250
+                            knights = 250
+                        }
+                        attrition = 0.1
+                        maintenance = no
+                    }
+                }
+                else_if = {
+                    limit = {
+                        has_game_rule = {
+                            name = animals_bonus_levy
+                            value = Normal
+                        }
+                    }
+                    spawn_unit = {
+                        province = capital_scope
+                        home = capital_scope
+                        owner = ROOT
+                        leader = none
+                        troops = {
+                            light_cavalry = { 2750 2750 }
+                            knights = { 750 750 }
+                        }
+                        attrition = 0.1
+                        maintenance = no
+
+                    }
+                }
+                else_if = {
+                    limit = {
+                        has_game_rule = {
+                            name = animals_bonus_levy
+                            value = Many
+                        }
+                    }
+                    spawn_unit = {
+                        province = capital_scope
+                        home = capital_scope
+                        owner = ROOT
+                        leader = none
+                        troops = {
+                            light_cavalry = { 6000 6000 }
+                            knights = { 1000 1000 }
+                        }
+                        attrition = 0.05
+                        maintenance = no
+
+                    }
+                }
+            }
+        }
+    }
+}
