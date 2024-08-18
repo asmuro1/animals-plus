@@ -9,8 +9,8 @@ castle = {
                     culture = alan
                     culture_group = iranian
                 }
-                Is_really_animal_trigger = no
             }
+            Is_really_animal_trigger = no
         }
         trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
         gold_cost = 100
@@ -545,6 +545,7 @@ tribal = {
                     culture = alan
                 }
             }
+            Is_really_animal_trigger = no
         }
         trigger = { TECH_CAVALRY = 0 }
         prestige_cost = 100
@@ -554,5 +555,254 @@ tribal = {
         ai_creation_factor = 10
 
         extra_tech_building_start = 4.0
+    }
+
+    tb_horse_light_1 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = horse_group
+        }
+        trigger = {
+            culture_group = horse_group
+            TECH_CASTLE_CONSTRUCTION = 0
+        }
+        is_active_trigger = {
+            culture_group = horse_group
+        }
+        prerequisites = { tb_ani_tribal_tower_1 }
+
+        prestige_cost = 100
+        build_time = 200
+        ai_creation_factor = 50
+        extra_tech_building_start = 0.8
+
+        light_cavalry = 100
+    }
+    tb_horse_light_2 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = horse_group
+        }
+        trigger = {
+            culture_group = horse_group
+            TECH_CASTLE_CONSTRUCTION = 1
+            TECH_CITY_CONSTRUCTION = 1
+        }
+        is_active_trigger = {
+            culture_group = horse_group
+        }
+        prerequisites = { tb_ani_tribal_tower_2 }
+        upgrades_from = tb_horse_light_1
+
+        convert_to_castle = ca_horse_light_1
+
+        prestige_cost = 200
+        build_time = 540
+        ai_creation_factor = 45
+        extra_tech_building_start = 1.0
+
+        light_cavalry = 100
+    }
+    tb_horse_light_3 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = horse_group
+        }
+        trigger = {
+            culture_group = horse_group
+            TECH_CASTLE_CONSTRUCTION = 1
+            TECH_CITY_CONSTRUCTION = 1
+        }
+        is_active_trigger = {
+            culture_group = horse_group
+        }
+        prerequisites = { tb_ani_tribal_tower_3 }
+        upgrades_from = tb_horse_light_2
+
+        prestige_cost = 300
+        build_time = 540
+        ai_creation_factor = 40
+        extra_tech_building_start = 1.2
+
+        light_cavalry = 100
+    }
+    tb_horse_light_4 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = horse_group
+        }
+        trigger = {
+            culture_group = horse_group
+            TECH_CASTLE_CONSTRUCTION = 1
+            TECH_CITY_CONSTRUCTION = 1
+            TECH_FORTIFICATIONS_CONSTRUCTION = 1
+        }
+        is_active_trigger = {
+            culture_group = horse_group
+        }
+        prerequisites = { tb_ani_tribal_tower_4 }
+        upgrades_from = tb_horse_light_3
+
+        convert_to_castle = ca_horse_light_2
+
+        prestige_cost = 400
+        build_time = 540
+        ai_creation_factor = 35
+        extra_tech_building_start = 1.2
+
+        light_cavalry = 150
+    }
+
+    tb_horse_archer_1 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = horse_group
+        }
+        trigger = {
+            culture_group = horse_group
+            TECH_CASTLE_CONSTRUCTION = 0
+        }
+        is_active_trigger = {
+            culture_group = horse_group
+        }
+        prerequisites = { tb_ani_tribal_tower_1 }
+
+        prestige_cost = 100
+        build_time = 200
+        ai_creation_factor = 50
+        extra_tech_building_start = 0.8
+        
+        horse_archers = 50
+    }
+    tb_horse_archer_2 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = horse_group
+        }
+        trigger = {
+            culture_group = horse_group
+            TECH_CASTLE_CONSTRUCTION = 1
+            TECH_CITY_CONSTRUCTION = 1
+        }
+        is_active_trigger = {
+            culture_group = horse_group
+        }
+        prerequisites = { tb_ani_tribal_tower_2 }
+        upgrades_from = tb_horse_archer_1
+
+        convert_to_castle = ca_horse_archer_1
+
+        prestige_cost = 200
+        build_time = 540
+        ai_creation_factor = 45
+        extra_tech_building_start = 1.0
+
+        horse_archers = 55
+    }
+    tb_horse_archer_3 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = horse_group
+        }
+        trigger = {
+            culture_group = horse_group
+            TECH_CASTLE_CONSTRUCTION = 1
+            TECH_CITY_CONSTRUCTION = 1
+        }
+        is_active_trigger = {
+            culture_group = horse_group
+        }
+        prerequisites = { tb_ani_tribal_tower_3 }
+        upgrades_from = tb_horse_archer_2
+
+        prestige_cost = 300
+        build_time = 540
+        ai_creation_factor = 40
+        extra_tech_building_start = 1.2
+
+        horse_archers = 60
+    }
+    tb_horse_archer_4 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = horse_group
+        }
+        trigger = {
+            culture_group = horse_group
+            TECH_CASTLE_CONSTRUCTION = 1
+            TECH_CITY_CONSTRUCTION = 1
+            TECH_FORTIFICATIONS_CONSTRUCTION = 1
+        }
+        is_active_trigger = {
+            culture_group = horse_group
+        }
+        prerequisites = { tb_ani_tribal_tower_4 }
+        upgrades_from = tb_horse_archer_3
+
+        prestige_cost = 400
+        build_time = 540
+        ai_creation_factor = 35
+        extra_tech_building_start = 1.2
+
+        horse_archers = 70
+    }
+
+    tb_horse_retinue_1 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = horse_group
+        }
+        trigger = {
+            culture_group = horse_group
+            TECH_CASTLE_CONSTRUCTION = 0
+        }
+        is_active_trigger = {
+            culture_group = horse_group
+        }
+        prerequisites = { tb_ani_tribal_tower_1 }
+
+        prestige_cost = 100
+        build_time = 200
+        ai_creation_factor = 50
+        extra_tech_building_start = 0.8
+        
+        retinuesize = 10
+        light_cavalry = 50
+    }
+    tb_horse_retinue_2 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = horse_group
+        }
+        trigger = {
+            culture_group = horse_group
+            TECH_CASTLE_CONSTRUCTION = 1
+            TECH_CITY_CONSTRUCTION = 1
+        }
+        is_active_trigger = {
+            culture_group = horse_group
+        }
+        prerequisites = { tb_ani_tribal_tower_3 }
+        upgrades_from = tb_horse_retinue_1
+
+        convert_to_castle = ca_horse_retinue_1
+
+        prestige_cost = 300
+        build_time = 700
+        ai_creation_factor = 45
+        extra_tech_building_start = 1.5
+
+        retinuesize = 20
+        light_cavalry = 100
     }
 }
