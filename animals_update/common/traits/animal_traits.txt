@@ -159,7 +159,7 @@ horse_caste_merchant = {
     }
 
     birth = 0 #given by on action birth event
-    opposites = { horse_caste_warrior }
+    opposites = { horse_caste_warrior horse_caste_undignified }
     religious = yes
     ruler_designer_cost = 5
 
@@ -179,7 +179,7 @@ horse_caste_warrior = {
     }
 
     birth = 0 #given by on action birth event
-    opposites = { horse_caste_merchant  }
+    opposites = { horse_caste_merchant horse_caste_undignified }
     religious = yes
     ruler_designer_cost = 20
 

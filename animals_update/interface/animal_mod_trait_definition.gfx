@@ -81,4 +81,36 @@ spriteTypes = {
       norefcount = yes
       effectFile = "gfx/FX/buttonstate_linear.lua"
     }
+
+    # I use the natural pagan branch for those trait,
+    # they are rarely used by players anyway
+
+    spriteType = {
+      name = "GFX_trait_horse_caste_merchant"
+      texturefile = "gfx/traits/pagan_branch_1.tga"
+      noOfFrames = 1
+      norefcount = yes
+      effectFile = "gfx/FX/buttonstate_linear.lua"
+    }
+    #spriteType = {
+    #  name = "GFX_trait_horse_caste_tribal" # not planned, but why not later
+    #  texturefile = "gfx/traits/pagan_branch_2.tga"
+    #  noOfFrames = 1
+    #  norefcount = yes
+    #  effectFile = "gfx/FX/buttonstate_linear.lua"
+    #}
+    spriteType = {
+      name = "GFX_trait_horse_caste_warrior"
+      texturefile = "gfx/traits/pagan_branch_3.tga"
+      noOfFrames = 1
+      norefcount = yes
+      effectFile = "gfx/FX/buttonstate_linear.lua"
+    }
+    spriteType = {
+      name = "GFX_trait_horse_caste_undignified"
+      texturefile = "gfx/traits/pagan_branch_4.tga"
+      noOfFrames = 1
+      norefcount = yes
+      effectFile = "gfx/FX/buttonstate_linear.lua"
+    }
 }
