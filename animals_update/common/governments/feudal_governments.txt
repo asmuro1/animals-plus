@@ -31,9 +31,17 @@ feudal_governments = {
 			NOT = {	religion_group = muslim	}
 			NOT = { is_government_potential = roman_imperial_government }
 			NOT = { is_government_potential = order_government }
-			NAND = {
-				Is_really_animal_trigger = yes
-				religion_group = Animals_grups
+			NOR = {
+				is_government_potential = Bear_feudal_gov
+				is_government_potential = Hedge_feudal_gov
+				is_government_potential = panda_bureaucratic_gov
+				is_government_potential = panda_bureaucratic_gov_bis
+				is_government_potential = Duck_feudal_gov
+				is_government_potential = Eleph_feudal_gov
+				is_government_potential = cat_feudal_gov
+				is_government_potential = dog_feudal_gov
+				is_government_potential = horse_feudal_gov
+				is_government_potential = horse_merchant_gov
 			}
 			NAND = {
 				culture_group = tibetan_group
