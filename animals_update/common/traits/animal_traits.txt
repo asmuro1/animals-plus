@@ -135,3 +135,59 @@ trait_unconcious = {
     is_illness = yes
     incapacitating = yes
 }
+
+horse_caste_undignified = {
+    potential = {
+        culture_group = horse_group
+        religion = Horse_religion
+        age < 6
+    }
+
+    birth = 0 #given by on action birth event
+    can_hold_titles = no
+    opposites = { horse_caste_warrior horse_caste_warrior }
+    religious = yes
+    ruler_designer_cost = -40
+
+    ai_honor = -5
+}
+horse_caste_merchant = {
+    potential = {
+        culture_group = horse_group
+        religion = Horse_religion
+        is_adult = yes
+    }
+
+    birth = 0 #given by on action birth event
+    opposites = { horse_caste_warrior }
+    religious = yes
+    ruler_designer_cost = 5
+
+    stewardship = 5
+    martial = -3
+    learning = -2
+
+    ai_honor = -15
+    ai_greed = 15
+    ai_rationality = 30
+}
+horse_caste_warrior = {
+    potential = {
+        culture_group = horse_group
+        religion = Horse_religion
+        is_adult = yes
+    }
+
+    birth = 0 #given by on action birth event
+    opposites = { horse_caste_merchant  }
+    religious = yes
+    ruler_designer_cost = 20
+
+    martial = 5
+    stewardship = -3
+    intrigue = -2
+
+    ai_zeal = 5
+    ai_honor = 30
+    ai_rationality = -10
+}
