@@ -150,7 +150,7 @@ horse_caste_undignified = {
     ruler_designer_cost = -40
 
     ai_honor = -5
-    vassal_opinion = -25
+    vassal_opinion = -20
 }
 horse_caste_merchant = {
     potential = {
