@@ -21,3 +21,10 @@ sympathy_animals_religions_desc;This character, throught not animal, has a spaci
 
 trait_unconcious;unconcious;inconscient;;;;;;;;;;;;x
 trait_unconcious_desc; ;;;;;;;;;;;;;x
+
+horse_caste_undignified;undignified;indigne;;;;;;;;;;;;x
+horse_caste_undignified_desc;That horse did not do the ritual needed to be categorized as a good ruler;Ce cheval n'a pas fait les rites de passages nécessaire pour devenir un bon dirigeant;;;;;;;;;;;;x
+horse_caste_merchant;horse merchant;cheval marchand;;;;;;;;;;;;x
+horse_caste_merchant_desc;An horse that believe that economic prosperity is more important than military prosperity;Un cheval qui pense que la prospérité économique est plus important que la prospérité militaire;;;;;;;;;;;;x
+horse_caste_warrior;horse warrior;guerrier cheval;;;;;;;;;;;;x
+horse_caste_warrior_desc;An horse that believe that military prosperity is more important than economic prosperity;Un cheval qui pense que la prospérité militaire est plus important que la prospérité économique;;;;;;;;;;;;x
