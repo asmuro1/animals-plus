@@ -271,3 +271,18 @@ character_event = {
         culture = horse
     }
 }
+
+## quest event
+# event 179: caste trait undignified on birth (on_action)
+
+# event 179
+character_event = {
+    id = ani_plus.179
+
+    hide_window = yes
+    is_triggered_only = yes # on action
+
+    immediate = {
+        add_trait = horse_caste_undignified
+    }
+}
