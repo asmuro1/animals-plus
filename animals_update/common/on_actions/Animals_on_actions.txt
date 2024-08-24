@@ -5,6 +5,7 @@ on_birth = {
 		ani_plus.005 #force animal portrait
 		ani_plus.006 #birth event for bear (multiple child and number of childs' bonus) and panda (multiple child, more than bear)
 		ani_plus.108
+		ani_plus.179 # horse trait on birth
 	}
 }
 
