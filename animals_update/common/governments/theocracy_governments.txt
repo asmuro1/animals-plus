@@ -30,6 +30,7 @@ theocracy_governments = {
 			Eleph_feudal_gov
 			cat_feudal_gov
 			dog_feudal_gov
+			horse_feudal_gov horse_merchant_gov
 		}
 		frame_suffix = "_theocracy"
 		title_prefix = "temple_"
