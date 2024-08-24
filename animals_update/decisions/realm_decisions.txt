@@ -2674,6 +2674,13 @@ decisions = {
 			}
 			else_if = {
 				limit = {
+					religion = Horse_religion
+					culture_group = horse_group
+				}
+				set_government_type = horse_feudal_gov
+			}
+			else_if = {
+				limit = {
 					religion_group = muslim
 				}
 
@@ -2914,6 +2921,13 @@ decisions = {
 					culture_group = dog_group
 				}
 				set_government_type = dog_feudal_gov
+			}
+			else_if = {
+				limit = {
+					religion = Horse_religion
+					culture_group = horse_group
+				}
+				set_government_type = horse_feudal_gov
 			}
 			else_if = {
 				limit = {
