@@ -195,6 +195,13 @@ decisions = {
                     }
                 }
             }
+        
+            if = {
+                limit = {
+                    is_feudal = yes
+                }
+                set_government_type = horse_feudal_gov
+            }
         }
     }
 
