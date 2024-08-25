@@ -423,7 +423,7 @@ decisions = {
             custom_tooltip = {
                 text = HORSE_TT_START_RITE_PREPARATION
 
-                # character_event = { id = ani_plus.180 days = 10 random = 4 }
+                character_event = { id = ani_plus.180 days = 10 random = 4 }
             }
         }
 

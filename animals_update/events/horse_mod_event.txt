@@ -272,8 +272,9 @@ character_event = {
     }
 }
 
-## quest event
+## caste and rite events
 # event 179: caste trait undignified on birth (on_action)
+# event 180: first rite preparation ended
 
 # event 179
 character_event = {
@@ -284,5 +285,40 @@ character_event = {
 
     immediate = {
         add_trait = horse_caste_undignified
+    }
+}
+
+# event 180
+character_event = {
+    id = ani_plus.180
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    is_triggered_only = yes
+
+    desc = DESC_ani_180
+
+    option = {
+        name = OPT_ani_180
+
+        any_courtier = {
+            limit = {
+                age = 6
+                NOT = { age = 9 }
+                culture_group = horse_group
+                has_landed_title = no
+            }
+            custom_tooltip = {
+                text = TT_ani_180_1st_rite_success
+
+                set_character_flag = rite_1_success
+            }
+
+        }
+    }
+
+    after = {
+        clr_character_flag = horse_organize_rite_1
     }
 }
