@@ -323,4 +323,31 @@ decisions = {
             }
         }
     }
+
+    make_younth_rite = {
+        only_rulers = yes
+        ai_check_interval = 12
+
+        is_high_prio = yes
+
+        potential = {
+            always = yes
+        }
+        allow = {
+            always = yes
+        }
+
+        effect = {
+
+        }
+
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0.1
+                NOT = { ai_honor = 0 }
+            }
+        }
+    }
 }
