@@ -199,9 +199,12 @@ DESC_ani_177;It seems that no one could do anything to heal;Il semblerai que per
 OPT_ani_177;I hope to be well again soon enough;J'espère rapidement récupérer.;;;;;;;;;;;;x
 DESC_ani_178;I finnaly healed from my injuries!;J'ai enfin guérit de mes blessures;;;;;;;;;;;;x
 OPT_ani_178;What happened tp my body?;Qu'est-t-il arrivé à mon corps?;;;;;;;;;;;;x
+DESC_ani_180;The preparation for the youth rite just ended. The rite shall start;Les préparations du rite de jeunesse sont terminés. Le grand rite va enfin pouvoir commencer;;;;;;;;;;;;x
+OPT_ani_180;It is a big success!;C'est un grand succés!;;;;;;;;;;;;x
 
 ## TOOLTIPS
 TT_ani_172_went_well;everything goes well;tout se passe comme prévu;;;;;;;;;;;;x
 TT_ani_172_went_wrong;an accident occur;un accident se produit;;;;;;;;;;;;x
 TT_ani_177_healed;heal from injury;est soigné de ses blessures;;;;;;;;;;;;x
 TT_ani_177_injury_is_worst;the injuries goes wrong;les blessures s'empirent;;;;;;;;;;;;x
+TT_ani_180_1st_rite_success;did the rite successfully;fait le rite sans aucun problèmes;;;;;;;;;;;;x
