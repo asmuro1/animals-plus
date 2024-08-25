@@ -319,7 +319,11 @@ adopt_horse_religion;Adopt horses' religion;Adopter la religion des chevaux;;;;;
 adopt_horse_religion_desc;As an horse, you can freely choose to convert yourself to the associated religion;En tant que cheval, tu peux librement choisir de te convertir à la religion associé;;;;;;;;;;;;x
 create_war_hord;Form [d_war_hord.GetName];Former [d_war_hord.GetName];;;;;;;;;;;;x
 create_war_hord_desc;By using your influence, you can defend your religion with a veteran groups of soldiers;En utilisant mon influence personnel, il est possible de créer une troupe de mercennaires afin de défendre les terres de ma religion;;;;;;;;;;;;x
+make_younth_rite;Organize the youth rite;Oraniser le rite de jeunesse;;;;;;;;;;;;x
+make_younth_rite_desc;As an horse, the young children need to learn how to act. The ritual is the first one to help them grow strong.;Tout chevaux prend a besoin de temps pour grandir. Ce rituel est le premier réalisable pour les aider à grandir;;;;;;;;;;;;x
 
 ### tooltip
 tt_horse_horse_building;Has constructed an horse building;A construit un bâtiment de cheval;;;;;;;;;;;;x
 CREATED_HOLY_ORDER_HORSE_TOOLTIP;§Y[d_war_hord.GetName]§! created;§Y[d_war_hord.GetName]§! est créée;;;;;;;;;;;;x
+HORSE_TT_DID_NOT_PARTICIPATE_RITE_1;Did never gone through the youth rite;N'a jamais effectué le rite de jeunesse;;;;;;;;;;;;x
+HORSE_TT_START_RITE_PREPARATION;Start the rite's preparations;Commence les préparation du rite;;;;;;;;;;;;x

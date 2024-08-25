@@ -333,6 +333,7 @@ decisions = {
         potential = {
             culture_group = horse_group
             religion = Horse_religion
+            NOT = { has_character_flag = horse_organize_rite_1 }
         }
         allow = {
             #preparation costs
@@ -368,12 +369,6 @@ decisions = {
             }
 
             war = no
-
-            custom_tooltip = {
-                text = HORSE_TT_NOT_ORGANIZING_RITE_1
-
-                NOT = { has_character_flag = horse_organize_rite_1 }
-            }
 
             any_courtier = {
                 age = 6
