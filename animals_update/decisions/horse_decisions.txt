@@ -203,6 +203,19 @@ decisions = {
                 set_government_type = horse_feudal_gov
             }
         }
+    
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+
+                independent = no
+                liege = {
+                    NOT = { religion = Horse_religion }
+                }
+            }
+        }
     }
 
     create_war_hord = {
@@ -295,6 +308,18 @@ decisions = {
                 any_player = {
                     narrative_event = { id = ani_plus.070 }
                 }
+            }
+        }
+    
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0.4
+            }
+            modifier = {
+                factor = 0.25
+                trait = cynical
             }
         }
     }
