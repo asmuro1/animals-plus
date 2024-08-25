@@ -380,7 +380,7 @@ decisions = {
                 NOT = { age = 9 }
                 culture_group = horse_group
                 has_landed_title = no
-                
+
                 custom_tooltip = {
                     text = HORSE_TT_DID_NOT_PARTICIPATE_RITE_1
 
@@ -391,7 +391,45 @@ decisions = {
         }
 
         effect = {
+            set_character_flag = horse_organize_rite_1
+            
+            # preparation price
+            if = {
+                limit = {
+                    tier = BARON
+                }
+                wealth = -10
+            }
+            if = {
+                limit = {
+                    tier = COUNT
+                }
+                wealth = -25
+            }
+            if = {
+                limit = {
+                    tier = DUKE
+                }
+                wealth = -75
+            }
+            if = {
+                limit = {
+                    tier = KING
+                }
+                wealth = -200
+            }
+            if = {
+                limit = {
+                    tier = EMPEROR
+                }
+                wealth = -500
+            }
 
+            custom_tooltip = {
+                text = HORSE_TT_START_RITE_PREPARATION
+
+                # character_event = { id = ani_plus.180 days = 10 random = 4 }
+            }
         }
 
         ai_will_do = {
