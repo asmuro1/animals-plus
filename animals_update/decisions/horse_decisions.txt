@@ -331,10 +331,63 @@ decisions = {
         is_high_prio = yes
 
         potential = {
-            always = yes
+            culture_group = horse_group
+            religion = Horse_religion
         }
         allow = {
-            always = yes
+            #preparation costs
+            conditionnal_tooltip = {
+                trigger = {
+                    tier = BARON
+                }
+                wealth = 10
+            }
+            conditionnal_tooltip = {
+                trigger = {
+                    tier = COUNT
+                }
+                wealth = 25
+            }
+            conditionnal_tooltip = {
+                trigger = {
+                    tier = DUKE
+                }
+                wealth = 75
+            }
+            conditionnal_tooltip = {
+                trigger = {
+                    tier = KING
+                }
+                wealth = 200
+            }
+            conditionnal_tooltip = {
+                trigger = {
+                    tier = EMPEROR
+                }
+                wealth = 500
+            }
+
+            war = no
+
+            custom_tooltip = {
+                text = HORSE_TT_NOT_ORGANIZING_RITE_1
+
+                NOT = { has_character_flag = horse_organize_rite_1 }
+            }
+
+            any_courtier = {
+                age = 6
+                NOT = { age = 9 }
+                culture_group = horse_group
+                has_landed_title = no
+                
+                custom_tooltip = {
+                    text = HORSE_TT_DID_NOT_PARTICIPATE_RITE_1
+
+                    NOT = { has_character_flag = rite_1_success }
+                }
+
+            }
         }
 
         effect = {
