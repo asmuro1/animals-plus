@@ -304,17 +304,20 @@ character_event = {
     option = {
         name = OPT_ani_180
 
-        any_courtier = {
-            limit = {
-                age = 6
-                NOT = { age = 9 }
-                culture_group = horse_group
-                has_landed_title = no
-            }
-            #custom_tooltip = {
-            #    text = TT_ani_180_1st_rite_success
+        hidden_tooltip = {
+            generate_tooltip = no
+
+            any_courtier = {
+                limit = {
+                    age = 6
+                    NOT = { age = 9 }
+                    culture_group = horse_group
+                    has_landed_title = no
+                }
+
                 set_character_flag = rite_1_success
-            #}
+
+            }
         }
 
         random_list = {

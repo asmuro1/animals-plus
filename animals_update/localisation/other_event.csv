@@ -207,4 +207,5 @@ TT_ani_172_went_well;everything goes well;tout se passe comme prévu;;;;;;;;;;;;x
 TT_ani_172_went_wrong;an accident occur;un accident se produit;;;;;;;;;;;;x
 TT_ani_177_healed;heal from injury;est soigné de ses blessures;;;;;;;;;;;;x
 TT_ani_177_injury_is_worst;the injuries goes wrong;les blessures s'empirent;;;;;;;;;;;;x
-TT_ani_180_1st_rite_success;did the rite successfully;fait le rite sans aucun problèmes;;;;;;;;;;;;x
+TT_ani_180_went_well;everything goes well;tout se passe comme prévu;;;;;;;;;;;;x
+TT_ani_180_went_wrong;an accident occur;tout ne se passe pas comme prévu;;;;;;;;;;;;x
