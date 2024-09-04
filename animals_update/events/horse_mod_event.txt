@@ -275,6 +275,8 @@ character_event = {
 ## caste and rite events
 # event 179: caste trait undignified on birth (on_action)
 # event 180: first rite preparation ended
+# event 181: first rite total success
+# event 182: first rite organization problem
 
 # event 179
 character_event = {
@@ -309,14 +311,46 @@ character_event = {
                 culture_group = horse_group
                 has_landed_title = no
             }
-            custom_tooltip = {
-                text = TT_ani_180_1st_rite_success
-
+            #custom_tooltip = {
+            #    text = TT_ani_180_1st_rite_success
                 set_character_flag = rite_1_success
+            #}
+        }
+
+        random_list = {
+            95 = {
+                custom_tooltip = {
+                    text = TT_ani_180_went_well
+
+                    character_event = { id = ani_plus.181 days = 1 }
+                }
+            }
+            05 = {
+                custom_tooltip = {
+                    text = TT_ani_180_went_wrong
+
+                    character_event = { id = ani_plus.182 days = 1 }
+                }
             }
 
         }
     }
+
+    after = {
+        clr_character_flag = horse_organize_rite_1
+    }
+}
+
+character_event = {
+    id = ani_plus.181
+
+    after = {
+        clr_character_flag = horse_organize_rite_1
+    }
+}
+
+character_event = {
+    id = ani_plus.182
 
     after = {
         clr_character_flag = horse_organize_rite_1
