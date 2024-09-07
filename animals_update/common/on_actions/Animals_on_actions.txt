@@ -1,5 +1,18 @@
+on_startup = {
+	events = {
+		ani_plus.105 #updating duck dev maximum potential
+		# ani_plus.157 # uncomment for repairing old save done without this event
+	}
+}
 
-# character
+on_chronicle_start = {
+	events = {
+		ani_plus.003 #setting bear family bonuses at game start
+		ani_plus.157 #creating new cat societies's grandmaster (as on_society_failed_to_find_new_leader doesn't trigger on game launch).
+	}
+}
+
+
 on_birth = {
 	events = {
 		ani_plus.005 #force animal portrait
@@ -9,11 +22,21 @@ on_birth = {
 	}
 }
 
-# Character converts culture, for whatever reason. ROOT is the character after conversion and the FROM scope has the old culture.
-on_character_convert_culture = {
+on_adolescence = {
 	events = {
-		ani_plus.004 #remove cultural modifier
-		ani_plus.005 #force animal portrait and add cultural modifier
+		ani_plus.183
+	}
+}
+
+on_yearly_pulse = {
+	events = {
+		ani_plus.105 #updating duck dev maximum potential
+		ani_plus.144 #quest tombola for cat society
+	}
+}
+on_bi_yearly_pulse = {
+	events = {
+		ani_plus.136 #force cat ai to join one of its society 
 	}
 }
 
@@ -23,62 +46,16 @@ on_death = {
 	}
 }
 
-#fire for settlement looted
-on_loot_settlement = {
+on_character_convert_culture = {
 	events = {
-		ani_plus.066 # hedgehog province modifier
-		ani_plus.107 # reduce development level for duck
-	}
-	random_events = {
-		cat_invasion_start = {
-			5 = ani_plus.128
-			95 = 0
-		}
-	}
-}
-
-#fire for besiege settlement
-on_siege_over_winner = {
-	events = {
-		ani_plus.031 # deletting big construction  (theodosian wall etc.)
-		ani_plus.068 # hedgehog province modifier
-		ani_plus.107 # reduce development level for duck
-	}
-	random_events = {
-		cat_invasion_start = {
-			15 = ani_plus.128
-			85 = 0
-		}
-	}
-}
-
-on_new_holder = {
-	events = {
-		ani_plus.164 # removing dog unity and council laws on holder change 
-	}
-}
-on_new_holder_inheritance = {
-	events = {
-		ani_plus.035 # tournament winner: loosing associated trait
-		ani_plus.116 # updating elephant law
-	}
-}
-on_new_holder_usurpation = {
-	events = {
-		ani_plus.125 # cat holder change 
+		ani_plus.004 #remove cultural modifier
+		ani_plus.005 #force animal portrait and add cultural modifier
 	}
 }
 
 on_war_started = {
 	events = {
 		ani_plus.043 #  hedgehog morale bonuses/maluses at war start
-	}
-}
-
-on_chronicle_start = {
-	events = {
-		ani_plus.003 #setting bear family bonuses at game start
-		ani_plus.157 #creating new cat societies's grandmaster (as on_society_failed_to_find_new_leader doesn't trigger on game launch).
 	}
 }
 
@@ -105,22 +82,53 @@ on_war_ended_defeat = {
 	}
 }
 
+on_loot_settlement = {
+	events = {
+		ani_plus.066 # hedgehog province modifier
+		ani_plus.107 # reduce development level for duck
+	}
+	random_events = {
+		cat_invasion_start = {
+			5 = ani_plus.128
+			95 = 0
+		}
+	}
+}
+
+on_siege_over_winner = {
+	events = {
+		ani_plus.031 # deletting big construction  (theodosian wall etc.)
+		ani_plus.068 # hedgehog province modifier
+		ani_plus.107 # reduce development level for duck
+	}
+	random_events = {
+		cat_invasion_start = {
+			15 = ani_plus.128
+			85 = 0
+		}
+	}
+}
+
 on_holding_building_start = {
 	events = {
 		ani_plus.095 #updating panda's bureau building
 	}
 }
 
-on_startup = {
+on_new_holder = {
 	events = {
-		ani_plus.105 #updating duck dev maximum potential
-		# ani_plus.157 # uncomment for repairing old save done without this event
+		ani_plus.164 # removing dog unity and council laws on holder change 
 	}
 }
-on_yearly_pulse = {
+on_new_holder_inheritance = {
 	events = {
-		ani_plus.105 #updating duck dev maximum potential
-		ani_plus.144 #quest tombola for cat society
+		ani_plus.035 # tournament winner: loosing associated trait
+		ani_plus.116 # updating elephant law
+	}
+}
+on_new_holder_usurpation = {
+	events = {
+		ani_plus.125 # cat holder change 
 	}
 }
 
@@ -136,8 +144,3 @@ on_character_ask_to_join_society = {
 	}
 }
 
-on_bi_yearly_pulse = {
-	events = {
-		ani_plus.136 #force cat ai to join one of its society 
-	}
-}

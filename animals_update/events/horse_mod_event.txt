@@ -277,6 +277,7 @@ character_event = {
 # event 180: first rite preparation ended
 # event 181: first rite total success
 # event 182: first rite organization problem
+# event 183: hidden event to setup rite 2 by adolescence
 
 # event 179
 character_event = {
@@ -386,5 +387,16 @@ character_event = {
 
     after = {
         clr_character_flag = horse_organize_rite_1
+    }
+}
+
+# event 183
+character_event = {
+    id = ani_plus.183
+
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
     }
 }
