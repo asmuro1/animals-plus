@@ -286,6 +286,19 @@ character_event = {
     hide_window = yes
     is_triggered_only = yes # on action
 
+    trigger = {
+        culture_group = horse_group
+        OR = {
+            father = {
+                has_landed_title = yes
+                culture_group = horse_group
+            }
+            mother = {
+                has_landed_title = yes
+                culture_group = horse_group
+            }
+        }
+    }
     immediate = {
         add_trait = horse_caste_undignified
     }
@@ -396,6 +409,35 @@ character_event = {
 
     hide_window = yes
     is_triggered_only = yes
+
+    trigger = {
+        culture_group = horse_group
+        OR = {
+            AND = {
+                has_landed_title = yes
+                OR = {
+                    government = horse_feudal_gov
+                    government = horse_merchant_gov
+                }
+            }
+            father = { 
+                has_landed_title = yes
+                culture_group = horse_group
+                OR = {
+                    government = horse_feudal_gov
+                    government = horse_merchant_gov
+                }
+            }
+            mother = {
+                has_landed_title = yes
+                culture_group = horse_group
+                OR = {
+                    government = horse_feudal_gov
+                    government = horse_merchant_gov
+                }
+            }
+        }
+    }
 
     immediate = {
     }
