@@ -305,14 +305,14 @@ character_event = {
         name = OPT_ani_180
 
         hidden_tooltip = {
-            generate_tooltip = no
+            #generate_tooltip = no
 
-            any_courtier = {
+            any_child = {
                 limit = {
                     age = 6
                     NOT = { age = 9 }
                     culture_group = horse_group
-                    has_landed_title = no
+                    # has_landed_title = no
                 }
 
                 set_character_flag = rite_1_success
@@ -344,11 +344,14 @@ character_event = {
     }
 }
 
+# event 181
 character_event = {
     id = ani_plus.181
 
     border = GFX_event_normal_frame_diplomacy
     picture = GFX_evt_council
+
+    is_triggered_only = yes
 
     desc = DESC_ani_181
 
@@ -363,11 +366,14 @@ character_event = {
     }
 }
 
+# event 182
 character_event = {
     id = ani_plus.182
 
     border = GFX_event_normal_frame_diplomacy
     picture = GFX_evt_council
+    
+    is_triggered_only = yes
     
     desc = DESC_ani_182
 
