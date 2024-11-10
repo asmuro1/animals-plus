@@ -278,6 +278,8 @@ character_event = {
 # event 181: first rite total success
 # event 182: first rite organization problem
 # event 183: hidden event to setup rite 2 by adolescence
+# event 184: 2nd rite preparations
+# event 185: 2nd rite ending results
 
 # event 179
 character_event = {
@@ -440,5 +442,54 @@ character_event = {
     }
 
     immediate = {
+
+        save_event_target_as = rite_2_target
+
+        if = {
+            limit = {
+                ai = no
+            }
+
+            character_event = { id = ani_plus.184 }
+        }
+        else_if = {
+            limit = {
+                father = {
+                    ai = no
+                }
+            }
+
+            father = {
+                character_event = { id = ani_plus.184 }
+            }
+        }
+        else_if = {
+            limit = {
+                mother = {
+                    ai = no
+                }
+            }
+            mother = {
+                character_event = { id = ani_plus.184 }
+            }
+        }
+        else = {
+
+            # conclusive event
+            character_event = { id = ani_plus.185 }
+        }
     }
+}
+
+# event 184
+character_event = {
+    id = ani_plus.184
+
+    is_triggered_only = yes
+}
+# event 185
+character_event = {
+    id = ani_plus.185
+
+    is_triggered_only = yes
 }
