@@ -479,13 +479,37 @@ character_event = {
 character_event = {
     id = ani_plus.184
 
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
     is_triggered_only = yes
+
+    desc = DESC_ani_184
+
+    option = {
+        name = OPT_ani_184
+
+        character_event = { id = ani_plus.185 days = 3 random = 6}
+    }
 }
 # event 185
 character_event = {
     id = ani_plus.185
 
     is_triggered_only = yes
+
+    desc = {
+        trigger = {
+            always = yes
+        }
+        text = DESC_ani_185_A
+    }
+    desc = {
+        trigger = {
+            always = no
+        }
+        text = DESC_ani_185_B
+    }
 }
 
 # event 186
