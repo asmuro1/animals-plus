@@ -272,14 +272,11 @@ character_event = {
     }
 }
 
-## caste and rite events
+## caste and 1st rite events
 # event 179: caste trait undignified on birth (on_action)
 # event 180: first rite preparation ended
 # event 181: first rite total success
 # event 182: first rite organization problem
-# event 183: hidden event to setup rite 2 by adolescence
-# event 184: 2nd rite preparations
-# event 185: 2nd rite ending results
 
 # event 179
 character_event = {
@@ -405,6 +402,11 @@ character_event = {
     }
 }
 
+# event 183: hidden event to setup rite 2 by adolescence
+# event 184: 2nd rite preparations
+# event 185: 2nd rite on going
+# event 186: 2nd rite conclusion
+
 # event 183
 character_event = {
     id = ani_plus.183
@@ -454,19 +456,11 @@ character_event = {
         }
         else_if = {
             limit = {
-                father = {
-                    ai = no
-                }
-            }
-
-            father = {
-                character_event = { id = ani_plus.184 }
-            }
-        }
-        else_if = {
-            limit = {
                 mother = {
                     ai = no
+                }
+                father = {
+                    ai = yes
                 }
             }
             mother = {
@@ -474,9 +468,9 @@ character_event = {
             }
         }
         else = {
-
-            # conclusive event
-            character_event = { id = ani_plus.185 }
+            father = {
+                character_event = { id = ani_plus.184 }
+            }
         }
     }
 }
@@ -490,6 +484,13 @@ character_event = {
 # event 185
 character_event = {
     id = ani_plus.185
+
+    is_triggered_only = yes
+}
+
+# event 186
+character_event = {
+    id = ani_plus.186
 
     is_triggered_only = yes
 }
