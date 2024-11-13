@@ -492,23 +492,73 @@ character_event = {
         character_event = { id = ani_plus.185 days = 3 random = 6}
     }
 }
+
 # event 185
 character_event = {
     id = ani_plus.185
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
 
     is_triggered_only = yes
 
     desc = {
         trigger = {
-            always = yes
+            event_target:rite_2_target = {
+                NOT = {
+                    has_character_flag = rite_1_success
+                }
+            }
         }
         text = DESC_ani_185_A
     }
     desc = {
         trigger = {
-            always = no
+            event_target:rite_2_target = {
+                has_character_flag = rite_1_success
+            }
         }
         text = DESC_ani_185_B
+    }
+
+    option = {
+        name = OPTA_ani_185
+        trigger = {
+            event_target:rite_2_target = {
+                NOT = {
+                    has_character_flag = rite_1_success
+                }
+            }
+        }
+    }
+
+    option = {
+        name = OPTB_ani_185
+        trigger = {
+            event_target:rite_2_target = {
+                has_character_flag = rite_1_success
+            }
+        }
+
+        event_target:rite_2_target = {
+            set_character_flag = rite_feodality_speciality
+        }
+    }
+    option = {
+        name = OPTC_ani_185
+        trigger = {
+            event_target:rite_2_target = {
+                has_character_flag = rite_1_success
+            }
+        }
+
+        event_target:rite_2_target = {
+            set_character_flag = rite_merchant_speciality
+        }
+    }
+
+    after = {
+        character_event = { id = ani_plus.186 days = 1 }
     }
 }
 
