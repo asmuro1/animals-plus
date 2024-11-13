@@ -123,10 +123,10 @@ province_event = {
 
                     random_list = {
                         2 =  { 
-                            province_event = { id = ani_plus.174 days = 1 random = 6}
+                            province_event = { id = ani_plus.174 days = 1 random = 6 }
                         }
                         1 =  { 
-                            province_event = { id = ani_plus.175 days = 1 random = 6}
+                            province_event = { id = ani_plus.175 days = 1 random = 6 }
                         }
                     }
                 }
@@ -194,7 +194,7 @@ province_event = {
         name = OPT_ani_175
 
         holder_scope = {
-            character_event = { id = ani_plus.177 days = 2 random = 3}
+            character_event = { id = ani_plus.177 days = 2 random = 3 }
             prestige = -20
             add_trait = wounded
         }
@@ -328,7 +328,7 @@ character_event = {
                     # has_landed_title = no
                 }
 
-                set_character_flag = rite_1_success
+                set_character_flag = horse_rite_1_success
 
             }
         }
@@ -489,7 +489,7 @@ character_event = {
     option = {
         name = OPT_ani_184
 
-        character_event = { id = ani_plus.185 days = 3 random = 6}
+        character_event = { id = ani_plus.185 days = 3 random = 6 }
     }
 }
 
@@ -506,7 +506,7 @@ character_event = {
         trigger = {
             event_target:rite_2_target = {
                 NOT = {
-                    has_character_flag = rite_1_success
+                    has_character_flag = horse_rite_1_success
                 }
             }
         }
@@ -515,7 +515,7 @@ character_event = {
     desc = {
         trigger = {
             event_target:rite_2_target = {
-                has_character_flag = rite_1_success
+                has_character_flag = horse_rite_1_success
             }
         }
         text = DESC_ani_185_B
@@ -526,7 +526,7 @@ character_event = {
         trigger = {
             event_target:rite_2_target = {
                 NOT = {
-                    has_character_flag = rite_1_success
+                    has_character_flag = horse_rite_1_success
                 }
             }
         }
@@ -536,7 +536,7 @@ character_event = {
         name = OPTB_ani_185
         trigger = {
             event_target:rite_2_target = {
-                has_character_flag = rite_1_success
+                has_character_flag = horse_rite_1_success
             }
         }
 
@@ -548,7 +548,7 @@ character_event = {
         name = OPTC_ani_185
         trigger = {
             event_target:rite_2_target = {
-                has_character_flag = rite_1_success
+                has_character_flag = horse_rite_1_success
             }
         }
 
@@ -566,5 +566,46 @@ character_event = {
 character_event = {
     id = ani_plus.186
 
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
     is_triggered_only = yes
+
+    desc = DESC_ani_186
+
+    immediate = {
+        event_target:rite_2_target = {
+            random_list = {
+                1 = { set_character_flag = horse_tmp_success }
+                1 = 0
+            }
+        }
+    }
+
+    option = {
+        name = OPT_ani_186
+
+        event_target:rite_2_target = {
+            set_character_flag = horse_rite_2_success
+        
+            if = {
+                limit = {
+                    has_character_flag = horse_tmp_success
+                    has_character_flag = horse_rite_1_success
+                }
+
+                custom_tooltip = {
+                    text = horse_learned_speciality
+                    set_character_flag = horse_speciality_studied
+                }
+            }
+        }
+        
+    }
+
+    after = {
+        event_target:rite_2_target = {
+            clr_character_flag = horse_tmp_success
+        }
+    }
 }
