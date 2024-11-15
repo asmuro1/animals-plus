@@ -510,7 +510,7 @@ character_event = {
                 }
             }
         }
-        text = DESC_ani_185_A
+        text = DESCA_ani_185
     }
     desc = {
         trigger = {
@@ -518,7 +518,7 @@ character_event = {
                 has_character_flag = horse_rite_1_success
             }
         }
-        text = DESC_ani_185_B
+        text = DESCB_ani_185
     }
 
     option = {
@@ -595,7 +595,7 @@ character_event = {
                 }
 
                 custom_tooltip = {
-                    text = horse_learned_speciality
+                    text = TT_ani_186_learned_speciality
                     set_character_flag = horse_speciality_studied
                 }
             }
