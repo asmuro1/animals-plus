@@ -24,7 +24,12 @@ on_birth = {
 
 on_adolescence = {
 	events = {
-		ani_plus.183 # starting horse second rite
+		ani_plus.183 # starting second horse rite
+	}
+}
+on_adolescence_pulse = {
+	events = {
+		ani_plus.187 # starting third horse rite
 	}
 }
 
