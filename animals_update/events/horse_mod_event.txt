@@ -656,6 +656,56 @@ character_event = {
 
     hide_window = yes
     is_triggered_only = yes
+
+    trigger = {
+        culture_group = horse_group # is an horse
+        religion = Horse_religion   # religion
+        
+        c_boqtybay = {              # rite holy site required
+            owner = {
+                religion = Horse_religion
+                culture_group = horse_group
+            }
+            location = {
+                religion = Horse_religion
+                culture_group = horse_group
+            }
+        }
+
+        NOT = { has_character_flag = horse_rite_3_success } # can do the rite one time
+        OR = {          # cannot do the second rite and the third the same year
+            age = 14    # event launched at 12.5 and 14.5 years old
+            NOT = { has_character_flag = horse_rite_2_success }
+        }
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                ai = no
+            }
+
+            character_event = { id = ani_plus.188 }
+        }
+        else_if = {
+            limit = {
+                mother = {
+                    ai = no
+                }
+                father = {
+                    ai = yes
+                }
+            }
+            mother = {
+                character_event = { id = ani_plus.188 }
+            }
+        }
+        else = {
+            father = {
+                character_event = { id = ani_plus.188 }
+            }
+        }
+    }
 }
 
 # event 188
