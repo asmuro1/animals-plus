@@ -836,6 +836,25 @@ character_event = {
 character_event = {
     id = ani_plus.189
 
-    hide_window = yes
     is_triggered_only = yes
+
+    trigger = {
+        FROM = {
+            is_alive = yes
+        }
+    }
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    desc = DESC_ani_189
+
+    option = {
+        name = OPT_ani_189
+
+        FROMFROM = {
+            set_character_flag = horse_rite_3_success
+        }
+    }
+
 }
