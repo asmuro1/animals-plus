@@ -616,7 +616,7 @@ character_event = {
         FROMFROMFROM = {
             random_list = {
                 1 = { set_character_flag = horse_tmp_success }
-                1 = 0
+                1 = { }
             }
         }
     }
@@ -637,14 +637,9 @@ character_event = {
                     text = TT_ani_186_learned_speciality
                     set_character_flag = horse_speciality_studied
                 }
+            
+                clr_character_flag = horse_tmp_success
             }
-        }
-        
-    }
-
-    after = {
-        FROMFROMFROM = {
-            clr_character_flag = horse_tmp_success
         }
     }
 }
