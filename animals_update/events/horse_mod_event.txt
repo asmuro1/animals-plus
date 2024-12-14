@@ -826,6 +826,10 @@ character_event = {
         }
         name = OPTD_ani_188
     }
+
+    after = {
+        character_event = { id = ani_plus.189 days = 1 }
+    }
 }
 
 # event 189
