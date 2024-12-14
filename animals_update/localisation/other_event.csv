@@ -152,7 +152,7 @@ CAT_TT_CONSTRUCT_THEIR_TRIBE;The cats build their own tribe;Les chats construise
 CAT_TT_DECLARE_WAR;The cats start a revolt;Les chats se rebellent;;;;;;;;;;;;x
 CAT_TT_HUNTER_INJURED;Many adult are injured by ferocious cats;Beaucoup d'adulte sont blessés par des chats enragé;;;;;;;;;;;;x
 CAT_DECADENCE_INVASION;A decadence invasion begins;Une révolte de décadence commence;;;;;;;;;;;;x
-CAT_TT_ORIGIN_FOUND;I should be warry of [Fromfrom.GetFirstName], he must be the sender;Je devrais me méfier de [Fromfrom.GetFirstName], il est trop louche dans cette histoire;;;;;;;;;;;;x
+CAT_TT_ORIGIN_FOUND;I should be warry of [Fromfrom.GetFullName], he must be the sender;Je devrais me méfier de [Fromfrom.GetFullName], il est trop louche dans cette histoire;;;;;;;;;;;;x
 
 # dog update
 dog_desc_159;Sometimes, my dog seems weak...;Mon chien semble faible de temps en temps...;;;;;;;;;;;;x
@@ -205,15 +205,15 @@ DESC_ani_181;The rite has gone well. The childs acted as they were told.;Le rite
 OPT_ani_181;They must have learned many things;Ils ont beaucoup appris!;;;;;;;;;;;;x
 DESC_ani_182;The preparation went well, the stage were beautiful. But when the children started the rite, something made them excited. Despite their comportment, adult hardly calmed them down. My prestige went a little down because of that;Les préparations du rite se sont bien passé. Malgré ça les enfants sont devenus insupportable. Avec les efforts mis en place pour les calmé, l'honneur est sauf.;;;;;;;;;;;;x
 OPT_ani_182;At least, children has learned something;Au moins, les enfants ont appris quelque chose;;;;;;;;;;;;x
-DESC_ani_184;As [FROM.GetFirstName] got 12, [FROM.GetSheHe] can do the ruler mandatory rite. This mandatory rite among noble horse will prove it's worth as a young lord.;Comme [FROM.GetFirstName] a maintenant 12 ans, [FROM.GetSheHe] se doit d'effectuer le rite du dirigeant. [FROM.GetSheHeCap] pourra prouver sa valeur en tant que futur dirigeant.;;;;;;;;;;;;x 
+DESC_ani_184;As [Root.From.GetTitledFirstName] got 12, [Root.From.GetSheHe] can do the ruler mandatory rite. This mandatory rite among noble horse will prove it's worth as a young lord.;Comme [Root.From.GetTitledFirstName] a maintenant 12 ans, [Root.From.GetSheHe] se doit d'effectuer le rite du dirigeant. [Root.From.GetSheHeCap] pourra prouver sa valeur en tant que futur dirigeant.;;;;;;;;;;;;x 
 OPT_ani_184;The rite will soon start;Le rite va bientôt commencer;;;;;;;;;;;;x
-DESCA_ani_185;The preparations for the [FROMFROM.GetFirstName]'s ruler rite ended this morning. The rite is now taking place. Even if [FROMFROM.GetFirstName] does seem to not fully undestand [FROMFROM.GetHerHis] position, [FROMFROM.GetSheHe] did what was expected of [FROMFROM.GetHerHim].;Les préparations du rite du dirigeant de [FROMFROM.GetFirstName] ont été fini ce matin. Le rite a commencé tout à l'instant. Le rite se passe bien, malgré quelques confusions de [FROMFROM.GetFirstName].;;;;;;;;;;;;x
-DESCB_ani_185;The preparations for the [FROMFROM.GetFirstName]'s ruler rite ended this morning. The rite is now taking place. [FROMFROM.GetFirstName] proved that [FROMFROM.GetSheHe] would become a great ruler. No mistakes was made. As well, [FROMFROM.GetFirstName] asks me if [FROMFROM.GetSheHe] should talk about commerce or nobility to the invited noble;Les préparations du rite du dirigeant de [FROMFROM.GetFirstName] ont été fini ce matin. Le rite a commencé tout à l'instant. Le rite se passe bien. [FROMFROM.GetFirstName] vient juste de me demander de quoi parler aux nobles locaux.;;;;;;;;;;;;x
+DESCA_ani_185;The preparations for the [Root.FromFrom.GetTitledFirstName]'s ruler rite ended this morning. The rite is now taking place. Even if [Root.FromFrom.GetTitledFirstName] does seem to not fully undestand [Root.FromFrom.GetHerHis] position, [Root.FromFrom.GetSheHe] did what was expected of [Root.FromFrom.GetHerHim].;Les préparations du rite du dirigeant de [Root.FromFrom.GetTitledFirstName] ont été fini ce matin. Le rite a commencé tout à l'instant. Le rite se passe bien, malgré quelques confusions de [Root.FromFrom.GetTitledFirstName].;;;;;;;;;;;;x
+DESCB_ani_185;The preparations for the [Root.FromFrom.GetTitledFirstName]'s ruler rite ended this morning. The rite is now taking place. [Root.FromFrom.GetTitledFirstName] proved that [Root.FromFrom.GetSheHe] would become a great ruler. No mistakes was made. As well, [Root.FromFrom.GetTitledFirstName] asks me if [Root.FromFrom.GetSheHe] should talk about commerce or nobility to the invited noble;Les préparations du rite du dirigeant de [Root.FromFrom.GetTitledFirstName] ont été fini ce matin. Le rite a commencé tout à l'instant. Le rite se passe bien. [Root.FromFrom.GetTitledFirstName] vient juste de me demander de quoi parler aux nobles locaux.;;;;;;;;;;;;x
 OPTA_ani_185;Thankfully, only minor noble did attend;Heuresement, qu'uniquement des nobles mineurs ont participé;;;;;;;;;;;;x
-OPTB_ani_185;[FROMFROM.GetSheHeCap] should talk about nobility;[FROMFROM.GetSheHeCap] devrait parler des concepts de la nobilité;;;;;;;;;;;;x
-OPTC_ani_185;[FROMFROM.GetSheHeCap] should talk about commerce;[FROMFROM.GetSheHeCap] devrait parler des concepts liés au commerce;;;;;;;;;;;;x
-DESC_ani_186;The rite just ended. The rite is successful and [FROMFROMFROM.GetFirstName] did learn a lot during that rite.;Le rite de passage vient de se terminer! [FROMFROMFROM.GetFirstName] a pu apprendre ce qu'implique d'être dirigeant;;;;;;;;;;;;x
-OPT_ani_186;[FROMFROMFROM.GetFirstName] should be proud of [FROMFROMFROM.GetHerselfHimself].;[FROMFROMFROM.GetFirstName] a de quoi être fier!;;;;;;;;;;;;x
+OPTB_ani_185;[Root.FromFrom.GetSheHeCap] should talk about nobility;[Root.FromFrom.GetSheHeCap] devrait parler des concepts de la nobilité;;;;;;;;;;;;x
+OPTC_ani_185;[Root.FromFrom.GetSheHeCap] should talk about commerce;[Root.FromFrom.GetSheHeCap] devrait parler des concepts liés au commerce;;;;;;;;;;;;x
+DESC_ani_186;The rite just ended. The rite is successful and [Root.FromFromFrom.GetTitledFirstName] did learn a lot during that rite.;Le rite de passage vient de se terminer! [Root.FromFromFrom.GetTitledFirstName] a pu apprendre ce qu'implique d'être dirigeant;;;;;;;;;;;;x
+OPT_ani_186;[Root.FromFromFrom.GetTitledFirstName] should be proud of [Root.FromFromFrom.GetHerselfHimself].;[Root.FromFromFrom.GetTitledFirstName] a de quoi être fier!;;;;;;;;;;;;x
 
 ## TOOLTIPS
 TT_ani_172_went_well;everything goes well;tout se passe comme prévu;;;;;;;;;;;;x
@@ -222,4 +222,4 @@ TT_ani_177_healed;heal from injury;est soigné de ses blessures;;;;;;;;;;;;x
 TT_ani_177_injury_is_worst;the injuries goes wrong;les blessures s'empirent;;;;;;;;;;;;x
 TT_ani_180_went_well;everything goes well;tout se passe comme prévu;;;;;;;;;;;;x
 TT_ani_180_went_wrong;an accident occur;tout ne se passe pas comme prévu;;;;;;;;;;;;x
-TT_ani_186_learned_speciality;[FROMFROMFROM.GetFirstName] a lot more than expected of [FROMFROMFROM.GetHerselfHimself];[FROMFROMFROM.GetFirstName] a bien mieu appris son rôle que ce qui était attendu;;;;;;;;;;;;x
+TT_ani_186_learned_speciality;[Root.FromFromFrom.GetTitledFirstName] a lot more than expected of [Root.FromFromFrom.GetHerselfHimself];[Root.FromFromFrom.GetTitledFirstName] a bien mieu appris son rôle que ce qui était attendu;;;;;;;;;;;;x
