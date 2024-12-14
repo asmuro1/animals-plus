@@ -483,6 +483,12 @@ character_event = {
 
     desc = DESC_ani_184
 
+    trigger = {
+        FROM = {
+            is_alive = yes
+        }
+    }
+
     option = {
         name = OPT_ani_184
 
@@ -498,6 +504,12 @@ character_event = {
     picture = GFX_evt_council
 
     is_triggered_only = yes
+
+    trigger = {
+        FROMFROM = {
+            is_alive = yes
+        }
+    }
 
     desc = {
         trigger = {
@@ -593,6 +605,12 @@ character_event = {
     is_triggered_only = yes
 
     desc = DESC_ani_186
+
+    trigger = {
+        FROMFROMFROM = {
+            is_alive = yes
+        }
+    }
 
     immediate = {
         FROMFROMFROM = {
