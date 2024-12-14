@@ -444,8 +444,6 @@ character_event = {
 
     immediate = {
 
-        save_event_target_as = rite_2_target
-
         if = {
             limit = {
                 ai = no
@@ -503,7 +501,7 @@ character_event = {
 
     desc = {
         trigger = {
-            event_target:rite_2_target = {
+            FROMFROM = {
                 NOT = {
                     has_character_flag = horse_rite_1_success
                 }
@@ -513,7 +511,7 @@ character_event = {
     }
     desc = {
         trigger = {
-            event_target:rite_2_target = {
+            FROMFROM = {
                 has_character_flag = horse_rite_1_success
             }
         }
@@ -523,36 +521,60 @@ character_event = {
     option = {
         name = OPTA_ani_185
         trigger = {
-            event_target:rite_2_target = {
+            FROMFROM = {
                 NOT = {
                     has_character_flag = horse_rite_1_success
                 }
             }
+        }
+
+        ai_chance = {
+            factor = 1
         }
     }
 
     option = {
         name = OPTB_ani_185
         trigger = {
-            event_target:rite_2_target = {
+            FROMFROM = {
                 has_character_flag = horse_rite_1_success
             }
         }
 
-        event_target:rite_2_target = {
+        FROMFROM = {
             set_character_flag = rite_feodality_speciality
+        }
+
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+
+                government = horse_merchant_gov
+            }
         }
     }
     option = {
         name = OPTC_ani_185
         trigger = {
-            event_target:rite_2_target = {
+            FROMFROM = {
                 has_character_flag = horse_rite_1_success
             }
         }
 
-        event_target:rite_2_target = {
+        FROMFROM = {
             set_character_flag = rite_merchant_speciality
+        }
+
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+
+                government = horse_feudal_gov
+            }
         }
     }
 
@@ -573,7 +595,7 @@ character_event = {
     desc = DESC_ani_186
 
     immediate = {
-        event_target:rite_2_target = {
+        FROMFROMFROM = {
             random_list = {
                 1 = { set_character_flag = horse_tmp_success }
                 1 = 0
@@ -584,7 +606,7 @@ character_event = {
     option = {
         name = OPT_ani_186
 
-        event_target:rite_2_target = {
+        FROMFROMFROM = {
             set_character_flag = horse_rite_2_success
         
             if = {
@@ -603,7 +625,7 @@ character_event = {
     }
 
     after = {
-        event_target:rite_2_target = {
+        FROMFROMFROM = {
             clr_character_flag = horse_tmp_success
         }
     }
