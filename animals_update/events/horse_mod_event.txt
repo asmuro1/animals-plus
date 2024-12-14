@@ -812,6 +812,9 @@ character_event = {
             }
         }
         name = OPTC_ani_188
+        FROM = {
+            set_character_flag = rite_merchant_speciality
+        }
     }
     option = { # feodal specialization
         trigger = {
@@ -825,6 +828,10 @@ character_event = {
             }
         }
         name = OPTD_ani_188
+
+        FROM = {
+            set_character_flag = rite_feodality_speciality
+        }
     }
 
     after = {
@@ -839,7 +846,7 @@ character_event = {
     is_triggered_only = yes
 
     trigger = {
-        FROM = {
+        FROMFROM = {
             is_alive = yes
         }
     }
