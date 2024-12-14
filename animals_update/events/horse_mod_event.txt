@@ -418,14 +418,13 @@ character_event = {
         culture_group = horse_group
         OR = {
             AND = {
-                has_landed_title = yes
+                is_playable = yes
                 OR = {
                     government = horse_feudal_gov
                     government = horse_merchant_gov
                 }
             }
-            father = { 
-                has_landed_title = yes
+            father = {
                 culture_group = horse_group
                 OR = {
                     government = horse_feudal_gov
@@ -433,7 +432,7 @@ character_event = {
                 }
             }
             mother = {
-                has_landed_title = yes
+                is_playable = yes
                 culture_group = horse_group
                 OR = {
                     government = horse_feudal_gov
