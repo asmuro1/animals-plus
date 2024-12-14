@@ -723,11 +723,108 @@ character_event = {
     border = GFX_event_normal_frame_diplomacy
     picture = GFX_evt_council
 
-    desc = DESC_ani_188
+    desc = { # default desc without any rite done
+        trigger = {
+            FROM = {
+                # did only one rite
+                NOR = {
+                    has_character_flag = horse_rite_1_success
+                    has_character_flag = horse_rite_2_success
+                }
+            }
+        }
+
+        text = DESCA_ani_188
+    }
+    desc = { # desc to choose child speciality
+        trigger = {
+            FROM = {
+                # did only one rite
+                calc_true_if = {
+                    amount == 1
+                    has_character_flag = horse_rite_1_success
+                    has_character_flag = horse_rite_2_success
+                }
+            }
+        }
+
+        text = DESCB_ani_188
+    }
+    desc = { # default desc with all previous rite done
+        trigger = {
+            FROM = {
+                # did only one rite
+                AND = {
+                    has_character_flag = horse_rite_1_success
+                    has_character_flag = horse_rite_2_success
+                }
+            }
+        }
+
+        text = DESCC_ani_188
+    }
     
-    option = {
-        name = OPT_ani_188
-        
+    option = { # option if no specialization done
+        trigger = {
+            NOT = {
+                FROM = {
+                    # did only one rite
+                    calc_true_if = {
+                        amount == 1
+                        has_character_flag = horse_rite_1_success
+                        has_character_flag = horse_rite_2_success
+                    }
+                }
+            }
+        }
+
+        name = {
+            trigger = {
+                NOR = {
+                    has_character_flag = horse_rite_1_success
+                    has_character_flag = horse_rite_2_success
+                }
+            }
+            text = OPTA_ani_188
+        }
+
+        name = {
+            trigger = {
+                AND = {
+                    has_character_flag = horse_rite_1_success
+                    has_character_flag = horse_rite_2_success
+                }
+            }
+            text = OPTB_ani_188
+        }
+
+    }
+
+    option = { # merchant specialization
+        trigger = {
+            FROM = {
+                # did only one rite
+                calc_true_if = {
+                    amount == 1
+                    has_character_flag = horse_rite_1_success
+                    has_character_flag = horse_rite_2_success
+                }
+            }
+        }
+        name = OPTC_ani_188
+    }
+    option = { # feodal specialization
+        trigger = {
+            FROM = {
+                # did only one rite
+                calc_true_if = {
+                    amount == 1
+                    has_character_flag = horse_rite_1_success
+                    has_character_flag = horse_rite_2_success
+                }
+            }
+        }
+        name = OPTD_ani_188
     }
 }
 
