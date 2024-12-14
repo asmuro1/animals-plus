@@ -798,6 +798,9 @@ character_event = {
             text = OPTB_ani_188
         }
 
+        ai_chance = {
+            factor = 1
+        }
     }
 
     option = { # merchant specialization
@@ -815,6 +818,16 @@ character_event = {
         FROM = {
             set_character_flag = rite_merchant_speciality
         }
+
+        ai_chance = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+
+                government = horse_feudal_gov
+            }
+        }
     }
     option = { # feodal specialization
         trigger = {
@@ -831,6 +844,16 @@ character_event = {
 
         FROM = {
             set_character_flag = rite_feodality_speciality
+        }
+
+        ai_chance = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+
+                government = horse_merchant_gov
+            }
         }
     }
 
