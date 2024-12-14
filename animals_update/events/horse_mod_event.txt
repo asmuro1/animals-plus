@@ -1,7 +1,7 @@
 namespace = ani_plus
 
 ###### horse update event
-### event 170 - ?
+### event 170 - 189?
 
 ## conversion quest
 # event 170: event to launch quest by event rule
@@ -402,6 +402,7 @@ character_event = {
     }
 }
 
+
 # event 183: hidden event to setup rite 2 by adolescence
 # event 184: 2nd rite preparations
 # event 185: 2nd rite on going
@@ -642,4 +643,33 @@ character_event = {
             }
         }
     }
+}
+
+
+# event 187: hidden event to setup 3rd rite
+# event 188: 3rd rite preparation + specialization selection (if not chosen during 2nd rite)
+# event 189: conclusion
+
+# event 187
+character_event = {
+    id = ani_plus.187
+
+    hide_window = yes
+    is_triggered_only = yes
+}
+
+# event 188
+character_event = {
+    id = ani_plus.188
+
+    hide_window = yes
+    is_triggered_only = yes
+}
+
+# event 189
+character_event = {
+    id = ani_plus.189
+
+    hide_window = yes
+    is_triggered_only = yes
 }
