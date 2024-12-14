@@ -557,7 +557,7 @@ character_event = {
             set_character_flag = rite_feodality_speciality
         }
 
-        ai_will_do = {
+        ai_chance = {
             factor = 1
 
             modifier = {
@@ -579,7 +579,7 @@ character_event = {
             set_character_flag = rite_merchant_speciality
         }
 
-        ai_will_do = {
+        ai_chance = {
             factor = 1
 
             modifier = {
