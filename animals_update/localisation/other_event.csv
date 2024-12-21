@@ -214,6 +214,17 @@ OPTB_ani_185;[Root.FromFrom.GetSheHeCap] should talk about nobility;[Root.FromFr
 OPTC_ani_185;[Root.FromFrom.GetSheHeCap] should talk about commerce;[Root.FromFrom.GetSheHeCap] devrait parler des concepts liés au commerce;;;;;;;;;;;;x
 DESC_ani_186;The rite just ended. The rite is successful and [Root.FromFromFrom.GetTitledFirstName] did learn a lot during that rite.;Le rite de passage vient de se terminer! [Root.FromFromFrom.GetTitledFirstName] a pu apprendre ce qu'implique d'être dirigeant;;;;;;;;;;;;x
 OPT_ani_186;[Root.FromFromFrom.GetTitledFirstName] should be proud of [Root.FromFromFrom.GetHerselfHimself].;[Root.FromFromFrom.GetTitledFirstName] a de quoi être fier!;;;;;;;;;;;;x
+DESCA_ani_188;As [Root.From.GetTitledFirstName] is almost an adult. The pious horses force him to do at least one rite! They even pay the rite expenses;Comme [Root.From.GetTitledFirstName] est bientôt adulte, les chevaux religieux le force de participer à un rite de passage.;;;;;;;;;;;;x
+DESCB_ani_188
+DESCC_ani_188
+OPTA_ani_188;If that can make [Root.From.GetTitledFirstName] more competent...;Tant qu'ils assument le prix...;;;;;;;;;;;;x
+OPTB_ani_188
+OPTC_ani_188
+OPTD_ani_188
+DESCA_ani_189;[Root.Fromfrom.GetTitledFirstName] just finished its rite. The religious did not expect much from [Root.Fromfrom.GetHerHim]. [Root.Fromfrom.GetSheHeCap] still learning something from it.;[Root.Fromfrom.GetTitledFirstName] vient de terminer le rite de passage. [Root.Fromfrom.GetSheHeCap] a fait quelques bêtises mais au vu de son manque d'éducation, les religieux ne lui en tienne pas rigueur.;;;;;;;;;;;;x
+DESCB_ani_189
+DESCC_ani_189
+OPT_ani_189;Good!;Bien!;;;;;;;;;;;;x<
 
 ## TOOLTIPS
 TT_ani_172_went_well;everything goes well;tout se passe comme prévu;;;;;;;;;;;;x

@@ -735,10 +735,9 @@ character_event = {
 
         text = DESCA_ani_188
     }
-    desc = { # desc to choose child speciality
+    desc = { # did only one rite
         trigger = {
             FROM = {
-                # did only one rite
                 calc_true_if = {
                     amount == 1
                     has_character_flag = horse_rite_1_success
@@ -909,6 +908,7 @@ character_event = {
                 }
             }
         }
+        text = DESCC_ani_189
     }
 
     option = {
