@@ -215,16 +215,16 @@ OPTC_ani_185;[Root.FromFrom.GetSheHeCap] should talk about commerce;[Root.FromFr
 DESC_ani_186;The rite just ended. The rite is successful and [Root.FromFromFrom.GetTitledFirstName] did learn a lot during that rite.;Le rite de passage vient de se terminer! [Root.FromFromFrom.GetTitledFirstName] a pu apprendre ce qu'implique d'être dirigeant;;;;;;;;;;;;x
 OPT_ani_186;[Root.FromFromFrom.GetTitledFirstName] should be proud of [Root.FromFromFrom.GetHerselfHimself].;[Root.FromFromFrom.GetTitledFirstName] a de quoi être fier!;;;;;;;;;;;;x
 DESCA_ani_188;As [Root.From.GetTitledFirstName] is almost an adult. The pious horses force him to do at least one rite! They even pay the rite expenses;Comme [Root.From.GetTitledFirstName] est bientôt adulte, les chevaux religieux le force de participer à un rite de passage.;;;;;;;;;;;;x
-DESCB_ani_188
+DESCB_ani_188;The pious horses expressed that [Root.From.GetTitledFirstName] needs to go through its final rite. But they still needs to do some preparations;Les religieux chevalien affirme qu'il est temps que [Root.From.GetTitledFirstName] fasse un dernier rite de passage avant son passage à l'age adulte. Cependant, comme le rite demande quelques préparations.;;;;;;;;;;;;x
 DESCC_ani_188
 OPTA_ani_188;If that can make [Root.From.GetTitledFirstName] more competent...;Tant qu'ils assument le prix...;;;;;;;;;;;;x
 OPTB_ani_188
-OPTC_ani_188
-OPTD_ani_188
+OPTC_ani_188;I'll ask the merchants to help them prepare it;Je demanderais aux marchands d'aider avec les préparations;;;;;;;;;;;;x
+OPTD_ani_188;I'll ask the local nobles to help them prepare it;Je demanderais aux nobles locaux d'aider dans les préparations;;;;;;;;;;;;x 
 DESCA_ani_189;[Root.Fromfrom.GetTitledFirstName] just finished its rite. The religious did not expect much from [Root.Fromfrom.GetHerHim]. [Root.Fromfrom.GetSheHeCap] still learning something from it.;[Root.Fromfrom.GetTitledFirstName] vient de terminer le rite de passage. [Root.Fromfrom.GetSheHeCap] a fait quelques bêtises mais au vu de son manque d'éducation, les religieux ne lui en tienne pas rigueur.;;;;;;;;;;;;x
-DESCB_ani_189
+DESCB_ani_189;[Root.Fromfrom.GetTitledFirstName] has gone though its final rite. Even if some fault could be noted, [Root.Fromfrom.GetSheHe] still learned much from it.;[Root.Fromfrom.GetTitledFirstName] vient de passer le rite de passage final. malgré quelques légères lacunes, [Root.Fromfrom.GetSheHeCap] a bien appris ce que les religieux essayez de lui enseigner.;;;;;;;;;;;;x
 DESCC_ani_189
-OPT_ani_189;Good!;Bien!;;;;;;;;;;;;x<
+OPT_ani_189;Good!;Bien!;;;;;;;;;;;;x
 
 ## TOOLTIPS
 TT_ani_172_went_well;everything goes well;tout se passe comme prévu;;;;;;;;;;;;x
