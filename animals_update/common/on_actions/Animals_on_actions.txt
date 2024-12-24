@@ -32,6 +32,11 @@ on_adolescence_pulse = {
 		ani_plus.187 # starting third horse rite
 	}
 }
+on_adulthood = {
+	events = {
+		ani_plus.190 # horse caste trait comming on age
+	}
+}
 
 on_yearly_pulse = {
 	events = {

@@ -920,3 +920,46 @@ character_event = {
     }
 
 }
+
+# event 190: hidden event to setup caste trait change (adulthood)
+# event 191: notification and trait change
+
+# event 190
+character_event = {
+    id=ani_plus.190
+
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+
+    }
+
+    immediate = {
+
+    }
+}
+
+# event 191
+character_event = {
+    id=ani_plus.191
+
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+
+    }
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = DESC_ani_191
+
+    immediate = {
+        
+    }
+
+    option = {
+        name = OPT_ani_191
+    }
+}
