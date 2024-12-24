@@ -615,9 +615,9 @@ character_event = {
 
     immediate = {
         FROMFROMFROM = {
-            random_list = {
-                1 = { set_character_flag = horse_tmp_success }
-                1 = { }
+            random = {
+                chance = 50
+                set_character_flag = horse_tmp_success
             }
         }
     }
@@ -726,10 +726,7 @@ character_event = {
     desc = { # default desc without any rite done
         trigger = {
             FROM = {
-                NOR = {
-                    has_character_flag = horse_rite_1_success
-                    has_character_flag = horse_rite_2_success
-                }
+                horse_has_done_no_rite_trigger = yes
             }
         }
 
@@ -738,11 +735,7 @@ character_event = {
     desc = { # did only one rite
         trigger = {
             FROM = {
-                calc_true_if = {
-                    amount == 1
-                    has_character_flag = horse_rite_1_success
-                    has_character_flag = horse_rite_2_success
-                }
+                horse_has_exatly_done_1_rite_trigger = yes
             }
         }
 
@@ -751,10 +744,7 @@ character_event = {
     desc = { # default desc with all previous rite done
         trigger = {
             FROM = {
-                AND = {
-                    has_character_flag = horse_rite_1_success
-                    has_character_flag = horse_rite_2_success
-                }
+                horse_has_exatly_done_2_rite_trigger = yes
             }
         }
 
@@ -765,21 +755,15 @@ character_event = {
         trigger = {
             NOT = {
                 FROM = {
-                    # did only one rite
-                    calc_true_if = {
-                        amount == 1
-                        has_character_flag = horse_rite_1_success
-                        has_character_flag = horse_rite_2_success
-                    }
+                    horse_has_exatly_done_1_rite_trigger = yes
                 }
             }
         }
 
         name = {
             trigger = {
-                NOR = {
-                    has_character_flag = horse_rite_1_success
-                    has_character_flag = horse_rite_2_success
+                FROM = {
+                    horse_has_done_no_rite_trigger = yes
                 }
             }
             text = OPTA_ani_188
@@ -787,9 +771,8 @@ character_event = {
 
         name = {
             trigger = {
-                AND = {
-                    has_character_flag = horse_rite_1_success
-                    has_character_flag = horse_rite_2_success
+                FROM = {
+                    horse_has_exatly_done_2_rite_trigger = yes
                 }
             }
             text = OPTB_ani_188
@@ -803,12 +786,7 @@ character_event = {
     option = { # merchant specialization
         trigger = {
             FROM = {
-                # did only one rite
-                calc_true_if = {
-                    amount == 1
-                    has_character_flag = horse_rite_1_success
-                    has_character_flag = horse_rite_2_success
-                }
+                horse_has_exatly_done_1_rite_trigger = yes
             }
         }
         name = OPTC_ani_188
@@ -829,12 +807,7 @@ character_event = {
     option = { # feodal specialization
         trigger = {
             FROM = {
-                # did only one rite
-                calc_true_if = {
-                    amount == 1
-                    has_character_flag = horse_rite_1_success
-                    has_character_flag = horse_rite_2_success
-                }
+                horse_has_exatly_done_1_rite_trigger = yes
             }
         }
         name = OPTD_ani_188
@@ -877,10 +850,7 @@ character_event = {
     desc = { # no rite done before
         trigger = {
             FROMFROM = {
-                NOR = {
-                    has_character_flag = horse_rite_1_success
-                    has_character_flag = horse_rite_2_success
-                }
+                horse_has_done_no_rite_trigger = yes
             }
         }
 
@@ -888,24 +858,15 @@ character_event = {
     }
     desc = { # only one rite done
         trigger = {
-            FROMFROM = {
-                calc_true_if = {
-                    amount == 1
-                    has_character_flag = horse_rite_1_success
-                    has_character_flag = horse_rite_2_success
-                }
-            }
+            horse_has_exatly_done_1_rite_trigger = yes
         }
 
         text = DESCB_ani_189
     }
-    desc = {
+    desc = { # all previous rite done
         trigger = {
             FROMFROM = {
-                AND = {
-                    has_character_flag = horse_rite_1_success
-                    has_character_flag = horse_rite_2_success
-                }
+                horse_has_exatly_done_2_rite_trigger = yes
             }
         }
         text = DESCC_ani_189
@@ -1008,6 +969,15 @@ character_event = {
                         }
                     }
                 }
+            }
+        }
+    }
+    after = {
+        hidden_tooltip = {
+            FROM = {
+                clr_character_flag = horse_rite_1_success
+                clr_character_flag = horse_rite_2_success
+                clr_character_flag = horse_rite_3_success
             }
         }
     }
