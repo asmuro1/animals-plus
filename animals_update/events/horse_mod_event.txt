@@ -945,9 +945,30 @@ character_event = {
         FROM = {
             random_list = {
                 1 = { # keep its caste undignified trait
+                    modifier = {
+                        factor = 0
+
+                        horse_has_exatly_done_2_rite_trigger = yes
+                    }
+                    modifier = {
+                        factor = 0
+
+                        horse_has_exatly_done_all_rite_trigger = yes
+                    }
+
                     add_trait = horse_caste_undignified
                 }
                 1 = { # loose undignified caste trait without any rulership trait
+                    modifier = {
+                        factor = 0
+
+                        horse_has_exatly_done_2_rite_trigger = yes
+                    }
+                    modifier = {
+                        factor = 0
+
+                        horse_has_exatly_done_all_rite_trigger = yes
+                    }
                     remove_trait = horse_caste_undignified
                 }
                 1 = { # gain merchant caste trait
@@ -960,6 +981,23 @@ character_event = {
                         factor = 0
 
                         horse_has_exatly_done_1_rite_trigger = yes
+                    }
+                    modifier = {
+                        factor = 0
+
+                        horse_has_exatly_done_2_rite_trigger = yes
+                        has_character_flag = rite_feodality_speciality
+                    }
+                    modifier = {
+                        factor = 2
+
+                        horse_has_exatly_done_2_rite_trigger = yes
+                        has_character_flag = horse_speciality_studied
+                    }
+                    modifier = {
+                        factor = 0
+                        horse_has_exatly_done_all_rite_trigger = yes
+                        has_character_flag = rite_feodality_speciality
                     }
 
                     add_trait = horse_caste_merchant
@@ -975,6 +1013,23 @@ character_event = {
 
                         horse_has_exatly_done_1_rite_trigger = yes
                     }
+                    modifier = {
+                        factor = 0
+
+                        horse_has_exatly_done_2_rite_trigger = yes
+                        has_character_flag = rite_merchant_speciality
+                    }
+                    modifier = {
+                        factor = 2
+
+                        horse_has_exatly_done_2_rite_trigger = yes
+                        has_character_flag = horse_speciality_studied
+                    }
+                    modifier = {
+                        factor = 0
+                        horse_has_exatly_done_all_rite_trigger = yes
+                        has_character_flag = rite_merchant_speciality
+                    }
 
                     add_trait = horse_caste_warrior
                 }
@@ -988,6 +1043,20 @@ character_event = {
                         factor = 2
 
                         horse_has_exatly_done_1_rite_trigger = yes
+                    }
+                    modifier = {
+                        factor = 2
+
+                        horse_has_exatly_done_2_rite_trigger = yes
+                        NOT = {
+                            has_character_flag = horse_speciality_studied
+                        }
+                    }
+                    modifier = {
+                        factor = 0
+
+                        horse_has_exatly_done_all_rite_trigger = yes
+                        has_character_flag = horse_speciality_studied
                     }
 
                     custom_tooltip = {
