@@ -637,9 +637,9 @@ character_event = {
                 custom_tooltip = {
                     text = TT_ani_186_learned_speciality
                     set_character_flag = horse_speciality_studied
+                    clr_character_flag = horse_tmp_success
                 }
             
-                clr_character_flag = horse_tmp_success
             }
         }
     }
@@ -951,12 +951,45 @@ character_event = {
                     remove_trait = horse_caste_undignified
                 }
                 1 = { # gain merchant caste trait
+                    modifier = {
+                        factor = 0
+
+                        horse_has_done_no_rite_trigger = yes
+                    }
+                    modifier = {
+                        factor = 0
+
+                        horse_has_exatly_done_1_rite_trigger = yes
+                    }
+
                     add_trait = horse_caste_merchant
                 }
                 1 = { # gain feudal trait
+                    modifier = {
+                        factor = 0
+
+                        horse_has_done_no_rite_trigger = yes
+                    }
+                    modifier = {
+                        factor = 0
+
+                        horse_has_exatly_done_1_rite_trigger = yes
+                    }
+
                     add_trait = horse_caste_warrior
                 }
                 1 = { # gain a random caste trait between merchant or feudal 
+                    modifier = {
+                        factor = 0
+
+                        horse_has_done_no_rite_trigger = yes
+                    }
+                    modifier = {
+                        factor = 2
+
+                        horse_has_exatly_done_1_rite_trigger = yes
+                    }
+
                     custom_tooltip = {
                         text = TT_ani_191_random_trait
                         random_list = {
