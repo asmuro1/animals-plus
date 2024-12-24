@@ -1,7 +1,7 @@
 namespace = ani_plus
 
 ###### horse update event
-### event 170 - 189?
+### event 170 - 191?
 
 ## conversion quest
 # event 170: event to launch quest by event rule
@@ -975,18 +975,40 @@ character_event = {
 
     is_triggered_only = yes
 
-    trigger = {
-
-    }
-
-    immediate = {
-        
-    }
     border = GFX_event_normal_frame_diplomacy
     picture = GFX_evt_council
     desc = DESC_ani_191
 
     option = {
         name = OPT_ani_191
+        FROM = {
+            random_list = {
+                1 = { # keep its caste undignified trait
+                    add_trait = horse_caste_undignified
+                }
+                1 = { # loose undignified caste trait without any rulership trait
+                    remove_trait = horse_caste_undignified
+                }
+                1 = { # gain merchant caste trait
+                    add_trait = horse_caste_merchant
+                }
+                1 = { # gain feudal trait
+                    add_trait = horse_caste_warrior
+                }
+                1 = { # gain a random caste trait between merchant or feudal 
+                    custom_tooltip = {
+                        text = TT_ani_191_random_trait
+                        random_list = {
+                            1 = {
+                                add_trait = horse_caste_merchant
+                            }
+                            1 = {
+                                add_trait = horse_caste_warrior
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
