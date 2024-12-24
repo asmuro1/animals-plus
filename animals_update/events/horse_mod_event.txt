@@ -1,7 +1,7 @@
 namespace = ani_plus
 
 ###### horse update event
-### event 170 - 191?
+### event 170 - 192?
 
 ## conversion quest
 # event 170: event to launch quest by event rule
@@ -287,16 +287,6 @@ character_event = {
 
     trigger = {
         culture_group = horse_group
-        OR = {
-            father = {
-                has_landed_title = yes
-                culture_group = horse_group
-            }
-            mother = {
-                has_landed_title = yes
-                culture_group = horse_group
-            }
-        }
     }
     immediate = {
         add_trait = horse_caste_undignified
@@ -1072,6 +1062,37 @@ character_event = {
                 clr_character_flag = horse_rite_2_success
                 clr_character_flag = horse_rite_3_success
             }
+        }
+    }
+}
+
+# event 192: updating caste trait on culture change
+character_event = {
+    id=ani_plus.192
+
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        OR = {
+            ROOT = { culture_group = horse_group}
+            FROM = horse
+        }
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                culture_group = horse_group
+                NOT = { age = 16 }
+            }
+
+            add_trait = horse_caste_undignified
+        }
+        else = {
+            remove_trait = horse_caste_merchant
+            remove_trait = horse_caste_warrior
+            remove_trait = horse_caste_undignified
         }
     }
 }
