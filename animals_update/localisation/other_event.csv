@@ -225,6 +225,8 @@ DESCA_ani_189;[Root.Fromfrom.GetTitledFirstName] just finished its rite. The rel
 DESCB_ani_189;[Root.Fromfrom.GetTitledFirstName] has gone through its final rite. Even if some fault could be noted, [Root.Fromfrom.GetSheHe] still learned much from it.;[Root.Fromfrom.GetTitledFirstName] vient de passer le rite de passage final. malgré quelques légères lacunes, [Root.Fromfrom.GetSheHeCap] a bien appris ce que les religieux essayez de lui enseigner.;;;;;;;;;;;;x
 DESCC_ani_189;[Root.Fromfrom.GetTitledFirstName] has done its religious rite. [Root.Fromfrom.GetSheHeCap] did great, whithout any flaw. The religious said that he completed its education;[Root.Fromfrom.GetTitledFirstName] a fini le rite religieux. Les prêtres qui ont organisé le rite affirment qu'[Root.Fromfrom.GetSheHeCap] a beaucoup appris des coutumes religieuses.;;;;;;;;;;;;x 
 OPT_ani_189;Good!;Bien!;;;;;;;;;;;;x
+DESC_ani_191;Now that [Root.From.GetTitledFirstName] is adult, it's time for him to express its talent;Maintenant que [Root.From.GetTitledFirstName] est adulte, son talent va maintenant pouvoir se révéler;;;;;;;;;;;;x
+OPT_ani_191;Hope [Root.From.GetSheHe] became a genious;J'espère qu'[Root.From.GetSheHe] deviendra un cheval intelligeant;;;;;;;;;;;;x
 
 ## TOOLTIPS
 TT_ani_172_went_well;everything goes well;tout se passe comme prévu;;;;;;;;;;;;x
