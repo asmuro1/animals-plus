@@ -464,16 +464,115 @@ decisions = {
 
             trigger_if = {
                 limit = { tier = KING }
-                wealth = 250
+                wealth = 200
             }
             trigger_else = {
                 #limit = { tier = EMPEROR}
-                wealth = 750
+                wealth = 600
             }
         }
 
         effect = {
             set_character_flag = created_royal_guard
+            
+            if = {
+                limit = {
+                    tier = EMPEROR
+                    c_galaz = {
+                        religion = Horse_religion
+                        owner = {
+                            religion = Horse_religion
+                        }
+                    }
+                }
+                wealth = -600
+                spawn_unit = {
+                    province = capital_scope
+                    home = capital_scope
+                    
+                    earmark = horse_royal_guard
+                    
+                    maintenance_multiplier = 1.5
+                    reinforces = yes # holy site bonus
+                    reinforce_rate_multiplier = 0.1
+                    disband_on_peace = no
+                    can_toggle_looting = no
+                    troops = {
+                        knights = { 500 500 }
+                        light_cavalry = { 1000 1500 }
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    tier = EMPEROR
+                }
+                wealth = -600
+                spawn_unit = {
+                    province = capital_scope
+                    home = capital_scope
+                    
+                    earmark = horse_royal_guard
+                    
+                    maintenance_multiplier = 1.5
+                    reinforces = no
+                    disband_on_peace = no
+                    can_toggle_looting = no
+                    troops = {
+                        knights = { 500 500 }
+                        light_cavalry = { 1000 1500 }
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    #tier = KING
+                    c_galaz = {
+                        religion = Horse_religion
+                        owner = {
+                            religion = Horse_religion
+                        }
+                    }
+                }
+                wealth = -200
+                spawn_unit = {
+                    province = capital_scope
+                    home = capital_scope
+                    
+                    earmark = horse_royal_guard
+                    
+                    maintenance_multiplier = 1.5
+                    reinforces = yes # holy site bonus
+                    reinforce_rate_multiplier = 0.1
+                    disband_on_peace = no
+                    can_toggle_looting = no
+                    troops = {
+                        knights = { 100 100 }
+                        light_cavalry = { 750 1000 }
+                    }
+                }
+            }
+            else = {
+                #limit = {
+                #    tier = KING
+                #}
+                wealth = -200
+                spawn_unit = {
+                    province = capital_scope
+                    home = capital_scope
+                    
+                    earmark = horse_royal_guard
+                    
+                    maintenance_multiplier = 1.5
+                    reinforces = no
+                    disband_on_peace = no
+                    can_toggle_looting = no
+                    troops = {
+                        knights = { 100 100 }
+                        light_cavalry = { 750 1000 }
+                    }
+                }
+            }
         }
 
         ai_will_do = {
