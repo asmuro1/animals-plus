@@ -447,6 +447,7 @@ decisions = {
             culture_group = horse_group
             religion = Horse_religion
             higher_tier_than = DUKE
+            NOT = { has_character_flag = created_royal_guard }
         }
         allow = {
             OR = {
@@ -479,7 +480,9 @@ decisions = {
                 limit = {
                     tier = EMPEROR
                     c_galaz = {
-                        religion = Horse_religion
+                        location = {
+                            religion = Horse_religion
+                        }
                         owner = {
                             religion = Horse_religion
                         }
@@ -494,7 +497,7 @@ decisions = {
                     
                     maintenance_multiplier = 1.5
                     reinforces = yes # holy site bonus
-                    reinforce_rate_multiplier = 0.1
+                    reinforce_rate_multiplier = 0.0625
                     disband_on_peace = no
                     can_toggle_looting = no
                     troops = {
@@ -524,11 +527,13 @@ decisions = {
                     }
                 }
             }
-            if = {
+            else_if = {
                 limit = {
                     #tier = KING
                     c_galaz = {
-                        religion = Horse_religion
+                        location = {
+                            religion = Horse_religion
+                        }
                         owner = {
                             religion = Horse_religion
                         }
@@ -553,9 +558,6 @@ decisions = {
                 }
             }
             else = {
-                #limit = {
-                #    tier = KING
-                #}
                 wealth = -200
                 spawn_unit = {
                     province = capital_scope
