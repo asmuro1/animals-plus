@@ -191,3 +191,37 @@ defined_text = {
         localisation_key = hunter
     }
 }
+
+defined_text = {
+    name = getHorseRank
+
+    text = {
+        trigger = {
+            tier = KING
+        }
+        localisation_key = king_guards_adj
+    }
+    text = {
+        trigger = {
+            tier = EMPEROR
+        }
+        localisation_key = emperor_guards_adj
+    }
+}
+
+defined_text = {
+    name = getHorseRankTitle
+
+    text = {
+        trigger = {
+            tier = KING
+        }
+        localisation_key = king_guards_rank
+    }
+    text = {
+        trigger = {
+            tier = EMPEROR
+        }
+        localisation_key = emperor_guards_rank
+    }
+}
