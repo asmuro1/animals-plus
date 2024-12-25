@@ -329,6 +329,7 @@ tt_horse_horse_building;Has constructed an horse building;A construit un bâtimen
 CREATED_HOLY_ORDER_HORSE_TOOLTIP;§Y[d_war_hord.GetName]§! created;§Y[d_war_hord.GetName]§! est créée;;;;;;;;;;;;x
 HORSE_TT_DID_NOT_PARTICIPATE_RITE_1;Did never gone through the youth rite;N'a jamais effectué le rite de jeunesse;;;;;;;;;;;;x
 HORSE_TT_START_RITE_PREPARATION;Start the rite's preparations;Commence les préparation du rite;;;;;;;;;;;;x
+horse_TT_did_not_create_it_once;Did not create the §Y[Root.getHorseRank] guard§! once;N'a jamais créer la §Ygarde [Root.getHorseRank]§!;;;;;;;;;;;;x
 
 ## customized localisation
 king_guards_adj;royal;royal;;;;;;;;;;;;x

@@ -446,16 +446,34 @@ decisions = {
         potential = {
             culture_group = horse_group
             religion = Horse_religion
+            higher_tier_than = DUKE
         }
         allow = {
             OR = {
                 government = horse_feudal_gov
                 government = horse_merchant_gov
             }
+            custom_tooltip = {
+                text = horse_TT_did_not_create_it_once
+                NOT = { has_character_flag = created_royal_guard }
+            }
+            OR = {
+                trait = horse_caste_merchant
+                trait = horse_caste_warrior
+            }
+
+            trigger_if = {
+                limit = { tier = KING }
+                wealth = 250
+            }
+            trigger_else = {
+                #limit = { tier = EMPEROR}
+                wealth = 750
+            }
         }
 
         effect = {
-
+            set_character_flag = created_royal_guard
         }
 
         ai_will_do = {
