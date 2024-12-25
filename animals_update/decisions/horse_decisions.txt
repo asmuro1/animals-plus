@@ -436,4 +436,30 @@ decisions = {
             }
         }
     }
+
+    create_horse_royal_gard = {
+        only_playable = yes
+        ai_check_interval = 6
+
+        is_high_prio = yes
+
+        potential = {
+            culture_group = horse_group
+            religion = Horse_religion
+        }
+        allow = {
+            OR = {
+                government = horse_feudal_gov
+                government = horse_merchant_gov
+            }
+        }
+
+        effect = {
+
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
 }
