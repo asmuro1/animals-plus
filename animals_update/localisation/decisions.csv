@@ -323,6 +323,8 @@ make_younth_rite;Organize the youth rite;Oraniser le rite de jeunesse;;;;;;;;;;;
 make_younth_rite_desc;As an horse, the young children need to learn how to act. The ritual is the first one to help them grow strong.;Tout chevaux prend a besoin de temps pour grandir. Ce rituel est le premier réalisable pour les aider à grandir;;;;;;;;;;;;x
 create_horse_royal_gard;Create the [Root.getHorseRank] guards;Créer la garde [Root.getHorseRank];;;;;;;;;;;;x
 create_horse_royal_gard_desc;The [Root.getHorseRank] is the symbol of its ruler. Any [Root.getHorseRankTitle] must have one to avoid subjects rebelling;La garde [Root.getHorseRank] est l'image de son souverain. Sans elle, un [Root.getHorseRankTitle] n'est pas respecté de ses sujets;;;;;;;;;;;;x
+horse_abdicate;abdicate;Abdiquer;;;;;;;;;;;;x
+horse_abdicate_desc;As a §Y[Root.getHorseRankTitle]§!, loosing its [Root.getHorseRank] guard means losing subject respect. As it is not possible for a horse to recreate the [Root.getHorseRank] guard, abdicate to a respected ruler is the only option to keep its honor.;En tant que §Y[Root.getHorseRankTitle]§!, perdre sa [Root.getHorseRank] guard signifie que mes sujet ne me respectent plus. Comme il n'est plus possible de la récupérer à nouveau, abdique reste un choix pour garantir la stabilité du pays;;;;;;;;;;;;x
 
 ### tooltip
 tt_horse_horse_building;Has constructed an horse building;A construit un bâtiment de cheval;;;;;;;;;;;;x
@@ -330,6 +332,7 @@ CREATED_HOLY_ORDER_HORSE_TOOLTIP;§Y[d_war_hord.GetName]§! created;§Y[d_war_hord.
 HORSE_TT_DID_NOT_PARTICIPATE_RITE_1;Did never gone through the youth rite;N'a jamais effectué le rite de jeunesse;;;;;;;;;;;;x
 HORSE_TT_START_RITE_PREPARATION;Start the rite's preparations;Commence les préparation du rite;;;;;;;;;;;;x
 horse_TT_did_not_create_it_once;Did not create the §Y[Root.getHorseRank] guard§! once;N'a jamais créer la §Ygarde [Root.getHorseRank]§!;;;;;;;;;;;;x
+horse_TT_loose_its_royal_guard;Lost [Root.GetHerHis] §Y[Root.getHorseRank] guard§!;A perdu sa §Yguarde [Root.getHorseRank]§!;;;;;;;;;;;;x
 
 ## customized localisation
 king_guards_adj;royal;royal;;;;;;;;;;;;x
