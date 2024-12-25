@@ -145,6 +145,7 @@ horse_caste_undignified = {
 
     birth = 0 #given by on action birth event
     can_hold_titles = no
+    cannot_inherit = yes
     opposites = { horse_caste_warrior horse_caste_warrior }
     religious = yes
     ruler_designer_cost = -40
