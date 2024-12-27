@@ -1178,13 +1178,73 @@ character_event = {
 
     option = {
         name = OPTA_ani_193
+
+        trigger = {
+            has_earmarked_regiments = horse_royal_guard
+            NOT = {
+                had_character_flag = {
+                    flag = horse_used_royal_guard
+                    years < 5
+                }
+            }
+        }
+
+        clr_character_flag = horse_used_royal_guard
+        set_character_flag = horse_used_royal_guard
     }
 
     option = {
         name = OPTB_ani_193
+
+        tooltip_info = martial
+        trigger = {
+            OR = {
+                trait = horse_caste_warrior
+                martial = 15
+            }
+            OR = {
+                AND = {
+                    tier = KING
+                    wealth = 250
+                }
+                AND = {
+                    tier = EMPEROR
+                    wealth = 550
+                }
+            }
+        }
+
+        if = {
+            limit = { tier = KING }
+            wealth = -250
+        }
+        else = {
+            wealth = -550
+        }
     }
 
     option = {
         name = OPTC_ani_193
+
+        random_list = {
+            1 = {
+                add_character_modifier = {
+                    name = horse_warrior_malus_1
+                    years = 10
+
+                    stacking = yes
+                }
+            }
+            1 = {
+                modifier = {
+                    factor = 0
+                    has_character_modifier = horse_warrior_malus_2
+                }
+                add_character_modifier = {
+                    name = horse_warrior_malus_2
+                    years = 10
+                }
+            }
+        }
     }
 }
