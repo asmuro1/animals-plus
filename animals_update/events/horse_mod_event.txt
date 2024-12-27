@@ -1264,14 +1264,14 @@ character_event = {
         higher_tier_than = DUKE
         culture_group = horse_group
         religion = Horse_religion
-         NOR = {
-            trait = horse_caste_warrior
+        NOR = {
+            trait = horse_caste_merchant
             has_earmarked_regiments = horse_royal_guard
         }
         war = no
         
         any_vassal = {
-            government = horse_feudal_gov
+            government = horse_merchant_gov
             is_playable = yes
         }
 
