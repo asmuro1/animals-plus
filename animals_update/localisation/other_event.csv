@@ -235,7 +235,14 @@ DESC_ani_194;Recently, some merchants seems dissatisfied. Even if ignored at sta
 OPTA_ani_194;I shall send my §Y[Root.getHorseRank] guard§! intimidate them!;Je vais envoyer ma §Ygarde [Root.getHorseRank]§! les intimider!;;;;;;;;;;;;x
 OPTB_ani_194;Some money should satisfy them;Un peu d'argent devrais les satisfaires;;;;;;;;;;;;x
 OPTC_ani_194;I will negociate to avoid those trouble;Je vais négocier pour éviter tout problèmes;;;;;;;;;;;;x
-
+DESC_ani_195;My army commanders start to defy my orders. At start, it was only minor things, but now, I can't ignore it;Les commandants de mes armées commencent à défier mes ordres. Au début, c'était sur des choses sans importances, mais maintenants, je ne peux plus les ignorer;;;;;;;;;;;;x
+OPTA_ani_195;My §Y[Root.getHorseRank] guard§! will scare them;Ma §Ygarde [Root.getHorseRank]§! va leur rappeler leur place;;;;;;;;;;;;x
+OPTB_ani_195;I shall pay some mercenaries to pacify them;Quelques mercenaires devraient faire l'affaire;;;;;;;;;;;;x
+OPTC_ani_195;I will make them understand their place!;Je vais leur rappeler leur place;;;;;;;;;;;;x
+DESC_ani_196;The paysants under my rule start to question my position as a rightful horse [Root.getHorseRankTitle]...;Les paysants commencent à douter de ma position de [Root.getHorseRankTitle].;;;;;;;;;;;;x
+OPTA_ani_196;My §Y[Root.getHorseRank] guard§! shall make them understand their place;Ma §Ygarde [Root.getHorseRank]§! va leur faire comprendre qui je suis!;;;;;;;;;;;;x
+OPTB_ani_196;I shall use my wealth to convince them!;Je vais utiliser mon argent pour les convaincre!;;;;;;;;;;;;x
+OPTC_ani_196;I will wathever means to make them understand my position;J'utiliserai tous les moyens possible pour leur faire comprendre qui je suis!;;;;;;;;;;;;x
 
 ## TOOLTIPS
 TT_ani_172_went_well;everything goes well;tout se passe comme prévu;;;;;;;;;;;;x

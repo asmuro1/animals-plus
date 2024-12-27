@@ -1184,7 +1184,7 @@ character_event = {
             NOT = {
                 had_character_flag = {
                     flag = horse_used_royal_guard
-                    years < 5
+                    years < 3
                 }
             }
         }
@@ -1337,7 +1337,7 @@ character_event = {
             NOT = {
                 had_character_flag = {
                     flag = horse_used_royal_guard
-                    years < 5
+                    years < 3
                 }
             }
         }
@@ -1484,7 +1484,7 @@ character_event = {
             NOT = {
                 had_character_flag = {
                     flag = horse_used_royal_guard
-                    years < 5
+                    years < 3
                 }
             }
         }
@@ -1549,13 +1549,13 @@ character_event = {
     }
 }
 
-# event 197
+# event 196
 character_event = {
-    id = ani_plus.197
+    id = ani_plus.196
 
     border = GFX_event_normal_frame_diplomacy
     picture = GFX_evt_council
-    desc = DESC_ani_197
+    desc = DESC_ani_196
 
     only_playable = yes
     religion = Horse_religion
@@ -1630,14 +1630,14 @@ character_event = {
     }
 
     option = {
-        name = OPTA_ani_197
+        name = OPTA_ani_196
 
         trigger = {
             has_earmarked_regiments = horse_royal_guard
             NOT = {
                 had_character_flag = {
                     flag = horse_used_royal_guard
-                    years < 5
+                    years < 3
                 }
             }
         }
@@ -1647,7 +1647,7 @@ character_event = {
     }
 
     option = {
-        name = OPTB_ani_197
+        name = OPTB_ani_196
 
         tooltip_info = stewardship
         trigger = {
@@ -1677,7 +1677,7 @@ character_event = {
     }
 
     option = {
-        name = OPTC_ani_197
+        name = OPTC_ani_196
 
         random_list = {
             1 = {
