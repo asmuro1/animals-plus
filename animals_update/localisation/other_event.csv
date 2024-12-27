@@ -228,9 +228,14 @@ OPT_ani_189;Good!;Bien!;;;;;;;;;;;;x
 DESC_ani_191;Now that [Root.From.GetTitledFirstName] is adult, it's time for him to express its talent;Maintenant que [Root.From.GetTitledFirstName] est adulte, son talent va maintenant pouvoir se révéler;;;;;;;;;;;;x
 OPT_ani_191;Hope [Root.From.GetSheHe] became a genious;J'espère qu'[Root.From.GetSheHe] deviendra un cheval intelligeant;;;;;;;;;;;;x
 DESC_ani_193;Recently, some vassals seems dissatisfied. Even if ignored at start, it can't be ignored. Something must be done!;Récemment, des vassaux guerriers semblent mécontent de ma gouvernance. Ils commencent à gagner de l'influence et ne peuvent plus être ignorés.;;;;;;;;;;;;x
-OPTA_ani_193;I shall send my §Y[Root.getHorseRank] guard§!!;Je vais envoyer ma §Ygarde [Root.getHorseRank]§!!;;;;;;;;;;;;x
+OPTA_ani_193;I shall send my §Y[Root.getHorseRank] guard§! intimidate them!;Je vais envoyer ma §Ygarde [Root.getHorseRank]§! les intimider!;;;;;;;;;;;;x
 OPTB_ani_193;Some money should satisfy them;Un peu d'argent devrais les satisfaires;;;;;;;;;;;;x
 OPTC_ani_193;I will negociate to avoid those trouble;Je vais négocier pour éviter tout problèmes;;;;;;;;;;;;x
+DESC_ani_194;Recently, some merchants seems dissatisfied. Even if ignored at start, it can't be ignored. Something must be done!;Récemment, des marchands semblent mécontent de ma gouvernance. Ils commencent à gagner de l'influence et ne peuvent plus être ignorés.;;;;;;;;;;;;x
+OPTA_ani_194;I shall send my §Y[Root.getHorseRank] guard§! intimidate them!;Je vais envoyer ma §Ygarde [Root.getHorseRank]§! les intimider!;;;;;;;;;;;;x
+OPTB_ani_194;Some money should satisfy them;Un peu d'argent devrais les satisfaires;;;;;;;;;;;;x
+OPTC_ani_194;I will negociate to avoid those trouble;Je vais négocier pour éviter tout problèmes;;;;;;;;;;;;x
+
 
 ## TOOLTIPS
 TT_ani_172_went_well;everything goes well;tout se passe comme prévu;;;;;;;;;;;;x
