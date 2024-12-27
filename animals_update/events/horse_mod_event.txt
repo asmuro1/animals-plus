@@ -1117,7 +1117,7 @@ character_event = {
         higher_tier_than = DUKE
         culture_group = horse_group
         religion = Horse_religion
-        NOR = {
+        NAND = {
             trait = horse_caste_warrior
             has_earmarked_regiments = horse_royal_guard
         }
@@ -1264,7 +1264,7 @@ character_event = {
         higher_tier_than = DUKE
         culture_group = horse_group
         religion = Horse_religion
-        NOR = {
+        NAND = {
             trait = horse_caste_merchant
             has_earmarked_regiments = horse_royal_guard
         }
@@ -1417,15 +1417,14 @@ character_event = {
         higher_tier_than = DUKE
         culture_group = horse_group
         religion = Horse_religion
-        NOR = {
-            trait = horse_caste_warrior
+        NAND = {
+            government = horse_feudal_gov
             has_earmarked_regiments = horse_royal_guard
         }
-        war = no
-        
-        any_vassal = {
-            government = horse_feudal_gov
-            is_playable = yes
+
+        any_courtier_or_vassal = {
+            liege = { character = PREV }
+            has_minor_title = title_commander
         }
 
     }
@@ -1564,17 +1563,12 @@ character_event = {
         higher_tier_than = DUKE
         culture_group = horse_group
         religion = Horse_religion
-        NOR = {
-            trait = horse_caste_merchant
+        NAND = {
+            is_tribal = no
             has_earmarked_regiments = horse_royal_guard
         }
-        war = no
         
-        any_vassal = {
-            government = horse_merchant_gov
-            is_playable = yes
-        }
-
+        # game mecanics force any kings or emperor to have at least 1 county
     }
 
     mean_time_to_happen = {
