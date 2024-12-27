@@ -1110,7 +1110,20 @@ character_event = {
     picture = GFX_evt_council
     desc = DESC_ani_193
 
+    only_playable = yes
+    religion = Horse_religion
+
     trigger = {
+        higher_tier_than = DUKE
+        culture_group = horse_group
+        religion = Horse_religion
+        NOT = { trait = horse_caste_warrior }
+        war = no
+        
+        any_vassal = {
+            government = horse_feudal_gov
+            is_playable = yes
+        }
 
     }
 
