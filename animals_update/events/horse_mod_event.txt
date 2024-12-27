@@ -1349,11 +1349,11 @@ character_event = {
     option = {
         name = OPTB_ani_194
 
-        tooltip_info = martial
+        tooltip_info = stewardship
         trigger = {
             OR = {
-                trait = horse_caste_warrior
-                martial = 15
+                trait = horse_caste_merchant
+                stewardship = 15
             }
             OR = {
                 AND = {
@@ -1391,10 +1391,10 @@ character_event = {
             1 = {
                 modifier = {
                     factor = 0
-                    has_character_modifier = horse_warrior_malus_2
+                    has_character_modifier = horse_warrior_malus_3
                 }
                 add_character_modifier = {
-                    name = horse_warrior_malus_2
+                    name = horse_warrior_malus_3
                     years = 10
                 }
             }
