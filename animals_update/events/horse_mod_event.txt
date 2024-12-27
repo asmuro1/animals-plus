@@ -1099,7 +1099,7 @@ character_event = {
 
 # event 193: royal guard event - warior
 # event 194: royal guard event - merchant
-# event 195: royal guard event - commander
+# event 195: royal guard event - knights
 # event 196: royal guard event - paysants
 
 # event 193
