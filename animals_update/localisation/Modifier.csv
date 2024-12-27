@@ -220,3 +220,7 @@ dog_rel_unity_penality;Forced conversion;Conversion forcé;;;;;;;;;;;;x
 
 # custom modifier
 dog_interest_implication;governance implication;implication du dirigeant;;;;;;;;;;;;x
+
+##### horse modifier
+horse_warrior_malus_1;unhappy vassals;vassaux mécontents;;;;;;;;;;;;x
+horse_warrior_malus_2;unmobilised warrior;combatants non mobilisés;;;;;;;;;;;;x
