@@ -1,7 +1,7 @@
 namespace = ani_plus
 
 ###### horse update event
-### event 170 - 192?
+### event 170 - 196?
 
 ## conversion quest
 # event 170: event to launch quest by event rule
@@ -1094,5 +1094,39 @@ character_event = {
             remove_trait = horse_caste_warrior
             remove_trait = horse_caste_undignified
         }
+    }
+}
+
+# event 193: royal guard event - warior
+# event 194: royal guard event - merchant
+# event 195: royal guard event - commander
+# event 196: royal guard event - paysants
+
+# event 193
+character_event = {
+    id = ani_plus.193
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = DESC_ani_193
+
+    trigger = {
+
+    }
+
+    mean_time_to_happen = {
+        years = 20
+    }
+
+    option = {
+        name = OPTA_ani_193
+    }
+
+    option = {
+        name = OPTB_ani_193
+    }
+
+    option = {
+        name = OPTC_ani_193
     }
 }
