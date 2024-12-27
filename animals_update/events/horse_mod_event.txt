@@ -1248,3 +1248,150 @@ character_event = {
         }
     }
 }
+
+# event 194
+character_event = {
+    id = ani_plus.194
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = DESC_ani_194
+
+    only_playable = yes
+    religion = Horse_religion
+
+    trigger = {
+        higher_tier_than = DUKE
+        culture_group = horse_group
+        religion = Horse_religion
+         NOR = {
+            trait = horse_caste_warrior
+            has_earmarked_regiments = horse_royal_guard
+        }
+        war = no
+        
+        any_vassal = {
+            government = horse_feudal_gov
+            is_playable = yes
+        }
+
+    }
+
+    mean_time_to_happen = {
+        years = 10
+
+        modifier = {
+            factor = 2
+
+            has_earmarked_regiments = horse_royal_guard
+        }
+
+        modifier = {
+            factor = 2
+
+            prestige = 1000
+        }
+
+        modifier = {
+            factor = 3
+
+            prestige = 2500
+        }
+
+        modifier = {
+            factor = 0.2
+
+            NOT = { martial = 2 }
+        }
+
+        modifier = {
+            factor = 0.5
+
+            NOT = { martial = 7 }
+        }
+
+        modifier = {
+            factor = 1.25
+
+            NOT = { martial = 12 }
+        }
+
+        modifier = {
+            factor = 1.75
+
+            NOT = { martial = 17 }
+        }
+    }
+
+    option = {
+        name = OPTA_ani_194
+
+        trigger = {
+            has_earmarked_regiments = horse_royal_guard
+            NOT = {
+                had_character_flag = {
+                    flag = horse_used_royal_guard
+                    years < 5
+                }
+            }
+        }
+
+        clr_character_flag = horse_used_royal_guard
+        set_character_flag = horse_used_royal_guard
+    }
+
+    option = {
+        name = OPTB_ani_194
+
+        tooltip_info = martial
+        trigger = {
+            OR = {
+                trait = horse_caste_warrior
+                martial = 15
+            }
+            OR = {
+                AND = {
+                    tier = KING
+                    wealth = 250
+                }
+                AND = {
+                    tier = EMPEROR
+                    wealth = 550
+                }
+            }
+        }
+
+        if = {
+            limit = { tier = KING }
+            wealth = -250
+        }
+        else = {
+            wealth = -550
+        }
+    }
+
+    option = {
+        name = OPTC_ani_194
+
+        random_list = {
+            1 = {
+                add_character_modifier = {
+                    name = horse_warrior_malus_1
+                    years = 10
+
+                    stacking = yes
+                }
+            }
+            1 = {
+                modifier = {
+                    factor = 0
+                    has_character_modifier = horse_warrior_malus_2
+                }
+                add_character_modifier = {
+                    name = horse_warrior_malus_2
+                    years = 10
+                }
+            }
+        }
+    }
+}
