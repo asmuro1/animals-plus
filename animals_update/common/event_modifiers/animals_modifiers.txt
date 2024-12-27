@@ -690,7 +690,7 @@ dog_learning_council = {
 }
 
 horse_warrior_malus_1 = {
-	icon = 19
+	icon = 36
 	vassal_opinion = -25
 }
 horse_warrior_malus_2 = {
@@ -698,4 +698,9 @@ horse_warrior_malus_2 = {
 	levy_size = -0.3
 	levy_reinforce_rate = -0.5
 	army_reinforce_rate = -0.5
+}
+horse_warrior_malus_3 = {
+	icon  = 22
+	castle_vassal_tax_modifier = -0.4
+	city_vassal_tax_modifier = -0.4
 }
