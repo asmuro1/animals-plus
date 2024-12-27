@@ -1117,7 +1117,10 @@ character_event = {
         higher_tier_than = DUKE
         culture_group = horse_group
         religion = Horse_religion
-        NOT = { trait = horse_caste_warrior }
+        NOR = {
+            trait = horse_caste_warrior
+            has_earmarked_regiments = horse_royal_guard
+        }
         war = no
         
         any_vassal = {
@@ -1128,7 +1131,49 @@ character_event = {
     }
 
     mean_time_to_happen = {
-        years = 20
+        years = 10
+
+        modifier = {
+            factor = 2
+
+            has_earmarked_regiments = horse_royal_guard
+        }
+
+        modifier = {
+            factor = 2
+
+            prestige = 1000
+        }
+
+        modifier = {
+            factor = 3
+
+            prestige = 2500
+        }
+
+        modifier = {
+            factor = 0.2
+
+            NOT = { martial = 2 }
+        }
+
+        modifier = {
+            factor = 0.5
+
+            NOT = { martial = 7 }
+        }
+
+        modifier = {
+            factor = 1.25
+
+            NOT = { martial = 12 }
+        }
+
+        modifier = {
+            factor = 1.75
+
+            NOT = { martial = 17 }
+        }
     }
 
     option = {
