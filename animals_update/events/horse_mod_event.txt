@@ -1287,39 +1287,45 @@ character_event = {
         }
 
         modifier = {
+            factor = 1.5
+
+            wealth = 150
+        }
+
+        modifier = {
             factor = 2
 
-            prestige = 1000
+            wealth = 250
         }
 
         modifier = {
             factor = 3
 
-            prestige = 2500
+            prestige = 1000
         }
 
         modifier = {
             factor = 0.2
 
-            NOT = { martial = 2 }
+            NOT = { stewardship = 2 }
         }
 
         modifier = {
             factor = 0.5
 
-            NOT = { martial = 7 }
+            NOT = { stewardship = 7 }
         }
 
         modifier = {
             factor = 1.25
 
-            NOT = { martial = 12 }
+            NOT = { stewardship = 12 }
         }
 
         modifier = {
             factor = 1.75
 
-            NOT = { martial = 17 }
+            NOT = { stewardship = 17 }
         }
     }
 
