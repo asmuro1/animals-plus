@@ -1501,12 +1501,10 @@ character_event = {
     option = {
         name = OPTB_ani_195
 
-        tooltip_info = martial
+        tooltip_info = diplomacy 
         trigger = {
-            OR = {
-                trait = horse_caste_warrior
-                martial = 15
-            }
+            diplomacy = 15
+
             OR = {
                 AND = {
                     tier = KING
@@ -1543,10 +1541,10 @@ character_event = {
             1 = {
                 modifier = {
                     factor = 0
-                    has_character_modifier = horse_warrior_malus_2
+                    has_character_modifier = horse_warrior_malus_4
                 }
                 add_character_modifier = {
-                    name = horse_warrior_malus_2
+                    name = horse_warrior_malus_4
                     years = 10
                 }
             }
@@ -1643,12 +1641,10 @@ character_event = {
     option = {
         name = OPTB_ani_196
 
-        tooltip_info = stewardship
+        tooltip_info = learning
         trigger = {
-            OR = {
-                trait = horse_caste_merchant
-                stewardship = 15
-            }
+            stewardship = 15
+            
             OR = {
                 AND = {
                     tier = KING
@@ -1685,10 +1681,10 @@ character_event = {
             1 = {
                 modifier = {
                     factor = 0
-                    has_character_modifier = horse_warrior_malus_3
+                    has_character_modifier = horse_warrior_malus_5
                 }
                 add_character_modifier = {
-                    name = horse_warrior_malus_3
+                    name = horse_warrior_malus_5
                     years = 10
                 }
             }
