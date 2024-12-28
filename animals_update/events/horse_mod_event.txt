@@ -1572,7 +1572,7 @@ character_event = {
             has_earmarked_regiments = horse_royal_guard
         }
         
-        # game mecanics force any kings or emperor to have at least 1 county
+        # game mecanics force any king or emperor to have at least 1 county
     }
 
     mean_time_to_happen = {
@@ -1643,7 +1643,7 @@ character_event = {
 
         tooltip_info = learning
         trigger = {
-            stewardship = 15
+            learning = 15
             
             OR = {
                 AND = {
