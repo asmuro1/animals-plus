@@ -704,3 +704,13 @@ horse_warrior_malus_3 = {
 	castle_vassal_tax_modifier = -0.4
 	city_vassal_tax_modifier = -0.4
 }
+horse_warrior_malus_4 = {
+	icon = 21
+	diplomacy_penalty = -7
+	martial_penalty = -3
+	combat_rating = -15
+}
+horse_warrior_malus_5 = {
+	icon = 20
+	global_revolt_risk = 0.45
+}
