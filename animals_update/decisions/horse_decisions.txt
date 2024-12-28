@@ -610,3 +610,26 @@ decisions = {
         }
     }
 }
+
+targetted_decisions = {
+    horse_ritual_conversion = {
+        is_high_prio = no
+        ai_check_interval = 11
+
+        only_playable = yes
+
+        from_potential = {}
+        potential = {}
+        allow = {}
+        effect = {}
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0.1
+
+                ai = yes
+            }
+        }
+    }
+}
