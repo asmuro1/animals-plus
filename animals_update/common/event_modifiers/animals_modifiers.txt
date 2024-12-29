@@ -714,3 +714,7 @@ horse_warrior_malus_5 = {
 	icon = 20
 	global_revolt_risk = 0.45
 }
+horse_conversion_tyrany = {
+	icon = 57
+	general_opinion = -5
+}
