@@ -102,6 +102,29 @@ title_decisions = {
             }
         }
     }
+
+    horse_ritual_conversion_county = {
+        is_high_prio = no
+        ai_check_interval = 12
+
+        filter = owned
+        ai_target_filter = owned
+        only_playable = yes
+
+        potential = {}
+        allow = {}
+
+        effect = {}
+
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0.15
+                ai = yes
+            }
+        }
+    }
 }
 
 decisions = {
