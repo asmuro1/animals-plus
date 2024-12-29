@@ -617,11 +617,50 @@ targetted_decisions = {
         ai_check_interval = 11
 
         only_playable = yes
+        filter = sub_realm
 
-        from_potential = {}
-        potential = {}
-        allow = {}
-        effect = {}
+        from_potential = {
+            culture_group = horse_group
+            religion = Horse_religion
+        }
+        potential = {
+            NOR = {
+                culture_group = FROM
+                has_character_flag = horse_convert_character
+            }
+            liege = {
+                character = FROM
+            }
+        }
+        allow = {
+            FROM = {
+                OR = {
+                    government = horse_feudal_gov
+                    government = horse_merchant_gov
+                }
+                has_regent = no
+                prestige = 125
+
+                OR = {
+                    trait = horse_caste_warrior
+                    c_kirghiz = {
+                        holder_scope = { religion = Horse_religion }
+                    }
+                }
+            }
+
+            is_adult = yes
+            OR = {
+                prisoner = yes
+                has_landed_title = no
+            }
+        }
+        effect = {
+            FROM = {
+                prestige = -125
+            }
+            set_character_flag = horse_convert_character
+        }
         ai_will_do = {
             factor = 1
 
