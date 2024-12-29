@@ -658,8 +658,15 @@ targetted_decisions = {
         effect = {
             FROM = {
                 prestige = -125
+                add_character_modifier = {
+                    name = horse_conversion_tyrany
+                    months = 6
+                }
             }
             set_character_flag = horse_convert_character
+
+            culture = FROM
+
         }
         ai_will_do = {
             factor = 1
