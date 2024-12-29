@@ -325,6 +325,8 @@ create_horse_royal_gard;Create the [Root.getHorseRank] guards;Créer la garde [Ro
 create_horse_royal_gard_desc;The [Root.getHorseRank] is the symbol of its ruler. Any [Root.getHorseRankTitle] must have one to avoid subjects rebelling;La garde [Root.getHorseRank] est l'image de son souverain. Sans elle, un [Root.getHorseRankTitle] n'est pas respecté de ses sujets;;;;;;;;;;;;x
 horse_abdicate;abdicate;Abdiquer;;;;;;;;;;;;x
 horse_abdicate_desc;As a §Y[Root.getHorseRankTitle]§!, loosing its [Root.getHorseRank] guard means losing subject respect. As it is not possible for a horse to recreate the [Root.getHorseRank] guard, abdicate to a respected ruler is the only option to keep its honor.;En tant que §Y[Root.getHorseRankTitle]§!, perdre sa [Root.getHorseRank] guard signifie que mes sujet ne me respectent plus. Comme il n'est plus possible de la récupérer à nouveau, abdique reste un choix pour garantir la stabilité du pays;;;;;;;;;;;;x
+horse_ritual_conversion;Make the conversion ritual;Faire le rituel de conversion;;;;;;;;;;;;x
+horse_ritual_conversion_desc;It is possible to create a big ritual to transform a living being into a horse. That is seen a little tyranical by its peers;Il est possibler d'organiser un rituel pour transformer un être vivant en cheval. Il est cependant vu comme un peu tyranique;;;;;;;;;;;;x
 
 ### tooltip
 tt_horse_horse_building;Has constructed an horse building;A construit un bâtiment de cheval;;;;;;;;;;;;x
