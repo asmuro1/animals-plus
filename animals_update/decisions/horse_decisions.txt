@@ -147,7 +147,13 @@ title_decisions = {
         effect = {
             FROM = {
                 piety = -100
+                add_character_modifier = {
+                    name = horse_conversion_tyrany
+                    months = 3
+                }
             }
+
+            culture = FROM
         }
 
         ai_will_do = {
