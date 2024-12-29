@@ -111,10 +111,44 @@ title_decisions = {
         ai_target_filter = owned
         only_playable = yes
 
-        potential = {}
-        allow = {}
+        potential = {
+            tier = COUNT
+            FROM = {
+                culture_group = horse_group
+                religion = Horse_religion
+            }
+            location = {
+                NOT = {
+                    culture_group = horse_group
+                }
+            }
+            holder_scope = {
+                character = FROM
+            }
+        }
+        allow = {
+            FROM = {
+                has_regent = no
+                piety = 100
 
-        effect = {}
+                OR = {
+                    trait = horse_caste_merchant
+                    c_moskva = {
+                        holder_scope = { religion = Horse_religion }
+                    }
+                }
+                OR = {
+                    government = horse_feudal_gov
+                    government = horse_merchant_gov
+                }
+            }
+        }
+
+        effect = {
+            FROM = {
+                piety = -100
+            }
+        }
 
         ai_will_do = {
             factor = 1
