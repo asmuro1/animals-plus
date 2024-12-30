@@ -1,7 +1,7 @@
 namespace = ani_plus
 
 ###### horse update event
-### event 170 - 196?
+### event 170 - 196
 
 ## conversion quest
 # event 170: event to launch quest by event rule
