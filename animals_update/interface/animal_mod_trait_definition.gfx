@@ -47,7 +47,7 @@ spriteTypes = {
     }
 
     spriteType = {
-      name = "GFX_trait_bear_hibernation_immortalityr"
+      name = "GFX_trait_bear_hibernation_immortality"
       texturefile = "gfx\trait\hibernal_immortal.dds"
 
       noOfFrames = 1
@@ -65,7 +65,7 @@ spriteTypes = {
     }
 
     spriteType = {
-      name = "GFX_traitsympathy_animals_religions"
+      name = "GFX_trait_sympathy_animals_religions"
       texturefile = "gfx\trait\sympathy_animals.dds"
 
       noOfFrames = 1
