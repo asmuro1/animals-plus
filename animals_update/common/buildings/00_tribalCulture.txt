@@ -4471,7 +4471,7 @@ tribal = {
 
 	# Arberian cavalry
 	tb_culture_arberian_1 = {
-		desc = tb_culture_arberian_1_desc
+		desc = ca_culture_arberian_1_desc
 		potential = {
 			OR = {
 				culture = arberian
@@ -4500,7 +4500,7 @@ tribal = {
 		extra_tech_building_start = 0.8
 	}
 	tb_culture_arberian_2 = {
-		desc = tb_culture_arberian_1_desc
+		desc = ca_culture_arberian_1_desc
 		potential = {
 			OR = {
 				culture = arberian
