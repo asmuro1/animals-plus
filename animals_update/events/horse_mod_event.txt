@@ -1,7 +1,7 @@
 namespace = ani_plus
 
 ###### horse update event
-### event 170 - 196
+### event 170 - 197
 
 ## conversion quest
 # event 170: event to launch quest by event rule
@@ -1687,6 +1687,61 @@ character_event = {
                     name = horse_warrior_malus_5
                     years = 10
                 }
+            }
+        }
+    }
+}
+
+# event 197: setup caste trait on game start for horse rulers
+character_event = {
+    id = ani_plus.197
+
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        ai = no
+    }
+
+    immediate = {
+        any_character = {
+            limit = {
+                is_ruler = yes
+                culture_group = horse_group
+                NOR = {
+                    trait = horse_caste_merchant
+                    trait = horse_caste_warrior
+                    trait = horse_caste_undignified
+                }
+            }
+
+            if = {
+                limit = {
+                    is_adult = yes
+                }
+                random_list = {
+                    1 = {
+                        add_trait = horse_caste_merchant
+                        if = {
+                            limit = {
+                                is_feudal = yes
+                            }
+                            set_government_type = horse_merchant_gov
+                        }
+                    }
+                    1 = {
+                        add_trait = horse_caste_warrior
+                        if = {
+                            limit = {
+                                is_feudal = yes
+                            }
+                            set_government_type = horse_feudal_gov
+                        }
+                    }
+                }
+            }
+            else = {
+                add_trait = horse_caste_undignified
             }
         }
     }

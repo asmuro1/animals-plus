@@ -312,7 +312,7 @@ feudal_governments = {
             religion = Horse_religion
             culture_group = horse_group
             NOT = { is_government_potential = order_government }
-            NOT = { trait = horse_caste_merchant}
+            NOT = { trait = horse_caste_merchant }
         }
 
         allow_looting = yes
