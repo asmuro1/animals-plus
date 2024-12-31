@@ -421,6 +421,7 @@ character_event = {
                     government = horse_feudal_gov
                     government = horse_merchant_gov
                 }
+                is_alive = yes
             }
             mother = {
                 is_playable = yes
@@ -429,6 +430,7 @@ character_event = {
                     government = horse_feudal_gov
                     government = horse_merchant_gov
                 }
+                is_alive = yes
             }
         }
     }
@@ -884,7 +886,7 @@ character_event = {
     hide_window = yes
 
     trigger = {
-        trait = horse_caste_undignified
+        culture_group = horse_group
     }
 
     immediate = {
@@ -1075,8 +1077,15 @@ character_event = {
 
     trigger = {
         OR = {
-            ROOT = { culture_group = horse_group}
-            FROM = horse
+            ROOT = { culture_group = horse_group }
+            AND = {
+                NOT = { culture_group = horse_group }
+                OR = {
+                    trait = horse_caste_merchant
+                    trait = horse_caste_undignified
+                    trait = horse_caste_warrior
+                }
+            }
         }
     }
 
@@ -1125,7 +1134,7 @@ character_event = {
         
         any_vassal = {
             government = horse_feudal_gov
-            is_playable = yes
+            higher_tier_than = BARON
         }
 
     }
@@ -1134,21 +1143,21 @@ character_event = {
         years = 10
 
         modifier = {
-            factor = 2
+            factor = 2.5
 
             has_earmarked_regiments = horse_royal_guard
+        }
+        modifier = {
+            factor = 0.25
+
+            NOT = { has_earmarked_regiments = horse_royal_guard }
+            is_feudal = yes
         }
 
         modifier = {
             factor = 2
 
             prestige = 1000
-        }
-
-        modifier = {
-            factor = 3
-
-            prestige = 2500
         }
 
         modifier = {
@@ -1164,13 +1173,13 @@ character_event = {
         }
 
         modifier = {
-            factor = 1.25
+            factor = 1.2
 
             NOT = { realm_martial = 12 }
         }
 
         modifier = {
-            factor = 1.75
+            factor = 1.4
 
             NOT = { realm_martial = 17 }
         }
@@ -1272,7 +1281,8 @@ character_event = {
         
         any_vassal = {
             government = horse_merchant_gov
-            is_playable = yes
+            higher_tier_than = BARON
+
         }
 
     }
@@ -1281,27 +1291,21 @@ character_event = {
         years = 10
 
         modifier = {
-            factor = 2
+            factor = 2.5
 
             has_earmarked_regiments = horse_royal_guard
         }
-
         modifier = {
-            factor = 1.5
+            factor = 0.25
 
-            wealth = 150
+            NOT = { has_earmarked_regiments = horse_royal_guard }
+            is_feudal = yes
         }
 
         modifier = {
             factor = 2
 
             wealth = 250
-        }
-
-        modifier = {
-            factor = 3
-
-            wealth = 1000
         }
 
         modifier = {
@@ -1317,13 +1321,13 @@ character_event = {
         }
 
         modifier = {
-            factor = 1.25
+            factor = 1.2
 
             NOT = { realm_stewardship = 12 }
         }
 
         modifier = {
-            factor = 1.75
+            factor = 1.4
 
             NOT = { realm_stewardship = 17 }
         }
@@ -1423,7 +1427,7 @@ character_event = {
         }
 
         any_courtier_or_vassal = {
-            liege = { character = PREV }
+            liege = { character = ROOT }
             has_minor_title = title_commander
         }
 
@@ -1433,15 +1437,15 @@ character_event = {
         years = 10
 
         modifier = {
-            factor = 2
+            factor = 2.5
 
             has_earmarked_regiments = horse_royal_guard
         }
-
         modifier = {
-            factor = 1.5
+            factor = 0.25
 
-            combat_rating = 10
+            NOT = { has_earmarked_regiments = horse_royal_guard }
+            is_feudal = yes
         }
 
         modifier = {
@@ -1450,11 +1454,6 @@ character_event = {
             combat_rating = 25
         }
 
-        modifier = {
-            factor = 4
-
-            combat_rating = 100
-        }
 
         modifier = {
             factor = 0.2
@@ -1469,13 +1468,13 @@ character_event = {
         }
 
         modifier = {
-            factor = 1.25
+            factor = 1.2
 
             NOT = { realm_diplomacy = 12 }
         }
 
         modifier = {
-            factor = 1.75
+            factor = 1.4
 
             NOT = { realm_diplomacy = 17 }
         }
@@ -1579,21 +1578,21 @@ character_event = {
         years = 10
 
         modifier = {
-            factor = 2
+            factor = 2.5
 
             has_earmarked_regiments = horse_royal_guard
         }
+        modifier = {
+            factor = 0.25
+
+            NOT = { has_earmarked_regiments = horse_royal_guard }
+            is_feudal = yes
+        }
 
         modifier = {
             factor = 2
 
-            piety = 400
-        }
-
-        modifier = {
-            factor = 3
-
-            piety = 1000
+            piety = 500
         }
 
         modifier = {
@@ -1609,13 +1608,13 @@ character_event = {
         }
 
         modifier = {
-            factor = 1.25
+            factor = 1.2
 
             NOT = { realm_learning = 12 }
         }
 
         modifier = {
-            factor = 1.75
+            factor = 1.4
 
             NOT = { realm_learning = 17 }
         }
