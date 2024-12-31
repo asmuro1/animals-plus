@@ -274,7 +274,7 @@ Animals_grups = {
 
 		max_wives = 1
 		men_can_take_consorts = no
-		women_can_take_consorts = No
+		women_can_take_consorts = no
 
 		allow_looting = yes
 		has_heir_designation = no

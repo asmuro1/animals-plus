@@ -68,7 +68,7 @@ province_event = {
 
     option = {
         name = OPTA_ani_170
-        FROM = {
+        ruler = {
             wealth = -35
             piety = -100
         }
@@ -91,7 +91,7 @@ province_event = {
     is_triggered_only = yes
 
     immediate = {
-        remove_province_modifier = horse_conv_quest_CD
+        clr_province_flag = horse_conv_quest_CD
     }
 }
 

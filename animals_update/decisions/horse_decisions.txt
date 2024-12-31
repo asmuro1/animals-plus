@@ -161,7 +161,7 @@ title_decisions = {
 
             modifier = {
                 factor = 0.15
-                ai = yes
+                always = yes
             }
         }
     }
@@ -208,8 +208,8 @@ decisions = {
                         owner = ROOT
                         leader = none
                         troops = {
-                            light_cavalry = 1250
-                            knights = 250
+                            light_cavalry = { 1250 1250 }
+                            knights = { 250 250 }
                         }
                         attrition = 0.1
                         maintenance = no
@@ -737,7 +737,7 @@ targetted_decisions = {
             modifier = {
                 factor = 0.1
 
-                ai = yes
+                always = yes
             }
         }
     }

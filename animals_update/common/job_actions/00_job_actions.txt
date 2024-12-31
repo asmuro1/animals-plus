@@ -621,5 +621,5 @@ action_train_nobles = { #bear government job
 		}
 	}
 
-	# events = { ani_plus.048 ani_plus.049 } # raise an error on error.log - don't know why
+	events = { ani_plus.48 ani_plus.49 }
 }

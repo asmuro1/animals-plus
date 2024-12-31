@@ -2973,7 +2973,7 @@ decisions = {
 
 				set_government_type = muslim_government
 			}
-			else = {
+			else_if = {
 				limit = {
 					culture_group = tibetan_group
 					OR = {
