@@ -1,0 +1,1747 @@
+namespace = ani_plus
+
+###### horse update event
+### event 170 - 197
+
+## conversion quest
+# event 170: event to launch quest by event rule
+# event 171: removing quest cooldown
+# event 172: finished the preparation
+#       can lead to event 173: everything went well
+#       can lead to event 174: unknown illness due to an hypnotic state
+#       can lead to event 175: an accident occure
+# event 173: everything went well
+# event 174: remain unconcious for some days, need regent, lead to event 176
+# event 175: become injured, lead to event 177
+# event 176: woke up as an horse
+# event 177: the injuries heal or worsen (in this case, event 178)
+# event 178: heal from injuries while becoming horsesss
+
+# event 170
+province_event = {
+    id = ani_plus.170
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    trigger = {
+        has_game_rule = {
+            name = animals_conversion_ways
+            value = animal_events
+        }
+        Is_really_animal_trigger = no
+        holder_scope = {
+            Is_really_animal_trigger = no
+            OR = {
+                lifestyle_traits == 0
+                trait = hunter
+            }
+            is_nomadic = no
+            wealth = 35
+        }
+        terrain = steppe
+        NOT = { has_province_flag = horse_conv_quest_CD }
+        OR = {
+            has_building = tb_steppe_barracks_1
+            has_building = tb_steppe_stable_1
+            has_building = ca_steppe_stable_1
+            has_building = ca_steppe_barracks_1
+            has_building = tb_default_horse_conv_quest
+            has_building = ca_default_horse_conv_quest
+        }
+    }
+
+    mean_time_to_happen = {
+        years = 200
+
+        modifier = {
+            factor = 0.25  # 50 years for players
+            holder_scope = { ai = no }
+        }
+    }
+
+    desc = DESC_ani_170
+
+    immediate = {
+        set_province_flag = horse_conv_quest_CD
+    }
+
+    option = {
+        name = OPTA_ani_170
+        ruler = {
+            wealth = -35
+            piety = -100
+        }
+
+        province_event = { id = ani_plus.172 days = 7 random = 7 }
+    }
+    option = {
+        name = OPTB_ani_170
+    }
+    
+    after = {
+        province_event = { id = ani_plus.171 years = 10 }
+    }
+}
+
+# event 171
+province_event = {
+    id = ani_plus.171
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        clr_province_flag = horse_conv_quest_CD
+    }
+}
+
+# event 172
+province_event = {
+    id = ani_plus.172
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    is_triggered_only = yes
+
+    desc = DESC_ani_172
+
+    option = {
+        name = OPT_ani_172
+
+        random_list = {
+            2 = {
+                custom_tooltip = {
+                    text = TT_ani_172_went_well
+
+                    province_event = { id = ani_plus.173 days = 5 random = 2 }
+                }
+            }
+            3 = {
+                custom_tooltip = {
+                    text = TT_ani_172_went_wrong
+
+                    random_list = {
+                        2 =  { 
+                            province_event = { id = ani_plus.174 days = 1 random = 6 }
+                        }
+                        1 =  { 
+                            province_event = { id = ani_plus.175 days = 1 random = 6 }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+# event 173
+province_event = {
+    id = ani_plus.173
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    is_triggered_only = yes
+
+    desc = DESC_ani_173
+
+    option = {
+        name = OPT_ani_173
+
+        holder_scope = {
+            prestige = 350
+            piety = 75
+        }
+        change_random_civ_tech = 1
+    }
+}
+
+# event 174
+province_event = {
+    id = ani_plus.174
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    is_triggered_only = yes
+
+    desc = DESC_ani_174
+
+    option = {
+        name = OPT_ani_174
+
+        holder_scope = {
+            prestige = -150
+            add_trait = trait_unconcious
+            character_event = { id = ani_plus.176 days = 1 random = 60 }
+        }
+    }
+}
+
+# event 175
+province_event = {
+    id = ani_plus.175
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    is_triggered_only = yes
+
+    desc = DESC_ani_175
+
+    option = {
+        name = OPT_ani_175
+
+        holder_scope = {
+            character_event = { id = ani_plus.177 days = 2 random = 3 }
+            prestige = -20
+            add_trait = wounded
+        }
+    }
+}
+
+# event 176
+character_event = {
+    id = ani_plus.176
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    is_triggered_only = yes
+
+    desc = DESC_ani_176
+
+    option = {
+        name = OPT_ani_176
+
+        remove_trait = trait_unconcious
+        culture = horse
+    }
+}
+
+# event 177
+character_event = {
+    id = ani_plus.177
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    is_triggered_only = yes
+
+    desc = DESC_ani_177
+
+    option = {
+        name = OPT_ani_177
+
+        random_list = {
+            1 = {
+                custom_tooltip = {
+                    text = TT_ani_177_healed
+                }
+                remove_trait = wounded
+            }
+            1 = {
+                custom_tooltip = {
+                    text = TT_ani_177_injury_is_worst
+                    character_event = { id = ani_plus.178 days = 3 }
+                }
+                remove_trait = wounded
+                add_trait = severely_injured
+            }
+        }
+    }
+}
+
+# event 178
+character_event = {
+    id = ani_plus.178
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    is_triggered_only = yes
+
+    desc = DESC_ani_178
+
+    option = {
+        name = OPT_ani_178
+
+        remove_trait = severely_injured
+        culture = horse
+    }
+}
+
+## caste and 1st rite events
+# event 179: caste trait undignified on birth (on_action)
+# event 180: first rite preparation ended
+# event 181: first rite total success
+# event 182: first rite organization problem
+
+# event 179
+character_event = {
+    id = ani_plus.179
+
+    hide_window = yes
+    is_triggered_only = yes # on action
+
+    trigger = {
+        culture_group = horse_group
+    }
+    immediate = {
+        add_trait = horse_caste_undignified
+    }
+}
+
+# event 180
+character_event = {
+    id = ani_plus.180
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    is_triggered_only = yes
+
+    desc = DESC_ani_180
+
+    option = {
+        name = OPT_ani_180
+
+        hidden_tooltip = {
+            #generate_tooltip = no
+
+            any_child = {
+                limit = {
+                    age = 6
+                    NOT = { age = 9 }
+                    culture_group = horse_group
+                    # has_landed_title = no
+                }
+
+                set_character_flag = horse_rite_1_success
+
+            }
+        }
+
+        random_list = {
+            95 = {
+                custom_tooltip = {
+                    text = TT_ani_180_went_well
+
+                    character_event = { id = ani_plus.181 days = 1 }
+                }
+            }
+            05 = {
+                custom_tooltip = {
+                    text = TT_ani_180_went_wrong
+
+                    character_event = { id = ani_plus.182 days = 1 }
+                }
+            }
+
+        }
+    }
+
+    after = {
+        clr_character_flag = horse_organize_rite_1
+    }
+}
+
+# event 181
+character_event = {
+    id = ani_plus.181
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    is_triggered_only = yes
+
+    desc = DESC_ani_181
+
+    option = {
+        name = OPT_ani_181
+
+        prestige = 25
+    }
+
+    after = {
+        clr_character_flag = horse_organize_rite_1
+    }
+}
+
+# event 182
+character_event = {
+    id = ani_plus.182
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    
+    is_triggered_only = yes
+    
+    desc = DESC_ani_182
+
+    option = {
+        name = OPT_ani_182
+
+        prestige = -430
+        wealth = -50
+    }
+
+    after = {
+        clr_character_flag = horse_organize_rite_1
+    }
+}
+
+
+# event 183: hidden event to setup rite 2 by adolescence
+# event 184: 2nd rite preparations
+# event 185: 2nd rite on going
+# event 186: 2nd rite conclusion
+
+# event 183
+character_event = {
+    id = ani_plus.183
+
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        culture_group = horse_group
+        OR = {
+            AND = {
+                is_playable = yes
+                OR = {
+                    government = horse_feudal_gov
+                    government = horse_merchant_gov
+                }
+            }
+            father = {
+                culture_group = horse_group
+                OR = {
+                    government = horse_feudal_gov
+                    government = horse_merchant_gov
+                }
+                is_alive = yes
+            }
+            mother = {
+                is_playable = yes
+                culture_group = horse_group
+                OR = {
+                    government = horse_feudal_gov
+                    government = horse_merchant_gov
+                }
+                is_alive = yes
+            }
+        }
+    }
+
+    immediate = {
+
+        if = {
+            limit = {
+                ai = no
+            }
+
+            character_event = { id = ani_plus.184 }
+        }
+        else_if = {
+            limit = {
+                mother = {
+                    ai = no
+                }
+                father = {
+                    ai = yes
+                }
+            }
+            mother = {
+                character_event = { id = ani_plus.184 }
+            }
+        }
+        else = {
+            father = {
+                character_event = { id = ani_plus.184 }
+            }
+        }
+    }
+}
+
+# event 184
+character_event = {
+    id = ani_plus.184
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    is_triggered_only = yes
+
+    desc = DESC_ani_184
+
+    trigger = {
+        FROM = {
+            is_alive = yes
+        }
+    }
+
+    option = {
+        name = OPT_ani_184
+
+        character_event = { id = ani_plus.185 days = 3 random = 6 }
+    }
+}
+
+# event 185
+character_event = {
+    id = ani_plus.185
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    is_triggered_only = yes
+
+    trigger = {
+        FROMFROM = {
+            is_alive = yes
+        }
+    }
+
+    desc = {
+        trigger = {
+            FROMFROM = {
+                NOT = {
+                    has_character_flag = horse_rite_1_success
+                }
+            }
+        }
+        text = DESCA_ani_185
+    }
+    desc = {
+        trigger = {
+            FROMFROM = {
+                has_character_flag = horse_rite_1_success
+            }
+        }
+        text = DESCB_ani_185
+    }
+
+    option = {
+        name = OPTA_ani_185
+        trigger = {
+            FROMFROM = {
+                NOT = {
+                    has_character_flag = horse_rite_1_success
+                }
+            }
+        }
+
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = OPTB_ani_185
+        trigger = {
+            FROMFROM = {
+                has_character_flag = horse_rite_1_success
+            }
+        }
+
+        FROMFROM = {
+            set_character_flag = rite_feodality_speciality
+        }
+
+        ai_chance = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+
+                government = horse_merchant_gov
+            }
+        }
+    }
+    option = {
+        name = OPTC_ani_185
+        trigger = {
+            FROMFROM = {
+                has_character_flag = horse_rite_1_success
+            }
+        }
+
+        FROMFROM = {
+            set_character_flag = rite_merchant_speciality
+        }
+
+        ai_chance = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+
+                government = horse_feudal_gov
+            }
+        }
+    }
+
+    after = {
+        character_event = { id = ani_plus.186 days = 1 }
+    }
+}
+
+# event 186
+character_event = {
+    id = ani_plus.186
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    is_triggered_only = yes
+
+    desc = DESC_ani_186
+
+    trigger = {
+        FROMFROMFROM = {
+            is_alive = yes
+        }
+    }
+
+    immediate = {
+        FROMFROMFROM = {
+            random = {
+                chance = 50
+                set_character_flag = horse_tmp_success
+            }
+        }
+    }
+
+    option = {
+        name = OPT_ani_186
+
+        FROMFROMFROM = {
+            set_character_flag = horse_rite_2_success
+        
+            if = {
+                limit = {
+                    has_character_flag = horse_tmp_success
+                    has_character_flag = horse_rite_1_success
+                }
+
+                custom_tooltip = {
+                    text = TT_ani_186_learned_speciality
+                    set_character_flag = horse_speciality_studied
+                    clr_character_flag = horse_tmp_success
+                }
+            
+            }
+        }
+    }
+}
+
+
+# event 187: hidden event to setup 3rd rite
+# event 188: 3rd rite preparation + specialization selection (if not chosen during 2nd rite)
+# event 189: conclusion
+
+# event 187
+character_event = {
+    id = ani_plus.187
+
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        culture_group = horse_group # is an horse
+        religion = Horse_religion   # religion
+        
+        c_boqtybay = {              # rite holy site required
+            owner = {
+                religion = Horse_religion
+                culture_group = horse_group
+            }
+            location = {
+                religion = Horse_religion
+                culture_group = horse_group
+            }
+        }
+
+        NOT = { has_character_flag = horse_rite_3_success } # can do the rite one time
+        OR = {          # cannot do the second rite and the third the same year
+            age = 14    # event launched at 12.5 and 14.5 years old
+            NOT = { has_character_flag = horse_rite_2_success }
+        }
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                ai = no
+            }
+
+            character_event = { id = ani_plus.188 }
+        }
+        else_if = {
+            limit = {
+                mother = {
+                    ai = no
+                }
+                father = {
+                    ai = yes
+                }
+            }
+            mother = {
+                character_event = { id = ani_plus.188 }
+            }
+        }
+        else = {
+            father = {
+                character_event = { id = ani_plus.188 }
+            }
+        }
+    }
+}
+
+# event 188
+character_event = {
+    id = ani_plus.188
+
+    is_triggered_only = yes
+
+    trigger = {
+        FROM = {
+            is_alive = yes
+        }
+    }
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    desc = { # default desc without any rite done
+        trigger = {
+            FROM = {
+                horse_has_done_no_rite_trigger = yes
+            }
+        }
+
+        text = DESCA_ani_188
+    }
+    desc = { # did only one rite
+        trigger = {
+            FROM = {
+                horse_has_exatly_done_1_rite_trigger = yes
+            }
+        }
+
+        text = DESCB_ani_188
+    }
+    desc = { # default desc with all previous rite done
+        trigger = {
+            FROM = {
+                horse_has_exatly_done_2_rite_trigger = yes
+            }
+        }
+
+        text = DESCC_ani_188
+    }
+    
+    option = { # option if no specialization done
+        trigger = {
+            NOT = {
+                FROM = {
+                    horse_has_exatly_done_1_rite_trigger = yes
+                }
+            }
+        }
+
+        name = {
+            trigger = {
+                FROM = {
+                    horse_has_done_no_rite_trigger = yes
+                }
+            }
+            text = OPTA_ani_188
+        }
+
+        name = {
+            trigger = {
+                FROM = {
+                    horse_has_exatly_done_2_rite_trigger = yes
+                }
+            }
+            text = OPTB_ani_188
+        }
+
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    option = { # merchant specialization
+        trigger = {
+            FROM = {
+                horse_has_exatly_done_1_rite_trigger = yes
+            }
+        }
+        name = OPTC_ani_188
+        FROM = {
+            set_character_flag = rite_merchant_speciality
+        }
+
+        ai_chance = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+
+                government = horse_feudal_gov
+            }
+        }
+    }
+    option = { # feodal specialization
+        trigger = {
+            FROM = {
+                horse_has_exatly_done_1_rite_trigger = yes
+            }
+        }
+        name = OPTD_ani_188
+
+        FROM = {
+            set_character_flag = rite_feodality_speciality
+        }
+
+        ai_chance = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+
+                government = horse_merchant_gov
+            }
+        }
+    }
+
+    after = {
+        character_event = { id = ani_plus.189 days = 7 }
+    }
+}
+
+# event 189
+character_event = {
+    id = ani_plus.189
+
+    is_triggered_only = yes
+
+    trigger = {
+        FROMFROM = {
+            is_alive = yes
+        }
+    }
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    desc = { # no rite done before
+        trigger = {
+            FROMFROM = {
+                horse_has_done_no_rite_trigger = yes
+            }
+        }
+
+        text = DESCA_ani_189
+    }
+    desc = { # only one rite done
+        trigger = {
+            horse_has_exatly_done_1_rite_trigger = yes
+        }
+
+        text = DESCB_ani_189
+    }
+    desc = { # all previous rite done
+        trigger = {
+            FROMFROM = {
+                horse_has_exatly_done_2_rite_trigger = yes
+            }
+        }
+        text = DESCC_ani_189
+    }
+
+    option = {
+        name = OPT_ani_189
+
+        FROMFROM = {
+            set_character_flag = horse_rite_3_success
+        }
+    }
+
+}
+
+# event 190: hidden event to setup caste trait change (adulthood)
+# event 191: notification and trait change
+# event 192: event to add/remove undignified trait on culture change
+
+# event 190
+character_event = {
+    id=ani_plus.190
+
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        culture_group = horse_group
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                father = {
+                    ai = no
+                }
+            }
+            father = {
+                character_event = {
+                    id = ani_plus.191
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                mother = {
+                    ai = no
+                }
+            }
+            mother = {
+                character_event = {
+                    id = ani_plus.191
+                }
+            }
+        }
+        else = {
+            character_event = {
+                id = ani_plus.191
+            }
+        }
+    }
+}
+
+# event 191
+character_event = {
+    id=ani_plus.191
+
+    is_triggered_only = yes
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = DESC_ani_191
+
+    option = {
+        name = OPT_ani_191
+        FROM = {
+            random_list = {
+                2 = { # keep its caste undignified trait
+                    modifier = {
+                        factor = 0
+
+                        OR = {
+                            horse_has_exatly_done_2_rite_trigger = yes
+                            horse_has_exatly_done_all_rite_trigger = yes
+                        }
+                    }
+
+                    add_trait = horse_caste_undignified
+                }
+                2 = { # loose undignified caste trait without any rulership trait
+                    modifier = {
+                        factor = 0
+
+                        OR = {
+                            horse_has_exatly_done_2_rite_trigger = yes
+                            horse_has_exatly_done_all_rite_trigger = yes
+                        }
+                    }
+                    remove_trait = horse_caste_undignified
+                }
+                2 = { # gain merchant caste trait
+                    modifier = {
+                        factor = 0
+
+                        OR = {
+                            horse_has_done_no_rite_trigger = yes
+                            horse_has_exatly_done_1_rite_trigger = yes
+                        }
+                    }
+                    modifier = {
+                        factor = 0
+
+                        OR = {
+                            horse_has_exatly_done_2_rite_trigger = yes
+                            horse_has_exatly_done_all_rite_trigger = yes
+                        }
+                        has_character_flag = rite_feodality_speciality
+                    }
+                    modifier = {
+                        factor = 2
+
+                        has_character_flag = horse_speciality_studied
+                    }
+
+                    add_trait = horse_caste_merchant
+                }
+                2 = { # gain feudal trait
+                    modifier = {
+                        factor = 0
+
+                        OR = {
+                            horse_has_done_no_rite_trigger = yes
+                            horse_has_exatly_done_1_rite_trigger = yes
+                        }
+                    }
+                    modifier = {
+                        factor = 0
+
+                        OR = {
+                            horse_has_exatly_done_2_rite_trigger = yes
+                            horse_has_exatly_done_all_rite_trigger = yes
+                        }
+                        has_character_flag = rite_merchant_speciality
+                    }
+                    modifier = {
+                        factor = 2
+
+                        has_character_flag = horse_speciality_studied
+                    }
+
+                    add_trait = horse_caste_warrior
+                }
+                2 = { # gain a random caste trait between merchant or feudal 
+                    modifier = {
+                        factor = 0
+
+                        horse_has_done_no_rite_trigger = yes
+                    }
+                    modifier = {
+                        factor = 0
+
+                        horse_has_exatly_done_all_rite_trigger = yes
+                        has_character_flag = horse_speciality_studied
+                    }
+                    modifier = {
+                        factor = 2
+
+                        horse_has_exatly_done_1_rite_trigger = yes
+                    }
+                    modifier = {
+                        factor = 2
+
+                        horse_has_exatly_done_2_rite_trigger = yes
+                        NOT = {
+                            has_character_flag = horse_speciality_studied
+                        }
+                    }
+                    modifier = {
+                        factor = 0.5
+
+                        horse_has_exatly_done_all_rite_trigger = yes
+                    }
+
+                    custom_tooltip = {
+                        text = TT_ani_191_random_trait
+                        random_list = {
+                            1 = {
+                                add_trait = horse_caste_merchant
+                            }
+                            1 = {
+                                add_trait = horse_caste_warrior
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    after = {
+        hidden_tooltip = {
+            FROM = {
+                clr_character_flag = horse_rite_1_success
+                clr_character_flag = horse_rite_2_success
+                clr_character_flag = horse_rite_3_success
+            }
+        }
+    }
+}
+
+# event 192: updating caste trait on culture change
+character_event = {
+    id=ani_plus.192
+
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        OR = {
+            ROOT = { culture_group = horse_group }
+            AND = {
+                NOT = { culture_group = horse_group }
+                OR = {
+                    trait = horse_caste_merchant
+                    trait = horse_caste_undignified
+                    trait = horse_caste_warrior
+                }
+            }
+        }
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                culture_group = horse_group
+                NOT = { age = 16 }
+            }
+
+            add_trait = horse_caste_undignified
+        }
+        else = {
+            remove_trait = horse_caste_merchant
+            remove_trait = horse_caste_warrior
+            remove_trait = horse_caste_undignified
+        }
+    }
+}
+
+# event 193: royal guard event - warior
+# event 194: royal guard event - merchant
+# event 195: royal guard event - knights
+# event 196: royal guard event - paysants
+
+# event 193
+character_event = {
+    id = ani_plus.193
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = DESC_ani_193
+
+    only_playable = yes
+    religion = Horse_religion
+
+    trigger = {
+        higher_tier_than = DUKE
+        culture_group = horse_group
+        religion = Horse_religion
+        NAND = {
+            trait = horse_caste_warrior
+            has_earmarked_regiments = horse_royal_guard
+        }
+        war = no
+        
+        any_vassal = {
+            government = horse_feudal_gov
+            higher_tier_than = BARON
+        }
+
+    }
+
+    mean_time_to_happen = {
+        years = 10
+
+        modifier = {
+            factor = 2.5
+
+            has_earmarked_regiments = horse_royal_guard
+        }
+        modifier = {
+            factor = 0.25
+
+            NOT = { has_earmarked_regiments = horse_royal_guard }
+            is_feudal = yes
+        }
+
+        modifier = {
+            factor = 2
+
+            prestige = 1000
+        }
+
+        modifier = {
+            factor = 0.2
+
+            NOT = { realm_martial = 2 }
+        }
+
+        modifier = {
+            factor = 0.5
+
+            NOT = { realm_martial = 7 }
+        }
+
+        modifier = {
+            factor = 1.2
+
+            NOT = { realm_martial = 12 }
+        }
+
+        modifier = {
+            factor = 1.4
+
+            NOT = { realm_martial = 17 }
+        }
+    }
+
+    option = {
+        name = OPTA_ani_193
+
+        trigger = {
+            has_earmarked_regiments = horse_royal_guard
+            NOT = {
+                had_character_flag = {
+                    flag = horse_used_royal_guard
+                    years < 3
+                }
+            }
+        }
+
+        clr_character_flag = horse_used_royal_guard
+        set_character_flag = horse_used_royal_guard
+    }
+
+    option = {
+        name = OPTB_ani_193
+
+        tooltip_info = martial
+        trigger = {
+            OR = {
+                trait = horse_caste_warrior
+                martial = 15
+            }
+            OR = {
+                AND = {
+                    tier = KING
+                    wealth = 250
+                }
+                AND = {
+                    tier = EMPEROR
+                    wealth = 550
+                }
+            }
+        }
+
+        if = {
+            limit = { tier = KING }
+            wealth = -250
+        }
+        else = {
+            wealth = -550
+        }
+    }
+
+    option = {
+        name = OPTC_ani_193
+
+        random_list = {
+            1 = {
+                add_character_modifier = {
+                    name = horse_warrior_malus_1
+                    years = 10
+
+                    stacking = yes
+                }
+            }
+            1 = {
+                modifier = {
+                    factor = 0
+                    has_character_modifier = horse_warrior_malus_2
+                }
+                add_character_modifier = {
+                    name = horse_warrior_malus_2
+                    years = 10
+                }
+            }
+        }
+    }
+}
+
+# event 194
+character_event = {
+    id = ani_plus.194
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = DESC_ani_194
+
+    only_playable = yes
+    religion = Horse_religion
+
+    trigger = {
+        higher_tier_than = DUKE
+        culture_group = horse_group
+        religion = Horse_religion
+        NAND = {
+            trait = horse_caste_merchant
+            has_earmarked_regiments = horse_royal_guard
+        }
+        war = no
+        
+        any_vassal = {
+            government = horse_merchant_gov
+            higher_tier_than = BARON
+
+        }
+
+    }
+
+    mean_time_to_happen = {
+        years = 10
+
+        modifier = {
+            factor = 2.5
+
+            has_earmarked_regiments = horse_royal_guard
+        }
+        modifier = {
+            factor = 0.25
+
+            NOT = { has_earmarked_regiments = horse_royal_guard }
+            is_feudal = yes
+        }
+
+        modifier = {
+            factor = 2
+
+            wealth = 250
+        }
+
+        modifier = {
+            factor = 0.2
+
+            NOT = { realm_stewardship = 2 }
+        }
+
+        modifier = {
+            factor = 0.5
+
+            NOT = { realm_stewardship = 7 }
+        }
+
+        modifier = {
+            factor = 1.2
+
+            NOT = { realm_stewardship = 12 }
+        }
+
+        modifier = {
+            factor = 1.4
+
+            NOT = { realm_stewardship = 17 }
+        }
+    }
+
+    option = {
+        name = OPTA_ani_194
+
+        trigger = {
+            has_earmarked_regiments = horse_royal_guard
+            NOT = {
+                had_character_flag = {
+                    flag = horse_used_royal_guard
+                    years < 3
+                }
+            }
+        }
+
+        clr_character_flag = horse_used_royal_guard
+        set_character_flag = horse_used_royal_guard
+    }
+
+    option = {
+        name = OPTB_ani_194
+
+        tooltip_info = stewardship
+        trigger = {
+            OR = {
+                trait = horse_caste_merchant
+                stewardship = 15
+            }
+            OR = {
+                AND = {
+                    tier = KING
+                    wealth = 250
+                }
+                AND = {
+                    tier = EMPEROR
+                    wealth = 550
+                }
+            }
+        }
+
+        if = {
+            limit = { tier = KING }
+            wealth = -250
+        }
+        else = {
+            wealth = -550
+        }
+    }
+
+    option = {
+        name = OPTC_ani_194
+
+        random_list = {
+            1 = {
+                add_character_modifier = {
+                    name = horse_warrior_malus_1
+                    years = 10
+
+                    stacking = yes
+                }
+            }
+            1 = {
+                modifier = {
+                    factor = 0
+                    has_character_modifier = horse_warrior_malus_3
+                }
+                add_character_modifier = {
+                    name = horse_warrior_malus_3
+                    years = 10
+                }
+            }
+        }
+    }
+}
+
+# event 195
+character_event = {
+    id = ani_plus.195
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = DESC_ani_195
+
+    only_playable = yes
+    religion = Horse_religion
+
+    trigger = {
+        higher_tier_than = DUKE
+        culture_group = horse_group
+        religion = Horse_religion
+        NAND = {
+            government = horse_feudal_gov
+            has_earmarked_regiments = horse_royal_guard
+        }
+
+        any_courtier_or_vassal = {
+            liege = { character = ROOT }
+            has_minor_title = title_commander
+        }
+
+    }
+
+    mean_time_to_happen = {
+        years = 10
+
+        modifier = {
+            factor = 2.5
+
+            has_earmarked_regiments = horse_royal_guard
+        }
+        modifier = {
+            factor = 0.25
+
+            NOT = { has_earmarked_regiments = horse_royal_guard }
+            is_feudal = yes
+        }
+
+        modifier = {
+            factor = 2
+
+            combat_rating = 25
+        }
+
+
+        modifier = {
+            factor = 0.2
+
+            NOT = { realm_diplomacy = 2 }
+        }
+
+        modifier = {
+            factor = 0.5
+
+            NOT = { realm_diplomacy = 7 }
+        }
+
+        modifier = {
+            factor = 1.2
+
+            NOT = { realm_diplomacy = 12 }
+        }
+
+        modifier = {
+            factor = 1.4
+
+            NOT = { realm_diplomacy = 17 }
+        }
+    }
+
+    option = {
+        name = OPTA_ani_195
+
+        trigger = {
+            has_earmarked_regiments = horse_royal_guard
+            NOT = {
+                had_character_flag = {
+                    flag = horse_used_royal_guard
+                    years < 3
+                }
+            }
+        }
+
+        clr_character_flag = horse_used_royal_guard
+        set_character_flag = horse_used_royal_guard
+    }
+
+    option = {
+        name = OPTB_ani_195
+
+        tooltip_info = diplomacy 
+        trigger = {
+            diplomacy = 15
+
+            OR = {
+                AND = {
+                    tier = KING
+                    wealth = 250
+                }
+                AND = {
+                    tier = EMPEROR
+                    wealth = 550
+                }
+            }
+        }
+
+        if = {
+            limit = { tier = KING }
+            wealth = -250
+        }
+        else = {
+            wealth = -550
+        }
+    }
+
+    option = {
+        name = OPTC_ani_195
+
+        random_list = {
+            1 = {
+                add_character_modifier = {
+                    name = horse_warrior_malus_1
+                    years = 10
+
+                    stacking = yes
+                }
+            }
+            1 = {
+                modifier = {
+                    factor = 0
+                    has_character_modifier = horse_warrior_malus_4
+                }
+                add_character_modifier = {
+                    name = horse_warrior_malus_4
+                    years = 10
+                }
+            }
+        }
+    }
+}
+
+# event 196
+character_event = {
+    id = ani_plus.196
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = DESC_ani_196
+
+    only_playable = yes
+    religion = Horse_religion
+
+    trigger = {
+        higher_tier_than = DUKE
+        culture_group = horse_group
+        religion = Horse_religion
+        NAND = {
+            is_tribal = no
+            has_earmarked_regiments = horse_royal_guard
+        }
+        
+        # game mecanics force any king or emperor to have at least 1 county
+    }
+
+    mean_time_to_happen = {
+        years = 10
+
+        modifier = {
+            factor = 2.5
+
+            has_earmarked_regiments = horse_royal_guard
+        }
+        modifier = {
+            factor = 0.25
+
+            NOT = { has_earmarked_regiments = horse_royal_guard }
+            is_feudal = yes
+        }
+
+        modifier = {
+            factor = 2
+
+            piety = 500
+        }
+
+        modifier = {
+            factor = 0.2
+
+            NOT = { realm_learning = 2 }
+        }
+
+        modifier = {
+            factor = 0.5
+
+            NOT = { realm_learning = 7 }
+        }
+
+        modifier = {
+            factor = 1.2
+
+            NOT = { realm_learning = 12 }
+        }
+
+        modifier = {
+            factor = 1.4
+
+            NOT = { realm_learning = 17 }
+        }
+    }
+
+    option = {
+        name = OPTA_ani_196
+
+        trigger = {
+            has_earmarked_regiments = horse_royal_guard
+            NOT = {
+                had_character_flag = {
+                    flag = horse_used_royal_guard
+                    years < 3
+                }
+            }
+        }
+
+        clr_character_flag = horse_used_royal_guard
+        set_character_flag = horse_used_royal_guard
+    }
+
+    option = {
+        name = OPTB_ani_196
+
+        tooltip_info = learning
+        trigger = {
+            learning = 15
+            
+            OR = {
+                AND = {
+                    tier = KING
+                    wealth = 250
+                }
+                AND = {
+                    tier = EMPEROR
+                    wealth = 550
+                }
+            }
+        }
+
+        if = {
+            limit = { tier = KING }
+            wealth = -250
+        }
+        else = {
+            wealth = -550
+        }
+    }
+
+    option = {
+        name = OPTC_ani_196
+
+        random_list = {
+            1 = {
+                add_character_modifier = {
+                    name = horse_warrior_malus_1
+                    years = 10
+
+                    stacking = yes
+                }
+            }
+            1 = {
+                modifier = {
+                    factor = 0
+                    has_character_modifier = horse_warrior_malus_5
+                }
+                add_character_modifier = {
+                    name = horse_warrior_malus_5
+                    years = 10
+                }
+            }
+        }
+    }
+}
+
+# event 197: setup caste trait on game start for horse rulers
+character_event = {
+    id = ani_plus.197
+
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        ai = no
+    }
+
+    immediate = {
+        any_character = {
+            limit = {
+                is_ruler = yes
+                culture_group = horse_group
+                NOR = {
+                    trait = horse_caste_merchant
+                    trait = horse_caste_warrior
+                    trait = horse_caste_undignified
+                }
+            }
+
+            if = {
+                limit = {
+                    is_adult = yes
+                }
+                random_list = {
+                    1 = {
+                        add_trait = horse_caste_merchant
+                        if = {
+                            limit = {
+                                is_feudal = yes
+                            }
+                            set_government_type = horse_merchant_gov
+                        }
+                    }
+                    1 = {
+                        add_trait = horse_caste_warrior
+                        if = {
+                            limit = {
+                                is_feudal = yes
+                            }
+                            set_government_type = horse_feudal_gov
+                        }
+                    }
+                }
+            }
+            else = {
+                add_trait = horse_caste_undignified
+            }
+        }
+    }
+}

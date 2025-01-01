@@ -134,7 +134,7 @@ holy_autority_animal_cooldown;_;;;;;;;;;;;;x
 hedge_province_frind_with_hedgehog;_;;;;;;;;;;;;;x
 panda_conversion_quest_cooldown;_;;;;;;;;;;;;;x
 panda_plot_cooldown;_;;;;;;;;;;;;;x
-panda_instability_war_coolown;_;;;;;;;;;;;;;x
+panda_instability_war_cooldown;_;;;;;;;;;;;;;x
 
 
 #### duck update
@@ -220,3 +220,11 @@ dog_rel_unity_penality;Forced conversion;Conversion forcé;;;;;;;;;;;;x
 
 # custom modifier
 dog_interest_implication;governance implication;implication du dirigeant;;;;;;;;;;;;x
+
+##### horse modifier
+horse_warrior_malus_1;unhappy vassals;vassaux mécontents;;;;;;;;;;;;x
+horse_warrior_malus_2;unmobilised warrior;combatants non mobilisés;;;;;;;;;;;;x
+horse_warrior_malus_3;nnhappy merchants;marchand en colère;;;;;;;;;;;;x
+horse_warrior_malus_4;distrustful commanders;commandant méfiants;;;;;;;;;;;;x
+horse_warrior_malus_5;agitated paysants;paysants agités;;;;;;;;;;;;x
+horse_conversion_tyrany;tyranical ritual;rituel tyranique;;;;;;;;;;;;x

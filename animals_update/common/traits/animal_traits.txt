@@ -1,6 +1,4 @@
 
-
-
 hibernation = {
     cannot_marry = yes
     pilgrimage = yes
@@ -123,9 +121,77 @@ sympathy_animals_religions = {
 	customizer = no
 	random = no
 
-    male_insult = INSULT_LOVER_OF_HEATHENS
+	male_insult = INSULT_LOVER_OF_HEATHENS
 	female_insult = INSULT_LOVER_OF_HEATHENS
 	male_insult_adj = INSULT_UNPRINCIPLED
 	female_insult_adj = INSULT_UNPRINCIPLED
 	child_insult_adj = INSULT_STUPID
+}
+
+trait_unconcious = {
+    customizer = no
+    random = no
+
+    is_illness = yes
+    incapacitating = yes
+}
+
+horse_caste_undignified = {
+    potential = {
+        culture_group = horse_group
+        religion = Horse_religion
+        age < 6
+    }
+
+    birth = 0 #given by on action birth event
+    can_hold_titles = no
+    cannot_inherit = yes
+    opposites = { horse_caste_warrior horse_caste_merchant }
+    religious = yes
+    ruler_designer_cost = -40
+
+    ai_honor = -5
+    vassal_opinion = -20
+}
+horse_caste_merchant = {
+    potential = {
+        culture_group = horse_group
+        religion = Horse_religion
+        is_adult = yes
+    }
+
+    birth = 0 #given by on action birth event
+    opposites = { horse_caste_warrior horse_caste_undignified }
+    religious = yes
+    ruler_designer_cost = 5
+
+    stewardship = 5
+    martial = -3
+    learning = -2
+    opposite_opinion = -5
+
+    ai_honor = -15
+    ai_greed = 15
+    ai_rationality = 30
+}
+horse_caste_warrior = {
+    potential = {
+        culture_group = horse_group
+        religion = Horse_religion
+        is_adult = yes
+    }
+
+    birth = 0 #given by on action birth event
+    opposites = { horse_caste_merchant horse_caste_undignified }
+    religious = yes
+    ruler_designer_cost = 20
+
+    martial = 5
+    stewardship = -3
+    intrigue = -2
+    opposite_opinion = -10
+
+    ai_zeal = 5
+    ai_honor = 30
+    ai_rationality = -10
 }

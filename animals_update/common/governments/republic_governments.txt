@@ -109,6 +109,7 @@ republic_governments = {
 			merchant_republic_government
 			panda_bureaucratic_gov
 			Duck_feudal_gov
+			horse_merchant_gov
 		}
 		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
 			tribal_government

@@ -1,44 +1,44 @@
 #CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
 
-DESC_EVENT061_HEDGE_SETTLE_IN_PROVINCE;Some hedgehog has come to on fort in [This.GetName];Des h?rissons sont venus s'installer dans le fort de [This.GetName];;;;;;;;;;;;x
-OPT1_EVENT061_LET_HEGDE_STAY;It will increase our defense!;?a va am?liorer nos d?fenses!;;;;;;;;;;;;x
+DESC_EVENT061_HEDGE_SETTLE_IN_PROVINCE;Some hedgehog has come to on fort in [This.GetName];Des hérissons sont venus s'installer dans le fort de [This.GetName];;;;;;;;;;;;x
+OPT1_EVENT061_LET_HEGDE_STAY;It will increase our defense!;ça va améliorer nos défenses!;;;;;;;;;;;;x
 OPT2_EVENT061_CHASE_THEM;They will bring a calamity, we should kill them!;Ils vont nous porter malchance, donc on va les chasser!;;;;;;;;;;;;x
-DESC1_EVENT062_END_OF_HEDGEHOG_IN_PROVINCE;With the destruction of the fort and their home, the hedgehogs in [This.GetName] seems to have diseapered;Avec la destruction du fort de [This.GetName], les h?rissons de [This.GetName] sont partis;;;;;;;;;;;;x
-DESC1BIS_EVENT062_HEDGEHOG_ALREADY_LIVE_HERE;As hedghog already rule the province, the hedgehog did quit the fort;Comme les h?rissons gouverne la province de [This.GetName], ils sont donc parti du fort de la province;;;;;;;;;;;;x
+DESC1_EVENT062_END_OF_HEDGEHOG_IN_PROVINCE;With the destruction of the fort and their home, the hedgehogs in [This.GetName] seems to have diseapered;Avec la destruction du fort de [This.GetName], les hérissons de [This.GetName] sont partis;;;;;;;;;;;;x
+DESC1BIS_EVENT062_HEDGEHOG_ALREADY_LIVE_HERE;As hedghog already rule the province, the hedgehog did quit the fort;Comme les hérissons gouverne la province de [This.GetName], ils sont donc parti du fort de la province;;;;;;;;;;;;x
 OPTA_EVENT062_HEDGEHOGG_GOES_AWAY;We don't need them here anymore;Nous n'avons plus besoin d'eux ici;;;;;;;;;;;;x
-DESC2_EVENT062_HEDGE_BECOME_FRIENDLY;The hedgehogs in [This.GetName] seem to have become friendly with its population;Les h?rissons et la population de [This.GetName] semble ?tre devenu amical;;;;;;;;;;;;x
-OPTB_EVENT062_BECOME_FRIENDLY;Hedgehogs can became friendly?!;Les h?rissons peuvent devenir amicaux?!;;;;;;;;;;;;x
-DESC3A_EVENT062_HEDGE_GOES_AWAY;It seems that, in hostility, the hedgehogs in [This.GetName] decided to stop the colonizing.;Il semblerai qu'? cause de l'hostilit? entre les habitants de [This.GetName] et des h?rissons, les h?rissons ont d?cid? d'eux m?me de partir de [This.GetName].;;;;;;;;;;;;x
-DESC3B_EVENT062_HEDGE_STOP_FRIENDSHIP;It seems that, some problems arise in [This.GetName], so the local hedgehog took some distance from the human;Il semblerait qu'? cause de probl?mes locaux, les h?rissons de [This.GetName] ont pris leurs distances des humains;;;;;;;;;;;;x
+DESC2_EVENT062_HEDGE_BECOME_FRIENDLY;The hedgehogs in [This.GetName] seem to have become friendly with its population;Les hérissons et la population de [This.GetName] semble être devenu amical;;;;;;;;;;;;x
+OPTB_EVENT062_BECOME_FRIENDLY;Hedgehogs can became friendly?!;Les hérissons peuvent devenir amicaux?!;;;;;;;;;;;;x
+DESC3A_EVENT062_HEDGE_GOES_AWAY;It seems that, in hostility, the hedgehogs in [This.GetName] decided to stop the colonizing.;Il semblerai qu'à cause de l'hostilité entre les habitants de [This.GetName] et des hérissons, les hérissons ont décidé d'eux même de partir de [This.GetName].;;;;;;;;;;;;x
+DESC3B_EVENT062_HEDGE_STOP_FRIENDSHIP;It seems that, some problems arise in [This.GetName], so the local hedgehog took some distance from the human;Il semblerait qu'à cause de problèmes locaux, les hérissons de [This.GetName] ont pris leurs distances des humains;;;;;;;;;;;;x
 OPTC1_EVENT062_GOES_AWAY_HOSTILITY;It is probably the best;C'est probablement ce qu'il pouvait se passer de mieux;;;;;;;;;;;;x
-OPTC2_EVENT062_GOES_AWAY_FRIENDSHIP;Hope it get better soon;J'esp?re que ce n'est que provisoire;;;;;;;;;;;;x
-DESC4_EVENT062_HEDGE_BECOME_HOSTILE;The hedgehogs in [This.GetName] have become hostile against human;Les h?rissons et les habitants de [This.GetName] sont devenu hostile;;;;;;;;;;;;x
+OPTC2_EVENT062_GOES_AWAY_FRIENDSHIP;Hope it get better soon;J'espère que ce n'est que provisoire;;;;;;;;;;;;x
+DESC4_EVENT062_HEDGE_BECOME_HOSTILE;The hedgehogs in [This.GetName] have become hostile against human;Les hérissons et les habitants de [This.GetName] sont devenu hostile;;;;;;;;;;;;x
 OPTD_EVENT062_GOING_INTO_HOSTILITY;Why does they became hostile?!;Pourquoi sont-ils devenus hostiles?!;;;;;;;;;;;;x
-DESC5A_EVENT062_ITS_A_WAR;The hedgehog in [This.GetName] took their weapons! They are ready to fight us!;Les h?risson de [This.GetName] ont pris les armes et sont pr?t ? partir en guerre contre moi!;;;;;;;;;;;;x
-DESC5B_EVENT062_ITS_A_FRIENDSHIP;The hedgehog in [This.GetName] did become friendly even inside your local court. At some point, even the children in the court of [This.GetName] have become close to at least one hedgehog!;Les h?rissons de [This.GetName] sont devenu encore plus amicale m?me ? l'int?rieur des cours de [This.GetName]. Ainsi, tous les enfants de ces cours sont devenus proche d'au moins un h?risson!;;;;;;;;;;;;x
+DESC5A_EVENT062_ITS_A_WAR;The hedgehog in [This.GetName] took their weapons! They are ready to fight us!;Les hérisson de [This.GetName] ont pris les armes et sont prêt à partir en guerre contre moi!;;;;;;;;;;;;x
+DESC5B_EVENT062_ITS_A_FRIENDSHIP;The hedgehog in [This.GetName] did become friendly even inside your local court. At some point, even the children in the court of [This.GetName] have become close to at least one hedgehog!;Les hérissons de [This.GetName] sont devenu encore plus amicale même à l'intérieur des cours de [This.GetName]. Ainsi, tous les enfants de ces cours sont devenus proche d'au moins un hérisson!;;;;;;;;;;;;x
 OPTE1_EVENT062_WAR_DECLARATION;It is a war declaration;C'est donc la guerre!;;;;;;;;;;;;x
 OPTE2_EVENT062_CHILD_GET_HEDGE_FRIEND;I should maybe become closer to them...;Je devrais probablement devenir plus proche des enfants...;;;;;;;;;;;;x
-DESC_EVENT063_GETTING_USURPED;[From.GetTitledName] has worked hard to imitate me since my released... But now, worse, everyone think that I am a fake!;Depuis ma lib?ration, [From.GetTitledName] a travaill? dure pour convaincre tout le monde qu'il ?tait le vrai [Root.GetTitledName]... Pire encore, tout le monde le croit maintenant...;;;;;;;;;;;;x
+DESC_EVENT063_GETTING_USURPED;[From.GetTitledName] has worked hard to imitate me since my released... But now, worse, everyone think that I am a fake!;Depuis ma libération, [From.GetTitledName] a travaillé dure pour convaincre tout le monde qu'il était le vrai [Root.GetTitledName]... Pire encore, tout le monde le croit maintenant...;;;;;;;;;;;;x
 OPT1_EVENT063_I_CAN_DO_NOTHING;I should not have lost my war;J'aurai du le battre quand je le pouvais...;;;;;;;;;;;;x
-OPT2_EVENT063_I_CAN_HAVE_THAT_POWER;If only, I could become him...;Et si c'?tait vrai?;;;;;;;;;;;;x
-DESC_EVENT064_HEDGE_ASK_TO_USURP_IDENTITY;Some hedgehog found strange that they are close to you, but not yourself an hedgehogg. They think that you should become one of them, and ask you if by clonning system, you accpt to become one;Des h?rissons qui sont amicaux trouvent dommage que tu n'en soies pas un. Ainsi, avec un syst?me de clone, ils te proposent de devnir un h?risson!;;;;;;;;;;;;x
+OPT2_EVENT063_I_CAN_HAVE_THAT_POWER;If only, I could become him...;Et si c'était vrai?;;;;;;;;;;;;x
+DESC_EVENT064_HEDGE_ASK_TO_USURP_IDENTITY;Some hedgehog found strange that they are close to you, but not yourself an hedgehogg. They think that you should become one of them, and ask you if by clonning system, you accpt to become one;Des hérissons qui sont amicaux trouvent dommage que tu n'en soies pas un. Ainsi, avec un système de clone, ils te proposent de devnir un hérisson!;;;;;;;;;;;;x
 OPT1_EVENT064_I_SHALL_BECOME_ONE;They are right, I must become one!;Ils ont raison, je devrais en devenir un!;;;;;;;;;;;;x
-OPT2_EVENT064_I_STAY_HUMAN;I am fine as a human;Je pr?faire rester humain;;;;;;;;;;;;x
+OPT2_EVENT064_I_STAY_HUMAN;I am fine as a human;Je préfaire rester humain;;;;;;;;;;;;x
 DESC_EVENT065_CULTURAL_CONVERSION_FINISED;The colonization in [This.GetName] is now finished!;La colonisation de [This.GetName] est maintenant fini;;;;;;;;;;;;x
 OPT_EVENT065_OKAY;Okay;;;;;;;;;;;;;x
-DESC_EVENT067_NOTIF_SETTLEMENT_LOOTED;The hedgehogs in [Root.GetName] do not appreciate the recent looting;Les h?rissons de [Root.GetName] n'apr?cient pas le r?cent pillage;;;;;;;;;;;;x
-OPT_EVENT067_GET_MALUS;It will fastly change;Ce doit ?tre temporaire;;;;;;;;;;;;x
-DESC_EVENT069_NOTIF_SETTLEMENT_SIEGED;The hedgehog in [Root.GetName] react violently to recent siege;Les h?rissons de [Root.GetName] r?agissent viollament au r?cent si?ge;;;;;;;;;;;;x
-OPT_EVENT069_GET_MALUS;Hope it dosn't worsen the situation;J'esp?re que ?a ne va pas aggraver la situation;;;;;;;;;;;;x
-TITLE_EVENT070_HOLY_ORDER_CREATED;Nex holy order founded;Nouvel ordre sacr?e;;;;;;;;;;;;x
-DESC_EVENT070_ANIMAL_HOLY_ORDER_CREATED;The animals are supposed to be dominated, it was what was believed until some years agos. Now, [From.GetTitledName] with its influence and religion, just created [GET_FROM_HOLY_ORDER_NAME], to protect every [GET_FROM_ANIMAL_RELIGIOUS_NAME].\n\nWill they be a future threat for other religion or just an incompetant band?;Les animaux sont sens?s ?tre domin?s, c'?tait ce qui ?tait pens? il y a quelques ann?es... Mais maintenant, avec l'aide de son poste et de son prestige, [From.GetTitledName] a cr?? [GET_FROM_HOLY_ORDER_NAME] dans le but de prot?ger tous ses comp?res [GET_FROM_ANIMAL_RELIGIOUS_NAME].\n\nVont-ils ?tre une r?elle menace pour les autres religions ou juste une bande d?sorganis?e d'animaux?;;;;;;;;;;;;x
-OPT1_DESC070_GET_NEW_ALLIES;We will expend ourself over the world and claim our rightful place;On va maintenant r?ellement prosp?rer et nous placer ? notre juste place!;;;;;;;;;;;;x
-OPT2_EVENT070_INFIDEL_TO_DESTROY;Those insects can't become strong!;Ces insectes ne pourront jamais s'?tendre ou, juste prosp?rer!;;;;;;;;;;;;x
-DESC_EVENT073_PROVINCE_JUST_FINISHED_CULTURE_CONV;It seems that the animals in [From.GetName] have been totally exterminated;Les animaux de [From.GetName] ont ?t? totalement extermin?;;;;;;;;;;;;x
+DESC_EVENT067_NOTIF_SETTLEMENT_LOOTED;The hedgehogs in [Root.GetName] do not appreciate the recent looting;Les hérissons de [Root.GetName] n'aprécient pas le récent pillage;;;;;;;;;;;;x
+OPT_EVENT067_GET_MALUS;It will fastly change;Ce doit être temporaire;;;;;;;;;;;;x
+DESC_EVENT069_NOTIF_SETTLEMENT_SIEGED;The hedgehog in [Root.GetName] react violently to recent siege;Les hérissons de [Root.GetName] réagissent viollament au récent siège;;;;;;;;;;;;x
+OPT_EVENT069_GET_MALUS;Hope it dosn't worsen the situation;J'espère que ça ne va pas aggraver la situation;;;;;;;;;;;;x
+TITLE_EVENT070_HOLY_ORDER_CREATED;Nex holy order founded;Nouvel ordre sacrée;;;;;;;;;;;;x
+DESC_EVENT070_ANIMAL_HOLY_ORDER_CREATED;The animals are supposed to be dominated, it was what was believed until some years agos. Now, [From.GetTitledName] with its influence and religion, just created [GET_FROM_HOLY_ORDER_NAME], to protect every [GET_FROM_ANIMAL_RELIGIOUS_NAME].\n\nWill they be a future threat for other religion or just an incompetant band?;Les animaux sont sensés être dominés, c'était ce qui était pensé il y a quelques années... Mais maintenant, avec l'aide de son poste et de son prestige, [From.GetTitledName] a créé [GET_FROM_HOLY_ORDER_NAME] dans le but de protéger tous ses compères [GET_FROM_ANIMAL_RELIGIOUS_NAME].\n\nVont-ils être une réelle menace pour les autres religions ou juste une bande désorganisée d'animaux?;;;;;;;;;;;;x
+OPT1_DESC070_GET_NEW_ALLIES;We will expend ourself over the world and claim our rightful place;On va maintenant réellement prospérer et nous placer à notre juste place!;;;;;;;;;;;;x
+OPT2_EVENT070_INFIDEL_TO_DESTROY;Those insects can't become strong!;Ces insectes ne pourront jamais s'étendre ou, juste prospérer!;;;;;;;;;;;;x
+DESC_EVENT073_PROVINCE_JUST_FINISHED_CULTURE_CONV;It seems that the animals in [From.GetName] have been totally exterminated;Les animaux de [From.GetName] ont été totalement extermié;;;;;;;;;;;;x
 OPT_EVENT073_PROVINCE_HUMAN_CONVERTED;Finally!;Enfin;;;;;;;;;;;;x
 DESC_EVENT074_GETTING_LIFESTYLE_TRAIT;As an animal, I can't allow myself to have no lifestyle!;En tant qu'animal, il me serait honteux de ne pas avoir de mode de vie!;;;;;;;;;;;;x
 OPT_EVENT074_GETTING_ANI_TRAIT;Then I shall become a [GET_ANI_LIFESTYLE_TRAIT]!;Dans ce cas, il me faut devenir [GET_ANI_LIFESTYLE_TRAIT];;;;;;;;;;;;x
 
 
 ###tooltip
-HEDGEHOG_QUIT_PROVINCE;The hedgehogs quit the province;Les h?rissons quittent la province;;;;;;;;;;;;x
+HEDGEHOG_QUIT_PROVINCE;The hedgehogs quit the province;Les hérissons quittent la province;;;;;;;;;;;;x

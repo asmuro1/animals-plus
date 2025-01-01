@@ -36,6 +36,10 @@ Dog_religion;Dog;Chien;;;;;;;;;;;;x
 Dog_religion_DESC;Dogs' religion;Religion des chiens;;;;;;;;;;;;x
 Dog_religion_full;Dog;Chien;;;;;;;;;;;;x
 DOG_RELIGION_HIGH_GOD;Scooby-Doo;Scoubidou;;;;;;;;;;;;x
+Horse_religion;Horse;Cheval;;;;;;;;;;;;x
+Horse_religion_DESC;Horses' religion;Religion des chevaux;;;;;;;;;;;;x
+Horse_religion_full;Horse;Cheval;;;;;;;;;;;;x
+HORSE_RELIGION_HIGH_GOD;Pegasus;Pégaze;;;;;;;;;;;;x
 
 ###government localisation
 Bear_feudal_gov;Bears feodality;féodalité oursienne;;;;;;;;;;;;x
@@ -56,6 +60,10 @@ cat_feudal_gov;Cat's feodality;Féodalité des chats;;;;;;;;;;;;x
 cat_feudal_gov_desc;Government made by cats for cats;Gouvernement fait par les chats pour les chats;;;;;;;;;;;;x
 dog_feudal_gov;Dog's feodality;Féodalité des chiens;;;;;;;;;;;;x
 dog_feudal_gov_desc;Governement made by dogs for dogs;Gouvernement fait par les chiens pour les chiens;;;;;;;;;;;;x
+horse_feudal_gov;Horse feodality;Féodalité des chevaux;;;;;;;;;;;;x
+horse_feudal_gov_desc;Governement made by warrior horses;Gouvernement fait par chevaux guerrier;;;;;;;;;;;;x
+horse_merchant_gov;Horse republic;République des chevaux;;;;;;;;;;;;x
+horse_merchant_gov_desc;Governement made by merchant horses;Gouvernement fait par marchand chevaux;;;;;;;;;;;;x
 
 ###minor titles
 title_bear_children;Honor child;Enfant d'honneur;;;;;;;;;;;;x
@@ -96,6 +104,8 @@ d_Invasive_order;The invasive order;L'ordre invasif;;;;;;;;;;;;x
 d_Invasive_order_adj;animal;animale;;;;;;;;;;;;x
 d_hunting_gards;The dog hunting guardians;Les gardes-chiens;;;;;;;;;;;;x
 d_hunting_gards_adj;animal;animale;;;;;;;;;;;;x
+d_war_hord;The great horse hord;La grande horde de chevaux;;;;;;;;;;;;x
+d_war_hord_adj;animal;animale;;;;;;;;;;;;x
 
 #job title names
 action_repress_vassal;Repress vassals;réprimer des vassaux;;;;;;;;;;;;x

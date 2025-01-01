@@ -306,4 +306,48 @@ feudal_governments = {
         capital_move_delay = 240
         aggression = 0.74
     }
+    horse_feudal_gov = {
+        color = { 121 60 16 }
+        potential = {
+            religion = Horse_religion
+            culture_group = horse_group
+            NOT = { is_government_potential = order_government }
+            NOT = { trait = horse_caste_merchant }
+        }
+
+        allow_looting = yes
+        uses_bride_price = yes
+        free_levies_in_offensive_war = yes
+        uses_jizya_tax = no
+        max_consorts = 1
+        aggression = 1
+
+        preferred_holdings = { CASTLE }
+        allowed_holdings = { CASTLE FORT HOSPITAL}
+        allowed_holdings_culture = { TRIBAL }
+        accepts_liege_governments_culture_and_religion = { }
+        capital_move_delay = 120
+    }
+    horse_merchant_gov = {
+        color = { 138 40 10 }
+        potential = {
+            religion = Horse_religion
+            culture_group = horse_group
+            NOT = { is_government_potential = order_government }
+            NOT = { trait = horse_caste_warrior }
+        }
+        
+        allow_looting = yes
+        uses_bride_price = yes
+        free_levies_in_offensive_war = no
+        uses_jizya_tax = yes
+        max_consorts = 3
+        aggression = 0.25
+
+        preferred_holdings = { CITY }
+        allowed_holdings = { CITY FORT HOSPITAL}
+        allowed_holdings_culture = { TRIBAL }
+        accepts_liege_governments_culture_and_religion = { horse_feudal_gov }
+        capital_move_delay = 120
+    }
 }

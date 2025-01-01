@@ -104,7 +104,7 @@ DESC_126_CAT_INVADE;The cats of [This.GetName] did reproduce. At some point, the
 OPT_126_CAT_TARGET;Is this a new kind of plague?;Est-ce un nouveau fléau?;;;;;;;;;;;;x
 DESC_127_USURP_ID;The cats living in [location.GetName] successfully imprisoned me then ...;Les chats de [location.GetName] ont réussi à m'emprisonner puis à ...;;;;;;;;;;;;x
 OPT_127_USURP_ID;At some point, I feel like a cat...;Je commence à me sentir vivre comme un chat...;;;;;;;;;;;;x
-DESC_129_START_INVASION;After the cat's siege on [FROMFROM.GetName], cat started an invasion there;Après l'occupation de [FROMFROM.GetName], les chats démarrent leurs invasions;;;;;;;;;;;;x
+DESC_129_START_INVASION;After the cat's siege on [Root.Fromfrom.GetName], cat started an invasion there;Après l'occupation de [Root.Fromfrom.GetName], les chats démarrent leurs invasions;;;;;;;;;;;;x
 OPTA_129_I_HATE_THAT;Hope they don't do too much;J'espère qu'ils n'en feront pas trop;;;;;;;;;;;;x
 OPTB_129_I_LIKE_THAT;They will finally become cats?!;Ils vont enfin devenir des chats?!;;;;;;;;;;;x
 DESC_130_INCREASE_DECADENCE;As a cat, stability isn't a given...;En tant que chat, tout le monde sait que la stabilité est loin d'être assuré...;;;;;;;;;;;;x
@@ -152,7 +152,7 @@ CAT_TT_CONSTRUCT_THEIR_TRIBE;The cats build their own tribe;Les chats construise
 CAT_TT_DECLARE_WAR;The cats start a revolt;Les chats se rebellent;;;;;;;;;;;;x
 CAT_TT_HUNTER_INJURED;Many adult are injured by ferocious cats;Beaucoup d'adulte sont blessés par des chats enragé;;;;;;;;;;;;x
 CAT_DECADENCE_INVASION;A decadence invasion begins;Une révolte de décadence commence;;;;;;;;;;;;x
-CAT_TT_ORIGIN_FOUND;I should be warry of [Fromfrom.GetFirstName], he must be the sender;Je devrais me méfier de [Fromfrom.GetFirstName], il est trop louche dans cette histoire;;;;;;;;;;;;x
+CAT_TT_ORIGIN_FOUND;I should be warry of [Root.Fromfrom.GetFullName], he must be the sender;Je devrais me méfier de [Root.Fromfrom.GetFullName], il est trop louche dans cette histoire;;;;;;;;;;;;x
 
 # dog update
 dog_desc_159;Sometimes, my dog seems weak...;Mon chien semble faible de temps en temps...;;;;;;;;;;;;x
@@ -180,3 +180,76 @@ DOG_TT_ECO_LEVEL_DOWN;Reduce your economic implication;Réduit l'implication écon
 DOG_TT_ECO_LEVEL_UP;Increase your economic implication;Augmente l'implication économique;;;;;;;;;;;;x
 DOG_TT_WAR_LEVEL_DOWN;Reduce your military implication;Réduit l'implication militaire;;;;;;;;;;;;x
 DOG_TT_WAR_LEVEL_UP;Increase your military implication;Augmente l'implication militaire;;;;;;;;;;;;x
+
+## HORSE UPDATE
+DESC_ani_170;The horses seems exited around our horse steppe's building in [Root.GetName];Les cheveaux semblent excité autour des places réservés aux cheveaux en [Root.GetName];;;;;;;;;;;;x
+OPTA_ani_170;It is time to use them in festivities!;C'est le moment pour une grande fête en leur honeur;;;;;;;;;;;;x
+OPTB_ani_170;They will soon come back to how they were;Ils vont bientôt revenir comme ils étaient avant;;;;;;;;;;;;x
+DESC_ani_172;The ritual preparation are now over;Les préparations du rituel sont maintenant finis;;;;;;;;;;;;x
+OPT_ani_172;We can start the event;Nous pouvons enfin commencer le rituel;;;;;;;;;;;;x
+DESC_ani_173;The ritual just ended. Everything went as planned. The horse gave us some knowledge.;Le rituel vient de se finir avec succès. J'ai pu me prouver digne de diriger [Root.GetName].;;;;;;;;;;;;x
+OPT_ani_173;Everyone is happy!;Tout le monde est satisfé!;;;;;;;;;;;;x
+DESC_ani_174;The ritual gone strange. Because of an unknown cause, evoryone seems unconcious;Le rituel a soudainement pris une étrange tournure. Pour une raison inconnu, tout le monde semble inconscient.;;;;;;;;;;;;x
+OPT_ani_174;I am also...;Suis-je aussi...;;;;;;;;;;;;x
+DESC_ani_175;Because of incompetent, the ritual should be cancelled.;à cause d'incompétent, le rituel s'est retrouvé annulé;;;;;;;;;;;;x   
+OPT_ani_175;Why does I have to pay the price?;Pourquoi devrais-je avoir à en payer le prix?;;;;;;;;;;;;x
+DESC_ani_176;The ritual effect seems to have totally gone;Les effets du rituel semblent s'être totalement dissipé;;;;;;;;;;;;x
+OPT_ani_176;Or maby not;Ou peut-être pas;;;;;;;;;;;;x
+DESC_ani_177;It seems that no one could do anything to heal;Il semblerai que personne ne soit en mesure de me soigner;;;;;;;;;;;;x
+OPT_ani_177;I hope to be well again soon enough;J'espère rapidement récupérer.;;;;;;;;;;;;x
+DESC_ani_178;I finnaly healed from my injuries!;J'ai enfin guérit de mes blessures;;;;;;;;;;;;x
+OPT_ani_178;What happened tp my body?;Qu'est-t-il arrivé à mon corps?;;;;;;;;;;;;x
+DESC_ani_180;The preparation for the youth rite just ended. The rite shall start;Les préparations du rite de jeunesse sont terminés. Le grand rite va enfin pouvoir commencer;;;;;;;;;;;;x
+OPT_ani_180;The rite shall start!;Le rite va maintenant commencer!;;;;;;;;;;;;x
+DESC_ani_181;The rite has gone well. The childs acted as they were told.;Le rite s'est bien passé. Les enfants se sont comporté comme il est attendu de leur stature.;;;;;;;;;;;;x
+OPT_ani_181;They must have learned many things;Ils ont beaucoup appris!;;;;;;;;;;;;x
+DESC_ani_182;The preparation went well, the stage were beautiful. But when the children started the rite, something made them excited. Despite their comportment, adult hardly calmed them down. My prestige went a little down because of that;Les préparations du rite se sont bien passé. Malgré ça les enfants sont devenus insupportable. Avec les efforts mis en place pour les calmé, l'honneur est sauf.;;;;;;;;;;;;x
+OPT_ani_182;At least, children has learned something;Au moins, les enfants ont appris quelque chose;;;;;;;;;;;;x
+DESC_ani_184;As [Root.From.GetTitledFirstName] got 12, [Root.From.GetSheHe] can do the ruler mandatory rite. This mandatory rite among noble horse will prove it's worth as a young lord.;Comme [Root.From.GetTitledFirstName] a maintenant 12 ans, [Root.From.GetSheHe] se doit d'effectuer le rite du dirigeant. [Root.From.GetSheHeCap] pourra prouver sa valeur en tant que futur dirigeant.;;;;;;;;;;;;x 
+OPT_ani_184;The rite will soon start;Le rite va bientôt commencer;;;;;;;;;;;;x
+DESCA_ani_185;The preparations for the [Root.FromFrom.GetTitledFirstName]'s ruler rite ended this morning. The rite is now taking place. Even if [Root.FromFrom.GetTitledFirstName] does seem to not fully undestand [Root.FromFrom.GetHerHis] position, [Root.FromFrom.GetSheHe] did what was expected of [Root.FromFrom.GetHerHim].;Les préparations du rite du dirigeant de [Root.FromFrom.GetTitledFirstName] ont été fini ce matin. Le rite a commencé tout à l'instant. Le rite se passe bien, malgré quelques confusions de [Root.FromFrom.GetTitledFirstName].;;;;;;;;;;;;x
+DESCB_ani_185;The preparations for the [Root.FromFrom.GetTitledFirstName]'s ruler rite ended this morning. The rite is now taking place. [Root.FromFrom.GetTitledFirstName] proved that [Root.FromFrom.GetSheHe] would become a great ruler. No mistakes was made. As well, [Root.FromFrom.GetTitledFirstName] asks me if [Root.FromFrom.GetSheHe] should talk about commerce or nobility to the invited noble;Les préparations du rite du dirigeant de [Root.FromFrom.GetTitledFirstName] ont été fini ce matin. Le rite a commencé tout à l'instant. Le rite se passe bien. [Root.FromFrom.GetTitledFirstName] vient juste de me demander de quoi parler aux nobles locaux.;;;;;;;;;;;;x
+OPTA_ani_185;Thankfully, only minor noble did attend;Heuresement, qu'uniquement des nobles mineurs ont participé;;;;;;;;;;;;x
+OPTB_ani_185;[Root.FromFrom.GetSheHeCap] should talk about nobility;[Root.FromFrom.GetSheHeCap] devrait parler des concepts de la nobilité;;;;;;;;;;;;x
+OPTC_ani_185;[Root.FromFrom.GetSheHeCap] should talk about commerce;[Root.FromFrom.GetSheHeCap] devrait parler des concepts liés au commerce;;;;;;;;;;;;x
+DESC_ani_186;The rite just ended. The rite is successful and [Root.FromFromFrom.GetTitledFirstName] did learn a lot during that rite.;Le rite de passage vient de se terminer! [Root.FromFromFrom.GetTitledFirstName] a pu apprendre ce qu'implique d'être dirigeant;;;;;;;;;;;;x
+OPT_ani_186;[Root.FromFromFrom.GetTitledFirstName] should be proud of [Root.FromFromFrom.GetHerselfHimself].;[Root.FromFromFrom.GetTitledFirstName] a de quoi être fier!;;;;;;;;;;;;x
+DESCA_ani_188;As [Root.From.GetTitledFirstName] is almost an adult. The pious horses force him to do at least one rite! They even pay the rite expenses;Comme [Root.From.GetTitledFirstName] est bientôt adulte, les chevaux religieux le force de participer à un rite de passage.;;;;;;;;;;;;x
+DESCB_ani_188;The pious horses expressed that [Root.From.GetTitledFirstName] needs to go through its final rite. But they still needs to do some preparations;Les religieux chevalien affirme qu'il est temps que [Root.From.GetTitledFirstName] fasse un dernier rite de passage avant son passage à l'age adulte. Cependant, comme le rite demande quelques préparations.;;;;;;;;;;;;x
+DESCC_ani_188;[Root.From.GetTitledFirstName] did learn a lot from the 2 previous rite done. But as none of them covered religious idea, pious horses insist to complete its rulership learning with a specialized rite;[Root.From.GetTitledFirstName] a beaucoup appris des deux derniers rites. Mais aucun des rites ne couvraient les aspect religieux qu'un dirigeant doit connaître. Pour cela, quelques religieux start preparing for that rite.;;;;;;;;;;;;x
+OPTA_ani_188;If that can make [Root.From.GetTitledFirstName] more competent...;Tant qu'ils assument le prix...;;;;;;;;;;;;x
+OPTB_ani_188;It's a good idea!;C'est une très bonne chose!;;;;;;;;;;;;x
+OPTC_ani_188;I'll ask the merchants to help them prepare it;Je demanderais aux marchands d'aider avec les préparations;;;;;;;;;;;;x
+OPTD_ani_188;I'll ask the local nobles to help them prepare it;Je demanderais aux nobles locaux d'aider dans les préparations;;;;;;;;;;;;x 
+DESCA_ani_189;[Root.Fromfrom.GetTitledFirstName] just finished its rite. The religious did not expect much from [Root.Fromfrom.GetHerHim]. [Root.Fromfrom.GetSheHeCap] still learning something from it.;[Root.Fromfrom.GetTitledFirstName] vient de terminer le rite de passage. [Root.Fromfrom.GetSheHeCap] a fait quelques bêtises mais au vu de son manque d'éducation, les religieux ne lui en tienne pas rigueur.;;;;;;;;;;;;x
+DESCB_ani_189;[Root.Fromfrom.GetTitledFirstName] has gone through its final rite. Even if some fault could be noted, [Root.Fromfrom.GetSheHe] still learned much from it.;[Root.Fromfrom.GetTitledFirstName] vient de passer le rite de passage final. malgré quelques légères lacunes, [Root.Fromfrom.GetSheHeCap] a bien appris ce que les religieux essayez de lui enseigner.;;;;;;;;;;;;x
+DESCC_ani_189;[Root.Fromfrom.GetTitledFirstName] has done its religious rite. [Root.Fromfrom.GetSheHeCap] did great, whithout any flaw. The religious said that he completed its education;[Root.Fromfrom.GetTitledFirstName] a fini le rite religieux. Les prêtres qui ont organisé le rite affirment qu'[Root.Fromfrom.GetSheHeCap] a beaucoup appris des coutumes religieuses.;;;;;;;;;;;;x 
+OPT_ani_189;Good!;Bien!;;;;;;;;;;;;x
+DESC_ani_191;Now that [Root.From.GetTitledFirstName] is adult, it's time for him to express its talent;Maintenant que [Root.From.GetTitledFirstName] est adulte, son talent va maintenant pouvoir se révéler;;;;;;;;;;;;x
+OPT_ani_191;Hope [Root.From.GetSheHe] became a genious;J'espère qu'[Root.From.GetSheHe] deviendra un cheval intelligeant;;;;;;;;;;;;x
+DESC_ani_193;Recently, some vassals seems dissatisfied. Even if ignored at start, it can't be ignored. Something must be done!;Récemment, des vassaux guerriers semblent mécontent de ma gouvernance. Ils commencent à gagner de l'influence et ne peuvent plus être ignorés.;;;;;;;;;;;;x
+OPTA_ani_193;I shall send my §Y[Root.getHorseRank] guard§! intimidate them!;Je vais envoyer ma §Ygarde [Root.getHorseRank]§! les intimider!;;;;;;;;;;;;x
+OPTB_ani_193;Some money should satisfy them;Un peu d'argent devrais les satisfaires;;;;;;;;;;;;x
+OPTC_ani_193;I will negociate to avoid those trouble;Je vais négocier pour éviter tout problèmes;;;;;;;;;;;;x
+DESC_ani_194;Recently, some merchants seems dissatisfied. Even if ignored at start, it can't be ignored. Something must be done!;Récemment, des marchands semblent mécontent de ma gouvernance. Ils commencent à gagner de l'influence et ne peuvent plus être ignorés.;;;;;;;;;;;;x
+OPTA_ani_194;I shall send my §Y[Root.getHorseRank] guard§! intimidate them!;Je vais envoyer ma §Ygarde [Root.getHorseRank]§! les intimider!;;;;;;;;;;;;x
+OPTB_ani_194;Some money should satisfy them;Un peu d'argent devrais les satisfaires;;;;;;;;;;;;x
+OPTC_ani_194;I will negociate to avoid those trouble;Je vais négocier pour éviter tout problèmes;;;;;;;;;;;;x
+DESC_ani_195;My army commanders start to defy my orders. At start, it was only minor things, but now, I can't ignore it;Les commandants de mes armées commencent à défier mes ordres. Au début, c'était sur des choses sans importances, mais maintenants, je ne peux plus les ignorer;;;;;;;;;;;;x
+OPTA_ani_195;My §Y[Root.getHorseRank] guard§! will scare them;Ma §Ygarde [Root.getHorseRank]§! va leur rappeler leur place;;;;;;;;;;;;x
+OPTB_ani_195;I shall pay some mercenaries to pacify them;Quelques mercenaires devraient faire l'affaire;;;;;;;;;;;;x
+OPTC_ani_195;I will make them understand their place!;Je vais leur rappeler leur place;;;;;;;;;;;;x
+DESC_ani_196;The paysants under my rule start to question my position as a rightful horse [Root.getHorseRankTitle]...;Les paysants commencent à douter de ma position de [Root.getHorseRankTitle].;;;;;;;;;;;;x
+OPTA_ani_196;My §Y[Root.getHorseRank] guard§! shall make them understand their place;Ma §Ygarde [Root.getHorseRank]§! va leur faire comprendre qui je suis!;;;;;;;;;;;;x
+OPTB_ani_196;I shall use my wealth to convince them!;Je vais utiliser mon argent pour les convaincre!;;;;;;;;;;;;x
+OPTC_ani_196;I will wathever means to make them understand my position;J'utiliserai tous les moyens possible pour leur faire comprendre qui je suis!;;;;;;;;;;;;x
+
+## TOOLTIPS
+TT_ani_172_went_well;everything goes well;tout se passe comme prévu;;;;;;;;;;;;x
+TT_ani_172_went_wrong;an accident occur;un accident se produit;;;;;;;;;;;;x
+TT_ani_177_healed;heal from injury;est soigné de ses blessures;;;;;;;;;;;;x
+TT_ani_177_injury_is_worst;the injuries goes wrong;les blessures s'empirent;;;;;;;;;;;;x
+TT_ani_180_went_well;everything goes well;tout se passe comme prévu;;;;;;;;;;;;x
+TT_ani_180_went_wrong;an accident occur;tout ne se passe pas comme prévu;;;;;;;;;;;;x
+TT_ani_186_learned_speciality;[Root.FromFromFrom.GetTitledFirstName] a lot more than expected of [Root.FromFromFrom.GetHerselfHimself];[Root.FromFromFrom.GetTitledFirstName] a bien mieu appris son rôle que ce qui était attendu;;;;;;;;;;;;x
+TT_ani_191_random_trait;§Y[From.GetFullName]§! gains a random horse rulership trait;§Y[From.GetFullName]§! obtient un trait cheval aléatoire;;;;;;;;;;;;x

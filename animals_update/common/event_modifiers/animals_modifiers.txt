@@ -688,3 +688,33 @@ dog_learning_council = {
 	icon = 2
 	learning = 2
 }
+
+horse_warrior_malus_1 = {
+	icon = 36
+	vassal_opinion = -25
+}
+horse_warrior_malus_2 = {
+	icon = 19
+	levy_size = -0.3
+	levy_reinforce_rate = -0.5
+	army_reinforce_rate = -0.5
+}
+horse_warrior_malus_3 = {
+	icon  = 22
+	castle_vassal_tax_modifier = -0.4
+	city_vassal_tax_modifier = -0.4
+}
+horse_warrior_malus_4 = {
+	icon = 21
+	diplomacy_penalty = -7
+	martial_penalty = -3
+	combat_rating = -15
+}
+horse_warrior_malus_5 = {
+	icon = 20
+	global_revolt_risk = 0.15
+}
+horse_conversion_tyrany = {
+	icon = 57
+	general_opinion = -5
+}

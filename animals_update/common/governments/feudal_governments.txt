@@ -40,6 +40,8 @@ feudal_governments = {
 				is_government_potential = Eleph_feudal_gov
 				is_government_potential = cat_feudal_gov
 				is_government_potential = dog_feudal_gov
+				is_government_potential = horse_feudal_gov
+				is_government_potential = horse_merchant_gov
 			}
 			NAND = {
 				culture_group = tibetan_group

@@ -1,14 +1,11 @@
 Is_animal_trigger = {
-    OR = {
-        culture = horse
         culture = dragon_culture
-    }
 }
 
 Is_really_animal_trigger = {
     OR = {
         culture = dragon_culture
-        culture = horse
+        culture_group = horse_group
         culture_group = dog_group
         culture_group = bear_group
         culture_group = hedgehog_group
@@ -691,4 +688,35 @@ dog_can_live_here_trigger = {
 # title scope
 dog_has_council_laws_trigger = {
     has_law = law_voting_power_1
+}
+
+horse_has_done_no_rite_trigger = {
+    NOR = {
+        has_character_flag = horse_rite_1_success
+        has_character_flag = horse_rite_2_success
+        has_character_flag = horse_rite_3_success
+    }
+}
+horse_has_exatly_done_1_rite_trigger = {
+    calc_true_if = {
+        amount == 1
+        has_character_flag = horse_rite_1_success
+        has_character_flag = horse_rite_2_success
+        has_character_flag = horse_rite_3_success
+    }
+}
+horse_has_exatly_done_2_rite_trigger = {
+    calc_true_if = {
+        amount == 2
+        has_character_flag = horse_rite_1_success
+        has_character_flag = horse_rite_2_success
+        has_character_flag = horse_rite_3_success
+    }
+}
+horse_has_exatly_done_all_rite_trigger = {
+    AND = {
+        has_character_flag = horse_rite_1_success
+        has_character_flag = horse_rite_2_success
+        has_character_flag = horse_rite_3_success
+    }
 }

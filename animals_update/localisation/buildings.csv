@@ -1,19 +1,6 @@
 #CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
 
 ###beta version building
-ca_horse_stable_1;Barn;Étable;;;;;;;;;;;;x
-ca_horse_stable_2;Barn;Étable;;;;;;;;;;;;x
-ca_horse_stable_3;Barn;Étable;;;;;;;;;;;;x
-ca_horse_archer_1;Archery;Archerie;;;;;;;;;;;;x
-ca_horse_archer_2;Archery;Archerie;;;;;;;;;;;;x
-ca_horse_archer_3;Archery;Archerie;;;;;;;;;;;;x
-ca_horse_armor_1;Armory;Armurerie;;;;;;;;;;;;x
-ca_horse_armor_2;Armory;Armurerie;;;;;;;;;;;;x
-ca_horse_retinue_1;Horse clan;Clan des chevaux;;;;;;;;;;;;x
-ca_horse_retinue_2;Horse clan;Clan des chevaux;;;;;;;;;;;;x
-ca_horse_garrison_1;Increased garrison;Garnison amélioré;;;;;;;;;;;;x
-ca_horse_garrison_2;Increased garrison;Garnison amélioré;;;;;;;;;;;;x
-ca_horse_speciality;Speed guild;Guilde de vitesse;;;;;;;;;;;;x
 ca_dragon_fortification_1;Thorny fortification;Fortification épineuse;;;;;;;;;;;;x
 ca_dragon_fortification_2;Thorny fortification;Fortification épineuse;;;;;;;;;;;;x
 ca_dragon_fortification_3;Thorny fortification;Fortification épineuse;;;;;;;;;;;;x
@@ -83,10 +70,10 @@ ca_ani_tech_1;Big library;Grande Bibliothèque;;;;;;;;;;;;x
 ca_ani_tech_2;Ducal library;Bibliothèque ducale;;;;;;;;;;;;x
 ca_ani_tech_3;Royal library;Bibliothèque royale;;;;;;;;;;;;x
 ca_ani_tech_4;Imperial library;Bibliothèque impériale;;;;;;;;;;;;x
-ca_bear_regiment_1;Training field;Salles d’entraînement;;;;;;;;;;;;x
-ca_bear_regiment_2;Training field;Salles d’entraînement;;;;;;;;;;;;x
-ca_bear_regiment_3;Training field;Salles d’entraînement;;;;;;;;;;;;x
-ca_bear_regiment_4;Training field;Salles d’entraînement;;;;;;;;;;;;x
+ca_bear_regiment_1;Training field;Salles d'entraînement;;;;;;;;;;;;x
+ca_bear_regiment_2;Training field;Salles d'entraînement;;;;;;;;;;;;x
+ca_bear_regiment_3;Training field;Salles d'entraînement;;;;;;;;;;;;x
+ca_bear_regiment_4;Training field;Salles d'entraînement;;;;;;;;;;;;x
 ca_bear_armor_1;Armory;Armurerie;;;;;;;;;;;;x
 ca_bear_armor_2;Armory;Armurerie;;;;;;;;;;;;x
 ca_bear_armor_3;Armory;Armurerie;;;;;;;;;;;;x
@@ -432,3 +419,37 @@ tb_dog_retinue_4;Dogs' clan;Clan des chiens;;;;;;;;;;;;x
 ## tooltip
 DOG_TT_HAS_ECO_IMPL;Has enough implication in economic field;Est suffisament impliqué en économie;;;;;;;;;;;;x
 DOG_TT_HAS_MIL_IMPL;Has enough implication in military field;Est suffisament impliqué en militaire;;;;;;;;;;;;x
+
+## HORSE UODATE
+
+ca_default_horse_conv_quest;Horse festivities place;Place des fêtes à cheval;;;;;;;;;;;;x
+ca_horse_light_1;trainee field;Place d'entrainement;;;;;;;;;;;;x
+ca_horse_light_2;trainee field;Place d'entrainement;;;;;;;;;;;;x
+ca_horse_light_3;trainee field;Place d'entrainement;;;;;;;;;;;;x
+ca_horse_light_4;trainee field;Place d'entrainement;;;;;;;;;;;;x
+ca_horse_light_5;trainee field;Place d'entrainement;;;;;;;;;;;;x
+ca_horse_armor_1;Knight quarters;résidence des chevaliers;;;;;;;;;;;;x
+ca_horse_armor_2;Knight quarters;résidence des chevaliers;;;;;;;;;;;;x
+ca_horse_armor_3;Knight quarters;résidence des chevaliers;;;;;;;;;;;;x
+ca_horse_armor_4;Knight quarters;résidence des chevaliers;;;;;;;;;;;;x
+ca_horse_archer_1;Shooting range;Stand de tir;;;;;;;;;;;;x
+ca_horse_archer_2;Shooting range;Stand de tir;;;;;;;;;;;;x
+ca_horse_archer_3;Shooting range;Stand de tir;;;;;;;;;;;;x
+ca_horse_archer_4;Shooting range;Stand de tir;;;;;;;;;;;;x
+ca_horse_archer_5;Shooting range;Stand de tir;;;;;;;;;;;;x
+ca_horse_retinue_1;Horses' clan;Clan des chevaux;;;;;;;;;;;;x
+ca_horse_retinue_2;Horses' clan;Clan des chevaux;;;;;;;;;;;;x
+ca_horse_retinue_3;Horses' clan;Clan des chevaux;;;;;;;;;;;;x
+ca_horse_speciality_1;Race guild;Guilde de compétition;;;;;;;;;;;;x
+ca_horse_speciality_2;Race guild;Guilde de compétition;;;;;;;;;;;;x
+tb_default_horse_conv_quest;Horse festivities place;Place des fêtes à cheval;;;;;;;;;;;;x
+tb_horse_light_1;trainee land;Terre d'entrainement;;;;;;;;;;;;x
+tb_horse_light_2;trainee land;Terre d'entrainement;;;;;;;;;;;;x
+tb_horse_light_3;trainee land;Terre d'entrainement;;;;;;;;;;;;x
+tb_horse_light_4;trainee land;Terre d'entrainement;;;;;;;;;;;;x
+tb_horse_archer_1;Bow deposit;stockage d'arc;;;;;;;;;;;;x
+tb_horse_archer_2;Bow deposit;stockage d'arc;;;;;;;;;;;;x
+tb_horse_archer_3;Bow deposit;stockage d'arc;;;;;;;;;;;;x
+tb_horse_archer_4;Bow deposit;stockage d'arc;;;;;;;;;;;;x
+tb_horse_retinue_1;Horses' clan;Clan des chevaux;;;;;;;;;;;;x
+tb_horse_retinue_2;Horses' clan;Clan des chevaux;;;;;;;;;;;;x

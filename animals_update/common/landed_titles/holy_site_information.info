@@ -48,3 +48,11 @@ DOG:
   c_peresechen                : steppes dogs - character conversion
   c_reggio                    : hills dogs - county conversion
   c_st_gallen                 : hills dogs - character conversion
+
+HORSES:
+  c_dyrrachion                : central groups religion center
+  c_kirghiz                   : character cultural conversion
+  c_moskva                    : province cultural conversion
+  c_boqtybay                  : bonus horse rite
+  c_galaz                     : horse royal gard quantity bonus
+   

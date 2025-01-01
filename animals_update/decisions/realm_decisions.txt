@@ -2674,6 +2674,22 @@ decisions = {
 			}
 			else_if = {
 				limit = {
+					religion = Horse_religion
+					culture_group = horse_group
+				}
+				
+				if = {
+					limit = {
+						is_government_potential = horse_feudal_gov
+					}
+					set_government_type = horse_feudal_gov
+				}
+				else = {
+					set_government_type = horse_merchant_gov
+				}
+			}
+			else_if = {
+				limit = {
 					religion_group = muslim
 				}
 
@@ -2917,6 +2933,21 @@ decisions = {
 			}
 			else_if = {
 				limit = {
+					religion = Horse_religion
+					culture_group = horse_group
+				}
+				if = {
+					limit = {
+						is_government_potential = horse_feudal_gov
+					}
+					set_government_type = horse_feudal_gov
+				}
+				else = {
+					set_government_type = horse_merchant_gov
+				}
+			}
+			else_if = {
+				limit = {
 					NOT = { religion_group = muslim }
 					NAND = {
 						culture_group = tibetan_group
@@ -2942,7 +2973,7 @@ decisions = {
 
 				set_government_type = muslim_government
 			}
-			else = {
+			else_if = {
 				limit = {
 					culture_group = tibetan_group
 					OR = {

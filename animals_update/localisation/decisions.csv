@@ -311,3 +311,35 @@ promote_character_unity_desc;Impose your unity on someone, transforming him into
 
 ### tooltip
 CREATED_HOLY_ORDER_DOG_TOOLTIP;[d_hunting_gards.GetName] created;[d_hunting_gards.GetName] sont créée;;;;;;;;;;;;x
+
+#### HORSES UPDATE
+start_horse_conv_quest;Do a horse ritual;Organiser un rituel des chevaux;;;;;;;;;;;;x
+start_horse_conv_quest_desc;As horse have their own lifestyle, trying to understand it in a ritual is a given;Comme les chevaux ont leur propre style de vie, organiser ce rituel est l'occasion de mieux le comprendre;;;;;;;;;;;;x
+adopt_horse_religion;Adopt horses' religion;Adopter la religion des chevaux;;;;;;;;;;;;x
+adopt_horse_religion_desc;As an horse, you can freely choose to convert yourself to the associated religion;En tant que cheval, tu peux librement choisir de te convertir à la religion associé;;;;;;;;;;;;x
+create_war_hord;Form [d_war_hord.GetName];Former [d_war_hord.GetName];;;;;;;;;;;;x
+create_war_hord_desc;By using your influence, you can defend your religion with a veteran groups of soldiers;En utilisant mon influence personnel, il est possible de créer une troupe de mercennaires afin de défendre les terres de ma religion;;;;;;;;;;;;x
+make_younth_rite;Organize the youth rite;Oraniser le rite de jeunesse;;;;;;;;;;;;x
+make_younth_rite_desc;As an horse, the young children need to learn how to act. The ritual is the first one to help them grow strong.;Tout chevaux prend a besoin de temps pour grandir. Ce rituel est le premier réalisable pour les aider à grandir;;;;;;;;;;;;x
+create_horse_royal_gard;Create the [Root.getHorseRank] guards;Créer la garde [Root.getHorseRank];;;;;;;;;;;;x
+create_horse_royal_gard_desc;The [Root.getHorseRank] is the symbol of its ruler. Any [Root.getHorseRankTitle] must have one to avoid subjects rebelling;La garde [Root.getHorseRank] est l'image de son souverain. Sans elle, un [Root.getHorseRankTitle] n'est pas respecté de ses sujets;;;;;;;;;;;;x
+horse_abdicate;abdicate;Abdiquer;;;;;;;;;;;;x
+horse_abdicate_desc;As a §Y[Root.getHorseRankTitle]§!, loosing its [Root.getHorseRank] guard means losing subject respect. As it is not possible for a horse to recreate the [Root.getHorseRank] guard, abdicate to a respected ruler is the only option to keep its honor.;En tant que §Y[Root.getHorseRankTitle]§!, perdre sa [Root.getHorseRank] guard signifie que mes sujet ne me respectent plus. Comme il n'est plus possible de la récupérer à nouveau, abdique reste un choix pour garantir la stabilité du pays;;;;;;;;;;;;x
+horse_ritual_conversion;Make the conversion ritual;Faire le rituel de conversion;;;;;;;;;;;;x
+horse_ritual_conversion_desc;It is possible to create a big ritual to transform a living being into a horse. That is seen a little tyranical by its peers;Il est possibler d'organiser un rituel pour transformer un être vivant en cheval. Il est cependant vu comme un peu tyranique;;;;;;;;;;;;x
+horse_ritual_conversion_county;Prepare a big horse ritual;Préparer un grand rituel cheval;;;;;;;;;;;;x
+horse_ritual_conversion_county_desc;Making a big ritual allow a ruler to make its peasants understand the value of the horse hegemony. Ideal to make lands prosperous!;Organiser le grand rituel cheval permet aux paysants de comprendre la suprématie chevale afin d'augmenter la prospérité du territoire;;;;;;;;;;;;x
+
+### tooltip
+tt_horse_horse_building;Has constructed an horse building;A construit un bâtiment de cheval;;;;;;;;;;;;x
+CREATED_HOLY_ORDER_HORSE_TOOLTIP;§Y[d_war_hord.GetName]§! created;§Y[d_war_hord.GetName]§! est créée;;;;;;;;;;;;x
+HORSE_TT_DID_NOT_PARTICIPATE_RITE_1;Did never gone through the youth rite;N'a jamais effectué le rite de jeunesse;;;;;;;;;;;;x
+HORSE_TT_START_RITE_PREPARATION;Start the rite's preparations;Commence les préparation du rite;;;;;;;;;;;;x
+horse_TT_did_not_create_it_once;Did not create the §Y[Root.getHorseRank] guard§! once;N'a jamais créé la §Ygarde [Root.getHorseRank]§!;;;;;;;;;;;;x
+horse_TT_loose_its_royal_guard;Lost [Root.GetHerHis] §Y[Root.getHorseRank] guard§!;A perdu sa §Yguarde [Root.getHorseRank]§!;;;;;;;;;;;;x
+
+## customized localisation
+king_guards_adj;royal;royal;;;;;;;;;;;;x
+emperor_guards_adj;imperial;impériale;;;;;;;;;;;;x
+king_guards_rank;king;roi;;;;;;;;;;;;x
+emperor_guards_rank;emperor;empereur;;;;;;;;;;;;x
