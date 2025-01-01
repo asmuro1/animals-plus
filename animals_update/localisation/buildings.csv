@@ -422,6 +422,7 @@ DOG_TT_HAS_MIL_IMPL;Has enough implication in military field;Est suffisament imp
 
 ## HORSE UODATE
 
+temple_barony_of_Horse_religion;Temple of;Temple de;;;;;;;;;;;;x
 ca_default_horse_conv_quest;Horse festivities place;Place des fêtes à cheval;;;;;;;;;;;;x
 ca_horse_light_1;trainee field;Place d'entrainement;;;;;;;;;;;;x
 ca_horse_light_2;trainee field;Place d'entrainement;;;;;;;;;;;;x
