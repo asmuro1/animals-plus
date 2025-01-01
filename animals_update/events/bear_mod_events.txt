@@ -3067,7 +3067,132 @@ character_event = {
     }
 }
 
-# events 140 - 142 removed
+# events 040 - 042 removed
+# new event 040 created to have an abusive amount of money by firing courtisans
+character_event = {
+    id = ani_plus.040
+
+    hide_window = yes
+    only_rulers = yes
+
+    trigger = {
+        has_full_court = yes
+        any_courtier = {
+            prisoner = no
+            NOR = { 
+                dynasty = ROOT
+                betrothed = { dynasty = ROOT }    
+                is_close_relative = ROOT    
+            }
+            has_minor_title = no
+            has_job_title = no
+        }
+    }
+
+    mean_time_to_happen = {
+        years = 100
+
+        modifier = {
+            factor = 0.2
+
+            num_of_courtiers = 50
+        }
+        modifier = {
+            factor = 0.2
+
+            num_of_courtiers = 75
+        }
+        modifier = {
+            factor = 0.2
+
+            num_of_courtiers = 100
+        }
+        modifier = {
+            factor = 0.2
+
+            num_of_courtiers = 125
+        }
+        modifier = {
+            factor = 0.2
+
+            num_of_courtiers = 150
+        }
+        modifier = {
+            factor = 0.2
+
+            num_of_courtiers = 175
+        }
+        modifier = {
+            factor = 0.2
+
+            num_of_courtiers = 200
+        }
+    }
+    immediate = {
+        random_courtier = {
+            limit = {
+                prisoner = no
+                NOR = { 
+                    dynasty = ROOT
+                    betrothed = { dynasty = ROOT }
+                    is_close_relative = ROOT    
+                }
+                has_minor_title = no
+                has_job_title = no
+            }
+            clear_wealth = yes
+            death = yes
+        }
+
+        random_courtier = {
+            limit = {
+                prisoner = no
+                NOR = { 
+                    dynasty = ROOT
+                    betrothed = { dynasty = ROOT }
+                    is_close_relative = ROOT    
+                }
+                has_minor_title = no
+                has_job_title = no
+            }
+            clear_wealth = yes
+            death = yes
+        }
+
+        random_courtier = {
+            limit = {
+                prisoner = no
+                NOR = { 
+                    dynasty = ROOT
+                    betrothed = { dynasty = ROOT }
+                    is_close_relative = ROOT    
+                }
+                has_minor_title = no
+                has_job_title = no
+            }
+            clear_wealth = yes
+            death = yes
+        }
+
+        random_courtier = {
+            limit = {
+                prisoner = no
+                NOR = { 
+                    dynasty = ROOT
+                    betrothed = { dynasty = ROOT }
+                    is_close_relative = ROOT    
+                }
+                has_minor_title = no
+                has_job_title = no
+            }
+            clear_wealth = yes
+            death = yes
+        }
+
+        character_event = { id = ani_plus.040 days = 1}
+    }
+}
+
 
 #event: starting war
 character_event = {

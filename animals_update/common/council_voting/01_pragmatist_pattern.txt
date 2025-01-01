@@ -2,6 +2,9 @@ pragmatist_pattern_for = {
 	icon = 6
 	pattern_type = for
 
+	dog_unity_county_conv = { always = yes }
+	dog_unity_character_conv = { always = yes }
+	dog_unity_reputation_cost = { always = no }
 	dog_law_politic_0 = { always = yes }
 	dog_law_politic_1 = { always = yes }
 	dog_law_politic_2 = { always = yes }
@@ -475,6 +478,9 @@ pragmatist_pattern_against = {
 	icon = 6
 	pattern_type = against
 
+	dog_unity_county_conv = { always = no }
+	dog_unity_character_conv = { always = no }
+	dog_unity_reputation_cost = { always = yes }
 	dog_law_politic_0 = { always = no }
 	dog_law_politic_1 = { always = no }
 	dog_law_politic_2 = { always = no }

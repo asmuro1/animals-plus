@@ -14,8 +14,8 @@ law_groups = {
     }
 
     dog_council_laws = {
-		law_type = council
-		allowed_for_councillors = yes
+		law_type = realm
+		#allowed_for_councillors = yes
 	}
 }
 
@@ -1426,7 +1426,9 @@ laws = {
         }
         potential = {
             has_dlc = "Zeus"
-            culture_group = dog_group
+            holder_scope = {
+                culture_group = dog_group
+            }
         }
         revoke_allowed = {
             always = no
@@ -1452,7 +1454,9 @@ laws = {
         }
         potential = {
             has_dlc = "Zeus"
-            culture_group = dog_group
+            holder_scope = {
+                culture_group = dog_group
+            }
         }
         revoke_allowed = {
             always = no
@@ -1478,7 +1482,9 @@ laws = {
         }
         potential = {
             has_dlc = "Zeus"
-            culture_group = dog_group
+            holder_scope = {
+                culture_group = dog_group
+            }
         }
         revoke_allowed = {
             always = no
@@ -1503,7 +1509,9 @@ laws = {
         }
         potential = {
             has_dlc = "Zeus"
-            culture_group = dog_group
+            holder_scope = {
+                culture_group = dog_group
+            }
         }
         revoke_allowed = {
             always = no
@@ -1524,11 +1532,11 @@ laws = {
         allow = {
             holder_scope = { government = dog_feudal_gov }
             higher_tier_than = baron
+            has_law = succession_voting_power_1
         }
         potential = {
             has_dlc = "Zeus"
-            culture_group = dog_group
-            has_law = succession_voting_power_1
+            holder_scope = { culture_group = dog_group }
         }
         revoke_allowed = {
             always = no

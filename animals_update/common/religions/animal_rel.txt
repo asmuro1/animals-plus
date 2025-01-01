@@ -3,8 +3,8 @@
 #probably later updates
 
 Animals_grups = {
-	color = { 0.38 0.38 0.38 }
-	graphical_culture = africangfx #no idea to what i can do here
+	color = { 0.4 0.6 0.8 }
+	graphical_culture = africangfx
 	has_coa_on_barony_only = yes
 	crusade_cb = crusade
 

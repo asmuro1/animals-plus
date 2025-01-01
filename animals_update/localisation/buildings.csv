@@ -17,6 +17,7 @@ ca_dragon_speciality;Treasury's guilde;Guilde du trésor;;;;;;;;;;;;x
 
 
 ####Bear update building
+temple_barony_of_Bears_religion;Temple of;Temple de;;;;;;;;;;;;x
 ca_ani_castle_tower_01;Animal central tower I;Tour centrale animalière I;;;;;;;;;;;;x
 ca_ani_castle_tower_02;Animal central tower II;Tour centrale animalière II;;;;;;;;;;;;x
 ca_ani_castle_tower_03;Animal central tower III;Tour centrale animalière III;;;;;;;;;;;;x
@@ -115,6 +116,7 @@ tb_bear_armory_4;Weapons stock;Réserve d'armes;;;;;;;;;;;;x
 
 
 #### hedgehog update
+temple_barony_of_Hedge_religion;Temple of;Temple de;;;;;;;;;;;;x
 fo_fortification_human;fort fortification;fortification du fort;;;;;;;;;;;;x
 fo_terrain_adapter;provincial terraforming lab;Laboratorie de terraformation locale;;;;;;;;;;;;x
 fo_terrain_adapter_desc;Building that allow hedgehog to build any building in the associated province, even if lecal terrain dosn't allow it;bâtiment qui permet de construire n'importe quel bâtiment hérisson, quelque soit le terrain de la province;;;;;;;;;;;;x
@@ -179,6 +181,7 @@ HAS_HEDGE_HOME_2_ACTIVE;Has a big usable hedgehogs' houses;Possède de grandes ma
 
 
 ### panda update
+temple_barony_of_Panda_religion;Temple of;Temple de;;;;;;;;;;;;x
 ca_panda_capital_bureau;Capital bureau;Bureau de capital;;;;;;;;;;;;x
 ca_panda_common_bureau;Relay bureau;Bureau de relai;;;;;;;;;;;;x
 ca_panda_vassal_bureau;Vassal bureau;Bureau de vassal;;;;;;;;;;;;x
@@ -263,6 +266,7 @@ PANDA_TT_NEIGHBOR_BUREAU_NOT_COMMON;A neighbor county has a vassal or capital bu
 PANDA_TT_NEIGHBOR_COMMON;A neighbor county has a relay bureau;Un comté voisin a un bureau de relai;;;;;;;;;;;;x
 
 ### duck update
+temple_barony_of_Duck_religion;Temple of;Temple de;;;;;;;;;;;;x
 tr_duck_level_dev_1;Commerce center;Centre de commerce;;;;;;;;;;;;x
 tr_duck_level_dev_2;Commerce center;Centre de commerce;;;;;;;;;;;;x
 tr_duck_level_dev_3;Commerce center;Centre de commerce;;;;;;;;;;;;x
@@ -306,6 +310,7 @@ tb_duck_retinue_4;Ducks clan;Clan des canards;;;;;;;;;;;;x
 
 ### elephant update
 
+temple_barony_of_Eleph_religion;Temple of;Temple de;;;;;;;;;;;;x
 ho_eleph_reprod_lab;Reproduction laboratory;Laboratoire de reproduction;;;;;;;;;;;;x
 ca_eleph_recruit_1;Recruitment zone;Zone de recrutement;;;;;;;;;;;;x
 ca_eleph_recruit_2;Recruitment zone;Zone de recrutement;;;;;;;;;;;;x
@@ -344,6 +349,7 @@ ho_eleph_disease_lab_desc;Laboratory creating epidemies;Laboratoire qui crée des
 ELEPH_TT_STARTED_ELEPH_STUDY;Did start to study elephant;A commencé des recherches sur les éléphants.;;;;;;;;;;;;x
 
 ### cat update
+temple_barony_of_Cat_religion;Temple of;Temple de;;;;;;;;;;;;x
 ca_cat_army_1;Barraks;Casernes;;;;;;;;;;;;x
 ca_cat_army_2;Barraks;Casernes;;;;;;;;;;;;x
 ca_cat_army_3;Barraks;Casernes;;;;;;;;;;;;x
@@ -376,6 +382,7 @@ tb_cat_stable_3;Stables;Étable;;;;;;;;;;;;x
 tb_cat_stable_4;Stables;Étable;;;;;;;;;;;;x
 
 ### DOG update
+temple_barony_of_Dog_religion;Temple of;Temple de;;;;;;;;;;;;x
 ca_dog_field_1;Military field;Terrain militaire;;;;;;;;;;;;x
 ca_dog_field_2;Military field;Terrain militaire;;;;;;;;;;;;x
 ca_dog_field_3;Military field;Terrain militaire;;;;;;;;;;;;x
