@@ -6,11 +6,6 @@
 ##### should be progressivly and totally deleted with updates
 OPT_OKAY;OK;;;;;;;;;;;;;x
 OPT_GOOD;Good!;Bien!;;;;;;;;;;;;x
-EVTDESCanimal_plus_mod402;It is time to upgrade the loyalty of ...;C'est le moment d'augmenter la loyauté de...;;;;;;;;;;;;x
-EVTOPTAanimal_plus_mod402;... [dog_gift_one.GetTitledFirstName] !;... [dog_gift_one.GetTitledFirstName] !;;;;;;;;;;;;x
-EVTOPTBanimal_plus_mod402;... [dog_gift_two.GetTitledFirstName] !;... [dog_gift_two.GetTitledFirstName] !;;;;;;;;;;;;x
-EVTOPTCanimal_plus_mod402;... [dog_gift_three.GetTitledFirstName] !;... [dog_gift_three.GetTitledFirstName] !;;;;;;;;;;;;x
-EVTDESCanimal_plus_mod801;The colonization in [This.GetName] is over !;La colonisation en [This.GetName] est terminée !;;;;;;;;;;;;x
 
 
 
