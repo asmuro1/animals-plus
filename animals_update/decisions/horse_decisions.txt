@@ -153,7 +153,9 @@ title_decisions = {
                 }
             }
 
-            culture = FROM
+            location = {
+                culture = FROM
+            }
         }
 
         ai_will_do = {
