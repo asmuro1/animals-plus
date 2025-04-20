@@ -319,8 +319,8 @@ adopt_horse_religion;Adopt horses' religion;Adopter la religion des chevaux;;;;;
 adopt_horse_religion_desc;As an horse, you can freely choose to convert yourself to the associated religion;En tant que cheval, tu peux librement choisir de te convertir à la religion associé;;;;;;;;;;;;x
 create_war_hord;Form [d_war_hord.GetName];Former [d_war_hord.GetName];;;;;;;;;;;;x
 create_war_hord_desc;By using your influence, you can defend your religion with a veteran groups of soldiers;En utilisant mon influence personnel, il est possible de créer une troupe de mercennaires afin de défendre les terres de ma religion;;;;;;;;;;;;x
-make_younth_rite;Organize the youth rite;Oraniser le rite de jeunesse;;;;;;;;;;;;x
-make_younth_rite_desc;As an horse, the young children need to learn how to act. The ritual is the first one to help them grow strong.;Tout chevaux prend a besoin de temps pour grandir. Ce rituel est le premier réalisable pour les aider à grandir;;;;;;;;;;;;x
+make_younth_rite;Organize the youth rite;Organiser le rite de jeunesse;;;;;;;;;;;;x
+make_younth_rite_desc;As an horse, the young children need to learn how to act. The ritual is the first one to help them grow strong.;Tout chevaux a besoin de temps pour grandir. Ce rituel est le premier réalisable pour les aider à grandir;;;;;;;;;;;;x
 create_horse_royal_gard;Create the [Root.getHorseRank] guards;Créer la garde [Root.getHorseRank];;;;;;;;;;;;x
 create_horse_royal_gard_desc;The [Root.getHorseRank] is the symbol of its ruler. Any [Root.getHorseRankTitle] must have one to avoid subjects rebelling;La garde [Root.getHorseRank] est l'image de son souverain. Sans elle, un [Root.getHorseRankTitle] n'est pas respecté de ses sujets;;;;;;;;;;;;x
 horse_abdicate;abdicate;Abdiquer;;;;;;;;;;;;x
