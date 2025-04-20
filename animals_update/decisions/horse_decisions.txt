@@ -446,8 +446,9 @@ decisions = {
 
                     NOT = { has_character_flag = rite_1_success }
                 }
-
             }
+
+            in_command = no
         }
 
         effect = {
