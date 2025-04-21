@@ -871,7 +871,6 @@ character_event = {
             set_character_flag = horse_rite_3_success
         }
     }
-
 }
 
 # event 190: hidden event to setup caste trait change (adulthood)

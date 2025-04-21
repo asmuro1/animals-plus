@@ -2330,22 +2330,6 @@ character_event = {
     }
 }
 
-###removing winner trait at inheritance
-##removed as winner must be recognized all his life
-character_event = {
-    id = ani_plus.035
-
-    hide_window = yes
-    is_triggered_only = yes
-
-    trigger = {
-        government = Bear_feudal_gov
-    }
-
-    immediate = {
-        # remove_trait = succession_bear_heritage_winner
-    }
-}
 
 #tributarys notifications
 letter_event = {
@@ -3090,40 +3074,40 @@ character_event = {
     }
 
     mean_time_to_happen = {
-        years = 100
+        years = 50
 
         modifier = {
-            factor = 0.2
+            factor = 0.1
 
             num_of_courtiers = 50
         }
         modifier = {
-            factor = 0.2
+            factor = 0.1
 
             num_of_courtiers = 75
         }
         modifier = {
-            factor = 0.2
+            factor = 0.1
 
             num_of_courtiers = 100
         }
         modifier = {
-            factor = 0.2
+            factor = 0.1
 
             num_of_courtiers = 125
         }
         modifier = {
-            factor = 0.2
+            factor = 0.1
 
             num_of_courtiers = 150
         }
         modifier = {
-            factor = 0.2
+            factor = 0.1
 
             num_of_courtiers = 175
         }
         modifier = {
-            factor = 0.2
+            factor = 0.1
 
             num_of_courtiers = 200
         }
@@ -3194,7 +3178,7 @@ character_event = {
 }
 
 
-#event: starting war
+#event: starting war (has now an impact on only hedgehog government)
 character_event = {
     id = ani_plus.043
     is_triggered_only = yes

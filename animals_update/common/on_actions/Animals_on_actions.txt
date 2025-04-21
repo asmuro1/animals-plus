@@ -1,14 +1,14 @@
 on_startup = {
 	events = {
-		ani_plus.105 #updating duck dev maximum potential
+		ani_plus.105 # updating duck dev maximum potential
 	}
 }
 
 on_chronicle_start = {
 	events = {
-		ani_plus.003 #setting bear family bonuses at game start
-		ani_plus.157 #creating new cat societies's grandmaster (as on_society_failed_to_find_new_leader doesn't trigger on game launch).
-		ani_plus.197 #initializing caste trait for horse ruler (on game start)
+		ani_plus.003 # setting bear family bonuses at game start
+		ani_plus.157 # creating new cat societies's grandmaster (as on_society_failed_to_find_new_leader doesn't trigger on game launch).
+		ani_plus.197 # initializing caste trait for horse ruler (on game start)
 	}
 }
 
@@ -40,33 +40,33 @@ on_adulthood = {
 
 on_yearly_pulse = {
 	events = {
-		ani_plus.105 #updating duck dev maximum potential
-		ani_plus.144 #quest tombola for cat society
+		ani_plus.105 # updating duck dev maximum potential
+		ani_plus.144 # quest tombola for cat society
 	}
 }
 on_bi_yearly_pulse = {
 	events = {
-		ani_plus.136 #force cat ai to join one of its society
+		ani_plus.136 # force cat ai to join one of its society
 	}
 }
 
 on_death = {
 	events = {
-		ani_plus.003 #put up to date bears family number
+		ani_plus.003 # put up to date bears family number
 	}
 }
 
 on_character_convert_culture = {
 	events = {
-		ani_plus.004 #remove cultural modifier
-		ani_plus.005 #force animal portrait and add cultural modifier
-		ani_plus.192 #caste trait remove on culture change
+		ani_plus.004 # remove bear cultural modifier
+		ani_plus.005 # force animal portrait and add cultural modifier
+		ani_plus.192 # remove horse caste trait on culture change
 	}
 }
 
 on_war_started = {
 	events = {
-		ani_plus.043 #  hedgehog morale bonuses/maluses at war start
+		ani_plus.043 # hedgehog morale bonuses/maluses at war start
 	}
 }
 
@@ -78,17 +78,17 @@ on_war_ended_victory = {
 }
 on_war_ended_invalid = {
 	events = {
-		ani_plus.076 #hedgehogg - removing war modifiers
+		ani_plus.076 # hedgehogg - removing war modifiers
 	}
 }
 on_war_ended_whitepeace = {
 	events = {
-		ani_plus.076 #hedgehogg - removing war modifiers
+		ani_plus.076 # hedgehogg - removing war modifiers
 	}
 }
 on_war_ended_defeat = {
 	events = {
-		ani_plus.076 #hedgehogg - removing war modifiers
+		ani_plus.076 # hedgehogg - removing war modifiers
 		ani_plus.154 # cat - prosperity quest rank up
 	}
 }
@@ -108,7 +108,7 @@ on_loot_settlement = {
 
 on_siege_over_winner = {
 	events = {
-		ani_plus.031 # deletting big construction  (theodosian wall etc.)
+		ani_plus.031 # deleting big construction  (theodosian wall etc.)
 		ani_plus.068 # hedgehog province modifier
 		ani_plus.107 # reduce development level for duck
 	}
@@ -122,7 +122,7 @@ on_siege_over_winner = {
 
 on_holding_building_start = {
 	events = {
-		ani_plus.095 #updating panda's bureau building
+		ani_plus.095 # updating panda's bureau building
 	}
 }
 
@@ -133,21 +133,20 @@ on_new_holder = {
 }
 on_new_holder_inheritance = {
 	events = {
-		ani_plus.035 # tournament winner: loosing associated trait
 		ani_plus.116 # updating elephant law
-    ani_plus.164 # removing dog unity and council laws on holder change
+    	ani_plus.164 # removing dog unity and council laws on holder change
 	}
 }
 on_new_holder_usurpation = {
 	events = {
 		ani_plus.125 # cat holder change 
-    ani_plus.164 # removing dog unity and council laws on holder change
+    	ani_plus.164 # removing dog unity and council laws on holder change
 	}
 }
 
 on_society_failed_to_find_new_leader = {
 	events = {
-		ani_plus.132 #generating a new leader
+		ani_plus.132 # generating a new leader
 	}
 }
 

@@ -5,28 +5,9 @@
 ### modifier localisation
 
 animal_buildings_destruction;Human building destruction;Destruction de bâtiments humains;;;;;;;;;;;;;x
-colonization_lvl1;1st colonization step;1ère étape de colonisation;;;;;;;;;;;;;x
-colonization_lvl2;2nd colonization step;2è étape de colonisation;;;;;;;;;;;;;x
-colonization_lvl3;3rd colonization step;3è étape de colonisation;;;;;;;;;;;;;x
-colonization_lvl4;4th colonization step;4è étape de colonisation;;;;;;;;;;;;;x
-colonization_lvl5;5th colonization step;5è étape de colonisation;;;;;;;;;;;;;x
-colonization_lvl6;6th colonization step;6è étape de colonisation;;;;;;;;;;;;;x
-colonization_lvl7;7th colonization step;7è étape de colonisation;;;;;;;;;;;;;x
-colonization_lvl8;8th colonization step;8è étape de colonisation;;;;;;;;;;;;;x
-colonization_lvl9;9th colonization step;9è étape de colonisation;;;;;;;;;;;;;x
-colonization_lvl10;Last colonization step;Dernière étape de colonisation;;;;;;;;;;;;;x
-dragons_war;At war with the dragons;En guerre avec les dragons;;;;;;;;;;;;;x
-dragon_nest;Dragon nest;Nid de dragon;;;;;;;;;;;;;x
-dragon_teaching;Teaching the dragon;Enseignant du dragon;;;;;;;;;;;;;x
 dragon_looted_province_by_war;Plundered by dragons;Pillé par des dragons;;;;;;;;;;;;;x
 Dragon_loose_looting_war;Plundering war lost;Guerre de pillage perdu;;;;;;;;;;;;;x
-dragon_looted_cooldown;Secret modifier;Modificateur secret;;;;;;;;;;;;x
-
-
-###opinion modifier
-
-event_gift;Pacifist gift;Cadeau pacifique;;;;;;;;;;;;;x
-
+dragon_looted_cooldown;_;;;;;;;;;;;;;x
 
 
 #########BEAR update modifier

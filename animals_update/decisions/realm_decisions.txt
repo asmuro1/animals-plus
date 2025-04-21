@@ -1,5 +1,4 @@
 ##For overriding adopt feudal government for animals religion purpose l.2586
-##And adding convert to theocratic government
 
 decisions = {
 

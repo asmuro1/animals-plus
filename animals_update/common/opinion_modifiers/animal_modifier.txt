@@ -1,17 +1,3 @@
-
-
-
-#beta version modifier
-
-event_gift = {
-    opinion = 40
-    years = 2
-
-    inherit = yes
-    decay = yes
-    non_aggression_pact = yes
-}
-
 ###bear update modifier
 bear_succession_invitation = {
     opinion = 20
