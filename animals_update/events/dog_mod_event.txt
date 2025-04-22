@@ -390,7 +390,7 @@ character_event = {
         modifier = {
             factor = 0.167
 
-            has_law = dog_law_war_4
+            has_law = dog_law_politic_4
         }
         modifier = {
             factor = 0.33

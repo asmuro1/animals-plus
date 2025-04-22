@@ -1841,7 +1841,6 @@ province_event = {
                 remove_building = ca_ani_siege_1
                 remove_building = ca_ani_garrison_1
 
-                remove_building = ca_horse_stable_1
                 remove_building = ca_dragon_fortification_1
             }
         }
@@ -4021,9 +4020,19 @@ character_event = {
         location = {
             random_province_character = {
                 limit = { NOT = { culture_group = ROOT } }
-                preferred_limit = { has_landed_title = yes higher_tier_than = BARON }
-                preferred_limit = { has_landed_title = yes }
-                preferred_limit = { OR = { has_job_title = yes has_minor_title = yes}}
+                preferred_limit = {
+                    has_landed_title = yes
+                    higher_tier_than = BARON
+                }
+                preferred_limit = {
+                    has_landed_title = yes
+                }
+                preferred_limit = {
+                    OR = {
+                        has_job_title = yes
+                        has_minor_title = yes
+                    }
+                }
                 ROOT = {
                     liege = {
                         any_realm_character = {

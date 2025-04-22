@@ -436,7 +436,7 @@ character_event = {
     }
 
     immediate = {
-
+        save_event_target_as = rite_target
         if = {
             limit = {
                 ai = no
@@ -477,7 +477,7 @@ character_event = {
     desc = DESC_ani_184
 
     trigger = {
-        FROM = {
+        event_target:rite_target = {
             is_alive = yes
         }
     }
@@ -499,14 +499,14 @@ character_event = {
     is_triggered_only = yes
 
     trigger = {
-        FROMFROM = {
+        event_target:rite_target = {
             is_alive = yes
         }
     }
 
     desc = {
         trigger = {
-            FROMFROM = {
+            event_target:rite_target = {
                 NOT = {
                     has_character_flag = horse_rite_1_success
                 }
@@ -516,7 +516,7 @@ character_event = {
     }
     desc = {
         trigger = {
-            FROMFROM = {
+            event_target:rite_target = {
                 has_character_flag = horse_rite_1_success
             }
         }
@@ -526,7 +526,7 @@ character_event = {
     option = {
         name = OPTA_ani_185
         trigger = {
-            FROMFROM = {
+            event_target:rite_target = {
                 NOT = {
                     has_character_flag = horse_rite_1_success
                 }
@@ -541,12 +541,12 @@ character_event = {
     option = {
         name = OPTB_ani_185
         trigger = {
-            FROMFROM = {
+            event_target:rite_target = {
                 has_character_flag = horse_rite_1_success
             }
         }
 
-        FROMFROM = {
+        event_target:rite_target = {
             set_character_flag = rite_feodality_speciality
         }
 
@@ -563,12 +563,12 @@ character_event = {
     option = {
         name = OPTC_ani_185
         trigger = {
-            FROMFROM = {
+            event_target:rite_target = {
                 has_character_flag = horse_rite_1_success
             }
         }
 
-        FROMFROM = {
+        event_target:rite_target = {
             set_character_flag = rite_merchant_speciality
         }
 
@@ -600,13 +600,13 @@ character_event = {
     desc = DESC_ani_186
 
     trigger = {
-        FROMFROMFROM = {
+        event_target:rite_target = {
             is_alive = yes
         }
     }
 
     immediate = {
-        FROMFROMFROM = {
+        event_target:rite_target = {
             random = {
                 chance = 50
                 set_character_flag = horse_tmp_success
@@ -617,7 +617,7 @@ character_event = {
     option = {
         name = OPT_ani_186
 
-        FROMFROMFROM = {
+        event_target:rite_target = {
             set_character_flag = horse_rite_2_success
         
             if = {
@@ -672,6 +672,8 @@ character_event = {
     }
 
     immediate = {
+        save_event_target_as = rite_target
+
         if = {
             limit = {
                 ai = no
@@ -707,7 +709,7 @@ character_event = {
     is_triggered_only = yes
 
     trigger = {
-        FROM = {
+        event_target:rite_target = {
             is_alive = yes
         }
     }
@@ -717,7 +719,7 @@ character_event = {
 
     desc = { # default desc without any rite done
         trigger = {
-            FROM = {
+            event_target:rite_target = {
                 horse_has_done_no_rite_trigger = yes
             }
         }
@@ -726,7 +728,7 @@ character_event = {
     }
     desc = { # did only one rite
         trigger = {
-            FROM = {
+            event_target:rite_target = {
                 horse_has_exatly_done_1_rite_trigger = yes
             }
         }
@@ -735,7 +737,7 @@ character_event = {
     }
     desc = { # default desc with all previous rite done
         trigger = {
-            FROM = {
+            event_target:rite_target = {
                 horse_has_exatly_done_2_rite_trigger = yes
             }
         }
@@ -746,7 +748,7 @@ character_event = {
     option = { # option if no specialization done
         trigger = {
             NOT = {
-                FROM = {
+                event_target:rite_target = {
                     horse_has_exatly_done_1_rite_trigger = yes
                 }
             }
@@ -754,7 +756,7 @@ character_event = {
 
         name = {
             trigger = {
-                FROM = {
+                event_target:rite_target = {
                     horse_has_done_no_rite_trigger = yes
                 }
             }
@@ -763,7 +765,7 @@ character_event = {
 
         name = {
             trigger = {
-                FROM = {
+                event_target:rite_target = {
                     horse_has_exatly_done_2_rite_trigger = yes
                 }
             }
@@ -777,12 +779,12 @@ character_event = {
 
     option = { # merchant specialization
         trigger = {
-            FROM = {
+            event_target:rite_target = {
                 horse_has_exatly_done_1_rite_trigger = yes
             }
         }
         name = OPTC_ani_188
-        FROM = {
+        event_target:rite_target = {
             set_character_flag = rite_merchant_speciality
         }
 
@@ -798,13 +800,13 @@ character_event = {
     }
     option = { # feodal specialization
         trigger = {
-            FROM = {
+            event_target:rite_target = {
                 horse_has_exatly_done_1_rite_trigger = yes
             }
         }
         name = OPTD_ani_188
 
-        FROM = {
+        event_target:rite_target = {
             set_character_flag = rite_feodality_speciality
         }
 
@@ -831,7 +833,7 @@ character_event = {
     is_triggered_only = yes
 
     trigger = {
-        FROMFROM = {
+        event_target:rite_target = {
             is_alive = yes
         }
     }
@@ -841,7 +843,7 @@ character_event = {
 
     desc = { # no rite done before
         trigger = {
-            FROMFROM = {
+            event_target:rite_target = {
                 horse_has_done_no_rite_trigger = yes
             }
         }
@@ -857,7 +859,7 @@ character_event = {
     }
     desc = { # all previous rite done
         trigger = {
-            FROMFROM = {
+            event_target:rite_target = {
                 horse_has_exatly_done_2_rite_trigger = yes
             }
         }
@@ -867,7 +869,7 @@ character_event = {
     option = {
         name = OPT_ani_189
 
-        FROMFROM = {
+        event_target:rite_target = {
             set_character_flag = horse_rite_3_success
         }
     }
