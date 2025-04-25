@@ -854,6 +854,60 @@ dragon_group = {
 		allow_looting = no
 	}
 
+	white_dragon = {
+		graphical_cultures = { dragongfx }
+
+		color = { 0.9 0.9 0.9 }
+
+		male_names = {
+			Fafnir Midgard Apopis Ladon Colchidei Piton Vouivre Drac Gorynych Bantu Mannu Khozen Morzas Xemcel Medeus Morva Nils Bahamut Leviathan Ryujin Zilant Typhos Puff Nyx
+			Teethless Smokey Deathwing Quicksilver "Grey Ghost" Seasmoke Pyre Scorch Dragon Wyrm Lindwurm Dovah Vlad Rattleskin Ash Benedict Rakshasha Draco Dracul
+			Drago Fafner Errol Glaedr Glaurung Icefyre Falkor Nagini Rathalos Piff Fred Voidaltarah Ddraig Drdrake Morttalis Barney
+		}
+		female_names = {
+			Tiomat Tintaglia Katla Drakaina Gegheiss Jesasdess Semoth Heirel Taynnelth Naga Tiki Nagi Myrrh Ninian Nah Nyx Teethless Smokey Bahamut Deathwing Quicksilver
+			"Grey Ghost" Seasmoke Puff Pyre Scorch Dragon Wyrm Lindwurm Dovah Stella Rakshesha Norberta Paksenarrion Saphira Aithusa Cordelia Rathian Charna Xanadu
+		}
+
+		prefix = no # The patronym is added as a suffix
+		parent = { dragon_culture }
+
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
+		pat_grf_name_chance = 50
+		mat_grf_name_chance = 0
+		father_name_chance = 0
+
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
+		pat_grm_name_chance = 10
+		mat_grm_name_chance = 50
+		mother_name_chance = 0
+
+		founder_named_dynasties = yes
+		dynasty_title_names = yes
+
+		used_for_random = no
+		allow_in_ruler_designer = no
+
+		modifier = default_culture_modifier
+
+		character_modifier = {
+			fertility = -50
+			health = 10
+
+			learning = 3
+			combat_rating = 100
+
+			vassal_opinion = -20
+			knights_morale = 2
+			knights_defensive = 3
+			knights_offensive = 4
+		}
+
+		allow_looting = yes
+		seafarer = yes
+		feminist = yes
+	}
+
 	black_dragon = {
 		graphical_cultures = { dragongfx }
 
@@ -900,7 +954,169 @@ dragon_group = {
 			vassal_opinion = -20
 			knights_morale = 2
 			knights_defensive = 3
-			knights__offensive = 4
+			knights_offensive = 4
+		}
+
+		allow_looting = yes
+		seafarer = yes
+		feminist = yes
+	}
+
+	blue_dragon = {
+		graphical_cultures = { dragongfx }
+
+		color = { 0.5 0.05 0.7 }
+
+		male_names = {
+			Fafnir Midgard Apopis Ladon Colchidei Piton Vouivre Drac Gorynych Bantu Mannu Khozen Morzas Xemcel Medeus Morva Nils Bahamut Leviathan Ryujin Zilant Typhos Puff Nyx
+			Teethless Smokey Deathwing Quicksilver "Grey Ghost" Seasmoke Pyre Scorch Dragon Wyrm Lindwurm Dovah Vlad Rattleskin Ash Benedict Rakshasha Draco Dracul
+			Drago Fafner Errol Glaedr Glaurung Icefyre Falkor Nagini Rathalos Piff Fred Voidaltarah Ddraig Drdrake Morttalis Barney
+		}
+		female_names = {
+			Tiomat Tintaglia Katla Drakaina Gegheiss Jesasdess Semoth Heirel Taynnelth Naga Tiki Nagi Myrrh Ninian Nah Nyx Teethless Smokey Bahamut Deathwing Quicksilver
+			"Grey Ghost" Seasmoke Puff Pyre Scorch Dragon Wyrm Lindwurm Dovah Stella Rakshesha Norberta Paksenarrion Saphira Aithusa Cordelia Rathian Charna Xanadu
+		}
+
+		prefix = no # The patronym is added as a suffix
+		parent = { dragon_culture }
+
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
+		pat_grf_name_chance = 50
+		mat_grf_name_chance = 0
+		father_name_chance = 0
+
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
+		pat_grm_name_chance = 10
+		mat_grm_name_chance = 50
+		mother_name_chance = 0
+
+		founder_named_dynasties = yes
+		dynasty_title_names = yes
+
+		used_for_random = no
+		allow_in_ruler_designer = no
+
+		modifier = default_culture_modifier
+
+		character_modifier = {
+			fertility = -50
+			health = 10
+
+			diplomacy = 3
+			combat_rating = 100
+
+			vassal_opinion = -20
+			knights_morale = 2
+			knights_defensive = 3
+			knights_offensive = 4
+		}
+
+		allow_looting = yes
+		seafarer = yes
+		feminist = yes
+	}
+
+	red_dragon = {
+		graphical_cultures = { dragongfx }
+
+		color = { 0.1 0.1 0.1 }
+
+		male_names = {
+			Fafnir Midgard Apopis Ladon Colchidei Piton Vouivre Drac Gorynych Bantu Mannu Khozen Morzas Xemcel Medeus Morva Nils Bahamut Leviathan Ryujin Zilant Typhos Puff Nyx
+			Teethless Smokey Deathwing Quicksilver "Grey Ghost" Seasmoke Pyre Scorch Dragon Wyrm Lindwurm Dovah Vlad Rattleskin Ash Benedict Rakshasha Draco Dracul
+			Drago Fafner Errol Glaedr Glaurung Icefyre Falkor Nagini Rathalos Piff Fred Voidaltarah Ddraig Drdrake Morttalis Barney
+		}
+		female_names = {
+			Tiomat Tintaglia Katla Drakaina Gegheiss Jesasdess Semoth Heirel Taynnelth Naga Tiki Nagi Myrrh Ninian Nah Nyx Teethless Smokey Bahamut Deathwing Quicksilver
+			"Grey Ghost" Seasmoke Puff Pyre Scorch Dragon Wyrm Lindwurm Dovah Stella Rakshesha Norberta Paksenarrion Saphira Aithusa Cordelia Rathian Charna Xanadu
+		}
+
+		prefix = no # The patronym is added as a suffix
+		parent = { dragon_culture }
+
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
+		pat_grf_name_chance = 50
+		mat_grf_name_chance = 0
+		father_name_chance = 0
+
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
+		pat_grm_name_chance = 10
+		mat_grm_name_chance = 50
+		mother_name_chance = 0
+
+		founder_named_dynasties = yes
+		dynasty_title_names = yes
+
+		used_for_random = no
+		allow_in_ruler_designer = no
+
+		modifier = default_culture_modifier
+
+		character_modifier = {
+			fertility = -50
+			health = 10
+
+			martial = 3
+			combat_rating = 100
+
+			vassal_opinion = -20
+			knights_morale = 2
+			knights_defensive = 3
+			knights_offensive = 4
+		}
+
+		allow_looting = yes
+		seafarer = yes
+		feminist = yes
+	}
+
+	yellow_dragon = {
+		graphical_cultures = { dragongfx }
+
+		color = { 0.1 0.1 0.1 }
+
+		male_names = {
+			Fafnir Midgard Apopis Ladon Colchidei Piton Vouivre Drac Gorynych Bantu Mannu Khozen Morzas Xemcel Medeus Morva Nils Bahamut Leviathan Ryujin Zilant Typhos Puff Nyx
+			Teethless Smokey Deathwing Quicksilver "Grey Ghost" Seasmoke Pyre Scorch Dragon Wyrm Lindwurm Dovah Vlad Rattleskin Ash Benedict Rakshasha Draco Dracul
+			Drago Fafner Errol Glaedr Glaurung Icefyre Falkor Nagini Rathalos Piff Fred Voidaltarah Ddraig Drdrake Morttalis Barney
+		}
+		female_names = {
+			Tiomat Tintaglia Katla Drakaina Gegheiss Jesasdess Semoth Heirel Taynnelth Naga Tiki Nagi Myrrh Ninian Nah Nyx Teethless Smokey Bahamut Deathwing Quicksilver
+			"Grey Ghost" Seasmoke Puff Pyre Scorch Dragon Wyrm Lindwurm Dovah Stella Rakshesha Norberta Paksenarrion Saphira Aithusa Cordelia Rathian Charna Xanadu
+		}
+
+		prefix = no # The patronym is added as a suffix
+		parent = { dragon_culture }
+
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
+		pat_grf_name_chance = 50
+		mat_grf_name_chance = 0
+		father_name_chance = 0
+
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
+		pat_grm_name_chance = 10
+		mat_grm_name_chance = 50
+		mother_name_chance = 0
+
+		founder_named_dynasties = yes
+		dynasty_title_names = yes
+
+		used_for_random = no
+		allow_in_ruler_designer = no
+
+		modifier = default_culture_modifier
+
+		character_modifier = {
+			fertility = -50
+			health = 10
+
+			stewardship = 3
+			combat_rating = 100
+
+			vassal_opinion = -20
+			knights_morale = 2
+			knights_defensive = 3
+			knights_offensive = 4
 		}
 
 		allow_looting = yes
