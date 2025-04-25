@@ -207,8 +207,8 @@ hedgehog_group = {
 
 		character_modifier = {
 			defensive_plot_power_modifier = 0.2 # Hard to get past the quills
-			siege_defence = 0.05 				#defensive culture_group ##mod
-			health = -1.0						#hedgehogg dosn't live long
+			siege_defence = 0.05 				# defensive culture_group ##mod
+			health = -1.0						# hedgehogg dosn't live long
 		}
 
 		allow_looting = yes
