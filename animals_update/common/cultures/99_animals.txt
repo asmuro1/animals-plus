@@ -58,7 +58,7 @@ bear_group = {
 		color = { 0.15 0.15 0.3 }
 
 		male_names = {
-			Bjï¿½rn Bjï¿½rn Torbjï¿½rn Nanuk Ursus Isbjï¿½rn Grrrowr Grrgrrr Rawr Bamse Smokey Barnie "Sir Bearington" Bearnabus Bernard Asabjï¿½rn Styrbjï¿½rn Esbjï¿½rn Bï¿½rje Bjï¿½rne Baloo
+			Björn Bjørn Torbjørn Nanuk Ursus Isbjörn Grrrowr Grrgrrr Rawr Bamse Smokey Barnie "Sir Bearington" Bearnabus Bernard Asabjörn Styrbjörn Esbjörn Börje Björne Baloo
 			Boo-Boo Fluffy Grizzly Otso Misha Trinket Notabear Blizzard Secret Sugar Kumamon Bobo Disco Cuddles Rupert Wojtek Uszatek Bearnard
 			Bjarne John Bearclaw Koda Gurr Nalle
 		}
@@ -95,7 +95,7 @@ bear_group = {
 		color = { 0.15 0.15 0.2 }
 
 		male_names = {
-			Bjï¿½rn Bjï¿½rn Torbjï¿½rn Nanuk Ursus Isbjï¿½rn Grrrowr Grrgrrr Rawr Bamse Smokey Barnie "Sir Bearington" Bearnabus Bernard Asabjï¿½rn Styrbjï¿½rn Esbjï¿½rn Bï¿½rje Bjï¿½rne Baloo
+			Björn Bjørn Torbjørn Nanuk Ursus Isbjörn Grrrowr Grrgrrr Rawr Bamse Smokey Barnie "Sir Bearington" Bearnabus Bernard Asabjörn Styrbjörn Esbjörn Börje Björne Baloo
 			Boo-Boo Fluffy Grizzly Otso Misha Trinket Notabear Blizzard Secret Sugar Kumamon Bobo Disco Cuddles Rupert Wojtek Uszatek Bearnard
 			Bjarne John Bearclaw Koda Gurr Nalle
 		}
@@ -132,7 +132,7 @@ bear_group = {
 		color = { 0.1 0.1 0.1 }
 
 		male_names = {
-			Bjï¿½rn Bjï¿½rn Torbjï¿½rn Nanuk Ursus Isbjï¿½rn Grrrowr Grrgrrr Rawr Bamse Smokey Barnie "Sir Bearington" Bearnabus Bernard Asabjï¿½rn Styrbjï¿½rn Esbjï¿½rn Bï¿½rje Bjï¿½rne Baloo
+			Björn Bjørn Torbjørn Nanuk Ursus Isbjörn Grrrowr Grrgrrr Rawr Bamse Smokey Barnie "Sir Bearington" Bearnabus Bernard Asabjörn Styrbjörn Esbjörn Börje Björne Baloo
 			Boo-Boo Fluffy Grizzly Otso Misha Trinket Notabear Blizzard Secret Sugar Kumamon Bobo Disco Cuddles Rupert Wojtek Uszatek Bearnard
 			Bjarne John Bearclaw Koda Gurr Nalle
 		}
@@ -181,7 +181,7 @@ hedgehog_group = {
 
 		male_names = {
 			Hughues Echinus Erinus Kidnae Micro Mesyo Aurion Sclaterion Rix Spike Pokey Quillem Quilliam Quillington Sanic Knucklys Silver Lancelot Galahad Cyrus Pincushion Hedgehog
-			Grumpy Crisp Pinecone Sam Wiggles Stig Xerxes "Mr. Tiggy-Winkle" Nails Thorn Ringo Groogy Punk Hedgepig August Blaine Saul
+			Grumpy Crisp Pinecone Sam Wiggles Stig Xerxes "Mr. Tiggy-Winkle" Nails Thorn Ringo Groogy Punk Hedgepig August Blaine Saul 
 		}
 		female_names = {
 			Erina Ekidney Leerix Algira Hemy Collie Daura Para Ventria Shaquilla Prickquille Splinthia Nimue Amy Nix Spike Pincushion Hedgehog Grumpy Pokey Crisp Pinecone Sam Wiggles
@@ -222,7 +222,7 @@ hedgehog_group = {
 
 		male_names = {
 			Hughues Echinus Erinus Kidnae Micro Mesyo Aurion Sclaterion Rix Spike Pokey Quillem Quilliam Quillington Sanic Knucklys Silver Lancelot Galahad Cyrus Pincushion Hedgehog
-			Grumpy Crisp Pinecone Sam Wiggles Stig Xerxes "Mr. Tiggy-Winkle" Nails Thorn Ringo Groogy Punk Hedgepig August Blaine Saul
+			Grumpy Crisp Pinecone Sam Wiggles Stig Xerxes "Mr. Tiggy-Winkle" Nails Thorn Ringo Groogy Punk Hedgepig August Blaine Saul 
 		}
 		female_names = {
 			Erina Ekidney Leerix Algira Hemy Collie Daura Para Ventria Shaquilla Prickquille Splinthia Nimue Amy Nix Spike Pincushion Hedgehog Grumpy Pokey Crisp Pinecone Sam Wiggles
@@ -363,11 +363,11 @@ duck_group = {
 
 		male_names = {
 			Daffy Quacker Huck Waddles Donald Dominic Whitewing Duckus Quackmire Eggbert Howard Scrooge Winghelm Ludwing Gladstone Cake Blunder Duck Quackers Pippi Face Grape Anaheim
-			Quackel Beaky Nottington Drake Mallard Hans Scrooge Darkwing Huey Dewey Louie Bolivar Mï¿½rten Maarten Cornelius Havbard Knase Kalle Arne Dylan Emelio Greg Paul
+			Quackel Beaky Nottington Drake Mallard Hans Scrooge Darkwing Huey Dewey Louie Bolivar Mårten Maarten Cornelius Havbard Knase Kalle Arne Dylan Emelio Greg Paul
 		}
 		female_names = {
 			Daisy Irynn Neilly Aves Winghelmina Beaktrice Molly Webbygail Bentina Goldie Jemima Cake Blunder Duck Quackers Pippi Face Grape Anaheim Feathers Kajsa Donna Hortensia Chickadee
-			Tyra Gullan Oona Umpa Gittan Lola Petunia Doris Matilda Lucinda Dumbella Selma Dora Fanny Kicki Titti Anki Gandra Gï¿½salin Gosalyn Ammonia Zeena
+			Tyra Gullan Oona Umpa Gittan Lola Petunia Doris Matilda Lucinda Dumbella Selma Dora Fanny Kicki Titti Anki Gandra Gåsalin Gosalyn Ammonia Zeena
 		}
 
 		prefix = no # The patronym is added as a suffix
@@ -508,14 +508,15 @@ cat_group = {
 			Mittens Fluffy Tom Smudge Shadow Zimm Samm Misstoffelees Deuteronomy Pouncival Quaxo Mungojerrie Mozart Simba Tiger Socrates Salem Toulouse Berlioz Thomas Birk Paws
 			"Basileus Harlocke Spoops" Bazcat Furball Angry Snuggles Lucky Buttons Snowbell Cuddles Crookshanks "Mr. Bigglesworth" Spot Whiskers Lucky Juni Maow Cat Coins Panther
 			Frumpkin Chairman Meow Floof Ninja Orion Felix Tim Rowl Lister Crockett Zebedeus Syd Bear Ripper Maurice Jake Sylvester Big Talking Tom Atlas Serafettin Simon Santa Paws
-			M''aiq Vincent Hades Fï¿½a Tyki Lavi Pan Tjockisen Lotus Morris Shadow Oscar Eskil Shadow Tommiecat Bosse Lasse Basil Zylyn Snooka Maat Keso
+			M'aiq Vincent Hades Fëa Tyki Lavi Pan Tjockisen Lotus Morris Shadow Oscar Eskil Shadow Tommiecat Bosse Lasse Basil Zylyn Snooka Maat Keso
 			Lord-Admiral-Edward-Hawke-First-Baron-Hawke-First-Lord-of-the-Admiralty Nimitz Katz Milo
+
 		}
 		female_names = {
 			Missy Kitty Mittens Ginger Princess Bella Sigma Mysan Missan Victoria Rumpelteazer Grizabella Demeter Bombalurina Sooty Suzie Syllabub Luna Midnight Nala Tussan Selma Salem
 			Duchess Marie Signe Paws "Basileus Harlocke Spoops" Bazcat Furball Angry Snuggles Lucky Buttons Snowbell Cuddles Crookshanks "Mr. Bigglesworth" Spot Whiskers Lucky Juni Maow Cat
 			Coins Panther Frumpkin Chairman Meow Floof Poppy Yuki Mimmy Stina Witch Caline Doortje Cwtch Tina River Cleo Willow Chloe Bastet Mafdet Aeris Tonks Lisa Myran Lillkissen Daisy
-			Sekhmet Nova Birdie Mynta Molly Tjoppan Nyanners Suki Isis Masika Caliope Sor-Juana-Inï¿½s-de-la-Cruz Mitzi Mischief Smilla Aggi Keso Milla
+			Sekhmet Nova Birdie Mynta Molly Tjoppan Nyanners Suki Isis Masika Caliope Sor-Juana-Inés-de-la-Cruz Mitzi Mischief Smilla Aggi Keso Milla
 		}
 
 		prefix = no # The patronym is added as a suffix
@@ -552,14 +553,15 @@ cat_group = {
 			Mittens Fluffy Tom Smudge Shadow Zimm Samm Misstoffelees Deuteronomy Pouncival Quaxo Mungojerrie Mozart Simba Tiger Socrates Salem Toulouse Berlioz Thomas Birk Paws
 			"Basileus Harlocke Spoops" Bazcat Furball Angry Snuggles Lucky Buttons Snowbell Cuddles Crookshanks "Mr. Bigglesworth" Spot Whiskers Lucky Juni Maow Cat Coins Panther
 			Frumpkin Chairman Meow Floof Ninja Orion Felix Tim Rowl Lister Crockett Zebedeus Syd Bear Ripper Maurice Jake Sylvester Big Talking Tom Atlas Serafettin Simon Santa Paws
-			M''aiq Vincent Hades Fï¿½a Tyki Lavi Pan Tjockisen Lotus Morris Shadow Oscar Eskil Shadow Tommiecat Bosse Lasse Basil Zylyn Snooka Maat Keso
+			M'aiq Vincent Hades Fëa Tyki Lavi Pan Tjockisen Lotus Morris Shadow Oscar Eskil Shadow Tommiecat Bosse Lasse Basil Zylyn Snooka Maat Keso
 			Lord-Admiral-Edward-Hawke-First-Baron-Hawke-First-Lord-of-the-Admiralty Nimitz Katz Milo
+
 		}
 		female_names = {
 			Missy Kitty Mittens Ginger Princess Bella Sigma Mysan Missan Victoria Rumpelteazer Grizabella Demeter Bombalurina Sooty Suzie Syllabub Luna Midnight Nala Tussan Selma Salem
 			Duchess Marie Signe Paws "Basileus Harlocke Spoops" Bazcat Furball Angry Snuggles Lucky Buttons Snowbell Cuddles Crookshanks "Mr. Bigglesworth" Spot Whiskers Lucky Juni Maow Cat
 			Coins Panther Frumpkin Chairman Meow Floof Poppy Yuki Mimmy Stina Witch Caline Doortje Cwtch Tina River Cleo Willow Chloe Bastet Mafdet Aeris Tonks Lisa Myran Lillkissen Daisy
-			Sekhmet Nova Birdie Mynta Molly Tjoppan Nyanners Suki Isis Masika Caliope Sor-Juana-Inï¿½s-de-la-Cruz Mitzi Mischief Smilla Aggi Keso Milla
+			Sekhmet Nova Birdie Mynta Molly Tjoppan Nyanners Suki Isis Masika Caliope Sor-Juana-Inés-de-la-Cruz Mitzi Mischief Smilla Aggi Keso Milla
 		}
 
 		prefix = no # The patronym is added as a suffix
@@ -596,14 +598,15 @@ cat_group = {
 			Mittens Fluffy Tom Smudge Shadow Zimm Samm Misstoffelees Deuteronomy Pouncival Quaxo Mungojerrie Mozart Simba Tiger Socrates Salem Toulouse Berlioz Thomas Birk Paws
 			"Basileus Harlocke Spoops" Bazcat Furball Angry Snuggles Lucky Buttons Snowbell Cuddles Crookshanks "Mr. Bigglesworth" Spot Whiskers Lucky Juni Maow Cat Coins Panther
 			Frumpkin Chairman Meow Floof Ninja Orion Felix Tim Rowl Lister Crockett Zebedeus Syd Bear Ripper Maurice Jake Sylvester Big Talking Tom Atlas Serafettin Simon Santa Paws
-			M''aiq Vincent Hades Fï¿½a Tyki Lavi Pan Tjockisen Lotus Morris Shadow Oscar Eskil Shadow Tommiecat Bosse Lasse Basil Zylyn Snooka Maat Keso
+			M'aiq Vincent Hades Fëa Tyki Lavi Pan Tjockisen Lotus Morris Shadow Oscar Eskil Shadow Tommiecat Bosse Lasse Basil Zylyn Snooka Maat Keso
 			Lord-Admiral-Edward-Hawke-First-Baron-Hawke-First-Lord-of-the-Admiralty Nimitz Katz Milo
+
 		}
 		female_names = {
 			Missy Kitty Mittens Ginger Princess Bella Sigma Mysan Missan Victoria Rumpelteazer Grizabella Demeter Bombalurina Sooty Suzie Syllabub Luna Midnight Nala Tussan Selma Salem
 			Duchess Marie Signe Paws "Basileus Harlocke Spoops" Bazcat Furball Angry Snuggles Lucky Buttons Snowbell Cuddles Crookshanks "Mr. Bigglesworth" Spot Whiskers Lucky Juni Maow Cat
 			Coins Panther Frumpkin Chairman Meow Floof Poppy Yuki Mimmy Stina Witch Caline Doortje Cwtch Tina River Cleo Willow Chloe Bastet Mafdet Aeris Tonks Lisa Myran Lillkissen Daisy
-			Sekhmet Nova Birdie Mynta Molly Tjoppan Nyanners Suki Isis Masika Caliope Sor-Juana-Inï¿½s-de-la-Cruz Mitzi Mischief Smilla Aggi Keso Milla
+			Sekhmet Nova Birdie Mynta Molly Tjoppan Nyanners Suki Isis Masika Caliope Sor-Juana-Inés-de-la-Cruz Mitzi Mischief Smilla Aggi Keso Milla
 		}
 
 		prefix = no # The patronym is added as a suffix
@@ -749,14 +752,14 @@ horse_group = {
 		male_names = {
 			Glitterhoof Chetak Bucephalus Traveller Marengo Palomo Cincinnati Comanche "Clever Hans" Veillantif Incitatus Rusty Brunte "Lilla Gubben" Lukas Beauty Lightning Flash Alfonso Artax
 			Blackjack Boxer Ferd Furia Flame "The Houyhnhnm" Hwin Merrylegs Napoleon Pylon Rusher Arod Asfaloth "Bill the Pony" Brego Bumpkin Fatty Lumpkin Firefoot Hasufel Lightfoot Nahar
-			Roheryn Sharp-ears Snowmane Stybba Swish-tail Windfola Wise-nose Rainbow Horse Helhest Hippo Trojan Bï¿½ckahï¿½st Red Victory Nightingale Streiff Martinique Sleipnir Bojack Glue-Boy Guido
-			Lukas Sture Jim Grolle Dasher Bayard Brag Neck Nï¿½cken Copiad Jï¿½rvsï¿½faks Golden Hornline Verner Brego Bucephalus Domino Monty Bolt Oakley Dale Rio Vanderbilt Newton Trigger Sullivan
+			Roheryn Sharp-ears Snowmane Stybba Swish-tail Windfola Wise-nose Rainbow Horse Helhest Hippo Trojan Bäckahäst Red Victory Nightingale Streiff Martinique Sleipnir Bojack Glue-Boy Guido 
+			Lukas Sture Jim Grolle Dasher Bayard Brag Neck Näcken Copiad Järvsöfaks Golden Hornline Verner Brego Bucephalus Domino Monty Bolt Oakley Dale Rio Vanderbilt Newton Trigger Sullivan
 			Barnaby Terry Hunter Tyke
 		}
 		female_names = {
 			Glitterhoof Kasztanka "Sergeant Reckless" Buttermilk "Lady Wonder" Silhouette Beauty Lightning Flash Alfonso Artax Blackjack Boxer Ferd Furia Flame "The Houyhnhnm" Hwin Merrylegs
 			Napoleon Pylon Rusher Arod Asfaloth "Bill the Pony" Brego Bumpkin Fatty Lumpkin Firefoot Hasufel Lightfoot Nahar Roheryn Sharp-ears Snowmane Stybba Swish-tail Windfola Wise-nose
-			Rainbow Horse Helhest Hippo Trojan Bï¿½ckahï¿½st Red Victory Nightingale Tingeling Sallie Pumpkin Spice Chollima Gullfaxi Kara Pearl Magic Zarona Epona Scout Bonney Paris Charlotte
+			Rainbow Horse Helhest Hippo Trojan Bäckahäst Red Victory Nightingale Tingeling Sallie Pumpkin Spice Chollima Gullfaxi Kara Pearl Magic Zarona Epona Scout Bonney Paris Charlotte
 			Mona Heidi Maggie
 		}
 
@@ -789,8 +792,6 @@ horse_group = {
 	}
 }
 
-
-####non modified culture yet
 dragon_group = {
 	graphical_cultures = { dragongfx }
 	alternate_start = {
