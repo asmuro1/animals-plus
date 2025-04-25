@@ -266,9 +266,44 @@ character_event = {
         }
         else_if = {
             limit = {
-                culture = dragon_culture
+                culture_group = dragon_group
             }
-            set_graphical_culture = dragon_culture
+            if = {
+                limit = {
+                    culture = dragon_culture
+                }
+                set_graphical_culture = dragon_culture
+            }
+            else_if = {
+                limit = {
+                    culture = white_dragon
+                }
+                set_graphical_culture = white_dragon
+            }
+            else_if = {
+                limit = {
+                    culture = black_dragon
+                }
+                set_graphical_culture = black_dragon
+            }
+            else_if = {
+                limit = {
+                    culture = red_dragon
+                }
+                set_graphical_culture = red_dragon
+            }
+            else_if = {
+                limit = {
+                    culture = blue_dragon
+                }
+                set_graphical_culture = blue_dragon
+            }
+            else_if = {
+                limit = {
+                    culture = yellow_dragon
+                }
+                set_graphical_culture = yellow_dragon
+            }
         }
         else_if = {
             limit = {
