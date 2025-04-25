@@ -795,7 +795,6 @@ horse_group = {
 dragon_group = {
 	graphical_cultures = { dragongfx }
 	alternate_start = {
-		always = no
 		OR = {
 			has_alternate_start_parameter = { key = special_culture value = animal_kingdoms }
 			has_alternate_start_parameter = { key = special_culture value = animal_world }
@@ -804,6 +803,10 @@ dragon_group = {
 
 	dragon_culture = {
 		graphical_cultures = { dragongfx }
+
+		alternate_start = {
+			always = no
+		}
 
 		color = { 0.6 0.0 0.0 }
 
@@ -835,14 +838,20 @@ dragon_group = {
 		modifier = default_culture_modifier
 
 		character_modifier = {
-			health = 1.5
-			stewardship = 2
-			combat_rating = 15
-			martial = -2
-			general_opinion = -10
+			fertility = -50
+
+			stewardship = -20
+			diplomacy = -20
+			learning = -20
+			intrigue = -20
+			martial = -20
+			combat_rating = -100
+
+			general_opinion = -25
+			dynasty_opinion = 50
 		}
 
-		allow_looting = yes
+		allow_looting = no
 	}
 }
 
