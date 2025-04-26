@@ -1,0 +1,24 @@
+# privince scope
+is_black_dragon_province_trigger = {
+    terrain = marsh
+}
+
+# privince scope
+is_white_dragon_province_trigger = {
+    terrain = arctic
+}
+
+# privince scope
+is_red_dragon_province_trigger = {
+    terrain = farmlands
+}
+
+# privince scope
+is_blue_dragon_province_trigger = {
+    port = yes
+}
+
+# privince scope
+is_yellow_dragon_province_trigger = {
+    terrain = desert
+}

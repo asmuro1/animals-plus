@@ -64,3 +64,28 @@ character_event = {
         clr_character_flag = ignore_next_dragon_conv
     }
 }
+
+
+# event 200: settings dragon holy studies
+character_event = {
+    id = ani_plus.200
+
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        NOT = { has_global_flag = dragon_holy_sites_set }
+    }
+
+    immediate = {
+        set_black_dragon_holy_site_effect = yes
+        set_white_dragon_holy_site_effect = yes
+        set_red_dragon_holy_site_effect = yes
+        set_blue_dragon_holy_site_effect = yes
+        set_yellow_dragon_holy_site_effect = yes
+    }
+
+    after = {
+        set_global_flag = dragon_holy_sites_set
+    }
+}

@@ -55,4 +55,9 @@ HORSES:
   c_moskva                    : province cultural conversion
   c_boqtybay                  : bonus horse rite
   c_galaz                     : horse royal gard quantity bonus
-   
+  
+
+DRAGONS:
+  do not have c_dyrrachion as a holy site.
+  holy site are selectionned randomly at the start of a game
+  Each one increase the education efficiency from dragon of its culture 

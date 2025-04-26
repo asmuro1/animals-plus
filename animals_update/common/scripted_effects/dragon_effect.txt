@@ -1,0 +1,60 @@
+
+set_black_dragon_holy_site_effect = {
+    random_province = {
+        limit = {
+            is_black_dragon_province_trigger = yes
+        }
+        county = {
+            set_holy_site = Dragon_religion 
+        }
+        set_province_flag = dragon_black_holy_site
+    }
+}
+
+set_white_dragon_holy_site_effect = {
+    random_province = {
+        limit = {
+            is_white_dragon_province_trigger = yes
+        }
+        county = {
+            set_holy_site = Dragon_religion 
+        }
+        set_province_flag = dragon_white_holy_site
+    }
+}
+
+set_red_dragon_holy_site_effect = {
+    random_province = {
+        limit = {
+            is_red_dragon_province_trigger = yes
+        }
+        county = {
+            set_holy_site = Dragon_religion 
+        }
+        set_province_flag = dragon_red_holy_site
+    }
+}
+
+set_blue_dragon_holy_site_effect = {
+    random_province = {
+        limit = {
+            is_blue_dragon_province_trigger = yes
+        }
+        county = {
+            set_holy_site = Dragon_religion 
+        }
+        set_province_flag = dragon_blue_holy_site
+    }
+}
+
+set_yellow_dragon_holy_site_effect = {
+    random_province = {
+        limit = {
+            is_yellow_dragon_province_trigger = yes
+        }
+        county = {
+            set_holy_site = Dragon_religion 
+        }
+        set_province_flag = dragon_yellow_holy_site
+    }
+}
