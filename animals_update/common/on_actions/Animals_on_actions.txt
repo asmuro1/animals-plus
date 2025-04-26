@@ -69,6 +69,12 @@ on_character_convert_culture = {
 	}
 }
 
+on_character_convert_religion = {
+	events = {
+		ani_plus.202 # preventing a dragon from changing religion
+	}
+}
+
 on_war_started = {
 	events = {
 		ani_plus.043 # hedgehog morale bonuses/maluses at war start

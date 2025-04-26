@@ -136,3 +136,36 @@ character_event = {
         religion = Dragon_religion
     }
 }
+
+# event 203
+province_event = {
+    id = ani_plus.203
+
+    hide_window = yes
+    
+    trigger = {
+        culture_group = dragon_group
+        NOT = {
+            religion = Dragon_religion
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 1
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                holder_scope = {
+                    culture_group = dragon_group
+                }
+            }
+
+            religion = dragon_group
+        }
+        else = {
+            culture = holder_scope
+        }
+    }
+}

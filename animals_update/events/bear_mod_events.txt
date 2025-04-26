@@ -1070,7 +1070,7 @@ character_event = {
     }
 }
 
-#haze triggeer: setting disease
+#haze trigger: setting disease
 character_event = {
     id = ani_plus.020
 
