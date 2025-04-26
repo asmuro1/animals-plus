@@ -212,7 +212,7 @@ DESCB_ani_185;The preparations for the [Root.FromFrom.GetTitledFirstName]'s rule
 OPTA_ani_185;Thankfully, only minor noble did attend;Heuresement, qu'uniquement des nobles mineurs ont participé;;;;;;;;;;;;x
 OPTB_ani_185;[Root.FromFrom.GetSheHeCap] should talk about nobility;[Root.FromFrom.GetSheHeCap] devrait parler des concepts de la nobilité;;;;;;;;;;;;x
 OPTC_ani_185;[Root.FromFrom.GetSheHeCap] should talk about commerce;[Root.FromFrom.GetSheHeCap] devrait parler des concepts liés au commerce;;;;;;;;;;;;x
-DESC_ani_186;The rite just ended. The rite is successful and [Root.FromFromFrom.GetTitledFirstName] did learn a lot during that rite.;Le rite de passage vient de se terminer! [Root.FromFromFrom.GetTitledFirstName] a pu apprendre ce qu'implique d'être dirigeant;;;;;;;;;;;;x
+DESC_ani_186;The rite just ended. The rite is successful and [rite_target.GetTitledFirstName] did learn a lot during that rite.;Le rite de passage vient de se terminer! [rite_target.GetTitledFirstName] a pu apprendre ce qu'implique d'être dirigeant;;;;;;;;;;;;x
 OPT_ani_186;[rite_target.GetTitledFirstName] should be proud of [rite_target.GetHerselfHimself].;[rite_target.GetTitledFirstName] a de quoi être fier!;;;;;;;;;;;;x
 DESCA_ani_188;As [event_targetrite_target.GetTitledFirstName] is almost an adult. The pious horses force him to do at least one rite! They even pay the rite expenses;Comme [Root.From.GetTitledFirstName] est bientôt adulte, les chevaux religieux le force de participer à un rite de passage.;;;;;;;;;;;;x
 DESCB_ani_188;The pious horses expressed that [Root.From.GetTitledFirstName] needs to go through its final rite. But they still needs to do some preparations;Les religieux chevalien affirme qu'il est temps que [Root.From.GetTitledFirstName] fasse un dernier rite de passage avant son passage à l'age adulte. Cependant, comme le rite demande quelques préparations.;;;;;;;;;;;;x
@@ -251,5 +251,5 @@ TT_ani_177_healed;heal from injury;est soigné de ses blessures;;;;;;;;;;;;x
 TT_ani_177_injury_is_worst;the injuries goes wrong;les blessures s'empirent;;;;;;;;;;;;x
 TT_ani_180_went_well;everything goes well;tout se passe comme prévu;;;;;;;;;;;;x
 TT_ani_180_went_wrong;an accident occur;tout ne se passe pas comme prévu;;;;;;;;;;;;x
-TT_ani_186_learned_speciality;[Root.FromFromFrom.GetTitledFirstName] a lot more than expected of [Root.FromFromFrom.GetHerselfHimself];[Root.FromFromFrom.GetTitledFirstName] a bien mieu appris son rôle que ce qui était attendu;;;;;;;;;;;;x
+TT_ani_186_learned_speciality;[rite_target.GetTitledFirstName] a lot more than expected of [rite_target.GetHerselfHimself];[rite_target.GetTitledFirstName] a bien mieu appris son rôle que ce qui était attendu;;;;;;;;;;;;x
 TT_ani_191_random_trait;§Y[From.GetFullName]§! gains a random horse rulership trait;§Y[From.GetFullName]§! obtient un trait cheval aléatoire;;;;;;;;;;;;x
