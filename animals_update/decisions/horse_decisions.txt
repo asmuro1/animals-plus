@@ -434,16 +434,19 @@ decisions = {
             }
 
             war = no
+            
+            capital_scope = {
+                show_scope_change = no
+                any_province_character = {
+                    age = 6
+                    NOT = { age = 9 }
+                    culture_group = horse_group
+                    #has_landed_title = no
 
-            any_child = {
-                age = 6
-                NOT = { age = 9 }
-                culture_group = horse_group
-                #has_landed_title = no
-
-                custom_tooltip = {
-                    text = HORSE_TT_DID_NOT_PARTICIPATE_RITE_1
-
+                    custom_tooltip = {
+                        text = HORSE_TT_DID_NOT_PARTICIPATE_RITE_1
+                    }
+                    
                     NOT = { has_character_flag = rite_1_success }
                 }
             }
