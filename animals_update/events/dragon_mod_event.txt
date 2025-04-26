@@ -65,8 +65,14 @@ character_event = {
     }
 }
 
+#### event 200 to 201: religious event force religion setting
+## event 200: setting holy site randomly (on game start, event if random always choose the same provinces)
+## event 201: forcing religion on dragon characters and dragon provinces at start
+## event 202: converting character on birth or culture change
+## event 203: converting province culture on religion change
 
-# event 200: settings dragon holy studies
+
+# event 200
 character_event = {
     id = ani_plus.200
 
@@ -87,5 +93,29 @@ character_event = {
 
     after = {
         set_global_flag = dragon_holy_sites_set
+    }
+}
+
+# event 201
+character_event = {
+    id = ani_plus.201
+
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        any_character = {
+            limit = {
+                culture_group = dragon_group
+                can_change_religion = yes
+            }
+            religion = Dragon_religion
+        }
+        any_province = {
+            limit = {
+                culture_group = dragon_group
+            }
+            religion = Dragon_religion
+        }
     }
 }
