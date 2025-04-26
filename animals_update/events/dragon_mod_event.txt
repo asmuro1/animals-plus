@@ -119,3 +119,20 @@ character_event = {
         }
     }
 }
+
+# event 202
+character_event = {
+    id = ani_plus.202
+
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        culture_group = dragon_group
+        can_change_religion = yes
+    }
+
+    immediate = {
+        religion = Dragon_religion
+    }
+}
