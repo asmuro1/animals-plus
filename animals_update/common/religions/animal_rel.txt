@@ -285,4 +285,39 @@ Animals_grups = {
 
 		peace_prestige_loss = no
 	}
+	Dragon_religion = {
+		icon = 68
+		heresy_icon = 1 # no heresies
+		color = { 0.9 0.17 0.1 }
+		alternate_start = { always = no }
+
+		piety_name = SAVAGIOUS
+		priest_title = ELDERS
+		high_god_name = DRAGON_RELIGION_HIGH_GOD
+
+		can_demand_religious_conversion = no #custom decisions, through culture
+		can_retire_to_monastery = no
+
+		priests_can_marry = yes
+		priests_can_inherit = yes
+		female_temple_holders = yes
+
+		max_wives = 1
+		men_can_take_consorts = no
+		women_can_take_consorts = no
+		feminist = yes
+
+		allow_looting = yes
+		seafarer = no
+		allow_rivermovement = yes
+
+		has_heir_designation = no
+		aggression = 10
+		defensive_attrition = yes
+		ignores_defensive_attrition = no
+		join_crusade_if_bordering_hostile = no
+
+		peace_prestige_loss = no
+		uses_jizya_tax = yes
+	}
 }

@@ -40,6 +40,10 @@ Horse_religion;Horse;Cheval;;;;;;;;;;;;x
 Horse_religion_DESC;Horses' religion;Religion des chevaux;;;;;;;;;;;;x
 Horse_religion_full;Horse;Cheval;;;;;;;;;;;;x
 HORSE_RELIGION_HIGH_GOD;Pegasus;Pégaze;;;;;;;;;;;;x
+Dragon_religion;Dragon;Dragon;;;;;;;;;;;;x
+Dragon_religion_DESC;Dragons' religion;Religion des dragons;;;;;;;;;;;;x
+Dragon_religion_full;Dragon;Dragon;;;;;;;;;;;;x
+DRAGON_RELIGION_HIGH_GOD;Quetzalcoatl;Quetzalcoatl;;;;;;;;;;;;x
 
 ###government localisation
 Bear_feudal_gov;Bears feodality;féodalité oursienne;;;;;;;;;;;;x
