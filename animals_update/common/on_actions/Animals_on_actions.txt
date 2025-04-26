@@ -61,6 +61,7 @@ on_character_convert_culture = {
 		ani_plus.004 # remove bear cultural modifier
 		ani_plus.005 # force animal portrait and add cultural modifier
 		ani_plus.192 # remove horse caste trait on culture change
+		ani_plus.198 # preventing dragon to change culture
 	}
 }
 

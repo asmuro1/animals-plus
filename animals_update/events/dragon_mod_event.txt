@@ -2,3 +2,65 @@
 ### event 198 - 
 
 namespace = ani_plus
+
+#### event 198 and 199 are created to prevent dragon character from changing culture
+#### at the exception where an egg can become an adult
+## event 198: on_action trigger, switch back to old culture if old is dragon
+## event 199: exits only to avoid an infinite loop if old and new culture are both adult dragon
+
+# event 198 - preventing dragon to change culture (race)
+character_event = {
+    id = ani_plus.198
+
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        NOT = { has_character_flag = ignore_next_dragon_conv }
+    }
+
+    immediate = {
+        # had to do tests with a new character becaus engine did not let me do
+        # any test on culture scope
+        create_character = {
+            culture = FROM
+            female = random
+        }
+
+        if = {
+            limit = {
+                new_character = {
+                    culture_group = dragon_group
+                }
+                NAND = {
+                    new_character = {
+                        culture = dragon_culture
+                    }
+                    ROOT = {
+                        culture_group = dragon_group
+                    }
+                }
+            }
+            set_character_flag = ignore_next_dragon_conv
+            culture = FROM
+
+            character_event = { id = ani_plus.199 days = 1}
+        }
+
+        new_character = {
+            death = yes
+        }
+    }
+}
+
+# event 199
+character_event = {
+    id = ani_plus.199
+
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        clr_character_flag = ignore_next_dragon_conv
+    }
+}
