@@ -261,5 +261,225 @@ hospital = {
 
         # only unlock a decision
     }
+}
 
+fort = {
+    fo_drg_guardian_01 = {
+        add_number_to_name = yes
+
+        potential = {
+            culture_group = dragon_group
+            is_capital = no
+        }
+        trigger = {
+            culture_group = dragon_group
+        }
+        is_active_trigger = {
+            culture_group = dragon_group
+        }
+
+        gold_cost = 100
+        build_time = 350
+        ai_creation_factor = 90
+
+        garrison_size = 0.1
+        fort_level = 1
+    }
+    fo_drg_guardian_02 = {
+        add_number_to_name = yes
+
+        potential = {
+            culture_group = dragon_group
+            is_capital = no
+        }
+        trigger = {
+            culture_group = dragon_group
+        }
+        is_active_trigger = {
+            culture_group = dragon_group
+        }
+        upgrades_from = fo_drg_guardian_01
+
+        gold_cost = 200
+        build_time = 700
+        ai_creation_factor = 90
+
+        garrison_size = 0.2
+        fort_level = 1
+    }
+    fo_drg_guardian_03 = {
+        add_number_to_name = yes
+
+        potential = {
+            culture_group = dragon_group
+            is_capital = no
+        }
+        trigger = {
+            culture_group = dragon_group
+        }
+        is_active_trigger = {
+            culture_group = dragon_group
+        }
+        upgrades_from = fo_drg_guardian_02
+
+        gold_cost = 300
+        build_time = 1050
+        ai_creation_factor = 90
+
+        garrison_size = 0.3
+        fort_level = 1
+    }
+    fo_drg_guardian_04 = {
+        add_number_to_name = yes
+
+        potential = {
+            culture_group = dragon_group
+            is_capital = no
+        }
+        trigger = {
+            culture_group = dragon_group
+        }
+        is_active_trigger = {
+            culture_group = dragon_group
+        }
+        upgrades_from = fo_drg_guardian_03
+
+        gold_cost = 400
+        build_time = 1400
+        ai_creation_factor = 90
+
+        garrison_size = 0.4
+        fort_level = 1
+    }
+    fo_drg_guardian_05 = {
+        add_number_to_name = yes
+
+        potential = {
+            culture_group = dragon_group
+            is_capital = no
+        }
+        trigger = {
+            culture_group = dragon_group
+        }
+        is_active_trigger = {
+            culture_group = dragon_group
+        }
+        upgrades_from = fo_drg_guardian_04
+
+        gold_cost = 500
+        build_time = 1750
+        ai_creation_factor = 90
+
+        garrison_size = 0.5
+        fort_level = 1
+    }
+    fo_drg_guardian_06 = {
+        add_number_to_name = yes
+
+        potential = {
+            culture_group = dragon_group
+            is_capital = no
+        }
+        trigger = {
+            culture_group = dragon_group
+        }
+        is_active_trigger = {
+            culture_group = dragon_group
+        }
+        upgrades_from = fo_drg_guardian_05
+
+        gold_cost = 600
+        build_time = 2100
+        ai_creation_factor = 90
+
+        garrison_size = 0.5
+        fort_level = 1
+    }
+    fo_drg_guardian_07 = {
+        add_number_to_name = yes
+
+        potential = {
+            culture_group = dragon_group
+            is_capital = no
+        }
+        trigger = {
+            culture_group = dragon_group
+        }
+        is_active_trigger = {
+            culture_group = dragon_group
+        }
+        upgrades_from = fo_drg_guardian_06
+
+        gold_cost = 700
+        build_time = 2450
+        ai_creation_factor = 90
+
+        garrison_size = 0.5
+        fort_level = 1
+    }
+    fo_drg_guardian_08 = {
+        add_number_to_name = yes
+
+        potential = {
+            culture_group = dragon_group
+            is_capital = no
+        }
+        trigger = {
+            culture_group = dragon_group
+        }
+        is_active_trigger = {
+            culture_group = dragon_group
+        }
+        upgrades_from = fo_drg_guardian_07
+
+        gold_cost = 800
+        build_time = 2800
+        ai_creation_factor = 90
+
+        garrison_size = 0.25
+        fort_level = 1
+    }
+    fo_drg_guardian_09 = {
+        add_number_to_name = yes
+
+        potential = {
+            culture_group = dragon_group
+            is_capital = no
+        }
+        trigger = {
+            culture_group = dragon_group
+        }
+        is_active_trigger = {
+            culture_group = dragon_group
+        }
+        upgrades_from = fo_drg_guardian_08
+
+        gold_cost = 900
+        build_time = 3150
+        ai_creation_factor = 90
+
+        garrison_size = 0.25
+        fort_level = 1
+    }
+    fo_drg_guardian_10 = {
+        add_number_to_name = yes
+
+        potential = {
+            culture_group = dragon_group
+            is_capital = no
+        }
+        trigger = {
+            culture_group = dragon_group
+        }
+        is_active_trigger = {
+            culture_group = dragon_group
+        }
+        upgrades_from = fo_drg_guardian_09
+
+        gold_cost = 1000
+        build_time = 3500
+        ai_creation_factor = 90
+
+        fort_level = 1
+    }
 }
