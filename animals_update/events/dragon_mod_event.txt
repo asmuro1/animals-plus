@@ -130,6 +130,7 @@ character_event = {
     trigger = {
         culture_group = dragon_group
         can_change_religion = yes
+        NOT = { religion = Dragon_religion }
     }
 
     immediate = {
@@ -162,7 +163,7 @@ province_event = {
                 }
             }
 
-            religion = dragon_group
+            religion = Dragon_religion
         }
         else = {
             culture = holder_scope

@@ -1,5 +1,3 @@
 *.mod
 *.zip
-*/
-!animals_update/
 !animals_update.mod
