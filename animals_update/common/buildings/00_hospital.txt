@@ -95,7 +95,10 @@ hospital = {
 	leper_colony_1 = {
 		potential = {
 			has_dlc = "Reapers"
-			NOT = { culture_group = elephant_group }
+			NOR = {
+				culture_group = elephant_group
+				culture_group = dragon_group	
+			}
 		}
 		prerequisites = { hospital_building_1 }
 		desc = leper_colony_building_desc
@@ -113,7 +116,10 @@ hospital = {
 	soup_kitchen_1 = {
 		potential = {
 			has_dlc = "Reapers"
-			NOT = { culture_group = elephant_group }
+			NOR = {
+				culture_group = elephant_group
+				culture_group = dragon_group	
+			}
 		}
 		prerequisites = { hospital_building_1 }
 		desc = soup_kitchen_building_desc
@@ -133,7 +139,10 @@ hospital = {
 	chapel_1 = {
 		potential = {
 			has_dlc = "Reapers"
-			NOT = { culture_group = elephant_group }
+			NOR = {
+				culture_group = elephant_group
+				culture_group = dragon_group	
+			}
 		}
 		prerequisites = { hospital_building_1 }
 		desc = chapel_building_desc
@@ -153,7 +162,10 @@ hospital = {
 	translation_house_1 = {
 		potential = {
 			has_dlc = "Reapers"
-			NOT = { culture_group = elephant_group }
+			NOR = {
+				culture_group = elephant_group
+				culture_group = dragon_group	
+			}
 		}
 		prerequisites = { hospital_building_2 }
 		desc = translation_house_building_desc
@@ -172,7 +184,10 @@ hospital = {
 	pilgrims_inn_1 = {
 		potential = {
 			has_dlc = "Reapers"
-			NOT = { culture_group = elephant_group }
+			NOR = {
+				culture_group = elephant_group
+				culture_group = dragon_group	
+			}
 		}
 		prerequisites = { hospital_building_1 }
 		desc = pilgrims_inn_building_desc
@@ -191,7 +206,10 @@ hospital = {
 	library_1 = {
 		potential = {
 			has_dlc = "Reapers"
-			NOT = { culture_group = elephant_group }
+			NOR = {
+				culture_group = elephant_group
+				culture_group = dragon_group	
+			}
 		}
 		prerequisites = { hospital_building_1 }
 		desc = library_building_desc
@@ -210,7 +228,10 @@ hospital = {
 	pharmacology_laboratory_1 = {
 		potential = {
 			has_dlc = "Reapers"
-			NOT = { culture_group = elephant_group }
+			NOR = {
+				culture_group = elephant_group
+				culture_group = dragon_group	
+			}
 		}
 		prerequisites = { hospital_building_3 }
 		desc = pharmacology_laboratory_building_desc
@@ -229,7 +250,10 @@ hospital = {
 	medical_academy_1 = {
 		potential = {
 			has_dlc = "Reapers"
-			NOT = { culture_group = elephant_group }
+			NOR = {
+				culture_group = elephant_group
+				culture_group = dragon_group	
+			}
 		}
 		prerequisites = {
 			hospital_building_3
@@ -253,7 +277,10 @@ hospital = {
 	observatory_1 = {
 		potential = {
 			has_dlc = "Reapers"
-			NOT = { culture_group = elephant_group }
+			NOR = {
+				culture_group = elephant_group
+				culture_group = dragon_group	
+			}
 		}
 		prerequisites = {
 			hospital_building_3
