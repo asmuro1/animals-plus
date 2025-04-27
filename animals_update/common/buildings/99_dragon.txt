@@ -85,12 +85,15 @@ tribal = {
                 culture_group = dragon_group
                 has_building = tb_drg_slave_worker_4
             }
+            is_capital = yes
         }
         trigger = {
             culture_group = dragon_group
+            is_capital = yes
         }
         is_active_trigger = {
             culture_group = dragon_group
+            is_capital = yes
         }
 
         prerequisites = { tb_ani_tribal_tower_4 }
@@ -189,12 +192,15 @@ tribal = {
                 culture_group = dragon_group
                 has_building = tb_drg_slave_fighter_4
             }
+            is_capital = yes
         }
         trigger = {
             culture_group = dragon_group
+            is_capital = yes
         }
         is_active_trigger = {
             culture_group = dragon_group
+            is_capital = yes
         }
 
         prerequisites = { tb_ani_tribal_tower_4 }
@@ -206,5 +212,30 @@ tribal = {
         extra_tech_building_start = 10
 
         light_cavalry = 75
+    }
+
+    tb_drg_fighter = {
+        add_number_to_name = no
+        
+        potential = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        trigger = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        is_active_trigger = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        prerequisites = { tb_ani_tribal_tower_2 }
+
+        gold_cost = 1000
+        build_time = 200
+        ai_creation_factor = 75
+        extra_tech_building_start = 10.0
+
+        Knight = 100
     }
 }
