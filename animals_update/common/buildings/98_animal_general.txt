@@ -3350,15 +3350,18 @@ tribal = {
             NOT = {
                 has_building = tb_ani_siege_1
             }
+            NOT = { culture_group = dragon_group }
         }
         trigger = {
             TECH_CASTLE_CONSTRUCTION = 0
             NOT = { ###for visual appearance
                 has_building = tb_ani_siege_1
             }
+            NOT = { culture_group = dragon_group }
         }
         is_active_trigger = {
             Is_really_animal_trigger = yes
+            NOT = { culture_group = dragon_group }
         }
         prerequisites = { tb_ani_tribal_tower_1 }
         not_if_x_exists = { tb_ani_siege_1 }
@@ -3380,12 +3383,15 @@ tribal = {
                 FROMFROM = { has_building = tb_ani_fort_2}
                 Is_really_animal_trigger = yes
             }
+            NOT = { culture_group = dragon_group }
         }
         trigger = {
             TECH_CASTLE_CONSTRUCTION = 0
+            NOT = { culture_group = dragon_group }
         }
         is_active_trigger = {
             Is_really_animal_trigger = yes
+            NOT = { culture_group = dragon_group }
         }
         prerequisites = { tb_ani_tribal_tower_2 }
         not_if_x_exists = { tb_ani_siege_1 }
@@ -3414,15 +3420,18 @@ tribal = {
             NOT = {
                 has_building = tb_ani_fort_1
             }
+            NOT = { culture_group = dragon_group }
         }
         trigger = {
             TECH_CASTLE_CONSTRUCTION = 0
             NOT = {
                 has_building = tb_ani_fort_1
             }
+            NOT = { culture_group = dragon_group }
         }
         is_active_trigger = {
             Is_really_animal_trigger = yes
+            NOT = { culture_group = dragon_group }
         }
         prerequisites = { tb_ani_tribal_tower_1 }
         not_if_x_exists = { tb_ani_fort_1 }
@@ -3443,12 +3452,15 @@ tribal = {
                 FROMFROM = { has_building = tb_ani_siege_2}
                 Is_really_animal_trigger = yes
             }
+            NOT = { culture_group = dragon_group }
         }
         trigger = {
             TECH_CASTLE_CONSTRUCTION = 0
+            NOT = { culture_group = dragon_group }
         }
         is_active_trigger = {
             Is_really_animal_trigger = yes
+            NOT = { culture_group = dragon_group }
         }
         prerequisites = { tb_ani_tribal_tower_2 }
         not_if_x_exists = { tb_ani_fort_1 }
