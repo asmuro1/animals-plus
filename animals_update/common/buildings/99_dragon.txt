@@ -236,6 +236,6 @@ tribal = {
         ai_creation_factor = 75
         extra_tech_building_start = 10.0
 
-        Knight = 100
+        knights = 100
     }
 }
