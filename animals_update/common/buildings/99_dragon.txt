@@ -548,5 +548,78 @@ fort = {
         retinuesize = 50
         retinuesize_perc = 0.2
     }
+
+    fo_drg_heart_1 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        trigger = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        is_active_trigger = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        # upgrades_from = 
+
+        gold = 1000
+        build_time = 1000
+        ai_creation_factor = 100
+
+        fort_level = 1
+        tax_income = 2
+    }
+    fo_drg_heart_2 = { 
+        add_number_to_name = no
+
+        potential = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        trigger = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        is_active_trigger = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        upgrades_from = fo_drg_heart_1
+
+        gold = 2000
+        build_time = 2500
+        ai_creation_factor = 100
+
+        fort_level = 1
+        tax_income = 3
+    }
+    fo_drg_heart_3 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        trigger = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        is_active_trigger = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        upgrades_from = fo_drg_heart_2
+
+        gold = 3000
+        build_time = 5000
+        ai_creation_factor = 100
+
+        fort_level = 1
+        tax_income = 5
+    }
     
 }
