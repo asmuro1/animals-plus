@@ -636,6 +636,7 @@ fort = {
             culture_group = dragon_group
             is_capital = yes
         }
+        prerequisites = { fo_drg_heart_1 }
 
         gold_cost = 500
         build_time = 900
@@ -645,6 +646,212 @@ fort = {
         knights_offensive = 0.25
         knights_defensive = 0.25
         knights_morale = 0.25
+    }
+
+    fo_drg_academy_1 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        trigger = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        is_active_trigger = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        prerequisites = { fo_drg_heart_1 }
+
+        gold_cost = 1000
+        build_time = 5000
+        ai_creation_factor = 100
+
+        diplomacy = 1
+        stewardship = 1
+        martial = 1
+        intrigue = 1
+        learning = 1
+    }
+    fo_drg_academy_2 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        trigger = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        is_active_trigger = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        upgrades_from = fo_drg_academy_1
+        prerequisites = { fo_drg_heart_2 }
+
+        gold_cost = 3000
+        build_time = 15000
+        ai_creation_factor = 80
+
+        diplomacy = 2
+        stewardship = 2
+        martial = 2
+        intrigue = 2
+        learning = 2
+    }
+    fo_drg_academy_3 = { # only to show the 3rd upgrade if previous one is not build
+        add_number_to_name = no
+
+        potential = {
+            culture_group = dragon_group
+            is_capital = yes
+            NOT = { fort_has_building = fo_drg_academy_2}
+        }
+        trigger = {
+            culture_group = dragon_group
+            is_capital = yes
+            NOT = { fort_has_building = fo_drg_academy_2}
+        }
+        is_active_trigger = {
+            culture_group = dragon_group
+            is_capital = yes
+            NOT = { fort_has_building = fo_drg_academy_2}
+        }
+        upgrades_from = fo_drg_academy_2
+        prerequisites = { fo_drg_heart_3 }
+
+        gold_cost = 30
+        build_time = 10
+        ai_creation_factor = 0
+    }
+    fo_drg_blue_final = {
+        add_number_to_name = no
+
+        potential = {
+            culture = blue_dragon
+            is_capital = yes
+            fort_has_building = fo_drg_academy_2
+        }
+        trigger = {
+            culture = blue_dragon
+            is_capital = yes
+            fort_has_building = fo_drg_academy_2
+        }
+        is_active_trigger = {
+            culture = blue_dragon
+            is_capital = yes
+            fort_has_building = fo_drg_academy_2
+        }
+        prerequisites = { fo_drg_academy_2 fo_drg_heart_3 }
+
+        gold_cost = 10000
+        build_time = 30000
+
+        diplomacy = 10
+    }
+    fo_drg_yellow_final = {
+        add_number_to_name = no
+
+        potential = {
+            culture = yellow_dragon
+            is_capital = yes
+            fort_has_building = fo_drg_academy_2
+        }
+        trigger = {
+            culture = yellow_dragon
+            is_capital = yes
+            fort_has_building = fo_drg_academy_2
+        }
+        is_active_trigger = {
+            culture = yellow_dragon
+            is_capital = yes
+            fort_has_building = fo_drg_academy_2
+        }
+        prerequisites = { fo_drg_academy_2 fo_drg_heart_3 }
+
+        gold_cost = 10000
+        build_time = 30000
+
+        stewardship = 10
+    }
+    fo_drg_red_final = {
+        add_number_to_name = no
+
+        potential = {
+            culture = red_dragon
+            is_capital = yes
+            fort_has_building = fo_drg_academy_2
+        }
+        trigger = {
+            culture = red_dragon
+            is_capital = yes
+            fort_has_building = fo_drg_academy_2
+        }
+        is_active_trigger = {
+            culture = red_dragon
+            is_capital = yes
+            fort_has_building = fo_drg_academy_2
+        }
+        prerequisites = { fo_drg_academy_2 fo_drg_heart_3 }
+
+        gold_cost = 10000
+        build_time = 30000
+
+        martial = 10
+    }
+    fo_drg_black_final = {
+        add_number_to_name = no
+
+        potential = {
+            culture = black_dragon
+            is_capital = yes
+            fort_has_building = fo_drg_academy_2
+        }
+        trigger = {
+            culture = black_dragon
+            is_capital = yes
+            fort_has_building = fo_drg_academy_2
+        }
+        is_active_trigger = {
+            culture = black_dragon
+            is_capital = yes
+            fort_has_building = fo_drg_academy_2
+        }
+        prerequisites = { fo_drg_academy_2 fo_drg_heart_3 }
+
+        gold_cost = 10000
+        build_time = 30000
+
+        intrigue = 10
+    }
+    fo_drg_white_final = {
+        add_number_to_name = no
+
+        potential = {
+            culture = white_dragon
+            is_capital = yes
+            fort_has_building = fo_drg_academy_2
+        }
+        trigger = {
+            culture = white_dragon
+            is_capital = yes
+            fort_has_building = fo_drg_academy_2
+        }
+        is_active_trigger = {
+            culture = white_dragon
+            is_capital = yes
+            fort_has_building = fo_drg_academy_2
+        }
+        prerequisites = { fo_drg_academy_2 fo_drg_heart_3 }
+
+        gold_cost = 10000
+        build_time = 30000
+
+        learning = 10
     }
     
 }
