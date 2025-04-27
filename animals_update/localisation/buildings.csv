@@ -451,3 +451,5 @@ tb_drg_slave_fighter_2;Slave warrior guild;Guilde d'esclaves de guerre;;;;;;;;;;
 tb_drg_slave_fighter_3;Slave warrior guild;Guilde d'esclaves de guerre;;;;;;;;;;;;x
 tb_drg_slave_fighter_4;Slave warrior guild;Guilde d'esclaves de guerre;;;;;;;;;;;;x
 tb_drg_fighter;dragon center;Centre des dragons;;;;;;;;;;;;x
+ho_drg_incubator;egg incubator room;salle d'incubateur des oeux;;;;;;;;;;;;x
+ho_drg_incubator_desc;an incubator room is recommended to create a dragon egg. It greatly increase hatching chances;un incubateur est fortement recommendé pour la ponte d'oeux de dragon. Il peut fortement augmenter les chances d'éclosions.;;;;;;;;;;;;x

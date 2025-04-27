@@ -239,3 +239,27 @@ tribal = {
         knights = 100
     }
 }
+
+hospital = {
+    ho_drg_incubator = {
+        desc = ho_drg_incubator_desc
+
+        potential = {
+            has_dlc = "Reapers"
+            culture_group = dragon_group
+
+            is_capital = yes
+        }
+        trigger = {
+            FROM = { culture_group = dragon_group }
+        }
+
+        gold_cost = 250
+        build_time = 666
+        ai_creation_factor = 300
+        extra_tech_building_start = 0
+
+        # only unlock a decision
+    }
+
+}
