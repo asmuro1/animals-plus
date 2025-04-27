@@ -1,0 +1,106 @@
+tribal = {
+
+    tb_drg_slave_worker_1 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                culture_group = dragon_group
+                has_building = tb_drg_slave_worker_1
+            }
+        }
+        trigger = {
+            culture_group = dragon_group
+        }
+        is_active_trigger = {
+            culture_group = dragon_group
+        }
+
+        prerequisites = { tb_ani_tribal_tower_1 }
+
+        gold_cost = 200
+        build_time = 100 # short
+        ai_creation_factor = 100
+        extra_tech_building_start = 10
+
+        tax_income = 4
+    }
+    tb_drg_slave_worker_2 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                culture_group = dragon_group
+                has_building = tb_drg_slave_worker_2
+            }
+        }
+        trigger = {
+            culture_group = dragon_group
+        }
+        is_active_trigger = {
+            culture_group = dragon_group
+        }
+
+        prerequisites = { tb_ani_tribal_tower_2 }
+        upgrades_from = tb_drg_slave_worker_1
+
+        gold_cost = 400
+        build_time = 100
+        ai_creation_factor = 100
+        extra_tech_building_start = 10
+
+        tax_income = 4
+    }
+    tb_drg_slave_worker_3 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                culture_group = dragon_group
+                has_building = tb_drg_slave_worker_3
+            }
+        }
+        trigger = {
+            culture_group = dragon_group
+        }
+        is_active_trigger = {
+            culture_group = dragon_group
+        }
+
+        prerequisites = { tb_ani_tribal_tower_3 }
+        upgrades_from = tb_drg_slave_worker_2
+
+        gold_cost = 800
+        build_time = 100
+        ai_creation_factor = 100
+        extra_tech_building_start = 10
+
+        tax_income = 4
+    }
+    tb_drg_slave_worker_4 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                culture_group = dragon_group
+                has_building = tb_drg_slave_worker_4
+            }
+        }
+        trigger = {
+            culture_group = dragon_group
+        }
+        is_active_trigger = {
+            culture_group = dragon_group
+        }
+
+        prerequisites = { tb_ani_tribal_tower_4 }
+        upgrades_from = tb_drg_slave_worker_3
+
+        gold_cost = 1500
+        build_time = 100
+        ai_creation_factor = 100
+        extra_tech_building_start = 10
+
+        tax_income = 4
+    }
+}

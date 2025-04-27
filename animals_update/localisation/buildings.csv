@@ -439,3 +439,10 @@ tb_horse_archer_3;Bow deposit;stockage d'arc;;;;;;;;;;;;x
 tb_horse_archer_4;Bow deposit;stockage d'arc;;;;;;;;;;;;x
 tb_horse_retinue_1;Horses' clan;Clan des chevaux;;;;;;;;;;;;x
 tb_horse_retinue_2;Horses' clan;Clan des chevaux;;;;;;;;;;;;x
+
+# DRAGON UPDATE
+
+tb_drg_slave_worker_1;Slave buisiness guild;Guilde d'exploitation des esclaves;;;;;;;;;;;;x
+tb_drg_slave_worker_2;Slave buisiness guild;Guilde d'exploitation des esclaves;;;;;;;;;;;;x
+tb_drg_slave_worker_3;Slave buisiness guild;Guilde d'exploitation des esclaves;;;;;;;;;;;;x
+tb_drg_slave_worker_4;Slave buisiness guild;Guilde d'exploitation des esclaves;;;;;;;;;;;;x
