@@ -860,4 +860,73 @@ fort = {
         learning = 10
     }
     
+    fo_drg_pascific_1 = {
+        add_number_to_name = no
+        potential = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        trigger = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        is_active_trigger = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        # upgrades_from =
+        prerequisites = { fo_drg_heart_1 }
+
+        gold_cost = 750
+        build_time = 300
+        ai_creation_factor = 120
+
+        vassal_opinion = 20
+    }
+    fo_drg_pascific_2 = {
+        add_number_to_name = no
+        potential = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        trigger = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        is_active_trigger = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        upgrades_from = fo_drg_pascific_1
+        prerequisites = { fo_drg_heart_2 }
+
+        gold_cost = 1250
+        build_time = 300
+        ai_creation_factor = 120
+
+        vassal_opinion = 20
+    }
+    fo_drg_pascific_3 = {
+        add_number_to_name = no
+        potential = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        trigger = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        is_active_trigger = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        upgrades_from = fo_drg_pascific_2
+        prerequisites = { fo_drg_heart_3 }
+
+        gold_cost = 2000
+        build_time = 300
+        ai_creation_factor = 120
+
+        vassal_opinion = 20
+    }
 }
