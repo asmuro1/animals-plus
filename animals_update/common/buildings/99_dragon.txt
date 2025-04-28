@@ -929,4 +929,73 @@ fort = {
 
         vassal_opinion = 20
     }
+
+    fo_drg_expension_1 = {
+        add_number_to_name = no
+        potential = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        trigger = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        is_active_trigger = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        # upgrades_from =
+        prerequisites = { fo_drg_heart_1 }
+
+        gold_cost = 500
+        build_time = 600
+        ai_creation_factor = 150
+
+
+    }
+    fo_drg_expension_2 = {
+        add_number_to_name = no
+        potential = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        trigger = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        is_active_trigger = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        upgrades_from = fo_drg_expension_1
+        prerequisites = { fo_drg_heart_2 }
+
+        gold_cost = 750
+        build_time = 700
+        ai_creation_factor = 150
+
+
+    }
+    fo_drg_expension_3 = {
+        add_number_to_name = no
+        potential = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        trigger = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        is_active_trigger = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        upgrades_from = fo_drg_expension_2
+        prerequisites = { fo_drg_heart_3 }
+
+        gold_cost = 1500
+        build_time = 900
+        ai_creation_factor = 150
+
+    }
 }
