@@ -58,3 +58,47 @@ set_yellow_dragon_holy_site_effect = {
         set_province_flag = dragon_yellow_holy_site
     }
 }
+
+# character_scope
+dragon_get_dragon_egg_culture_if_child_effect = {
+    if = {
+        limit = {
+            is_adult = no
+        }
+
+        dragon_set_child_dragon_flag_effect = yes
+
+        culture = dragon_culture
+    }
+}
+
+# character scope
+dragon_set_child_dragon_flag_effect = {
+    if = {
+        limit = {
+            culture = white_dragon
+        }
+        set_character_flag = white_dragon_potential
+    }
+    else_if = {
+        limit = {
+            culture = black_dragon
+        }
+        set_character_flag = black_dragon_potential
+    }
+    else_if = {
+        limit = {
+            culture = blue_dragon
+        }
+        set_character_flag = blue_dragon_potential
+    }
+    else_if = {
+        limit = {
+            culture = red_dragon
+        }
+        set_character_flag = red_dragon_potential
+    }
+    else = {
+        set_character_flag = yellow_dragon_potential
+    }
+}

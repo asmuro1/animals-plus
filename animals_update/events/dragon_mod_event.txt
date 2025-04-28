@@ -9,6 +9,7 @@ namespace = ani_plus
 ## event 199: exits only to avoid an infinite loop if old and new culture are both adult dragon
 
 # event 198 - preventing dragon to change culture (race)
+#               except for switch between dragon egg and adult dragon
 character_event = {
     id = ani_plus.198
 
@@ -29,15 +30,25 @@ character_event = {
 
         if = {
             limit = {
-                new_character = {
+                new_character = { # was dragon
                     culture_group = dragon_group
                 }
-                NAND = {
+                NAND = {          # not adult yet
                     new_character = {
                         culture = dragon_culture
                     }
                     ROOT = {
                         culture_group = dragon_group
+                        is_adult = yes
+                    }
+                }
+                NAND = {         # not at birth or game start
+                    new_character = {
+                        NOT = { culture = dragon_culture }
+                    }
+                    ROOT = {
+                        culture = dragon_culture
+                        is_adult = no
                     }
                 }
             }
@@ -68,6 +79,7 @@ character_event = {
 #### event 200 to 201: religious event force religion setting
 ## event 200: setting holy site randomly (on game start, event if random always choose the same provinces)
 ## event 201: forcing religion on dragon characters and dragon provinces at start
+##              also force children to get the dragon egg culture 
 ## event 202: converting character on birth or culture change
 ## event 203: converting province culture on religion change
 
@@ -110,6 +122,7 @@ character_event = {
                 can_change_religion = yes
             }
             religion = Dragon_religion
+            dragon_get_dragon_egg_culture_if_child_effect = yes
         }
         any_province = {
             limit = {
