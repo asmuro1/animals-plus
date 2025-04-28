@@ -170,3 +170,75 @@ province_event = {
         }
     }
 }
+
+# event 204: force looting from a baronny title
+province_event = {
+    id = ani_plus.204
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    desc = DESC_ani_204
+
+    trigger = {
+        culture_group = dragon_group
+        holder_scope = {
+            culture_group = dragon_group
+        }
+
+        county = {
+            is_occupied = no
+            any_de_jure_vassal_title = {
+                OR = {
+                    holding_type = castle
+                    holding_type = city
+                    holding_type = temple
+                }
+            }
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 2
+
+        modifier = {
+            factor = 100
+
+            holder_scope = {
+                culture = dragon_culture
+            }
+        }
+    }
+
+    option = {
+        name = OPT_ani_204
+
+        county = {
+            show_scope_change = no
+            random_direct_de_jure_vassal_title = {
+                limit = {
+                    OR = {
+                        holding_type = castle
+                        holding_type = city
+                        holding_type = temple
+                    }
+                }
+
+                if = {
+                    limit = {
+                        has_any_building = yes
+                    }
+
+                    destroy_random_building = yes
+                }
+                else = {
+                    destroy_settlement = yes
+                }
+            }
+
+            holder_scope = {
+                wealth = 200
+            }
+        }
+    }
+}

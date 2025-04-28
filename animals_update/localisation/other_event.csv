@@ -253,3 +253,7 @@ TT_ani_180_went_well;everything goes well;tout se passe comme prévu;;;;;;;;;;;;x
 TT_ani_180_went_wrong;an accident occur;tout ne se passe pas comme prévu;;;;;;;;;;;;x
 TT_ani_186_learned_speciality;[Root.FromFromFrom.GetTitledFirstName] a lot more than expected of [Root.FromFromFrom.GetHerselfHimself];[Root.FromFromFrom.GetTitledFirstName] a bien mieu appris son rôle que ce qui était attendu;;;;;;;;;;;;x
 TT_ani_191_random_trait;§Y[From.GetFullName]§! gains a random horse rulership trait;§Y[From.GetFullName]§! obtient un trait cheval aléatoire;;;;;;;;;;;;x
+
+## dragon update
+DESC_ani_204;Humans build complex buildings but cannot defend themself against us...;Les humains construisent des structures complexes, mais ne savent pas se défendre!;;;;;;;;;;;;x
+OPT_ani_204;I should make use of it!;Je devrais en profiter.;;;;;;;;;;;;x
