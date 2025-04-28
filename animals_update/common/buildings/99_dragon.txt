@@ -561,7 +561,7 @@ fort = {
         ai_creation_factor = 100
 
         fort_level = 1
-        tax_income = 2
+        tax_income = 10
     }
     fo_drg_heart_2 = { 
         add_number_to_name = no
@@ -584,8 +584,8 @@ fort = {
         build_time = 2500
         ai_creation_factor = 100
 
-        fort_level = 1
-        tax_income = 3
+        fort_level = 2
+        tax_income = 10
     }
     fo_drg_heart_3 = {
         add_number_to_name = no
@@ -608,8 +608,8 @@ fort = {
         build_time = 5000
         ai_creation_factor = 100
 
-        fort_level = 1
-        tax_income = 5
+        fort_level = 3
+        tax_income = 10
     }
 
     fo_drg_trainee = {
@@ -658,6 +658,8 @@ fort = {
         gold_cost = 1000
         build_time = 5000
         ai_creation_factor = 100
+
+        dragon_academy_level = 1
     }
     fo_drg_academy_2 = {
         add_number_to_name = no
@@ -680,6 +682,8 @@ fort = {
         gold_cost = 3000
         build_time = 15000
         ai_creation_factor = 80
+
+        dragon_academy_level = 1
     }
     fo_drg_academy_3 = { 
         add_number_to_name = no
@@ -703,6 +707,8 @@ fort = {
         gold_cost = 10000
         build_time = 30000
         ai_creation_factor = 30
+
+        dragon_academy_level = 1
     }
     
     fo_drg_pascific_1 = {
@@ -796,7 +802,7 @@ fort = {
         build_time = 600
         ai_creation_factor = 150
 
-
+        dragon_expension = 1
     }
     fo_drg_expension_2 = {
         add_number_to_name = no
@@ -819,7 +825,7 @@ fort = {
         build_time = 700
         ai_creation_factor = 150
 
-
+        dragon_expension = 1
     }
     fo_drg_expension_3 = {
         add_number_to_name = no
@@ -842,5 +848,6 @@ fort = {
         build_time = 900
         ai_creation_factor = 150
 
+        dragon_expension = 1
     }
 }

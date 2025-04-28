@@ -209,3 +209,10 @@ horse_warrior_malus_3;nnhappy merchants;marchand en colère;;;;;;;;;;;;x
 horse_warrior_malus_4;distrustful commanders;commandant méfiants;;;;;;;;;;;;x
 horse_warrior_malus_5;agitated paysants;paysants agités;;;;;;;;;;;;x
 horse_conversion_tyrany;tyranical ritual;rituel tyranique;;;;;;;;;;;;x
+
+##### dragon update
+
+
+## custom modifier
+dragon_academy_level;academy level;niveau de l'académie;;;;;;;;;;;;x
+dragon_expension;expension prowess;Capacité d'expension;;;;;;;;;;;;x
