@@ -255,3 +255,165 @@ province_event = {
         }
     }
 }
+
+#### event 205 to  : dragon education events
+## event 205: hidden event for adulthood (to show parent player)
+## event 206: notification for culture change
+#               and removing education trait (if conclave is disable)
+#                   as education trait will be added at 25
+
+# event 205
+character_event = {
+    id = ani_plus.205
+
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        culture = dragon_culture
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                father = {
+                    ai = no
+                }
+            }
+
+            father = {
+                character_event = { id = ani_plus.206 }
+            }
+        }
+        else_if = {
+            limit = {
+                mother = {
+                    ai = no
+                }
+            }
+            
+            mother = {
+                character_event = { id = ani_plus.206 }
+            }
+        }
+        else = {
+            character_event = { id = ani_plus.206 }
+        }
+    }
+}
+
+# event 206
+character_event = {
+    id = ani_plus.206
+
+    is_triggered_only = yes
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = {
+        trigger = {
+            NOT = { character = FROM }
+        }
+        text = DESCA_ANI_206
+    }
+    desc = {
+        trigger = {
+            character = FROM
+        }
+        text = DESCB_ANI_206
+    }
+
+    option = {
+        name = {
+            text = OPTA_ANI_206
+            trigger = {
+                NOT = { character = FROM }
+            }
+        }
+
+        FROM = {
+            #removing education trait if conclave DLC disabled
+            hidden_tooltip = {
+                generate_tooltip = no
+
+                remove_trait = amateurish_plotter
+                remove_trait = flamboyant_schemer
+                remove_trait = intricate_webweaver
+                remove_trait = elusive_shadow
+
+                remove_trait = naive_appeaser
+                remove_trait = underhanded_rogue
+                remove_trait = charismatic_negotiator
+                remove_trait = grey_eminence
+
+                remove_trait = indulgent_wastrel
+                remove_trait = thrifty_clerk
+                remove_trait = fortune_builder
+                remove_trait = midas_touched
+
+                remove_trait = misguided_warrior
+                remove_trait = tough_soldier
+                remove_trait = skilled_tactician
+                remove_trait = brilliant_strategist
+
+                remove_trait = detached_priest
+                remove_trait = martial_cleric
+                remove_trait = scholarly_theologian
+                remove_trait = mastermind_theologian
+            }
+
+            random_list = {
+                1 = {
+                    modifier = {
+                        factor = 0
+                        NOT = {
+                            has_character_flag = white_dragon_potential
+                        }
+                    }
+                    
+                    culture = white_dragon
+                }
+                1 = {
+                    modifier = {
+                        factor = 0
+                        NOT = {
+                            has_character_flag = black_dragon_potential
+                        }
+                    }
+
+                    culture = black_dragon
+                }
+                1 = {
+                    modifier = {
+                        factor = 0
+                        NOT = {
+                            has_character_flag = blue_dragon_potential
+                        }
+                    }
+
+                    culture = blue_dragon
+                }
+                1 = {
+                    modifier = {
+                        factor = 0
+                        NOT = {
+                            has_character_flag = red_dragon_potential
+                        }
+                    }
+
+                    culture = red_dragon
+                }
+                1 = {
+                    modifier = {
+                        factor = 0
+                        NOT = {
+                            has_character_flag = yellow_dragon_potential
+                        }
+                    }
+
+                    culture = yellow_dragon
+                }
+            }
+        }
+    }
+}

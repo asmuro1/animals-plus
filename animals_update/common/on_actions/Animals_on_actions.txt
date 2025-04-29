@@ -38,6 +38,7 @@ on_adolescence_pulse = {
 on_adulthood = {
 	events = {
 		ani_plus.190 # horse caste trait comming on age
+		ani_plus.205 # getting dragon's culture and education trait
 	}
 }
 
