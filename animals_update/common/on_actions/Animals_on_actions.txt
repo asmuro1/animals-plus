@@ -46,6 +46,7 @@ on_yearly_pulse = {
 	events = {
 		ani_plus.105 # updating duck dev maximum potential
 		ani_plus.144 # quest tombola for cat society
+		ani_plus.207 # a trial start for a child dragon 
 	}
 }
 on_bi_yearly_pulse = {

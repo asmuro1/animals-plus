@@ -78,8 +78,10 @@ character_event = {
 
 #### event 200 to 201: religious event force religion setting
 ## event 200: setting holy site randomly (on game start, event if random always choose the same provinces)
-## event 201: forcing religion on dragon characters and dragon provinces at start
-##              also force children to get the dragon egg culture 
+## event 201: setting character and province in game start by
+#                   forcing dragon religion
+#                   setting egg culture for dragon egg
+#                   giving adult dragon their flag
 ## event 202: converting character on birth or culture change
 ## event 203: converting province culture on religion change
 
@@ -123,6 +125,7 @@ character_event = {
             }
             religion = Dragon_religion
             dragon_get_dragon_egg_culture_if_child_effect = yes
+            dragon_get_true_adult_effect = yes
         }
         any_province = {
             limit = {
@@ -260,7 +263,14 @@ province_event = {
 ## event 205: hidden event for adulthood (to show parent player)
 ## event 206: notification for culture change
 #               and removing education trait (if conclave is disable)
-#                   as education trait will be added at 25
+#                   as education trait will be added after passing the 5 trials
+## event 207: trial tombola for dragon
+## event 208-209: snow trial
+## event 210-211: fire trial
+## event 212-213: water trial
+## event 214-215: sand trial
+## event 216-217: poison trial
+## event 218: conclusion (give education trait and intelligence trait)
 
 # event 205
 character_event = {
@@ -414,6 +424,79 @@ character_event = {
                     culture = yellow_dragon
                 }
             }
+        }
+    }
+}
+
+# event 207
+character_event = {
+    id = ani_plus.207
+
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        culture_group = dragon_group
+        NOT = { culture = dragon_culture } # not an egg
+        NOT = { has_character_flag = is_true_dragon_adult }
+    }
+
+    immediate = {
+        random_list = {
+            1 = {
+                trigger = { always = no }
+            }
+            1 = {
+                trigger = { always = no }
+            }
+            1 = {
+                trigger = { always = no }
+            }
+            1 = {
+                trigger = { always = no }
+            }
+            1 = {
+                trigger = { always = no }
+            }
+            fallback  = {
+                if = {
+                    limit = {
+                        father = {
+                            ai = no
+                        }
+                    }
+                    father = {
+                        character_event = { id = ani_plus.218 }
+                    }
+                }
+                else_if = {
+                    limit = {
+                        mother = {
+                            ai = no
+                        }
+                    }
+                    mother = {
+                        character_event = { id = ani_plus.218 }
+                    }
+                }
+                else = {
+                    character_event = { id = ani_plus.218 }
+                }
+            }
+        }
+    }
+}
+
+# event 218
+character_event = {
+    id = ani_plus.218
+
+    is_triggered_only = yes
+    hide_window = yes # to act as a temporary event before implementation
+
+    immediate = {
+        FROM = {
+            set_character_flag = is_true_dragon_adult
         }
     }
 }

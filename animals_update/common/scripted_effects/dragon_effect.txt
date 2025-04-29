@@ -102,3 +102,14 @@ dragon_set_child_dragon_flag_effect = {
         set_character_flag = yellow_dragon_potential
     }
 }
+
+# character scope
+dragon_get_true_adult_effect = {
+    if = {
+        limit = {
+            is_adult = yes
+            culture_group = dragon_group
+        }
+        set_character_flag = is_true_dragon_adult
+    }
+}
