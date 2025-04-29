@@ -259,7 +259,7 @@ province_event = {
     }
 }
 
-#### event 205 to  : dragon education events
+#### event 205 to 218 : dragon education events
 ## event 205: hidden event for adulthood (to show parent player)
 ## event 206: notification for culture change
 #               and removing education trait (if conclave is disable)
@@ -424,6 +424,11 @@ character_event = {
                     culture = yellow_dragon
                 }
             }
+            clr_character_flag = white_dragon_potential
+            clr_character_flag = black_dragon_potential
+            clr_character_flag = blue_dragon_potential
+            clr_character_flag = red_dragon_potential
+            clr_character_flag = yellow_dragon_potential
         }
     }
 }
@@ -439,6 +444,7 @@ character_event = {
         culture_group = dragon_group
         NOT = { culture = dragon_culture } # not an egg
         NOT = { has_character_flag = is_true_dragon_adult }
+        war = no
     }
 
     immediate = {
