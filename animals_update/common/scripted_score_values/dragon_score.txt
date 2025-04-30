@@ -1,0 +1,84 @@
+
+dragon_trial_choice_1_score = {
+    modifier = {
+        factor = 10
+        trait = content
+    }
+    modifier = {
+        factor = 7
+        trait = slothful
+    }
+    modifier = {
+        factor = 2
+        trait = humble
+    }
+    modifier = {
+        factor = 3
+        trait = diligent
+    }
+}
+
+dragon_trial_choice_2_score = {
+    modifier = {
+        factor = 2
+        trait = arbitrary
+    }
+    modifier = {
+        factor = 1.5
+        trait = brave
+    }
+    modifier = {
+        factor = 2.5
+        trait = cynical
+    }
+    modifier = {
+        factor = 1.5
+        trait = stubborn
+    }
+    modifier = {
+        factor = 2
+        trait = envious
+    }
+    modifier = {
+        factor = 5
+        trait = diligent
+    }
+}
+
+dragon_trial_choice_3_score = {
+    modifier = {
+        factor = 10
+        trait  = ambitious
+    }
+    modifier = {
+        factor = 5
+        trait = brave
+    }
+    modifier = {
+        factor = 2
+        trait = stubborn
+    }
+    modifier = {
+        factor = 3
+        trait = proud
+    }
+}
+
+dragon_trial_choice_4_score = {
+    modifier = {
+        factor = 5
+        trait = craven
+    }
+    modifier = {
+        factor = 2
+        trait = paranoid
+    }
+    modifier = {
+        factor = 1.25
+        trait = humble
+    }
+    modifier = {
+        factor = 1.25
+        trait = patient
+    }
+}

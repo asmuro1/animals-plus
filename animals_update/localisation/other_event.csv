@@ -261,3 +261,13 @@ DESCA_ANI_206;[From.GetFullName] just hatched from its egg. [From.GetSheHeCap] s
 DESCB_ANI_206;I am finnaly outside of my egg, I can now be a proud dragon!;Je suis enfin sorti de mon oeuf, je peux enfin être un vrai dragon!;;;;;;;;;;;;x
 OPTA_ANI_206;[From.GetSheHeCap] still need to leanr many things;[From.GetSheHeCap] a quand même besoin d'apprendre beaucoup de choses!;;;;;;;;;;;;x
 OPTB_ANI_206;I am destined for greatness!;Je serais le meilleur dragon!;;;;;;;;;;;;x
+DESC_ANI_208;It is time to go through the snow trial. As a trial, I should go on an virtual space and learn its secrets. But I have a choice between 4 differents snow-covered space;C'est l'heure de passer l'épreuve de la neige. Comme les autres épreuves, je dois me rendre dans un espace virtuel et apprendre ces secrets. On me laisse tout de même le choix entre 4 espaces recouvert de neige...;;;;;;;;;;;;x
+OPTA_ANI_208;I choose the smallest;Je choisi le plus petit;;;;;;;;;;;;x
+OPTB_ANI_208;I choose the bigger;Je choisi le plus grand;;;;;;;;;;;;x
+OPTC_ANI_208;I choose the softest;Je choisi le plus simple;;;;;;;;;;;;x
+OPTD_ANI_208;I choose the harshest;Je choisi le plus rude;;;;;;;;;;;;x
+DESC_ANI_209;I just gone out of the trial. I did have the sensation that months or maybe years did pass... But not only one day.;Je viens tout juste de sortir de l'épreuve. J'ai eu la sensation qu'elle a duré plusieurs mois voir plusieurs années, alors qu'un jour s'est passé.;;;;;;;;;;;;x
+OPTA_ANI_209;worst of it, it was for almost nothing;pour un apprentissaage inutile;;;;;;;;;;;;x
+OPTB_ANI_209;at least, I learned some minor skills;j'ai au moins quelques capacités passables;;;;;;;;;;;;x
+OPTC_ANI_209;it was still a good exercise!;C'était au moins un bon exercice!;;;;;;;;;;;;x
+OPTD_ANI_209;i fell like it was something easy to do;je trouve que c'était quelque chose de facile;;;;;;;;;;;;x

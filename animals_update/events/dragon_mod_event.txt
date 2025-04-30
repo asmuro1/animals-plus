@@ -450,7 +450,13 @@ character_event = {
     immediate = {
         random_list = {
             1 = {
-                trigger = { always = no }
+                trigger = {
+                    NOT = {
+                        has_character_flag = snow_trial_realized
+                    }
+                }
+
+                character_event = { id = ani_plus.208 }
             }
             1 = {
                 trigger = { always = no }
@@ -493,6 +499,267 @@ character_event = {
     }
 }
 
+# event 208
+character_event = {
+    id = ani_plus.208
+
+    is_triggered_only = yes
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    desc = DESC_ANI_208
+
+    option = {
+        name = OPTA_ANI_208
+        set_character_flag = dragon_snow_normal
+        
+        ai_chance = {
+            factor = 10
+            
+            dragon_trial_choice_1_score = yes
+        }
+    }
+    option = {
+        name = OPTB_ANI_208
+        set_character_flag = dragon_snow_hard
+
+        ai_chance = {
+            factor = 10
+
+            dragon_trial_choice_2_score = yes
+        }
+    }
+    option = {
+        name = OPTC_ANI_208
+        set_character_flag = dragon_snow_all_for_all
+
+        ai_chance = {
+            factor = 10
+
+            dragon_trial_choice_3_score = yes
+        }
+    }
+    option = {
+        name = OPTD_ANI_208
+        set_character_flag = dragon_snow_safe
+
+        ai_chance = {
+            factor = 10
+
+            dragon_trial_choice_4_score = yes
+        }
+    }
+
+    after = {
+        hidden_tooltip = {
+            set_character_flag = snow_trial_realized
+
+            random_list = {
+
+                40 = {
+                    trigger = {
+                        NOT = {
+                            has_character_flag = dragon_snow_safe
+                        }
+                    }
+                    modifier = {
+                        factor = 0.80
+                        has_character_flag = dragon_snow_normal
+                    }
+                    modifier = {
+                        factor = 1.5
+                        learning = 5
+						NOT = { learning = 10}
+                    }
+                    modifier = {
+                        factor = 0.5
+                        NAND = {
+                            learning = 2
+                            culture = white_dragon
+                        }
+                    }
+                    modifier = {
+                        factor = 1.25
+                        trait = lustful
+                    }
+                    modifier = {
+                        factor = 1.25
+                        trait = slothful
+                    }
+                    modifier = {
+                        factor = 1.5
+                        trait = zealous
+                    }
+                    set_character_flag = dragon_snow_level_1
+                }
+                40 = {
+                    trigger = {
+                        NOT = {
+                            has_character_flag = dragon_snow_all_for_all
+                        }
+                    }
+                    modifier = {
+                        factor = 0.80
+                        has_character_flag = dragon_snow_normal
+                    }
+                    modifier = {
+                        factor = 2
+                        learning = 10
+						NOT = { learning = 15}
+                    }
+                    modifier = {
+                        factor = 0.5
+                        NAND = {
+                            learning = 5
+                            culture = white_dragon
+                        }
+                    }
+                    modifier = {
+                        factor = 1.25
+                        trait = envious
+                    }
+                    modifier = {
+                        factor = 1.25
+                        trait = proud
+                    }
+                    modifier = {
+                        factor = 1.25
+                        trait = zealous
+                    }
+                    set_character_flag = dragon_snow_level_2
+                }
+                40 = {
+                    trigger = {
+                        NOR = {
+                            has_character_flag = dragon_snow_hard
+                            has_character_flag = dragon_snow_all_for_all
+                        }
+                    }
+                    modifier = {
+                        factor = 2
+                        learning = 15
+						NOT = { learning = 20 }
+                    }
+                    modifier = {
+                        factor = 0.5
+                        NAND = {
+                            learning = 10
+                            culture = white_dragon
+                        }
+                    }
+                    modifier = {
+                        factor = 1.25
+                        trait = chaste
+                    }
+                    modifier = {
+                        factor = 1.5
+                        trait = erudite
+                    }
+                    set_character_flag = dragon_snow_level_3
+                }
+                40 = {
+                    trigger = {
+                        NOR = {
+                            has_character_flag = dragon_snow_normal
+                            has_character_flag = dragon_snow_safe
+                        }
+                    }
+                    modifier = {
+                        factor = 2
+                        learning = 20
+                    }
+                    modifier = {
+                        factor = 0.5
+                        NAND = {
+                            learning = 15
+                            culture = white_dragon
+                        }
+                    }
+                    modifier = {
+                        factor = 1.25
+                        trait = humble
+                    }
+                    modifier = {
+                        factor = 1.5
+                        trait = erudite
+                    }
+                    set_character_flag = dragon_snow_level_4
+                }
+            }
+
+            clr_character_flag = dragon_snow_normal
+            clr_character_flag = dragon_snow_hard
+            clr_character_flag = dragon_snow_all_for_all
+            clr_character_flag = dragon_snow_safe
+
+            character_event = { id = ani_plus.209 }
+        }
+    }
+}
+
+# event 209
+character_event = {
+    id = ani_plus.209
+
+    is_triggered_only = yes
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    desc = DESC_ANI_209
+
+    option = {
+        name = OPTA_ANI_209
+        trigger = {
+            has_character_flag = dragon_snow_level_1
+        }
+
+        hidden_tooltip = {
+            change_variable = {
+                which = dragon_education_score
+                value = 1
+            }
+        }
+    }
+    option = {
+        name = OPTB_ANI_209
+        trigger = {
+            has_character_flag = dragon_snow_level_2
+        }
+        hidden_tooltip = {
+            change_variable = {
+                which = dragon_education_score
+                value = 2
+            }
+        }
+        
+    }
+    option = {
+        name = OPTC_ANI_209
+        trigger = {
+            has_character_flag = dragon_snow_level_3
+        }
+
+        hidden_tooltip = {
+            change_variable = {
+                which = dragon_education_score
+                value = 3
+            }
+        }
+    }
+    option = {
+        name = OPTD_ANI_209
+        trigger = {
+            has_character_flag = dragon_snow_level_4
+        }
+        hidden_tooltip = {
+            change_variable = {
+                which = dragon_education_score
+                value = 4
+            }
+        }
+    }
+}
+
 # event 218
 character_event = {
     id = ani_plus.218
@@ -503,6 +770,20 @@ character_event = {
     immediate = {
         FROM = {
             set_character_flag = is_true_dragon_adult
+
+
+
+        }
+    }
+    after = {
+        hidden_tooltip = {
+            FROM = {
+                # removing variable from save
+                set_variable = {
+                    which = dragon_education_score
+                    value = 0
+                }
+            }
         }
     }
 }
