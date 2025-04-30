@@ -449,7 +449,7 @@ character_event = {
 
     immediate = {
         random_list = {
-            1 = {
+            1 = { # snow trial
                 trigger = {
                     NOT = {
                         has_character_flag = snow_trial_realized
@@ -458,16 +458,22 @@ character_event = {
 
                 character_event = { id = ani_plus.208 }
             }
-            1 = {
+            1 = { # fire trial
+                trigger = {
+                    NOT = {
+                        has_character_flag = fire_trial_realized
+                    }
+                }
+
+                character_event = { id = ani_plus.210 }
+            }
+            1 = { # water trial
                 trigger = { always = no }
             }
-            1 = {
+            1 = { # sand trial
                 trigger = { always = no }
             }
-            1 = {
-                trigger = { always = no }
-            }
-            1 = {
+            1 = { # poison trial
                 trigger = { always = no }
             }
             fallback  = {
@@ -750,6 +756,322 @@ character_event = {
         name = OPTD_ANI_209
         trigger = {
             has_character_flag = dragon_snow_level_4
+        }
+        hidden_tooltip = {
+            change_variable = {
+                which = dragon_education_score
+                value = 4
+            }
+        }
+    }
+}
+
+# event 210
+character_event = {
+    id = ani_plus.210
+
+    is_triggered_only = yes
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    desc = DESC_ANI_210
+
+	# option has same localisation as the first event
+    option = {
+        name = OPTA_ANI_208
+        set_character_flag = dragon_fire_normal
+        
+        ai_chance = {
+            factor = 10
+            
+            dragon_trial_choice_1_score = yes
+        }
+    }
+    option = {
+        name = OPTB_ANI_208
+        set_character_flag = dragon_fire_hard
+
+        ai_chance = {
+            factor = 10
+
+            dragon_trial_choice_2_score = yes
+        }
+    }
+    option = {
+        name = OPTC_ANI_208
+        set_character_flag = dragon_fire_all_for_all
+
+        ai_chance = {
+            factor = 10
+
+            dragon_trial_choice_3_score = yes
+        }
+    }
+    option = {
+        name = OPTD_ANI_208
+        set_character_flag = dragon_fire_safe
+
+        ai_chance = {
+            factor = 10
+
+            dragon_trial_choice_4_score = yes
+        }
+    }
+
+	after = {
+		hidden_tooltip = {
+			set_character_flag = fire_trial_realized
+
+			random_list = {
+
+				40 = {
+					trigger = {
+						NOT = {
+							has_character_flag = dragon_fire_safe
+						}
+					}
+					modifier = {
+						factor = 0.80
+						has_character_flag = dragon_fire_normal
+					}
+					modifier = {
+						factor = 1.5
+						martial = 5
+						NOT = { martial = 10 } 
+					}
+					modifier = {
+						factor = 0.5
+						NAND = {
+							martial = 2
+							culture = red_dragon
+						}
+					}
+					modifier = {
+						factor = 1.5
+						trait = chaste
+					}
+					modifier = {
+						factor = 1.5
+						trait = charitable
+					}
+					modifier = {
+						factor = 4
+						trait = gluttonous
+					}
+					modifier = {
+						factor = 7
+						trait = slothful
+					}
+					modifier = {
+						factor = 1.25
+						trait = deceitful
+					}
+					modifier = {
+						factor = 1.1
+						trait = shy
+					}
+
+
+					set_character_flag = dragon_fire_level_1
+				}
+				40 = {
+					trigger = {
+						NOT = {
+							has_character_flag = dragon_fire_all_for_all
+						}
+					}
+					modifier = {
+						factor = 0.80
+						has_character_flag = dragon_fire_normal
+					}
+					modifier = {
+						factor = 2
+						martial = 10
+						NOT = { martial = 15}
+					}
+					modifier = {
+						factor = 0.5
+						NAND = {
+							martial = 5
+							culture = red_dragon
+						}
+					}
+					modifier = {
+						factor = 1.5
+						trait = gluttonous
+					}
+					modifier = {
+						factor = 2
+						trait = slothful
+					}
+					modifier = {
+						factor = 3
+						trait = shy
+					}
+					modifier = {
+						factor = 2
+						trait = content
+					}
+					modifier = {
+						factor = 1.3
+						trait = arbitrary
+					}
+					
+					set_character_flag = dragon_fire_level_2
+				}
+				40 = {
+					trigger = {
+						NOR = {
+							has_character_flag = dragon_fire_hard
+							has_character_flag = dragon_fire_all_for_all
+						}
+					}
+					modifier = {
+						factor = 2
+						martial = 15
+						NOT = { martial = 20 }
+					}
+					modifier = {
+						factor = 0.5
+						NAND = {
+							martial = 10
+							culture = red_dragon
+						}
+					}
+					modifier = {
+						factor = 2
+						trait = content
+					}
+					modifier = {
+						factor = 1.1
+						trait = arbitrary
+					}
+					modifier = {
+						factor = 3
+						trait = wroth
+					}
+					modifier = {
+						factor = 1.5
+						trait = proud
+					}
+					modifier = {
+						factor = 2
+						trait = brave
+					}
+					modifier ={
+						factor = 2
+						trait = cruel
+					}
+					modifier = {
+						factor = 1.3
+						trait = stubborn
+					}
+					
+
+					set_character_flag = dragon_fire_level_3
+				}
+				40 = {
+					trigger = {
+						NOR = {
+							has_character_flag = dragon_fire_normal
+							has_character_flag = dragon_fire_safe
+						}
+					}
+					modifier = {
+						factor = 2
+						martial = 20
+					}
+					modifier = {
+						factor = 0.5
+						NAND = {
+							martial = 15
+							culture = red_dragon
+						}
+					}
+					modifier = {
+						factor = 2
+						trait = wroth
+					}
+					modifier = {
+						factor = 3
+						trait = brave
+					}
+					modifier = {
+						factor = 1.5
+						trait = cruel
+					}
+					modifier = {
+						factor = 1.1
+						trait = diligent
+					}
+
+					set_character_flag = dragon_fire_level_4
+                }
+            }
+
+            clr_character_flag = dragon_fire_normal
+            clr_character_flag = dragon_fire_hard
+            clr_character_flag = dragon_fire_all_for_all
+            clr_character_flag = dragon_fire_safe
+
+            character_event = { id = ani_plus.211 }
+        }
+    }
+}
+
+# event 211 - same loc as event 209
+character_event = {
+    id = ani_plus.211
+
+    is_triggered_only = yes
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    desc = DESC_ANI_209
+
+    option = {
+        name = OPTA_ANI_209
+        trigger = {
+            has_character_flag = dragon_fire_level_1
+        }
+
+        hidden_tooltip = {
+            change_variable = {
+                which = dragon_education_score
+                value = 1
+            }
+        }
+    }
+    option = {
+        name = OPTB_ANI_209
+        trigger = {
+            has_character_flag = dragon_fire_level_2
+        }
+        hidden_tooltip = {
+            change_variable = {
+                which = dragon_education_score
+                value = 2
+            }
+        }
+        
+    }
+    option = {
+        name = OPTC_ANI_209
+        trigger = {
+            has_character_flag = dragon_fire_level_3
+        }
+
+        hidden_tooltip = {
+            change_variable = {
+                which = dragon_education_score
+                value = 3
+            }
+        }
+    }
+    option = {
+        name = OPTD_ANI_209
+        trigger = {
+            has_character_flag = dragon_fire_level_4
         }
         hidden_tooltip = {
             change_variable = {

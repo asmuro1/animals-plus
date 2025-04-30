@@ -261,7 +261,7 @@ DESCA_ANI_206;[From.GetFullName] just hatched from its egg. [From.GetSheHeCap] s
 DESCB_ANI_206;I am finnaly outside of my egg, I can now be a proud dragon!;Je suis enfin sorti de mon oeuf, je peux enfin être un vrai dragon!;;;;;;;;;;;;x
 OPTA_ANI_206;[From.GetSheHeCap] still need to leanr many things;[From.GetSheHeCap] a quand même besoin d'apprendre beaucoup de choses!;;;;;;;;;;;;x
 OPTB_ANI_206;I am destined for greatness!;Je serais le meilleur dragon!;;;;;;;;;;;;x
-DESC_ANI_208;It is time to go through the snow trial. As a trial, I should go on an virtual space and learn its secrets. But I have a choice between 4 differents snow-covered space;C'est l'heure de passer l'épreuve de la neige. Comme les autres épreuves, je dois me rendre dans un espace virtuel et apprendre ces secrets. On me laisse tout de même le choix entre 4 espaces recouvert de neige...;;;;;;;;;;;;x
+DESC_ANI_208;It is time to go through the snow trial. As a trial, I should go on an alternate space and learn its secrets. But I have a choice between 4 differents snow-covered space;C'est l'heure de passer l'épreuve de la neige. Comme les autres épreuves, je dois me rendre dans une réalité alternative et apprendre ces secrets. On me laisse tout de même le choix entre 4 espaces recouvert de neige...;;;;;;;;;;;;x
 OPTA_ANI_208;I choose the smallest;Je choisi le plus petit;;;;;;;;;;;;x
 OPTB_ANI_208;I choose the bigger;Je choisi le plus grand;;;;;;;;;;;;x
 OPTC_ANI_208;I choose the softest;Je choisi le plus simple;;;;;;;;;;;;x
@@ -271,3 +271,4 @@ OPTA_ANI_209;worst of it, it was for almost nothing;pour un apprentissaage inuti
 OPTB_ANI_209;at least, I learned some minor skills;j'ai au moins quelques capacités passables;;;;;;;;;;;;x
 OPTC_ANI_209;it was still a good exercise!;C'était au moins un bon exercice!;;;;;;;;;;;;x
 OPTD_ANI_209;i fell like it was something easy to do;je trouve que c'était quelque chose de facile;;;;;;;;;;;;x
+DESC_ANI_210;The fire trial is comming. As I enter its alternate space, I saw 4 path that link to a different room. I can easily guess that that choice will decide the result. What room choosing?;L'épreuve du feu vient de commencer. En tant que dragon, je suis obligé de rentrer dans la réalité alternative lié à l'épreuve. A peine rentré dedans que je dois faire un choix, 4 chemins se trouvent devant moi qui mènent à une pièce. Ce qui signifie que je dois choisir la pièce de l'épreuve;;;;;;;;;;;;x
