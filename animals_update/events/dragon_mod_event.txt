@@ -455,7 +455,7 @@ character_event = {
                         has_character_flag = snow_trial_realized
                     }
                 }
-
+                set_character_flag = snow_trial_realized
                 character_event = { id = ani_plus.208 }
             }
             1 = { # fire trial
@@ -464,7 +464,7 @@ character_event = {
                         has_character_flag = fire_trial_realized
                     }
                 }
-
+                set_character_flag = fire_trial_realized
                 character_event = { id = ani_plus.210 }
             }
             1 = { # water trial
@@ -558,8 +558,6 @@ character_event = {
 
     after = {
         hidden_tooltip = {
-            set_character_flag = snow_trial_realized
-
             random_list = {
 
                 40 = {
@@ -820,8 +818,6 @@ character_event = {
 
 	after = {
 		hidden_tooltip = {
-			set_character_flag = fire_trial_realized
-
 			random_list = {
 
 				40 = {
