@@ -468,7 +468,13 @@ character_event = {
                 character_event = { id = ani_plus.210 }
             }
             1 = { # water trial
-                trigger = { always = no }
+                trigger = {
+                    NOT = {
+                        has_character_flag = water_trial_realized
+                    }
+                }
+                set_character_flag = water_trial_realized
+                character_event = { id = ani_plus.212 }
             }
             1 = { # sand trial
                 trigger = { always = no }
@@ -505,7 +511,7 @@ character_event = {
     }
 }
 
-# event 208
+# event 208 - snow
 character_event = {
     id = ani_plus.208
 
@@ -560,7 +566,7 @@ character_event = {
         hidden_tooltip = {
             random_list = {
 
-                40 = {
+                100 = {
                     trigger = {
                         NOT = {
                             has_character_flag = dragon_snow_safe
@@ -596,7 +602,7 @@ character_event = {
                     }
                     set_character_flag = dragon_snow_level_1
                 }
-                40 = {
+                100 = {
                     trigger = {
                         NOT = {
                             has_character_flag = dragon_snow_all_for_all
@@ -632,7 +638,7 @@ character_event = {
                     }
                     set_character_flag = dragon_snow_level_2
                 }
-                40 = {
+                100 = {
                     trigger = {
                         NOR = {
                             has_character_flag = dragon_snow_hard
@@ -661,7 +667,7 @@ character_event = {
                     }
                     set_character_flag = dragon_snow_level_3
                 }
-                40 = {
+                100 = {
                     trigger = {
                         NOR = {
                             has_character_flag = dragon_snow_normal
@@ -764,7 +770,7 @@ character_event = {
     }
 }
 
-# event 210
+# event 210 - fire
 character_event = {
     id = ani_plus.210
 
@@ -820,7 +826,7 @@ character_event = {
 		hidden_tooltip = {
 			random_list = {
 
-				40 = {
+				100 = {
 					trigger = {
 						NOT = {
 							has_character_flag = dragon_fire_safe
@@ -870,7 +876,7 @@ character_event = {
 
 					set_character_flag = dragon_fire_level_1
 				}
-				40 = {
+				100 = {
 					trigger = {
 						NOT = {
 							has_character_flag = dragon_fire_all_for_all
@@ -915,7 +921,7 @@ character_event = {
 					
 					set_character_flag = dragon_fire_level_2
 				}
-				40 = {
+				100 = {
 					trigger = {
 						NOR = {
 							has_character_flag = dragon_fire_hard
@@ -966,7 +972,7 @@ character_event = {
 
 					set_character_flag = dragon_fire_level_3
 				}
-				40 = {
+				100 = {
 					trigger = {
 						NOR = {
 							has_character_flag = dragon_fire_normal
@@ -1076,6 +1082,286 @@ character_event = {
             }
         }
     }
+}
+
+# event 212 - water
+character_event = {
+    id = ani_plus.212
+
+    is_triggered_only = yes
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    desc = DESC_ANI_212
+
+	# option has same localisation as the first event
+    option = {
+        name = OPTA_ANI_208
+        set_character_flag = dragon_water_normal
+        
+        ai_chance = {
+            factor = 10
+            
+            dragon_trial_choice_1_score = yes
+        }
+    }
+    option = {
+        name = OPTB_ANI_208
+        set_character_flag = dragon_water_hard
+
+        ai_chance = {
+            factor = 10
+
+            dragon_trial_choice_2_score = yes
+        }
+    }
+    option = {
+        name = OPTC_ANI_208
+        set_character_flag = dragon_water_all_for_all
+
+        ai_chance = {
+            factor = 10
+
+            dragon_trial_choice_3_score = yes
+        }
+    }
+    option = {
+        name = OPTD_ANI_208
+        set_character_flag = dragon_water_safe
+
+        ai_chance = {
+            factor = 10
+
+            dragon_trial_choice_4_score = yes
+        }
+    }
+
+	after = {
+		hidden_tooltip = {
+			random_list = {
+
+				100 = {
+					trigger = {
+						NOT = {
+							has_character_flag = dragon_water_safe
+						}
+					}
+					modifier = {
+						factor = 0.80
+						has_character_flag = dragon_water_normal
+					}
+					modifier = {
+						factor = 1.5
+						diplomacy = 5
+						NOT = { diplomacy = 10 } 
+					}
+					modifier = {
+						factor = 0.5
+						NAND = {
+							diplomacy = 2
+							culture = blue_dragon
+						}
+					}
+					modifier = {
+						factor = 1.5
+						trait = chaste
+					}
+					modifier = {
+						factor = 2
+						trait = greedy
+					}
+					modifier = {
+						factor = 1.5
+						trait = envious
+					}
+					modifier = {
+						factor = 2
+						trait  = proud
+					}
+
+
+					set_character_flag = dragon_water_level_1
+				}
+				100 = {
+					trigger = {
+						NOT = {
+							has_character_flag = dragon_water_all_for_all
+						}
+					}
+					modifier = {
+						factor = 0.80
+						has_character_flag = dragon_water_normal
+					}
+					modifier = {
+						factor = 2
+						diplomacy = 10
+                        NOT = { diplomacy = 15 }
+					}
+                    modifier = {
+                        factor = 0.5
+						NAND = {
+							diplomacy = 10
+							culture = blue_dragon
+						}
+                    }
+					modifier = {
+						factor = 2
+						trait = lustful
+					}
+					modifier = {
+						factor = 1.5
+						trait = gluttonous
+					}
+					modifier = {
+						factor = 1.5
+						trait = envious
+					}
+					modifier = {
+						factor = 2
+						trait = humble
+					}
+					
+					set_character_flag = dragon_water_level_2
+				}
+				100 = {
+					trigger = {
+						NOR = {
+							has_character_flag = dragon_water_hard
+							has_character_flag = dragon_water_all_for_all
+						}
+					}
+					modifier = {
+						factor = 2
+						diplomacy = 15
+						NOT = { diplomacy = 20 }
+					}
+					modifier = {
+						factor = 0.5
+						NAND = {
+							diplomacy = 10
+							culture = blue_dragon
+						}
+					}
+					modifier = {
+						factor = 2
+						trait = temperate
+					}
+					modifier = {
+						factor = 1.5
+						trait = patient
+					}
+					modifier = {
+						factor = 1.25
+						trait = kind
+					}
+
+					set_character_flag = dragon_water_level_3
+				}
+				100 = {
+					trigger = {
+						NOR = {
+							has_character_flag = dragon_water_normal
+							has_character_flag = dragon_water_safe
+						}
+					}
+					modifier = {
+						factor = 2
+						diplomacy = 20
+					}
+					modifier = {
+						factor = 0.5
+						NAND = {
+							diplomacy = 15
+							culture = blue_dragon
+						}
+					}
+					modifier = {
+						factor = 1.5
+						trait = charitable
+					}
+					modifier = {
+						factor = 1.5
+						trait = patient
+					}
+					modifier = {
+						factor = 1.75
+						trait = kind
+					}
+
+					set_character_flag = dragon_water_level_4
+                }
+            }
+
+            clr_character_flag = dragon_water_normal
+            clr_character_flag = dragon_water_hard
+            clr_character_flag = dragon_water_all_for_all
+            clr_character_flag = dragon_water_safe
+
+            character_event = { id = ani_plus.211 }
+        }
+    }
+}
+
+# event 213 - same loc as event 209
+character_event = {
+	id = ani_plus.213
+
+	is_triggered_only = yes
+	border = GFX_event_normal_frame_diplomacy
+	picture = GFX_evt_council
+
+	desc = DESC_ANI_209
+
+	option = {
+		name = OPTA_ANI_209
+		trigger = {
+			has_character_flag = dragon_water_level_1
+		}
+
+		hidden_tooltip = {
+			change_variable = {
+				which = dragon_education_score
+				value = 1
+			}
+		}
+	}
+	option = {
+		name = OPTB_ANI_209
+		trigger = {
+			has_character_flag = dragon_water_level_2
+		}
+		hidden_tooltip = {
+			change_variable = {
+				which = dragon_education_score
+				value = 2
+			}
+		}
+	}
+	option = {
+		name = OPTC_ANI_209
+		trigger = {
+			has_character_flag = dragon_water_level_3
+		}
+
+		hidden_tooltip = {
+			change_variable = {
+				which = dragon_education_score
+				value = 3
+			}
+		}
+	}
+	option = {
+		name = OPTD_ANI_209
+		trigger = {
+			has_character_flag = dragon_water_level_4
+		}
+		hidden_tooltip = {
+			change_variable = {
+				which = dragon_education_score
+				value = 4
+			}
+		}
+	}
 }
 
 # event 218

@@ -708,7 +708,7 @@ fort = {
         build_time = 30000
         ai_creation_factor = 30
 
-        dragon_academy_level = 1
+        dragon_academy_level = 2
     }
     
     fo_drg_pascific_1 = {
