@@ -1,0 +1,103 @@
+decisions = {
+    dragon_lay_egg = {
+        is_high_prio = yes
+        ai_check_interval = 14
+
+        potential = {
+            culture_group = dragon_group
+            is_landed = yes
+        }
+        allow = {
+            culture_group = dragon_group
+            NOT = { culture = dragon_culture }
+            war = no
+            is_incapable = no
+            is_married = yes
+            conditional_tooltip = {
+                trigger = { is_married = yes }
+                spouse = {
+                    culture_group = dragon_group
+                }
+            }
+            custom_tooltip = { # max one every 2 years
+                text = TT_dragon_did_not_lay_egg_recently
+                
+                NOT = {
+                    had_character_flag = {
+                        flag = dragon_layed_egg
+                        years <= 2
+                    }
+                }
+            }
+            in_command = no
+        }
+
+        effect = {
+            if = {
+                limit = {
+                    is_female = yes
+                }
+
+                create_character = {
+                    age = 0
+                    random_traits = no
+                    female = random
+                    culture = dragon_culture
+                    religion = Dragon_religion
+                    dynasty = ROOT
+
+                    genetic_father = spouse
+                    genetic_mother = ROOT
+                }
+                spouse = {
+                    new_character = {
+                        set_mother = ROOT
+                        set_father = PREV
+                    }
+                }
+            }
+            else = {
+                create_character = {
+                    age = 0
+                    random_traits = no
+                    female = random
+                    culture = dragon_culture
+                    religion = Dragon_religion
+                    dynasty = ROOT
+
+                    genetic_father = ROOT
+                    genetic_mother = spouse
+                }
+                spouse = {
+                    new_character = {
+                        set_father = ROOT
+                        set_mother = PREV
+                    }
+                }
+            }
+
+            hidden_tooltip = {
+                clr_character_flag = dragon_layed_egg
+                set_character_flag = dragon_layed_egg
+                spouse = {
+                    clr_character_flag = dragon_layed_egg
+                    set_character_flag = dragon_layed_egg
+                }
+
+                new_character = {
+                    set_father_dragon_flag_effect = yes
+                    set_mother_dragon_flag_effect = yes
+                }
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0.2
+                has_living_children = yes
+            }
+        }
+    }
+}

@@ -343,3 +343,9 @@ king_guards_adj;royal;royal;;;;;;;;;;;;x
 emperor_guards_adj;imperial;impériale;;;;;;;;;;;;x
 king_guards_rank;king;roi;;;;;;;;;;;;x
 emperor_guards_rank;emperor;empereur;;;;;;;;;;;;x
+
+#### DRAGON update
+dragon_lay_egg;Lay an egg;pond un œuf;;;;;;;;;;;;x
+dragon_lay_egg_desc;The only way a dragon has to reproduce is to lay a draggon egg. Even if the egg might never hatch, laying one is still necessary;La seule méthode qu'un dragon a pour se reproduire est de pondre un œuf. Même s'il n'est pas sûre qu'il éclose, en pondre un est mieux que rien du tout;;;;;;;;;;;;x
+
+TT_dragon_did_not_lay_egg_recently;Did not lay an egg recently;N'a pas pondu d'œuf récemment;;;;;;;;;;;;x

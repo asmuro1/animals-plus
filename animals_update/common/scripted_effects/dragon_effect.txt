@@ -162,7 +162,7 @@ set_red_dragon_education_effect = {
 add_dragon_university_score_effect = {
     if = {
         limit = {
-            has_landed_title = yes
+            is_landed = yes
         }
         capital_scope = {
             save_event_target_as = potential_university_target
@@ -243,5 +243,33 @@ add_intelligence_trait_effect = {
     }
     else = {
         add_trait = genius
+    }
+}
+
+set_father_dragon_flag_effect = {
+    father = {
+        trigger_switch = {
+            on_trigger = culture
+
+            white_dragon = { PREV = { set_character_flag = white_dragon_potential }}
+            black_dragon = { PREV = { set_character_flag = black_dragon_potential }}
+            blue_dragon = { PREV = { set_character_flag = blue_dragon_potential }}
+            yellow_dragon = { PREV = { set_character_flag = yellow_dragon_potential }}
+            red_dragon = { PREV = { set_character_flag = red_dragon_potential }}
+        }
+    }
+}
+
+set_mother_dragon_flag_effect = {
+    mother = {
+        trigger_switch = {
+            on_trigger = culture
+
+            white_dragon = { PREV = { set_character_flag = white_dragon_potential }}
+            black_dragon = { PREV = { set_character_flag = black_dragon_potential }}
+            blue_dragon = { PREV = { set_character_flag = blue_dragon_potential }}
+            yellow_dragon = { PREV = { set_character_flag = yellow_dragon_potential }}
+            red_dragon = { PREV = { set_character_flag = red_dragon_potential }}
+        }
     }
 }
