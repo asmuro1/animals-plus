@@ -1,0 +1,14 @@
+spriteTypes = {
+    spriteType = {
+        name = "GFX_dragon_egg_artifact"
+		texturefile = "gfx\\artifacts\\dragon_egg_artifact.tga"
+		noOfFrames = 1
+		norefcount = yes
+    }
+    spriteType = {
+        name = "GFX_dragon_egg_artifact_small"
+		texturefile = "gfx\\artifacts\\dragon_egg_artifact_small.tga"
+		noOfFrames = 1
+		norefcount = yes
+    }
+}

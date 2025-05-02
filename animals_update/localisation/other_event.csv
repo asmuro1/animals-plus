@@ -277,3 +277,9 @@ DESC_ANI_214;I did want to see a sandstorm. I could see them sometimes. But I di
 DESC_ANI_216;What is the common cause of unnatural death for a dragon? The poison! To apprehend that fear, the dragon poison trial exist. By going in a lake of false poison, I must learn build resistance to it. But whose lake shoold I choose?;Comme le poison est la raison de décès non naturel la plus important chez les dragons, une épreuve dragonnique a été créer à ce sujet. Je dois donc, dans un espace alternatif faire trempette dans un lac de faux poison. Cependant une fois dedans j'ai le choix entre 4 lac, lequel choisir?;;;;;;;;;;;;x
 DESC_ANI_218;[From.GetDynName] finished all its trial, [From.GetSheHe] is now a true adult;[From.GetDynName] a fini les 5 épreuves draconniques. [From.GetSheHeCap] est maintenant un vrai adulte;;;;;;;;;;;;x
 OPT_ANI_218;finally!;Enfin!;;;;;;;;;;;;x
+DESC_ANI_219;As an egg, their is a chance that I never hatch. It seems that my life has come to an end...;En tant qu'œuf, il peut arriver de ne jamais éclore. Il semblerait que ce soit le cas pour moi;;;;;;;;;;;;x
+OPT_ANI_219;If only my hospital could have saved me...;Si seulement l'hôpital aurait pu me sauver...;;;;;;;;;;;;x
+DESCA_ANI_220;I just heard that one of my eggs could not hatch...;Je viens juste d'apprendre que l'un de mes œufs ne pourra pas éclore...;;;;;;;;;;;;x
+DESCB_ANI_220;I just heard that one of my eggs could not hatch. I don't know why, but I should build something to make them healthier;Je viens juste d'apprendre que l'un de mes œufs ne pourra pas éclore. Si seulement j'avais pus construire un lieu pour en prendre un plus grand soin;;;;;;;;;;;;x 
+OPTA_ANI_220;A sad newsUne mauvaise nouvelle;;;;;;;;;;;;x
+OPTB_ANI_220;I'll still keep it's egg;Je conserverai ces restes;;;;;;;;;;;;x

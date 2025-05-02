@@ -685,7 +685,7 @@ fort = {
 
         dragon_academy_level = 2
     }
-    fo_drg_academy_3 = { 
+    fo_drg_academy_3 = {
         add_number_to_name = no
 
         potential = {

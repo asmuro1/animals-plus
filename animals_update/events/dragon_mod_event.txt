@@ -259,7 +259,7 @@ province_event = {
     }
 }
 
-#### event 205 to 218 : dragon education events
+#### event 205 to 220: dragon lifetime events
 ## event 205: hidden event for adulthood (to show parent player)
 ## event 206: notification for culture change
 #               and removing education trait (if conclave is disable)
@@ -271,6 +271,8 @@ province_event = {
 ## event 214-215: sand trial
 ## event 216-217: poison trial
 ## event 218: conclusion (give education trait and intelligence trait)
+## event 219: event to prevent dragon egg from hatching
+## event 220: player notification for its unborn child death
 
 # event 205
 character_event = {
@@ -2070,5 +2072,97 @@ character_event = {
 				clr_character_flag = dragon_poison_level_4
             }
         }
+    }
+}
+
+# event 219
+character_event = {
+    id = ani_plus.219
+
+    border = GFX_event_normal_frame_diplomacy
+	picture = GFX_evt_council
+
+	desc = DESC_ANI_219
+
+    culture = dragon_culture
+    trigger = {
+        culture = dragon_culture
+    }
+
+    mean_time_to_happen = {
+        years = 16 # 1 chance out of 2 to die
+
+        modifier = { # or delayed if hospital has incubator
+            factor = 5
+            location = {
+                hospital_has_building = ho_drg_incubator
+            }
+        }
+    }
+
+    option = {
+        name = OPT_ANI_219
+
+        death = {
+            reason = death_childbirth
+        }
+
+        if = {
+            limit = {
+                father = {
+                    ai = no
+                }
+            }
+
+            father = {
+                character_event = { id = ani_plus.220}
+            }
+        }
+        if = {
+            limit = {
+                mother = {
+                    ai = no
+                }
+            }
+
+            mother = {
+                character_event = { id = ani_plus.220}
+            }
+        }
+    }
+}
+
+# event 220
+character_event = {
+    id = ani_plus.220
+
+    is_triggered_only = yes
+    border = GFX_event_normal_frame_diplomacy
+	picture = GFX_evt_council
+
+	desc = DESCA_ANI_220
+
+    desc = {
+        text = DESCB_ANI_220
+        trigger = {
+            FROM = {
+                location = {
+                    hospital_has_building = ho_drg_incubator
+                }
+            }
+        }
+    }
+
+    option = {
+        name = OPTA_ANI_220
+        
+        FROM = {}
+    }
+
+    option = {
+        name = OPTB_ANI_220
+
+        FROM = {}
+        add_artifact = dragon_egg_artifact
     }
 }
