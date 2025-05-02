@@ -556,7 +556,7 @@ character_event = {
     }
     option = {
         name = OPTC_ANI_208
-        set_character_flag = dragon_snow_all_for_all
+        set_character_flag = dragon_snow_safe
 
         ai_chance = {
             factor = 10
@@ -566,7 +566,7 @@ character_event = {
     }
     option = {
         name = OPTD_ANI_208
-        set_character_flag = dragon_snow_safe
+        set_character_flag = dragon_snow_all_for_all
 
         ai_chance = {
             factor = 10
@@ -816,7 +816,7 @@ character_event = {
     }
     option = {
         name = OPTC_ANI_208
-        set_character_flag = dragon_fire_all_for_all
+        set_character_flag = dragon_fire_safe
 
         ai_chance = {
             factor = 10
@@ -826,7 +826,7 @@ character_event = {
     }
     option = {
         name = OPTD_ANI_208
-        set_character_flag = dragon_fire_safe
+        set_character_flag = dragon_fire_all_for_all
 
         ai_chance = {
             factor = 10
@@ -1130,7 +1130,7 @@ character_event = {
     }
     option = {
         name = OPTC_ANI_208
-        set_character_flag = dragon_water_all_for_all
+        set_character_flag = dragon_water_safe
 
         ai_chance = {
             factor = 10
@@ -1140,7 +1140,7 @@ character_event = {
     }
     option = {
         name = OPTD_ANI_208
-        set_character_flag = dragon_water_safe
+        set_character_flag = dragon_water_all_for_all
 
         ai_chance = {
             factor = 10
@@ -1410,7 +1410,7 @@ character_event = {
     }
     option = {
         name = OPTC_ANI_208
-        set_character_flag = dragon_sand_all_for_all
+        set_character_flag = dragon_sand_safe
 
         ai_chance = {
             factor = 10
@@ -1420,7 +1420,7 @@ character_event = {
     }
     option = {
         name = OPTD_ANI_208
-        set_character_flag = dragon_sand_safe
+        set_character_flag = dragon_sand_all_for_all
 
         ai_chance = {
             factor = 10
@@ -1718,7 +1718,7 @@ character_event = {
     }
     option = {
         name = OPTC_ANI_208
-        set_character_flag = dragon_poison_all_for_all
+        set_character_flag = dragon_poison_safe
 
         ai_chance = {
             factor = 10
@@ -1728,7 +1728,7 @@ character_event = {
     }
     option = {
         name = OPTD_ANI_208
-        set_character_flag = dragon_poison_safe
+        set_character_flag = dragon_poison_all_for_all
 
         ai_chance = {
             factor = 10
@@ -1893,7 +1893,7 @@ character_event = {
 						trait = deceitful
 					}
 					modifier = {
-						1.25
+						factor = 1.25
 						trait = brave
 					}
 
