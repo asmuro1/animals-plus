@@ -259,7 +259,7 @@ province_event = {
     }
 }
 
-#### event 205 to 219 : dragon education events
+#### event 205 to 218 : dragon education events
 ## event 205: hidden event for adulthood (to show parent player)
 ## event 206: notification for culture change
 #               and removing education trait (if conclave is disable)
@@ -271,7 +271,6 @@ province_event = {
 ## event 214-215: sand trial
 ## event 216-217: poison trial
 ## event 218: conclusion (give education trait and intelligence trait)
-## event 219: player notification
 
 # event 205
 character_event = {
@@ -449,6 +448,35 @@ character_event = {
     }
 
     immediate = {
+		if = {
+			limit = {
+				OR = { # has an education trait
+					trait = misguided_warrior
+					trait = tough_soldier
+					trait = skilled_tactician
+					trait = brilliant_strategist
+					trait = indulgent_wastrel
+					trait = thrifty_clerk
+					trait = fortune_builder
+					trait = midas_touched
+					trait = naive_appeaser
+					trait = underhanded_rogue
+					trait = charismatic_negotiator
+					trait = grey_eminence
+					trait = detached_priest
+					trait = martial_cleric
+					trait = scholarly_theologian
+					trait = mastermind_theologian
+					trait = amateurish_plotter
+					trait = flamboyant_schemer
+					trait = intricate_webweaver
+					trait = elusive_shadow
+				}
+			}
+			set_character_flag = is_true_dragon_adult
+			break = yes
+		}
+
         random_list = {
             1 = { # snow trial
                 trigger = {
@@ -495,7 +523,7 @@ character_event = {
                 set_character_flag = poison_trial_realized
                 character_event = { id = ani_plus.216 }
             }
-            fallback  = {
+            fallback  = { # all trials done
                 if = {
                     limit = {
                         father = {
@@ -1978,16 +2006,34 @@ character_event = {
     id = ani_plus.218
 
     is_triggered_only = yes
-    hide_window = yes # to act as a temporary event before implementation
+	border = GFX_event_normal_frame_diplomacy
+	picture = GFX_evt_council
+
+	desc = DESC_ANI_218
 
     immediate = {
         FROM = {
             set_character_flag = is_true_dragon_adult
-
-
-
+    		add_dragon_university_score_effect = yes
         }
     }
+
+	option = {
+		name = OPT_ANI_218
+		FROM = {
+			trigger_switch = {
+				on_trigger = culture
+				black_dragon	= { set_black_dragon_education_effect = yes }
+				white_dragon	= { set_white_dragon_education_effect = yes }
+				blue_dragon		= { set_blue_dragon_education_effect = yes }
+				yellow_dragon	= { set_yellow_dragon_education_effect = yes }
+				red_dragon		= { set_red_dragon_education_effect = yes }
+			}
+
+			add_intelligence_trait_effect = yes
+		}
+	}
+
     after = {
         hidden_tooltip = {
             FROM = {
@@ -1996,6 +2042,32 @@ character_event = {
                     which = dragon_education_score
                     value = 0
                 }
+				# removing trial flags
+				clr_character_flag = snow_trial_realized
+				clr_character_flag = fire_trial_realized
+				clr_character_flag = water_trial_realized
+				clr_character_flag = sand_trial_realized
+				clr_character_flag = poison_trial_realized
+				clr_character_flag = dragon_snow_level_1
+				clr_character_flag = dragon_snow_level_2
+				clr_character_flag = dragon_snow_level_3
+				clr_character_flag = dragon_snow_level_4
+				clr_character_flag = dragon_fire_level_1
+				clr_character_flag = dragon_fire_level_2
+				clr_character_flag = dragon_fire_level_3
+				clr_character_flag = dragon_fire_level_4
+				clr_character_flag = dragon_water_level_1
+				clr_character_flag = dragon_water_level_2
+				clr_character_flag = dragon_water_level_3
+				clr_character_flag = dragon_water_level_4
+				clr_character_flag = dragon_sand_level_1
+				clr_character_flag = dragon_sand_level_2
+				clr_character_flag = dragon_sand_level_3
+				clr_character_flag = dragon_sand_level_4
+				clr_character_flag = dragon_poison_level_1
+				clr_character_flag = dragon_poison_level_2
+				clr_character_flag = dragon_poison_level_3
+				clr_character_flag = dragon_poison_level_4
             }
         }
     }

@@ -691,7 +691,10 @@ fort = {
         potential = {
             culture_group = dragon_group
             is_capital = yes
-            has_dragon_holy_site_trigger = yes
+            OR = {
+                has_dragon_holy_site_trigger = yes
+                fort_has_building = fo_drg_academy_3
+            }
         }
         trigger = {
             culture_group = dragon_group
@@ -780,5 +783,4 @@ fort = {
 
         dragon_expension = 1
     }
-
 }
