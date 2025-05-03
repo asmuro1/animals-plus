@@ -273,3 +273,55 @@ set_mother_dragon_flag_effect = {
         }
     }
 }
+
+# character scope
+convert_to_dragon_culture_effect = {
+    capital_scope = {
+        hidden_tooltip = {
+            if = {
+                limit = {
+                    is_black_dragon_province_trigger = yes
+                }
+                black_dragon = {
+                    save_event_target_as = target_dragon_culture
+                }
+            }
+            else_if = {
+                limit = {
+                    is_white_dragon_province_trigger = yes
+                }
+                white_dragon = {
+                    save_event_target_as = target_dragon_culture
+                }
+            }
+            else_if = {
+                limit = {
+                    is_red_dragon_province_trigger = yes
+                }
+                red_dragon = {
+                    save_event_target_as = target_dragon_culture
+                }
+            }
+            else_if = {
+                limit = {
+                    is_blue_dragon_province_trigger = yes
+                }
+                blue_dragon = {
+                    save_event_target_as = target_dragon_culture
+                }
+            }
+            else = {
+                yellow_dragon = {
+                    save_event_target_as = target_dragon_culture
+                }
+            }
+        }
+        PREV = {
+            culture = event_target:target_dragon_culture
+        }
+        culture = event_target:target_dragon_culture
+        any_province_character = {
+            culture = event_target:target_dragon_culture
+        }
+    }
+}

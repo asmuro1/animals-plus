@@ -3,6 +3,8 @@ decisions = {
         is_high_prio = yes
         ai_check_interval = 14
 
+        only_rulers = yes
+
         potential = {
             culture_group = dragon_group
             is_landed = yes
@@ -101,6 +103,74 @@ decisions = {
             modifier = {
                 factor = 0.2
                 has_living_children = yes
+            }
+        }
+    }
+    go_search_for_dragon_egg = {
+
+        is_high_prio = yes
+        ai_check_interval = 45
+
+        only_playable = yes
+
+        potential = {
+            OR = {
+                has_game_rule = {
+                    name = animals_conversion_ways
+                    value = animal_decision
+                }
+                AND = {
+                    has_game_rule = {
+                        name = animals_conversion_ways
+                        value = animal_instant
+                    }
+                    ai = no
+                }
+            }
+
+            Is_really_animal_trigger = no
+            NOT = {
+                has_artifact = dragon_egg_artifact
+            }
+        }
+        allow = {
+            is_adult = yes
+            is_incapable = no
+            has_regent = no
+            in_command = no
+            
+            wealth = 1000
+
+            OR = {
+                trait = impaler
+                lifestyle_traits == 0
+            }
+
+            capital_scope = {
+                has_fort = yes
+                OR = {
+                    is_black_dragon_province_trigger = yes
+                    is_white_dragon_province_trigger = yes
+                    is_red_dragon_province_trigger = yes
+                    is_blue_dragon_province_trigger = yes
+                    is_yellow_dragon_province_trigger = yes
+                }
+            }
+        }
+
+        effect = {
+            wealth = -1000
+            if = {
+                limit = {
+                    has_game_rule = {
+                        name = animals_conversion_ways
+                        value = animal_decision
+                    }
+                }
+                add_artifact = dragon_egg_artifact
+            }
+            else = {
+                convert_to_dragon_culture_effect = yes
             }
         }
     }
