@@ -2139,7 +2139,7 @@ character_event = {
         name = OPT_ANI_219
 
         death = {
-            reason = death_childbirth
+            death_reason = death_childbirth
         }
 
         if = {
@@ -2251,7 +2251,7 @@ character_event = {
 
         modifier = {
             factor = 0.1  # ~100 years for players
-            holder_scope = { ai = no }
+            ai = no
         }
     }
 
