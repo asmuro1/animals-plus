@@ -68,6 +68,8 @@ horse_feudal_gov;Horse feodality;Féodalité des chevaux;;;;;;;;;;;;x
 horse_feudal_gov_desc;Governement made by warrior horses;Gouvernement fait par chevaux guerrier;;;;;;;;;;;;x
 horse_merchant_gov;Horse republic;République des chevaux;;;;;;;;;;;;x
 horse_merchant_gov_desc;Governement made by merchant horses;Gouvernement fait par marchand chevaux;;;;;;;;;;;;x
+dragon_tribal_gov;Dragon tribalism;Tribalisme draconnique;;;;;;;;;;;;x
+dragon_tribal_gov_desc;The only government dragon has access;Le seul gouvernement auxquels les dragons ont accès;;;;;;;;;;;;x
 
 ###minor titles
 title_bear_children;Honor child;Enfant d'honneur;;;;;;;;;;;;x

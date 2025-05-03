@@ -47,4 +47,8 @@ spriteTypes = {
     name = "GFX_icon_horse_merchant_gov"
     texturefile = "gfx\\interface\\government_icon_confucian_bureaucracy.dds"
   }
+  spriteType = {
+    name = "GFX_icon_dragon_tribal_gov"
+    texturefile = "gfx\\interface\\government_icon_tribal.dds"
+  }
 }
