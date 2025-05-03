@@ -576,11 +576,17 @@ succession_laws = {
 					}
 				}
 				has_title_flag = alternate_byz
+				holder_scope = { government = dragon_tribal_gov }
 			}
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
-			NOT = { holder_scope = { government = dragon_tribal_gov } }
 		}
 		allow = {
+			conditional_tooltip = {
+				trigger = {
+					holder_scope = { government = dragon_tribal_gov }
+				}
+				always = yes
+			}
 			conditional_tooltip = {
 				trigger = {
 					has_dlc = "Conclave"
@@ -588,6 +594,7 @@ succession_laws = {
 						NOR = {
 							government = panda_bureaucratic_gov
 							government = panda_bureaucratic_gov_bis
+							government = dragon_tribal_gov
 						}
 					}
 				}
@@ -616,6 +623,7 @@ succession_laws = {
 				trigger = {
 					NOT = { has_dlc = "Conclave" }
 					NOT = { has_law = succ_hre_elective }
+					NOT = { holder_scope = { government = dragon_tribal_gov } }
 				}
 				OR = {
 					holder_scope = { # Viceroyalties can always have primogeniture if not muslim
@@ -638,12 +646,16 @@ succession_laws = {
 			custom_tooltip = {
 				text = not_forced_tt
 				hidden_tooltip = {
-					holder_scope = { NOT = { has_character_flag = liege_forced_succ_law } }
+					OR = {
+						holder_scope = { NOT = { has_character_flag = liege_forced_succ_law } }
+						holder_scope = { government = dragon_tribal_gov }
+					}
 				}
 			}
 			conditional_tooltip = {
 				trigger = {
 					has_dlc = "Conclave"
+					NOT = { holder_scope = { government = dragon_tribal_gov } }
 				}
 				custom_tooltip = {
 					text = forced_elective_tt

@@ -1,4 +1,3 @@
-
 set_black_dragon_holy_site_effect = {
     random_province = {
         limit = {
