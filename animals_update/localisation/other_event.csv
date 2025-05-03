@@ -283,3 +283,8 @@ DESCA_ANI_220;I just heard that one of my eggs could not hatch...;Je viens juste
 DESCB_ANI_220;I just heard that one of my eggs could not hatch. I don't know why, but I should build something to make them healthier;Je viens juste d'apprendre que l'un de mes œufs ne pourra pas éclore. Si seulement j'avais pus construire un lieu pour en prendre un plus grand soin;;;;;;;;;;;;x 
 OPTA_ANI_220;A sad news;Une mauvaise nouvelle;;;;;;;;;;;;x
 OPTB_ANI_220;I'll still keep it's egg;Je conserverai ces restes;;;;;;;;;;;;x
+DESC_ANI_221;A merchant come to my domain to ask me if I was interested to buy a dragon egg. That dragon egg was apparently found on my capital;Un marchand est venu me voir pour me vendre un œuf de dragon. Cet œuf aurait apparemment été trouver dans les terres reculés de ma capitale;;;;;;;;;;;;x
+OPTA_ANI_221;I'll buy it;Je l'achète!;;;;;;;;;;;;x
+OPTB_ANI_221;It's only garbage;Ce n'est qu'un déchet;;;;;;;;;;;;x
+DESC_ANI_222;I put my dragon egg in my fort before returning to my castle. But something goes wrong, maybe a thief... Anyway, that egg provoked an explosion...;Après avoir laissé mon œuf de dragon dans mon fort, je suis retourné dans mon château. Cependant, un bruit étrange est entendu depuis ce même fort, est-ce un voleur? Avant d'avoir eu ma réponse, le fort explose. Cette explosion prend de l'ampleur dans toute la province...;;;;;;;;;;;;x
+OPT_ANI_222;Why did we became dragon?!;Pourquoi cela nous a transformé en dragon?!;;;;;;;;;;;;x

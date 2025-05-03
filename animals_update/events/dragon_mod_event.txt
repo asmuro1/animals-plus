@@ -2166,3 +2166,111 @@ character_event = {
         add_artifact = dragon_egg_artifact
     }
 }
+
+#### event 221 to 222 : character conversion and conversion quest
+## event 221: conversion quest on event ruler
+## event 222: The dragon egg explode in the fort - convert every character in the province as a dragon
+
+character_event = {
+    id = ani_plus.221
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    only_playable = yes
+
+    trigger = {
+        has_game_rule = {
+            name = animals_conversion_ways
+            value = animal_events
+        }
+        Is_really_animal_trigger = no
+
+        OR = {
+            lifestyle_traits == 0
+            trait = impaler
+        }
+
+        NOT = { has_artifact = dragon_egg_artifact }
+        wealth = 500
+
+        capital_scope = {
+            has_fort = yes
+            OR = {
+                is_black_dragon_province_trigger = yes
+                is_white_dragon_province_trigger = yes
+                is_red_dragon_province_trigger = yes
+                is_blue_dragon_province_trigger = yes
+                is_yellow_dragon_province_trigger = yes
+            }
+        }
+
+        is_adult = yes
+        is_incapable = no
+        has_regent = no
+    }
+
+    mean_time_to_happen = {
+        years = 1000
+
+        modifier = {
+            factor = 0.1  # ~100 years for players
+            holder_scope = { ai = no }
+        }
+    }
+
+    desc = DESC_ANI_221
+
+    option = {
+        name = OPTA_ANI_221
+
+        wealth = -500
+        add_artifact = dragon_egg_artifact
+    }
+    option = {
+        name = OPTB_ANI_221
+    }
+}
+
+character_event = {
+    id = ani_plus.222
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    only_playable = yes
+
+    trigger = {
+        has_artifact = dragon_egg_artifact
+
+        capital_scope = {
+            has_fort = yes
+            OR = {
+                is_black_dragon_province_trigger = yes
+                is_white_dragon_province_trigger = yes
+                is_red_dragon_province_trigger = yes
+                is_blue_dragon_province_trigger = yes
+                is_yellow_dragon_province_trigger = yes
+            }
+        }
+
+        capital_scope = {
+            ROOT = {
+                location = {
+                    province = PREVPREV
+                }
+            }
+        }
+    }
+
+    mean_time_to_happen = {
+        years = 2
+    }
+
+    desc = DESC_ANI_222
+
+    option = {
+        name = OPT_ANI_222
+        convert_to_dragon_culture_effect = yes
+    }
+}
