@@ -685,8 +685,11 @@ character_event = {
                     trigger = {
                         NOR = {
                             has_character_flag = dragon_snow_hard
-                            has_character_flag = dragon_snow_all_for_all
                         }
+                    }
+                    modifier = {
+                        factor = 0.80
+                        has_character_flag = dragon_snow_all_for_all
                     }
                     modifier = {
                         factor = 2
@@ -716,6 +719,10 @@ character_event = {
                             has_character_flag = dragon_snow_normal
                             has_character_flag = dragon_snow_safe
                         }
+                    }
+                    modifier = {
+                        factor = 0.80
+                        has_character_flag = dragon_snow_all_for_all
                     }
                     modifier = {
                         factor = 2
@@ -968,9 +975,12 @@ character_event = {
 					trigger = {
 						NOR = {
 							has_character_flag = dragon_fire_hard
-							has_character_flag = dragon_fire_all_for_all
 						}
 					}
+                    modifier = {
+                        factor = 0.80
+                        has_character_flag = dragon_fire_all_for_all
+                    }
 					modifier = {
 						factor = 2
 						martial = 15
@@ -1022,6 +1032,10 @@ character_event = {
 							has_character_flag = dragon_fire_safe
 						}
 					}
+                    modifier = {
+                        factor = 0.80
+                        has_character_flag = dragon_fire_all_for_all
+                    }
 					modifier = {
 						factor = 2
 						martial = 20
@@ -1270,9 +1284,12 @@ character_event = {
 					trigger = {
 						NOR = {
 							has_character_flag = dragon_water_hard
-							has_character_flag = dragon_water_all_for_all
 						}
 					}
+                    modifier = {
+                        factor = 0.80
+                        has_character_flag = dragon_water_all_for_all
+                    }
 					modifier = {
 						factor = 2
 						diplomacy = 15
@@ -1307,6 +1324,10 @@ character_event = {
 							has_character_flag = dragon_water_safe
 						}
 					}
+                    modifier = {
+                        factor = 0.80
+                        has_character_flag = dragon_water_all_for_all
+                    }
 					modifier = {
 						factor = 2
 						diplomacy = 20
@@ -1565,9 +1586,12 @@ character_event = {
 					trigger = {
 						NOR = {
 							has_character_flag = dragon_sand_hard
-							has_character_flag = dragon_sand_all_for_all
 						}
 					}
+                    modifier = {
+                        factor = 0.80
+                        has_character_flag = dragon_sand_all_for_all
+                    }
 					modifier = {
 						factor = 2
 						stewardship = 15
@@ -1610,6 +1634,10 @@ character_event = {
 							has_character_flag = dragon_sand_safe
 						}
 					}
+                    modifier = {
+                        factor = 0.80
+                        has_character_flag = dragon_sand_all_for_all
+                    }
 					modifier = {
 						factor = 2
 						stewardship = 20
@@ -1854,9 +1882,12 @@ character_event = {
 					trigger = {
 						NOR = {
 							has_character_flag = dragon_poison_hard
-							has_character_flag = dragon_poison_all_for_all
 						}
 					}
+                    modifier = {
+                        factor = 0.80
+                        has_character_flag = dragon_poison_all_for_all
+                    }
 					modifier = {
 						factor = 2
 						intrigue = 15
@@ -1899,6 +1930,10 @@ character_event = {
 							has_character_flag = dragon_poison_safe
 						}
 					}
+                    modifier = {
+                        factor = 0.80
+                        has_character_flag = dragon_poison_all_for_all
+                    }
 					modifier = {
 						factor = 2
 						intrigue = 20
