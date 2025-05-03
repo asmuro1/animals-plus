@@ -293,3 +293,5 @@ OPT_ANI_223;Let the death match start!;Je vais leur apprendre leur place en comb
 DESC_ANI_224;[Root.target_dragon_2nd_fighter.GetFullName] come into the field. [Root.target_dragon_2nd_fighter.GetSheHeCap] has been chosen as my next opponent in the fight to the throne;[Root.target_dragon_2nd_fighter.GetFullName] vient tout juste d'entrer dans l'arène. [Root.target_dragon_2nd_fighter.GetSheHeCap] est donc le prochain prétendant à mon titre!;;;;;;;;;;;;x
 OPTA_ANI_224;Why did [Root.target_dragon_2nd_fighter.GetSheHe] gave up?!;Pourquoi a-[Root.target_dragon_2nd_fighter.GetSheHe] abandonné?;;;;;;;;;;;;x
 OPTB_ANI_224;Let the duel start!;Que le duel commence!;;;;;;;;;;;;x
+DESC_ANI_225;The succession came to an end. Everyone who wanted my position did either renounce to it or die for it.;Cette succession s'est enfin terminé. Tous les prétendant sont soit mort, soit on abandonner leur revandications;;;;;;;;;;;;x
+OPT_ANI_225;Finnally!;Enfin!;;;;;;;;;;;;x

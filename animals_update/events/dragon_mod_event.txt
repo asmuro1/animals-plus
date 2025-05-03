@@ -2362,7 +2362,7 @@ character_event = {
     }
     
     fail_trigger_effect = {
-        # character_event = { id = ani_plus.225 }
+        character_event = { id = ani_plus.225 }
     }
     immediate = {
         random_sibling = {
@@ -2399,6 +2399,12 @@ character_event = {
             }
         }
         name = OPTA_ANI_224
+
+        event_target:target_dragon_2nd_fighter = {
+            any_claim = {
+                remove_claim = PREV
+            }
+        }
         character_event = { id = ani_plus.224 days = 1}
     }
     option = {
@@ -2531,5 +2537,20 @@ character_event = {
     
     after = {
         clear_event_target = target_dragon_2nd_fighter
+    }
+}
+
+# event 225
+character_event = {
+    id = ani_plus.225
+
+    is_triggered_only = yes
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = DESC_ANI_225
+
+    option = {
+        name = OPT_ANI_225
     }
 }
