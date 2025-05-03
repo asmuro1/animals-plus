@@ -148,6 +148,7 @@ on_new_holder_inheritance = {
 	events = {
 		ani_plus.116 # updating elephant law
     	ani_plus.164 # removing dog unity and council laws on holder change
+		ani_plus.223 # starting dragon succession tournament
 	}
 }
 on_new_holder_usurpation = {

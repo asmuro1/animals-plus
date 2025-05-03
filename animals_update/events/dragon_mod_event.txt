@@ -2311,3 +2311,36 @@ character_event = {
         convert_to_dragon_culture_effect = yes
     }
 }
+
+#### event 223 to 225: heritage events
+## event 223: setup to start succession tournament
+## event 224: a duel
+## event 225: tournament end
+
+# event 223
+character_event = {
+    id = ani_plus.223
+
+    is_triggered_only = yes
+
+    trigger = {
+        culture_group = dragon_group
+        any_sibling = {
+            is_adult = yes
+            is_ruler = yes
+            at_location = ROOT
+            culture_group = dragon_group
+            NOT = { has_character_flag = dragon_gave_up_tournament }
+        }
+    }
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = DESC_ANI_223
+
+    option = {
+        name = OPT_ANI_223
+
+        # character_event = { id = ani_plus.223 }
+    }
+}

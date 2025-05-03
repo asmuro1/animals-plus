@@ -288,3 +288,5 @@ OPTA_ANI_221;I'll buy it;Je l'achète!;;;;;;;;;;;;x
 OPTB_ANI_221;It's only garbage;Ce n'est qu'un déchet;;;;;;;;;;;;x
 DESC_ANI_222;I put my dragon egg in my fort before returning to my castle. But something goes wrong, maybe a thief... Anyway, that egg provoked an explosion...;Après avoir laissé mon œuf de dragon dans mon fort, je suis retourné dans mon château. Cependant, un bruit étrange est entendu depuis ce même fort, est-ce un voleur? Avant d'avoir eu ma réponse, le fort explose. Cette explosion prend de l'ampleur dans toute la province...;;;;;;;;;;;;x
 OPT_ANI_222;Why did we became dragon?!;Pourquoi cela nous a transformé en dragon?!;;;;;;;;;;;;x
+DESC_ANI_223;With the death of the previous dragon lord, I am tasked to rule over [Root.primary_title.GetFullName]. But as my sibling also want to take my place, I am forced to hold the famous succession tournament;suite à mon héritage de [Root.primary_title.Get_only_du_RealmFull] [Root.primary_title.GetFullName], mes frères et sœur dragon veulent tout de même ma position.;;;;;;;;;;;;x
+OPT_ANI_223;Let the death match start!;Je vais leur apprendre leur place en combat à mort;;;;;;;;;;;;x
