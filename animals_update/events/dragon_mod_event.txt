@@ -2341,6 +2341,195 @@ character_event = {
     option = {
         name = OPT_ANI_223
 
-        # character_event = { id = ani_plus.223 }
+        character_event = { id = ani_plus.223 }
+    }
+}
+
+# event 224
+character_event = {
+    id = ani_plus.224
+
+    is_triggered_only = yes
+
+    trigger = {
+        any_sibling = {
+            is_adult = yes
+            is_ruler = yes
+            at_location = ROOT
+            culture_group = dragon_group
+            NOT = { has_character_flag = dragon_gave_up_tournament }
+        }
+    }
+    
+    fail_trigger_effect = {
+        # character_event = { id = ani_plus.225 }
+    }
+    immediate = {
+        random_sibling = {
+            limit = {
+                is_adult = yes
+                is_ruler = yes
+                at_location = ROOT
+                culture_group = dragon_group
+                NOT = { has_character_flag = dragon_gave_up_tournament }
+            }
+            save_event_target_as = target_dragon_2nd_fighter
+            if = {
+                limit = {
+                    OR = {
+                        trait = content
+                        trait = craven
+                        trait = slothful
+                        trait = shy
+                    }
+                }
+                set_character_flag = dragon_gave_up_tournament
+            }
+        }
+    }
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = DESC_ANI_224
+
+    option = {
+        trigger = {
+            event_target:target_dragon_2nd_fighter = {
+                has_character_flag = dragon_gave_up_tournament
+            }
+        }
+        name = OPTA_ANI_224
+        character_event = { id = ani_plus.224 days = 1}
+    }
+    option = {
+        trigger = {
+            NOT = {
+                event_target:target_dragon_2nd_fighter = {
+                    has_character_flag = dragon_gave_up_tournament
+                }
+            }
+        }
+        name = OPTB_ANI_224
+
+        random_list = {
+            50 = { # ROOT victory
+                modifier = {
+                    factor = 2
+                    combat_rating_diff = {
+                        character = event_target:target_dragon_2nd_fighter
+                        value > 0
+                    }
+                }
+                modifier = {
+                    factor = 0.5
+                    combat_rating_diff = {
+                        character = event_target:target_dragon_2nd_fighter
+                        value < 0
+                    }
+                }
+                modifier = {
+                    factor = 1.75
+
+                    culture = black_dragon
+                    intrigue > event_target:target_dragon_2nd_fighter
+                }
+                modifier = {
+                    factor = 1.75
+
+                    culture = white_dragon
+                    learning > event_target:target_dragon_2nd_fighter
+                }
+                modifier = {
+                    factor = 1.75
+
+                    culture = red_dragon
+                    martial > event_target:target_dragon_2nd_fighter
+                }
+                modifier = {
+                    factor = 1.75
+
+                    culture = blue_dragon
+                    diplomacy > event_target:target_dragon_2nd_fighter
+                }
+                modifier = {
+                    factor = 1.75
+
+                    culture = yellow_dragon
+                    stewardship > event_target:target_dragon_2nd_fighter
+                }
+
+                event_target:target_dragon_2nd_fighter = {
+                    death = {
+                        killer = event_target:target_dragon_2nd_fighter
+                        death_reason = death_duel
+                    }
+                }
+                character_event = { id = ani_plus.224 days = 1}
+            }
+            50 = { # target_dragon_2nd_fighter victory
+                modifier = {
+                    factor = 0.5
+                    combat_rating_diff = {
+                        character = event_target:target_dragon_2nd_fighter
+                        value > 0
+                    }
+                }
+                modifier = {
+                    factor = 2
+                    combat_rating_diff = {
+                        character = event_target:target_dragon_2nd_fighter
+                        value < 0
+                    }
+                }
+                modifier = {
+                    factor = 1.75
+
+                    event_target:target_dragon_2nd_fighter = {
+                        culture = black_dragon
+                        intrigue > ROOT
+                    }
+                }
+                modifier = {
+                    factor = 1.75
+                    event_target:target_dragon_2nd_fighter = {
+                        culture = white_dragon
+                        learning > ROOT
+                    }
+                }
+                modifier = {
+                    factor = 1.75
+
+                    event_target:target_dragon_2nd_fighter = {
+                        culture = red_dragon
+                        martial > ROOT
+                    }
+                }
+                modifier = {
+                    factor = 1.75
+
+                    event_target:target_dragon_2nd_fighter = {
+                        culture = blue_dragon
+                        diplomacy > ROOT
+                    }
+                }
+                modifier = {
+                    factor = 1.75
+
+                    event_target:target_dragon_2nd_fighter = {
+                        culture = yellow_dragon
+                        stewardship > ROOT
+                    }
+                }
+
+                death = {
+                    killer = event_target:target_dragon_2nd_fighter
+                    death_reason = death_duel
+                }
+            }
+        }
+    }
+    
+    after = {
+        clear_event_target = target_dragon_2nd_fighter
     }
 }
