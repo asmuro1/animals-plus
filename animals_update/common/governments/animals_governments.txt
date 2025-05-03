@@ -352,7 +352,7 @@ feudal_governments = {
     }
 }
 
-tribal_government = {
+tribal_governments = {
     dragon_tribal_gov = {
         color = { 107 23 0 }
 
