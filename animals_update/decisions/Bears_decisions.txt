@@ -453,6 +453,7 @@ decisions = {
                     NOT = { has_province_modifier = holy_autority_animal_cooldown }
                 }
             }
+            NOT = { government = dragon_tribal_gov }
         }
         allow = {
             completely_controls = c_dyrrachion

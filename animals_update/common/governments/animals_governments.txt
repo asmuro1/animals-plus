@@ -383,7 +383,7 @@ tribal_governments = {
         can_build_tribal = yes
         preferred_holdings = { TRIBAL }
         allowed_holdings_culture = { TRIBAL }
-        builds_with_prestige = yes
+        builds_with_prestige = { TRIBAL }
 
         can_grant_kingdoms_and_empires_to_other_government = no
         can_be_granted_kingdoms_and_empires_by_other_government = no

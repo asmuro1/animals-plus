@@ -66,7 +66,13 @@ family_palace = {
 
 tribal = {
 	trigger = {
-		FROM = { NOT = { government = order_government } }
+		FROM = {
+			NOT = { government = order_government }
+		}
+		OR = {
+			num_of_settlements == 0
+			FROM = { NOT = {  government = dragon_tribal_gov } }
+		}
 	}
 }
 
