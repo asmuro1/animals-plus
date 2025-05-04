@@ -205,16 +205,21 @@ de_jure_laws = {
 		group = vassal_wars_law
 
 		potential = {
-			has_dlc = "Zeus"
-			holder_scope = {
-				is_tribal = no
-				is_nomadic = no
-				is_republic = no
-				is_theocracy = no
-				NOR = {
-					government = order_government
-					government = panda_bureaucratic_gov
-					government = panda_bureaucratic_gov_bis
+			OR = {
+				holder_scope = { government = dragon_tribal_gov }
+				AND = {
+					has_dlc = "Zeus"
+					holder_scope = {
+						is_tribal = no
+						is_nomadic = no
+						is_republic = no
+						is_theocracy = no
+						NOR = {
+							government = order_government
+							government = panda_bureaucratic_gov
+							government = panda_bureaucratic_gov_bis
+						}
+					}
 				}
 			}
 		}

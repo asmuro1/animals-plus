@@ -2312,7 +2312,7 @@ character_event = {
     }
 }
 
-#### event 223 to 225: heritage events
+#### event 223 to 226: heritage events
 ## event 223: setup to start succession tournament
 ## event 224: a duel
 ## event 225: tournament end
@@ -2583,3 +2583,52 @@ character_event = {
         name = OPT_ANI_225
     }
 }
+
+#### event 227 to 228: warfare tournament
+## event 227: preventing vassals to declare war
+## event 228: removing law for non-dragon (mainly if Zeus DLC not activated)
+
+# event 227
+character_event = {
+    id = ani_plus.227
+
+    only_playable = yes
+
+    hide_window = yes
+
+    trigger = {
+        government = dragon_tribal_gov
+        NOT = { has_law = vassal_wars_law_2 }
+    }
+    mean_time_to_happen = {
+        months = 5
+    }
+    immediate = {
+        any_demesne_title = {
+            add_law = vassal_wars_law_2
+        }
+    }
+}
+
+# event 228
+character_event = {
+    id = ani_plus.228
+    
+    only_playable = yes
+    hide_window = yes
+
+    trigger = {
+        has_law = vassal_wars_law_2
+        NOT = { is_law_potential = vassal_wars_law_2 }
+    }
+    mean_time_to_happen = {
+        months = 5
+    }
+
+    immediate = {
+        any_demesne_title = {
+            revoke_law = vassal_wars_law_2
+        }
+    }
+}
+
