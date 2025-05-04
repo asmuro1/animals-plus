@@ -368,7 +368,6 @@ tribal_governments = {
         allow_title_revokation = no
         allow_looting = yes
         can_usurp_kingdoms_and_empires = no
-        have_gender_laws = yes
         uses_jizya_tax = yes
         capital_move_delay = 1000000
         can_change_to_nomad_on_start = no

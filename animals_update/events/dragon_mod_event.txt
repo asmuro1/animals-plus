@@ -2316,6 +2316,27 @@ character_event = {
 ## event 223: setup to start succession tournament
 ## event 224: a duel
 ## event 225: tournament end
+## event 226: hidden event to setup effect
+
+# event 226
+character_event = {
+    id = ani_plus.226
+
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        primary_title = {
+            title = FROM
+        }
+        culture_group = dragon_group
+    }
+
+    immediate = {
+        character_event = { id = ani_plus.223 days = 2 }
+        
+    }
+}
 
 # event 223
 character_event = {
@@ -2327,8 +2348,7 @@ character_event = {
         culture_group = dragon_group
         any_sibling = {
             is_adult = yes
-            is_ruler = yes
-            at_location = ROOT
+            is_ruler = no
             culture_group = dragon_group
             NOT = { has_character_flag = dragon_gave_up_tournament }
         }
@@ -2337,11 +2357,17 @@ character_event = {
     border = GFX_event_normal_frame_diplomacy
     picture = GFX_evt_council
     desc = DESC_ANI_223
+    
+    immediate = {
+        any_demesne_title = {
+            gender_succ = true_cognatic
+        }
+    }
 
     option = {
         name = OPT_ANI_223
 
-        character_event = { id = ani_plus.223 }
+        character_event = { id = ani_plus.224 }
     }
 }
 
@@ -2354,8 +2380,7 @@ character_event = {
     trigger = {
         any_sibling = {
             is_adult = yes
-            is_ruler = yes
-            at_location = ROOT
+            is_ruler = no
             culture_group = dragon_group
             NOT = { has_character_flag = dragon_gave_up_tournament }
         }
@@ -2368,8 +2393,7 @@ character_event = {
         random_sibling = {
             limit = {
                 is_adult = yes
-                is_ruler = yes
-                at_location = ROOT
+                is_ruler = no
                 culture_group = dragon_group
                 NOT = { has_character_flag = dragon_gave_up_tournament }
             }
@@ -2405,7 +2429,6 @@ character_event = {
                 remove_claim = PREV
             }
         }
-        character_event = { id = ani_plus.224 days = 1}
     }
     option = {
         trigger = {
@@ -2470,7 +2493,6 @@ character_event = {
                         death_reason = death_duel
                     }
                 }
-                character_event = { id = ani_plus.224 days = 1}
             }
             50 = { # target_dragon_2nd_fighter victory
                 modifier = {
@@ -2538,6 +2560,12 @@ character_event = {
     
     after = {
         clear_event_target = target_dragon_2nd_fighter
+        if = {
+            limit = {
+                is_alive = yes
+            }
+            character_event = { id = ani_plus.224 days = 1}
+        }
     }
 }
 

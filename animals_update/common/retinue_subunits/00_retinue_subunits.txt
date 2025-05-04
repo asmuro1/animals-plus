@@ -1488,8 +1488,8 @@ RETTYPE_CUL_DRAGON =
 	}
 	
 	modifier = {
-		knights_morale = 1
-		knights_offensive = 0.75
+		knights_morale = 0.2
+		knights_offensive = 0.25
 	}
 }
 
