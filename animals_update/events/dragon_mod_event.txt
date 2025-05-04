@@ -2527,6 +2527,7 @@ character_event = {
                     }
                 }
 
+                abdicate_to = event_target:target_dragon_2nd_fighter
                 death = {
                     killer = event_target:target_dragon_2nd_fighter
                     death_reason = death_duel
