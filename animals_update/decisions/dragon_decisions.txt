@@ -173,5 +173,60 @@ decisions = {
                 convert_to_dragon_culture_effect = yes
             }
         }
+        ai_will_do = {
+            factor = 1
+            modifier = {
+                factor = 0.001
+
+                always = yes
+            }
+        }
+    }
+
+    dragon_goes_battlefield = {
+        is_high_prio = yes
+        ai_check_interval = 12
+
+        only_playable = yes
+
+        potential = {
+            government = dragon_tribal_gov
+            tier = COUNT
+            NOT = { has_character_flag = formed_dragon_retinue }
+        }
+        allow = {
+            ruled_years = 1
+            custom_tooltip = {
+                text = TT_is_an_adult_dragon
+                has_character_flag = is_true_dragon_adult
+            }
+        }
+
+        effect = {
+            if = {
+                limit = {
+                    has_dlc = "Legacy of Rome"
+                }
+                create_retinue = RETTYPE_CUL_DRAGON
+            }
+            else = {
+                spawn_unit = {
+                    province = capital_scope
+                    owner = ROOT
+                    troops = {
+                        knights = { 100 100 }
+                    }
+                    cannot_inherit = no
+                    reinforces = yes
+                    reinforce_rate_multiplier = 0.1
+                    maintenance_multiplier = 0.5
+                }
+            }
+            set_character_flag = formed_dragon_retinue
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
     }
 }
