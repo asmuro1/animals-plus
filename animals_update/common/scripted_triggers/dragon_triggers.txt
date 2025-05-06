@@ -96,3 +96,14 @@ has_dragon_holy_site_trigger = {
         }
     }
 }
+
+# province scope
+is_my_realm_province_trigger = {
+    has_owner = yes
+    owner = {
+        OR = {
+            character = ROOT
+            is_liege_or_above = ROOT
+        }
+    }
+}

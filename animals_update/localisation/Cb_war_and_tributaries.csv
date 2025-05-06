@@ -1,9 +1,9 @@
 #CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
 
 #####cb localisation
-DRAGON_LOOT_CB;Country plundering;Pillage de pays;;;;;;;;;;;;;x
+DRAGON_LOOT_CB;Plundering for [Title.GetBaseName];Pillage de [Title.GetBaseName];;;;;;;;;;;;;x
 DRAGON_LOOT_WAR_NAME;Plundering war;Guerre de pillage;;;;;;;;;;;;;x
-dragon_cb_loot_desc;To allow a dragon to plunder a whole country;Permet aux dragons de piller un pays entier;;;;;;;;;;;;;x
+dragon_tribalism_cb_desc;plundering war to receive [Title.GetBaseName] from a non-dragon;Guerre de pillage afin de récupérer [Title.GetBaseName] des main d'un infidèle;;;;;;;;;;;;;x
 Old_warior_takes_province;A ancient dragon warrior choose to establish himself in the province [This.GetName];Un ancien guerrier dragon choisi de s'installer dans la province [This.GetName];;;;;;;;;;;;x
 NOT_RECENTLY_LOOTED_CB;Should not have been recently plundered;Ne doit pas avoir été recemment piller;;;;;;;;;;;;x
 ####

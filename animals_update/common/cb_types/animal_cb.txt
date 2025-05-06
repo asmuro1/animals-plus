@@ -54,12 +54,63 @@ dragon_tribalism_cb = {
         }
     }
     can_use_title = { # what is the target title of the war
-        #location = { # update trigger for casus belli fort building series
-        #    any_neighbor_province = {
-        #        same_realm = ROOT
-        #    }
-        #}
-        always = yes
+        OR = {
+            AND = {
+                ROOT = {
+                    capital_scope = {
+                        fort_has_building = fo_drg_casus_belli_1
+                    }
+                }
+                location = {
+                    any_neighbor_province = {
+                        is_my_realm_province_trigger = yes
+                    }
+                }
+            }
+            AND = {
+                ROOT = {
+                    capital_scope = {
+                        fort_has_building = fo_drg_casus_belli_2
+                    }
+                }
+                location = {
+                    any_neighbor_province = {
+                        is_land = no
+                        any_neighbor_province = {
+                            is_my_realm_province_trigger = yes
+                        }
+                    }
+                }
+            }
+            AND = {
+                ROOT = {
+                    capital_scope = {
+                        fort_has_building = fo_drg_casus_belli_3
+                    }
+                }
+                location = {
+                    any_neighbor_province = {
+                        is_land = no
+                        any_neighbor_province = {
+                            is_land = no
+                            any_neighbor_province = {
+                                OR = {
+                                    AND = {
+                                        is_my_realm_province_trigger = yes
+                                    }
+                                    AND = {
+                                        is_land = no
+                                        any_neighbor_province = {
+                                           is_my_realm_province_trigger = yes 
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
     can_use_gui = { # if can press button "declare war" with this cb
         ROOT = {
@@ -112,31 +163,29 @@ dragon_tribalism_cb = {
             destroy_fort = location
         }
         create_fort = location
-        hidden_tooltip = {
-            location = {
 
-                # seize_fort = ROOT can't do it if province not controlled
+        location = {
+            # seize_fort = ROOT destroy fort if province not controlled
 
-                add_to_extra_holding = {
-                    type = fort
-                    building = fo_drg_guardian_01
-                }
-                add_to_extra_holding = {
-                    type = fort
-                    building = fo_drg_guardian_02
-                }
-                add_to_extra_holding = {
-                    type = fort
-                    building = fo_drg_guardian_03
-                }
-                add_to_extra_holding = {
-                    type = fort
-                    building = fo_drg_guardian_04
-                }
-                add_to_extra_holding = {
-                    type = fort
-                    building = fo_drg_guardian_05
-                }
+            add_to_extra_holding = {
+                type = fort
+                building = fo_drg_guardian_01
+            }
+            add_to_extra_holding = {
+                type = fort
+                building = fo_drg_guardian_02
+            }
+            add_to_extra_holding = {
+                type = fort
+                building = fo_drg_guardian_03
+            }
+            add_to_extra_holding = {
+                type = fort
+                building = fo_drg_guardian_04
+            }
+            add_to_extra_holding = {
+                type = fort
+                building = fo_drg_guardian_05
             }
         }
     }
