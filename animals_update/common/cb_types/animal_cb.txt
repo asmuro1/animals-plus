@@ -1,7 +1,7 @@
 
 
-### dragon loot war (beta version cb)
-dragon_cb_loot = {
+### dragon tribalisation war
+dragon_tribalism_cb = {
     name = DRAGON_LOOT_CB
     war_name = DRAGON_LOOT_WAR_NAME
     sprite = 1
@@ -11,10 +11,16 @@ dragon_cb_loot = {
     hostile_against_others = yes
     full_hostility = yes
     can_ask_to_join_war = yes
-    # allowed_to_target_suzerains = yes
+    allow_whitepeace = no
+    allowed_to_target_tributaries = no
 
     attacker_can_call_allies = no   #no one want to help dragon looting without rewards
-    can_call_vassals = yes          #vassals are concerned by the looting
+    defender_can_call_allies = yes
+    can_call_vassals = no
+    can_attack_vassals = no
+    check_de_jure_tier = COUNT
+
+	allow_distant = yes
 
     attacker_ai_victory_worth = {
         factor = -1 # always accept
@@ -30,12 +36,12 @@ dragon_cb_loot = {
 	}
 
     battle_warscore_mult = 1.5
-    sort_priority = 50
+    sort_priority = 1500
 
     max_defender_occupation_score = 100
-    max_attacker_occupation_score = 85
+    max_attacker_occupation_score = 50
     max_defender_battle_score     = 100
-    max_attacker_battle_score     = 60
+    max_attacker_battle_score     = 100
     defender_unoccupied_warscore  = yes
     attacker_unoccupied_warscore  = no
     capturing_attacker_is_complete_victory = yes
@@ -43,130 +49,110 @@ dragon_cb_loot = {
 
     can_use = { #if cb appear on screen
         ROOT = {
-            culture = dragon_culture
+            culture_group = dragon_group
+            independent = yes
         }
     }
-    can_use_gui = { #if can press button "dclare war" with this cb
-        custom_tooltip = { #does nnot have been recently looted
-            text = NOT_RECENTLY_LOOTED_CB
-
-            FROM = {
-                NOT = {
-                    has_character_modifier = dragon_looted_cooldown
-                }
+    can_use_title = { # what is the target title of the war
+        #location = { # update trigger for casus belli fort building series
+        #    any_neighbor_province = {
+        #        same_realm = ROOT
+        #    }
+        #}
+        always = yes
+    }
+    can_use_gui = { # if can press button "declare war" with this cb
+        ROOT = {
+            war = no
+            custom_tooltip = {
+                text = TT_is_an_adult_dragon
+                has_character_flag = is_true_dragon_adult
             }
         }
-
-        ROOT = { is_adult = yes }
     }
 
-    is_valid = {
-        ROOT = { culture = dragon_culture }
+    is_valid = { # condition continue the war (not stopping it with invalid reason)
+        ROOT = {
+            government = dragon_tribal_gov
+        }
     }
-    is_valid_title = { always = yes }
+    is_valid_title = {
+        holder_scope = {
+            top_liege = {
+                character = FROM
+            }
+        }
+    }
 
     #attacker's win
     on_success = {
-        ROOT = { prestige = 250 }
-        FROM = { prestige = -150}
-
-        transfer_scaled_wealth = {
-            from = FROM
-            to = ROOT
-            value = 20
+        if = {
+            limit = {
+                FROM = {
+                    NOT = { culture_group = dragon_group }
+                }
+            }
+            # tributary to put
+        }
+    }
+    on_success_title = {
+        if = {
+            limit = {
+                FROM = {
+                    culture_group = dragon_group
+                }
+            }
+            gain_title = {
+                target = ROOT
+                type = invasion
+            }
         }
 
-        FROM = {
-            any_realm_province = {
-                add_province_modifier = {
-                    name = dragon_looted_province_by_war
-                    days = 2750
+        hidden_tooltip = {
+            destroy_fort = location
+        }
+        create_fort = location
+        hidden_tooltip = {
+            location = {
+
+                # seize_fort = ROOT can't do it if province not controlled
+
+                add_to_extra_holding = {
+                    type = fort
+                    building = fo_drg_guardian_01
                 }
-                if = {
-                    limit = {
-                        controlled_by = ROOT
-                    }
-                    random = {
-                        chance = 10 #%
-
-                        custom_tooltip = {
-                            text = Old_warior_takes_province
-
-                            create_character = {
-                                min_age = 16
-                                max_age = 30
-                                attributes = { stewardship = 10 martial = 20 }
-                                culture = dragon_culture
-                                religion = ROOT
-                                female = no
-                                add_trait = brilliant_strategist
-                                flag = Old_warior_Newly_installed
-                            }
-                            any_province_character = {
-                                limit = {
-                                    has_character_flag = Old_warior_Newly_installed
-                                }
-                                save_event_target_as = new_count_event_animal
-                            }
-
-                            any_province_holding = {
-                                gain_title = event_target:new_count_event_animal
-                            }
-
-                            event_target:new_count_event_animal = {
-                                set_defacto_liege = THIS
-                                FROM = {
-                                    set_truce = {
-                                        who = PREV
-                                        days = 2750
-                                    }
-                                }
-                                clr_character_flag = Old_warior_Newly_installed
-                            }
-                            clear_event_target = new_count_event_animal                        }
-                    }
+                add_to_extra_holding = {
+                    type = fort
+                    building = fo_drg_guardian_02
+                }
+                add_to_extra_holding = {
+                    type = fort
+                    building = fo_drg_guardian_03
+                }
+                add_to_extra_holding = {
+                    type = fort
+                    building = fo_drg_guardian_04
+                }
+                add_to_extra_holding = {
+                    type = fort
+                    building = fo_drg_guardian_05
                 }
             }
         }
     }
 
-    #white peace
-    on_fail = {
-        FROM = {
-            prestige = 500
-        }
-        ROOT = {
-            prestige = -1000
-        }
-        transfer_scaled_wealth = {
-            from = ROOT
-            to = FROM
-            value = all
-        }
-    }
-
-    #attacker's lost
     on_reverse_demand = {
-        FROM = {
-            prestige = 1000
-        }
         ROOT = {
-            prestige = -5000
-        }
-        transfer_scaled_wealth = {
-            from = ROOT
-            to = FROM
-            value = all
-        }
-        ROOT = {
-            add_character_modifier = {
-                name = Dragon_loose_looting_war
-                days = 2750
+            # clear_wealth = yes
+            transfer_scaled_wealth = {
+                to = FROM
+                value = all
             }
+        }   
+        ROOT = {
+            wealth = -500 # forcibly put to -500 gold
         }
     }
-
-    # ai_will_do = {}
 }
 
 #independance war from bear tributary

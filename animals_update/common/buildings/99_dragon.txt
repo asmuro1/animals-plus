@@ -130,7 +130,7 @@ tribal = {
         ai_creation_factor = 100
         extra_tech_building_start = 10
 
-        light_cavalry = 75
+        light_cavalry = 25
     }
     tb_drg_slave_fighter_2 = {
         add_number_to_name = no
@@ -156,7 +156,7 @@ tribal = {
         ai_creation_factor = 100
         extra_tech_building_start = 10
 
-        light_cavalry = 75
+        light_cavalry = 50
     }
     tb_drg_slave_fighter_3 = {
         add_number_to_name = no
@@ -211,7 +211,7 @@ tribal = {
         ai_creation_factor = 100
         extra_tech_building_start = 10
 
-        light_cavalry = 75
+        light_cavalry = 100
     }
 
     tb_drg_fighter = {
@@ -236,7 +236,7 @@ tribal = {
         ai_creation_factor = 75
         extra_tech_building_start = 10.0
 
-        knights = 100
+        knights = 20
     }
 }
 
@@ -268,7 +268,10 @@ fort = {
         add_number_to_name = yes
 
         potential = {
-            culture_group = dragon_group
+            OR = {
+                culture_group = dragon_group
+                fort_has_building = fo_drg_guardian_01
+            }
         }
         trigger = {
             culture_group = dragon_group
@@ -288,7 +291,10 @@ fort = {
         add_number_to_name = yes
 
         potential = {
-            culture_group = dragon_group
+            OR = {
+                culture_group = dragon_group
+                fort_has_building = fo_drg_guardian_02
+            }
         }
         trigger = {
             culture_group = dragon_group
@@ -309,7 +315,10 @@ fort = {
         add_number_to_name = yes
 
         potential = {
-            culture_group = dragon_group
+            OR = {
+                culture_group = dragon_group
+                fort_has_building = fo_drg_guardian_03
+            }
         }
         trigger = {
             culture_group = dragon_group
@@ -330,7 +339,10 @@ fort = {
         add_number_to_name = yes
 
         potential = {
-            culture_group = dragon_group
+            OR = {
+                culture_group = dragon_group
+                fort_has_building = fo_drg_guardian_04
+            }
         }
         trigger = {
             culture_group = dragon_group
@@ -351,7 +363,10 @@ fort = {
         add_number_to_name = yes
 
         potential = {
-            culture_group = dragon_group
+            OR = {
+                culture_group = dragon_group
+                fort_has_building = fo_drg_guardian_05
+            }
         }
         trigger = {
             culture_group = dragon_group
@@ -372,7 +387,10 @@ fort = {
         add_number_to_name = yes
 
         potential = {
-            culture_group = dragon_group
+            OR = {
+                culture_group = dragon_group
+                fort_has_building = fo_drg_guardian_06
+            }
         }
         trigger = {
             culture_group = dragon_group
@@ -393,7 +411,10 @@ fort = {
         add_number_to_name = yes
 
         potential = {
-            culture_group = dragon_group
+            OR = {
+                culture_group = dragon_group
+                fort_has_building = fo_drg_guardian_07
+            }
         }
         trigger = {
             culture_group = dragon_group
@@ -414,7 +435,10 @@ fort = {
         add_number_to_name = yes
 
         potential = {
-            culture_group = dragon_group
+            OR = {
+                culture_group = dragon_group
+                fort_has_building = fo_drg_guardian_08
+            }
         }
         trigger = {
             culture_group = dragon_group
@@ -435,7 +459,10 @@ fort = {
         add_number_to_name = yes
 
         potential = {
-            culture_group = dragon_group
+            OR = {
+                culture_group = dragon_group
+                fort_has_building = fo_drg_guardian_09
+            }
         }
         trigger = {
             culture_group = dragon_group
@@ -456,7 +483,10 @@ fort = {
         add_number_to_name = yes
 
         potential = {
-            culture_group = dragon_group
+            OR = {
+                culture_group = dragon_group
+                fort_has_building = fo_drg_guardian_10
+            }
         }
         trigger = {
             culture_group = dragon_group
@@ -492,7 +522,7 @@ fort = {
         build_time = 900
         ai_creation_factor = 40
 
-        retinuesize = 30
+        retinuesize = 15
     }
     fo_drg_retinue_2 = {
         add_number_to_name = no
@@ -513,7 +543,7 @@ fort = {
         build_time = 1400
         ai_creation_factor = 40
 
-        retinuesize = 30
+        retinuesize = 15
         retinuesize_perc = 0.1
     }
     fo_drg_retinue_3 = {
@@ -535,7 +565,7 @@ fort = {
         build_time = 2000
         ai_creation_factor = 40
 
-        retinuesize = 30
+        retinuesize = 15
         retinuesize_perc = 0.1
     }
 
@@ -632,7 +662,7 @@ fort = {
         build_time = 900
         ai_creation_factor = 50
 
-        knights = 50
+        knights = 30
         knights_offensive = 0.25
         knights_defensive = 0.25
         knights_morale = 0.25
