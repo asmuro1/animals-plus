@@ -103,7 +103,7 @@ on_war_ended_defeat = {
 	events = {
 		ani_plus.076 # hedgehogg - removing war modifiers
 		ani_plus.154 # cat - prosperity quest rank up
-		# ani_plus.229 # remove tributary of dragon ruler
+		ani_plus.229 # remove tributary of dragon ruler
 	}
 }
 

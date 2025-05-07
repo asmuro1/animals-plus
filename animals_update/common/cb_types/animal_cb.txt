@@ -5,7 +5,7 @@ dragon_tribalism_cb = {
     name = DRAGON_LOOT_CB
     war_name = DRAGON_LOOT_WAR_NAME
     sprite = 16
-    truce_days = 2750
+    truce_days = 2000
 
     is_permanent = yes
     hostile_against_others = yes
@@ -17,7 +17,7 @@ dragon_tribalism_cb = {
     attacker_can_call_allies = no   #no one want to help dragon looting without rewards
     defender_can_call_allies = yes
     can_attack_vassals = no
-    check_de_jure_tier = COUNT
+    check_all_titles = yes
 
 	allow_distant = yes
 
@@ -54,6 +54,7 @@ dragon_tribalism_cb = {
     }
     can_use_title = { # what is the target title of the war
 		has_holder = yes
+        tier = COUNT
         OR = {
             AND = {
                 ROOT = {
