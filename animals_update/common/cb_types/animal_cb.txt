@@ -143,7 +143,12 @@ dragon_tribalism_cb = {
                     NOT = { culture_group = dragon_group }
                 }
             }
-            # tributary to put
+            ROOT = {
+                make_tributary = {
+                    who = FROM
+                    tributary_type = dragon_vassal_tributary
+                }
+            }
         }
     }
     on_success_title = {
@@ -200,6 +205,9 @@ dragon_tribalism_cb = {
         }   
         ROOT = {
             wealth = -500 # forcibly put to -500 gold
+        }
+        any_defender = {
+            participation_scaled_piety = 1000
         }
     }
 }

@@ -4,12 +4,16 @@
 DRAGON_LOOT_CB;Plundering for [Title.GetBaseName];Pillage de [Title.GetBaseName];;;;;;;;;;;;;x
 DRAGON_LOOT_WAR_NAME;Plundering war;Guerre de pillage;;;;;;;;;;;;;x
 dragon_tribalism_cb_desc;plundering war to receive [Title.GetBaseName] from a non-dragon;Guerre de pillage afin de récupérer [Title.GetBaseName] des main d'un infidèle;;;;;;;;;;;;;x
-Old_warior_takes_province;A ancient dragon warrior choose to establish himself in the province [This.GetName];Un ancien guerrier dragon choisi de s'installer dans la province [This.GetName];;;;;;;;;;;;x
-NOT_RECENTLY_LOOTED_CB;Should not have been recently plundered;Ne doit pas avoir été recemment piller;;;;;;;;;;;;x
-####
 CB_NAME_LIBERTY;Liberation;Libération;;;;;;;;;;;;x
 WAR_NAME_LIBERTY;Liberty war;Guerre de libération;;;;;;;;;;;;x
 independance_bear_tributary_cb_desc;To allow a bear to completely free themself from their suzerain;Pour permetre aux ours de complétement se libérer de l'influence du suzerain;;;;;;;;;;;;x
+WAR_NAME_HEDGE_INVASION;Hostility war;Guerre d'hostilité;;;;;;;;;;;;x
+CB_NAME_HEDGE_INVASION;Hostility war;Guerre d'hostilité;;;;;;;;;;;;x
+hedgehog_hostility_province_war_desc;Hedgehoggs revolt;Révolte d'hérissons;;;;;;;;;;;;x
+panda_cb_faction_independence_desc;panda's ways to getting independant by force;Une manière propres aux pandas de devenir indépendant;;;;;;;;;;;;x
+CB_CAT_REVOLT;Cat revolt;Révolte de chats;;;;;;;;;;;;x
+CB_CAT_REVOLT_NAME;Revolt;Révolte;;;;;;;;;;;;x
+cat_basic_revolt_cb_desc;Cat don't want to be chased on their own provinces, so only death will force them do to so.;LEs chats ne veulent pas être chassé de leurs propres provinces. Donc seul la mort pourra les forcer à le faire.;;;;;;;;;;;;x
 
 #####tributaries localisation
 BEAR_TRIBUTARY_NAME;Bear subject;Sujet ours;;;;;;;;;;;;x
@@ -20,23 +24,10 @@ BEAR_UNRELIGOUS_VASSAL_NAME;Loyal vassal;Vassal loyal;;;;;;;;;;;;x
 BEAR_UNRELIGOUS_VASSALS_NAMES;Loyals vassals;Vassaux loyaux;;;;;;;;;;;;x
 BEAR_SUZERAIN_UNRELIGOUS;Liege;lige;;;;;;;;;;;;x
 BEAR_TRIBUTE_UNRELIGIOUS;Full obligations;Obligations absolues;;;;;;;;;;;;x
-
-
-##hedgehogg update
-#cb localisation
-CB_NAME_HEDGE_INVASION;Hostility war;Guerre d'hostilité;;;;;;;;;;;;x
-WAR_NAME_HEDGE_INVASION;Hostility war;Guerre d'hostilité;;;;;;;;;;;;x
-hedgehog_hostility_province_war_desc;Hedgehoggs revolt;Révolte d'hérissons;;;;;;;;;;;;x
+TRIBUTARY_DRAGON_NAME;Dragon tribute;tributaire de dragon;;;;;;;;;;;;x
+TRIBUTARY_DRAGON_PLURAL;Dragon tributaries;tributaires de dragon;;;;;;;;;;;;x
+SUZERAIN_DRAGON_NAME;great dragon;Grand dragon;;;;;;;;;;;;x
+TRIBUTARY_DRAGON_TRIBUTE;dragon vassal;vassal dragon;;;;;;;;;;;;x
 
 #cb tooltip
 HEDGE_WON_HOSTILITY_WAR_TITLE_GAIN;[Root.GetTitledName] gain every allied territory;[Root.GetTitledName] prend toutes les terres alliés;;;;;;;;;;;;x
-
-
-## panda update
-panda_cb_faction_independence_desc;panda's ways to getting independant by force;Une manière propres aux pandas de devenir indépendant;;;;;;;;;;;;x
-
-
-##cat update
-CB_CAT_REVOLT;Cat revolt;Révolte de chats;;;;;;;;;;;;x
-CB_CAT_REVOLT_NAME;Revolt;Révolte;;;;;;;;;;;;x
-cat_basic_revolt_cb_desc;Cat don't want to be chased on their own provinces, so only death will force them do to so.;LEs chats ne veulent pas être chassé de leurs propres provinces. Donc seul la mort pourra les forcer à le faire.;;;;;;;;;;;;x
