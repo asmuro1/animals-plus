@@ -375,14 +375,14 @@ tribal_governments = {
         men_can_take_consorts = yes
         women_can_take_consorts = yes
 
-        can_build_forts = yes
+        can_build_forts = no
         can_build_castle = no
         can_build_city = no
         can_build_temple = no
-        can_build_tribal = yes
+        can_build_tribal = no
         preferred_holdings = { TRIBAL }
+        allowed_holdings = { HOSPITAL }
         allowed_holdings_culture = { TRIBAL }
-        builds_with_prestige = { TRIBAL }
 
         can_grant_kingdoms_and_empires_to_other_government = no
         can_be_granted_kingdoms_and_empires_by_other_government = no
