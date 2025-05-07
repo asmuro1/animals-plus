@@ -14,6 +14,9 @@ panda_cb_faction_independence_desc;panda's ways to getting independant by force;
 CB_CAT_REVOLT;Cat revolt;Révolte de chats;;;;;;;;;;;;x
 CB_CAT_REVOLT_NAME;Revolt;Révolte;;;;;;;;;;;;x
 cat_basic_revolt_cb_desc;Cat don't want to be chased on their own provinces, so only death will force them do to so.;LEs chats ne veulent pas être chassé de leurs propres provinces. Donc seul la mort pourra les forcer à le faire.;;;;;;;;;;;;x
+DRAGON_HUNTING_CB_NAME;dragon hunting;chasse au dragon;;;;;;;;;;;;x
+DRAGON_HUNTING_WAR_NAME;dragon hunting;chasse au dragon;;;;;;;;;;;;x
+dragon_hunting_war_desc;you don't want that dragon from being a menace, then kill him;Tu n'as pas envie d'avoir un dragon comme menace? Dans ce cas, tues-le!;;;;;;;;;;;;x
 
 #####tributaries localisation
 BEAR_TRIBUTARY_NAME;Bear subject;Sujet ours;;;;;;;;;;;;x

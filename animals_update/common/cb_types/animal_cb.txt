@@ -34,7 +34,7 @@ dragon_tribalism_cb = {
 		factor = 100
 	}
 
-    battle_warscore_mult = 1.5
+    battle_warscore_mult = 2
     sort_priority = 1500
 
     max_defender_occupation_score = 100
@@ -176,27 +176,32 @@ dragon_tribalism_cb = {
         create_fort = location
 
         location = {
-            # seize_fort = ROOT destroy fort if province not controlled
-
-            add_to_extra_holding = {
-                type = fort
-                building = fo_drg_guardian_01
-            }
-            add_to_extra_holding = {
-                type = fort
-                building = fo_drg_guardian_02
-            }
-            add_to_extra_holding = {
-                type = fort
-                building = fo_drg_guardian_03
-            }
-            add_to_extra_holding = {
-                type = fort
-                building = fo_drg_guardian_04
-            }
-            add_to_extra_holding = {
-                type = fort
-                building = fo_drg_guardian_05
+            if = {
+                limit = {
+                    FROM = {
+                        culture_group = dragon_group
+                    }
+                }
+                add_to_extra_holding = {
+                    type = fort
+                    building = fo_drg_guardian_01
+                }
+                add_to_extra_holding = {
+                    type = fort
+                    building = fo_drg_guardian_02
+                }
+                add_to_extra_holding = {
+                    type = fort
+                    building = fo_drg_guardian_03
+                }
+                add_to_extra_holding = {
+                    type = fort
+                    building = fo_drg_guardian_04
+                }
+                add_to_extra_holding = {
+                    type = fort
+                    building = fo_drg_guardian_05
+                }
             }
         }
     }
@@ -214,6 +219,127 @@ dragon_tribalism_cb = {
         }
         any_defender = {
             participation_scaled_piety = 1000
+        }
+    }
+
+    ai_will_do = {
+        factor = 10
+    }
+}
+
+### dragon hunting
+dragon_hunting_war = {
+    name = DRAGON_HUNTING_CB_NAME
+    war_name = DRAGON_HUNTING_WAR_NAME
+    sprite = 25
+
+    truce_days = 5475
+    is_permanent = yes
+    is_independence = yes
+    hostile_against_others = no
+    can_ask_to_join_war = yes
+    allow_whitepeace = yes
+    can_call_allies = yes
+    can_call_vassals = yes
+    allow_distant = yes
+
+    attacker_ai_victory_worth = {
+        factor = -1 # always accept
+    }
+	attacker_ai_defeat_worth = {
+		factor = 100
+	}
+	defender_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	defender_ai_defeat_worth = {
+		factor = 100
+	}
+
+    battle_warscore_mult = 3
+    infamy_modifier = 0
+    max_defender_occupation_score = 100
+    max_attacker_occupation_score = 100
+    max_defender_battle_score = 500
+    max_attacker_battle_score = 500
+
+    defender_unoccupied_warscore = yes
+    sort_priority = 800
+
+    can_use = {
+        FROM = {
+            government = dragon_tribal_gov
+            OR = {
+                any_tributary = {
+                    always = yes
+                }
+                any_vassal = {
+                    higher_tier_than = BARON
+                }
+            }
+        }
+    }
+    is_valid = {
+        FROM = {
+            government = dragon_tribal_gov
+            OR = {
+                any_tributary = {
+                    always = yes
+                }
+                any_vassal = {
+                    higher_tier_than = BARON
+                }
+            }
+        }
+    }
+    on_success = {
+        FROM = {
+            any_tributary = {
+                remove_tributary = ROOT_FROM
+            }
+            any_vassal = {
+                limit = {
+                    higher_tier_than = BARON
+                    liege = { #direct vassals only
+                        character = ROOT_FROM
+                    }
+                }
+                set_defacto_liege = THIS
+            }
+            clear_wealth = yes
+            death = {
+                death_reason = death_execution_impaling
+                killer = ROOT
+            }
+        }
+        ROOT = {
+            wealth = 1000
+            prestige = 1000
+            piety = 1000
+        }
+    }
+    on_fail = {
+        FROM = {
+            prestige = 150            
+        }
+        ROOT = {
+            prestige = -200
+            piety = -300
+        }
+    }
+    on_reverse_demand = {
+        ROOT = {
+            transfer_scaled_wealth = {
+                to = ROOT
+                value = 5
+                min = 100
+            }
+        }
+        FROM = {
+            make_tributary = {
+                who = ROOT
+                tributary_type = dragon_vassal_tributary
+            }
         }
     }
 }
