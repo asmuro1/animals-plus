@@ -267,3 +267,61 @@ settlement_decisions = {
         }
     }
 }
+
+title_decisions = {
+    dragon_start_to_loot_tributary_province = {
+        is_high_prio = no
+        ai_check_interval = 50
+        
+        # as the decision is concerning tributaries and their are no filter for them,
+        # I put 'all' pre-filter with a high ai_check_interval value
+        filter = all
+        ai_target_filter = all
+
+        potential = {
+            FROM = {
+                culture_group = dragon_group
+                independent = yes
+            }
+            ROOT = {
+                tier = COUNT
+
+                holder_scope = {
+                    top_liege = {
+                        suzerain = {
+                            character = FROM
+                        }
+                    }
+                }
+
+                location = {
+                    has_fort = no
+                }
+            }
+        }
+        allow = {
+            FROM = {
+                dragon_is_adult_trigger = yes
+
+                prestige = 500
+                wealth = 100
+            }
+        }
+        effect = {
+            FROM = {
+                prestige = -500
+                wealth = -100
+            }
+
+            create_fort = location
+        }
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0.05
+                always = yes
+            }
+        }
+    }
+}
