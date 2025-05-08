@@ -38,7 +38,7 @@ dragon_tribalism_cb = {
     sort_priority = 1500
 
     max_defender_occupation_score = 100
-    max_attacker_occupation_score = 50
+    max_attacker_occupation_score = 99
     max_defender_battle_score     = 100
     max_attacker_battle_score     = 100
     defender_unoccupied_warscore  = yes

@@ -122,6 +122,7 @@ character_event = {
             limit = {
                 culture_group = dragon_group
                 can_change_religion = yes
+                NOT = { religion = Dragon_religion }
             }
             religion = Dragon_religion
             dragon_get_dragon_egg_culture_if_child_effect = yes
@@ -129,9 +130,23 @@ character_event = {
         }
         any_province = {
             limit = {
+                has_owner = yes
                 culture_group = dragon_group
+                NOT = { religion = Dragon_religion }
             }
-            religion = Dragon_religion
+            if = {
+                limit = {
+                    holder_scope = {
+                        culture_group = dragon_group
+                        religion = Dragon_religion
+                    }
+                }
+                religion = Dragon_religion
+                dragon_add_fort_to_province_effect = yes
+            }
+            else = {
+                culture = holder_scope
+            }
         }
     }
 }

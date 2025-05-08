@@ -351,3 +351,39 @@ convert_to_dragon_culture_effect = {
         }
     }
 }
+
+# province scope
+dragon_add_fort_to_province_effect = {
+    ROOT = {
+        create_fort = PREV
+    }
+    add_to_extra_holding = {
+        type = fort
+        building = fo_drg_guardian_01
+    }
+    add_to_extra_holding = {
+        type = fort
+        building = fo_drg_guardian_02
+    }
+    add_to_extra_holding = {
+        type = fort
+        building = fo_drg_guardian_03
+    }
+    add_to_extra_holding = {
+        type = fort
+        building = fo_drg_guardian_04
+    }
+    add_to_extra_holding = {
+        type = fort
+        building = fo_drg_guardian_05
+    }
+    if = {
+        limit = {
+            is_capital = yes
+        }
+        add_to_extra_holding = {
+            type = fort
+            building = fo_drg_heart_1
+        }
+    }
+}
