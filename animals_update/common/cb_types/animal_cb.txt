@@ -116,10 +116,7 @@ dragon_tribalism_cb = {
     can_use_gui = { # if can press button "declare war" with this cb
         ROOT = {
             war = no
-            custom_tooltip = {
-                text = TT_is_an_adult_dragon
-                has_character_flag = is_true_dragon_adult
-            }
+            dragon_is_adult_trigger = yes
         }
     }
 

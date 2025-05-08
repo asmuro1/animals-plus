@@ -32,10 +32,7 @@ decisions = {
                 }
             }
             in_command = no
-            custom_tooltip = {
-                text = TT_is_an_adult_dragon
-                has_character_flag = is_true_dragon_adult
-            }
+            dragon_is_adult_trigger = yes
         }
 
         effect = {
@@ -196,10 +193,7 @@ decisions = {
         }
         allow = {
             ruled_years = 1
-            custom_tooltip = {
-                text = TT_is_an_adult_dragon
-                has_character_flag = is_true_dragon_adult
-            }
+            dragon_is_adult_trigger = yes
         }
 
         effect = {

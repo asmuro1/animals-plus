@@ -107,3 +107,11 @@ is_my_realm_province_trigger = {
         }
     }
 }
+
+# character scope
+dragon_is_adult_trigger = {
+    custom_tooltip = {
+        text = TT_is_an_adult_dragon
+        has_character_flag = is_true_dragon_adult
+    }
+}
