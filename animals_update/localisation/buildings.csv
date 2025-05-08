@@ -453,16 +453,16 @@ tb_drg_slave_fighter_4;Slave warrior guild;Guilde d'esclaves de guerre;;;;;;;;;;
 tb_drg_fighter;dragon center;Centre des dragons;;;;;;;;;;;;x
 ho_drg_incubator;egg incubator room;salle d'incubateur des oeux;;;;;;;;;;;;x
 ho_drg_incubator_desc;an incubator room is recommended to create a dragon egg. It greatly increase hatching chances;un incubateur est fortement recommendé pour la ponte d'oeux de dragon. Il peut fortement augmenter les chances d'éclosions.;;;;;;;;;;;;x
-fo_drg_guardian_01;dragonic influence;influence draconique;;;;;;;;;;;;x
-fo_drg_guardian_02;dragonic influence;influence draconique;;;;;;;;;;;;x
-fo_drg_guardian_03;dragonic influence;influence draconique;;;;;;;;;;;;x
-fo_drg_guardian_04;dragonic influence;influence draconique;;;;;;;;;;;;x
-fo_drg_guardian_05;dragonic influence;influence draconique;;;;;;;;;;;;x
-fo_drg_guardian_06;dragonic influence;influence draconique;;;;;;;;;;;;x
-fo_drg_guardian_07;dragonic influence;influence draconique;;;;;;;;;;;;x
-fo_drg_guardian_08;dragonic influence;influence draconique;;;;;;;;;;;;x
-fo_drg_guardian_09;dragonic influence;influence draconique;;;;;;;;;;;;x
-fo_drg_guardian_10;dragonic influence;influence draconique;;;;;;;;;;;;x
+fo_drg_guardian_01;draconic influence I;influence draconique I;;;;;;;;;;;;x
+fo_drg_guardian_02;draconic influence II;influence draconique II;;;;;;;;;;;;x
+fo_drg_guardian_03;draconic influence III;influence draconique III;;;;;;;;;;;;x
+fo_drg_guardian_04;draconic influence IV;influence draconique IV;;;;;;;;;;;;x
+fo_drg_guardian_05;draconic influence V;influence draconique V;;;;;;;;;;;;x
+fo_drg_guardian_06;draconic influence VI;influence draconique VI;;;;;;;;;;;;x
+fo_drg_guardian_07;draconic influence VII;influence draconique VII;;;;;;;;;;;;x
+fo_drg_guardian_08;draconic influence VIII;influence draconique VIII;;;;;;;;;;;;x
+fo_drg_guardian_09;draconic influence IX;influence draconique IX;;;;;;;;;;;;x
+fo_drg_guardian_10;draconic influence X;influence draconique X;;;;;;;;;;;;x
 fo_drg_retinue_1;dragon guard;garde draconique;;;;;;;;;;;;x
 fo_drg_retinue_2;dragon guard;garde draconique;;;;;;;;;;;;x
 fo_drg_retinue_3;dragon guard;garde draconique;;;;;;;;;;;;x

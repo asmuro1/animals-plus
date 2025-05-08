@@ -288,6 +288,7 @@ title_decisions = {
 
                 holder_scope = {
                     top_liege = {
+                        is_tributary = yes
                         suzerain = {
                             character = FROM
                         }
@@ -321,6 +322,214 @@ title_decisions = {
             modifier = {
                 factor = 0.05
                 always = yes
+            }
+        }
+    }
+}
+
+fort_decisions = {
+    dragon_increase_fort_fortification = {
+        is_high_prio = no
+        ai_check_interval = 12
+
+        potential = {
+            FROM = {
+                culture_group = dragon_group
+                independent = yes
+            }
+            ROOT = {
+                fort_owner = {
+                    top_liege = {
+                        is_tributary = yes
+                        suzerain = {
+                            character = FROM
+                        }
+                    }
+                }
+            }
+        }
+        allow = {
+            FROM = {
+                dragon_is_adult_trigger = yes
+                trigger_if = {
+                    limit = {
+                        ROOT = {
+                            fort_has_building = fo_drg_guardian_09
+                        }
+                    }
+                    wealth = 1000
+                }
+                trigger_else_if = {
+                    limit = {
+                        ROOT = {
+                            fort_has_building = fo_drg_guardian_08
+                        }
+                    }
+                    wealth = 900
+                }
+                trigger_else_if = {
+                    limit = {
+                        ROOT = {
+                            fort_has_building = fo_drg_guardian_07
+                        }
+                    }
+                    wealth = 800
+                }
+                trigger_else_if = {
+                    limit = {
+                        ROOT = {
+                            fort_has_building = fo_drg_guardian_06
+                        }
+                    }
+                    wealth = 700
+                }
+                trigger_else_if = {
+                    limit = {
+                        ROOT = {
+                            fort_has_building = fo_drg_guardian_05
+                        }
+                    }
+                    wealth = 600
+                }
+                trigger_else_if = {
+                    limit = {
+                        ROOT = {
+                            fort_has_building = fo_drg_guardian_04
+                        }
+                    }
+                    wealth = 500
+                }
+                trigger_else_if = {
+                    limit = {
+                        ROOT = {
+                            fort_has_building = fo_drg_guardian_03
+                        }
+                    }
+                    wealth = 400
+                }
+                trigger_else_if = {
+                    limit = {
+                        ROOT = {
+                            fort_has_building = fo_drg_guardian_02
+                        }
+                    }
+                    wealth = 300
+                }
+                trigger_else_if = {
+                    limit = {
+                        ROOT = {
+                            fort_has_building = fo_drg_guardian_01
+                        }
+                    }
+                    wealth = 200
+                }
+                trigger_else = {
+                    wealth = 100
+                }
+            }
+
+            custom_tooltip = {
+                text = TT_dragon_not_max_fortif
+                NOT = { fort_has_building = fo_drg_guardian_10 }
+            }
+        }
+        effect = {
+            trigger_switch = {
+                on_trigger = fort_has_building
+                fo_drg_guardian_09 = {
+                    add_to_extra_holding = {
+                        type = fort
+                        building = fo_drg_guardian_10
+                    }
+                    FROM = { wealth = -1000 }
+                }
+                fo_drg_guardian_08 = {
+                    add_to_extra_holding = {
+                        type = fort
+                        building = fo_drg_guardian_09
+                    }
+                    FROM = { wealth = -900 }
+                }
+                fo_drg_guardian_07 = {
+                    add_to_extra_holding = {
+                        type = fort
+                        building = fo_drg_guardian_08
+                    }
+                    FROM = { wealth = -800 }
+                }
+                fo_drg_guardian_06 = {
+                    add_to_extra_holding = {
+                        type = fort
+                        building = fo_drg_guardian_07
+                    }
+                    FROM = { wealth = -700 }
+                }
+                fo_drg_guardian_05 = {
+                    add_to_extra_holding = {
+                        type = fort
+                        building = fo_drg_guardian_06
+                    }
+                    FROM = { wealth = -600 }
+                }
+                fo_drg_guardian_04 = {
+                    add_to_extra_holding = {
+                        type = fort
+                        building = fo_drg_guardian_05
+                    }
+                    FROM = { wealth = -500 }
+                }
+                fo_drg_guardian_03 = {
+                    add_to_extra_holding = {
+                        type = fort
+                        building = fo_drg_guardian_04
+                    }
+                    FROM = { wealth = -400 }
+                }
+                fo_drg_guardian_02 = {
+                    add_to_extra_holding = {
+                        type = fort
+                        building = fo_drg_guardian_03
+                    }
+                    FROM = { wealth = -300 }
+                }
+                fo_drg_guardian_01 = {
+                    add_to_extra_holding = {
+                        type = fort
+                        building = fo_drg_guardian_02
+                    }
+                    FROM = { wealth = -200 }
+                }
+                fallback = {
+                    add_to_extra_holding = {
+                        type = fort
+                        building = fo_drg_guardian_01
+                    }
+                    FROM = { wealth = -100 }
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0.5
+                fort_has_building = fo_drg_guardian_05
+            }
+            modifier = {
+                factor = 0.5
+                fort_has_building = fo_drg_guardian_06
+            }
+            modifier = {
+                factor = 0.5
+                fort_has_building = fo_drg_guardian_07
+            }
+            modifier = {
+                factor = 0.5
+                fort_has_building = fo_drg_guardian_08
+            }
+            modifier = {
+                factor = 0.5
+                fort_has_building = fo_drg_guardian_09
             }
         }
     }

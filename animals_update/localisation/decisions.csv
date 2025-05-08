@@ -355,6 +355,9 @@ dragon_convert_to_tribal;Plunder the property;Piller la propriété;;;;;;;;;;;;x
 dragon_convert_to_tribal_desc;By plundering the whole property, you take everything with value and let the minimum living inside;En pillant la propriété, on prend tout ce qui a de la valeur. On laisse après que ce qui est nécessaire à la vie dans le comté;;;;;;;;;;;;x
 dragon_start_to_loot_tributary_province;Start integrating the province;Démarer l'intégration de la province;;;;;;;;;;;;x
 dragon_start_to_loot_tributary_province_desc;By creating an outpost, you can start influencing the province. With time, if the outpost is developped corretly, the province can be integrated.;En créant un avant-poste draconnique, il est possible d'influencer la province. Lorsque la province est suffisemment influencé, elle peut être absorbé dans un empire draconnique;;;;;;;;;;;;x
+dragon_increase_fort_fortification;increase draconic influence;augmenter l'influence draconique;;;;;;;;;;;;x
+dragon_increase_fort_fortification_desc;By increasing your influence, you increase the odd of integrating the province into your territory.;En augmentant l'influence draconique, on augmente les chances d'intégrations de la province à un territoire draconique.;;;;;;;;;;;;x
 
 TT_dragon_did_not_lay_egg_recently;Did not lay an egg recently;N'a pas pondu d'œuf récemment;;;;;;;;;;;;x
 TT_is_an_adult_dragon;Has finished its dragon education;A fini son éducation de dragon;;;;;;;;;;;;x
+TT_dragon_not_max_fortif;Can increase influence;Peut augmenter l'influence de la province;;;;;;;;;;;;x
