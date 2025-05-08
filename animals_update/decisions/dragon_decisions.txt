@@ -224,3 +224,46 @@ decisions = {
         }
     }
 }
+
+settlement_decisions = {
+    dragon_convert_to_tribal = {
+        is_high_prio = yes
+        ai_check_interval = 10
+
+        filter = sub_realm_owned
+        ai_target_filter = owned
+        
+        potential = {
+            FROM = {
+                culture_group = dragon_group
+            }
+            ROOT = {
+                is_capital = yes
+                location = {
+                    culture_group = dragon_group
+                }
+                NOT = { holding_type = tribal }
+            }
+        }
+        allow = {
+            FROM = {
+                dragon_is_adult_trigger = yes
+                war = no
+            }
+
+            location = {
+                show_scope_change = no
+                has_fort = yes
+            }
+        }
+        effect = {
+            FROM = {
+                wealth = 1000
+            }
+            convert_to = tribal
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+}

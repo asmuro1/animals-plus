@@ -351,6 +351,8 @@ go_search_for_dragon_egg;Buy the legendary dragon egg;Acheter l'œuf de dragon lé
 go_search_for_dragon_egg_desc;Their are legends that say that an unique dragon egg exist. But recently, a merchant did found it and propose me to buy it;Il y a des légendes qui disent qu'un œuf de dragon a été caché à ma capitale. En porofitant de cette légende, un marchand me propose de lui en acheter un;;;;;;;;;;;;x
 dragon_goes_battlefield;come into the battlefield;Intégrer le champs de bataille;;;;;;;;;;;;x
 dragon_goes_battlefield_desc;By entering the battlefield, you can have some loyal dragon come with you;En entrant sur le champs de bataille, un certain nombre de dragon loyaux se joindront à toi;;;;;;;;;;;;x
+dragon_convert_to_tribal;Plunder the property;Piller la propriété;;;;;;;;;;;;x
+dragon_convert_to_tribal_desc;By plundering the whole property, you take everything with value and let the minimum living inside;En pillant la propriété, on prend tout ce qui a de la valeur. On laisse après que ce qui est nécessaire à la vie dans le comté;;;;;;;;;;;;x
 
 TT_dragon_did_not_lay_egg_recently;Did not lay an egg recently;N'a pas pondu d'œuf récemment;;;;;;;;;;;;x
 TT_is_an_adult_dragon;Has finished its dragon education;A fini son éducation de dragon;;;;;;;;;;;;x
