@@ -297,3 +297,7 @@ DESC_ANI_225;The succession came to an end. Everyone who wanted my position did 
 OPT_ANI_225;Finnally!;Enfin!;;;;;;;;;;;;x
 DESC_ANI_230;With the growth of §Y[dragon_new_county_owner.GetTitledName]§! influence in §Y[This.GetName]§!, I lost my power as the lord...;Avec l'influence grandissante de §Y[dragon_new_county_owner.GetTitledName]§!, les habitants de §Y[This.GetName]§! ne m'écoutent plus.;;;;;;;;;;;;x
 OPT_ANI_230;Why did he have to usurp §Y[This.GetName]§!?;Pourquoi faut-il que §Y[dragon_new_county_owner.GetTitledName]§! me vole mes titres?!;;;;;;;;;;;;x
+DESC_ANI_231;I heard that our influence toward §Y[From.GetName]§! got us a good present.;Je viens d'avoir l'information que grâce à notre influence en §Y[From.GetName], on vient d'avoir un jolie cadeau.;;;;;;;;;;;;x
+OPT_ANI_231;A new province to our beautiful country;Une nouvelle province pour notre grand pays;;;;;;;;;;;;x
+DESC_ANI_232;Lord, I write you to explain that §Y[dragon_new_county_owner.GetTitledName]§! stole from me [From.GetName]...;Je t'écris pour te signaler que l'horrible dragon §Y[dragon_new_county_owner.GetDynName] vien de nous voler le comté de §Y[From.GetName].;;;;;;;;;;;;x
+OPT_ANI_232;What can I do...;Que puis-je faire contre ça?;;;;;;;;;;;;x

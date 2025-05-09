@@ -2812,7 +2812,7 @@ province_event = {
         }
 
         event_target:dragon_new_county_owner = {
-            # character_event = { id = ani_plus.231 }
+            character_event = { id = ani_plus.231 }
         }
 
         if = {
@@ -2821,7 +2821,7 @@ province_event = {
                     NOT = { character = top_liege }
                 }
             }
-            # character_event = { id = ani_plus.232 }
+            letter_event = { id = ani_plus.232 }
         }
     }
     option = {
@@ -2832,5 +2832,32 @@ province_event = {
                 type = usurp
             }
         }
+    }
+}
+
+# event 231
+character_event = {
+    id = ani_plus.231
+
+    is_triggered_only = yes
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = DESC_ANI_231
+
+    option = {
+        name = OPT_ANI_231
+    }
+}
+
+# event 232
+letter_event = {
+    id = ani_plus.232
+
+    is_triggered_only = yes
+    border = GFX_event_letter_frame_diplomacy
+    desc = DESC_ANI_232
+
+    option = {
+        name = OPT_ANI_232
     }
 }
