@@ -173,15 +173,16 @@ dragon_tribalism_cb = {
         create_fort = location
 
         location = {
+            add_to_extra_holding = {
+                type = fort
+                building = fo_drg_guardian_01
+            }
+            
             if = {
                 limit = {
                     FROM = {
                         culture_group = dragon_group
                     }
-                }
-                add_to_extra_holding = {
-                    type = fort
-                    building = fo_drg_guardian_01
                 }
                 add_to_extra_holding = {
                     type = fort
