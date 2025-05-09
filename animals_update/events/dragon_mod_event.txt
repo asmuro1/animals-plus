@@ -446,6 +446,17 @@ character_event = {
             clr_character_flag = blue_dragon_potential
             clr_character_flag = red_dragon_potential
             clr_character_flag = yellow_dragon_potential
+
+            hidden_tooltip = { # if already a ruler
+                if = {
+                    limit = {
+                        is_ruler = yes
+                    }
+                    any_demesne_province = {
+                        culture = PREV
+                    }
+                }
+            }
         }
     }
 }
@@ -2327,7 +2338,7 @@ character_event = {
     }
 }
 
-#### event 223 to 226: heritage events
+#### event 223 to 226: inheritance events
 ## event 223: setup to start succession tournament
 ## event 224: a duel
 ## event 225: tournament end
@@ -2349,7 +2360,17 @@ character_event = {
 
     immediate = {
         character_event = { id = ani_plus.223 days = 2 }
-        
+
+        if = { # setting holder culture (except if egg)
+            limit = {
+                NOT = {
+                    culture = dragon_culture
+                }
+            }
+            any_demesne_province = {
+                culture = PREV
+            }
+        }
     }
 }
 
@@ -2832,6 +2853,10 @@ province_event = {
                 target = event_target:dragon_new_county_owner
                 type = usurp
             }
+        }
+        
+        hidden_tooltip = { # updating county culture before being given
+            culture = event_target:dragon_new_county_owner
         }
     }
 }
