@@ -1,5 +1,5 @@
 #######dragon update
-### event 198 - 
+### event 198 - 232
 
 namespace = ani_plus
 
@@ -2599,9 +2599,10 @@ character_event = {
     }
 }
 
-#### event 227 to 228: warfare tournament
+#### event 227 to 229: warfare events
 ## event 227: preventing vassals to declare war
 ## event 228: removing law for non-dragon (mainly if Zeus DLC not activated)
+## event 229: remove tributaries on dragon war loss
 
 # event 227
 character_event = {
@@ -2647,8 +2648,7 @@ character_event = {
     }
 }
 
-
-# event 229: remove tributaries on dragon war loss
+# event 229
 character_event = {
     id = ani_plus.229
 
@@ -2672,6 +2672,164 @@ character_event = {
                     }
                     destroy_fort = THIS
                 }
+            }
+        }
+    }
+}
+
+#### event 230 to 232: province cultural administration events
+## event 230: a dragon absorb a province into his own realm
+##              also convert that same province into his culture
+## event 231: dragon notification for obtaining a new province
+## event 232: top liege notification for losing a province
+
+# event 230
+province_event = {
+    id = ani_plus.230
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = DESC_ANI_230
+
+    trigger = {
+        has_fort = yes
+        holder_scope = {
+            top_liege = {
+                is_tributary = {
+                    type = dragon_vassal_tributary
+                }
+            }
+        }
+    }
+
+    mean_time_to_happen = {
+        years = 2000
+
+        modifier = { # direct neighbor
+            factor = 0.5
+
+            any_neighbor_province = {
+                has_owner = yes
+                culture_group = dragon_group
+            }
+        }
+        modifier = { # direct naval neighbor
+            factor = 0.75
+
+            any_neighbor_province = {
+                is_land = no
+                any_neighbor_province = {
+                    has_owner = yes
+                    culture_group = dragon_group
+                }
+            }
+        }
+        modifier = { # undirect naval neighbor
+            factor = 0.875
+
+            NOT = {
+                any_neighbor_province = {
+                    is_land = no
+                    any_neighbor_province = {
+                        has_owner = yes
+                        culture_group = dragon_group
+                    }
+                }
+            }
+
+            any_neighbor_province = {
+                is_land = no
+                any_neighbor_province = {
+                    is_land = no
+                    any_neighbor_province = {
+                        OR = {
+                            AND = {
+                                has_owner = yes
+                                culture_group = dragon_group
+                            }
+                            AND = {
+                                is_land = no
+                                any_neighbor_province = {
+                                    has_owner = yes
+                                    culture_group = dragon_group
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        modifier = { # 500 years if direct neighbor
+            factor = 0.5
+            fort_has_building = fo_drg_guardian_01
+        }
+        modifier = { # 250 years if direct neighbor
+            factor = 0.5
+            fort_has_building = fo_drg_guardian_02
+        }
+        modifier = { # 100 years if direct neighbor
+            factor = 0.4
+            fort_has_building = fo_drg_guardian_03
+        }
+        modifier = { # 50 years if direct neighbor
+            factor = 0.5
+            fort_has_building = fo_drg_guardian_04
+        }
+        modifier = { # 20 years if direct neighbor
+            factor = 0.5
+            fort_has_building = fo_drg_guardian_05
+        }
+        modifier = { # 12 years if direct neighbor
+            factor = 0.6
+            fort_has_building = fo_drg_guardian_06
+        }
+        modifier = { # 6 years if direct neighbor
+            factor = 0.5
+            fort_has_building = fo_drg_guardian_07
+        }
+        modifier = { # ~4 years if direct neighbor
+            factor = 0.666
+            fort_has_building = fo_drg_guardian_08
+        }
+        modifier = { # ~2 years if direct neighbor
+            factor = 0.5
+            fort_has_building = fo_drg_guardian_09
+        }
+        modifier = { # ~1 year if direct neighbor
+            factor = 0.5
+            fort_has_building = fo_drg_guardian_10
+        }
+    }
+
+    immediate = {
+        holder_scope = {
+            top_liege = {
+                suzerain = {
+                    save_event_target_as = dragon_new_county_owner
+                }
+            }
+        }
+
+        event_target:dragon_new_county_owner = {
+            # character_event = { id = ani_plus.231 }
+        }
+
+        if = {
+            limit = {
+                holder_scope = {
+                    NOT = { character = top_liege }
+                }
+            }
+            # character_event = { id = ani_plus.232 }
+        }
+    }
+    option = {
+        name = OPT_ANI_230
+        county = {
+            gain_title = {
+                target = event_target:dragon_new_county_owner
+                type = usurp
             }
         }
     }

@@ -97,7 +97,7 @@ has_dragon_holy_site_trigger = {
     }
 }
 
-# province scope
+# province scope - title cb condition
 is_my_realm_province_trigger = {
     has_owner = yes
     owner = {
