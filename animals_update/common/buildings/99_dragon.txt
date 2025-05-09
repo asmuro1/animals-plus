@@ -284,7 +284,7 @@ fort = {
         build_time = 350
         ai_creation_factor = 90
 
-        garrison_size = 0.1
+        garrison_size = 0.5
         fort_level = 1
     }
     fo_drg_guardian_02 = {
@@ -308,7 +308,7 @@ fort = {
         build_time = 700
         ai_creation_factor = 90
 
-        garrison_size = 0.2
+        garrison_size = 0.5
         fort_level = 1
     }
     fo_drg_guardian_03 = {
@@ -332,7 +332,7 @@ fort = {
         build_time = 1050
         ai_creation_factor = 90
 
-        garrison_size = 0.3
+        garrison_size = 0.5
         fort_level = 1
     }
     fo_drg_guardian_04 = {
@@ -356,7 +356,7 @@ fort = {
         build_time = 1400
         ai_creation_factor = 90
 
-        garrison_size = 0.4
+        garrison_size = 0.5
         fort_level = 1
     }
     fo_drg_guardian_05 = {
@@ -380,7 +380,7 @@ fort = {
         build_time = 1750
         ai_creation_factor = 90
 
-        garrison_size = 0.5
+        garrison_size = 1.0
         fort_level = 1
     }
     fo_drg_guardian_06 = {
@@ -404,7 +404,7 @@ fort = {
         build_time = 2100
         ai_creation_factor = 90
 
-        garrison_size = 0.5
+        garrison_size = 1.0
         fort_level = 1
     }
     fo_drg_guardian_07 = {
@@ -428,7 +428,7 @@ fort = {
         build_time = 2450
         ai_creation_factor = 90
 
-        garrison_size = 0.5
+        garrison_size = 1.0
         fort_level = 1
     }
     fo_drg_guardian_08 = {
@@ -452,7 +452,7 @@ fort = {
         build_time = 2800
         ai_creation_factor = 90
 
-        garrison_size = 0.25
+        garrison_size = 1.0
         fort_level = 1
     }
     fo_drg_guardian_09 = {
@@ -476,7 +476,7 @@ fort = {
         build_time = 3150
         ai_creation_factor = 90
 
-        garrison_size = 0.25
+        garrison_size = 0.5
         fort_level = 1
     }
     fo_drg_guardian_10 = {
@@ -500,6 +500,7 @@ fort = {
         build_time = 3500
         ai_creation_factor = 90
 
+        garrison_size = 0.5
         fort_level = 1
     }
 
@@ -523,6 +524,7 @@ fort = {
         ai_creation_factor = 40
 
         retinuesize = 10
+        knights = 5
     }
     fo_drg_retinue_2 = {
         add_number_to_name = no
@@ -544,7 +546,7 @@ fort = {
         ai_creation_factor = 40
 
         retinuesize = 15
-        retinuesize_perc = 0.1
+        knights = 5
     }
     fo_drg_retinue_3 = {
         add_number_to_name = no
@@ -566,7 +568,7 @@ fort = {
         ai_creation_factor = 40
 
         retinuesize = 15
-        retinuesize_perc = 0.1
+        knights = 5
     }
 
     fo_drg_heart_1 = {
@@ -590,7 +592,7 @@ fort = {
         build_time = 1000
         ai_creation_factor = 100
 
-        fort_level = 1
+        fort_level = 1.5
         tax_income = 10
     }
     fo_drg_heart_2 = { 
@@ -614,7 +616,8 @@ fort = {
         build_time = 2500
         ai_creation_factor = 100
 
-        fort_level = 2
+        retinuesize_perc = 0.1
+        fort_level = 2.5
         tax_income = 10
     }
     fo_drg_heart_3 = {
@@ -638,7 +641,8 @@ fort = {
         build_time = 5000
         ai_creation_factor = 100
 
-        fort_level = 3
+        retinuesize_perc = 0.2
+        fort_level = 4
         tax_income = 10
     }
 
