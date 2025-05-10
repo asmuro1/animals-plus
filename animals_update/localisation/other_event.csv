@@ -301,3 +301,7 @@ DESC_ANI_231;I heard that our influence toward §Y[From.GetName]§! got us a good 
 OPT_ANI_231;A new province to our beautiful country;Une nouvelle province pour notre grand pays;;;;;;;;;;;;x
 DESC_ANI_232;Lord, I write you to explain that §Y[dragon_new_county_owner.GetTitledName]§! stole from me [From.GetName]...;Je t'écris pour te signaler que l'horrible dragon §Y[dragon_new_county_owner.GetDynName] vien de nous voler le comté de §Y[From.GetName].;;;;;;;;;;;;x
 OPT_ANI_232;What can I do...;Que puis-je faire contre ça?;;;;;;;;;;;;x
+DESC_ANI_234;Because of the lack of fortification, some humains successfully make a revolt and claimed their independence;A cause du manque de fortifications, un groupe d'humain a réussi un coup d'état et a pu déclarer l'indépendance de [This.GetName].;;;;;;;;;;;;x
+OPT_ANI_234;Does that means...;ça signifie que...;;;;;;;;;;;;x
+
+TT_dragon_loose_province_fort;loose control over §Y[This.GetName]§!;perd le controle de §Y[This.GetName]§!;;;;;;;;;;;;x

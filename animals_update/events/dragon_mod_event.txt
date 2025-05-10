@@ -1,5 +1,5 @@
 #######dragon update
-### event 198 - 233
+### event 198 - 234
 
 namespace = ani_plus
 
@@ -2704,6 +2704,7 @@ character_event = {
 ## event 231: dragon notification for obtaining a new province
 ## event 232: top liege notification for losing a province
 ## event 233: removing influence if not tributary
+## event 234: dragon owned province without fort get independence
 
 # event 230
 province_event = {
@@ -2915,5 +2916,215 @@ province_event = {
 
     immediate = {
         destroy_fort = ROOT
+    }
+}
+
+# event 234
+province_event = {
+    id = ani_plus.234
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = DESC_ANI_234
+
+    trigger = {
+        has_fort = no
+        holder_scope = {
+            government = dragon_tribal_gov
+        }
+    }
+    mean_time_to_happen = {
+        months = 6
+
+        modifier = {
+            factor = 120
+            holder_scope = {
+                war = yes
+            }
+        }
+    }
+
+    option = {
+        name = OPT_ANI_234
+        
+        custom_tooltip = {
+            text = TT_dragon_loose_province_fort
+            
+            if = {
+                limit = {
+                    NOT = {
+                        culture_group = dragon_group
+                    }
+                }
+
+                create_character = {
+                    age = 20
+                    attributes = {
+                        martial = 20
+                        diplomacy = 20
+                        stewardship = 10
+                        intrigue = 15
+                        learning = 10
+                    }
+                    female = no
+                    dynasty = none
+                }
+            }
+            else = {
+                create_character = {
+                    age = 20
+                    attributes = {
+                        martial = 20
+                        diplomacy = 20
+                        stewardship = 10
+                        intrigue = 15
+                        learning = 10
+                    }
+                    female = no
+                    dynasty = none
+                    culture = random
+                }
+            }
+
+            culture = new_character
+            county = {
+                gain_title_plus_barony_if_unlanded = new_character
+            }
+
+            new_character = {
+                set_defacto_liege = THIS
+                spawn_unit = {
+                    province = PREV
+                    home = PREV
+                    owner = THIS
+                    troops = {
+                        pikemen = { 1000 1000 }
+                    }
+                    scaled_by_biggest_garrison = 2
+                    disband_on_peace = no
+                    cannot_inherit = no
+                    reinforces = no
+                    merge = yes
+                }
+                spawn_unit = {
+                    province = PREV
+                    home = PREV
+                    owner = THIS
+                    troops = {
+                        pikemen = { 1000 1000 }
+                    }
+                    scaled_by_biggest_garrison = 2
+                    disband_on_peace = no
+                    cannot_inherit = no
+                    reinforces = no
+                    merge = yes
+                }
+                spawn_unit = {
+                    province = PREV
+                    home = PREV
+                    owner = THIS
+                    troops = {
+                        pikemen = { 1000 1000 }
+                    }
+                    scaled_by_biggest_garrison = 2
+                    disband_on_peace = no
+                    cannot_inherit = no
+                    reinforces = no
+                    merge = yes
+                }
+            }
+            hidden_effect = {
+                generate_tooltip = no
+                random_character = {
+                    limit = { NOT = { religion = Dragon_religion } }
+                    preferred_limit = {
+                        location = {
+                            distance = {
+                                where = ROOT
+                                distance == 0
+                            }
+                        }
+                    }
+                    preferred_limit = {
+                        location = {
+                            distance = {
+                                where = ROOT
+                                distance <= 10
+                            }
+                        }
+                    }
+                    preferred_limit = {
+                        location = {
+                            distance = {
+                                where = ROOT
+                                distance <= 25
+                            }
+                        }
+                    }
+                    preferred_limit = {
+                        location = {
+                            distance = {
+                                where = ROOT
+                                distance <= 50
+                            }
+                        }
+                    }
+                    preferred_limit = {
+                        location = {
+                            distance = {
+                                where = ROOT
+                                distance <= 100
+                            }
+                        }
+                    }
+                    preferred_limit = {
+                        location = {
+                            distance = {
+                                where = ROOT
+                                distance <= 250
+                            }
+                        }
+                    }
+                    preferred_limit = {
+                        location = {
+                            distance = {
+                                where = ROOT
+                                distance <= 500
+                            }
+                        }
+                    }
+                    preferred_limit = {
+                        location = {
+                            distance = {
+                                where = ROOT
+                                distance <= 1000
+                            }
+                        }
+                    }
+                    preferred_limit = {
+                        location = {
+                            distance = {
+                                where = ROOT
+                                distance <= 2500
+                            }
+                        }
+                    }
+                    preferred_limit = {
+                        location = {
+                            distance = {
+                                where = ROOT
+                                distance <= 5000
+                            }
+                        }
+                    }
+                    
+                    generate_tooltip = no
+                    new_character = {
+                        religion = PREV
+                    }
+                }
+                religion = new_character
+            }
+        }
     }
 }
