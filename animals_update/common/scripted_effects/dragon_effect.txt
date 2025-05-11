@@ -315,6 +315,7 @@ convert_to_dragon_culture_effect = {
                 }
             }
         }
+        
         PREV = {
             culture = event_target:target_dragon_culture
         }
@@ -323,31 +324,8 @@ convert_to_dragon_culture_effect = {
             culture = event_target:target_dragon_culture
         }
 
-        hidden_tooltip = {
-            add_to_extra_holding = {
-                type = fort
-                building = fo_drg_heart_1
-            }
-            add_to_extra_holding = {
-                type = fort
-                building = fo_drg_guardian_01
-            }
-            add_to_extra_holding = {
-                type = fort
-                building = fo_drg_guardian_02
-            }
-            add_to_extra_holding = {
-                type = fort
-                building = fo_drg_guardian_03
-            }
-            add_to_extra_holding = {
-                type = fort
-                building = fo_drg_guardian_04
-            }
-            add_to_extra_holding = {
-                type = fort
-                building = fo_drg_guardian_05
-            }
+        hidden_effect = {
+            dragon_add_fort_to_province_effect = yes
         }
     }
 }
