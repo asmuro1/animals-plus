@@ -534,3 +534,50 @@ fort_decisions = {
         }
     }
 }
+
+targetted_decisions = {
+    dragon_vassal_take_independence = {
+        is_high_prio = no
+        ai_check_interval = 6
+
+        filter = liege
+        ai_target_filter = liege
+
+        from_potential = {
+            NOT = { government = dragon_tribal_gov }
+            higher_tier_than = BARON
+        }
+
+        potential = {
+            government = dragon_tribal_gov
+        }
+
+        allow = {
+            FROM = {
+                war = no
+                has_regent = no
+                is_incapable = no
+            }
+            ROOT = {
+                war = no
+            }
+        }
+
+        effect = {
+            FROM = {
+                set_defacto_liege = THIS
+            }
+
+            ROOT = {
+                custom_tooltip = {
+                    text = TT_force_to_become_tributary
+                    # letter_event = { id = ani_plus.235 }
+                }
+            }
+        }
+
+        ai_will_do = {
+            factor = 1 # ai will always take the decision
+        }
+    }
+}
