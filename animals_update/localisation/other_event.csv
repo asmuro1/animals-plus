@@ -306,5 +306,7 @@ OPT_ANI_234;Does that means...;ça signifie que...;;;;;;;;;;;;x
 DESC_ANI_235;As our government way is incompatible, I think it is best for both of us to cut our vassal-liege relationship;Avec nos différences d'administration, il vaut mieux couper nos relation tout de suite;;;;;;;;;;;;x
 OPTA_ANI_235;You'll stay at my orders!;Tu resteras sous mes ordres!;;;;;;;;;;;;x
 OPTB_ANI_235;Fine;OK;;;;;;;;;;;;x
+DESC_ANI_236;A small group of human did sabotage [This.GetName]. Seems that we lost all the influence we built...;Un petit groupe d'humain a saboté mon influence en [This.GetName].;;;;;;;;;;;;x
+OPT_ANI_236;That means that they'll get their independence soon...;ça signifie qu'ils vont bientôt avoir leur indépendance...;;;;;;;;;;;;x
 
 TT_dragon_loose_province_fort;loose control over §Y[This.GetName]§!;perd le controle de §Y[This.GetName]§!;;;;;;;;;;;;x

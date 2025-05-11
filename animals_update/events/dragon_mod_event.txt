@@ -2342,7 +2342,7 @@ character_event = {
 ## event 223: setup to start succession tournament
 ## event 224: a duel
 ## event 225: tournament end
-## event 226: hidden event to setup effect
+## event 226: hidden event to delay tournament start effect (for players)
 
 # event 226
 character_event = {
@@ -3127,8 +3127,7 @@ province_event = {
                             }
                         }
                     }
-                    
-                    generate_tooltip = no
+
                     new_character = {
                         religion = PREV
                     }
@@ -3189,5 +3188,105 @@ letter_event = {
                 }
             }
         }
+    }
+}
+
+# event 236
+province_event = {
+    id = ani_plus.236
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = DESC_ANI_236
+
+    trigger = {
+        culture_group = dragon_group
+        has_fort = yes
+        NOR = {
+            fort_has_building = fo_drg_guardian_10
+            fort_is_building = fo_drg_guardian_10
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 6
+        modifier = {
+            factor = 10
+
+            OR = {
+                fort_has_building = fo_drg_guardian_01
+                fort_is_building  = fo_drg_guardian_01
+            }
+        }
+        modifier = {
+            factor = 2
+
+            OR = {
+                fort_has_building = fo_drg_guardian_02
+                fort_is_building  = fo_drg_guardian_02
+            }
+        }
+        modifier = {
+            factor = 2.5
+
+            OR = {
+                fort_has_building = fo_drg_guardian_03
+                fort_is_building  = fo_drg_guardian_03
+            }
+        }
+        modifier = {
+            factor = 2
+
+            OR = {
+                fort_has_building = fo_drg_guardian_04
+                fort_is_building  = fo_drg_guardian_04
+            }
+        }
+        modifier = {
+            factor = 2
+
+            OR = {
+                fort_has_building = fo_drg_guardian_05
+                fort_is_building  = fo_drg_guardian_05
+            }
+        }
+        modifier = {
+            factor = 2
+
+            OR = {
+                fort_has_building = fo_drg_guardian_06
+                fort_is_building  = fo_drg_guardian_06
+            }
+        }
+        modifier = {
+            factor = 2
+
+            OR = {
+                fort_has_building = fo_drg_guardian_07
+                fort_is_building  = fo_drg_guardian_07
+            }
+        }
+        modifier = {
+            factor = 2
+
+            OR = {
+                fort_has_building = fo_drg_guardian_08
+                fort_is_building  = fo_drg_guardian_08
+            }
+        }
+        modifier = {
+            factor = 2
+
+            OR = {
+                fort_has_building = fo_drg_guardian_09
+                fort_is_building  = fo_drg_guardian_09
+            }
+        }
+    }
+
+    option = {
+        name = OPT_ANI_236
+
+        destroy_fort = ROOT
     }
 }
