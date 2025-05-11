@@ -571,7 +571,7 @@ targetted_decisions = {
             ROOT = {
                 custom_tooltip = {
                     text = TT_force_to_become_tributary
-                    # letter_event = { id = ani_plus.235 }
+                    letter_event = { id = ani_plus.235 days = 2 random = 5}
                 }
             }
         }

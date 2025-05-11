@@ -1,5 +1,5 @@
 #######dragon update
-### event 198 - 234
+### event 198 - 239
 
 namespace = ani_plus
 
@@ -3124,6 +3124,59 @@ province_event = {
                     }
                 }
                 religion = new_character
+            }
+        }
+    }
+}
+
+#### event 235 to 239: instability events
+## event 235: letter to non-dragon vassal to get their independance (at tributary price)
+## event 236: lack of influence - loosing fort
+## event 237: vassal rebellion
+## event 238: lack of governance (and money)
+## event 239: letter to force vassal to declare war
+
+# event 235
+letter_event = {
+    id = ani_plus.235
+
+    is_triggered_only = yes
+    border = GFX_event_letter_frame_diplomacy
+    desc = DESC_ANI_235
+
+    option = {
+        name = OPTA_ANI_235
+
+        
+        make_tributary = {
+            who = FROMFROM
+            tributary_type = dragon_vassal_tributary
+        }
+
+        ai_chance = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+                OR = {
+                    trait = charitable
+                    trait = content
+                }
+            }
+        }
+    }
+    option = {
+        name = OPTB_ANI_235
+
+        ai_chance = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+                NOR = {
+                    trait = charitable
+                    trait = content
+                }
             }
         }
     }

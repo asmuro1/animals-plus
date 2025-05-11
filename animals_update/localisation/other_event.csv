@@ -303,5 +303,8 @@ DESC_ANI_232;Lord, I write you to explain that §Y[dragon_new_county_owner.GetTit
 OPT_ANI_232;What can I do...;Que puis-je faire contre ça?;;;;;;;;;;;;x
 DESC_ANI_234;Because of the lack of fortification, some humains successfully make a revolt and claimed their independence;A cause du manque de fortifications, un groupe d'humain a réussi un coup d'état et a pu déclarer l'indépendance de [This.GetName].;;;;;;;;;;;;x
 OPT_ANI_234;Does that means...;ça signifie que...;;;;;;;;;;;;x
+DESC_ANI_235;As our government way is incompatible, I think it is best for both of us to cut our vassal-liege relationship;Avec nos différences d'administration, il vaut mieux couper nos relation tout de suite;;;;;;;;;;;;x
+OPTA_ANI_235;You'll stay at my orders!;Tu resteras sous mes ordres!;;;;;;;;;;;;x
+OPTB_ANI_235;Fine;OK;;;;;;;;;;;;x
 
 TT_dragon_loose_province_fort;loose control over §Y[This.GetName]§!;perd le controle de §Y[This.GetName]§!;;;;;;;;;;;;x
