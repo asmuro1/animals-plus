@@ -2217,13 +2217,13 @@ character_event = {
     option = {
         name = OPTA_ANI_220
         
-        FROM = {}
+        show_portrait = FROM
     }
 
     option = {
         name = OPTB_ANI_220
 
-        FROM = {}
+        show_portrait = FROM
         add_artifact = dragon_egg_artifact
     }
 }
@@ -2722,6 +2722,13 @@ province_event = {
                     type = dragon_vassal_tributary
                 }
             }
+            war = no
+            OR = {
+                independent = yes
+                any_liege = {
+                    war = no
+                }
+            }
         }
     }
 
@@ -2898,6 +2905,7 @@ province_event = {
     trigger = {
         has_fort = yes
         fort_has_building = fo_drg_guardian_01
+        NOT = { culture_group = dragon_group }
 
         holder_scope = {
             top_liege = {
@@ -3032,6 +3040,8 @@ province_event = {
                     reinforces = no
                     merge = yes
                 }
+
+                wealth = 200
             }
             hidden_effect = {
                 generate_tooltip = no
