@@ -3283,6 +3283,36 @@ province_event = {
                 fort_is_building  = fo_drg_guardian_09
             }
         }
+        modifier = {
+            factor = 2
+            holder_scope = {
+                diplomacy = 15
+            }
+        }
+        modifier = {
+            factor = 0.5
+            holder_scope = {
+                NOT = { diplomacy = 5 }
+            }
+        }
+        modifier = {
+            factor = 4
+            holder_scope = {
+                stewardship = 15
+            }
+        }
+        modifier = {
+            factor = 0.5
+            holder_scope = {
+                NOT = { stewardship = 10 }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            holder_scope = {
+                NOT = { stewardship = 5 }
+            }
+        }
     }
 
     option = {
@@ -3376,6 +3406,27 @@ province_event = {
 
             holder_scope = {
                 wealth = 5000
+            }
+        }
+        modifier = {
+            factor = 0.5
+
+            holder_scope = {
+                higher_tier_than = COUNT
+            }
+        }
+        modifier = {
+            factor = 0.5
+
+            holder_scope = {
+                higher_tier_than = DUKE
+            }
+        }
+        modifier = {
+            factor = 0.5
+
+            holder_scope = {
+                higher_tier_than = KING
             }
         }
     }
