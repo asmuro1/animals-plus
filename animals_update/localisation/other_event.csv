@@ -308,5 +308,7 @@ OPTA_ANI_235;You'll stay at my orders!;Tu resteras sous mes ordres!;;;;;;;;;;;;x
 OPTB_ANI_235;Fine;OK;;;;;;;;;;;;x
 DESC_ANI_236;A small group of human did sabotage [This.GetName]. Seems that we lost all the influence we built...;Un petit groupe d'humain a saboté mon influence en [This.GetName].;;;;;;;;;;;;x
 OPT_ANI_236;That means that they'll get their independence soon...;ça signifie qu'ils vont bientôt avoir leur indépendance...;;;;;;;;;;;;x
+DESC_ANI_237;As I grow my country, some vassals became opportunist. But as I barely lack resources to administer my country, one specificly forced his way to evade my authority;Avec la croissance de mon pays, certains opportunistes y voient l'occasion d'échapper à mon authorité.;;;;;;;;;;;;x
+OPT_ANI_237;How can a vassal use that?;Il en échappe totalement?;;;;;;;;;;;;x
 
 TT_dragon_loose_province_fort;loose control over §Y[This.GetName]§!;perd le controle de §Y[This.GetName]§!;;;;;;;;;;;;x

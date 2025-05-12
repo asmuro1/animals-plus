@@ -3141,8 +3141,8 @@ province_event = {
 #### event 235 to 239: instability events
 ## event 235: letter to non-dragon vassal to get their independance (at tributary price)
 ## event 236: lack of influence - loosing fort
-## event 237: vassal rebellion
-## event 238: lack of governance (and money)
+## event 237: lack of governance (and money)
+## event 238: vassal rebellion
 ## event 239: letter to force vassal to declare war
 
 # event 235
@@ -3206,6 +3206,7 @@ province_event = {
             fort_has_building = fo_drg_guardian_10
             fort_is_building = fo_drg_guardian_10
         }
+        is_capital = no
     }
 
     mean_time_to_happen = {
@@ -3288,5 +3289,111 @@ province_event = {
         name = OPT_ANI_236
 
         destroy_fort = ROOT
+    }
+}
+
+# event 237
+province_event = {
+    id = ani_plus.237
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = DESC_ANI_237
+
+    trigger = {
+        is_capital = yes
+        
+        OR = {
+            NOT = { fort_has_building = fo_drg_heart_3 }
+            holder_scope = { wealth < 0 }
+        }
+
+        holder_scope = {
+            any_vassal = {
+                higher_tier_than = BARON
+            }
+            independent = yes
+        }
+    }
+
+    mean_time_to_happen = {
+        years = 10
+
+        modifier = {
+            factor = 10
+
+            fort_has_building = fo_drg_heart_1
+        }
+        modifier = {
+            factor = 10
+
+            fort_has_building = fo_drg_heart_2
+        }
+        modifier = {
+            factor = 0.1
+
+            holder_scope = {
+                NOT = { wealth = -450 }
+            }
+        }
+        modifier = {
+            factor = 0.2
+
+            holder_scope = {
+                NOT = { wealth = 0 }
+            }
+        }
+        modifier = {
+            factor = 0.5
+
+            holder_scope = {
+                NOT = { wealth = 200 }
+            }
+        }
+        modifier = {
+            factor = 2
+
+            holder_scope = {
+                wealth = 500
+            }
+        }
+        modifier = {
+            factor = 2
+
+            holder_scope = {
+                wealth = 1000
+            }
+        }
+        modifier = {
+            factor = 2
+
+            holder_scope = {
+                wealth = 2000
+            }
+        }
+        modifier = {
+            factor = 2
+
+            holder_scope = {
+                wealth = 5000
+            }
+        }
+    }
+
+    option = {
+        name = OPT_ANI_237
+
+        holder_scope = {
+            random_vassal = {
+                limit = {
+                    liege = {
+                        character = PREVPREV
+                    }
+                    higher_tier_than = BARON
+                }
+
+                set_defacto_liege = THIS
+            } 
+        }
     }
 }
