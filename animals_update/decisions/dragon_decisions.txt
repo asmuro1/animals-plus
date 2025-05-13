@@ -623,12 +623,12 @@ targetted_decisions = {
         effect = {
             clr_character_flag = dragon_vassal_instability_decision
             set_character_flag = dragon_vassal_instability_decision
-            
+
             ROOT = {
                 custom_tooltip = {
                     text = TT_dragon_receive_ultimatum
 
-                    # character_event = { id = ani_plus.238 days = 1 random = 6 }
+                    character_event = { id = ani_plus.238 days = 1 random = 3 }
                 }
             }
         }

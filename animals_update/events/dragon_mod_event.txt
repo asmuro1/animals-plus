@@ -1,5 +1,5 @@
 #######dragon update
-### event 198 - 239
+### event 198 - 245
 
 namespace = ani_plus
 
@@ -3138,12 +3138,21 @@ province_event = {
     }
 }
 
-#### event 235 to 239: instability events
+#### event 235 to 245: instability events
 ## event 235: letter to non-dragon vassal to get their independance (at tributary price)
 ## event 236: lack of influence - loosing fort
 ## event 237: lack of governance (and money)
-## event 238: vassal rebellion
-## event 239: letter to force vassal to declare war
+## event 238: vassal rebellion - 3 possibilities:
+#               1. death duel to calm down dragon
+#               2. give vassal independence
+#               3. let other vassal decide
+## event 239: death duel choice - vassal notification
+## event 240: death duel choice - duel itself
+## event 241: death duel choice - notification duel win (and obtaining liege main title)
+## event 242: independence choice - notification to give independence
+## event 243: other vassal choice - vassal notification
+## event 244: other vassal choice - result (liege)
+## event 245: other vassal choice - vassal result notification
 
 # event 235
 letter_event = {
@@ -3445,6 +3454,66 @@ province_event = {
 
                 set_defacto_liege = THIS
             } 
+        }
+    }
+}
+
+# event 238
+character_event = {
+    id = ani_plus.238
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = DESC_ANI_238
+
+    is_triggered_only = yes
+
+    option = {
+        name = OPTA_ANI_238
+
+        ai_chance = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+
+                OR = {
+                    culture = dragon_culture
+                    culture = blue_dragon
+                    culture = white_dragon
+                    culture = yellow_dragon
+                }
+            }
+        }
+    }
+    option = {
+        name = OPTB_ANI_238
+        
+        ai_chance = {
+            factor = 0
+
+            additive_modifier = {
+                value = 1
+
+                culture = dragon_culture
+            }
+        }
+    }
+    option = {
+        name = OPTC_ANI_238
+
+        ai_chance = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+
+                OR = {
+                    culture = dragon_culture
+                    culture = red_dragon
+                    culture = black_dragon
+                }
+            }
         }
     }
 }

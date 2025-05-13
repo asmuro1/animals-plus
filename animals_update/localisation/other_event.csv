@@ -310,5 +310,9 @@ DESC_ANI_236;A small group of human did sabotage [This.GetName]. Seems that we l
 OPT_ANI_236;That means that they'll get their independence soon...;ça signifie qu'ils vont bientôt avoir leur indépendance...;;;;;;;;;;;;x
 DESC_ANI_237;As I grow my country, some vassals became opportunist. But as I barely lack resources to administer my country, one specificly forced his way to evade my authority;Avec la croissance de mon pays, certains opportunistes y voient l'occasion d'échapper à mon authorité.;;;;;;;;;;;;x
 OPT_ANI_237;How can a vassal use that?;Il en échappe totalement?;;;;;;;;;;;;x
+DESC_ANI_238;[From.GetTitledFirstName] started to doubt your qualities as a dragon chief. As a dragon, he choose to use his right to fight me. Something must be done!;[From.GetTitledFirstName] commence à douter de mes capacités en tant que chef draconnique. Je ne peux plus le laisser continuer!;;;;;;;;;;;;x
+OPTA_ANI_238;I will show his position in a death duel;Je vais lui montrer sa position dans un duel à mort;;;;;;;;;;;;x
+OPTB_ANI_238;I'll set him free, to fight him later on the battlefield;Je le libère pour l'abattre sur le champs de bataille;;;;;;;;;;;;x
+OPTC_ANI_238;I shall let other vassals to determine who shall run over [This.primary_title.GetFullBaseName];Je vais laisser les autre vassaux décider qui mérite de reigner sur [This.primary_title.GetFullBaseName];;;;;;;;;;;;x
 
 TT_dragon_loose_province_fort;loose control over §Y[This.GetName]§!;perd le controle de §Y[This.GetName]§!;;;;;;;;;;;;x
