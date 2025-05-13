@@ -359,8 +359,12 @@ dragon_increase_fort_fortification;increase draconic influence;augmenter l'influ
 dragon_increase_fort_fortification_desc;By increasing your influence, you increase the odd of integrating the province into your territory.;En augmentant l'influence draconique, on augmente les chances d'intégrations de la province à un territoire draconique.;;;;;;;;;;;;x
 dragon_vassal_take_independence;take my independence;Prendre son indépendance;;;;;;;;;;;;x
 dragon_vassal_take_independence_desc;As I have nothing to do with a dragon, i can proclam my independence. Even the dragon will agreed, but at what price?;En n'ayant rien a voir avec les dragons, je peux prendre mon indépendance sans que cela pose de problème à quiquonque. Cependant, à quel prix ce sera?;;;;;;;;;;;;x
+dragon_vassal_unsatisfied;Affirm my unsatisfaction;Contester la gouvernance de [Root.GetTitledFirstName];;;;;;;;;;;;x
+dragon_vassal_unsatisfied_desc;As [Root.GetTitledFirstName] is a bad ruler, I can try to weaken it's administration. But that can come with a price;Avec l'administration médiocre de [Root.GetTitledFirstName], je peux tenter d'affaiblir son administration. Cependant, ce sera à mes risques et périls;;;;;;;;;;;;x
 
 TT_dragon_did_not_lay_egg_recently;Did not lay an egg recently;N'a pas pondu d'œuf récemment;;;;;;;;;;;;x
 TT_is_an_adult_dragon;Has finished its dragon education;A fini son éducation de dragon;;;;;;;;;;;;x
 TT_dragon_not_max_fortif;Can increase influence;Peut augmenter l'influence de la province;;;;;;;;;;;;x
 TT_force_to_become_tributary;can force you to become [Root.GetHerHis] tributary;peut te forcer à devenir [Root.GetHerHis] tributaire;;;;;;;;;;;;x
+TT_dragon_not_done_in_1_years;Did not take decision since §Y1§! year;N'a pas pris la décision depuis 1 an;;;;;;;;;;;;x
+TT_dragon_receive_ultimatum;get an ultimatum;reçoit un ultimatum;;;;;;;;;;;x
