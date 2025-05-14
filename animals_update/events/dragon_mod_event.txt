@@ -3663,6 +3663,9 @@ character_event = {
                     }
                 }
 
+                primary_title = {
+                    save_event_target_as = dragon_main_title
+                }
 
                 custom_tooltip = {
                     text = TT_dragon_wins_death_duel
@@ -3670,9 +3673,6 @@ character_event = {
                         set_character_flag = dragon_wins_death_duel
                         character_event = { id = ani_plus.241 }
                     }
-                }
-                primary_title = {
-                    save_event_target_as = dragon_main_title
                 }
                 any_demesne_title = {
                     limit = {
@@ -3685,12 +3685,41 @@ character_event = {
                         }
                     }
                 }
-                
+
                 death = {
                     killer = event_target:dragon_duel_opponent
                     death_reason = death_duel
                 }
             }
         }
+    }
+}
+
+# event 241
+character_event = {
+    id = ani_plus.241
+
+    is_triggered_only = yes
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = DESC_ANI_241
+
+    option = {
+        trigger = {
+            has_character_flag = dragon_looses_death_duel
+        }
+        name = OPTA_ANI_241
+
+        death = {
+            killer = FROM
+            death_reason = death_duel
+        }
+    }
+
+    option = {
+        trigger = {
+            has_character_flag = dragon_wins_death_duel
+        }
+        name = OPTB_ANI_241
     }
 }

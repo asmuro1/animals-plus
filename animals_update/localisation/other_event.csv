@@ -318,6 +318,9 @@ DESC_ANI_239;Your greed know no bound. I shall punigh you in a death duel in one
 OPT_ANI_239;He shall lose its life and its titles;Il va perdre sa vie et ses titres!;;;;;;;;;;;;x
 DESC_ANI_240;All the preparation are finished. The death duel against [dragon_duel_opponent.GetTitledFirstName] can now start;Toutes les préparations du duel à mort pour prouver que [dragon_duel_opponent.GetTitledFirstName] n'est pas digne d'être de [Root.primary_title.GetTier];;;;;;;;;;;;x
 OPT_ANI_240;[dragon_duel_opponent.GetSheHeCap] will soon be dead!;[dragon_duel_opponent.GetTitledFirstName] va bientôt connaître sa place!;;;;;;;;;;;;x
+DESC_ANI_241;The duel planned last week is starting. I fight as I could. [From.GetFullName] also. We both hold our honor, but that fight has to come to an end;Le duel qui a été prévu la semaine dernière vient tout juste de commencer. [From.GetFullName] et moi nous battons avec honeur. Nous sommes tous les deux valeureux, mais il faut bien un gagnant...x
+OPTA_ANI_241;Did I lost?!;Ai-je juste perdu le duel?!;;;;;;;;;;;;x
+OPTB_ANI_242;I am now the new [dragon_main_title.GetTier];Je suis maintenant le nouveau [dragon_main_title.GetTier]!;;;;;;;;;;;;x
 
 TT_dragon_loose_province_fort;loose control over §Y[This.GetName]§!;perd le controle de §Y[This.GetName]§!;;;;;;;;;;;;x
 TT_dragon_looses_death_duel;loose duel and die;perd le duel et meurt;;;;;;;;;;;;x
