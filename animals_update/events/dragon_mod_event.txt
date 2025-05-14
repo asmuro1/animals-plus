@@ -3471,6 +3471,10 @@ character_event = {
     option = {
         name = OPTA_ANI_238
 
+        FROM = {
+            save_event_target_as = dragon_duel_opponent
+            letter_event = { id = ani_plus.139 }
+        }
         ai_chance = {
             factor = 1
 
@@ -3515,5 +3519,18 @@ character_event = {
                 }
             }
         }
+    }
+}
+
+# event 239
+letter_event = {
+    id = ani_plus.239
+
+    is_triggered_only = yes
+    border = GFX_event_letter_frame_diplomacy
+    desc = DESC_ANI_239
+
+    option = {
+        name = OPT_ANI_239
     }
 }

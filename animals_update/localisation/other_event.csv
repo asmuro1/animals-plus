@@ -314,5 +314,7 @@ DESC_ANI_238;[From.GetTitledFirstName] started to doubt your qualities as a drag
 OPTA_ANI_238;I will show his position in a death duel;Je vais lui montrer sa position dans un duel à mort;;;;;;;;;;;;x
 OPTB_ANI_238;I'll set him free, to fight him later on the battlefield;Je le libère pour l'abattre sur le champs de bataille;;;;;;;;;;;;x
 OPTC_ANI_238;I shall let other vassals to determine who shall run over [This.primary_title.GetFullBaseName];Je vais laisser les autre vassaux décider qui mérite de reigner sur [This.primary_title.GetFullBaseName];;;;;;;;;;;;x
+DESC_ANI_239;Your greed know no bound. I shall punigh you in a death duel in one week;Ton arrogance ne connait aucune limite, je vais te montrer tes faiblesses lors d'un duel à mort!;;;;;;;;;;;;x
+OPT_ANI_239;He shall lose its life and its titles;Il va perdre sa vie et ses titres!;;;;;;;;;;;;x
 
 TT_dragon_loose_province_fort;loose control over §Y[This.GetName]§!;perd le controle de §Y[This.GetName]§!;;;;;;;;;;;;x
