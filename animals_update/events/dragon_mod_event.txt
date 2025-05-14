@@ -3471,12 +3471,12 @@ character_event = {
     option = {
         name = OPTA_ANI_238
 
-        FROM = {
+        FROMFROM = {
             save_event_target_as = dragon_duel_opponent
-            letter_event = { id = ani_plus.139 }
+            letter_event = { id = ani_plus.239 }
         }
         ROOT = {
-            character_event = { id = ani_plus.140 days = 7}
+            character_event = { id = ani_plus.240 days = 7}
         }
 
 

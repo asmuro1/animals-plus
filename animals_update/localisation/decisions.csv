@@ -366,5 +366,5 @@ TT_dragon_did_not_lay_egg_recently;Did not lay an egg recently;N'a pas pondu d'œ
 TT_is_an_adult_dragon;Has finished its dragon education;A fini son éducation de dragon;;;;;;;;;;;;x
 TT_dragon_not_max_fortif;Can increase influence;Peut augmenter l'influence de la province;;;;;;;;;;;;x
 TT_force_to_become_tributary;can force you to become [Root.GetHerHis] tributary;peut te forcer à devenir [Root.GetHerHis] tributaire;;;;;;;;;;;;x
-TT_dragon_not_done_in_1_years;Did not take decision since §Y1§! year;N'a pas pris la décision depuis 1 an;;;;;;;;;;;;x
+TT_dragon_not_done_in_1_years;Did not take decision since §Y1§! year;N'a pas pris la décision depuis §Y1§! an;;;;;;;;;;;;x
 TT_dragon_receive_ultimatum;get an ultimatum;reçoit un ultimatum;;;;;;;;;;;x

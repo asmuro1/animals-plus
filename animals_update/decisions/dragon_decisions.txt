@@ -581,7 +581,7 @@ targetted_decisions = {
         }
     }
 
-    dragon_vassal_unsatisfied = {
+    dragon_vassal_unsatisfied = { # mettre un CD
         is_high_prio = no
         ai_check_interval = 12
 
@@ -590,10 +590,16 @@ targetted_decisions = {
 
         from_potential = {
             government = dragon_tribal_gov
-            higher_tier_than = COUNT
+            higher_tier_than = BARON
         }
         potential = {
             government = dragon_tribal_gov
+            NOT = {
+                had_character_flag = {
+                    flag = dragon_vassal_instability_decision
+                    months < 1
+                }
+            }
         }
 
         allow = {
@@ -608,21 +614,22 @@ targetted_decisions = {
                 }
                 custom_tooltip = {
                     text = TT_dragon_not_done_in_1_years
-                    OR = {
-                        NOT = { has_character_flag = dragon_vassal_instability_decision }
+                    NOT = {
                         had_character_flag = {
                             flag = dragon_vassal_instability_decision
-                            years = 1
+                            years < 1
                         }
                     }
                 }
-                ruled_years = 5
+                # ruled_years = 5
             }
         }
 
         effect = {
-            clr_character_flag = dragon_vassal_instability_decision
-            set_character_flag = dragon_vassal_instability_decision
+            FROM = {
+                clr_character_flag = dragon_vassal_instability_decision
+                set_character_flag = dragon_vassal_instability_decision
+            }
 
             ROOT = {
                 custom_tooltip = {
