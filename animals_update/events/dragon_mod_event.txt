@@ -3467,16 +3467,24 @@ character_event = {
     desc = DESC_ANI_238
 
     is_triggered_only = yes
+    
+    immediate = {
+        FROMFROM = {
+            save_event_target_as = dragon_vassal_unsatisfied
+        }
+    }
 
     option = {
         name = OPTA_ANI_238
 
-        FROMFROM = {
-            save_event_target_as = dragon_duel_opponent
+        event_target:dragon_vassal_unsatisfied = {
             letter_event = { id = ani_plus.239 }
         }
         ROOT = {
-            character_event = { id = ani_plus.240 days = 7}
+            custom_tooltip = {
+                text = TT_dragon_duel_in_7_days
+                character_event = { id = ani_plus.240 days = 7}
+            }
         }
 
 
@@ -3498,6 +3506,13 @@ character_event = {
     option = {
         name = OPTB_ANI_238
         
+        event_target:dragon_vassal_unsatisfied = {
+            custom_tooltip = {
+                text = TT_dragon_became_indep
+                letter_event = { id = ani_plus.242}
+            }
+        }
+
         ai_chance = {
             factor = 0
 
@@ -3557,14 +3572,14 @@ character_event = {
                 modifier = {
                     factor = 2
                     combat_rating_diff = {
-                        character = event_target:dragon_duel_opponent
+                        character = event_target:dragon_vassal_unsatisfied
                         value > 0
                     }
                 }
                 modifier = {
                     factor = 0.5
                     combat_rating_diff = {
-                        character = event_target:dragon_duel_opponent
+                        character = event_target:dragon_vassal_unsatisfied
                         value < 0
                     }
                 }
@@ -3572,34 +3587,34 @@ character_event = {
                     factor = 1.75
 
                     culture = black_dragon
-                    intrigue > event_target:dragon_duel_opponent
+                    intrigue > event_target:dragon_vassal_unsatisfied
                 }
                 modifier = {
                     factor = 1.75
 
                     culture = white_dragon
-                    learning > event_target:dragon_duel_opponent
+                    learning > event_target:dragon_vassal_unsatisfied
                 }
                 modifier = {
                     factor = 1.75
 
                     culture = red_dragon
-                    martial > event_target:dragon_duel_opponent
+                    martial > event_target:dragon_vassal_unsatisfied
                 }
                 modifier = {
                     factor = 1.75
 
                     culture = blue_dragon
-                    diplomacy > event_target:dragon_duel_opponent
+                    diplomacy > event_target:dragon_vassal_unsatisfied
                 }
                 modifier = {
                     factor = 1.75
 
                     culture = yellow_dragon
-                    stewardship > event_target:dragon_duel_opponent
+                    stewardship > event_target:dragon_vassal_unsatisfied
                 }
 
-                event_target:dragon_duel_opponent = {
+                event_target:dragon_vassal_unsatisfied = {
                     custom_tooltip = {
                         text = TT_dragon_looses_death_duel
                         set_character_flag = dragon_looses_death_duel
@@ -3608,32 +3623,32 @@ character_event = {
                     
                 }
             }
-            100 = { # dragon_duel_opponent victory
+            100 = { # dragon_vassal_unsatisfied victory
                 modifier = {
                     factor = 0.5
                     combat_rating_diff = {
-                        character = event_target:dragon_duel_opponent
+                        character = event_target:dragon_vassal_unsatisfied
                         value > 0
                     }
                 }
                 modifier = {
                     factor = 2
                     combat_rating_diff = {
-                        character = event_target:dragon_duel_opponent
+                        character = event_target:dragon_vassal_unsatisfied
                         value < 0
                     }
                 }
                 modifier = {
                     factor = 1.75
 
-                    event_target:dragon_duel_opponent = {
+                    event_target:dragon_vassal_unsatisfied = {
                         culture = black_dragon
                         intrigue > ROOT
                     }
                 }
                 modifier = {
                     factor = 1.75
-                    event_target:dragon_duel_opponent = {
+                    event_target:dragon_vassal_unsatisfied = {
                         culture = white_dragon
                         learning > ROOT
                     }
@@ -3641,7 +3656,7 @@ character_event = {
                 modifier = {
                     factor = 1.75
 
-                    event_target:dragon_duel_opponent = {
+                    event_target:dragon_vassal_unsatisfied = {
                         culture = red_dragon
                         martial > ROOT
                     }
@@ -3649,7 +3664,7 @@ character_event = {
                 modifier = {
                     factor = 1.75
 
-                    event_target:dragon_duel_opponent = {
+                    event_target:dragon_vassal_unsatisfied = {
                         culture = blue_dragon
                         diplomacy > ROOT
                     }
@@ -3657,7 +3672,7 @@ character_event = {
                 modifier = {
                     factor = 1.75
 
-                    event_target:dragon_duel_opponent = {
+                    event_target:dragon_vassal_unsatisfied = {
                         culture = yellow_dragon
                         stewardship > ROOT
                     }
@@ -3669,7 +3684,7 @@ character_event = {
 
                 custom_tooltip = {
                     text = TT_dragon_wins_death_duel
-                    event_target:dragon_duel_opponent = {
+                    event_target:dragon_vassal_unsatisfied = {
                         set_character_flag = dragon_wins_death_duel
                         character_event = { id = ani_plus.241 }
                     }
@@ -3678,7 +3693,7 @@ character_event = {
                     limit = {
                         tier = event_target:dragon_main_title
                     }
-                    event_target:dragon_duel_opponent = {
+                    event_target:dragon_vassal_unsatisfied = {
                         usurp_title = {
                             target = PREV
                             type = duel
@@ -3687,7 +3702,7 @@ character_event = {
                 }
 
                 death = {
-                    killer = event_target:dragon_duel_opponent
+                    killer = event_target:dragon_vassal_unsatisfied
                     death_reason = death_duel
                 }
             }
@@ -3721,5 +3736,20 @@ character_event = {
             has_character_flag = dragon_wins_death_duel
         }
         name = OPTB_ANI_241
+    }
+}
+
+# event 242
+letter_event = {
+    id = ani_plus.242
+
+    is_triggered_only = yes
+    border = GFX_event_letter_frame_diplomacy
+    desc = DESC_ANI_242
+
+    option = {
+        name = OPT_ANI_242
+
+        set_defacto_liege = THIS
     }
 }
