@@ -316,5 +316,9 @@ OPTB_ANI_238;I'll set him free, to fight him later on the battlefield;Je le libè
 OPTC_ANI_238;I shall let other vassals to determine who shall run over [This.primary_title.GetFullBaseName];Je vais laisser les autre vassaux décider qui mérite de reigner sur [This.primary_title.GetFullBaseName];;;;;;;;;;;;x
 DESC_ANI_239;Your greed know no bound. I shall punigh you in a death duel in one week;Ton arrogance ne connait aucune limite, je vais te montrer tes faiblesses lors d'un duel à mort!;;;;;;;;;;;;x
 OPT_ANI_239;He shall lose its life and its titles;Il va perdre sa vie et ses titres!;;;;;;;;;;;;x
+DESC_ANI_240;All the preparation are finished. The death duel against [dragon_duel_opponent.GetTitledFirstName] can now start;Toutes les préparations du duel à mort pour prouver que [dragon_duel_opponent.GetTitledFirstName] n'est pas digne d'être de [Root.primary_title.GetTier];;;;;;;;;;;;x
+OPT_ANI_240;[dragon_duel_opponent.GetSheHeCap] will soon be dead!;[dragon_duel_opponent.GetTitledFirstName] va bientôt connaître sa place!;;;;;;;;;;;;x
 
 TT_dragon_loose_province_fort;loose control over §Y[This.GetName]§!;perd le controle de §Y[This.GetName]§!;;;;;;;;;;;;x
+TT_dragon_looses_death_duel;loose duel and die;perd le duel et meurt;;;;;;;;;;;;x
+TT_dragon_wins_death_duel;loose the duel;perd le duel;;;;;;;;;;;;x

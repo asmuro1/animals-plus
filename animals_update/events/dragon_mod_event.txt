@@ -3475,6 +3475,11 @@ character_event = {
             save_event_target_as = dragon_duel_opponent
             letter_event = { id = ani_plus.139 }
         }
+        ROOT = {
+            character_event = { id = ani_plus.140 days = 7}
+        }
+
+
         ai_chance = {
             factor = 1
 
@@ -3532,5 +3537,160 @@ letter_event = {
 
     option = {
         name = OPT_ANI_239
+    }
+}
+
+# event 240
+character_event = {
+    id = ani_plus.240
+
+    is_triggered_only = yes
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = DESC_ANI_240
+
+    option = {
+        name = OPT_ANI_240
+
+        random_list = {
+            100 = { # liege victory
+                modifier = {
+                    factor = 2
+                    combat_rating_diff = {
+                        character = event_target:dragon_duel_opponent
+                        value > 0
+                    }
+                }
+                modifier = {
+                    factor = 0.5
+                    combat_rating_diff = {
+                        character = event_target:dragon_duel_opponent
+                        value < 0
+                    }
+                }
+                modifier = {
+                    factor = 1.75
+
+                    culture = black_dragon
+                    intrigue > event_target:dragon_duel_opponent
+                }
+                modifier = {
+                    factor = 1.75
+
+                    culture = white_dragon
+                    learning > event_target:dragon_duel_opponent
+                }
+                modifier = {
+                    factor = 1.75
+
+                    culture = red_dragon
+                    martial > event_target:dragon_duel_opponent
+                }
+                modifier = {
+                    factor = 1.75
+
+                    culture = blue_dragon
+                    diplomacy > event_target:dragon_duel_opponent
+                }
+                modifier = {
+                    factor = 1.75
+
+                    culture = yellow_dragon
+                    stewardship > event_target:dragon_duel_opponent
+                }
+
+                event_target:dragon_duel_opponent = {
+                    custom_tooltip = {
+                        text = TT_dragon_looses_death_duel
+                        set_character_flag = dragon_looses_death_duel
+                        character_event = { id = ani_plus.241 }
+                    }
+                    
+                }
+            }
+            100 = { # dragon_duel_opponent victory
+                modifier = {
+                    factor = 0.5
+                    combat_rating_diff = {
+                        character = event_target:dragon_duel_opponent
+                        value > 0
+                    }
+                }
+                modifier = {
+                    factor = 2
+                    combat_rating_diff = {
+                        character = event_target:dragon_duel_opponent
+                        value < 0
+                    }
+                }
+                modifier = {
+                    factor = 1.75
+
+                    event_target:dragon_duel_opponent = {
+                        culture = black_dragon
+                        intrigue > ROOT
+                    }
+                }
+                modifier = {
+                    factor = 1.75
+                    event_target:dragon_duel_opponent = {
+                        culture = white_dragon
+                        learning > ROOT
+                    }
+                }
+                modifier = {
+                    factor = 1.75
+
+                    event_target:dragon_duel_opponent = {
+                        culture = red_dragon
+                        martial > ROOT
+                    }
+                }
+                modifier = {
+                    factor = 1.75
+
+                    event_target:dragon_duel_opponent = {
+                        culture = blue_dragon
+                        diplomacy > ROOT
+                    }
+                }
+                modifier = {
+                    factor = 1.75
+
+                    event_target:dragon_duel_opponent = {
+                        culture = yellow_dragon
+                        stewardship > ROOT
+                    }
+                }
+
+
+                custom_tooltip = {
+                    text = TT_dragon_wins_death_duel
+                    event_target:dragon_duel_opponent = {
+                        set_character_flag = dragon_wins_death_duel
+                        character_event = { id = ani_plus.241 }
+                    }
+                }
+                primary_title = {
+                    save_event_target_as = dragon_main_title
+                }
+                any_demesne_title = {
+                    limit = {
+                        tier = event_target:dragon_main_title
+                    }
+                    event_target:dragon_duel_opponent = {
+                        usurp_title = {
+                            target = PREV
+                            type = duel
+                        }
+                    }
+                }
+                
+                death = {
+                    killer = event_target:dragon_duel_opponent
+                    death_reason = death_duel
+                }
+            }
+        }
     }
 }
