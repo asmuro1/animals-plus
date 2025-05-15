@@ -3745,6 +3745,7 @@ character_event = {
             has_character_flag = dragon_looses_death_duel
         }
         name = OPTA_ANI_241
+        clr_character_flag = dragon_looses_death_duel
 
         death = {
             killer = FROM
@@ -3888,5 +3889,32 @@ character_event = {
                 }
             }
         }
+    }
+}
+
+# event 245
+character_event = {
+    id = ani_plus.245
+
+    is_triggered_only = yes
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = DESC_ANI_245
+
+    option = {
+        name = OPTA_ANI_245
+        trigger = {
+            has_character_flag = dragon_looses_contest
+        }
+        clr_character_flag = dragon_looses_contest
+
+        imprison = FROM
+    }
+    option = {
+        name = OPTB_ANI_245
+        trigger = {
+            has_character_flag = dragon_wins_contest
+        }
+        clr_character_flag = dragon_wins_contest
     }
 }
