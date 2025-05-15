@@ -323,9 +323,12 @@ OPTA_ANI_241;Did I lost?!;Ai-je juste perdu le duel?!;;;;;;;;;;;;x
 OPTB_ANI_241;I am now the new [dragon_main_title.GetTier];Je suis maintenant le nouveau [dragon_main_title.GetTier]!;;;;;;;;;;;;x
 DESC_ANI_242;I, [From.GetTitledName], officialy declare you independent!;Moi, [From.GetTitledName], te déclare offficiellement indépendant;;;;;;;;;;;;x 
 OPT_ANI_242;It couldn't be better!;ça ne pourrait pas être mieux;;;;;;;;;;;;x
+DESC_ANI_243;We will choose our true [From.primary_title.GetTier] through the opinion of my others vassals;Nous allons choisir notre [From.primary_title.GetTier] grâce à l'opinion de tes co-vassaux.;;;;;;;;;;;;x
+OPT_ANI_243;[From.GetSheHeCap] use the democracy when [From.GetSheHe] like it;[From.GetSheHeCap] veut utiliser la démocratie quand ça l'arrange;;;;;;;;;;;;x 
 
 TT_dragon_loose_province_fort;loose control over §Y[This.GetName]§!;perd le controle de §Y[This.GetName]§!;;;;;;;;;;;;x
 TT_dragon_duel_in_7_days;The death duel will start in a week;Le duel à mort démarera dans une semaine;;;;;;;;;;;;x
 TT_dragon_became_indep;[dragon_vassal_unsatisfied.GetTitledFirstName] became independent;[dragon_vassal_unsatisfied] devient indépendant;;;;;;;;;;;;x
 TT_dragon_looses_death_duel;loose duel and die;perd le duel et meurt;;;;;;;;;;;;x
 TT_dragon_wins_death_duel;loose the duel;perd le duel;;;;;;;;;;;;x
+TT_dragon_vote_soon;the vote start;les votes commencent;;;;;;;;;;;;x

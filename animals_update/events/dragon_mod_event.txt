@@ -3525,6 +3525,27 @@ character_event = {
     }
     option = {
         name = OPTC_ANI_238
+        trigger = {
+            any_vassal = {
+                liege = {
+                    character = ROOT
+                }
+                NOT = {
+                    character = event_target:dragon_vassal_unsatisfied
+                }
+                higher_tier_than = BARON
+            }
+        }
+
+        event_target:dragon_vassal_unsatisfied = {
+            letter_event = { id = ani_plus.243 }
+        }
+        ROOT = {
+            custom_tooltip = {
+                text = TT_dragon_vote_soon
+                character_event = { id = ani_plus.244 days = 3 random = 5}
+            }
+        }
 
         ai_chance = {
             factor = 1
@@ -3751,5 +3772,18 @@ letter_event = {
         name = OPT_ANI_242
 
         set_defacto_liege = THIS
+    }
+}
+
+# event 243
+letter_event = {
+    id = ani_plus.243
+    
+    is_triggered_only = yes
+    border = GFX_event_letter_frame_diplomacy
+    desc = DESC_ANI_243
+
+    option = {
+        name = OPT_ANI_243
     }
 }
