@@ -3757,6 +3757,7 @@ character_event = {
             has_character_flag = dragon_wins_death_duel
         }
         name = OPTB_ANI_241
+        clr_character_flag = dragon_wins_death_duel
     }
 }
 
@@ -3785,5 +3786,107 @@ letter_event = {
 
     option = {
         name = OPT_ANI_243
+    }
+}
+
+# event 244
+character_event = {
+    id = ani_plus.244
+
+    is_triggered_only = yes
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = DESC_ANI_244
+
+    immediate = {
+        set_variable = {
+            which = local_dragon_vassal_score
+            value = 0
+        }
+        any_vassal = {
+            limit = {
+                liege = {
+                    character = ROOT
+                }
+                NOT = {
+                    character = event_target:dragon_vassal_unsatisfied
+                }
+                higher_tier_than = BARON
+            }
+
+            if = {
+                limit = {
+                    likes_better_than = {
+                        who = ROOT
+                        than = event_target:dragon_vassal_unsatisfied
+                    }
+                }
+                ROOT = {
+                    change_variable = {
+                        which = local_dragon_vassal_score
+                        value = 1
+                    }
+                }
+            }
+            else = {
+                ROOT = {
+                    change_variable = {
+                        which = local_dragon_vassal_score
+                        value = -1
+                    }
+                }
+            }
+        }
+    }
+
+    option = {
+        name = OPTA_ANI_244
+        trigger = {
+            check_variable = {
+                which = local_dragon_vassal_score
+                value >= 0
+            }
+        }
+        
+        event_target:dragon_vassal_unsatisfied = {
+            custom_tooltip = {
+                text = TT_dragon_imprisoned
+
+                set_character_flag = dragon_looses_contest
+                character_event = { id = ani_plus.245 }
+            }
+        }
+    }
+    option = {
+        name = OPTB_ANI_244
+        trigger = {
+            check_variable = {
+                which =  local_dragon_vassal_score
+                value < 0
+            }
+        }
+
+        primary_title = {
+            save_event_target_as = dragon_main_title
+        }
+
+        custom_tooltip = {
+            text = TT_dragon_won_contest
+            event_target:dragon_vassal_unsatisfied = {
+                set_character_flag = dragon_wins_contest
+                character_event = { id = ani_plus.245 }
+            }
+        }
+        any_demesne_title = {
+            limit = {
+                tier = event_target:dragon_main_title
+            }
+            event_target:dragon_vassal_unsatisfied = {
+                usurp_title = {
+                    target = PREV
+                    type = election
+                }
+            }
+        }
     }
 }

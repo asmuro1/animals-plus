@@ -54,6 +54,9 @@ tribal_governments = {
 			mercenary = no
 			holy_order = no
 			NOT = { is_government_potential = order_government }
+			NOT = {
+				is_government_potential = dragon_tribal_gov
+			}
 		}
 
 		color = { 92 31 23 }
