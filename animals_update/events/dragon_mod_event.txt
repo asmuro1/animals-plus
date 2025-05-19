@@ -82,6 +82,7 @@ character_event = {
 #                   forcing dragon religion
 #                   setting egg culture for dragon egg
 #                   giving adult dragon their flag
+#                   forcing gender succession law
 ## event 202: converting character on birth or culture change
 ## event 203: converting province culture on religion change
 
@@ -127,6 +128,10 @@ character_event = {
             religion = Dragon_religion
             dragon_get_dragon_egg_culture_if_child_effect = yes
             dragon_get_true_adult_effect = yes
+            
+            any_demesne_title = {
+                gender_succ = true_cognatic
+            }
         }
         any_province = {
             limit = {
