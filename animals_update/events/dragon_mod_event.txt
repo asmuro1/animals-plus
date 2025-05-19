@@ -3476,6 +3476,7 @@ character_event = {
 
     option = {
         name = OPTA_ANI_238
+        show_portrait = event_target:dragon_vassal_unsatisfied
 
         event_target:dragon_vassal_unsatisfied = {
             letter_event = { id = ani_plus.239 }
@@ -3505,6 +3506,7 @@ character_event = {
     }
     option = {
         name = OPTB_ANI_238
+        show_portrait = event_target:dragon_vassal_unsatisfied
         
         event_target:dragon_vassal_unsatisfied = {
             custom_tooltip = {
@@ -3536,6 +3538,7 @@ character_event = {
                 higher_tier_than = BARON
             }
         }
+        show_portrait = event_target:dragon_vassal_unsatisfied
 
         event_target:dragon_vassal_unsatisfied = {
             letter_event = { id = ani_plus.243 }
@@ -3584,6 +3587,15 @@ character_event = {
     border = GFX_event_normal_frame_diplomacy
     picture = GFX_evt_council
     desc = DESC_ANI_240
+
+    trigger = {
+        ROOT = {
+            is_alive = yes
+        }
+        FROM = {
+            is_alive = yes
+        }
+    }
 
     option = {
         name = OPT_ANI_240
@@ -3716,7 +3728,7 @@ character_event = {
                             }
                         }
                     }
-                    
+
                     event_target:dragon_vassal_unsatisfied = {
                         set_character_flag = dragon_wins_death_duel
                         character_event = { id = ani_plus.241 }
@@ -3801,6 +3813,15 @@ character_event = {
     picture = GFX_evt_council
     desc = DESC_ANI_244
 
+    trigger = {
+        ROOT = {
+            is_alive = yes
+        }
+        FROM = {
+            is_alive = yes
+        }
+    }
+
     immediate = {
         set_variable = {
             which = local_dragon_vassal_score
@@ -3880,15 +3901,16 @@ character_event = {
                 set_character_flag = dragon_wins_contest
                 character_event = { id = ani_plus.245 }
             }
-        }
-        any_demesne_title = {
-            limit = {
-                tier = event_target:dragon_main_title
-            }
-            event_target:dragon_vassal_unsatisfied = {
-                usurp_title = {
-                    target = PREV
-                    type = election
+            
+            any_demesne_title = {
+                limit = {
+                    tier = event_target:dragon_main_title
+                }
+                event_target:dragon_vassal_unsatisfied = {
+                    usurp_title = {
+                        target = PREV
+                        type = election
+                    }
                 }
             }
         }

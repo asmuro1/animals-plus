@@ -313,7 +313,7 @@ OPT_ANI_237;How can a vassal use that?;Il en échappe totalement?;;;;;;;;;;;;x
 DESC_ANI_238;[FromFrom.GetTitledFirstName] started to doubt your qualities as a dragon chief. As a dragon, he choose to use his right to fight me. Something must be done!;[FromFrom.GetTitledFirstName] commence à douter de mes capacités en tant que chef draconnique. Je ne peux plus le laisser continuer!;;;;;;;;;;;;x
 OPTA_ANI_238;I will show his position in a death duel;Je vais lui montrer sa position dans un duel à mort;;;;;;;;;;;;x
 OPTB_ANI_238;I'll set him free, to fight him later on the battlefield;Je le libère pour l'abattre sur le champs de bataille;;;;;;;;;;;;x
-OPTC_ANI_238;I shall let other vassals to determine who shall run over [This.primary_title.GetFullBaseName];Je vais laisser les autre vassaux décider qui mérite de reigner sur [This.primary_title.GetFullBaseName];;;;;;;;;;;;x
+OPTC_ANI_238;I shall let other vassals to determine who shall run over [Root.GetTitle];Je vais laisser les autre vassaux décider qui mérite de reigner sur [Root.GetTitle];;;;;;;;;;;;x
 DESC_ANI_239;Your greed know no bound. I shall punigh you in a death duel in one week;Ton arrogance ne connait aucune limite, je vais te montrer tes faiblesses lors d'un duel à mort!;;;;;;;;;;;;x
 OPT_ANI_239;He shall lose its life and its titles;Il va perdre sa vie et ses titres!;;;;;;;;;;;;x
 DESC_ANI_240;All the preparation are finished. The death duel against [dragon_vassal_unsatisfied.GetTitledFirstName] can now start;Toutes les préparations du duel à mort sont fini. Mon duel contre [dragon_vassal_unsatisfied.GetTitledFirstName] va bientôt commencer;;;;;;;;;;;;x
@@ -323,12 +323,12 @@ OPTA_ANI_241;Did I lost?!;Ai-je juste perdu le duel?!;;;;;;;;;;;;x
 OPTB_ANI_241;I am now the new [Root.GetTitle];Je suis maintenant le nouveau [Root.GetTitle]!;;;;;;;;;;;;x
 DESC_ANI_242;I, [From.GetTitledName], officialy declare you independent!;Moi, [From.GetTitledName], te déclare offficiellement indépendant;;;;;;;;;;;;x 
 OPT_ANI_242;It couldn't be better!;ça ne pourrait pas être mieux;;;;;;;;;;;;x
-DESC_ANI_243;We will choose our true [From.primary_title.GetTier] through the opinion of my others vassals;Nous allons choisir notre [From.primary_title.GetTier] grâce à l'opinion de tes co-vassaux.;;;;;;;;;;;;x
+DESC_ANI_243;We will choose our true [From.GetTitle] through the opinion of my others vassals;Nous allons choisir notre [From.GetTitle] grâce à l'opinion de tes co-vassaux.;;;;;;;;;;;;x
 OPT_ANI_243;[From.GetSheHeCap] use the democracy when [From.GetSheHe] like it;[From.GetSheHeCap] veut utiliser la démocratie quand ça l'arrange;;;;;;;;;;;;x 
-DESC_ANI_244;The last vote arrived. We will soon know who will be a [primary_title.GetTier];Le dernier vote vient d'arriver, nous allons maintenant savoir qui mérite d'être [primary_title.GetTier].;;;;;;;;;;;;x
+DESC_ANI_244;The last vote arrived. We will soon know who will be a [Root.GetTitle];Le dernier vote vient d'arriver, nous allons maintenant savoir qui mérite d'être [Root.GetTitle].;;;;;;;;;;;;x
 OPTA_ANI_244;Of course, it is me!;Bien sûre que c'est moi!;;;;;;;;;;;;x
 OPTB_ANI_244;Why did I not was chosen?!;Pourquoi n'ai-je pas été choisi?;;;;;;;;;;;;x
-DESC_ANI_245;The vote started by [From.GetTitledFirstName] are finished. The result are now out;Les votes qui ont été lancé à ma demande ont été cloturé. [From.GetTitledFirstName] vient d'annoncé le futur [From.primary_title.GetTier].;;;;;;;;;;;;x
+DESC_ANI_245;The vote started by [From.GetTitledFirstName] are finished. The result are now out;Les votes qui ont été lancé à ma demande ont été cloturé. [From.GetTitledFirstName] vient d'annoncé le futur [dragon_main_title.GetRulerTitle].;;;;;;;;;;;;x
 OPTA_ANI_245;Why does no one recognize my talents?!;Pourquoi n'ai-je pas été choisi?!;;;;;;;;;;;;x
 OPTB_ANI_245;I am finally at my rightful place!;Ils ont enfin reconnu ma véritable place;;;;;;;;;;;;x
 
@@ -339,4 +339,4 @@ TT_dragon_looses_death_duel;loose duel and die;perd le duel et meurt;;;;;;;;;;;;
 TT_dragon_wins_death_duel;loose the duel;perdre le duel;;;;;;;;;;;;x
 TT_dragon_vote_soon;the vote start;les votes commencent;;;;;;;;;;;;x
 TT_dragon_imprisoned;is imprisoned;est emprisonné;;;;;;;;;;;;x
-TT_dragon_won_contest;became the new [Root.primary_title.GetTier];devient [dragon_vassal_unsatisfied.GetLeLa] nouv[dragon_vassal_unsatisfied.GetEauElle] [Root.primary_title.GetTier];;;;;;;;;;;;x
+TT_dragon_won_contest;became the new [Root.GetTitle];devient [dragon_vassal_unsatisfied.GetLeLa] nouv[dragon_vassal_unsatisfied.GetEauElle] [Root.GetTitle];;;;;;;;;;;;x
