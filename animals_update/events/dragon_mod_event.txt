@@ -1,5 +1,5 @@
 #######dragon update
-### event 198 - 245
+### event 198 - 246
 
 namespace = ani_plus
 
@@ -2698,13 +2698,14 @@ character_event = {
     }
 }
 
-#### event 230 to 233: fort and culture province events
+#### event 230 to 233 and 246: fort and culture province events
 ## event 230: a dragon absorb a province into his own realm
 ##              also convert that same province into his culture
 ## event 231: dragon notification for obtaining a new province
 ## event 232: top liege notification for losing a province
 ## event 233: removing influence if not tributary
 ## event 234: dragon owned province without fort get independence
+## event 246: updating culture if dragon is not a province ruler
 
 # event 230
 province_event = {
@@ -3133,6 +3134,28 @@ province_event = {
                 religion = new_character
             }
         }
+    }
+}
+
+# event 246
+province_event = {
+    id = ani_plus.246
+
+    hide_window = yes
+
+    trigger = {
+        culture_group = dragon_group
+        holder_scope = {
+            NOT = { culture_group = dragon_group }
+        }
+    }
+    mean_time_to_happen = {
+        months = 1
+    }
+
+    immediate = {
+        culture = holder_scope
+        religion = holder_scope
     }
 }
 
