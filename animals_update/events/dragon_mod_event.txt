@@ -2939,17 +2939,15 @@ province_event = {
         has_fort = no
         holder_scope = {
             government = dragon_tribal_gov
+
+            war = no
+            any_liege = {
+                war = no
+            }
         }
     }
     mean_time_to_happen = {
         months = 6
-
-        modifier = {
-            factor = 120
-            holder_scope = {
-                war = yes
-            }
-        }
     }
 
     option = {
