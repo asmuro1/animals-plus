@@ -428,12 +428,26 @@ fort_decisions = {
                 }
             }
 
+            has_regent = no
+
             custom_tooltip = {
                 text = TT_dragon_not_max_fortif
                 NOT = { fort_has_building = fo_drg_guardian_10 }
             }
+            
+            custom_tooltip = {
+                text = TT_dragon_did_not_take_decision_in_year
+                NOT = {
+                    had_province_flag = {
+                        flag = dragon_increased_influence
+                        years < 1
+                    }
+                }
+            }
         }
         effect = {
+            clr_province_flag = dragon_increased_influence
+            set_province_flag = dragon_increased_influence
             trigger_switch = {
                 on_trigger = fort_has_building
                 fo_drg_guardian_09 = {
@@ -581,7 +595,7 @@ targetted_decisions = {
         }
     }
 
-    dragon_vassal_unsatisfied = { # mettre un CD
+    dragon_vassal_unsatisfied = {
         is_high_prio = no
         ai_check_interval = 12
 
@@ -597,7 +611,7 @@ targetted_decisions = {
             NOT = {
                 had_character_flag = {
                     flag = dragon_vassal_instability_decision
-                    months < 1
+                    months < 6
                 }
             }
         }
