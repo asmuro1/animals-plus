@@ -226,7 +226,7 @@ dragon_tribalism_cb = {
 }
 
 ### dragon hunting
-dragon_hunting_war = {
+dragon_hunting_war = { # dosn't show on UI, don't know why and not really important
     name = DRAGON_HUNTING_CB_NAME
     war_name = DRAGON_HUNTING_WAR_NAME
     sprite = 25
