@@ -382,7 +382,7 @@ tribal_governments = {
         can_build_tribal = no
         preferred_holdings = { TRIBAL }
         allowed_holdings = { HOSPITAL }
-        allowed_holdings_culture = { TRIBAL }
+        allowed_holdings_culture = { TRIBAL FORT }
 
         can_grant_kingdoms_and_empires_to_other_government = no
         can_be_granted_kingdoms_and_empires_by_other_government = no

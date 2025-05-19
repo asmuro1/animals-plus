@@ -897,7 +897,7 @@ dragon_group = {
 			learning = 3
 			combat_rating = 100
 
-			vassal_opinion = -20
+			vassal_opinion = -10
 			knights_morale = 2
 			knights_defensive = 3
 			knights_offensive = 4
@@ -951,7 +951,7 @@ dragon_group = {
 			intrigue = 3
 			combat_rating = 100
 
-			vassal_opinion = -20
+			vassal_opinion = -10
 			knights_morale = 2
 			knights_defensive = 3
 			knights_offensive = 4
@@ -1005,7 +1005,7 @@ dragon_group = {
 			diplomacy = 3
 			combat_rating = 100
 
-			vassal_opinion = -20
+			vassal_opinion = -10
 			knights_morale = 2
 			knights_defensive = 3
 			knights_offensive = 4
@@ -1059,7 +1059,7 @@ dragon_group = {
 			martial = 3
 			combat_rating = 100
 
-			vassal_opinion = -20
+			vassal_opinion = -10
 			knights_morale = 2
 			knights_defensive = 3
 			knights_offensive = 4
@@ -1113,7 +1113,7 @@ dragon_group = {
 			stewardship = 3
 			combat_rating = 100
 
-			vassal_opinion = -20
+			vassal_opinion = -10
 			knights_morale = 2
 			knights_defensive = 3
 			knights_offensive = 4
