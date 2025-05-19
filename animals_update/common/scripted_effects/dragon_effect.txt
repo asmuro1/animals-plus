@@ -332,7 +332,7 @@ convert_to_dragon_culture_effect = {
 
 # province scope
 dragon_add_fort_to_province_effect = {
-    ROOT = {
+    holder_scope = {
         create_fort = PREV
     }
     add_to_extra_holding = {

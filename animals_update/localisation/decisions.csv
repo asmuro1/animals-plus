@@ -345,7 +345,7 @@ king_guards_rank;king;roi;;;;;;;;;;;;x
 emperor_guards_rank;emperor;empereur;;;;;;;;;;;;x
 
 #### DRAGON update
-dragon_lay_egg;Lay an egg;pond un œuf;;;;;;;;;;;;x
+dragon_lay_egg;Lay an egg;Pondre un œuf;;;;;;;;;;;;x
 dragon_lay_egg_desc;The only way a dragon has to reproduce is to lay a draggon egg. Even if the egg might never hatch, laying one is still necessary;La seule méthode qu'un dragon a pour se reproduire est de pondre un œuf. Même s'il n'est pas sûre qu'il éclose, en pondre un est mieux que rien du tout;;;;;;;;;;;;x
 go_search_for_dragon_egg;Buy the legendary dragon egg;Acheter l'œuf de dragon légendaire;;;;;;;;;;;;x
 go_search_for_dragon_egg_desc;Their are legends that say that an unique dragon egg exist. But recently, a merchant did found it and propose me to buy it;Il y a des légendes qui disent qu'un œuf de dragon a été caché à ma capitale. En porofitant de cette légende, un marchand me propose de lui en acheter un;;;;;;;;;;;;x

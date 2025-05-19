@@ -1,5 +1,5 @@
 #######dragon update
-### event 198 - 246
+### event 198 - 247
 
 namespace = ani_plus
 
@@ -76,13 +76,15 @@ character_event = {
     }
 }
 
-#### event 200 to 201: religious event force religion setting
+#### event 200 to 203 and 247: religious event force religion setting
 ## event 200: setting holy site randomly (on game start, event if random always choose the same provinces)
 ## event 201: setting character and province in game start by
 #                   forcing dragon religion
 #                   setting egg culture for dragon egg
 #                   giving adult dragon their flag
 #                   forcing gender succession law
+## event 247: triggered by event 201 // create fort on dragon province
+#                   delayed by 1 day because it seems that AI province destroy fort on day 1 after game start 
 ## event 202: converting character on birth or culture change
 ## event 203: converting province culture on religion change
 
@@ -129,6 +131,7 @@ character_event = {
             dragon_get_dragon_egg_culture_if_child_effect = yes
             dragon_get_true_adult_effect = yes
             
+            set_government_type = dragon_tribal_gov
             any_demesne_title = {
                 gender_succ = true_cognatic
             }
@@ -139,22 +142,44 @@ character_event = {
                 culture_group = dragon_group
                 NOT = { religion = Dragon_religion }
             }
-            if = {
-                limit = {
-                    holder_scope = {
-                        culture_group = dragon_group
-                        religion = Dragon_religion
-                    }
-                }
-                religion = Dragon_religion
-                dragon_add_fort_to_province_effect = yes
-            }
-            else = {
-                culture = holder_scope
+
+            province_event = {
+                id = ani_plus.247
+                days = 1
             }
         }
     }
 }
+
+# event 247
+province_event = {
+    id = ani_plus.247
+
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        culture_group = dragon_group
+        has_fort = no
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                holder_scope = {
+                    culture_group = dragon_group
+                    religion = Dragon_religion
+                }
+            }
+            religion = Dragon_religion
+            dragon_add_fort_to_province_effect = yes
+        }
+        else = {
+            culture = holder_scope
+        }
+    }
+}
+
 
 # event 202
 character_event = {
