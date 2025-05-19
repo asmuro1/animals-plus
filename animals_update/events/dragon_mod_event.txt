@@ -134,6 +134,7 @@ character_event = {
             set_government_type = dragon_tribal_gov
             any_demesne_title = {
                 gender_succ = true_cognatic
+                add_law = vassal_wars_law_2
             }
         }
         any_province = {
@@ -143,9 +144,19 @@ character_event = {
                 NOT = { religion = Dragon_religion }
             }
 
-            province_event = {
-                id = ani_plus.247
-                days = 1
+            if = {
+                limit = {
+                    holder_scope = {
+                        ai = no
+                    }
+                }
+                dragon_add_fort_to_province_effect = yes
+            }
+            else = {
+                province_event = {
+                    id = ani_plus.247
+                    days = 1
+                }
             }
         }
     }

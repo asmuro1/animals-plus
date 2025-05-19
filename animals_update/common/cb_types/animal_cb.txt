@@ -165,6 +165,9 @@ dragon_tribalism_cb = {
                 target = ROOT
                 type = invasion
             }
+            location = {
+                culture = ROOT
+            }
         }
 
         hidden_tooltip = {
@@ -226,7 +229,7 @@ dragon_tribalism_cb = {
 }
 
 ### dragon hunting
-dragon_hunting_war = { # dosn't show on UI, don't know why and not really important
+dragon_hunting_war = {
     name = DRAGON_HUNTING_CB_NAME
     war_name = DRAGON_HUNTING_WAR_NAME
     sprite = 25
@@ -273,6 +276,19 @@ dragon_hunting_war = { # dosn't show on UI, don't know why and not really import
                 }
                 any_vassal = {
                     higher_tier_than = BARON
+                }
+            }
+        }
+        ROOT = {
+            NOT = {
+                culture_group = dragon_group
+            }
+            OR = {
+                liege = {
+                    character = FROM
+                }
+                suzerain = {
+                    character = FROM
                 }
             }
         }

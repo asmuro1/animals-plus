@@ -225,10 +225,18 @@ de_jure_laws = {
 		}
 
 		allow = {
-			has_law = vassal_wars_law_1
-			holder_scope = {
-				primary_title = {
-					has_law = ze_administration_laws_2
+			trigger_if = {
+				limit = {
+					holder_scope = { government = dragon_tribal_gov }
+				}
+				always = yes
+			}
+			trigger_else = {
+				has_law = vassal_wars_law_1
+				holder_scope = {
+					primary_title = {
+						has_law = ze_administration_laws_2
+					}
 				}
 			}
 		}

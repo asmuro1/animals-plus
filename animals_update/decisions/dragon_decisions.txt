@@ -188,7 +188,6 @@ decisions = {
 
         potential = {
             government = dragon_tribal_gov
-            tier = COUNT
             NOT = { has_character_flag = formed_dragon_retinue }
         }
         allow = {
