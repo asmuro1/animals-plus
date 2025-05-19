@@ -3705,26 +3705,28 @@ character_event = {
 
                 custom_tooltip = {
                     text = TT_dragon_wins_death_duel
+                    any_demesne_title = {
+                        limit = {
+                            tier = event_target:dragon_main_title
+                        }
+                        event_target:dragon_vassal_unsatisfied = {
+                            usurp_title = {
+                                target = PREV
+                                type = duel
+                            }
+                        }
+                    }
+                    
                     event_target:dragon_vassal_unsatisfied = {
                         set_character_flag = dragon_wins_death_duel
                         character_event = { id = ani_plus.241 }
                     }
-                }
-                any_demesne_title = {
-                    limit = {
-                        tier = event_target:dragon_main_title
-                    }
-                    event_target:dragon_vassal_unsatisfied = {
-                        usurp_title = {
-                            target = PREV
-                            type = duel
-                        }
-                    }
-                }
 
-                death = {
-                    killer = event_target:dragon_vassal_unsatisfied
-                    death_reason = death_duel
+
+                    death = {
+                        killer = event_target:dragon_vassal_unsatisfied
+                        death_reason = death_duel
+                    }
                 }
             }
         }
@@ -3838,6 +3840,11 @@ character_event = {
                 }
             }
         }
+
+        
+        primary_title = {
+            save_event_target_as = dragon_main_title
+        }
     }
 
     option = {
@@ -3865,10 +3872,6 @@ character_event = {
                 which =  local_dragon_vassal_score
                 value < 0
             }
-        }
-
-        primary_title = {
-            save_event_target_as = dragon_main_title
         }
 
         custom_tooltip = {

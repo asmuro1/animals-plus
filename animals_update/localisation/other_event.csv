@@ -310,17 +310,17 @@ DESC_ANI_236;A small group of human did sabotage [This.GetName]. Seems that we l
 OPT_ANI_236;That means that they'll get their independence soon...;ça signifie qu'ils vont bientôt avoir leur indépendance...;;;;;;;;;;;;x
 DESC_ANI_237;As I grow my country, some vassals became opportunist. But as I barely lack resources to administer my country, one specificly forced his way to evade my authority;Avec la croissance de mon pays, certains opportunistes y voient l'occasion d'échapper à mon authorité.;;;;;;;;;;;;x
 OPT_ANI_237;How can a vassal use that?;Il en échappe totalement?;;;;;;;;;;;;x
-DESC_ANI_238;[From.GetTitledFirstName] started to doubt your qualities as a dragon chief. As a dragon, he choose to use his right to fight me. Something must be done!;[From.GetTitledFirstName] commence à douter de mes capacités en tant que chef draconnique. Je ne peux plus le laisser continuer!;;;;;;;;;;;;x
+DESC_ANI_238;[FromFrom.GetTitledFirstName] started to doubt your qualities as a dragon chief. As a dragon, he choose to use his right to fight me. Something must be done!;[FromFrom.GetTitledFirstName] commence à douter de mes capacités en tant que chef draconnique. Je ne peux plus le laisser continuer!;;;;;;;;;;;;x
 OPTA_ANI_238;I will show his position in a death duel;Je vais lui montrer sa position dans un duel à mort;;;;;;;;;;;;x
 OPTB_ANI_238;I'll set him free, to fight him later on the battlefield;Je le libère pour l'abattre sur le champs de bataille;;;;;;;;;;;;x
 OPTC_ANI_238;I shall let other vassals to determine who shall run over [This.primary_title.GetFullBaseName];Je vais laisser les autre vassaux décider qui mérite de reigner sur [This.primary_title.GetFullBaseName];;;;;;;;;;;;x
 DESC_ANI_239;Your greed know no bound. I shall punigh you in a death duel in one week;Ton arrogance ne connait aucune limite, je vais te montrer tes faiblesses lors d'un duel à mort!;;;;;;;;;;;;x
 OPT_ANI_239;He shall lose its life and its titles;Il va perdre sa vie et ses titres!;;;;;;;;;;;;x
-DESC_ANI_240;All the preparation are finished. The death duel against [dragon_vassal_unsatisfied.GetTitledFirstName] can now start;Toutes les préparations du duel à mort pour prouver que [dragon_vassal_unsatisfied.GetTitledFirstName] n'est pas digne d'être de [Root.primary_title.GetTier];;;;;;;;;;;;x
+DESC_ANI_240;All the preparation are finished. The death duel against [dragon_vassal_unsatisfied.GetTitledFirstName] can now start;Toutes les préparations du duel à mort sont fini. Mon duel contre [dragon_vassal_unsatisfied.GetTitledFirstName] va bientôt commencer;;;;;;;;;;;;x
 OPT_ANI_240;[dragon_vassal_unsatisfied.GetSheHeCap] will soon be dead!;[dragon_vassal_unsatisfied.GetTitledFirstName] va bientôt connaître sa place!;;;;;;;;;;;;x
 DESC_ANI_241;The duel planned last week is starting. I fight as I could. [From.GetFullName] also. We both hold our honor, but that fight has to come to an end;Le duel qui a été prévu la semaine dernière vient tout juste de commencer. [From.GetFullName] et moi nous battons avec honeur. Nous sommes tous les deux valeureux, mais il faut bien un gagnant...;;;;;;;;;;;;x
 OPTA_ANI_241;Did I lost?!;Ai-je juste perdu le duel?!;;;;;;;;;;;;x
-OPTB_ANI_241;I am now the new [dragon_main_title.GetTier];Je suis maintenant le nouveau [dragon_main_title.GetTier]!;;;;;;;;;;;;x
+OPTB_ANI_241;I am now the new [Root.GetTitle];Je suis maintenant le nouveau [Root.GetTitle]!;;;;;;;;;;;;x
 DESC_ANI_242;I, [From.GetTitledName], officialy declare you independent!;Moi, [From.GetTitledName], te déclare offficiellement indépendant;;;;;;;;;;;;x 
 OPT_ANI_242;It couldn't be better!;ça ne pourrait pas être mieux;;;;;;;;;;;;x
 DESC_ANI_243;We will choose our true [From.primary_title.GetTier] through the opinion of my others vassals;Nous allons choisir notre [From.primary_title.GetTier] grâce à l'opinion de tes co-vassaux.;;;;;;;;;;;;x
@@ -336,7 +336,7 @@ TT_dragon_loose_province_fort;loose control over §Y[This.GetName]§!;perd le cont
 TT_dragon_duel_in_7_days;The death duel will start in a week;Le duel à mort démarera dans une semaine;;;;;;;;;;;;x
 TT_dragon_became_indep;[dragon_vassal_unsatisfied.GetTitledFirstName] became independent;[dragon_vassal_unsatisfied] devient indépendant;;;;;;;;;;;;x
 TT_dragon_looses_death_duel;loose duel and die;perd le duel et meurt;;;;;;;;;;;;x
-TT_dragon_wins_death_duel;loose the duel;perd le duel;;;;;;;;;;;;x
+TT_dragon_wins_death_duel;loose the duel;perdre le duel;;;;;;;;;;;;x
 TT_dragon_vote_soon;the vote start;les votes commencent;;;;;;;;;;;;x
 TT_dragon_imprisoned;is imprisoned;est emprisonné;;;;;;;;;;;;x
 TT_dragon_won_contest;became the new [Root.primary_title.GetTier];devient [dragon_vassal_unsatisfied.GetLeLa] nouv[dragon_vassal_unsatisfied.GetEauElle] [Root.primary_title.GetTier];;;;;;;;;;;;x
