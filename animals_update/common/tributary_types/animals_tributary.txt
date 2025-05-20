@@ -93,7 +93,7 @@ dragon_vassal_tributary = {
     tributaries_can_infight = no
     tributaries_can_unite = yes
     icon = 10
-    cbs_against_suzerain = { independance_bear_tributary_cb } # will be moved to another CB later
+    cbs_against_suzerain = { dragon_hunting_war }
     income_tribute_percentage = {
         value = 0.75
 
@@ -105,8 +105,8 @@ dragon_vassal_tributary = {
         }
     }
     reinforce_tribute_percentage = { value = 0 }
-    prestige_to_suzerain = { value = 0 }
-    prestige_to_tributary = { value = 0 }
+    prestige_to_suzerain = { value = 0.25 }
+    prestige_to_tributary = { value = -0.1 }
     piety_to_suzerain = { value = 0 }
     piety_to_tributary = { value = 0 }
 }
