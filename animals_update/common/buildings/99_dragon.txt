@@ -214,7 +214,96 @@ tribal = {
         light_cavalry = 100
     }
 
-    tb_drg_fighter = {
+    tb_drg_fighter_1 = {
+        add_number_to_name = no
+        
+        potential = {
+            culture_group = dragon_group
+        }
+        trigger = {
+            culture_group = dragon_group
+            location = {
+                show_scope_change = no
+                fort_has_building = fo_drg_retinue_1
+            }
+        }
+        is_active_trigger = {
+            culture_group = dragon_group
+            location = {
+                show_scope_change = no
+                fort_has_building = fo_drg_retinue_1
+            }
+        }
+        prerequisites = { tb_ani_tribal_tower_1 }
+
+        gold_cost = 250
+        build_time = 200
+        ai_creation_factor = 75
+        extra_tech_building_start = 10.0
+
+        knights = 5
+    }
+    tb_drg_fighter_2 = {
+        add_number_to_name = no
+        
+        potential = {
+            culture_group = dragon_group
+        }
+        trigger = {
+            culture_group = dragon_group
+            location = {
+                show_scope_change = no
+                fort_has_building = fo_drg_retinue_2
+            }
+        }
+        is_active_trigger = {
+            culture_group = dragon_group
+            location = {
+                show_scope_change = no
+                fort_has_building = fo_drg_retinue_2
+            }
+        }
+        prerequisites = { tb_ani_tribal_tower_2 }
+        upgrades_from = tb_drg_fighter_1
+
+        gold_cost = 500
+        build_time = 400
+        ai_creation_factor = 75
+        extra_tech_building_start = 10.0
+
+        knights = 10
+    }
+    tb_drg_fighter_3 = {
+        add_number_to_name = no
+        
+        potential = {
+            culture_group = dragon_group
+        }
+        trigger = {
+            culture_group = dragon_group
+            location = {
+                show_scope_change = no
+                fort_has_building = fo_drg_retinue_3
+            }
+        }
+        is_active_trigger = {
+            culture_group = dragon_group
+            location = {
+                show_scope_change = no
+                fort_has_building = fo_drg_retinue_3
+            }
+        }
+        prerequisites = { tb_ani_tribal_tower_3 }
+        upgrades_from = tb_drg_fighter_2
+
+        gold_cost = 750
+        build_time = 600
+        ai_creation_factor = 75
+        extra_tech_building_start = 10.0
+
+        knights = 15
+    }
+    tb_drg_fighter_4 = {
         add_number_to_name = no
         
         potential = {
@@ -229,10 +318,11 @@ tribal = {
             culture_group = dragon_group
             is_capital = yes
         }
-        prerequisites = { tb_ani_tribal_tower_2 }
+        prerequisites = { tb_ani_tribal_tower_4 }
+        upgrades_from = tb_drg_fighter_3
 
         gold_cost = 1000
-        build_time = 200
+        build_time = 800
         ai_creation_factor = 75
         extra_tech_building_start = 10.0
 
@@ -284,7 +374,7 @@ fort = {
         build_time = 350
         ai_creation_factor = 90
 
-        garrison_size = 0.5
+        garrison_size = 0.25
         fort_level = 1
     }
     fo_drg_guardian_02 = {
@@ -308,7 +398,7 @@ fort = {
         build_time = 700
         ai_creation_factor = 90
 
-        garrison_size = 0.5
+        garrison_size = 0.25
         fort_level = 1
     }
     fo_drg_guardian_03 = {
@@ -332,7 +422,7 @@ fort = {
         build_time = 1050
         ai_creation_factor = 90
 
-        garrison_size = 0.5
+        garrison_size = 0.25
         fort_level = 1
     }
     fo_drg_guardian_04 = {
@@ -356,7 +446,7 @@ fort = {
         build_time = 1400
         ai_creation_factor = 90
 
-        garrison_size = 0.5
+        garrison_size = 0.25
         fort_level = 1
     }
     fo_drg_guardian_05 = {
@@ -380,7 +470,7 @@ fort = {
         build_time = 1750
         ai_creation_factor = 90
 
-        garrison_size = 1.0
+        garrison_size = 0.5
         fort_level = 1
     }
     fo_drg_guardian_06 = {
@@ -404,7 +494,7 @@ fort = {
         build_time = 2100
         ai_creation_factor = 90
 
-        garrison_size = 1.0
+        garrison_size = 0.5
         fort_level = 1
     }
     fo_drg_guardian_07 = {
@@ -428,7 +518,7 @@ fort = {
         build_time = 2450
         ai_creation_factor = 90
 
-        garrison_size = 1.0
+        garrison_size = 0.5
         fort_level = 1
     }
     fo_drg_guardian_08 = {
@@ -452,7 +542,7 @@ fort = {
         build_time = 2800
         ai_creation_factor = 90
 
-        garrison_size = 1.0
+        garrison_size = 0.5
         fort_level = 1
     }
     fo_drg_guardian_09 = {
@@ -524,7 +614,7 @@ fort = {
         ai_creation_factor = 40
 
         retinuesize = 10
-        knights = 5
+        knights = 50 # only work for flat garrison bonuses
     }
     fo_drg_retinue_2 = {
         add_number_to_name = no
@@ -546,7 +636,7 @@ fort = {
         ai_creation_factor = 40
 
         retinuesize = 15
-        knights = 5
+        knights = 50 # only work for flat garrison bonuses
     }
     fo_drg_retinue_3 = {
         add_number_to_name = no
@@ -568,7 +658,7 @@ fort = {
         ai_creation_factor = 40
 
         retinuesize = 15
-        knights = 5
+        knights = 50 # only work for flat garrison bonuses
     }
 
     fo_drg_heart_1 = {
