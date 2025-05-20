@@ -134,7 +134,6 @@ character_event = {
             set_government_type = dragon_tribal_gov
             any_demesne_title = {
                 gender_succ = true_cognatic
-                add_law = vassal_wars_law_2
             }
         }
         any_province = {
@@ -2667,47 +2666,47 @@ character_event = {
 ## event 229: remove tributaries on dragon war loss
 
 # event 227
-character_event = {
-    id = ani_plus.227
-
-    only_playable = yes
-
-    hide_window = yes
-
-    trigger = {
-        government = dragon_tribal_gov
-        NOT = { has_law = vassal_wars_law_2 }
-    }
-    mean_time_to_happen = {
-        months = 5
-    }
-    immediate = {
-        any_demesne_title = {
-            add_law = vassal_wars_law_2
-        }
-    }
-}
+#character_event = {
+#    id = ani_plus.227
+#
+#    only_playable = yes
+#
+#    hide_window = yes
+#
+#    trigger = {
+#        government = dragon_tribal_gov
+#        NOT = { has_law = vassal_wars_law_2 }
+#    }
+#    mean_time_to_happen = {
+#        months = 5
+#    }
+#    immediate = {
+#        any_demesne_title = {
+#            add_law = vassal_wars_law_2
+#        }
+#    }
+#}
 
 # event 228
-character_event = {
-    id = ani_plus.228
-    
-    only_playable = yes
-    hide_window = yes
-
-    trigger = {
-        has_law = vassal_wars_law_2
-        NOT = { is_law_potential = vassal_wars_law_2 }
-    }
-    mean_time_to_happen = {
-        months = 5
-    }
-
-    immediate = {
-        any_demesne_title = {
-            revoke_law = vassal_wars_law_2
-        }
-    }
+#character_event = {
+#    id = ani_plus.228
+#    
+#    only_playable = yes
+#    hide_window = yes
+#
+#    trigger = {
+#        has_law = vassal_wars_law_2
+#        NOT = { is_law_potential = vassal_wars_law_2 }
+#    }
+#    mean_time_to_happen = {
+#        months = 5
+#    }
+#
+#    immediate = {
+#        any_demesne_title = {
+#            revoke_law = vassal_wars_law_2
+#        }
+#    }
 }
 
 # event 229

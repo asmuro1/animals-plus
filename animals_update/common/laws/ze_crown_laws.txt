@@ -201,42 +201,30 @@ de_jure_laws = {
 		}
 		feudal_opinion = -5
 	}
-	vassal_wars_law_2 = {
+	vassal_wars_law_2 = { # do not need to forcefully add it for dragon anymore
+						  # as all CBs trigger has been updated
 		group = vassal_wars_law
 
 		potential = {
-			OR = {
-				holder_scope = { government = dragon_tribal_gov }
-				AND = {
-					has_dlc = "Zeus"
-					holder_scope = {
-						is_tribal = no
-						is_nomadic = no
-						is_republic = no
-						is_theocracy = no
-						NOR = {
-							government = order_government
-							government = panda_bureaucratic_gov
-							government = panda_bureaucratic_gov_bis
-						}
-					}
+			has_dlc = "Zeus"
+			holder_scope = {
+				is_tribal = no
+				is_nomadic = no
+				is_republic = no
+				is_theocracy = no
+				NOR = {
+					government = order_government
+					government = panda_bureaucratic_gov
+					government = panda_bureaucratic_gov_bis
 				}
 			}
 		}
 
 		allow = {
-			trigger_if = {
-				limit = {
-					holder_scope = { government = dragon_tribal_gov }
-				}
-				always = yes
-			}
-			trigger_else = {
-				has_law = vassal_wars_law_1
-				holder_scope = {
-					primary_title = {
-						has_law = ze_administration_laws_2
-					}
+			has_law = vassal_wars_law_1
+			holder_scope = {
+				primary_title = {
+					has_law = ze_administration_laws_2
 				}
 			}
 		}
