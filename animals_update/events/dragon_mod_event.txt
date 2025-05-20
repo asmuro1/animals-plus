@@ -2753,7 +2753,7 @@ character_event = {
 ## event 231: dragon notification for obtaining a new province
 ## event 232: top liege notification for losing a province
 ## event 233: removing influence if not tributary
-## event 234: dragon owned province without fort get independence
+## event 234: dragn oowned province without fort get independence
 ## event 246: updating culture if dragon is not a province ruler
 
 # event 230
@@ -2989,18 +2989,26 @@ province_event = {
         has_fort = no
         holder_scope = {
             government = dragon_tribal_gov
+        }
+        
+        is_occupied = no
+    }
+    mean_time_to_happen = {
+        months = 1
 
-            war = no
-            OR = {
-                independent = yes
-                any_liege = {
-                    war = no
+        modifier = {
+            factor = 24
+
+            holder_scope = {
+                war = no
+                OR = {
+                    independent = yes
+                    any_liege = {
+                        war = no
+                    }
                 }
             }
         }
-    }
-    mean_time_to_happen = {
-        months = 6
     }
 
     option = {
