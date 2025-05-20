@@ -255,6 +255,11 @@ province_event = {
         culture_group = dragon_group
         holder_scope = {
             culture_group = dragon_group
+
+            war = no
+            any_liege = {
+                war = no
+            }
         }
 
         county = {
