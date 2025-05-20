@@ -2661,8 +2661,8 @@ character_event = {
 }
 
 #### event 227 to 229: warfare events
-## event 227: preventing vassals to declare war
-## event 228: removing law for non-dragon (mainly if Zeus DLC not activated)
+## event 227: removed 
+## event 228: removed
 ## event 229: remove tributaries on dragon war loss
 
 # event 227
@@ -2707,7 +2707,7 @@ character_event = {
 #            revoke_law = vassal_wars_law_2
 #        }
 #    }
-}
+#}
 
 # event 229
 character_event = {
@@ -2718,7 +2718,7 @@ character_event = {
 
     trigger = {
         FROM = {
-            culture_group = dragon_group
+            government = dragon_tribal_gov
         }
     }
 
