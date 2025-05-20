@@ -76,7 +76,7 @@ character_event = {
     }
 }
 
-#### event 200 to 203 and 247: religious event force religion setting
+#### event 200 to 204 and 247: religious event force religion setting
 ## event 200: setting holy site randomly (on game start, event if random always choose the same provinces)
 ## event 201: setting character and province in game start by
 #                   forcing dragon religion
@@ -87,6 +87,7 @@ character_event = {
 #                   delayed by 1 day because it seems that AI province destroy fort on day 1 after game start 
 ## event 202: converting character on birth or culture change
 ## event 203: converting province culture on religion change
+## event 204: holding plundering
 
 
 # event 200
@@ -242,7 +243,7 @@ province_event = {
     }
 }
 
-# event 204: force looting from a baronny title
+# event 204
 province_event = {
     id = ani_plus.204
 
@@ -258,7 +259,7 @@ province_event = {
 
             war = no
             OR = {
-                independent = yes
+                independent = yes 
                 any_liege = {
                     war = no
                 }
@@ -2990,8 +2991,11 @@ province_event = {
             government = dragon_tribal_gov
 
             war = no
-            any_liege = {
-                war = no
+            OR = {
+                independent = yes
+                any_liege = {
+                    war = no
+                }
             }
         }
     }
