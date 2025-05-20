@@ -3066,9 +3066,9 @@ province_event = {
                     troops = {
                         pikemen = { 1000 1000 }
                     }
-                    scaled_by_biggest_garrison = 2
+                    scaled_by_biggest_garrison = 1
                     disband_on_peace = no
-                    cannot_inherit = no
+                    cannot_inherit = yes
                     reinforces = no
                     merge = yes
                 }
@@ -3079,9 +3079,9 @@ province_event = {
                     troops = {
                         pikemen = { 1000 1000 }
                     }
-                    scaled_by_biggest_garrison = 2
+                    scaled_by_biggest_garrison = 1.5
                     disband_on_peace = no
-                    cannot_inherit = no
+                    cannot_inherit = yes
                     reinforces = no
                     merge = yes
                 }
@@ -3092,9 +3092,9 @@ province_event = {
                     troops = {
                         pikemen = { 1000 1000 }
                     }
-                    scaled_by_biggest_garrison = 2
+                    scaled_by_biggest_garrison = 1
                     disband_on_peace = no
-                    cannot_inherit = no
+                    cannot_inherit = yes
                     reinforces = no
                     merge = yes
                 }
