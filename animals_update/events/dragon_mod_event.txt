@@ -2670,31 +2670,31 @@ character_event = {
 }
 
 #### event 227 to 229: warfare events
-## event 227: removed 
+## event 227: force women status law 
 ## event 228: removed
 ## event 229: remove tributaries on dragon war loss
 
 # event 227
-#character_event = {
-#    id = ani_plus.227
-#
-#    only_playable = yes
-#
-#    hide_window = yes
-#
-#    trigger = {
-#        government = dragon_tribal_gov
-#        NOT = { has_law = vassal_wars_law_2 }
-#    }
-#    mean_time_to_happen = {
-#        months = 5
-#    }
-#    immediate = {
-#        any_demesne_title = {
-#            add_law = vassal_wars_law_2
-#        }
-#    }
-#}
+character_event = {
+    id = ani_plus.227
+
+    only_playable = yes
+
+    hide_window = yes
+
+    trigger = {
+        government = dragon_tribal_gov
+        NOT = { has_law = status_of_women_4 }
+    }
+    mean_time_to_happen = {
+        months = 5
+    }
+    immediate = {
+        primary_title = {
+            add_law = status_of_women_4
+        }
+    }
+}
 
 # event 228
 #character_event = {

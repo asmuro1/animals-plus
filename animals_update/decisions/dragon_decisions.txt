@@ -453,74 +453,74 @@ fort_decisions = {
             trigger_switch = {
                 on_trigger = fort_has_building
                 fo_drg_guardian_09 = {
+                    FROM = { wealth = -1000 }
                     add_to_extra_holding = {
                         type = fort
                         building = fo_drg_guardian_10
                     }
-                    FROM = { wealth = -1000 }
                 }
                 fo_drg_guardian_08 = {
+                    FROM = { wealth = -900 }
                     add_to_extra_holding = {
                         type = fort
                         building = fo_drg_guardian_09
                     }
-                    FROM = { wealth = -900 }
                 }
                 fo_drg_guardian_07 = {
+                    FROM = { wealth = -800 }
                     add_to_extra_holding = {
                         type = fort
                         building = fo_drg_guardian_08
                     }
-                    FROM = { wealth = -800 }
                 }
                 fo_drg_guardian_06 = {
+                    FROM = { wealth = -700 }
                     add_to_extra_holding = {
                         type = fort
                         building = fo_drg_guardian_07
                     }
-                    FROM = { wealth = -700 }
                 }
                 fo_drg_guardian_05 = {
+                    FROM = { wealth = -600 }
                     add_to_extra_holding = {
                         type = fort
                         building = fo_drg_guardian_06
                     }
-                    FROM = { wealth = -600 }
                 }
                 fo_drg_guardian_04 = {
+                    FROM = { wealth = -500 }
                     add_to_extra_holding = {
                         type = fort
                         building = fo_drg_guardian_05
                     }
-                    FROM = { wealth = -500 }
                 }
                 fo_drg_guardian_03 = {
+                    FROM = { wealth = -400 }
                     add_to_extra_holding = {
                         type = fort
                         building = fo_drg_guardian_04
                     }
-                    FROM = { wealth = -400 }
                 }
                 fo_drg_guardian_02 = {
+                    FROM = { wealth = -300 }
                     add_to_extra_holding = {
                         type = fort
                         building = fo_drg_guardian_03
                     }
-                    FROM = { wealth = -300 }
                 }
                 fo_drg_guardian_01 = {
+                    FROM = { wealth = -200 }
                     add_to_extra_holding = {
                         type = fort
                         building = fo_drg_guardian_02
                     }
-                    FROM = { wealth = -200 }
                 }
                 fallback = {
+                    FROM = { wealth = -100 }
                     add_to_extra_holding = {
                         type = fort
                         building = fo_drg_guardian_01
                     }
-                    FROM = { wealth = -100 }
                 }
             }
         }
