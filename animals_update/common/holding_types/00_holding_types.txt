@@ -83,11 +83,6 @@ nomad = {
 
 fort = {
 	trigger = {
-		NOT = {
-			FROM = {
-				government = dragon_tribal_gov
-			}
-		}
 	}
 }
 
