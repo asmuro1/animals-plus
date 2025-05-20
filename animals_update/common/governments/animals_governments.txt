@@ -374,6 +374,7 @@ tribal_governments = {
         can_demand_religious_conversion = no
         men_can_take_consorts = yes
         women_can_take_consorts = yes
+        vassal_call_to_arms = { dragon_tribal_gov }
 
         can_build_forts = yes
         can_build_castle = no
