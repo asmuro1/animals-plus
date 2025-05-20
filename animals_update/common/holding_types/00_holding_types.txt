@@ -83,6 +83,15 @@ nomad = {
 
 fort = {
 	trigger = {
+		FROM = {
+			OR = {
+				NOT = { government = dragon_tribal_gov }
+				AND = {
+					war = no
+					wealth = 1000
+				}
+			}
+		}
 	}
 }
 
