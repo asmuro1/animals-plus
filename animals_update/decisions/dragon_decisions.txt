@@ -33,6 +33,9 @@ decisions = {
             }
             in_command = no
             dragon_is_adult_trigger = yes
+            NOT = {
+                trait = celibate
+            }
         }
 
         effect = {
