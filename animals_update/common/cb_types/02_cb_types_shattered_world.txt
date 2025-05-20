@@ -15,7 +15,6 @@ shattered_world_county_conquest = {
 	sort_priority = 795
 	
 	can_use_gui = {
-		ROOT = { NOT = { government = dragon_tribal_gov } }
 		conditional_tooltip = {
 			trigger = {
 				has_alternate_start_setting = {
@@ -56,6 +55,7 @@ shattered_world_county_conquest = {
 	
 	can_use = {
 		is_shattered_world = yes
+		ROOT = { NOT = { government = dragon_tribal_gov } }
 		NOT = {
 			has_alternate_start_setting = {
 				setting = shattered_cbs
