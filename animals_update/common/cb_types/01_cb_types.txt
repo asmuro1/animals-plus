@@ -2760,6 +2760,12 @@ tributary_permanent_cb = { # New8
 	can_use_gui = {
 		check_if_crusader_trigger = yes
 		ROOT = {
+			NAND = {
+				government = dragon_tribal_gov
+				independent = no
+			}
+		}
+		ROOT = {
 			relative_realm_size = {
 				who = FROM 
 				size > 1

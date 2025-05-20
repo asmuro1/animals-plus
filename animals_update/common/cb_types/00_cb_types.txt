@@ -16027,10 +16027,13 @@ tributary_cb = {
 	
 	can_use_gui = {
 		check_if_crusader_trigger = yes
+		NAND = {
+			government = dragon_tribal_gov
+			independent = no
+		}
 	}
 
 	can_use = {
-		ROOT = { NOT = { government = dragon_tribal_gov } }
 		has_dlc = "Horse Lords"
 
 		ROOT = {
