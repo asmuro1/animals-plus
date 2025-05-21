@@ -754,12 +754,15 @@ targetted_decisions = {
                 character = FROM
             }
             NOT = {
-                has_character_modifier = dragon_slave
+                has_character_modifier = dragon_enslaved
             }
         }
         allow = {
             FROM = {
-                has_law = tribal_organization_3
+                OR = {
+                    has_law = tribal_organization_3
+                    has_law = tribal_organization_4
+                }
                 trigger_if = {
                     limit = {
                         has_dlc = "Zeus"
@@ -770,12 +773,6 @@ targetted_decisions = {
                 has_assigned_minor_title = title_dragon_alternate_space_master
                 has_regent = no
                 war = no
-                OR = {
-                    is_independent = yes
-                    any_liege = {
-                        war = no
-                    }
-                }
             }
 
             NOT = { culture_group = dragon_group }
