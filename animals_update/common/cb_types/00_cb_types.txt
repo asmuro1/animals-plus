@@ -314,7 +314,11 @@ other_claim = {
 		ROOT = {
 			mercenary = no
 		}
-		ROOT = { NOT = { government = dragon_tribal_gov } }
+		NOT = { government = dragon_tribal_gov }
+		# hoping it doesn't break the CB
+		# ROOT is the third party claiment
+		# FROMFROM ROOT's revendiced title
+		# I don't have a specific scope for declarant of war
 	}
 
 	can_use_gui = {
