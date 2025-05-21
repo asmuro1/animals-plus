@@ -373,3 +373,31 @@ title_dog_res_councillor = {
     
     message = yes
 }
+
+title_dragon_alternate_space_master = {
+    is_high_prio = yes
+
+    show_as_title = yes
+    is_voter = yes
+    dignity = 1
+    grant_limit = 1
+    opinion_effect = 30
+    monthly_salary = 1
+    monthly_prestige = 0.75
+    is_unique = yes
+
+    allowed_to_hold = {
+        culture_group = dragon_group
+        dragon_is_adult_trigger = yes
+        has_landed_title = no
+        prisoner = no
+        is_incapable = no
+    }
+    allowed_to_grant = {
+        government = dragon_tribal_gov
+        higher_tier_than = BARON
+    }
+    revoke_trigger = {
+        always = no
+    }
+}
