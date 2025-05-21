@@ -7369,7 +7369,7 @@ overthrow_ruler_no_calls = {
 	}
 
 	can_use = {
-		ROOT = { NOT = { government = dragon_tribal_gov } }
+		NOT = { government = dragon_tribal_gov }
 		FROM = {
 			primary_title = {
 				is_vice_royalty = no
