@@ -2214,7 +2214,7 @@ character_event = {
     }
 
     mean_time_to_happen = {
-        years = 16 # 1 chance out of 2 to die
+        years = 20
 
         modifier = { # or delayed if hospital has incubator
             factor = 5
@@ -2253,6 +2253,8 @@ character_event = {
                 character_event = { id = ani_plus.220}
             }
         }
+        
+        character_event = { id = ani_plus.220 days = 1}
     }
 }
 
