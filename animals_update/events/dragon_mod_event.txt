@@ -519,7 +519,7 @@ character_event = {
 
     trigger = {
         culture_group = dragon_group
-        NOT = { culture = dragon_culture } # not an egg
+        is_adult = yes # not an egg
         NOT = { has_character_flag = is_true_dragon_adult }
         war = no
     }
