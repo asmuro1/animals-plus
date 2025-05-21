@@ -551,78 +551,92 @@ character_event = {
 				}
 			}
 			set_character_flag = is_true_dragon_adult
-			break = yes
 		}
-
-        random_list = {
-            1 = { # snow trial
-                trigger = {
-                    NOT = {
-                        has_character_flag = snow_trial_realized
+        else_if = {
+            limit = {
+                OR = {
+                    AND = {
+                        is_ruler = yes
+                        has_assigned_minor_title = title_dragon_alternate_space_master
+                    }
+                    AND = {
+                        is_ruler = no
+                        liege = {
+                            has_assigned_minor_title = title_dragon_alternate_space_master
+                        }
                     }
                 }
-                set_character_flag = snow_trial_realized
-                character_event = { id = ani_plus.208 }
             }
-            1 = { # fire trial
-                trigger = {
-                    NOT = {
-                        has_character_flag = fire_trial_realized
+            random_list = {
+                1 = { # snow trial
+                    trigger = {
+                        NOT = {
+                            has_character_flag = snow_trial_realized
+                        }
                     }
+                    set_character_flag = snow_trial_realized
+                    character_event = { id = ani_plus.208 }
                 }
-                set_character_flag = fire_trial_realized
-                character_event = { id = ani_plus.210 }
-            }
-            1 = { # water trial
-                trigger = {
-                    NOT = {
-                        has_character_flag = water_trial_realized
+                1 = { # fire trial
+                    trigger = {
+                        NOT = {
+                            has_character_flag = fire_trial_realized
+                        }
                     }
+                    set_character_flag = fire_trial_realized
+                    character_event = { id = ani_plus.210 }
                 }
-                set_character_flag = water_trial_realized
-                character_event = { id = ani_plus.212 }
-            }
-            1 = { # sand trial
-                trigger = {
-                    NOT = {
-                        has_character_flag = sand_trial_realized
+                1 = { # water trial
+                    trigger = {
+                        NOT = {
+                            has_character_flag = water_trial_realized
+                        }
                     }
+                    set_character_flag = water_trial_realized
+                    character_event = { id = ani_plus.212 }
                 }
-                set_character_flag = sand_trial_realized
-                character_event = { id = ani_plus.214 }
-            }
-            1 = { # poison trial
-                trigger = {
-                    NOT = {
-                        has_character_flag = poison_trial_realized
+                1 = { # sand trial
+                    trigger = {
+                        NOT = {
+                            has_character_flag = sand_trial_realized
+                        }
                     }
+                    set_character_flag = sand_trial_realized
+                    character_event = { id = ani_plus.214 }
                 }
-                set_character_flag = poison_trial_realized
-                character_event = { id = ani_plus.216 }
-            }
-            fallback  = { # all trials done
-                if = {
-                    limit = {
+                1 = { # poison trial
+                    trigger = {
+                        NOT = {
+                            has_character_flag = poison_trial_realized
+                        }
+                    }
+                    set_character_flag = poison_trial_realized
+                    character_event = { id = ani_plus.216 }
+                }
+                fallback  = { # all trials done
+                    if = {
+                        limit = {
+                            father = {
+                                ai = no
+                            }
+                        }
                         father = {
-                            ai = no
+                            character_event = { id = ani_plus.218 }
                         }
                     }
-                    father = {
-                        character_event = { id = ani_plus.218 }
-                    }
-                }
-                else_if = {
-                    limit = {
+                    else_if = {
+                        limit = {
+                            mother = {
+                                ai = no
+                            }
+                        }
                         mother = {
-                            ai = no
+                            character_event = { id = ani_plus.218 }
                         }
                     }
-                    mother = {
+                    else = {
                         character_event = { id = ani_plus.218 }
                     }
-                }
-                else = {
-                    character_event = { id = ani_plus.218 }
                 }
             }
         }
