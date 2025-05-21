@@ -792,8 +792,7 @@ targetted_decisions = {
             FROM = {
                 custom_tooltip = {
                     text = TT_dragon_slave_revenue
-                    # character_event = { id = ani_plus.248 months = 1 }
-                    wealth = 100
+                    character_event = { id = ani_plus.248 months = 1 }
                 }
             }
         }
