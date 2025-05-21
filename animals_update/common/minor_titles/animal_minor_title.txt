@@ -387,9 +387,9 @@ title_dragon_alternate_space_master = {
     is_unique = yes
 
     allowed_to_hold = {
-        culture_group = dragon_group
+        government = dragon_tribal_gov
         dragon_is_adult_trigger = yes
-        has_landed_title = no
+        is_ruler = no
         prisoner = no
         is_incapable = no
     }
