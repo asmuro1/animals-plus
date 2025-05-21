@@ -4074,7 +4074,7 @@ character_event = {
                         killer = ROOT
                     }
                 }
-                # character_event = { id = ani_plus.249 }
+                character_event = { id = ani_plus.249 }
             }
         }
     }
@@ -4089,5 +4089,22 @@ character_event = {
                 remove_character_modifier = dragon_enslaved
             }
         }
+    }
+}
+
+# event 249
+character_event = {
+    id = ani_plus.249
+
+    is_triggered_only = yes
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = DESC_ANI_249
+    
+    option = {
+        name = OPT_ANI_249
+
+        show_portrait = event_target:slave
     }
 }

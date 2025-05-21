@@ -331,6 +331,8 @@ OPTB_ANI_244;Why did I not was chosen?!;Pourquoi n'ai-je pas été choisi?;;;;;;;;
 DESC_ANI_245;The vote started by [From.GetTitledFirstName] are finished. The result are now out;Les votes qui ont été lancé à ma demande ont été cloturé. [From.GetTitledFirstName] vient d'annoncé le futur [dragon_main_title.GetRulerTitle].;;;;;;;;;;;;x
 OPTA_ANI_245;Why does no one recognize my talents?!;Pourquoi n'ai-je pas été choisi?!;;;;;;;;;;;;x
 OPTB_ANI_245;I am finally at my rightful place!;Ils ont enfin reconnu ma véritable place;;;;;;;;;;;;x
+DESC_ANI_249;It seems that my slave, [slave.GetDynName] just die.;Il semblerai que mon esclave [slave.GetDynName] vient de mourir.;;;;;;;;;;;;x
+OPT_ANI_249;Did a tool broke?;Mon outil vient-il de se casser?;;;;;;;;;;;;x
 
 TT_dragon_loose_province_fort;loose control over §Y[This.GetName]§!;perd le controle de §Y[This.GetName]§!;;;;;;;;;;;;x
 TT_dragon_duel_in_7_days;The death duel will start in a week;Le duel à mort démarera dans une semaine;;;;;;;;;;;;x
