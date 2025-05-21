@@ -2986,7 +2986,11 @@ province_event = {
     desc = DESC_ANI_234
 
     trigger = {
-        has_fort = no
+        NOR = {
+            has_fort = yes
+            fort_has_building = fo_drg_guardian_01
+            fort_is_building = fo_drg_guardian_01
+        }
         holder_scope = {
             government = dragon_tribal_gov
         }
@@ -2997,7 +3001,7 @@ province_event = {
         months = 1
 
         modifier = {
-            factor = 24
+            factor = 120 # 10 years
 
             holder_scope = {
                 OR = {
