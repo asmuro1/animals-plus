@@ -1,10 +1,10 @@
 Is_animal_trigger = {
-        culture = dragon_culture
+    always = no
 }
 
 Is_really_animal_trigger = {
     OR = {
-        culture = dragon_culture
+        culture_group = dragon_group
         culture_group = horse_group
         culture_group = dog_group
         culture_group = bear_group

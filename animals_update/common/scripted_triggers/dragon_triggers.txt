@@ -1,0 +1,117 @@
+# province scope
+is_black_dragon_province_trigger = {
+    terrain = marsh
+}
+
+# province scope
+is_white_dragon_province_trigger = {
+    terrain = arctic
+}
+
+# province scope
+is_red_dragon_province_trigger = {
+    terrain = farmlands
+}
+
+# province scope
+is_blue_dragon_province_trigger = {
+    port = yes
+}
+
+# province scope
+is_yellow_dragon_province_trigger = {
+    terrain = desert
+}
+
+# character scope
+has_red_dragon_holy_site_trigger = {
+    any_province = {
+        has_province_flag = dragon_red_holy_site
+        holder_scope = {
+            culture = red_dragon
+        }
+    }
+}
+# character scope
+has_yellow_dragon_holy_site_trigger = {
+    any_province = {
+        has_province_flag = dragon_yellow_holy_site
+        holder_scope = {
+            culture = yellow_dragon
+        }
+    }
+}
+# character scope
+has_blue_dragon_holy_site_trigger = {
+    any_province = {
+        has_province_flag = dragon_blue_holy_site
+        holder_scope = {
+            culture = blue_dragon
+        }
+    }
+}
+# character scope
+has_black_dragon_holy_site_trigger = {
+    any_province = {
+        has_province_flag = dragon_black_holy_site
+        holder_scope = {
+            culture = black_dragon
+        }
+    }
+}
+# character scope
+has_white_dragon_holy_site_trigger = {
+    any_province = {
+        has_province_flag = dragon_white_holy_site
+        holder_scope = {
+            culture = white_dragon
+        }
+    }
+}
+
+# province scope
+has_dragon_holy_site_trigger = {
+    holder_scope = {
+        OR = {
+            AND = {
+                culture = red_dragon
+                has_red_dragon_holy_site_trigger = yes
+            }
+            AND = {
+                culture = yellow_dragon
+                has_yellow_dragon_holy_site_trigger = yes
+            }
+            AND = {
+                culture = blue_dragon
+                has_blue_dragon_holy_site_trigger = yes
+            }
+            AND = {
+                culture = white_dragon
+                has_white_dragon_holy_site_trigger = yes
+            }
+            AND = {
+                culture = black_dragon
+                has_black_dragon_holy_site_trigger = yes
+            }
+        }
+    }
+}
+
+# province scope - title cb condition
+is_my_realm_province_trigger = {
+    has_owner = yes
+    owner = {
+        OR = {
+            character = ROOT
+            is_liege_or_above = ROOT
+        }
+    }
+}
+
+# character scope
+dragon_is_adult_trigger = {
+    custom_tooltip = {
+        text = TT_is_an_adult_dragon
+        has_character_flag = is_true_dragon_adult
+    }
+}

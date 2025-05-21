@@ -9,6 +9,8 @@ on_chronicle_start = {
 		ani_plus.003 # setting bear family bonuses at game start
 		ani_plus.157 # creating new cat societies's grandmaster (as on_society_failed_to_find_new_leader doesn't trigger on game launch).
 		ani_plus.197 # initializing caste trait for horse ruler (on game start)
+		ani_plus.201 # forcing religion on dragon character and provinces
+		ani_plus.200 # setting dragon's holy site
 	}
 }
 
@@ -19,6 +21,7 @@ on_birth = {
 		ani_plus.006 # birth event for bear (multiple child and number of childs' bonus) and panda (multiple child, more than bear)
 		ani_plus.108 # giving duck holy site bonus (if relevant)
 		ani_plus.179 # horse trait on birth
+		ani_plus.202 # forcing dragon religion if child is dragon culture
 	}
 }
 
@@ -35,6 +38,7 @@ on_adolescence_pulse = {
 on_adulthood = {
 	events = {
 		ani_plus.190 # horse caste trait comming on age
+		ani_plus.205 # getting dragon's culture and education trait
 	}
 }
 
@@ -42,6 +46,7 @@ on_yearly_pulse = {
 	events = {
 		ani_plus.105 # updating duck dev maximum potential
 		ani_plus.144 # quest tombola for cat society
+		ani_plus.207 # a trial start for a child dragon 
 	}
 }
 on_bi_yearly_pulse = {
@@ -61,6 +66,14 @@ on_character_convert_culture = {
 		ani_plus.004 # remove bear cultural modifier
 		ani_plus.005 # force animal portrait and add cultural modifier
 		ani_plus.192 # remove horse caste trait on culture change
+		ani_plus.198 # preventing dragon to change culture
+		ani_plus.202 # forcing dragon religion if new culture is dragon
+	}
+}
+
+on_character_convert_religion = {
+	events = {
+		ani_plus.202 # preventing a dragon from changing religion
 	}
 }
 
@@ -90,6 +103,7 @@ on_war_ended_defeat = {
 	events = {
 		ani_plus.076 # hedgehogg - removing war modifiers
 		ani_plus.154 # cat - prosperity quest rank up
+		ani_plus.229 # remove tributary of dragon ruler
 	}
 }
 
@@ -135,6 +149,7 @@ on_new_holder_inheritance = {
 	events = {
 		ani_plus.116 # updating elephant law
     	ani_plus.164 # removing dog unity and council laws on holder change
+		ani_plus.226 # starting dragon succession tournament
 	}
 }
 on_new_holder_usurpation = {

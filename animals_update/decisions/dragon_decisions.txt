@@ -1,0 +1,703 @@
+decisions = {
+    dragon_lay_egg = {
+        is_high_prio = yes
+        ai_check_interval = 10
+
+        only_rulers = yes
+
+        potential = {
+            culture_group = dragon_group
+            is_landed = yes
+        }
+        allow = {
+            culture_group = dragon_group
+            NOT = { culture = dragon_culture }
+            war = no
+            is_incapable = no
+            is_married = yes
+            conditional_tooltip = {
+                trigger = { is_married = yes }
+                spouse = {
+                    culture_group = dragon_group
+                }
+            }
+            custom_tooltip = { # max one every 2 years
+                text = TT_dragon_did_not_lay_egg_recently
+                
+                NOT = {
+                    had_character_flag = {
+                        flag = dragon_layed_egg
+                        years <= 2
+                    }
+                }
+            }
+            in_command = no
+            dragon_is_adult_trigger = yes
+            NOT = {
+                trait = celibate
+            }
+        }
+
+        effect = {
+            if = {
+                limit = {
+                    is_female = yes
+                }
+
+                create_character = {
+                    age = 0
+                    random_traits = no
+                    female = random
+                    culture = dragon_culture
+                    religion = Dragon_religion
+                    dynasty = ROOT
+
+                    genetic_father = spouse
+                    genetic_mother = ROOT
+                }
+                spouse = {
+                    new_character = {
+                        set_mother = ROOT
+                        set_father = PREV
+                    }
+                }
+            }
+            else = {
+                create_character = {
+                    age = 0
+                    random_traits = no
+                    female = random
+                    culture = dragon_culture
+                    religion = Dragon_religion
+                    dynasty = ROOT
+
+                    genetic_father = ROOT
+                    genetic_mother = spouse
+                }
+                spouse = {
+                    new_character = {
+                        set_father = ROOT
+                        set_mother = PREV
+                    }
+                }
+            }
+
+            hidden_tooltip = {
+                clr_character_flag = dragon_layed_egg
+                set_character_flag = dragon_layed_egg
+                spouse = {
+                    clr_character_flag = dragon_layed_egg
+                    set_character_flag = dragon_layed_egg
+                }
+
+                new_character = {
+                    set_father_dragon_flag_effect = yes
+                    set_mother_dragon_flag_effect = yes
+                }
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0.2
+                has_living_children = yes
+            }
+        }
+    }
+    go_search_for_dragon_egg = {
+
+        is_high_prio = yes
+        ai_check_interval = 45
+
+        only_playable = yes
+
+        potential = {
+            OR = {
+                has_game_rule = {
+                    name = animals_conversion_ways
+                    value = animal_decision
+                }
+                AND = {
+                    has_game_rule = {
+                        name = animals_conversion_ways
+                        value = animal_instant
+                    }
+                    ai = no
+                }
+            }
+
+            Is_really_animal_trigger = no
+            NOT = {
+                has_artifact = dragon_egg_artifact
+            }
+        }
+        allow = {
+            is_adult = yes
+            is_incapable = no
+            has_regent = no
+            in_command = no
+            
+            wealth = 1000
+
+            OR = {
+                trait = impaler
+                lifestyle_traits == 0
+            }
+
+            capital_scope = {
+                has_fort = yes
+                OR = {
+                    is_black_dragon_province_trigger = yes
+                    is_white_dragon_province_trigger = yes
+                    is_red_dragon_province_trigger = yes
+                    is_blue_dragon_province_trigger = yes
+                    is_yellow_dragon_province_trigger = yes
+                }
+            }
+        }
+
+        effect = {
+            wealth = -1000
+            if = {
+                limit = {
+                    has_game_rule = {
+                        name = animals_conversion_ways
+                        value = animal_decision
+                    }
+                }
+                add_artifact = dragon_egg_artifact
+            }
+            else = {
+                convert_to_dragon_culture_effect = yes
+            }
+        }
+        ai_will_do = {
+            factor = 1
+            modifier = {
+                factor = 0.001
+
+                always = yes
+            }
+        }
+    }
+
+    dragon_goes_battlefield = {
+        is_high_prio = yes
+        ai_check_interval = 10
+
+        only_playable = yes
+
+        potential = {
+            government = dragon_tribal_gov
+            NOT = { has_character_flag = formed_dragon_retinue }
+        }
+        allow = {
+            ruled_years = 1
+            dragon_is_adult_trigger = yes
+        }
+
+        effect = {
+            if = {
+                limit = {
+                    has_dlc = "Legacy of Rome"
+                }
+                create_retinue = RETTYPE_CUL_DRAGON
+            }
+            else = {
+                spawn_unit = {
+                    province = capital_scope
+                    owner = ROOT
+                    troops = {
+                        knights = { 100 100 }
+                    }
+                    cannot_inherit = no
+                    reinforces = yes
+                    reinforce_rate_multiplier = 0.1
+                    maintenance_multiplier = 0.5
+                }
+            }
+            set_character_flag = formed_dragon_retinue
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
+}
+
+settlement_decisions = {
+    dragon_convert_to_tribal = {
+        is_high_prio = yes
+        ai_check_interval = 10
+
+        filter = sub_realm_owned
+        ai_target_filter = owned
+        
+        potential = {
+            FROM = {
+                culture_group = dragon_group
+            }
+            ROOT = {
+                is_capital = yes
+                location = {
+                    culture_group = dragon_group
+                }
+                NOT = { holding_type = tribal }
+            }
+        }
+        allow = {
+            FROM = {
+                dragon_is_adult_trigger = yes
+                war = no
+            }
+
+            location = {
+                show_scope_change = no
+                has_fort = yes
+            }
+        }
+        effect = {
+            FROM = {
+                wealth = 1000
+            }
+            convert_to = tribal
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+}
+
+title_decisions = {
+    dragon_start_to_loot_tributary_province = {
+        is_high_prio = no
+        ai_check_interval = 50
+        
+        # as the decision is concerning tributaries and their are no filter for them,
+        # I put 'all' pre-filter with a high ai_check_interval value
+        filter = all
+        ai_target_filter = all
+
+        potential = {
+            FROM = {
+                culture_group = dragon_group
+                independent = yes
+            }
+            ROOT = {
+                tier = COUNT
+
+                holder_scope = {
+                    top_liege = {
+                        is_tributary = yes
+                        suzerain = {
+                            character = FROM
+                        }
+                    }
+                }
+
+                location = {
+                    has_fort = no
+                }
+            }
+        }
+        allow = {
+            FROM = {
+                dragon_is_adult_trigger = yes
+
+                prestige = 500
+                wealth = 100
+            }
+        }
+        effect = {
+            FROM = {
+                prestige = -500
+                wealth = -100
+            }
+
+            create_fort = location
+        }
+        ai_will_do = {
+            factor = 1
+            
+            modifier = {
+                factor = 0.05
+                always = yes
+            }
+        }
+    }
+}
+
+fort_decisions = {
+    dragon_increase_fort_fortification = {
+        is_high_prio = no
+        ai_check_interval = 12
+
+        potential = {
+            FROM = {
+                culture_group = dragon_group
+                independent = yes
+            }
+            ROOT = {
+                fort_owner = {
+                    top_liege = {
+                        is_tributary = yes
+                        suzerain = {
+                            character = FROM
+                        }
+                    }
+                }
+            }
+        }
+        allow = {
+            FROM = {
+                dragon_is_adult_trigger = yes
+                trigger_if = {
+                    limit = {
+                        ROOT = {
+                            fort_has_building = fo_drg_guardian_09
+                        }
+                    }
+                    wealth = 1000
+                }
+                trigger_else_if = {
+                    limit = {
+                        ROOT = {
+                            fort_has_building = fo_drg_guardian_08
+                        }
+                    }
+                    wealth = 900
+                }
+                trigger_else_if = {
+                    limit = {
+                        ROOT = {
+                            fort_has_building = fo_drg_guardian_07
+                        }
+                    }
+                    wealth = 800
+                }
+                trigger_else_if = {
+                    limit = {
+                        ROOT = {
+                            fort_has_building = fo_drg_guardian_06
+                        }
+                    }
+                    wealth = 700
+                }
+                trigger_else_if = {
+                    limit = {
+                        ROOT = {
+                            fort_has_building = fo_drg_guardian_05
+                        }
+                    }
+                    wealth = 600
+                }
+                trigger_else_if = {
+                    limit = {
+                        ROOT = {
+                            fort_has_building = fo_drg_guardian_04
+                        }
+                    }
+                    wealth = 500
+                }
+                trigger_else_if = {
+                    limit = {
+                        ROOT = {
+                            fort_has_building = fo_drg_guardian_03
+                        }
+                    }
+                    wealth = 400
+                }
+                trigger_else_if = {
+                    limit = {
+                        ROOT = {
+                            fort_has_building = fo_drg_guardian_02
+                        }
+                    }
+                    wealth = 300
+                }
+                trigger_else_if = {
+                    limit = {
+                        ROOT = {
+                            fort_has_building = fo_drg_guardian_01
+                        }
+                    }
+                    wealth = 200
+                }
+                trigger_else = {
+                    wealth = 100
+                }
+            }
+
+            has_regent = no
+
+            custom_tooltip = {
+                text = TT_dragon_not_max_fortif
+                NOT = { fort_has_building = fo_drg_guardian_10 }
+            }
+            
+            custom_tooltip = {
+                text = TT_dragon_did_not_take_decision_in_year
+                NOT = {
+                    had_province_flag = {
+                        flag = dragon_increased_influence
+                        years < 1
+                    }
+                }
+            }
+        }
+        effect = {
+            clr_province_flag = dragon_increased_influence
+            set_province_flag = dragon_increased_influence
+            trigger_switch = {
+                on_trigger = fort_has_building
+                fo_drg_guardian_09 = {
+                    FROM = { wealth = -1000 }
+                    add_to_extra_holding = {
+                        type = fort
+                        building = fo_drg_guardian_10
+                    }
+                }
+                fo_drg_guardian_08 = {
+                    FROM = { wealth = -900 }
+                    add_to_extra_holding = {
+                        type = fort
+                        building = fo_drg_guardian_09
+                    }
+                }
+                fo_drg_guardian_07 = {
+                    FROM = { wealth = -800 }
+                    add_to_extra_holding = {
+                        type = fort
+                        building = fo_drg_guardian_08
+                    }
+                }
+                fo_drg_guardian_06 = {
+                    FROM = { wealth = -700 }
+                    add_to_extra_holding = {
+                        type = fort
+                        building = fo_drg_guardian_07
+                    }
+                }
+                fo_drg_guardian_05 = {
+                    FROM = { wealth = -600 }
+                    add_to_extra_holding = {
+                        type = fort
+                        building = fo_drg_guardian_06
+                    }
+                }
+                fo_drg_guardian_04 = {
+                    FROM = { wealth = -500 }
+                    add_to_extra_holding = {
+                        type = fort
+                        building = fo_drg_guardian_05
+                    }
+                }
+                fo_drg_guardian_03 = {
+                    FROM = { wealth = -400 }
+                    add_to_extra_holding = {
+                        type = fort
+                        building = fo_drg_guardian_04
+                    }
+                }
+                fo_drg_guardian_02 = {
+                    FROM = { wealth = -300 }
+                    add_to_extra_holding = {
+                        type = fort
+                        building = fo_drg_guardian_03
+                    }
+                }
+                fo_drg_guardian_01 = {
+                    FROM = { wealth = -200 }
+                    add_to_extra_holding = {
+                        type = fort
+                        building = fo_drg_guardian_02
+                    }
+                }
+                fallback = {
+                    FROM = { wealth = -100 }
+                    add_to_extra_holding = {
+                        type = fort
+                        building = fo_drg_guardian_01
+                    }
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0.5
+                fort_has_building = fo_drg_guardian_05
+            }
+            modifier = {
+                factor = 0.5
+                fort_has_building = fo_drg_guardian_06
+            }
+            modifier = {
+                factor = 0.5
+                fort_has_building = fo_drg_guardian_07
+            }
+            modifier = {
+                factor = 0.5
+                fort_has_building = fo_drg_guardian_08
+            }
+            modifier = {
+                factor = 0.5
+                fort_has_building = fo_drg_guardian_09
+            }
+        }
+    }
+}
+
+targetted_decisions = {
+    dragon_vassal_take_independence = {
+        is_high_prio = no
+        ai_check_interval = 6
+
+        filter = liege
+        ai_target_filter = liege
+
+        from_potential = {
+            NOT = { government = dragon_tribal_gov }
+            higher_tier_than = BARON
+        }
+
+        potential = {
+            government = dragon_tribal_gov
+        }
+
+        allow = {
+            FROM = {
+                war = no
+                has_regent = no
+                is_incapable = no
+            }
+            ROOT = {
+                war = no
+            }
+        }
+
+        effect = {
+            FROM = {
+                set_defacto_liege = THIS
+            }
+
+            ROOT = {
+                custom_tooltip = {
+                    text = TT_force_to_become_tributary
+                    letter_event = { id = ani_plus.235 days = 2 random = 5}
+                }
+            }
+        }
+
+        ai_will_do = {
+            factor = 1 # ai will always take the decision
+        }
+    }
+
+    dragon_vassal_unsatisfied = {
+        is_high_prio = no
+        ai_check_interval = 12
+
+        filter = liege
+        ai_target_filter = liege
+
+        from_potential = {
+            government = dragon_tribal_gov
+            higher_tier_than = BARON
+        }
+        potential = {
+            government = dragon_tribal_gov
+            NOT = {
+                had_character_flag = {
+                    flag = dragon_vassal_instability_decision
+                    months < 6
+                }
+            }
+        }
+
+        allow = {
+            FROM = {
+                dragon_is_adult_trigger = yes
+                has_regent = no
+                NOT = {
+                    opinion = {
+                        who = ROOT
+                        value = 0
+                    }
+                }
+                custom_tooltip = {
+                    text = TT_dragon_not_done_in_1_years
+                    NOT = {
+                        had_character_flag = {
+                            flag = dragon_vassal_instability_decision
+                            years < 1
+                        }
+                    }
+                }
+                # ruled_years = 5
+            }
+        }
+
+        effect = {
+            FROM = {
+                clr_character_flag = dragon_vassal_instability_decision
+                set_character_flag = dragon_vassal_instability_decision
+            }
+
+            ROOT = {
+                custom_tooltip = {
+                    text = TT_dragon_receive_ultimatum
+
+                    character_event = { id = ani_plus.238 days = 1 random = 3 }
+                }
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+
+            modifier = { # 50% per years
+                factor = 0.5
+
+                always = yes
+            }
+
+            modifier = {
+                factor = 0
+
+                capital_scope = {
+                    fort_has_building = fo_drg_heart_1
+                }
+                reverse_personal_opinion = {
+                    who = FROM
+                    value = -30
+                }
+            }
+            modifier = {
+                factor = 0
+
+                capital_scope = {
+                    fort_has_building = fo_drg_heart_2
+                }
+                reverse_personal_opinion = {
+                    who = FROM
+                    value = -60
+                }
+            }
+            modifier = {
+                factor = 0
+
+                capital_scope = {
+                    fort_has_building = fo_drg_heart_3
+                }
+                reverse_personal_opinion = {
+                    who = FROM
+                    value = -90
+                }
+            }
+        }
+    }
+}

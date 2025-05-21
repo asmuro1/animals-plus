@@ -253,3 +253,90 @@ TT_ani_180_went_well;everything goes well;tout se passe comme prévu;;;;;;;;;;;;x
 TT_ani_180_went_wrong;an accident occur;tout ne se passe pas comme prévu;;;;;;;;;;;;x
 TT_ani_186_learned_speciality;[rite_target.GetTitledFirstName] a lot more than expected of [rite_target.GetHerselfHimself];[rite_target.GetTitledFirstName] a bien mieu appris son rôle que ce qui était attendu;;;;;;;;;;;;x
 TT_ani_191_random_trait;§Y[From.GetFullName]§! gains a random horse rulership trait;§Y[From.GetFullName]§! obtient un trait cheval aléatoire;;;;;;;;;;;;x
+
+## dragon update
+DESC_ani_204;Humans build complex buildings but cannot defend themself against us...;Les humains construisent des structures complexes, mais ne savent pas se défendre!;;;;;;;;;;;;x
+OPT_ani_204;I should make use of it!;Je devrais en profiter.;;;;;;;;;;;;x
+DESCA_ANI_206;[From.GetFullName] just hatched from its egg. [From.GetSheHeCap] seems in good health!;[From.GetFullName] viens tout juste de sortir de son oeuf. [From.GetSheHeCap] semble être en bonne santé!;;;;;;;;;;;;x
+DESCB_ANI_206;I am finnaly outside of my egg, I can now be a proud dragon!;Je suis enfin sorti de mon oeuf, je peux enfin être un vrai dragon!;;;;;;;;;;;;x
+OPTA_ANI_206;[From.GetSheHeCap] still need to leanr many things;[From.GetSheHeCap] a quand même besoin d'apprendre beaucoup de choses!;;;;;;;;;;;;x
+OPTB_ANI_206;I am destined for greatness!;Je serais le meilleur dragon!;;;;;;;;;;;;x
+DESC_ANI_208;It is time to go through the snow trial. As a trial, I should go on an alternate space and learn its secrets. But I have a choice between 4 differents snow-covered space;C'est l'heure de passer l'épreuve de la neige. Comme les autres épreuves, je dois me rendre dans une réalité alternative et apprendre ces secrets. On me laisse tout de même le choix entre 4 espaces recouvert de neige...;;;;;;;;;;;;x
+OPTA_ANI_208;I choose the smallest;Je choisi le plus petit;;;;;;;;;;;;x
+OPTB_ANI_208;I choose the bigger;Je choisi le plus grand;;;;;;;;;;;;x
+OPTC_ANI_208;I choose the softest;Je choisi le plus simple;;;;;;;;;;;;x
+OPTD_ANI_208;I choose the harshest;Je choisi le plus rude;;;;;;;;;;;;x
+DESC_ANI_209;I just gone out of the trial. I did have the sensation that months or maybe years did pass... But not only one day.;Je viens tout juste de sortir de l'épreuve. J'ai eu la sensation qu'elle a duré plusieurs mois voir plusieurs années, alors qu'un jour s'est passé.;;;;;;;;;;;;x
+OPTA_ANI_209;worst of it, it was for almost nothing;pour un apprentissaage inutile;;;;;;;;;;;;x
+OPTB_ANI_209;at least, I learned some minor skills;j'ai au moins quelques capacités passables;;;;;;;;;;;;x
+OPTC_ANI_209;it was still a good exercise!;C'était au moins un bon exercice!;;;;;;;;;;;;x
+OPTD_ANI_209;i fell like it was something easy to do;je trouve que c'était quelque chose de facile;;;;;;;;;;;;x
+DESC_ANI_210;The fire trial is comming. As I enter its alternate space, I saw 4 path that link to a different room. I can easily guess that that choice will decide the result. What room choosing?;L'épreuve du feu vient de commencer. En tant que dragon, je suis obligé de rentrer dans la réalité alternative lié à l'épreuve. A peine rentré dedans que je dois faire un choix, 4 chemins se trouvent devant moi qui mènent à une pièce. Ce qui signifie que je dois choisir la pièce de l'épreuve;;;;;;;;;;;;x
+DESC_ANI_212;As time pass, water is needed. That's why a dragon has to pass its trial. The trial's virtual space is seperated in 4 fields. whose should I choose?;Avec le temps qui passe, l'eau aussi. C'est ce constat qui me permet de dire qu'il est l'heure de passer l'épreuve de l'eau. Cette épreuve se passe dans l'un des 4 espaces virtuels dédié. Lequel choisir?;;;;;;;;;;;;x
+DESC_ANI_214;I did want to see a sandstorm. I could see them sometimes. But I did not imagine that a dragon trial existed on this theme. I enter in it's alternative space and found instruction to enter one of the 4 pyramid. knowing that each one has a trial, whose should I choose?;J'ai déjà voulu voir des tempêtes de sables. Cependant, je n'aurai pas penser qu'il y aurait une épreuve draconnique de sable. J'entre dans son espace alternatif et me retrouve dans un choix compliqué laquelle des 4 pyramides contenant chacune des épreuves dois-je choisir?;;;;;;;;;;;;x
+DESC_ANI_216;What is the common cause of unnatural death for a dragon? The poison! To apprehend that fear, the dragon poison trial exist. By going in a lake of false poison, I must learn build resistance to it. But whose lake shoold I choose?;Comme le poison est la raison de décès non naturel la plus important chez les dragons, une épreuve dragonnique a été créer à ce sujet. Je dois donc, dans un espace alternatif faire trempette dans un lac de faux poison. Cependant une fois dedans j'ai le choix entre 4 lac, lequel choisir?;;;;;;;;;;;;x
+DESC_ANI_218;[From.GetDynName] finished all its trial, [From.GetSheHe] is now a true adult;[From.GetDynName] a fini les 5 épreuves draconniques. [From.GetSheHeCap] est maintenant un vrai adulte;;;;;;;;;;;;x
+OPT_ANI_218;finally!;Enfin!;;;;;;;;;;;;x
+DESC_ANI_219;As an egg, their is a chance that I never hatch. It seems that my life has come to an end...;En tant qu'œuf, il peut arriver de ne jamais éclore. Il semblerait que ce soit le cas pour moi;;;;;;;;;;;;x
+OPT_ANI_219;If only my hospital could have saved me...;Si seulement l'hôpital aurait pu me sauver...;;;;;;;;;;;;x
+DESCA_ANI_220;I just heard that one of my eggs could not hatch...;Je viens juste d'apprendre que l'un de mes œufs ne pourra pas éclore...;;;;;;;;;;;;x
+DESCB_ANI_220;I just heard that one of my eggs could not hatch. I don't know why, but I should build something to make them healthier;Je viens juste d'apprendre que l'un de mes œufs ne pourra pas éclore. Si seulement j'avais pus construire un lieu pour en prendre un plus grand soin;;;;;;;;;;;;x 
+OPTA_ANI_220;A sad news;Une mauvaise nouvelle;;;;;;;;;;;;x
+OPTB_ANI_220;I'll still keep it's egg;Je conserverai ces restes;;;;;;;;;;;;x
+DESC_ANI_221;A merchant come to my domain to ask me if I was interested to buy a dragon egg. That dragon egg was apparently found on my capital;Un marchand est venu me voir pour me vendre un œuf de dragon. Cet œuf aurait apparemment été trouver dans les terres reculés de ma capitale;;;;;;;;;;;;x
+OPTA_ANI_221;I'll buy it;Je l'achète!;;;;;;;;;;;;x
+OPTB_ANI_221;It's only garbage;Ce n'est qu'un déchet;;;;;;;;;;;;x
+DESC_ANI_222;I put my dragon egg in my fort before returning to my castle. But something goes wrong, maybe a thief... Anyway, that egg provoked an explosion...;Après avoir laissé mon œuf de dragon dans mon fort, je suis retourné dans mon château. Cependant, un bruit étrange est entendu depuis ce même fort, est-ce un voleur? Avant d'avoir eu ma réponse, le fort explose. Cette explosion prend de l'ampleur dans toute la province...;;;;;;;;;;;;x
+OPT_ANI_222;Why did we became dragon?!;Pourquoi cela nous a transformé en dragon?!;;;;;;;;;;;;x
+DESC_ANI_223;With the death of the previous dragon lord, I am tasked to rule over [Root.primary_title.GetFullName]. But as my sibling also want to take my place, I am forced to hold the famous succession tournament;suite à mon héritage, mes frères et sœur dragon veulent tout de même ma position.;;;;;;;;;;;;x
+OPT_ANI_223;Let the death match start!;Je vais leur apprendre leur place en combat à mort;;;;;;;;;;;;x
+DESC_ANI_224;[Root.target_dragon_2nd_fighter.GetFullName] come into the field. [Root.target_dragon_2nd_fighter.GetSheHeCap] has been chosen as my next opponent in the fight to the throne;[Root.target_dragon_2nd_fighter.GetFullName] vient tout juste d'entrer dans l'arène. [Root.target_dragon_2nd_fighter.GetSheHeCap] est donc le prochain prétendant à mon titre!;;;;;;;;;;;;x
+OPTA_ANI_224;Why did [Root.target_dragon_2nd_fighter.GetSheHe] gave up?!;Pourquoi a-[Root.target_dragon_2nd_fighter.GetSheHe] abandonné?;;;;;;;;;;;;x
+OPTB_ANI_224;Let the duel start!;Que le duel commence!;;;;;;;;;;;;x
+DESC_ANI_225;The succession came to an end. Everyone who wanted my position did either renounce to it or die for it.;Cette succession s'est enfin terminé. Tous les prétendant sont soit mort, soit on abandonner leur revendications;;;;;;;;;;;;x
+OPT_ANI_225;Finnally!;Enfin!;;;;;;;;;;;;x
+DESC_ANI_230;With the growth of §Y[dragon_new_county_owner.GetTitledName]§! influence in §Y[This.GetName]§!, I lost my power as the lord...;Avec l'influence grandissante de §Y[dragon_new_county_owner.GetTitledName]§!, les habitants de §Y[This.GetName]§! ne m'écoutent plus.;;;;;;;;;;;;x
+OPT_ANI_230;Why did he have to usurp §Y[This.GetName]§!?;Pourquoi faut-il que §Y[dragon_new_county_owner.GetTitledName]§! me vole mes titres?!;;;;;;;;;;;;x
+DESC_ANI_231;I heard that our influence toward §Y[From.GetName]§! got us a good present.;Je viens d'avoir l'information que grâce à notre influence en §Y[From.GetName], on vient d'avoir un jolie cadeau.;;;;;;;;;;;;x
+OPT_ANI_231;A new province to our beautiful country;Une nouvelle province pour notre grand pays;;;;;;;;;;;;x
+DESC_ANI_232;Lord, I write you to explain that §Y[dragon_new_county_owner.GetTitledName]§! stole from me [From.GetName]...;Je t'écris pour te signaler que l'horrible dragon §Y[dragon_new_county_owner.GetDynName] vien de nous voler le comté de §Y[From.GetName].;;;;;;;;;;;;x
+OPT_ANI_232;What can I do...;Que puis-je faire contre ça?;;;;;;;;;;;;x
+DESC_ANI_234;Because of the lack of fortification, some humains successfully make a revolt and claimed their independence;A cause du manque de fortifications, un groupe d'humain a réussi un coup d'état et a pu déclarer l'indépendance de [This.GetName].;;;;;;;;;;;;x
+OPT_ANI_234;Does that means...;ça signifie que...;;;;;;;;;;;;x
+DESC_ANI_235;As our government way is incompatible, I think it is best for both of us to cut our vassal-liege relationship;Avec nos différences d'administration, il vaut mieux couper nos relation tout de suite;;;;;;;;;;;;x
+OPTA_ANI_235;You'll stay at my orders!;Tu resteras sous mes ordres!;;;;;;;;;;;;x
+OPTB_ANI_235;Fine;OK;;;;;;;;;;;;x
+DESC_ANI_236;A small group of human did sabotage [This.GetName]. Seems that we lost all the influence we built...;Un petit groupe d'humain a saboté mon influence en [This.GetName].;;;;;;;;;;;;x
+OPT_ANI_236;That means that they'll get their independence soon...;ça signifie qu'ils vont bientôt avoir leur indépendance...;;;;;;;;;;;;x
+DESC_ANI_237;As I grow my country, some vassals became opportunist. But as I barely lack resources to administer my country, one specificly forced his way to evade my authority;Avec la croissance de mon pays, certains opportunistes y voient l'occasion d'échapper à mon authorité.;;;;;;;;;;;;x
+OPT_ANI_237;How can a vassal use that?;Il en échappe totalement?;;;;;;;;;;;;x
+DESC_ANI_238;[FromFrom.GetTitledFirstName] started to doubt your qualities as a dragon chief. As a dragon, he choose to use his right to fight me. Something must be done!;[FromFrom.GetTitledFirstName] commence à douter de mes capacités en tant que chef draconnique. Je ne peux plus le laisser continuer!;;;;;;;;;;;;x
+OPTA_ANI_238;I will show his position in a death duel;Je vais lui montrer sa position dans un duel à mort;;;;;;;;;;;;x
+OPTB_ANI_238;I'll set him free, to fight him later on the battlefield;Je le libère pour l'abattre sur le champs de bataille;;;;;;;;;;;;x
+OPTC_ANI_238;I shall let other vassals to determine who shall run over [Root.GetTitle];Je vais laisser les autre vassaux décider qui mérite de reigner sur [Root.GetTitle];;;;;;;;;;;;x
+DESC_ANI_239;Your greed know no bound. I shall punigh you in a death duel in one week;Ton arrogance ne connait aucune limite, je vais te montrer tes faiblesses lors d'un duel à mort!;;;;;;;;;;;;x
+OPT_ANI_239;He shall lose its life and its titles;Il va perdre sa vie et ses titres!;;;;;;;;;;;;x
+DESC_ANI_240;All the preparation are finished. The death duel against [dragon_vassal_unsatisfied.GetTitledFirstName] can now start;Toutes les préparations du duel à mort sont fini. Mon duel contre [dragon_vassal_unsatisfied.GetTitledFirstName] va bientôt commencer;;;;;;;;;;;;x
+OPT_ANI_240;[dragon_vassal_unsatisfied.GetSheHeCap] will soon be dead!;[dragon_vassal_unsatisfied.GetTitledFirstName] va bientôt connaître sa place!;;;;;;;;;;;;x
+DESC_ANI_241;The duel planned last week is starting. I fight as I could. [From.GetFullName] also. We both hold our honor, but that fight has to come to an end;Le duel qui a été prévu la semaine dernière vient tout juste de commencer. [From.GetFullName] et moi nous battons avec honeur. Nous sommes tous les deux valeureux, mais il faut bien un gagnant...;;;;;;;;;;;;x
+OPTA_ANI_241;Did I lost?!;Ai-je juste perdu le duel?!;;;;;;;;;;;;x
+OPTB_ANI_241;I am now the new [Root.GetTitle];Je suis maintenant le nouveau [Root.GetTitle]!;;;;;;;;;;;;x
+DESC_ANI_242;I, [From.GetTitledName], officialy declare you independent!;Moi, [From.GetTitledName], te déclare offficiellement indépendant;;;;;;;;;;;;x 
+OPT_ANI_242;It couldn't be better!;ça ne pourrait pas être mieux;;;;;;;;;;;;x
+DESC_ANI_243;We will choose our true [From.GetTitle] through the opinion of my others vassals;Nous allons choisir notre [From.GetTitle] grâce à l'opinion de tes co-vassaux.;;;;;;;;;;;;x
+OPT_ANI_243;[From.GetSheHeCap] use the democracy when [From.GetSheHe] like it;[From.GetSheHeCap] veut utiliser la démocratie quand ça l'arrange;;;;;;;;;;;;x 
+DESC_ANI_244;The last vote arrived. We will soon know who will be a [Root.GetTitle];Le dernier vote vient d'arriver, nous allons maintenant savoir qui mérite d'être [Root.GetTitle].;;;;;;;;;;;;x
+OPTA_ANI_244;Of course, it is me!;Bien sûre que c'est moi!;;;;;;;;;;;;x
+OPTB_ANI_244;Why did I not was chosen?!;Pourquoi n'ai-je pas été choisi?;;;;;;;;;;;;x
+DESC_ANI_245;The vote started by [From.GetTitledFirstName] are finished. The result are now out;Les votes qui ont été lancé à ma demande ont été cloturé. [From.GetTitledFirstName] vient d'annoncé le futur [dragon_main_title.GetRulerTitle].;;;;;;;;;;;;x
+OPTA_ANI_245;Why does no one recognize my talents?!;Pourquoi n'ai-je pas été choisi?!;;;;;;;;;;;;x
+OPTB_ANI_245;I am finally at my rightful place!;Ils ont enfin reconnu ma véritable place;;;;;;;;;;;;x
+
+TT_dragon_loose_province_fort;loose control over §Y[This.GetName]§!;perd le controle de §Y[This.GetName]§!;;;;;;;;;;;;x
+TT_dragon_duel_in_7_days;The death duel will start in a week;Le duel à mort démarera dans une semaine;;;;;;;;;;;;x
+TT_dragon_became_indep;[dragon_vassal_unsatisfied.GetTitledFirstName] became independent;[dragon_vassal_unsatisfied] devient indépendant;;;;;;;;;;;;x
+TT_dragon_looses_death_duel;loose duel and die;perd le duel et meurt;;;;;;;;;;;;x
+TT_dragon_wins_death_duel;loose the duel;perdre le duel;;;;;;;;;;;;x
+TT_dragon_vote_soon;the vote start;les votes commencent;;;;;;;;;;;;x
+TT_dragon_imprisoned;is imprisoned;est emprisonné;;;;;;;;;;;;x
+TT_dragon_won_contest;became the new [Root.GetTitle];devient [dragon_vassal_unsatisfied.GetLeLa] nouv[dragon_vassal_unsatisfied.GetEauElle] [Root.GetTitle];;;;;;;;;;;;x

@@ -1,0 +1,910 @@
+tribal = {
+
+    tb_drg_slave_worker_1 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                culture_group = dragon_group
+                has_building = tb_drg_slave_worker_1
+            }
+        }
+        trigger = {
+            culture_group = dragon_group
+        }
+        is_active_trigger = {
+            culture_group = dragon_group
+        }
+
+        prerequisites = { tb_ani_tribal_tower_1 }
+
+        gold_cost = 200
+        build_time = 100 # short
+        ai_creation_factor = 100
+        extra_tech_building_start = 10
+
+        tax_income = 6
+    }
+    tb_drg_slave_worker_2 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                culture_group = dragon_group
+                has_building = tb_drg_slave_worker_2
+            }
+        }
+        trigger = {
+            culture_group = dragon_group
+        }
+        is_active_trigger = {
+            culture_group = dragon_group
+        }
+
+        prerequisites = { tb_ani_tribal_tower_2 }
+        upgrades_from = tb_drg_slave_worker_1
+
+        gold_cost = 400
+        build_time = 100
+        ai_creation_factor = 100
+        extra_tech_building_start = 10
+
+        tax_income = 6
+    }
+    tb_drg_slave_worker_3 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                culture_group = dragon_group
+                has_building = tb_drg_slave_worker_3
+            }
+        }
+        trigger = {
+            culture_group = dragon_group
+        }
+        is_active_trigger = {
+            culture_group = dragon_group
+        }
+
+        prerequisites = { tb_ani_tribal_tower_3 }
+        upgrades_from = tb_drg_slave_worker_2
+
+        gold_cost = 800
+        build_time = 100
+        ai_creation_factor = 100
+        extra_tech_building_start = 10
+
+        tax_income = 6
+    }
+    tb_drg_slave_worker_4 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                culture_group = dragon_group
+                has_building = tb_drg_slave_worker_4
+            }
+            is_capital = yes
+        }
+        trigger = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        is_active_trigger = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+
+        prerequisites = { tb_ani_tribal_tower_4 }
+        upgrades_from = tb_drg_slave_worker_3
+
+        gold_cost = 1500
+        build_time = 100
+        ai_creation_factor = 100
+        extra_tech_building_start = 10
+
+        tax_income = 4
+    }
+
+    tb_drg_slave_fighter_1 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                culture_group = dragon_group
+                has_building = tb_drg_slave_fighter_1
+            }
+        }
+        trigger = {
+            culture_group = dragon_group
+        }
+        is_active_trigger = {
+            culture_group = dragon_group
+        }
+
+        prerequisites = { tb_ani_tribal_tower_1 }
+
+        gold_cost = 200
+        build_time = 100 # short
+        ai_creation_factor = 100
+        extra_tech_building_start = 10
+
+        light_cavalry = 25
+    }
+    tb_drg_slave_fighter_2 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                culture_group = dragon_group
+                has_building = tb_drg_slave_fighter_2
+            }
+        }
+        trigger = {
+            culture_group = dragon_group
+        }
+        is_active_trigger = {
+            culture_group = dragon_group
+        }
+
+        prerequisites = { tb_ani_tribal_tower_2 }
+        upgrades_from = tb_drg_slave_fighter_1
+
+        gold_cost = 400
+        build_time = 100
+        ai_creation_factor = 100
+        extra_tech_building_start = 10
+
+        light_cavalry = 50
+    }
+    tb_drg_slave_fighter_3 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                culture_group = dragon_group
+                has_building = tb_drg_slave_fighter_3
+            }
+        }
+        trigger = {
+            culture_group = dragon_group
+        }
+        is_active_trigger = {
+            culture_group = dragon_group
+        }
+
+        prerequisites = { tb_ani_tribal_tower_3 }
+        upgrades_from = tb_drg_slave_fighter_2
+
+        gold_cost = 800
+        build_time = 100
+        ai_creation_factor = 100
+        extra_tech_building_start = 10
+
+        light_cavalry = 75
+    }
+    tb_drg_slave_fighter_4 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                culture_group = dragon_group
+                has_building = tb_drg_slave_fighter_4
+            }
+            is_capital = yes
+        }
+        trigger = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        is_active_trigger = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+
+        prerequisites = { tb_ani_tribal_tower_4 }
+        upgrades_from = tb_drg_slave_fighter_3
+
+        gold_cost = 1500
+        build_time = 100
+        ai_creation_factor = 100
+        extra_tech_building_start = 10
+
+        light_cavalry = 100
+    }
+
+    tb_drg_fighter_1 = {
+        add_number_to_name = no
+        
+        potential = {
+            culture_group = dragon_group
+        }
+        trigger = {
+            culture_group = dragon_group
+            location = {
+                show_scope_change = no
+                fort_has_building = fo_drg_retinue_1
+            }
+        }
+        is_active_trigger = {
+            culture_group = dragon_group
+            location = {
+                show_scope_change = no
+                fort_has_building = fo_drg_retinue_1
+            }
+        }
+        prerequisites = { tb_ani_tribal_tower_1 }
+
+        gold_cost = 250
+        build_time = 200
+        ai_creation_factor = 75
+        extra_tech_building_start = 10.0
+
+        knights = 5
+    }
+    tb_drg_fighter_2 = {
+        add_number_to_name = no
+        
+        potential = {
+            culture_group = dragon_group
+        }
+        trigger = {
+            culture_group = dragon_group
+            location = {
+                show_scope_change = no
+                fort_has_building = fo_drg_retinue_2
+            }
+        }
+        is_active_trigger = {
+            culture_group = dragon_group
+            location = {
+                show_scope_change = no
+                fort_has_building = fo_drg_retinue_2
+            }
+        }
+        prerequisites = { tb_ani_tribal_tower_2 }
+        upgrades_from = tb_drg_fighter_1
+
+        gold_cost = 500
+        build_time = 400
+        ai_creation_factor = 75
+        extra_tech_building_start = 10.0
+
+        knights = 10
+    }
+    tb_drg_fighter_3 = {
+        add_number_to_name = no
+        
+        potential = {
+            culture_group = dragon_group
+        }
+        trigger = {
+            culture_group = dragon_group
+            location = {
+                show_scope_change = no
+                fort_has_building = fo_drg_retinue_3
+            }
+        }
+        is_active_trigger = {
+            culture_group = dragon_group
+            location = {
+                show_scope_change = no
+                fort_has_building = fo_drg_retinue_3
+            }
+        }
+        prerequisites = { tb_ani_tribal_tower_3 }
+        upgrades_from = tb_drg_fighter_2
+
+        gold_cost = 750
+        build_time = 600
+        ai_creation_factor = 75
+        extra_tech_building_start = 10.0
+
+        knights = 15
+    }
+    tb_drg_fighter_4 = {
+        add_number_to_name = no
+        
+        potential = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        trigger = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        is_active_trigger = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        prerequisites = { tb_ani_tribal_tower_4 }
+        upgrades_from = tb_drg_fighter_3
+
+        gold_cost = 1000
+        build_time = 800
+        ai_creation_factor = 75
+        extra_tech_building_start = 10.0
+
+        knights = 20
+    }
+}
+
+hospital = {
+    ho_drg_incubator = {
+        desc = ho_drg_incubator_desc
+
+        potential = {
+            has_dlc = "Reapers"
+            culture_group = dragon_group
+
+            is_capital = yes
+        }
+        trigger = {
+            FROM = { culture_group = dragon_group }
+        }
+
+        gold_cost = 250
+        build_time = 666
+        ai_creation_factor = 300
+        extra_tech_building_start = 0
+
+        # only increase hatching chance for dragon egg
+    }
+}
+
+fort = {
+    fo_drg_guardian_01 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                culture_group = dragon_group
+                fort_has_building = fo_drg_guardian_01
+            }
+        }
+        trigger = {
+            culture_group = dragon_group
+        }
+        is_active_trigger = {
+            always = yes
+        }
+
+        gold_cost = 100
+        build_time = 350
+        ai_creation_factor = 90
+
+        garrison_size = 0.25
+        fort_level = 0.5
+    }
+    fo_drg_guardian_02 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                culture_group = dragon_group
+                fort_has_building = fo_drg_guardian_02
+            }
+        }
+        trigger = {
+            culture_group = dragon_group
+        }
+        is_active_trigger = {
+            always == yes
+        }
+        upgrades_from = fo_drg_guardian_01
+
+        gold_cost = 200
+        build_time = 700
+        ai_creation_factor = 90
+
+        garrison_size = 0.25
+        fort_level = 0.5
+    }
+    fo_drg_guardian_03 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                culture_group = dragon_group
+                fort_has_building = fo_drg_guardian_03
+            }
+        }
+        trigger = {
+            culture_group = dragon_group
+        }
+        is_active_trigger = {
+            always = yes
+        }
+        upgrades_from = fo_drg_guardian_02
+
+        gold_cost = 300
+        build_time = 1050
+        ai_creation_factor = 90
+
+        garrison_size = 0.25
+        fort_level = 0.5
+    }
+    fo_drg_guardian_04 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                culture_group = dragon_group
+                fort_has_building = fo_drg_guardian_04
+            }
+        }
+        trigger = {
+            culture_group = dragon_group
+        }
+        is_active_trigger = {
+            always = yes
+        }
+        upgrades_from = fo_drg_guardian_03
+
+        gold_cost = 400
+        build_time = 1400
+        ai_creation_factor = 90
+
+        garrison_size = 0.25
+        fort_level = 0.5
+    }
+    fo_drg_guardian_05 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                culture_group = dragon_group
+                fort_has_building = fo_drg_guardian_05
+            }
+        }
+        trigger = {
+            culture_group = dragon_group
+        }
+        is_active_trigger = {
+            always = yes
+        }
+        upgrades_from = fo_drg_guardian_04
+
+        gold_cost = 500
+        build_time = 1750
+        ai_creation_factor = 90
+
+        garrison_size = 0.5
+        fort_level = 0.5
+    }
+    fo_drg_guardian_06 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                culture_group = dragon_group
+                fort_has_building = fo_drg_guardian_06
+            }
+        }
+        trigger = {
+            culture_group = dragon_group
+        }
+        is_active_trigger = {
+            always = yes
+        }
+        upgrades_from = fo_drg_guardian_05
+
+        gold_cost = 600
+        build_time = 2100
+        ai_creation_factor = 90
+
+        garrison_size = 0.5
+        fort_level = 0.5
+    }
+    fo_drg_guardian_07 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                culture_group = dragon_group
+                fort_has_building = fo_drg_guardian_07
+            }
+        }
+        trigger = {
+            culture_group = dragon_group
+        }
+        is_active_trigger = {
+            always = yes
+        }
+        upgrades_from = fo_drg_guardian_06
+
+        gold_cost = 700
+        build_time = 2450
+        ai_creation_factor = 90
+
+        garrison_size = 0.5
+        fort_level = 0.5
+    }
+    fo_drg_guardian_08 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                culture_group = dragon_group
+                fort_has_building = fo_drg_guardian_08
+            }
+        }
+        trigger = {
+            culture_group = dragon_group
+        }
+        is_active_trigger = {
+            always = yes
+        }
+        upgrades_from = fo_drg_guardian_07
+
+        gold_cost = 800
+        build_time = 2800
+        ai_creation_factor = 90
+
+        garrison_size = 0.5
+        fort_level = 0.5
+    }
+    fo_drg_guardian_09 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                culture_group = dragon_group
+                fort_has_building = fo_drg_guardian_09
+            }
+        }
+        trigger = {
+            culture_group = dragon_group
+        }
+        is_active_trigger = {
+            always = yes
+        }
+        upgrades_from = fo_drg_guardian_08
+
+        gold_cost = 900
+        build_time = 3150
+        ai_creation_factor = 90
+
+        garrison_size = 0.5
+        fort_level = 0.5
+    }
+    fo_drg_guardian_10 = {
+        add_number_to_name = no
+
+        potential = {
+            OR = {
+                culture_group = dragon_group
+                fort_has_building = fo_drg_guardian_10
+            }
+        }
+        trigger = {
+            culture_group = dragon_group
+        }
+        is_active_trigger = {
+            always = yes
+        }
+        upgrades_from = fo_drg_guardian_09
+
+        gold_cost = 1000
+        build_time = 3500
+        ai_creation_factor = 90
+
+        garrison_size = 0.5
+        fort_level = 0.5
+    }
+
+    fo_drg_retinue_1 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = dragon_group
+        }
+        trigger = {
+            culture_group = dragon_group
+        }
+        is_active_trigger = {
+            culture_group = dragon_group
+        }
+        prerequisites = { fo_drg_guardian_01 }
+
+
+        gold_cost= 500
+        build_time = 900
+        ai_creation_factor = 40
+
+        retinuesize = 10
+        knights = 50 # only work for flat garrison bonuses
+    }
+    fo_drg_retinue_2 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = dragon_group
+        }
+        trigger = {
+            culture_group = dragon_group
+        }
+        is_active_trigger = {
+            culture_group = dragon_group
+        }
+        upgrades_from = fo_drg_retinue_1
+        prerequisites = { fo_drg_guardian_05 }
+
+        gold_cost= 1000
+        build_time = 1400
+        ai_creation_factor = 40
+
+        retinuesize = 15
+        knights = 50 # only work for flat garrison bonuses
+    }
+    fo_drg_retinue_3 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = dragon_group
+        }
+        trigger = {
+            culture_group = dragon_group
+        }
+        is_active_trigger = {
+            culture_group = dragon_group
+        }
+        upgrades_from = fo_drg_retinue_2
+        prerequisites = { fo_drg_guardian_10 }
+
+        gold_cost= 2000
+        build_time = 2000
+        ai_creation_factor = 40
+
+        retinuesize = 15
+        knights = 50 # only work for flat garrison bonuses
+    }
+
+    fo_drg_heart_1 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        trigger = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        is_active_trigger = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        # upgrades_from = 
+
+        gold_cost= 1000
+        build_time = 1000
+        ai_creation_factor = 100
+
+        fort_level = 0.75
+        tax_income = 10
+    }
+    fo_drg_heart_2 = { 
+        add_number_to_name = no
+
+        potential = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        trigger = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        is_active_trigger = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        upgrades_from = fo_drg_heart_1
+
+        gold_cost= 2000
+        build_time = 2500
+        ai_creation_factor = 100
+
+        retinuesize_perc = 0.1
+        fort_level = 1.25
+        tax_income = 10
+    }
+    fo_drg_heart_3 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        trigger = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        is_active_trigger = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        upgrades_from = fo_drg_heart_2
+
+        gold_cost= 3000
+        build_time = 5000
+        ai_creation_factor = 100
+
+        retinuesize_perc = 0.2
+        fort_level = 2
+        tax_income = 10
+    }
+
+    fo_drg_trainee = {
+        add_number_to_name = no
+        potential = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        trigger = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        is_active_trigger = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        prerequisites = { fo_drg_heart_1 }
+
+        gold_cost = 500
+        build_time = 900
+        ai_creation_factor = 50
+
+        knights = 30
+        knights_offensive = 0.25
+        knights_defensive = 0.25
+        knights_morale = 0.25
+    }
+
+    fo_drg_academy_1 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        trigger = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        is_active_trigger = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        prerequisites = { fo_drg_heart_1 }
+
+        gold_cost = 1000
+        build_time = 5000
+        ai_creation_factor = 100
+
+        dragon_academy_level = 1
+    }
+    fo_drg_academy_2 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        trigger = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        is_active_trigger = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        upgrades_from = fo_drg_academy_1
+        prerequisites = { fo_drg_heart_2 }
+
+        gold_cost = 3000
+        build_time = 15000
+        ai_creation_factor = 80
+
+        dragon_academy_level = 2
+    }
+    fo_drg_academy_3 = {
+        add_number_to_name = no
+
+        potential = {
+            culture_group = dragon_group
+            is_capital = yes
+            OR = {
+                has_dragon_holy_site_trigger = yes
+                fort_has_building = fo_drg_academy_3
+            }
+        }
+        trigger = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        is_active_trigger = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        upgrades_from = fo_drg_academy_2
+        prerequisites = { fo_drg_heart_3 }
+
+        gold_cost = 10000
+        build_time = 30000
+        ai_creation_factor = 30
+
+        dragon_academy_level = 3
+    }
+    
+    fo_drg_casus_belli_1 = {
+        add_number_to_name = no
+        potential = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        trigger = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        is_active_trigger = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        # upgrades_from =
+        prerequisites = { fo_drg_heart_1 }
+
+        gold_cost = 750
+        build_time = 300
+        ai_creation_factor = 120
+
+        dragon_expension = 1
+    }
+    fo_drg_casus_belli_2 = {
+        add_number_to_name = no
+        potential = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        trigger = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        is_active_trigger = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        upgrades_from = fo_drg_casus_belli_1
+        prerequisites = { fo_drg_heart_2 }
+
+        gold_cost = 1250
+        build_time = 300
+        ai_creation_factor = 120
+
+        dragon_expension = 1
+    }
+    fo_drg_casus_belli_3 = {
+        add_number_to_name = no
+        potential = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        trigger = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        is_active_trigger = {
+            culture_group = dragon_group
+            is_capital = yes
+        }
+        upgrades_from = fo_drg_casus_belli_2
+        prerequisites = { fo_drg_heart_3 }
+
+        gold_cost = 2000
+        build_time = 300
+        ai_creation_factor = 120
+
+        dragon_expension = 1
+    }
+}

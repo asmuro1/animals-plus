@@ -6,6 +6,9 @@ tribal = {
 	#fortification an market ton not changed: for feudal reformation
 	tb_hillfort_1 = {
 		desc = tb_hillfort_1_desc
+		potential = {
+			NOT = { culture_group = dragon_group }	
+		}
 		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
 		gold_cost = 25
 		build_time = 365
@@ -22,6 +25,9 @@ tribal = {
 
 	tb_hillfort_2 = {
 		desc = tb_hillfort_2_desc
+		potential = {
+			NOT = { culture_group = dragon_group }	
+		}
 		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
 		upgrades_from = tb_hillfort_1
 		gold_cost = 50
@@ -41,6 +47,9 @@ tribal = {
 
 	tb_hillfort_3 = {
 		desc = tb_hillfort_3_desc
+		potential = {
+			NOT = { culture_group = dragon_group }	
+		}
 		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
 		upgrades_from = tb_hillfort_2
 		gold_cost = 75
@@ -57,6 +66,9 @@ tribal = {
 
 	tb_hillfort_4 = {
 		desc = tb_hillfort_4_desc
+		potential = {
+			NOT = { culture_group = dragon_group }	
+		}
 		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
 		upgrades_from = tb_hillfort_3
 		gold_cost = 100
@@ -76,6 +88,9 @@ tribal = {
 
 	tb_market_town_1 = {
 		desc = tb_market_town_1_desc
+		potential = {
+			NOT = { culture_group = dragon_group }	
+		}
 		trigger = { TECH_CITY_CONSTRUCTION = 0 }
 		gold_cost = 25
 		build_time = 365
@@ -91,6 +106,9 @@ tribal = {
 
 	tb_market_town_2 = {
 		desc = tb_market_town_2_desc
+		potential = {
+			NOT = { culture_group = dragon_group }	
+		}
 		trigger = { TECH_CITY_CONSTRUCTION = 0 }
 		upgrades_from = tb_market_town_1
 		gold_cost = 50
@@ -109,6 +127,9 @@ tribal = {
 
 	tb_market_town_3 = {
 		desc = tb_market_town_3_desc
+		potential = {
+			NOT = { culture_group = dragon_group }	
+		}
 		trigger = { TECH_CITY_CONSTRUCTION = 1 }
 		upgrades_from = tb_market_town_2
 		gold_cost = 75
@@ -125,6 +146,9 @@ tribal = {
 
 	tb_market_town_4 = {
 		desc = tb_market_town_4_desc
+		potential = {
+			NOT = { culture_group = dragon_group }	
+		}
 		trigger = { TECH_CITY_CONSTRUCTION = 1 }
 		upgrades_from = tb_market_town_3
 		gold_cost = 100

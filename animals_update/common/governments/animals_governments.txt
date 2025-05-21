@@ -351,3 +351,43 @@ feudal_governments = {
         capital_move_delay = 120
     }
 }
+
+tribal_governments = {
+    dragon_tribal_gov = {
+        color = { 107 23 0 }
+
+        potential = {
+            religion = Dragon_religion
+            culture_group = dragon_group
+        }
+
+        accepts_liege_governments_religion = { dragon_tribal_government }
+        vassal_call_to_arms = { dragon_tribal_government }
+
+        allows_matrilineal_marriage = yes
+        allow_title_revokation = no
+        allow_looting = yes
+        can_usurp_kingdoms_and_empires = no
+        uses_jizya_tax = yes
+        capital_move_delay = 1000000
+        can_change_to_nomad_on_start = no
+        can_demand_religious_conversion = no
+        men_can_take_consorts = yes
+        women_can_take_consorts = yes
+        vassal_call_to_arms = { dragon_tribal_gov }
+
+        can_build_forts = yes
+        can_build_castle = no
+        can_build_city = no
+        can_build_temple = no
+        can_build_tribal = yes
+        preferred_holdings = { TRIBAL }
+        allowed_holdings = { HOSPITAL }
+        allowed_holdings_culture = { TRIBAL FORT }
+
+        can_grant_kingdoms_and_empires_to_other_government = no
+        can_be_granted_kingdoms_and_empires_by_other_government = no
+
+        max_consorts = 0
+    }
+}

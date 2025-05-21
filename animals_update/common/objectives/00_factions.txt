@@ -97,6 +97,7 @@ faction_succ_seniority = {
 			liege = { is_panda_government_trigger = yes }
 			is_panda_government_trigger = yes
 		}
+		NOT = { government = dragon_tribal_gov }
 	}
 
 	# Target scope
@@ -825,7 +826,7 @@ faction_succ_primogeniture = {
 			liege = { is_panda_government_trigger = yes }
 			is_panda_government_trigger = yes
 		}
-
+		NOT = { government = dragon_tribal_gov }
 	}
 
 	# Target scope
@@ -1536,6 +1537,7 @@ faction_succ_gavelkind = {
 			liege = { is_panda_government_trigger = yes }
 			is_panda_government_trigger = yes
 		}
+		NOT = { government = dragon_tribal_gov }
 	}
 
 	# Target scope
@@ -2319,6 +2321,7 @@ faction_succ_feudal_elective = {
 			liege = { is_panda_government_trigger = yes }
 			is_panda_government_trigger = yes
 		}
+		NOT = { government = dragon_tribal_gov }
 	}
 
 	# Target scope
@@ -3076,6 +3079,7 @@ faction_lower_crown_authority = {
 			liege = { is_panda_government_trigger = yes }
 			is_panda_government_trigger = yes
 		}
+		NOT = { government = dragon_tribal_gov }
 	}
 
 	# Target scope
@@ -3677,6 +3681,7 @@ faction_lower_tribal_organization = {
 		primary_title = { higher_tier_than = BARON }
 
 		NOT = { has_character_modifier = faction_lower_TO_ultimatum_timer }
+		NOT = { government = dragon_tribal_gov }
 	}
 
 	# Target scope
@@ -4337,6 +4342,7 @@ faction_independence = {
 			liege = { is_panda_government_trigger = yes }
 			is_panda_government_trigger = yes
 		}
+		NOT = { government = dragon_tribal_gov }
 	}
 
 	# Target scope
@@ -5301,6 +5307,7 @@ faction_claimant = {
 		}
 
 		NOT = { has_character_modifier = faction_claimant_timer }
+		NOT = { government = dragon_tribal_gov }
 	}
 
 	# Target scope
@@ -6654,6 +6661,7 @@ faction_antiking = {
 		}
 
 		NOT = { has_character_modifier = faction_antiking_ultimatum_timer }
+		NOT = { government = dragon_tribal_gov }
 	}
 
 	# Target scope
@@ -8083,6 +8091,7 @@ faction_increase_council_power = {
 		primary_title = { higher_tier_than = BARON }
 
 		NOT = { has_character_modifier = faction_council_power_ultimatum_timer }
+		NOT = { government = dragon_tribal_gov }
 	}
 
 	# Target scope

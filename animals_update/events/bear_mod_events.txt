@@ -266,9 +266,44 @@ character_event = {
         }
         else_if = {
             limit = {
-                culture = dragon_culture
+                culture_group = dragon_group
             }
-            set_graphical_culture = dragon_culture
+            if = {
+                limit = {
+                    culture = dragon_culture
+                }
+                set_graphical_culture = dragon_culture
+            }
+            else_if = {
+                limit = {
+                    culture = white_dragon
+                }
+                set_graphical_culture = white_dragon
+            }
+            else_if = {
+                limit = {
+                    culture = black_dragon
+                }
+                set_graphical_culture = black_dragon
+            }
+            else_if = {
+                limit = {
+                    culture = red_dragon
+                }
+                set_graphical_culture = red_dragon
+            }
+            else_if = {
+                limit = {
+                    culture = blue_dragon
+                }
+                set_graphical_culture = blue_dragon
+            }
+            else_if = {
+                limit = {
+                    culture = yellow_dragon
+                }
+                set_graphical_culture = yellow_dragon
+            }
         }
         else_if = {
             limit = {
@@ -1035,7 +1070,7 @@ character_event = {
     }
 }
 
-#haze triggeer: setting disease
+#haze trigger: setting disease
 character_event = {
     id = ani_plus.020
 
@@ -1577,9 +1612,6 @@ province_event = {
                 remove_building = ca_ani_prest_4
                 remove_building = ca_ani_piety_4
                 remove_building = ca_ani_tech_4
-
-                remove_building = ca_dragon_archery_2
-                remove_building = ca_dragon_speciality
             }
         }
         else_if = {
@@ -1594,9 +1626,6 @@ province_event = {
                     is_capital = yes
                 }
                 remove_building = ca_ani_castle_tower_15
-
-                remove_building = ca_dragon_retinue_2
-                remove_building = ca_dragon_archery_1
             }
         }
         else_if = {
@@ -1628,8 +1657,6 @@ province_event = {
                     is_capital = yes
                 }
                 remove_building = ca_ani_castle_tower_13
-
-                remove_building = ca_dragon_retinue_1
             }
         }
         else_if = {
@@ -1661,8 +1688,6 @@ province_event = {
                     is_capital = yes
                 }
                 remove_building = ca_ani_castle_tower_11
-
-                remove_building = ca_dragon_stable_2
             }
         }
         else_if = {
@@ -1697,9 +1722,6 @@ province_event = {
                 remove_building = ca_ani_prest_2
                 remove_building = ca_ani_piety_2
                 remove_building = ca_ani_tech_2
-
-                remove_building = ca_dragon_treasury_3
-                remove_building = ca_dragon_stable_1
             }
         }
         else_if = {
@@ -1731,8 +1753,6 @@ province_event = {
                     is_capital = yes
                 }
                 remove_building = ca_ani_castle_tower_07
-
-                remove_building = ca_dragon_treasury_2
             }
         }
         else_if = {
@@ -1767,9 +1787,6 @@ province_event = {
                 remove_building = ca_ani_trade_build_2
                 remove_building = ca_ani_build_cost_2
                 remove_building = ca_ani_desmene_2
-
-                remove_building = ca_dragon_fortification_3
-                remove_building = ca_dragon_treasury_1
             }
         }
         else_if = {
@@ -1804,8 +1821,6 @@ province_event = {
                 remove_building = ca_ani_fort_2
                 remove_building = ca_ani_siege_2
                 remove_building = ca_ani_garrison_2
-
-                remove_building = ca_dragon_fortification_2
             }
         }
         else_if = {
@@ -1840,8 +1855,6 @@ province_event = {
                 remove_building = ca_ani_fort_1
                 remove_building = ca_ani_siege_1
                 remove_building = ca_ani_garrison_1
-
-                remove_building = ca_dragon_fortification_1
             }
         }
         else = {

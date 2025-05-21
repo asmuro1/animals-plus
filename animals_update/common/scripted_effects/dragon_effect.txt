@@ -1,0 +1,367 @@
+set_black_dragon_holy_site_effect = {
+    random_province = {
+        limit = {
+            is_black_dragon_province_trigger = yes
+        }
+        county = {
+            set_holy_site = Dragon_religion 
+        }
+        set_province_flag = dragon_black_holy_site
+    }
+}
+
+set_white_dragon_holy_site_effect = {
+    random_province = {
+        limit = {
+            is_white_dragon_province_trigger = yes
+        }
+        county = {
+            set_holy_site = Dragon_religion 
+        }
+        set_province_flag = dragon_white_holy_site
+    }
+}
+
+set_red_dragon_holy_site_effect = {
+    random_province = {
+        limit = {
+            is_red_dragon_province_trigger = yes
+        }
+        county = {
+            set_holy_site = Dragon_religion 
+        }
+        set_province_flag = dragon_red_holy_site
+    }
+}
+
+set_blue_dragon_holy_site_effect = {
+    random_province = {
+        limit = {
+            is_blue_dragon_province_trigger = yes
+        }
+        county = {
+            set_holy_site = Dragon_religion 
+        }
+        set_province_flag = dragon_blue_holy_site
+    }
+}
+
+set_yellow_dragon_holy_site_effect = {
+    random_province = {
+        limit = {
+            is_yellow_dragon_province_trigger = yes
+        }
+        county = {
+            set_holy_site = Dragon_religion 
+        }
+        set_province_flag = dragon_yellow_holy_site
+    }
+}
+
+# character_scope
+dragon_get_dragon_egg_culture_if_child_effect = {
+    if = {
+        limit = {
+            is_adult = no
+        }
+
+        dragon_set_child_dragon_flag_effect = yes
+
+        culture = dragon_culture
+    }
+}
+
+# character scope
+dragon_set_child_dragon_flag_effect = {
+    if = {
+        limit = {
+            culture = white_dragon
+        }
+        set_character_flag = white_dragon_potential
+    }
+    else_if = {
+        limit = {
+            culture = black_dragon
+        }
+        set_character_flag = black_dragon_potential
+    }
+    else_if = {
+        limit = {
+            culture = blue_dragon
+        }
+        set_character_flag = blue_dragon_potential
+    }
+    else_if = {
+        limit = {
+            culture = red_dragon
+        }
+        set_character_flag = red_dragon_potential
+    }
+    else = {
+        set_character_flag = yellow_dragon_potential
+    }
+}
+
+# character scope
+dragon_get_true_adult_effect = {
+    if = {
+        limit = {
+            is_adult = yes
+            culture_group = dragon_group
+        }
+        set_character_flag = is_true_dragon_adult
+    }
+}
+set_black_dragon_education_effect = {
+    trigger_switch = {
+        on_trigger = has_character_flag
+        dragon_poison_level_1 = { add_trait = amateurish_plotter }
+        dragon_poison_level_2 = { add_trait = flamboyant_schemer }
+        dragon_poison_level_3 = { add_trait = intricate_webweaver }
+        dragon_poison_level_4 = { add_trait = elusive_shadow }
+    }
+}
+set_white_dragon_education_effect = {
+    trigger_switch = {
+        on_trigger = has_character_flag
+        dragon_snow_level_1 = { add_trait = detached_priest }
+        dragon_snow_level_2 = { add_trait = martial_cleric }
+        dragon_snow_level_3 = { add_trait = scholarly_theologian }
+        dragon_snow_level_4 = { add_trait = mastermind_theologian }
+    }
+}
+set_blue_dragon_education_effect = {
+    trigger_switch = {
+        on_trigger = has_character_flag
+        dragon_water_level_1 = { add_trait = naive_appeaser }
+        dragon_water_level_2 = { add_trait = underhanded_rogue }
+        dragon_water_level_3 = { add_trait = charismatic_negotiator }
+        dragon_water_level_4 = { add_trait = grey_eminence }
+    }
+}
+set_yellow_dragon_education_effect = {
+    trigger_switch = {
+        on_trigger = has_character_flag
+        dragon_sand_level_1 = { add_trait = indulgent_wastrel }
+        dragon_sand_level_2 = { add_trait = thrifty_clerk }
+        dragon_sand_level_3 = { add_trait = fortune_builder }
+        dragon_sand_level_4 = { add_trait = midas_touched }
+    }
+}
+set_red_dragon_education_effect = {
+    trigger_switch = {
+        on_trigger = has_character_flag
+        dragon_fire_level_1 = { add_trait = misguided_warrior }
+        dragon_fire_level_2 = { add_trait = tough_soldier }
+        dragon_fire_level_3 = { add_trait = skilled_tactician }
+        dragon_fire_level_4 = { add_trait = brilliant_strategist }
+    }
+}
+
+add_dragon_university_score_effect = {
+    if = {
+        limit = {
+            is_landed = yes
+        }
+        capital_scope = {
+            save_event_target_as = potential_university_target
+        }
+    }
+    else = {
+        liege = {
+            capital_scope = {
+                save_event_target_as = potential_university_target
+            }
+        }
+    }
+
+    if = {
+        limit = {
+            event_target:potential_university_target = {
+                fort_has_building = fo_drg_academy_1
+            }
+        }
+
+        change_variable = {
+            which = dragon_education_score
+            value = 1
+        }
+    }
+    if = {
+        limit = {
+            event_target:potential_university_target = {
+                fort_has_building = fo_drg_academy_2
+            }
+        }
+
+        change_variable = {
+            which = dragon_education_score
+            value = 2
+        }
+    }
+    if = {
+        limit = {
+            event_target:potential_university_target = {
+                fort_has_building = fo_drg_academy_3
+            }
+        }
+
+        change_variable = {
+            which = dragon_education_score
+            value = 3
+        }
+    }
+}
+add_intelligence_trait_effect = {
+    if = {
+        limit = {
+            check_variable = {
+                which = dragon_education_score
+                value < 10
+            }
+        }
+        add_trait = imbecile
+    }
+    else_if = {
+        limit = {
+            check_variable = {
+                which = dragon_education_score
+                value < 15
+            }
+        }
+        add_trait = slow
+    }
+    else_if = {
+        limit = {
+            check_variable = {
+                which = dragon_education_score
+                value < 20
+            }
+        }
+        add_trait = quick
+    }
+    else = {
+        add_trait = genius
+    }
+}
+
+set_father_dragon_flag_effect = {
+    father = {
+        trigger_switch = {
+            on_trigger = culture
+
+            white_dragon = { PREV = { set_character_flag = white_dragon_potential }}
+            black_dragon = { PREV = { set_character_flag = black_dragon_potential }}
+            blue_dragon = { PREV = { set_character_flag = blue_dragon_potential }}
+            yellow_dragon = { PREV = { set_character_flag = yellow_dragon_potential }}
+            red_dragon = { PREV = { set_character_flag = red_dragon_potential }}
+        }
+    }
+}
+
+set_mother_dragon_flag_effect = {
+    mother = {
+        trigger_switch = {
+            on_trigger = culture
+
+            white_dragon = { PREV = { set_character_flag = white_dragon_potential }}
+            black_dragon = { PREV = { set_character_flag = black_dragon_potential }}
+            blue_dragon = { PREV = { set_character_flag = blue_dragon_potential }}
+            yellow_dragon = { PREV = { set_character_flag = yellow_dragon_potential }}
+            red_dragon = { PREV = { set_character_flag = red_dragon_potential }}
+        }
+    }
+}
+
+# character scope
+convert_to_dragon_culture_effect = {
+    capital_scope = {
+        hidden_tooltip = {
+            if = {
+                limit = {
+                    is_black_dragon_province_trigger = yes
+                }
+                black_dragon = {
+                    save_event_target_as = target_dragon_culture
+                }
+            }
+            else_if = {
+                limit = {
+                    is_white_dragon_province_trigger = yes
+                }
+                white_dragon = {
+                    save_event_target_as = target_dragon_culture
+                }
+            }
+            else_if = {
+                limit = {
+                    is_red_dragon_province_trigger = yes
+                }
+                red_dragon = {
+                    save_event_target_as = target_dragon_culture
+                }
+            }
+            else_if = {
+                limit = {
+                    is_blue_dragon_province_trigger = yes
+                }
+                blue_dragon = {
+                    save_event_target_as = target_dragon_culture
+                }
+            }
+            else = {
+                yellow_dragon = {
+                    save_event_target_as = target_dragon_culture
+                }
+            }
+        }
+        
+        PREV = {
+            culture = event_target:target_dragon_culture
+        }
+        culture = event_target:target_dragon_culture
+        any_province_character = {
+            culture = event_target:target_dragon_culture
+        }
+
+        hidden_effect = {
+            dragon_add_fort_to_province_effect = yes
+        }
+    }
+}
+
+# province scope
+dragon_add_fort_to_province_effect = {
+    holder_scope = {
+        create_fort = PREV
+    }
+    add_to_extra_holding = {
+        type = fort
+        building = fo_drg_guardian_01
+    }
+    add_to_extra_holding = {
+        type = fort
+        building = fo_drg_guardian_02
+    }
+    add_to_extra_holding = {
+        type = fort
+        building = fo_drg_guardian_03
+    }
+    add_to_extra_holding = {
+        type = fort
+        building = fo_drg_guardian_04
+    }
+    add_to_extra_holding = {
+        type = fort
+        building = fo_drg_guardian_05
+    }
+    if = {
+        limit = {
+            is_capital = yes
+        }
+        add_to_extra_holding = {
+            type = fort
+            building = fo_drg_heart_1
+        }
+    }
+}

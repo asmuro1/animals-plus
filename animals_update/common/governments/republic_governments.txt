@@ -69,6 +69,7 @@ republic_governments = {
 					}
 				}
 			}
+			NOT = { is_government_potential = dragon_tribal_gov }
 		}
 
 		color = { 250 0 0 }

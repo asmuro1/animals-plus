@@ -1,0 +1,14 @@
+dragon_egg_artifact = {
+	quality = 1
+
+	active = {
+		culture_group = dragon_group
+	}
+	allowed_gift = {
+		NOT = { culture_group = dragon_group }
+	}
+	picture = GFX_dragon_egg_artifact
+
+	monthly_character_prestige = -0.5
+	Dragon_religion_opinion = -10
+}

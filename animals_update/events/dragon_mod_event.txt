@@ -1,0 +1,4029 @@
+#######dragon update
+### event 198 - 247
+
+namespace = ani_plus
+
+#### event 198 and 199 are created to prevent dragon character from changing culture
+#### at the exception where an egg can become an adult
+## event 198: on_action trigger, switch back to old culture if old is dragon
+## event 199: exits only to avoid an infinite loop if old and new culture are both adult dragon
+
+# event 198 - preventing dragon to change culture (race)
+#               except for switch between dragon egg and adult dragon
+character_event = {
+    id = ani_plus.198
+
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        NOT = { has_character_flag = ignore_next_dragon_conv }
+    }
+
+    immediate = {
+        # had to do tests with a new character becaus engine did not let me do
+        # any test on culture scope
+        create_character = {
+            culture = FROM
+            female = random
+        }
+
+        if = {
+            limit = {
+                new_character = { # was dragon
+                    culture_group = dragon_group
+                }
+                NAND = {          # not adult yet
+                    new_character = {
+                        culture = dragon_culture
+                    }
+                    ROOT = {
+                        culture_group = dragon_group
+                        is_adult = yes
+                    }
+                }
+                NAND = {         # not at birth or game start
+                    new_character = {
+                        NOT = { culture = dragon_culture }
+                    }
+                    ROOT = {
+                        culture = dragon_culture
+                        is_adult = no
+                    }
+                }
+            }
+            set_character_flag = ignore_next_dragon_conv
+            culture = FROM
+
+            character_event = { id = ani_plus.199 days = 1}
+        }
+
+        new_character = {
+            death = yes
+        }
+    }
+}
+
+# event 199
+character_event = {
+    id = ani_plus.199
+
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        clr_character_flag = ignore_next_dragon_conv
+    }
+}
+
+#### event 200 to 204 and 247: religious event force religion setting
+## event 200: setting holy site randomly (on game start, event if random always choose the same provinces)
+## event 201: setting character and province in game start by
+#                   forcing dragon religion
+#                   setting egg culture for dragon egg
+#                   giving adult dragon their flag
+#                   forcing gender succession law
+## event 247: triggered by event 201 // create fort on dragon province
+#                   delayed by 1 day because it seems that AI province destroy fort on day 1 after game start 
+## event 202: converting character on birth or culture change
+## event 203: converting province culture on religion change
+## event 204: holding plundering
+
+
+# event 200
+character_event = {
+    id = ani_plus.200
+
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        NOT = { has_global_flag = dragon_holy_sites_set }
+    }
+
+    immediate = {
+        set_black_dragon_holy_site_effect = yes
+        set_white_dragon_holy_site_effect = yes
+        set_red_dragon_holy_site_effect = yes
+        set_blue_dragon_holy_site_effect = yes
+        set_yellow_dragon_holy_site_effect = yes
+    }
+
+    after = {
+        set_global_flag = dragon_holy_sites_set
+    }
+}
+
+# event 201
+character_event = {
+    id = ani_plus.201
+
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        any_character = {
+            limit = {
+                culture_group = dragon_group
+                can_change_religion = yes
+                NOT = { religion = Dragon_religion }
+            }
+            religion = Dragon_religion
+            dragon_get_dragon_egg_culture_if_child_effect = yes
+            dragon_get_true_adult_effect = yes
+            
+            set_government_type = dragon_tribal_gov
+            any_demesne_title = {
+                gender_succ = true_cognatic
+            }
+        }
+        any_province = {
+            limit = {
+                has_owner = yes
+                culture_group = dragon_group
+                NOT = { religion = Dragon_religion }
+            }
+
+            if = {
+                limit = {
+                    holder_scope = {
+                        ai = no
+                    }
+                }
+                dragon_add_fort_to_province_effect = yes
+            }
+            else = {
+                province_event = {
+                    id = ani_plus.247
+                    days = 1
+                }
+            }
+        }
+    }
+}
+
+# event 247
+province_event = {
+    id = ani_plus.247
+
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        culture_group = dragon_group
+        has_fort = no
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                holder_scope = {
+                    culture_group = dragon_group
+                    religion = Dragon_religion
+                }
+            }
+            religion = Dragon_religion
+            dragon_add_fort_to_province_effect = yes
+        }
+        else = {
+            culture = holder_scope
+        }
+    }
+}
+
+
+# event 202
+character_event = {
+    id = ani_plus.202
+
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        culture_group = dragon_group
+        can_change_religion = yes
+        NOT = { religion = Dragon_religion }
+    }
+
+    immediate = {
+        religion = Dragon_religion
+    }
+}
+
+# event 203
+province_event = {
+    id = ani_plus.203
+
+    hide_window = yes
+    
+    trigger = {
+        culture_group = dragon_group
+        NOT = {
+            religion = Dragon_religion
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 1
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                holder_scope = {
+                    culture_group = dragon_group
+                }
+            }
+
+            religion = Dragon_religion
+        }
+        else = {
+            culture = holder_scope
+        }
+    }
+}
+
+# event 204
+province_event = {
+    id = ani_plus.204
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    desc = DESC_ani_204
+
+    trigger = {
+        culture_group = dragon_group
+        holder_scope = {
+            culture_group = dragon_group
+
+            war = no
+            OR = {
+                independent = yes 
+                any_liege = {
+                    war = no
+                }
+            }
+        }
+
+        county = {
+            is_occupied = no
+            any_de_jure_vassal_title = {
+                OR = {
+                    holding_type = castle
+                    holding_type = city
+                    holding_type = temple
+                }
+            }
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 2
+
+        modifier = {
+            factor = 100
+
+            holder_scope = {
+                culture = dragon_culture
+            }
+        }
+    }
+
+    option = {
+        name = OPT_ani_204
+
+        county = {
+            show_scope_change = no
+            random_direct_de_jure_vassal_title = {
+                limit = {
+                    OR = {
+                        holding_type = castle
+                        holding_type = city
+                        holding_type = temple
+                    }
+                }
+
+                if = {
+                    limit = {
+                        has_any_building = yes
+                    }
+
+                    destroy_random_building = yes
+                }
+                else = {
+                    destroy_settlement = yes
+                }
+            }
+
+            holder_scope = {
+                wealth = 200
+            }
+        }
+    }
+}
+
+#### event 205 to 220: dragon lifetime events
+## event 205: hidden event for adulthood (to show parent player)
+## event 206: notification for culture change
+#               and removing education trait (if conclave is disable)
+#                   as education trait will be added after passing the 5 trials
+## event 207: trial tombola for dragon
+## event 208-209: snow trial
+## event 210-211: fire trial
+## event 212-213: water trial
+## event 214-215: sand trial
+## event 216-217: poison trial
+## event 218: conclusion (give education trait and intelligence trait)
+## event 219: event to prevent dragon egg from hatching
+## event 220: player notification for its unborn child death
+
+# event 205
+character_event = {
+    id = ani_plus.205
+
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        culture = dragon_culture
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                father = {
+                    ai = no
+                }
+            }
+
+            father = {
+                character_event = { id = ani_plus.206 }
+            }
+        }
+        else_if = {
+            limit = {
+                mother = {
+                    ai = no
+                }
+            }
+            
+            mother = {
+                character_event = { id = ani_plus.206 }
+            }
+        }
+        else = {
+            character_event = { id = ani_plus.206 }
+        }
+    }
+}
+
+# event 206
+character_event = {
+    id = ani_plus.206
+
+    is_triggered_only = yes
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = {
+        trigger = {
+            NOT = { character = FROM }
+        }
+        text = DESCA_ANI_206
+    }
+    desc = {
+        trigger = {
+            character = FROM
+        }
+        text = DESCB_ANI_206
+    }
+
+    option = {
+        name = {
+            text = OPTA_ANI_206
+            trigger = {
+                NOT = { character = FROM }
+            }
+        }
+
+        FROM = {
+            #removing education trait if conclave DLC disabled
+            hidden_tooltip = {
+                generate_tooltip = no
+
+                remove_trait = amateurish_plotter
+                remove_trait = flamboyant_schemer
+                remove_trait = intricate_webweaver
+                remove_trait = elusive_shadow
+
+                remove_trait = naive_appeaser
+                remove_trait = underhanded_rogue
+                remove_trait = charismatic_negotiator
+                remove_trait = grey_eminence
+
+                remove_trait = indulgent_wastrel
+                remove_trait = thrifty_clerk
+                remove_trait = fortune_builder
+                remove_trait = midas_touched
+
+                remove_trait = misguided_warrior
+                remove_trait = tough_soldier
+                remove_trait = skilled_tactician
+                remove_trait = brilliant_strategist
+
+                remove_trait = detached_priest
+                remove_trait = martial_cleric
+                remove_trait = scholarly_theologian
+                remove_trait = mastermind_theologian
+            }
+
+            random_list = {
+                1 = {
+                    modifier = {
+                        factor = 0
+                        NOT = {
+                            has_character_flag = white_dragon_potential
+                        }
+                    }
+                    
+                    culture = white_dragon
+                }
+                1 = {
+                    modifier = {
+                        factor = 0
+                        NOT = {
+                            has_character_flag = black_dragon_potential
+                        }
+                    }
+
+                    culture = black_dragon
+                }
+                1 = {
+                    modifier = {
+                        factor = 0
+                        NOT = {
+                            has_character_flag = blue_dragon_potential
+                        }
+                    }
+
+                    culture = blue_dragon
+                }
+                1 = {
+                    modifier = {
+                        factor = 0
+                        NOT = {
+                            has_character_flag = red_dragon_potential
+                        }
+                    }
+
+                    culture = red_dragon
+                }
+                1 = {
+                    modifier = {
+                        factor = 0
+                        NOT = {
+                            has_character_flag = yellow_dragon_potential
+                        }
+                    }
+
+                    culture = yellow_dragon
+                }
+            }
+            clr_character_flag = white_dragon_potential
+            clr_character_flag = black_dragon_potential
+            clr_character_flag = blue_dragon_potential
+            clr_character_flag = red_dragon_potential
+            clr_character_flag = yellow_dragon_potential
+
+            hidden_tooltip = { # if already a ruler
+                if = {
+                    limit = {
+                        is_ruler = yes
+                    }
+                    any_demesne_province = {
+                        culture = PREV
+                    }
+                }
+            }
+        }
+    }
+}
+
+# event 207
+character_event = {
+    id = ani_plus.207
+
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        culture_group = dragon_group
+        is_adult = yes # not an egg
+        NOT = { has_character_flag = is_true_dragon_adult }
+        war = no
+    }
+
+    immediate = {
+		if = {
+			limit = {
+				OR = { # has an education trait
+					trait = misguided_warrior
+					trait = tough_soldier
+					trait = skilled_tactician
+					trait = brilliant_strategist
+					trait = indulgent_wastrel
+					trait = thrifty_clerk
+					trait = fortune_builder
+					trait = midas_touched
+					trait = naive_appeaser
+					trait = underhanded_rogue
+					trait = charismatic_negotiator
+					trait = grey_eminence
+					trait = detached_priest
+					trait = martial_cleric
+					trait = scholarly_theologian
+					trait = mastermind_theologian
+					trait = amateurish_plotter
+					trait = flamboyant_schemer
+					trait = intricate_webweaver
+					trait = elusive_shadow
+				}
+			}
+			set_character_flag = is_true_dragon_adult
+			break = yes
+		}
+
+        random_list = {
+            1 = { # snow trial
+                trigger = {
+                    NOT = {
+                        has_character_flag = snow_trial_realized
+                    }
+                }
+                set_character_flag = snow_trial_realized
+                character_event = { id = ani_plus.208 }
+            }
+            1 = { # fire trial
+                trigger = {
+                    NOT = {
+                        has_character_flag = fire_trial_realized
+                    }
+                }
+                set_character_flag = fire_trial_realized
+                character_event = { id = ani_plus.210 }
+            }
+            1 = { # water trial
+                trigger = {
+                    NOT = {
+                        has_character_flag = water_trial_realized
+                    }
+                }
+                set_character_flag = water_trial_realized
+                character_event = { id = ani_plus.212 }
+            }
+            1 = { # sand trial
+                trigger = {
+                    NOT = {
+                        has_character_flag = sand_trial_realized
+                    }
+                }
+                set_character_flag = sand_trial_realized
+                character_event = { id = ani_plus.214 }
+            }
+            1 = { # poison trial
+                trigger = {
+                    NOT = {
+                        has_character_flag = poison_trial_realized
+                    }
+                }
+                set_character_flag = poison_trial_realized
+                character_event = { id = ani_plus.216 }
+            }
+            fallback  = { # all trials done
+                if = {
+                    limit = {
+                        father = {
+                            ai = no
+                        }
+                    }
+                    father = {
+                        character_event = { id = ani_plus.218 }
+                    }
+                }
+                else_if = {
+                    limit = {
+                        mother = {
+                            ai = no
+                        }
+                    }
+                    mother = {
+                        character_event = { id = ani_plus.218 }
+                    }
+                }
+                else = {
+                    character_event = { id = ani_plus.218 }
+                }
+            }
+        }
+    }
+}
+
+# event 208 - snow
+character_event = {
+    id = ani_plus.208
+
+    is_triggered_only = yes
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    desc = DESC_ANI_208
+
+    option = {
+        name = OPTA_ANI_208
+        set_character_flag = dragon_snow_normal
+        
+        ai_chance = {
+            factor = 10
+            
+            dragon_trial_choice_1_score = yes
+        }
+    }
+    option = {
+        name = OPTB_ANI_208
+        set_character_flag = dragon_snow_hard
+
+        ai_chance = {
+            factor = 10
+
+            dragon_trial_choice_2_score = yes
+        }
+    }
+    option = {
+        name = OPTC_ANI_208
+        set_character_flag = dragon_snow_safe
+
+        ai_chance = {
+            factor = 10
+
+            dragon_trial_choice_3_score = yes
+        }
+    }
+    option = {
+        name = OPTD_ANI_208
+        set_character_flag = dragon_snow_all_for_all
+
+        ai_chance = {
+            factor = 10
+
+            dragon_trial_choice_4_score = yes
+        }
+    }
+
+    after = {
+        hidden_tooltip = {
+            random_list = {
+
+                100 = {
+                    trigger = {
+                        NOT = {
+                            has_character_flag = dragon_snow_safe
+                        }
+                    }
+                    modifier = {
+                        factor = 0.80
+                        has_character_flag = dragon_snow_normal
+                    }
+                    modifier = {
+                        factor = 1.5
+                        learning = 5
+						NOT = { learning = 10}
+                    }
+                    modifier = {
+                        factor = 0.5
+                        NAND = {
+                            learning = 2
+                            culture = white_dragon
+                        }
+                    }
+                    modifier = {
+                        factor = 1.25
+                        trait = lustful
+                    }
+                    modifier = {
+                        factor = 1.25
+                        trait = slothful
+                    }
+                    modifier = {
+                        factor = 1.5
+                        trait = zealous
+                    }
+                    set_character_flag = dragon_snow_level_1
+                }
+                100 = {
+                    trigger = {
+                        NOT = {
+                            has_character_flag = dragon_snow_all_for_all
+                        }
+                    }
+                    modifier = {
+                        factor = 0.80
+                        has_character_flag = dragon_snow_normal
+                    }
+                    modifier = {
+                        factor = 2
+                        learning = 10
+						NOT = { learning = 15}
+                    }
+                    modifier = {
+                        factor = 0.5
+                        NAND = {
+                            learning = 5
+                            culture = white_dragon
+                        }
+                    }
+                    modifier = {
+                        factor = 1.25
+                        trait = envious
+                    }
+                    modifier = {
+                        factor = 1.25
+                        trait = proud
+                    }
+                    modifier = {
+                        factor = 1.25
+                        trait = zealous
+                    }
+                    set_character_flag = dragon_snow_level_2
+                }
+                100 = {
+                    trigger = {
+                        NOR = {
+                            has_character_flag = dragon_snow_hard
+                        }
+                    }
+                    modifier = {
+                        factor = 0.80
+                        has_character_flag = dragon_snow_all_for_all
+                    }
+                    modifier = {
+                        factor = 2
+                        learning = 15
+						NOT = { learning = 20 }
+                    }
+                    modifier = {
+                        factor = 0.5
+                        NAND = {
+                            learning = 10
+                            culture = white_dragon
+                        }
+                    }
+                    modifier = {
+                        factor = 1.25
+                        trait = chaste
+                    }
+                    modifier = {
+                        factor = 1.5
+                        trait = erudite
+                    }
+                    set_character_flag = dragon_snow_level_3
+                }
+                100 = {
+                    trigger = {
+                        NOR = {
+                            has_character_flag = dragon_snow_normal
+                            has_character_flag = dragon_snow_safe
+                        }
+                    }
+                    modifier = {
+                        factor = 0.80
+                        has_character_flag = dragon_snow_all_for_all
+                    }
+                    modifier = {
+                        factor = 2
+                        learning = 20
+                    }
+                    modifier = {
+                        factor = 0.5
+                        NAND = {
+                            learning = 15
+                            culture = white_dragon
+                        }
+                    }
+                    modifier = {
+                        factor = 1.25
+                        trait = humble
+                    }
+                    modifier = {
+                        factor = 1.5
+                        trait = erudite
+                    }
+                    set_character_flag = dragon_snow_level_4
+                }
+            }
+
+            clr_character_flag = dragon_snow_normal
+            clr_character_flag = dragon_snow_hard
+            clr_character_flag = dragon_snow_all_for_all
+            clr_character_flag = dragon_snow_safe
+
+            character_event = { id = ani_plus.209 }
+        }
+    }
+}
+
+# event 209
+character_event = {
+    id = ani_plus.209
+
+    is_triggered_only = yes
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    desc = DESC_ANI_209
+
+    option = {
+        name = OPTA_ANI_209
+        trigger = {
+            has_character_flag = dragon_snow_level_1
+        }
+
+        hidden_tooltip = {
+            change_variable = {
+                which = dragon_education_score
+                value = 1
+            }
+        }
+    }
+    option = {
+        name = OPTB_ANI_209
+        trigger = {
+            has_character_flag = dragon_snow_level_2
+        }
+        hidden_tooltip = {
+            change_variable = {
+                which = dragon_education_score
+                value = 2
+            }
+        }
+        
+    }
+    option = {
+        name = OPTC_ANI_209
+        trigger = {
+            has_character_flag = dragon_snow_level_3
+        }
+
+        hidden_tooltip = {
+            change_variable = {
+                which = dragon_education_score
+                value = 3
+            }
+        }
+    }
+    option = {
+        name = OPTD_ANI_209
+        trigger = {
+            has_character_flag = dragon_snow_level_4
+        }
+        hidden_tooltip = {
+            change_variable = {
+                which = dragon_education_score
+                value = 4
+            }
+        }
+    }
+}
+
+# event 210 - fire
+character_event = {
+    id = ani_plus.210
+
+    is_triggered_only = yes
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    desc = DESC_ANI_210
+
+	# option has same localisation as the first event
+    option = {
+        name = OPTA_ANI_208
+        set_character_flag = dragon_fire_normal
+        
+        ai_chance = {
+            factor = 10
+            
+            dragon_trial_choice_1_score = yes
+        }
+    }
+    option = {
+        name = OPTB_ANI_208
+        set_character_flag = dragon_fire_hard
+
+        ai_chance = {
+            factor = 10
+
+            dragon_trial_choice_2_score = yes
+        }
+    }
+    option = {
+        name = OPTC_ANI_208
+        set_character_flag = dragon_fire_safe
+
+        ai_chance = {
+            factor = 10
+
+            dragon_trial_choice_3_score = yes
+        }
+    }
+    option = {
+        name = OPTD_ANI_208
+        set_character_flag = dragon_fire_all_for_all
+
+        ai_chance = {
+            factor = 10
+
+            dragon_trial_choice_4_score = yes
+        }
+    }
+
+	after = {
+		hidden_tooltip = {
+			random_list = {
+
+				100 = {
+					trigger = {
+						NOT = {
+							has_character_flag = dragon_fire_safe
+						}
+					}
+					modifier = {
+						factor = 0.80
+						has_character_flag = dragon_fire_normal
+					}
+					modifier = {
+						factor = 1.5
+						martial = 5
+						NOT = { martial = 10 } 
+					}
+					modifier = {
+						factor = 0.5
+						NAND = {
+							martial = 2
+							culture = red_dragon
+						}
+					}
+					modifier = {
+						factor = 1.5
+						trait = chaste
+					}
+					modifier = {
+						factor = 1.5
+						trait = charitable
+					}
+					modifier = {
+						factor = 4
+						trait = gluttonous
+					}
+					modifier = {
+						factor = 7
+						trait = slothful
+					}
+					modifier = {
+						factor = 1.25
+						trait = deceitful
+					}
+					modifier = {
+						factor = 1.1
+						trait = shy
+					}
+
+
+					set_character_flag = dragon_fire_level_1
+				}
+				100 = {
+					trigger = {
+						NOT = {
+							has_character_flag = dragon_fire_all_for_all
+						}
+					}
+					modifier = {
+						factor = 0.80
+						has_character_flag = dragon_fire_normal
+					}
+					modifier = {
+						factor = 2
+						martial = 10
+						NOT = { martial = 15}
+					}
+					modifier = {
+						factor = 0.5
+						NAND = {
+							martial = 5
+							culture = red_dragon
+						}
+					}
+					modifier = {
+						factor = 1.5
+						trait = gluttonous
+					}
+					modifier = {
+						factor = 2
+						trait = slothful
+					}
+					modifier = {
+						factor = 3
+						trait = shy
+					}
+					modifier = {
+						factor = 2
+						trait = content
+					}
+					modifier = {
+						factor = 1.3
+						trait = arbitrary
+					}
+					
+					set_character_flag = dragon_fire_level_2
+				}
+				100 = {
+					trigger = {
+						NOR = {
+							has_character_flag = dragon_fire_hard
+						}
+					}
+                    modifier = {
+                        factor = 0.80
+                        has_character_flag = dragon_fire_all_for_all
+                    }
+					modifier = {
+						factor = 2
+						martial = 15
+						NOT = { martial = 20 }
+					}
+					modifier = {
+						factor = 0.5
+						NAND = {
+							martial = 10
+							culture = red_dragon
+						}
+					}
+					modifier = {
+						factor = 2
+						trait = content
+					}
+					modifier = {
+						factor = 1.1
+						trait = arbitrary
+					}
+					modifier = {
+						factor = 3
+						trait = wroth
+					}
+					modifier = {
+						factor = 1.5
+						trait = proud
+					}
+					modifier = {
+						factor = 2
+						trait = brave
+					}
+					modifier ={
+						factor = 2
+						trait = cruel
+					}
+					modifier = {
+						factor = 1.3
+						trait = stubborn
+					}
+					
+
+					set_character_flag = dragon_fire_level_3
+				}
+				100 = {
+					trigger = {
+						NOR = {
+							has_character_flag = dragon_fire_normal
+							has_character_flag = dragon_fire_safe
+						}
+					}
+                    modifier = {
+                        factor = 0.80
+                        has_character_flag = dragon_fire_all_for_all
+                    }
+					modifier = {
+						factor = 2
+						martial = 20
+					}
+					modifier = {
+						factor = 0.5
+						NAND = {
+							martial = 15
+							culture = red_dragon
+						}
+					}
+					modifier = {
+						factor = 2
+						trait = wroth
+					}
+					modifier = {
+						factor = 3
+						trait = brave
+					}
+					modifier = {
+						factor = 1.5
+						trait = cruel
+					}
+					modifier = {
+						factor = 1.1
+						trait = diligent
+					}
+
+					set_character_flag = dragon_fire_level_4
+                }
+            }
+
+            clr_character_flag = dragon_fire_normal
+            clr_character_flag = dragon_fire_hard
+            clr_character_flag = dragon_fire_all_for_all
+            clr_character_flag = dragon_fire_safe
+
+            character_event = { id = ani_plus.211 }
+        }
+    }
+}
+
+# event 211 - same loc as event 209
+character_event = {
+    id = ani_plus.211
+
+    is_triggered_only = yes
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    desc = DESC_ANI_209
+
+    option = {
+        name = OPTA_ANI_209
+        trigger = {
+            has_character_flag = dragon_fire_level_1
+        }
+
+        hidden_tooltip = {
+            change_variable = {
+                which = dragon_education_score
+                value = 1
+            }
+        }
+    }
+    option = {
+        name = OPTB_ANI_209
+        trigger = {
+            has_character_flag = dragon_fire_level_2
+        }
+        hidden_tooltip = {
+            change_variable = {
+                which = dragon_education_score
+                value = 2
+            }
+        }
+        
+    }
+    option = {
+        name = OPTC_ANI_209
+        trigger = {
+            has_character_flag = dragon_fire_level_3
+        }
+
+        hidden_tooltip = {
+            change_variable = {
+                which = dragon_education_score
+                value = 3
+            }
+        }
+    }
+    option = {
+        name = OPTD_ANI_209
+        trigger = {
+            has_character_flag = dragon_fire_level_4
+        }
+        hidden_tooltip = {
+            change_variable = {
+                which = dragon_education_score
+                value = 4
+            }
+        }
+    }
+}
+
+# event 212 - water
+character_event = {
+    id = ani_plus.212
+
+    is_triggered_only = yes
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    desc = DESC_ANI_212
+
+	# option has same localisation as the first event
+    option = {
+        name = OPTA_ANI_208
+        set_character_flag = dragon_water_normal
+        
+        ai_chance = {
+            factor = 10
+            
+            dragon_trial_choice_1_score = yes
+        }
+    }
+    option = {
+        name = OPTB_ANI_208
+        set_character_flag = dragon_water_hard
+
+        ai_chance = {
+            factor = 10
+
+            dragon_trial_choice_2_score = yes
+        }
+    }
+    option = {
+        name = OPTC_ANI_208
+        set_character_flag = dragon_water_safe
+
+        ai_chance = {
+            factor = 10
+
+            dragon_trial_choice_3_score = yes
+        }
+    }
+    option = {
+        name = OPTD_ANI_208
+        set_character_flag = dragon_water_all_for_all
+
+        ai_chance = {
+            factor = 10
+
+            dragon_trial_choice_4_score = yes
+        }
+    }
+
+	after = {
+		hidden_tooltip = {
+			random_list = {
+
+				100 = {
+					trigger = {
+						NOT = {
+							has_character_flag = dragon_water_safe
+						}
+					}
+					modifier = {
+						factor = 0.80
+						has_character_flag = dragon_water_normal
+					}
+					modifier = {
+						factor = 1.5
+						diplomacy = 5
+						NOT = { diplomacy = 10 } 
+					}
+					modifier = {
+						factor = 0.5
+						NAND = {
+							diplomacy = 2
+							culture = blue_dragon
+						}
+					}
+					modifier = {
+						factor = 1.5
+						trait = chaste
+					}
+					modifier = {
+						factor = 2
+						trait = greedy
+					}
+					modifier = {
+						factor = 1.5
+						trait = envious
+					}
+					modifier = {
+						factor = 2
+						trait  = proud
+					}
+
+
+					set_character_flag = dragon_water_level_1
+				}
+				100 = {
+					trigger = {
+						NOT = {
+							has_character_flag = dragon_water_all_for_all
+						}
+					}
+					modifier = {
+						factor = 0.80
+						has_character_flag = dragon_water_normal
+					}
+					modifier = {
+						factor = 2
+						diplomacy = 10
+                        NOT = { diplomacy = 15 }
+					}
+                    modifier = {
+                        factor = 0.5
+						NAND = {
+							diplomacy = 10
+							culture = blue_dragon
+						}
+                    }
+					modifier = {
+						factor = 2
+						trait = lustful
+					}
+					modifier = {
+						factor = 1.5
+						trait = gluttonous
+					}
+					modifier = {
+						factor = 1.5
+						trait = envious
+					}
+					modifier = {
+						factor = 2
+						trait = humble
+					}
+					
+					set_character_flag = dragon_water_level_2
+				}
+				100 = {
+					trigger = {
+						NOR = {
+							has_character_flag = dragon_water_hard
+						}
+					}
+                    modifier = {
+                        factor = 0.80
+                        has_character_flag = dragon_water_all_for_all
+                    }
+					modifier = {
+						factor = 2
+						diplomacy = 15
+						NOT = { diplomacy = 20 }
+					}
+					modifier = {
+						factor = 0.5
+						NAND = {
+							diplomacy = 10
+							culture = blue_dragon
+						}
+					}
+					modifier = {
+						factor = 2
+						trait = temperate
+					}
+					modifier = {
+						factor = 1.5
+						trait = patient
+					}
+					modifier = {
+						factor = 1.25
+						trait = kind
+					}
+
+					set_character_flag = dragon_water_level_3
+				}
+				100 = {
+					trigger = {
+						NOR = {
+							has_character_flag = dragon_water_normal
+							has_character_flag = dragon_water_safe
+						}
+					}
+                    modifier = {
+                        factor = 0.80
+                        has_character_flag = dragon_water_all_for_all
+                    }
+					modifier = {
+						factor = 2
+						diplomacy = 20
+					}
+					modifier = {
+						factor = 0.5
+						NAND = {
+							diplomacy = 15
+							culture = blue_dragon
+						}
+					}
+					modifier = {
+						factor = 1.5
+						trait = charitable
+					}
+					modifier = {
+						factor = 1.5
+						trait = patient
+					}
+					modifier = {
+						factor = 1.75
+						trait = kind
+					}
+
+					set_character_flag = dragon_water_level_4
+                }
+            }
+
+            clr_character_flag = dragon_water_normal
+            clr_character_flag = dragon_water_hard
+            clr_character_flag = dragon_water_all_for_all
+            clr_character_flag = dragon_water_safe
+
+            character_event = { id = ani_plus.213 }
+        }
+    }
+}
+
+# event 213 - same loc as event 209
+character_event = {
+	id = ani_plus.213
+
+	is_triggered_only = yes
+	border = GFX_event_normal_frame_diplomacy
+	picture = GFX_evt_council
+
+	desc = DESC_ANI_209
+
+	option = {
+		name = OPTA_ANI_209
+		trigger = {
+			has_character_flag = dragon_water_level_1
+		}
+
+		hidden_tooltip = {
+			change_variable = {
+				which = dragon_education_score
+				value = 1
+			}
+		}
+	}
+	option = {
+		name = OPTB_ANI_209
+		trigger = {
+			has_character_flag = dragon_water_level_2
+		}
+		hidden_tooltip = {
+			change_variable = {
+				which = dragon_education_score
+				value = 2
+			}
+		}
+	}
+	option = {
+		name = OPTC_ANI_209
+		trigger = {
+			has_character_flag = dragon_water_level_3
+		}
+
+		hidden_tooltip = {
+			change_variable = {
+				which = dragon_education_score
+				value = 3
+			}
+		}
+	}
+	option = {
+		name = OPTD_ANI_209
+		trigger = {
+			has_character_flag = dragon_water_level_4
+		}
+		hidden_tooltip = {
+			change_variable = {
+				which = dragon_education_score
+				value = 4
+			}
+		}
+	}
+}
+
+# event 214 - sand
+character_event = {
+    id = ani_plus.214
+
+    is_triggered_only = yes
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    desc = DESC_ANI_214
+
+	# option has same localisation as the first event
+    option = {
+        name = OPTA_ANI_208
+        set_character_flag = dragon_sand_normal
+        
+        ai_chance = {
+            factor = 10
+            
+            dragon_trial_choice_1_score = yes
+        }
+    }
+    option = {
+        name = OPTB_ANI_208
+        set_character_flag = dragon_sand_hard
+
+        ai_chance = {
+            factor = 10
+
+            dragon_trial_choice_2_score = yes
+        }
+    }
+    option = {
+        name = OPTC_ANI_208
+        set_character_flag = dragon_sand_safe
+
+        ai_chance = {
+            factor = 10
+
+            dragon_trial_choice_3_score = yes
+        }
+    }
+    option = {
+        name = OPTD_ANI_208
+        set_character_flag = dragon_sand_all_for_all
+
+        ai_chance = {
+            factor = 10
+
+            dragon_trial_choice_4_score = yes
+        }
+    }
+
+	after = {
+		hidden_tooltip = {
+			random_list = {
+
+				100 = {
+					trigger = {
+						NOT = {
+							has_character_flag = dragon_sand_safe
+						}
+					}
+					modifier = {
+						factor = 0.80
+						has_character_flag = dragon_sand_normal
+					}
+					modifier = {
+						factor = 1.5
+						stewardship = 5
+						NOT = { stewardship = 10 } 
+					}
+					modifier = {
+						factor = 0.5
+						NAND = {
+							stewardship = 2
+							culture = yellow_dragon
+						}
+					}
+					modifier = {
+						factor = 1.5
+						trait = arbitrary
+					}
+					modifier = {
+						factor = 2.5
+						trait = cynical
+					}
+					modifier = {
+						factor = 3
+						trait = craven
+					}
+					modifier = {
+						factor = 2
+						trait = content
+					}
+					modifier = {
+						factor = 4
+						trait = charitable
+					}
+					modifier = {
+						factor = 1.5
+						trait = slothful
+					}
+
+					set_character_flag = dragon_sand_level_1
+				}
+				100 = {
+					trigger = {
+						NOT = {
+							has_character_flag = dragon_sand_all_for_all
+						}
+					}
+					modifier = {
+						factor = 0.80
+						has_character_flag = dragon_sand_normal
+					}
+					modifier = {
+						factor = 1.5
+						stewardship = 10
+						NOT = { stewardship = 15 } 
+					}
+					modifier = {
+						factor = 0.5
+						NAND = {
+							stewardship = 5
+							culture = yellow_dragon
+						}
+					}
+					modifier = {
+						factor = 2
+						trait = arbitrary
+					}
+					modifier = {
+						factor = 1.2
+						trait = gregarious
+					}
+					modifier = {
+						factor = 2
+						trait = cruel
+					}
+					modifier = {
+						factor = 2
+						trait = content
+					}
+					modifier = {
+						factor = 2
+						trait = slothful
+					}
+					modifier = {
+						factor = 1.5
+						trait = wroth
+					}
+					
+					set_character_flag = dragon_sand_level_2
+				}
+				100 = {
+					trigger = {
+						NOR = {
+							has_character_flag = dragon_sand_hard
+						}
+					}
+                    modifier = {
+                        factor = 0.80
+                        has_character_flag = dragon_sand_all_for_all
+                    }
+					modifier = {
+						factor = 2
+						stewardship = 15
+						NOT = { stewardship = 20 }
+					}
+					modifier = {
+						factor = 0.5
+						NAND = {
+							stewardship = 10
+							culture = yellow_dragon
+						}
+					}
+					modifier = {
+						factor = 2
+						trait = just
+					}
+					modifier = {
+						factor = 1.2
+						trait = gregarious
+					}
+					modifier = {
+						factor = 2
+						trait = ambitious
+					}
+					modifier = {
+						factor = 2
+						trait = diligent
+					}
+					modifier = {
+						factor = 1.5
+						trait = patient
+					}
+
+					set_character_flag = dragon_sand_level_3
+				}
+				100 = {
+					trigger = {
+						NOR = {
+							has_character_flag = dragon_sand_normal
+							has_character_flag = dragon_sand_safe
+						}
+					}
+                    modifier = {
+                        factor = 0.80
+                        has_character_flag = dragon_sand_all_for_all
+                    }
+					modifier = {
+						factor = 2
+						stewardship = 20
+					}
+					modifier = {
+						factor = 0.5
+						NAND = {
+							stewardship = 15
+							culture = yellow_dragon
+						}
+					}
+					modifier = {
+						factor = 1.5
+						trait = just
+					}
+					modifier = {
+						factor = 1.2
+						trait = gregarious
+					}
+					modifier = {
+						factor = 4
+						trait = greedy
+					}
+					modifier = {
+						factor = 1.4
+						trait = diligent
+					}
+
+					set_character_flag = dragon_sand_level_4
+                }
+            }
+
+            clr_character_flag = dragon_sand_normal
+            clr_character_flag = dragon_sand_hard
+            clr_character_flag = dragon_sand_all_for_all
+            clr_character_flag = dragon_sand_safe
+
+            character_event = { id = ani_plus.215 }
+        }
+    }
+}
+
+# event 215 - same loc as event 209
+character_event = {
+    id = ani_plus.215
+
+    is_triggered_only = yes
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    desc = DESC_ANI_209
+
+    option = {
+        name = OPTA_ANI_209
+        trigger = {
+            has_character_flag = dragon_sand_level_1
+        }
+
+        hidden_tooltip = {
+            change_variable = {
+                which = dragon_education_score
+                value = 1
+            }
+        }
+    }
+    option = {
+        name = OPTB_ANI_209
+        trigger = {
+            has_character_flag = dragon_sand_level_2
+        }
+        hidden_tooltip = {
+            change_variable = {
+                which = dragon_education_score
+                value = 2
+            }
+        }
+        
+    }
+    option = {
+        name = OPTC_ANI_209
+        trigger = {
+            has_character_flag = dragon_sand_level_3
+        }
+
+        hidden_tooltip = {
+            change_variable = {
+                which = dragon_education_score
+                value = 3
+            }
+        }
+    }
+    option = {
+        name = OPTD_ANI_209
+        trigger = {
+            has_character_flag = dragon_sand_level_4
+        }
+        hidden_tooltip = {
+            change_variable = {
+                which = dragon_education_score
+                value = 4
+            }
+        }
+    }
+}
+
+# event 216 - poison
+character_event = {
+    id = ani_plus.216
+
+    is_triggered_only = yes
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    desc = DESC_ANI_216
+
+	# option has same localisation as the first event
+    option = {
+        name = OPTA_ANI_208
+        set_character_flag = dragon_poison_normal
+        
+        ai_chance = {
+            factor = 10
+            
+            dragon_trial_choice_1_score = yes
+        }
+    }
+    option = {
+        name = OPTB_ANI_208
+        set_character_flag = dragon_poison_hard
+
+        ai_chance = {
+            factor = 10
+
+            dragon_trial_choice_2_score = yes
+        }
+    }
+    option = {
+        name = OPTC_ANI_208
+        set_character_flag = dragon_poison_safe
+
+        ai_chance = {
+            factor = 10
+
+            dragon_trial_choice_3_score = yes
+        }
+    }
+    option = {
+        name = OPTD_ANI_208
+        set_character_flag = dragon_poison_all_for_all
+
+        ai_chance = {
+            factor = 10
+
+            dragon_trial_choice_4_score = yes
+        }
+    }
+
+	after = {
+		hidden_tooltip = {
+			random_list = {
+
+				100 = {
+					trigger = {
+						NOT = {
+							has_character_flag = dragon_poison_safe
+						}
+					}
+					modifier = {
+						factor = 0.80
+						has_character_flag = dragon_poison_normal
+					}
+					modifier = {
+						factor = 1.5
+						intrigue = 5
+						NOT = { intrigue = 10 } 
+					}
+					modifier = {
+						factor = 0.5
+						NAND = {
+							intrigue = 2
+							culture = black_dragon
+						}
+					}
+					modifier = {
+						factor = 3
+						trait = trusting
+					}
+					modifier = {
+						factor = 1.5
+						trait = honest
+					}
+					modifier = {
+						factor = 2
+						trait = cynical
+					}
+					modifier = {
+						factor = 2
+						trait = craven
+					}
+
+
+					set_character_flag = dragon_poison_level_1
+				}
+				100 = {
+					trigger = {
+						NOT = {
+							has_character_flag = dragon_poison_all_for_all
+						}
+					}
+					modifier = {
+						factor = 0.80
+						has_character_flag = dragon_poison_normal
+					}
+					modifier = {
+						factor = 2
+						intrigue = 10
+                        NOT = { intrigue = 15 }
+					}
+                    modifier = {
+                        factor = 0.5
+						NAND = {
+							intrigue = 10
+							culture = black_dragon
+						}
+                    }
+					modifier = {
+						factor = 2
+						trait = stubborn
+					}
+					modifier = {
+						factor = 1.25
+						trait = shy
+					}
+					modifier = {
+						factor = 1.25
+						trait = craven
+					}
+					
+					set_character_flag = dragon_poison_level_2
+				}
+				100 = {
+					trigger = {
+						NOR = {
+							has_character_flag = dragon_poison_hard
+						}
+					}
+                    modifier = {
+                        factor = 0.80
+                        has_character_flag = dragon_poison_all_for_all
+                    }
+					modifier = {
+						factor = 2
+						intrigue = 15
+						NOT = { intrigue = 20 }
+					}
+					modifier = {
+						factor = 0.5
+						NAND = {
+							intrigue = 10
+							culture = black_dragon
+						}
+					}
+					modifier = {
+						factor = 2
+						trait = zealous
+					}
+					modifier = {
+						factor = 1.25
+						trait = shy
+					}
+					modifier = {
+						factor = 2
+						trait = paranoid
+					}
+					modifier = {
+						factor = 1.25
+						trait = gregarious
+					}
+					modifier = {
+						factor = 1.3
+						trait = cruel
+					}
+
+					set_character_flag = dragon_poison_level_3
+				}
+				100 = {
+					trigger = {
+						NOR = {
+							has_character_flag = dragon_poison_normal
+							has_character_flag = dragon_poison_safe
+						}
+					}
+                    modifier = {
+                        factor = 0.80
+                        has_character_flag = dragon_poison_all_for_all
+                    }
+					modifier = {
+						factor = 2
+						intrigue = 20
+					}
+					modifier = {
+						factor = 0.5
+						NAND = {
+							intrigue = 15
+							culture = black_dragon
+						}
+					}
+					modifier = {
+						factor = 1.5
+						trait = paranoid
+					}
+					modifier = {
+						factor = 2
+						trait = gregarious
+					}
+					modifier = {
+						factor = 1.5
+						trait = deceitful
+					}
+					modifier = {
+						factor = 1.25
+						trait = brave
+					}
+
+					set_character_flag = dragon_poison_level_4
+                }
+            }
+
+            clr_character_flag = dragon_poison_normal
+            clr_character_flag = dragon_poison_hard
+            clr_character_flag = dragon_poison_all_for_all
+            clr_character_flag = dragon_poison_safe
+
+            character_event = { id = ani_plus.217 }
+        }
+    }
+}
+
+# event 217 - same loc as event 209
+character_event = {
+	id = ani_plus.217
+
+	is_triggered_only = yes
+	border = GFX_event_normal_frame_diplomacy
+	picture = GFX_evt_council
+
+	desc = DESC_ANI_209
+
+	option = {
+		name = OPTA_ANI_209
+		trigger = {
+			has_character_flag = dragon_poison_level_1
+		}
+
+		hidden_tooltip = {
+			change_variable = {
+				which = dragon_education_score
+				value = 1
+			}
+		}
+	}
+	option = {
+		name = OPTB_ANI_209
+		trigger = {
+			has_character_flag = dragon_poison_level_2
+		}
+		hidden_tooltip = {
+			change_variable = {
+				which = dragon_education_score
+				value = 2
+			}
+		}
+	}
+	option = {
+		name = OPTC_ANI_209
+		trigger = {
+			has_character_flag = dragon_poison_level_3
+		}
+
+		hidden_tooltip = {
+			change_variable = {
+				which = dragon_education_score
+				value = 3
+			}
+		}
+	}
+	option = {
+		name = OPTD_ANI_209
+		trigger = {
+			has_character_flag = dragon_poison_level_4
+		}
+		hidden_tooltip = {
+			change_variable = {
+				which = dragon_education_score
+				value = 4
+			}
+		}
+	}
+}
+
+# event 218
+character_event = {
+    id = ani_plus.218
+
+    is_triggered_only = yes
+	border = GFX_event_normal_frame_diplomacy
+	picture = GFX_evt_council
+
+	desc = DESC_ANI_218
+
+    immediate = {
+        FROM = {
+            set_character_flag = is_true_dragon_adult
+    		add_dragon_university_score_effect = yes
+        }
+    }
+
+	option = {
+		name = OPT_ANI_218
+		FROM = {
+			trigger_switch = {
+				on_trigger = culture
+				black_dragon	= { set_black_dragon_education_effect = yes }
+				white_dragon	= { set_white_dragon_education_effect = yes }
+				blue_dragon		= { set_blue_dragon_education_effect = yes }
+				yellow_dragon	= { set_yellow_dragon_education_effect = yes }
+				red_dragon		= { set_red_dragon_education_effect = yes }
+			}
+
+			add_intelligence_trait_effect = yes
+		}
+	}
+
+    after = {
+        hidden_tooltip = {
+            FROM = {
+                # removing variable from save
+                set_variable = {
+                    which = dragon_education_score
+                    value = 0
+                }
+				# removing trial flags
+				clr_character_flag = snow_trial_realized
+				clr_character_flag = fire_trial_realized
+				clr_character_flag = water_trial_realized
+				clr_character_flag = sand_trial_realized
+				clr_character_flag = poison_trial_realized
+				clr_character_flag = dragon_snow_level_1
+				clr_character_flag = dragon_snow_level_2
+				clr_character_flag = dragon_snow_level_3
+				clr_character_flag = dragon_snow_level_4
+				clr_character_flag = dragon_fire_level_1
+				clr_character_flag = dragon_fire_level_2
+				clr_character_flag = dragon_fire_level_3
+				clr_character_flag = dragon_fire_level_4
+				clr_character_flag = dragon_water_level_1
+				clr_character_flag = dragon_water_level_2
+				clr_character_flag = dragon_water_level_3
+				clr_character_flag = dragon_water_level_4
+				clr_character_flag = dragon_sand_level_1
+				clr_character_flag = dragon_sand_level_2
+				clr_character_flag = dragon_sand_level_3
+				clr_character_flag = dragon_sand_level_4
+				clr_character_flag = dragon_poison_level_1
+				clr_character_flag = dragon_poison_level_2
+				clr_character_flag = dragon_poison_level_3
+				clr_character_flag = dragon_poison_level_4
+            }
+        }
+    }
+}
+
+# event 219
+character_event = {
+    id = ani_plus.219
+
+    border = GFX_event_normal_frame_diplomacy
+	picture = GFX_evt_council
+
+	desc = DESC_ANI_219
+
+    culture = dragon_culture
+    trigger = {
+        culture = dragon_culture
+    }
+
+    mean_time_to_happen = {
+        years = 16 # 1 chance out of 2 to die
+
+        modifier = { # or delayed if hospital has incubator
+            factor = 5
+            location = {
+                hospital_has_building = ho_drg_incubator
+            }
+        }
+    }
+
+    option = {
+        name = OPT_ANI_219
+
+        death = {
+            death_reason = death_childbirth
+        }
+
+        if = {
+            limit = {
+                father = {
+                    ai = no
+                }
+            }
+
+            father = {
+                character_event = { id = ani_plus.220}
+            }
+        }
+        if = {
+            limit = {
+                mother = {
+                    ai = no
+                }
+            }
+
+            mother = {
+                character_event = { id = ani_plus.220}
+            }
+        }
+    }
+}
+
+# event 220
+character_event = {
+    id = ani_plus.220
+
+    is_triggered_only = yes
+    border = GFX_event_normal_frame_diplomacy
+	picture = GFX_evt_council
+
+	desc = DESCA_ANI_220
+
+    desc = {
+        text = DESCB_ANI_220
+        trigger = {
+            FROM = {
+                location = {
+                    hospital_has_building = ho_drg_incubator
+                }
+            }
+        }
+    }
+
+    option = {
+        name = OPTA_ANI_220
+        
+        show_portrait = FROM
+    }
+
+    option = {
+        name = OPTB_ANI_220
+
+        show_portrait = FROM
+        add_artifact = dragon_egg_artifact
+    }
+}
+
+#### event 221 to 222 : character conversion and conversion quest
+## event 221: conversion quest on event ruler
+## event 222: The dragon egg explode in the fort - convert every character in the province as a dragon
+
+# event 221
+character_event = {
+    id = ani_plus.221
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    only_playable = yes
+
+    trigger = {
+        has_game_rule = {
+            name = animals_conversion_ways
+            value = animal_events
+        }
+        Is_really_animal_trigger = no
+
+        OR = {
+            lifestyle_traits == 0
+            trait = impaler
+        }
+
+        NOT = { has_artifact = dragon_egg_artifact }
+        wealth = 500
+
+        capital_scope = {
+            has_fort = yes
+            OR = {
+                is_black_dragon_province_trigger = yes
+                is_white_dragon_province_trigger = yes
+                is_red_dragon_province_trigger = yes
+                is_blue_dragon_province_trigger = yes
+                is_yellow_dragon_province_trigger = yes
+            }
+        }
+
+        is_adult = yes
+        is_incapable = no
+        has_regent = no
+    }
+
+    mean_time_to_happen = {
+        years = 1000
+
+        modifier = {
+            factor = 0.1  # ~100 years for players
+            ai = no
+        }
+    }
+
+    desc = DESC_ANI_221
+
+    option = {
+        name = OPTA_ANI_221
+
+        wealth = -500
+        add_artifact = dragon_egg_artifact
+    }
+    option = {
+        name = OPTB_ANI_221
+    }
+}
+
+# event 222
+character_event = {
+    id = ani_plus.222
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+
+    only_playable = yes
+
+    trigger = {
+        has_artifact = dragon_egg_artifact
+
+        capital_scope = {
+            has_fort = yes
+            OR = {
+                is_black_dragon_province_trigger = yes
+                is_white_dragon_province_trigger = yes
+                is_red_dragon_province_trigger = yes
+                is_blue_dragon_province_trigger = yes
+                is_yellow_dragon_province_trigger = yes
+            }
+        }
+
+        capital_scope = {
+            ROOT = {
+                location = {
+                    province = PREVPREV
+                }
+            }
+        }
+    }
+
+    mean_time_to_happen = {
+        years = 2
+    }
+
+    desc = DESC_ANI_222
+
+    option = {
+        name = OPT_ANI_222
+        convert_to_dragon_culture_effect = yes
+    }
+}
+
+#### event 223 to 226: inheritance events
+## event 223: setup to start succession tournament
+## event 224: a duel
+## event 225: tournament end
+## event 226: hidden event to delay tournament start effect (for players)
+
+# event 226
+character_event = {
+    id = ani_plus.226
+
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        primary_title = {
+            title = FROM
+        }
+        culture_group = dragon_group
+    }
+
+    immediate = {
+        character_event = { id = ani_plus.223 days = 2 }
+
+        if = { # setting holder culture (except if egg)
+            limit = {
+                NOT = {
+                    culture = dragon_culture
+                }
+            }
+            any_demesne_province = {
+                culture = PREV
+            }
+        }
+    }
+}
+
+# event 223
+character_event = {
+    id = ani_plus.223
+
+    is_triggered_only = yes
+
+    trigger = {
+        culture_group = dragon_group
+        any_sibling = {
+            is_adult = yes
+            is_ruler = no
+            culture_group = dragon_group
+            NOT = { has_character_flag = dragon_gave_up_tournament }
+        }
+    }
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = DESC_ANI_223
+    
+    immediate = {
+        any_demesne_title = {
+            gender_succ = true_cognatic
+        }
+    }
+
+    option = {
+        name = OPT_ANI_223
+
+        character_event = { id = ani_plus.224 }
+    }
+}
+
+# event 224
+character_event = {
+    id = ani_plus.224
+
+    is_triggered_only = yes
+
+    trigger = {
+        any_sibling = {
+            is_adult = yes
+            is_ruler = no
+            culture_group = dragon_group
+            NOT = { has_character_flag = dragon_gave_up_tournament }
+        }
+    }
+    
+    fail_trigger_effect = {
+        character_event = { id = ani_plus.225 }
+    }
+    immediate = {
+        random_sibling = {
+            limit = {
+                is_adult = yes
+                is_ruler = no
+                culture_group = dragon_group
+                NOT = { has_character_flag = dragon_gave_up_tournament }
+            }
+            save_event_target_as = target_dragon_2nd_fighter
+            if = {
+                limit = {
+                    OR = {
+                        trait = content
+                        trait = craven
+                        trait = slothful
+                        trait = shy
+                    }
+                }
+                set_character_flag = dragon_gave_up_tournament
+            }
+        }
+    }
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = DESC_ANI_224
+
+    option = {
+        trigger = {
+            event_target:target_dragon_2nd_fighter = {
+                has_character_flag = dragon_gave_up_tournament
+            }
+        }
+        name = OPTA_ANI_224
+
+        event_target:target_dragon_2nd_fighter = {
+            any_claim = {
+                remove_claim = PREV
+            }
+        }
+    }
+    option = {
+        trigger = {
+            NOT = {
+                event_target:target_dragon_2nd_fighter = {
+                    has_character_flag = dragon_gave_up_tournament
+                }
+            }
+        }
+        name = OPTB_ANI_224
+
+        random_list = {
+            50 = { # ROOT victory
+                modifier = {
+                    factor = 2
+                    combat_rating_diff = {
+                        character = event_target:target_dragon_2nd_fighter
+                        value > 0
+                    }
+                }
+                modifier = {
+                    factor = 0.5
+                    combat_rating_diff = {
+                        character = event_target:target_dragon_2nd_fighter
+                        value < 0
+                    }
+                }
+                modifier = {
+                    factor = 1.75
+
+                    culture = black_dragon
+                    intrigue > event_target:target_dragon_2nd_fighter
+                }
+                modifier = {
+                    factor = 1.75
+
+                    culture = white_dragon
+                    learning > event_target:target_dragon_2nd_fighter
+                }
+                modifier = {
+                    factor = 1.75
+
+                    culture = red_dragon
+                    martial > event_target:target_dragon_2nd_fighter
+                }
+                modifier = {
+                    factor = 1.75
+
+                    culture = blue_dragon
+                    diplomacy > event_target:target_dragon_2nd_fighter
+                }
+                modifier = {
+                    factor = 1.75
+
+                    culture = yellow_dragon
+                    stewardship > event_target:target_dragon_2nd_fighter
+                }
+
+                event_target:target_dragon_2nd_fighter = {
+                    death = {
+                        killer = event_target:target_dragon_2nd_fighter
+                        death_reason = death_duel
+                    }
+                }
+            }
+            50 = { # target_dragon_2nd_fighter victory
+                modifier = {
+                    factor = 0.5
+                    combat_rating_diff = {
+                        character = event_target:target_dragon_2nd_fighter
+                        value > 0
+                    }
+                }
+                modifier = {
+                    factor = 2
+                    combat_rating_diff = {
+                        character = event_target:target_dragon_2nd_fighter
+                        value < 0
+                    }
+                }
+                modifier = {
+                    factor = 1.75
+
+                    event_target:target_dragon_2nd_fighter = {
+                        culture = black_dragon
+                        intrigue > ROOT
+                    }
+                }
+                modifier = {
+                    factor = 1.75
+                    event_target:target_dragon_2nd_fighter = {
+                        culture = white_dragon
+                        learning > ROOT
+                    }
+                }
+                modifier = {
+                    factor = 1.75
+
+                    event_target:target_dragon_2nd_fighter = {
+                        culture = red_dragon
+                        martial > ROOT
+                    }
+                }
+                modifier = {
+                    factor = 1.75
+
+                    event_target:target_dragon_2nd_fighter = {
+                        culture = blue_dragon
+                        diplomacy > ROOT
+                    }
+                }
+                modifier = {
+                    factor = 1.75
+
+                    event_target:target_dragon_2nd_fighter = {
+                        culture = yellow_dragon
+                        stewardship > ROOT
+                    }
+                }
+
+                abdicate_to = event_target:target_dragon_2nd_fighter
+                death = {
+                    killer = event_target:target_dragon_2nd_fighter
+                    death_reason = death_duel
+                }
+            }
+        }
+    }
+    
+    after = {
+        clear_event_target = target_dragon_2nd_fighter
+        if = {
+            limit = {
+                is_alive = yes
+            }
+            character_event = { id = ani_plus.224 days = 1}
+        }
+    }
+}
+
+# event 225
+character_event = {
+    id = ani_plus.225
+
+    is_triggered_only = yes
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = DESC_ANI_225
+
+    option = {
+        name = OPT_ANI_225
+    }
+}
+
+#### event 227 to 229: warfare events
+## event 227: force women status law 
+## event 228: removed
+## event 229: remove tributaries on dragon war loss
+
+# event 227
+character_event = {
+    id = ani_plus.227
+
+    only_playable = yes
+
+    hide_window = yes
+
+    trigger = {
+        government = dragon_tribal_gov
+        NOT = { has_law = status_of_women_4 }
+    }
+    mean_time_to_happen = {
+        months = 5
+    }
+    immediate = {
+        primary_title = {
+            add_law = status_of_women_4
+        }
+    }
+}
+
+# event 228
+#character_event = {
+#    id = ani_plus.228
+#    
+#    only_playable = yes
+#    hide_window = yes
+#
+#    trigger = {
+#        has_law = vassal_wars_law_2
+#        NOT = { is_law_potential = vassal_wars_law_2 }
+#    }
+#    mean_time_to_happen = {
+#        months = 5
+#    }
+#
+#    immediate = {
+#        any_demesne_title = {
+#            revoke_law = vassal_wars_law_2
+#        }
+#    }
+#}
+
+# event 229
+character_event = {
+    id = ani_plus.229
+
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        FROM = {
+            government = dragon_tribal_gov
+        }
+    }
+
+    immediate = {
+        FROM = {
+            any_tributary = {
+                remove_tributary = PREV
+                any_realm_province = {
+                    limit = {
+                        has_fort = yes
+                        fort_has_building = fo_drg_guardian_01
+                    }
+                    destroy_fort = THIS
+                }
+            }
+        }
+    }
+}
+
+#### event 230 to 233 and 246: fort and culture province events
+## event 230: a dragon absorb a province into his own realm
+##              also convert that same province into his culture
+## event 231: dragon notification for obtaining a new province
+## event 232: top liege notification for losing a province
+## event 233: removing influence if not tributary
+## event 234: dragon owned province without fort get independence
+## event 246: updating culture if dragon is not a province ruler
+
+# event 230
+province_event = {
+    id = ani_plus.230
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = DESC_ANI_230
+
+    trigger = {
+        has_fort = yes
+        holder_scope = {
+            top_liege = {
+                is_tributary = {
+                    type = dragon_vassal_tributary
+                }
+            }
+            war = no
+            OR = {
+                independent = yes
+                any_liege = {
+                    war = no
+                }
+            }
+        }
+    }
+
+    mean_time_to_happen = {
+        years = 2000
+
+        modifier = { # direct neighbor
+            factor = 0.5
+
+            any_neighbor_province = {
+                has_owner = yes
+                culture_group = dragon_group
+            }
+        }
+        modifier = { # direct naval neighbor
+            factor = 0.75
+
+            any_neighbor_province = {
+                is_land = no
+                any_neighbor_province = {
+                    has_owner = yes
+                    culture_group = dragon_group
+                }
+            }
+        }
+        modifier = { # undirect naval neighbor
+            factor = 0.875
+
+            NOT = {
+                any_neighbor_province = {
+                    is_land = no
+                    any_neighbor_province = {
+                        has_owner = yes
+                        culture_group = dragon_group
+                    }
+                }
+            }
+
+            any_neighbor_province = {
+                is_land = no
+                any_neighbor_province = {
+                    is_land = no
+                    any_neighbor_province = {
+                        OR = {
+                            AND = {
+                                has_owner = yes
+                                culture_group = dragon_group
+                            }
+                            AND = {
+                                is_land = no
+                                any_neighbor_province = {
+                                    has_owner = yes
+                                    culture_group = dragon_group
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        modifier = { # 500 years if direct neighbor
+            factor = 0.5
+            fort_has_building = fo_drg_guardian_01
+        }
+        modifier = { # 250 years if direct neighbor
+            factor = 0.5
+            fort_has_building = fo_drg_guardian_02
+        }
+        modifier = { # 100 years if direct neighbor
+            factor = 0.4
+            fort_has_building = fo_drg_guardian_03
+        }
+        modifier = { # 50 years if direct neighbor
+            factor = 0.5
+            fort_has_building = fo_drg_guardian_04
+        }
+        modifier = { # 20 years if direct neighbor
+            factor = 0.5
+            fort_has_building = fo_drg_guardian_05
+        }
+        modifier = { # 12 years if direct neighbor
+            factor = 0.6
+            fort_has_building = fo_drg_guardian_06
+        }
+        modifier = { # 6 years if direct neighbor
+            factor = 0.5
+            fort_has_building = fo_drg_guardian_07
+        }
+        modifier = { # ~4 years if direct neighbor
+            factor = 0.666
+            fort_has_building = fo_drg_guardian_08
+        }
+        modifier = { # ~2 years if direct neighbor
+            factor = 0.5
+            fort_has_building = fo_drg_guardian_09
+        }
+        modifier = { # ~1 year if direct neighbor
+            factor = 0.5
+            fort_has_building = fo_drg_guardian_10
+        }
+    }
+
+    immediate = {
+        holder_scope = {
+            top_liege = {
+                suzerain = {
+                    save_event_target_as = dragon_new_county_owner
+                }
+            }
+        }
+
+        event_target:dragon_new_county_owner = {
+            character_event = { id = ani_plus.231 }
+        }
+
+        if = {
+            limit = {
+                holder_scope = {
+                    NOT = { character = top_liege }
+                }
+            }
+            letter_event = { id = ani_plus.232 }
+        }
+    }
+    option = {
+        name = OPT_ANI_230
+        county = {
+            gain_title = {
+                target = event_target:dragon_new_county_owner
+                type = usurp
+            }
+        }
+        
+        hidden_tooltip = { # updating county culture before being given
+            culture = event_target:dragon_new_county_owner
+        }
+    }
+}
+
+# event 231
+character_event = {
+    id = ani_plus.231
+
+    is_triggered_only = yes
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = DESC_ANI_231
+
+    option = {
+        name = OPT_ANI_231
+    }
+}
+
+# event 232
+letter_event = {
+    id = ani_plus.232
+
+    is_triggered_only = yes
+    border = GFX_event_letter_frame_diplomacy
+    desc = DESC_ANI_232
+
+    option = {
+        name = OPT_ANI_232
+    }
+}
+
+# event 233
+province_event = {
+    id = ani_plus.233
+
+    hide_window = yes
+
+    trigger = {
+        has_fort = yes
+        fort_has_building = fo_drg_guardian_01
+        NOT = { culture_group = dragon_group }
+
+        holder_scope = {
+            top_liege = {
+                NOT = {
+                    is_tributary = {
+                        type = dragon_vassal_tributary
+                    }
+                }
+            }
+        }
+    }
+    
+    mean_time_to_happen = {
+        months = 30
+    }
+
+    immediate = {
+        destroy_fort = ROOT
+    }
+}
+
+# event 234
+province_event = {
+    id = ani_plus.234
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = DESC_ANI_234
+
+    trigger = {
+        NOR = {
+            has_fort = yes
+            fort_has_building = fo_drg_guardian_01
+            fort_is_building = fo_drg_guardian_01
+        }
+        holder_scope = {
+            government = dragon_tribal_gov
+        }
+        
+        is_occupied = no
+    }
+    mean_time_to_happen = {
+        months = 1
+
+        modifier = {
+            factor = 120 # 10 years
+
+            holder_scope = {
+                OR = {
+                    war = yes
+                    any_liege = {
+                        war = yes
+                    }
+                }
+            }
+        }
+    }
+
+    option = {
+        name = OPT_ANI_234
+        
+        custom_tooltip = {
+            text = TT_dragon_loose_province_fort
+            
+            if = {
+                limit = {
+                    NOT = {
+                        culture_group = dragon_group
+                    }
+                }
+
+                create_character = {
+                    age = 20
+                    attributes = {
+                        martial = 20
+                        diplomacy = 20
+                        stewardship = 10
+                        intrigue = 15
+                        learning = 10
+                    }
+                    female = no
+                    dynasty = none
+                }
+            }
+            else = {
+                create_character = {
+                    age = 20
+                    attributes = {
+                        martial = 20
+                        diplomacy = 20
+                        stewardship = 10
+                        intrigue = 15
+                        learning = 10
+                    }
+                    female = no
+                    dynasty = none
+                    culture = random
+                }
+            }
+
+            culture = new_character
+            county = {
+                gain_title_plus_barony_if_unlanded = new_character
+            }
+
+            new_character = {
+                set_defacto_liege = THIS
+                spawn_unit = {
+                    province = PREV
+                    home = PREV
+                    owner = THIS
+                    troops = {
+                        pikemen = { 1000 1000 }
+                    }
+                    scaled_by_biggest_garrison = 1
+                    disband_on_peace = no
+                    cannot_inherit = yes
+                    reinforces = no
+                    merge = yes
+                }
+                spawn_unit = {
+                    province = PREV
+                    home = PREV
+                    owner = THIS
+                    troops = {
+                        pikemen = { 1000 1000 }
+                    }
+                    scaled_by_biggest_garrison = 1
+                    disband_on_peace = no
+                    cannot_inherit = yes
+                    reinforces = no
+                    merge = yes
+                }
+                spawn_unit = {
+                    province = PREV
+                    home = PREV
+                    owner = THIS
+                    troops = {
+                        pikemen = { 1000 1000 }
+                    }
+                    scaled_by_biggest_garrison = 1
+                    disband_on_peace = no
+                    cannot_inherit = yes
+                    reinforces = no
+                    merge = yes
+                }
+
+                wealth = 200
+            }
+            hidden_effect = {
+                generate_tooltip = no
+                random_character = {
+                    limit = { NOT = { religion = Dragon_religion } }
+                    preferred_limit = {
+                        location = {
+                            distance = {
+                                where = ROOT
+                                distance == 0
+                            }
+                        }
+                    }
+                    preferred_limit = {
+                        location = {
+                            distance = {
+                                where = ROOT
+                                distance <= 10
+                            }
+                        }
+                    }
+                    preferred_limit = {
+                        location = {
+                            distance = {
+                                where = ROOT
+                                distance <= 25
+                            }
+                        }
+                    }
+                    preferred_limit = {
+                        location = {
+                            distance = {
+                                where = ROOT
+                                distance <= 50
+                            }
+                        }
+                    }
+                    preferred_limit = {
+                        location = {
+                            distance = {
+                                where = ROOT
+                                distance <= 100
+                            }
+                        }
+                    }
+                    preferred_limit = {
+                        location = {
+                            distance = {
+                                where = ROOT
+                                distance <= 250
+                            }
+                        }
+                    }
+                    preferred_limit = {
+                        location = {
+                            distance = {
+                                where = ROOT
+                                distance <= 500
+                            }
+                        }
+                    }
+                    preferred_limit = {
+                        location = {
+                            distance = {
+                                where = ROOT
+                                distance <= 1000
+                            }
+                        }
+                    }
+                    preferred_limit = {
+                        location = {
+                            distance = {
+                                where = ROOT
+                                distance <= 2500
+                            }
+                        }
+                    }
+                    preferred_limit = {
+                        location = {
+                            distance = {
+                                where = ROOT
+                                distance <= 5000
+                            }
+                        }
+                    }
+
+                    new_character = {
+                        religion = PREV
+                    }
+                }
+                religion = new_character
+            }
+        }
+    }
+}
+
+# event 246
+province_event = {
+    id = ani_plus.246
+
+    hide_window = yes
+
+    trigger = {
+        culture_group = dragon_group
+        holder_scope = {
+            NOT = { culture_group = dragon_group }
+        }
+    }
+    mean_time_to_happen = {
+        months = 1
+    }
+
+    immediate = {
+        culture = holder_scope
+        religion = holder_scope
+    }
+}
+
+#### event 235 to 245: instability events
+## event 235: letter to non-dragon vassal to get their independance (at tributary price)
+## event 236: lack of influence - loosing fort
+## event 237: lack of governance (and money)
+## event 238: vassal rebellion - 3 possibilities:
+#               1. death duel to calm down dragon
+#               2. give vassal independence
+#               3. let other vassal decide
+## event 239: death duel choice - vassal notification
+## event 240: death duel choice - duel itself
+## event 241: death duel choice - notification duel win (and obtaining liege main title)
+## event 242: independence choice - notification to give independence
+## event 243: other vassal choice - vassal notification
+## event 244: other vassal choice - result (liege)
+## event 245: other vassal choice - vassal result notification
+
+# event 235
+letter_event = {
+    id = ani_plus.235
+
+    is_triggered_only = yes
+    border = GFX_event_letter_frame_diplomacy
+    desc = DESC_ANI_235
+
+    option = {
+        name = OPTA_ANI_235
+
+        
+        make_tributary = {
+            who = FROMFROM
+            tributary_type = dragon_vassal_tributary
+        }
+
+        ai_chance = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+                OR = {
+                    trait = charitable
+                    trait = content
+                }
+            }
+        }
+    }
+    option = {
+        name = OPTB_ANI_235
+
+        ai_chance = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+                NOR = {
+                    trait = charitable
+                    trait = content
+                }
+            }
+        }
+    }
+}
+
+# event 236
+province_event = {
+    id = ani_plus.236
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = DESC_ANI_236
+
+    trigger = {
+        culture_group = dragon_group
+        has_fort = yes
+        NOR = {
+            fort_has_building = fo_drg_guardian_10
+            fort_is_building = fo_drg_guardian_10
+        }
+        is_capital = no
+    }
+
+    mean_time_to_happen = {
+        months = 6
+        modifier = {
+            factor = 10
+
+            OR = {
+                fort_has_building = fo_drg_guardian_01
+                fort_is_building  = fo_drg_guardian_01
+            }
+        }
+        modifier = {
+            factor = 2
+
+            OR = {
+                fort_has_building = fo_drg_guardian_02
+                fort_is_building  = fo_drg_guardian_02
+            }
+        }
+        modifier = {
+            factor = 2.5
+
+            OR = {
+                fort_has_building = fo_drg_guardian_03
+                fort_is_building  = fo_drg_guardian_03
+            }
+        }
+        modifier = {
+            factor = 2
+
+            OR = {
+                fort_has_building = fo_drg_guardian_04
+                fort_is_building  = fo_drg_guardian_04
+            }
+        }
+        modifier = {
+            factor = 2
+
+            OR = {
+                fort_has_building = fo_drg_guardian_05
+                fort_is_building  = fo_drg_guardian_05
+            }
+        }
+        modifier = {
+            factor = 2
+
+            OR = {
+                fort_has_building = fo_drg_guardian_06
+                fort_is_building  = fo_drg_guardian_06
+            }
+        }
+        modifier = {
+            factor = 2
+
+            OR = {
+                fort_has_building = fo_drg_guardian_07
+                fort_is_building  = fo_drg_guardian_07
+            }
+        }
+        modifier = {
+            factor = 2
+
+            OR = {
+                fort_has_building = fo_drg_guardian_08
+                fort_is_building  = fo_drg_guardian_08
+            }
+        }
+        modifier = {
+            factor = 2
+
+            OR = {
+                fort_has_building = fo_drg_guardian_09
+                fort_is_building  = fo_drg_guardian_09
+            }
+        }
+        modifier = {
+            factor = 2
+            holder_scope = {
+                diplomacy = 15
+            }
+        }
+        modifier = {
+            factor = 0.5
+            holder_scope = {
+                NOT = { diplomacy = 5 }
+            }
+        }
+        modifier = {
+            factor = 4
+            holder_scope = {
+                stewardship = 15
+            }
+        }
+        modifier = {
+            factor = 0.5
+            holder_scope = {
+                NOT = { stewardship = 10 }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            holder_scope = {
+                NOT = { stewardship = 5 }
+            }
+        }
+    }
+
+    option = {
+        name = OPT_ANI_236
+
+        destroy_fort = ROOT
+    }
+}
+
+# event 237
+province_event = {
+    id = ani_plus.237
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = DESC_ANI_237
+
+    trigger = {
+        is_capital = yes
+        
+        OR = {
+            NOT = { fort_has_building = fo_drg_heart_3 }
+            holder_scope = { wealth < 0 }
+        }
+
+        holder_scope = {
+            any_vassal = {
+                higher_tier_than = BARON
+            }
+            independent = yes
+        }
+    }
+
+    mean_time_to_happen = {
+        years = 10
+
+        modifier = {
+            factor = 10
+
+            fort_has_building = fo_drg_heart_1
+        }
+        modifier = {
+            factor = 10
+
+            fort_has_building = fo_drg_heart_2
+        }
+        modifier = {
+            factor = 0.1
+
+            holder_scope = {
+                NOT = { wealth = -450 }
+            }
+        }
+        modifier = {
+            factor = 0.2
+
+            holder_scope = {
+                NOT = { wealth = 0 }
+            }
+        }
+        modifier = {
+            factor = 0.5
+
+            holder_scope = {
+                NOT = { wealth = 200 }
+            }
+        }
+        modifier = {
+            factor = 2
+
+            holder_scope = {
+                wealth = 500
+            }
+        }
+        modifier = {
+            factor = 2
+
+            holder_scope = {
+                wealth = 1000
+            }
+        }
+        modifier = {
+            factor = 2
+
+            holder_scope = {
+                wealth = 2000
+            }
+        }
+        modifier = {
+            factor = 2
+
+            holder_scope = {
+                wealth = 5000
+            }
+        }
+        modifier = {
+            factor = 0.5
+
+            holder_scope = {
+                higher_tier_than = COUNT
+            }
+        }
+        modifier = {
+            factor = 0.5
+
+            holder_scope = {
+                higher_tier_than = DUKE
+            }
+        }
+        modifier = {
+            factor = 0.5
+
+            holder_scope = {
+                higher_tier_than = KING
+            }
+        }
+    }
+
+    option = {
+        name = OPT_ANI_237
+
+        holder_scope = {
+            random_vassal = {
+                limit = {
+                    liege = {
+                        character = PREVPREV
+                    }
+                    higher_tier_than = BARON
+                }
+
+                set_defacto_liege = THIS
+            } 
+        }
+    }
+}
+
+# event 238
+character_event = {
+    id = ani_plus.238
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = DESC_ANI_238
+
+    is_triggered_only = yes
+    
+    immediate = {
+        FROMFROM = {
+            save_event_target_as = dragon_vassal_unsatisfied
+        }
+    }
+
+    option = {
+        name = OPTA_ANI_238
+        show_portrait = event_target:dragon_vassal_unsatisfied
+
+        event_target:dragon_vassal_unsatisfied = {
+            letter_event = { id = ani_plus.239 }
+        }
+        ROOT = {
+            custom_tooltip = {
+                text = TT_dragon_duel_in_7_days
+                character_event = { id = ani_plus.240 days = 7}
+            }
+        }
+
+
+        ai_chance = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+
+                OR = {
+                    culture = dragon_culture
+                    culture = blue_dragon
+                    culture = white_dragon
+                    culture = yellow_dragon
+                }
+            }
+        }
+    }
+    option = {
+        name = OPTB_ANI_238
+        show_portrait = event_target:dragon_vassal_unsatisfied
+        
+        event_target:dragon_vassal_unsatisfied = {
+            custom_tooltip = {
+                text = TT_dragon_became_indep
+                letter_event = { id = ani_plus.242}
+            }
+        }
+
+        ai_chance = {
+            factor = 0
+
+            additive_modifier = {
+                value = 1
+
+                culture = dragon_culture
+            }
+        }
+    }
+    option = {
+        name = OPTC_ANI_238
+        trigger = {
+            any_vassal = {
+                liege = {
+                    character = ROOT
+                }
+                NOT = {
+                    character = event_target:dragon_vassal_unsatisfied
+                }
+                higher_tier_than = BARON
+            }
+        }
+        show_portrait = event_target:dragon_vassal_unsatisfied
+
+        event_target:dragon_vassal_unsatisfied = {
+            letter_event = { id = ani_plus.243 }
+        }
+        ROOT = {
+            custom_tooltip = {
+                text = TT_dragon_vote_soon
+                character_event = { id = ani_plus.244 days = 3 random = 5}
+            }
+        }
+
+        ai_chance = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+
+                OR = {
+                    culture = dragon_culture
+                    culture = red_dragon
+                    culture = black_dragon
+                }
+            }
+        }
+    }
+}
+
+# event 239
+letter_event = {
+    id = ani_plus.239
+
+    is_triggered_only = yes
+    border = GFX_event_letter_frame_diplomacy
+    desc = DESC_ANI_239
+
+    option = {
+        name = OPT_ANI_239
+    }
+}
+
+# event 240
+character_event = {
+    id = ani_plus.240
+
+    is_triggered_only = yes
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = DESC_ANI_240
+
+    trigger = {
+        ROOT = {
+            is_alive = yes
+        }
+        FROM = {
+            is_alive = yes
+        }
+    }
+
+    option = {
+        name = OPT_ANI_240
+
+        random_list = {
+            100 = { # liege victory
+                modifier = {
+                    factor = 2
+                    combat_rating_diff = {
+                        character = event_target:dragon_vassal_unsatisfied
+                        value > 0
+                    }
+                }
+                modifier = {
+                    factor = 0.5
+                    combat_rating_diff = {
+                        character = event_target:dragon_vassal_unsatisfied
+                        value < 0
+                    }
+                }
+                modifier = {
+                    factor = 1.75
+
+                    culture = black_dragon
+                    intrigue > event_target:dragon_vassal_unsatisfied
+                }
+                modifier = {
+                    factor = 1.75
+
+                    culture = white_dragon
+                    learning > event_target:dragon_vassal_unsatisfied
+                }
+                modifier = {
+                    factor = 1.75
+
+                    culture = red_dragon
+                    martial > event_target:dragon_vassal_unsatisfied
+                }
+                modifier = {
+                    factor = 1.75
+
+                    culture = blue_dragon
+                    diplomacy > event_target:dragon_vassal_unsatisfied
+                }
+                modifier = {
+                    factor = 1.75
+
+                    culture = yellow_dragon
+                    stewardship > event_target:dragon_vassal_unsatisfied
+                }
+
+                event_target:dragon_vassal_unsatisfied = {
+                    custom_tooltip = {
+                        text = TT_dragon_looses_death_duel
+                        set_character_flag = dragon_looses_death_duel
+                        character_event = { id = ani_plus.241 }
+                    }
+                    
+                }
+            }
+            100 = { # dragon_vassal_unsatisfied victory
+                modifier = {
+                    factor = 0.5
+                    combat_rating_diff = {
+                        character = event_target:dragon_vassal_unsatisfied
+                        value > 0
+                    }
+                }
+                modifier = {
+                    factor = 2
+                    combat_rating_diff = {
+                        character = event_target:dragon_vassal_unsatisfied
+                        value < 0
+                    }
+                }
+                modifier = {
+                    factor = 1.75
+
+                    event_target:dragon_vassal_unsatisfied = {
+                        culture = black_dragon
+                        intrigue > ROOT
+                    }
+                }
+                modifier = {
+                    factor = 1.75
+                    event_target:dragon_vassal_unsatisfied = {
+                        culture = white_dragon
+                        learning > ROOT
+                    }
+                }
+                modifier = {
+                    factor = 1.75
+
+                    event_target:dragon_vassal_unsatisfied = {
+                        culture = red_dragon
+                        martial > ROOT
+                    }
+                }
+                modifier = {
+                    factor = 1.75
+
+                    event_target:dragon_vassal_unsatisfied = {
+                        culture = blue_dragon
+                        diplomacy > ROOT
+                    }
+                }
+                modifier = {
+                    factor = 1.75
+
+                    event_target:dragon_vassal_unsatisfied = {
+                        culture = yellow_dragon
+                        stewardship > ROOT
+                    }
+                }
+
+                primary_title = {
+                    save_event_target_as = dragon_main_title
+                }
+
+                custom_tooltip = {
+                    text = TT_dragon_wins_death_duel
+                    any_demesne_title = {
+                        limit = {
+                            tier = event_target:dragon_main_title
+                        }
+                        event_target:dragon_vassal_unsatisfied = {
+                            usurp_title = {
+                                target = PREV
+                                type = duel
+                            }
+                        }
+                    }
+
+                    event_target:dragon_vassal_unsatisfied = {
+                        set_character_flag = dragon_wins_death_duel
+                        character_event = { id = ani_plus.241 }
+                    }
+
+
+                    death = {
+                        killer = event_target:dragon_vassal_unsatisfied
+                        death_reason = death_duel
+                    }
+                }
+            }
+        }
+    }
+}
+
+# event 241
+character_event = {
+    id = ani_plus.241
+
+    is_triggered_only = yes
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = DESC_ANI_241
+
+    option = {
+        trigger = {
+            has_character_flag = dragon_looses_death_duel
+        }
+        name = OPTA_ANI_241
+        clr_character_flag = dragon_looses_death_duel
+
+        death = {
+            killer = FROM
+            death_reason = death_duel
+        }
+    }
+
+    option = {
+        trigger = {
+            has_character_flag = dragon_wins_death_duel
+        }
+        name = OPTB_ANI_241
+        clr_character_flag = dragon_wins_death_duel
+    }
+}
+
+# event 242
+letter_event = {
+    id = ani_plus.242
+
+    is_triggered_only = yes
+    border = GFX_event_letter_frame_diplomacy
+    desc = DESC_ANI_242
+
+    option = {
+        name = OPT_ANI_242
+
+        set_defacto_liege = THIS
+    }
+}
+
+# event 243
+letter_event = {
+    id = ani_plus.243
+    
+    is_triggered_only = yes
+    border = GFX_event_letter_frame_diplomacy
+    desc = DESC_ANI_243
+
+    option = {
+        name = OPT_ANI_243
+    }
+}
+
+# event 244
+character_event = {
+    id = ani_plus.244
+
+    is_triggered_only = yes
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = DESC_ANI_244
+
+    trigger = {
+        ROOT = {
+            is_alive = yes
+        }
+        FROM = {
+            is_alive = yes
+        }
+    }
+
+    immediate = {
+        set_variable = {
+            which = local_dragon_vassal_score
+            value = 0
+        }
+        any_vassal = {
+            limit = {
+                liege = {
+                    character = ROOT
+                }
+                NOT = {
+                    character = event_target:dragon_vassal_unsatisfied
+                }
+                higher_tier_than = BARON
+            }
+
+            if = {
+                limit = {
+                    likes_better_than = {
+                        who = ROOT
+                        than = event_target:dragon_vassal_unsatisfied
+                    }
+                }
+                ROOT = {
+                    change_variable = {
+                        which = local_dragon_vassal_score
+                        value = 1
+                    }
+                }
+            }
+            else = {
+                ROOT = {
+                    change_variable = {
+                        which = local_dragon_vassal_score
+                        value = -1
+                    }
+                }
+            }
+        }
+
+        
+        primary_title = {
+            save_event_target_as = dragon_main_title
+        }
+    }
+
+    option = {
+        name = OPTA_ANI_244
+        trigger = {
+            check_variable = {
+                which = local_dragon_vassal_score
+                value >= 0
+            }
+        }
+        
+        event_target:dragon_vassal_unsatisfied = {
+            custom_tooltip = {
+                text = TT_dragon_imprisoned
+
+                set_character_flag = dragon_looses_contest
+                character_event = { id = ani_plus.245 }
+            }
+        }
+    }
+    option = {
+        name = OPTB_ANI_244
+        trigger = {
+            check_variable = {
+                which =  local_dragon_vassal_score
+                value < 0
+            }
+        }
+
+        custom_tooltip = {
+            text = TT_dragon_won_contest
+            event_target:dragon_vassal_unsatisfied = {
+                set_character_flag = dragon_wins_contest
+                character_event = { id = ani_plus.245 }
+            }
+            
+            any_demesne_title = {
+                limit = {
+                    tier = event_target:dragon_main_title
+                }
+                event_target:dragon_vassal_unsatisfied = {
+                    usurp_title = {
+                        target = PREV
+                        type = election
+                    }
+                }
+            }
+        }
+    }
+}
+
+# event 245
+character_event = {
+    id = ani_plus.245
+
+    is_triggered_only = yes
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = DESC_ANI_245
+
+    option = {
+        name = OPTA_ANI_245
+        trigger = {
+            has_character_flag = dragon_looses_contest
+        }
+        clr_character_flag = dragon_looses_contest
+
+        imprison = FROM
+    }
+    option = {
+        name = OPTB_ANI_245
+        trigger = {
+            has_character_flag = dragon_wins_contest
+        }
+        clr_character_flag = dragon_wins_contest
+    }
+}

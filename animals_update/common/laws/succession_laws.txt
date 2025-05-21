@@ -51,6 +51,7 @@ succession_laws = {
 			}
 			is_primary_type_title = no
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
+			NOT = { holder_scope = { government = dragon_tribal_gov } }
 		}
 		allow = {
 			holder_scope = {
@@ -171,6 +172,7 @@ succession_laws = {
 			is_primary_type_title = no
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
 			NOT = { holder_scope = { government = chinese_imperial_government } }
+			NOT = { holder_scope = { government = dragon_tribal_gov } }
 		}
 		allow = {
 			conditional_tooltip = {
@@ -293,6 +295,7 @@ succession_laws = {
 			is_primary_type_title = no
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
 			NOT = { holder_scope = { government = chinese_imperial_government } }
+			NOT = { holder_scope = { government = dragon_tribal_gov } }
 		}
 		allow = {
 			conditional_tooltip = {
@@ -424,6 +427,7 @@ succession_laws = {
 			}
 
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
+			NOT = { holder_scope = { government = dragon_tribal_gov } }
 		}
 
 		allow = {
@@ -572,10 +576,17 @@ succession_laws = {
 					}
 				}
 				has_title_flag = alternate_byz
+				holder_scope = { government = dragon_tribal_gov }
 			}
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
 		}
 		allow = {
+			conditional_tooltip = {
+				trigger = {
+					holder_scope = { government = dragon_tribal_gov }
+				}
+				always = yes
+			}
 			conditional_tooltip = {
 				trigger = {
 					has_dlc = "Conclave"
@@ -583,6 +594,7 @@ succession_laws = {
 						NOR = {
 							government = panda_bureaucratic_gov
 							government = panda_bureaucratic_gov_bis
+							government = dragon_tribal_gov
 						}
 					}
 				}
@@ -611,6 +623,7 @@ succession_laws = {
 				trigger = {
 					NOT = { has_dlc = "Conclave" }
 					NOT = { has_law = succ_hre_elective }
+					NOT = { holder_scope = { government = dragon_tribal_gov } }
 				}
 				OR = {
 					holder_scope = { # Viceroyalties can always have primogeniture if not muslim
@@ -633,12 +646,16 @@ succession_laws = {
 			custom_tooltip = {
 				text = not_forced_tt
 				hidden_tooltip = {
-					holder_scope = { NOT = { has_character_flag = liege_forced_succ_law } }
+					OR = {
+						holder_scope = { NOT = { has_character_flag = liege_forced_succ_law } }
+						holder_scope = { government = dragon_tribal_gov }
+					}
 				}
 			}
 			conditional_tooltip = {
 				trigger = {
 					has_dlc = "Conclave"
+					NOT = { holder_scope = { government = dragon_tribal_gov } }
 				}
 				custom_tooltip = {
 					text = forced_elective_tt
@@ -770,6 +787,7 @@ succession_laws = {
 				title = e_hre
 				has_title_flag = alternate_hre
 			}
+			NOT = { holder_scope = { government = dragon_tribal_gov } }
 		}
 		allow = {
 			custom_tooltip = {
@@ -873,6 +891,7 @@ succession_laws = {
 			}
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
 			NOT = { holder_scope = { government = chinese_imperial_government } }
+			NOT = { holder_scope = { government = dragon_tribal_gov } }
 		}
 		allow = {
 			custom_tooltip = {
@@ -932,6 +951,7 @@ succession_laws = {
 			#is_primary_type_title = no
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
 			NOT = { holder_scope = { government = chinese_imperial_government } }
+			NOT = { holder_scope = { government = dragon_tribal_gov } }
 
 		}
 		allow = {
@@ -1017,6 +1037,7 @@ succession_laws = {
 			}
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
 			NOT = { holder_scope = { government = chinese_imperial_government } }
+			NOT = { holder_scope = { government = dragon_tribal_gov } }
 
 		}
 		allow = {
@@ -1159,6 +1180,7 @@ succession_laws = {
 				}
 			}
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
+			NOT = { holder_scope = { government = dragon_tribal_gov } }
 		}
 		allow = {
 			conditional_tooltip = {
@@ -1315,6 +1337,7 @@ succession_laws = {
 				}
 			}
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
+			NOT = { holder_scope = { government = dragon_tribal_gov } }
 		}
 		effect = {
 			succession = turkish_succession
@@ -1349,6 +1372,7 @@ succession_laws = {
 			}
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
 			NOT = { holder_scope = { government = chinese_imperial_government } }
+			NOT = { holder_scope = { government = dragon_tribal_gov } }
 		}
 		effect = {
 			succession = appointment
@@ -1422,6 +1446,7 @@ succession_laws = {
 			}
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
 			NOT = { holder_scope = { government = chinese_imperial_government } }
+			NOT = { holder_scope = { government = dragon_tribal_gov } }
 		}
 
 		effect = {
@@ -1461,6 +1486,7 @@ succession_laws = {
 			is_primary_type_title = no
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
 			NOT = { holder_scope = { government = chinese_imperial_government } }
+			NOT = { holder_scope = { government = dragon_tribal_gov } }
 		}
 		effect = {
 			succession = catholic_bishopric
@@ -1486,6 +1512,7 @@ succession_laws = {
 			}
 			NOT = { holder_scope = { government = confucian_bureaucracy } }
 			NOT = { holder_scope = { government = chinese_imperial_government } }
+			NOT = { holder_scope = { government = dragon_tribal_gov } }
 		}
 		effect = {
 			succession = patrician_elective
@@ -1532,6 +1559,7 @@ gender_laws = {
 	cognatic_succession = {
 		potential = {
 			holder_scope = {
+				NOT = { government = dragon_tribal_gov }
 				NOT = { government = Eleph_feudal_gov }
 				NOT = { has_religion_feature = religion_matriarchal }
 				NOT = { has_religion_feature = religion_equal }
@@ -1618,6 +1646,7 @@ gender_laws = {
 
 		potential = {
 			holder_scope = {
+				NOT = { government = dragon_tribal_gov }
 				NOT = { has_religion_feature = religion_matriarchal }
 				NOT = { has_religion_feature = religion_equal }
 				NOT = { government = Eleph_feudal_gov }
@@ -1707,6 +1736,7 @@ gender_laws = {
 								}
 							}
 						}
+						government = dragon_tribal_gov
 					}
 				}
 			}
@@ -1728,6 +1758,7 @@ gender_laws = {
 				}
 				holder_scope = {
 					has_religion_feature = religion_equal
+					government = dragon_tribal_gov
 				}
 			}
 
@@ -1744,6 +1775,7 @@ gender_laws = {
 						religion = messalian
 						religion = mazdaki
 						has_religion_feature = religion_equal
+						government = dragon_tribal_gov
 					}
 				}
 				OR = {

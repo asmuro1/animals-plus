@@ -880,7 +880,7 @@ character_event = {
 
     trigger = {
         Is_really_animal_trigger = yes
-        NOT = { Is_animal_trigger = yes }
+        Is_animal_trigger = no
         lifestyle_traits == 0
     }
     mean_time_to_happen = {
@@ -924,6 +924,10 @@ character_event = {
         else_if = {
             limit = { culture_group = horse_group }
             add_trait = hunter
+        }
+        else = {
+            # cul_group = dragon_group
+            add_trait = impaler
         }
     }
 }

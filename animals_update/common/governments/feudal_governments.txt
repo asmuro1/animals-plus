@@ -42,6 +42,7 @@ feudal_governments = {
 				is_government_potential = dog_feudal_gov
 				is_government_potential = horse_feudal_gov
 				is_government_potential = horse_merchant_gov
+				is_government_potential = dragon_tribal_gov
 			}
 			NAND = {
 				culture_group = tibetan_group
@@ -180,7 +181,6 @@ feudal_governments = {
 		potential = {
 			OR = {
 				controls_religion = no
-				religion_group = muslim
 				has_religion_feature = religion_temporal_head
 				AND = {
 					religion = norse_pagan_reformed
@@ -264,6 +264,7 @@ feudal_governments = {
 				has_character_flag = chinese_imperial_government_preserve #keeps government when player is given culture change opton
 			}
 			is_patrician = no
+			NOT = { is_government_potential = dragon_tribal_gov }
 		}
 
 		color = { 118 255 163 }
@@ -365,6 +366,7 @@ feudal_governments = {
 					}
 				}
 			}
+			NOT = { is_government_potential = dragon_tribal_gov }
 		}
 
 		color = { 169 169 169 }
@@ -427,6 +429,7 @@ feudal_governments = {
 				}
 			}
 			is_patrician = no
+			NOT = { is_government_potential = dragon_tribal_gov }
 		}
 
 		color = { 143 12 125 }

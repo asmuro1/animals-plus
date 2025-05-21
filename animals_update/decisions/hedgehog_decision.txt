@@ -703,14 +703,18 @@ title_decisions = {
             modifier = {
                 factor = 0
 
-                FROM = { government = nomadic_government }
+                FROM = {
+                    OR = {
+                        government = nomadic_government
+                        government = dragon_tribal_gov
+                    }
+                }
             }
             modifier = {
                 factor = 0
                 FROM = {
                     NOR = {
                         culture_group = hedgehog_group
-                        culture_group = dragon_group  #during its update, it will probably also need fort
                         trait = administrator
                         trait = impaler
                         trait = architect

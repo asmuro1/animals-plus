@@ -343,3 +343,29 @@ king_guards_adj;royal;royal;;;;;;;;;;;;x
 emperor_guards_adj;imperial;impériale;;;;;;;;;;;;x
 king_guards_rank;king;roi;;;;;;;;;;;;x
 emperor_guards_rank;emperor;empereur;;;;;;;;;;;;x
+
+#### DRAGON update
+dragon_lay_egg;Lay an egg;Pondre un œuf;;;;;;;;;;;;x
+dragon_lay_egg_desc;The only way a dragon has to reproduce is to lay a draggon egg. Even if the egg might never hatch, laying one is still necessary;La seule méthode qu'un dragon a pour se reproduire est de pondre un œuf. Même s'il n'est pas sûre qu'il éclose, en pondre un est mieux que rien du tout;;;;;;;;;;;;x
+go_search_for_dragon_egg;Buy the legendary dragon egg;Acheter l'œuf de dragon légendaire;;;;;;;;;;;;x
+go_search_for_dragon_egg_desc;Their are legends that say that an unique dragon egg exist. But recently, a merchant did found it and propose me to buy it;Il y a des légendes qui disent qu'un œuf de dragon a été caché à ma capitale. En porofitant de cette légende, un marchand me propose de lui en acheter un;;;;;;;;;;;;x
+dragon_goes_battlefield;come into the battlefield;Intégrer le champs de bataille;;;;;;;;;;;;x
+dragon_goes_battlefield_desc;By entering the battlefield, you can have some loyal dragon come with you;En entrant sur le champs de bataille, un certain nombre de dragon loyaux se joindront à toi;;;;;;;;;;;;x
+dragon_convert_to_tribal;Plunder the property;Piller la propriété;;;;;;;;;;;;x
+dragon_convert_to_tribal_desc;By plundering the whole property, you take everything with value and let the minimum living inside;En pillant la propriété, on prend tout ce qui a de la valeur. On laisse après que ce qui est nécessaire à la vie dans le comté;;;;;;;;;;;;x
+dragon_start_to_loot_tributary_province;Start integrating the province;Démarer l'intégration de la province;;;;;;;;;;;;x
+dragon_start_to_loot_tributary_province_desc;By creating an outpost, you can start influencing the province. With time, if the outpost is developped corretly, the province can be integrated.;En créant un avant-poste draconnique, il est possible d'influencer la province. Lorsque la province est suffisemment influencé, elle peut être absorbé dans un empire draconnique;;;;;;;;;;;;x
+dragon_increase_fort_fortification;increase draconic influence;augmenter l'influence draconique;;;;;;;;;;;;x
+dragon_increase_fort_fortification_desc;By increasing your influence, you increase the odd of integrating the province into your territory.;En augmentant l'influence draconique, on augmente les chances d'intégrations de la province à un territoire draconique.;;;;;;;;;;;;x
+dragon_vassal_take_independence;take my independence;Prendre son indépendance;;;;;;;;;;;;x
+dragon_vassal_take_independence_desc;As I have nothing to do with a dragon, i can proclam my independence. Even the dragon will agreed, but at what price?;En n'ayant rien a voir avec les dragons, je peux prendre mon indépendance sans que cela pose de problème à quiquonque. Cependant, à quel prix ce sera?;;;;;;;;;;;;x
+dragon_vassal_unsatisfied;Affirm my unsatisfaction;Contester la gouvernance de [Root.GetTitledFirstName];;;;;;;;;;;;x
+dragon_vassal_unsatisfied_desc;As [Root.GetTitledFirstName] is a bad ruler, I can try to weaken it's administration. But that can come with a price;Avec l'administration médiocre de [Root.GetTitledFirstName], je peux tenter d'affaiblir son administration. Cependant, ce sera à mes risques et périls;;;;;;;;;;;;x
+
+TT_dragon_did_not_lay_egg_recently;Did not lay an egg recently;N'a pas pondu d'œuf récemment;;;;;;;;;;;;x
+TT_is_an_adult_dragon;Has finished its dragon education;A fini son éducation de dragon;;;;;;;;;;;;x
+TT_dragon_not_max_fortif;Can increase influence;Peut augmenter l'influence de la province;;;;;;;;;;;;x
+TT_force_to_become_tributary;can force you to become [Root.GetHerHis] tributary;peut te forcer à devenir [Root.GetHerHis] tributaire;;;;;;;;;;;;x
+TT_dragon_not_done_in_1_years;Did not take decision since §Y1§! year;N'a pas pris la décision depuis §Y1§! an;;;;;;;;;;;;x
+TT_dragon_receive_ultimatum;get an ultimatum;reçoit un ultimatum;;;;;;;;;;;x
+TT_dragon_did_not_take_decision_in_year;Did not increase influence in the last year;N'a pas augmenté l'influence dans la dernière année;;;;;;;;;;;;x
