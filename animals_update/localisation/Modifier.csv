@@ -1,15 +1,5 @@
 #CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
 
-#######Beta version modifier
-
-### modifier localisation
-
-animal_buildings_destruction;Human building destruction;Destruction de bâtiments humains;;;;;;;;;;;;;x
-dragon_looted_province_by_war;Plundered by dragons;Pillé par des dragons;;;;;;;;;;;;;x
-Dragon_loose_looting_war;Plundering war lost;Guerre de pillage perdu;;;;;;;;;;;;;x
-dragon_looted_cooldown;_;;;;;;;;;;;;;x
-
-
 #########BEAR update modifier
 
 #event modifier
@@ -211,7 +201,7 @@ horse_warrior_malus_5;agitated paysants;paysants agités;;;;;;;;;;;;x
 horse_conversion_tyrany;tyranical ritual;rituel tyranique;;;;;;;;;;;;x
 
 ##### dragon update
-
+dragon_enslaved;slave;esclave;;;;;;;;;;;;x
 
 ## custom modifier
 dragon_academy_level;academy level;niveau de l'académie;;;;;;;;;;;;x

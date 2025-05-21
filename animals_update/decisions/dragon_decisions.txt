@@ -753,9 +753,9 @@ targetted_decisions = {
             host = {
                 character = FROM
             }
-            #NOT = {
-            #    has_character_modifier = dragon_slave
-            #}
+            NOT = {
+                has_character_modifier = dragon_slave
+            }
         }
         allow = {
             FROM = {
@@ -783,7 +783,19 @@ targetted_decisions = {
             is_adult = yes
         }
         effect = {
+            add_character_modifier = {
+                name = dragon_enslaved
+                duration = -1
+            }
+            save_event_target_as = slave
 
+            FROM = {
+                custom_tooltip = {
+                    text = TT_dragon_slave_revenue
+                    # character_event = { id = ani_plus.248 months = 1 }
+                    wealth = 100
+                }
+            }
         }
         ai_will_do = {
             factor = 0

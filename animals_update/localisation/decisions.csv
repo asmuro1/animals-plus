@@ -373,3 +373,4 @@ TT_force_to_become_tributary;can force you to become [Root.GetHerHis] tributary;
 TT_dragon_not_done_in_1_years;Did not take decision since §Y1§! year;N'a pas pris la décision depuis §Y1§! an;;;;;;;;;;;;x
 TT_dragon_receive_ultimatum;get an ultimatum;reçoit un ultimatum;;;;;;;;;;;x
 TT_dragon_did_not_take_decision_in_year;Did not increase influence in the last year;N'a pas augmenté l'influence dans la dernière année;;;;;;;;;;;;x
+TT_dragon_slave_revenue;gain of 50 gold per months until [Root.GetHerHis] death;augmentation du revenu mensuel de 50 d'or par mois jusqu'à sa mort;;;;;;;;;;;;x

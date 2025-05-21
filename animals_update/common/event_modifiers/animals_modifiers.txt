@@ -1,24 +1,3 @@
-#beta version modifier
-dragon_looted_cooldown = {
-	icon = 1
-}
-
-dragon_looted_province_by_war = {
-	icon = 110
-	garrison_size = -0.95
-	levy_size = -0.90
-	siege_speed = 0.75
-	local_tax_modifier = -0.95
-}
-
-Dragon_loose_looting_war = {
-	icon = 110
-	global_revolt_risk = 0.30
-	vassal_opinion = -50
-	general_opinion = -25
-	levy_reinforce_rate = -0.5
-}
-
 #bear update
 #number in modifier name dosn't means nothing anymore
 bear_child_0_3 = {
@@ -717,4 +696,15 @@ horse_warrior_malus_5 = {
 horse_conversion_tyrany = {
 	icon = 57
 	general_opinion = -5
+}
+
+dragon_enslaved = {
+	icon = 38
+
+	health_penalty = -0.5
+	diplomacy_penalty = -5
+	stewardship_penalty = -3
+	martial_penalty = -5
+	intrigue_penalty = -10
+	fertility_penalty = -10
 }
