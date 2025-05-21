@@ -327,6 +327,41 @@ title_decisions = {
             }
         }
     }
+
+    dragon_convert_to_culture = {
+        is_high_prio = yes
+        ai_check_interval = 12
+
+        filter = owned
+        ai_target_filter = owned
+
+        potential = {
+            tier = COUNT
+            FROM = { culture_group = dragon_group }
+            FROM = { is_adult = yes }
+            location = {
+                NOT = {
+                    culture = FROM
+                }
+            }
+            holder_scope = {
+                character = FROM
+            }
+        }
+        allow = {
+            always = yes
+        }
+
+        effect = {
+            location = {
+                culture = FROM
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
 }
 
 fort_decisions = {
