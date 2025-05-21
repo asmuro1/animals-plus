@@ -363,6 +363,8 @@ dragon_vassal_unsatisfied;Affirm my unsatisfaction;Contester la gouvernance de [
 dragon_vassal_unsatisfied_desc;As [Root.GetTitledFirstName] is a bad ruler, I can try to weaken it's administration. But that can come with a price;Avec l'administration médiocre de [Root.GetTitledFirstName], je peux tenter d'affaiblir son administration. Cependant, ce sera à mes risques et périls;;;;;;;;;;;;x
 dragon_convert_to_culture;Let [From.Culture.GetName] install here;Laisser les [From.Culture.GetName] s'installer;;;;;;;;;;;;x
 dragon_convert_to_culture_desc; ; ;;;;;;;;;;;;x
+dragon_enslave_human;Enslave [Root.GetHerHim];En faire un esclave;;;;;;;;;;;;x
+dragon_enslave_human_desc;As any human, or even animal, [Root.getSheHe] is weak. The best use of them is to make them a personnal slave. As a slave, [Root.getSheHe] regurlarly give you money, even if it may cost [Root.GetHerHis] live soon;Comme n'importe quel humain ou animal, [Root.getSheHe] est faible. Pour cette raison il est possible d'en faire un de mes esclaves personnels. Cette nouvelle position me permet des revenu d'argent constant, même si ça peut lui coûter sa vie;;;;;;;;;;;;x
 
 TT_dragon_did_not_lay_egg_recently;Did not lay an egg recently;N'a pas pondu d'œuf récemment;;;;;;;;;;;;x
 TT_is_an_adult_dragon;Has finished its dragon education;A fini son éducation de dragon;;;;;;;;;;;;x

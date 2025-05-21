@@ -735,4 +735,61 @@ targetted_decisions = {
             }
         }
     }
+
+    dragon_enslave_human = {
+        is_high_prio = no
+        ai_check_interval = 6
+
+        filter = court
+        ai_target_filter = court
+
+        from_potential = {
+            government = dragon_tribal_gov
+            higher_tier_than = BARON
+        }
+        potential = {
+            NOT = { culture_group = dragon_group }
+            prisoner = yes
+            host = {
+                character = FROM
+            }
+            #NOT = {
+            #    has_character_modifier = dragon_slave
+            #}
+        }
+        allow = {
+            FROM = {
+                has_law = tribal_organization_3
+                trigger_if = {
+                    limit = {
+                        has_dlc = "Zeus"
+                    }
+                    has_law = banish_voting_power_0
+                }
+
+                has_assigned_minor_title = title_dragon_alternate_space_master
+                has_regent = no
+                war = no
+                OR = {
+                    is_independent = yes
+                    any_liege = {
+                        war = no
+                    }
+                }
+            }
+
+            NOT = { culture_group = dragon_group }
+            prisoner = yes
+            is_adult = yes
+        }
+        effect = {
+
+        }
+        ai_will_do = {
+            factor = 0
+        }
+
+    }
+
+    # dragon_judgement_dragon = {}
 }
