@@ -2591,6 +2591,7 @@ decisions = {
 			is_playable = yes
 			is_tribal = yes
 			independent = yes
+			NOT = { government = dragon_tribal_gov }
 		}
 		allow = {
 			war = no
@@ -2811,6 +2812,7 @@ decisions = {
 			is_ruler = yes
 			is_tribal = yes
 			independent = no
+			NOT = { government = dragon_tribal_gov }
 		}
 		allow = {
 			war = no
@@ -3153,6 +3155,7 @@ decisions = {
 			is_tribal = yes
 			independent = yes
 			has_dlc = "The Republic"
+			NOT = { government = dragon_tribal_gov }
 		}
 		allow = {
 			war = no
