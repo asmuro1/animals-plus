@@ -2542,7 +2542,7 @@ character_event = {
         name = OPTB_ANI_224
 
         random_list = {
-            50 = { # ROOT victory
+            100 = { # ROOT victory
                 modifier = {
                     factor = 2
                     combat_rating_diff = {
@@ -2594,8 +2594,9 @@ character_event = {
                         death_reason = death_duel
                     }
                 }
+                dragon_add_hidden_random_stat_effect = yes
             }
-            50 = { # target_dragon_2nd_fighter victory
+            100 = { # target_dragon_2nd_fighter victory
                 modifier = {
                     factor = 0.5
                     combat_rating_diff = {
@@ -2650,6 +2651,9 @@ character_event = {
                     }
                 }
 
+                event_target:target_dragon_2nd_fighter = {
+                    dragon_add_hidden_random_stat_effect = yes
+                }
                 abdicate_to = event_target:target_dragon_2nd_fighter
                 death = {
                     killer = event_target:target_dragon_2nd_fighter
@@ -3747,13 +3751,13 @@ character_event = {
                     stewardship > event_target:dragon_vassal_unsatisfied
                 }
 
+                dragon_add_hidden_random_stat_effect = yes
                 event_target:dragon_vassal_unsatisfied = {
                     custom_tooltip = {
                         text = TT_dragon_looses_death_duel
                         set_character_flag = dragon_looses_death_duel
                         character_event = { id = ani_plus.241 }
                     }
-                    
                 }
             }
             100 = { # dragon_vassal_unsatisfied victory
@@ -3831,6 +3835,7 @@ character_event = {
 
                     event_target:dragon_vassal_unsatisfied = {
                         set_character_flag = dragon_wins_death_duel
+                        dragon_add_hidden_random_stat_effect = yes
                         character_event = { id = ani_plus.241 }
                     }
 
@@ -4251,5 +4256,14 @@ character_event = {
 
     option = {
         name = OPT_ANI_252
+
+        hidden_tooltip = {
+            clr_character_flag = dragon_judgment_in_motion
+            clr_character_flag = dragon_fail_in_trial
+            set_variable = {
+                which = local_number_of_sub_trial_successed
+                value = 0
+            }
+        }
     }
 }

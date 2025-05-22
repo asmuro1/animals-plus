@@ -365,3 +365,16 @@ dragon_add_fort_to_province_effect = {
         }
     }
 }
+
+# character scope
+dragon_add_hidden_random_stat_effect = {
+    hidden_tooltip = {
+        random_list = {
+            1 = { change_diplomacy = 1 }
+            1 = { change_stewardship = 1 }
+            1 = { change_martial = 1 }
+            1 = { change_intrigue = 1 }
+            1 = { change_learning = 1 }
+        }
+    }
+}
