@@ -4193,7 +4193,48 @@ character_event = {
         }
 
         host = {
-            # character_event = { id = ani_plus.251 }
+            character_event = { id = ani_plus.251 }
+        }
+    }
+}
+
+# event 251
+character_event = {
+    id = ani_plus.251
+
+    is_triggered_only = yes
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = DESC_ANI_251
+
+    option = {
+        name = OPT_ANI_251
+
+        FROM = {
+            if = {
+                limit = {
+                    check_variable = {
+                        which = local_number_of_sub_trial_successed
+                        value = 25
+                    }
+                }
+
+                imprison = no
+                # character_event = { id = ani_plus.252 }
+            }
+            else = {
+                hidden_tooltip = {
+                    transfer_scaled_wealth = {
+                        to = ROOT
+                        value = all
+                    }
+                }
+                death = {
+                    death_reason = death_slavery
+                    killer = ROOT
+                }
+            }
         }
     }
 }
