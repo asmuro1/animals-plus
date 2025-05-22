@@ -4145,7 +4145,22 @@ character_event = {
 
                 random_list = {
                     80 = { # sub-trial success
-                        ## need to put some modifier
+                        additive_modifier = {
+                            value = 15
+                            trait = genius
+                        }
+                        additive_modifier = {
+                            value = 10
+                            trait = quick
+                        }
+                        additive_modifier = {
+                            value = -20
+                            trait = slow
+                        }
+                        additive_modifier = {
+                            value = -30
+                            trait = imbecile
+                        }
 
                         wealth = 100
                         change_variable = {
@@ -4154,7 +4169,22 @@ character_event = {
                         }
                     }
                     20 = { # sub-trial failed
-                        ## need to put some modifier
+                        additive_modifier = {
+                            value = -15
+                            trait = genius
+                        }
+                        additive_modifier = {
+                            value = -10
+                            trait = quick
+                        }
+                        additive_modifier = {
+                            value = 20
+                            trait = slow
+                        }
+                        additive_modifier = {
+                            value = 30
+                            trait = imbecile
+                        }
 
                         set_character_flag = dragon_fail_in_trial
                     }
