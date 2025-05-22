@@ -216,7 +216,7 @@ dragon_tribalism_cb = {
             }
         }   
         ROOT = {
-            wealth = -500 # forcibly put to -500 gold
+            wealth = -1000 # forcibly put to -1000 gold
         }
         any_defender = {
             participation_scaled_piety = 1000

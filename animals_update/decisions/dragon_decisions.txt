@@ -770,6 +770,7 @@ targetted_decisions = {
                     has_law = banish_voting_power_0
                 }
 
+                dragon_is_adult_trigger = yes
                 has_assigned_minor_title = title_dragon_alternate_space_master
                 has_regent = no
                 war = no
@@ -796,8 +797,60 @@ targetted_decisions = {
         ai_will_do = {
             factor = 0
         }
-
     }
 
-    # dragon_judgement_dragon = {}
+    dragon_judgement_dragon = {
+        is_high_prio = no
+        ai_check_interval = 12
+
+        filter = court
+        ai_target_filter = court
+
+        from_potential = {
+            government = dragon_tribal_gov
+            higher_tier_than = BARON
+        }
+        potential = {
+            culture_group = dragon_group
+            prisoner = yes
+            host = {
+                character = FROM
+            }
+            NOT = {
+                has_character_flag = dragon_judgment_in_motion
+            }
+        }
+        allow = {
+            FROM = {
+                has_law = tribal_organization_4
+                trigger_if = {
+                    limit = {
+                        has_dlc = "Zeus"
+                    }
+                    has_law = execution_voting_power_0
+                }
+
+                dragon_is_adult_trigger = yes
+                has_assigned_minor_title = title_dragon_alternate_space_master
+                has_regent = no
+                war = no
+            }
+
+            culture_group = dragon_group
+            prisoner = yes
+            is_adult = yes
+        }
+
+        effect = {
+            set_character_flag = dragon_judgment_in_motion
+
+            custom_tooltip = {
+                text = TT_dragon_judgement_start
+                # character_event = { id = ani_plus.250 days = 1 }
+            }
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
 }
