@@ -846,11 +846,16 @@ targetted_decisions = {
 
             custom_tooltip = {
                 text = TT_dragon_judgement_start
-                # character_event = { id = ani_plus.250 days = 1 }
+                character_event = { id = ani_plus.250 days = 1 }
             }
         }
         ai_will_do = {
-            factor = 0
+            factor = 1
+
+            modifier = {
+                factor = 0.1
+                always = yes
+            }
         }
     }
 }

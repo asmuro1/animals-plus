@@ -333,6 +333,8 @@ OPTA_ANI_245;Why does no one recognize my talents?!;Pourquoi n'ai-je pas été cho
 OPTB_ANI_245;I am finally at my rightful place!;Ils ont enfin reconnu ma véritable place;;;;;;;;;;;;x
 DESC_ANI_249;It seems that my slave, [slave.GetDynName] just die.;Il semblerai que mon esclave [slave.GetDynName] vient de mourir.;;;;;;;;;;;;x
 OPT_ANI_249;Did a tool broke?;Mon outil vient-il de se casser?;;;;;;;;;;;;x
+DESC_ANI_250;As a prisoner, I do not have much freedom. But [Host.GetDynName] choose to let me have it if I succeed its judgment trial;En tant que prisonier, je n'ai que peu de liberté. Pour cette raison, [Host.GetDynName] a choisi de me la rendre si je suis capable d'être jugé innocent de mes erreurs;;;;;;;;;;;;x
+OPT_ANI_250;Could I become free?;Je peux devenir libre?;;;;;;;;;;;;x
 
 TT_dragon_loose_province_fort;loose control over §Y[This.GetName]§!;perd le controle de §Y[This.GetName]§!;;;;;;;;;;;;x
 TT_dragon_duel_in_7_days;The death duel will start in a week;Le duel à mort démarera dans une semaine;;;;;;;;;;;;x
@@ -342,3 +344,4 @@ TT_dragon_wins_death_duel;loose the duel;perdre le duel;;;;;;;;;;;;x
 TT_dragon_vote_soon;the vote start;les votes commencent;;;;;;;;;;;;x
 TT_dragon_imprisoned;is imprisoned;est emprisonné;;;;;;;;;;;;x
 TT_dragon_won_contest;became the new [Root.GetTitle];devient [dragon_vassal_unsatisfied.GetLeLa] nouv[dragon_vassal_unsatisfied.GetEauElle] [Root.GetTitle];;;;;;;;;;;;x
+TT_dragon_trial;the judgment to free or kill myself shall start;le jugement pour être libéré ou tué commence;;;;;;;;;;;;x

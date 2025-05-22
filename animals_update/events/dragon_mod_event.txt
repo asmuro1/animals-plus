@@ -1,5 +1,5 @@
 #######dragon update
-### event 198 - 249
+### event 198 - 252
 
 namespace = ani_plus
 
@@ -4044,9 +4044,12 @@ character_event = {
     }
 }
 
-#### event 248 - 249: prisoner interaction event
+#### event 248 - 251: prisoner interaction event
 ## event 248: enslaved human event -- 80% of chance to gain 100 gold // 20% chance to make the slave die
 ## event 249: liege notification for slave death
+## event 250: dragon judgment event
+## event 251: result liege notification
+## event 252: prisoner notification (if alive)
 
 # event 248
 character_event = {
@@ -4103,5 +4106,64 @@ character_event = {
         name = OPT_ANI_249
 
         show_portrait = event_target:slave
+    }
+}
+
+# event 250
+character_event = {
+    id = ani_plus.250
+
+    is_triggered_only = yes
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = DESC_ANI_250
+
+    trigger = {
+        prisoner = yes
+        culture_group = dragon_group
+    }
+
+    option = {
+        name = OPT_ANI_250
+
+        custom_tooltip = {
+            text = TT_dragon_trial
+        }
+
+        hidden_effect = {
+
+            set_variable = {
+                which = local_number_of_sub_trial_successed
+                value = 0
+            }
+
+            while = {
+                limit = {
+                    NOT = { has_character_flag = dragon_fail_in_trial }
+                }
+
+                random_list = {
+                    80 = { # sub-trial success
+                        ## need to put some modifier
+
+                        wealth = 100
+                        change_variable = {
+                            which = local_number_of_sub_trial_successed
+                            value = 1
+                        }
+                    }
+                    20 = { # sub-trial failed
+                        ## need to put some modifier
+
+                        set_character_flag = dragon_fail_in_trial
+                    }
+                }
+            }
+        }
+
+        host = {
+            # character_event = { id = ani_plus.251 }
+        }
     }
 }
