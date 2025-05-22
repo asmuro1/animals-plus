@@ -4238,3 +4238,18 @@ character_event = {
         }
     }
 }
+
+# event 252
+character_event = {
+    id = ani_plus.252
+
+    is_triggered_only = yes
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = DESC_ANI_252
+
+    option = {
+        name = OPT_ANI_252
+    }
+}

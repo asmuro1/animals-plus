@@ -337,6 +337,8 @@ DESC_ANI_250;As a prisoner, I do not have much freedom. But [Host.GetDynName] ch
 OPT_ANI_250;Could I become free?;Je peux devenir libre?;;;;;;;;;;;;x
 DESC_ANI_251;[From.GetDynName] judgment just started. [From.GetSheHeCap] enter the judgment space. The space entry closed with [From.GetHerHim] entry. We do not have any idea from how it goes, except awaiting the judgment result;Le jugement de [From.GetDynName] vient de commencer. Après être entré dans l'espace du jugement, l'entrée s'est fermé automatiquement. La seule manière d'avoir de ses nouvelles est d'attendre le résultat du jugement.;;;;;;;;;;;;x 
 OPT_ANI_251;and then the result is...;Le verdict du jugement est...;;;;;;;;;;;;x
+DESC_ANI_252;I just returned from the dragon judgment trial.;Je viens juste de sortir vivant de l'épreuve du jugement draconique.;;;;;;;;;;;;x
+OPT_ANI_252;I am now officialy free!;Je suis maintenant libre!;;;;;;;;;;;;x
 
 TT_dragon_loose_province_fort;loose control over §Y[This.GetName]§!;perd le controle de §Y[This.GetName]§!;;;;;;;;;;;;x
 TT_dragon_duel_in_7_days;The death duel will start in a week;Le duel à mort démarera dans une semaine;;;;;;;;;;;;x
