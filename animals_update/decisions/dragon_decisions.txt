@@ -343,6 +343,7 @@ title_decisions = {
                 NOT = {
                     culture = FROM
                 }
+                culture_group = dragon_group
             }
             holder_scope = {
                 character = FROM
