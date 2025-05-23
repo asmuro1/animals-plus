@@ -24,6 +24,7 @@ tribal = {
         extra_tech_building_start = 10
 
         tax_income = 6
+        fort_level = 0.25
     }
     tb_drg_slave_worker_2 = {
         add_number_to_name = no
@@ -50,6 +51,7 @@ tribal = {
         extra_tech_building_start = 10
 
         tax_income = 6
+        fort_level = 0.25
     }
     tb_drg_slave_worker_3 = {
         add_number_to_name = no
@@ -76,6 +78,7 @@ tribal = {
         extra_tech_building_start = 10
 
         tax_income = 6
+        fort_level = 0.25
     }
     tb_drg_slave_worker_4 = {
         add_number_to_name = no
@@ -104,7 +107,8 @@ tribal = {
         ai_creation_factor = 100
         extra_tech_building_start = 10
 
-        tax_income = 4
+        tax_income = 6
+        fort_level = 0.25
     }
 
     tb_drg_slave_fighter_1 = {
@@ -130,7 +134,8 @@ tribal = {
         ai_creation_factor = 100
         extra_tech_building_start = 10
 
-        light_cavalry = 25
+        retinuesize = 50
+        fort_level = 0.25
     }
     tb_drg_slave_fighter_2 = {
         add_number_to_name = no
@@ -156,7 +161,8 @@ tribal = {
         ai_creation_factor = 100
         extra_tech_building_start = 10
 
-        light_cavalry = 50
+        retinuesize = 50
+        fort_level = 0.25
     }
     tb_drg_slave_fighter_3 = {
         add_number_to_name = no
@@ -182,7 +188,8 @@ tribal = {
         ai_creation_factor = 100
         extra_tech_building_start = 10
 
-        light_cavalry = 75
+        retinuesize = 50
+        fort_level = 0.25
     }
     tb_drg_slave_fighter_4 = {
         add_number_to_name = no
@@ -211,7 +218,8 @@ tribal = {
         ai_creation_factor = 100
         extra_tech_building_start = 10
 
-        light_cavalry = 100
+        retinuesize = 50
+        fort_level = 0.25
     }
 
     tb_drg_fighter_1 = {
@@ -423,7 +431,7 @@ fort = {
         ai_creation_factor = 90
 
         garrison_size = 0.25
-        fort_level = 0.5
+        fort_level = 1
     }
     fo_drg_guardian_04 = {
         add_number_to_name = no
@@ -447,7 +455,7 @@ fort = {
         ai_creation_factor = 90
 
         garrison_size = 0.25
-        fort_level = 0.5
+        fort_level = 1
     }
     fo_drg_guardian_05 = {
         add_number_to_name = no
@@ -471,7 +479,7 @@ fort = {
         ai_creation_factor = 90
 
         garrison_size = 0.5
-        fort_level = 0.5
+        fort_level = 1
     }
     fo_drg_guardian_06 = {
         add_number_to_name = no
@@ -495,7 +503,7 @@ fort = {
         ai_creation_factor = 90
 
         garrison_size = 0.5
-        fort_level = 0.5
+        fort_level = 1
     }
     fo_drg_guardian_07 = {
         add_number_to_name = no
@@ -519,7 +527,7 @@ fort = {
         ai_creation_factor = 90
 
         garrison_size = 0.5
-        fort_level = 0.5
+        fort_level = 1
     }
     fo_drg_guardian_08 = {
         add_number_to_name = no
@@ -543,7 +551,7 @@ fort = {
         ai_creation_factor = 90
 
         garrison_size = 0.5
-        fort_level = 0.5
+        fort_level = 1
     }
     fo_drg_guardian_09 = {
         add_number_to_name = no
@@ -567,7 +575,7 @@ fort = {
         ai_creation_factor = 90
 
         garrison_size = 0.5
-        fort_level = 0.5
+        fort_level = 1
     }
     fo_drg_guardian_10 = {
         add_number_to_name = no
@@ -591,7 +599,7 @@ fort = {
         ai_creation_factor = 90
 
         garrison_size = 0.5
-        fort_level = 0.5
+        fort_level = 1
     }
 
     fo_drg_retinue_1 = {
@@ -678,12 +686,12 @@ fort = {
         }
         # upgrades_from = 
 
-        gold_cost= 1000
+        gold_cost= 500
         build_time = 1000
         ai_creation_factor = 100
 
-        fort_level = 0.75
-        tax_income = 10
+        fort_level = 1
+        tax_income = 30
     }
     fo_drg_heart_2 = { 
         add_number_to_name = no
@@ -702,13 +710,13 @@ fort = {
         }
         upgrades_from = fo_drg_heart_1
 
-        gold_cost= 2000
+        gold_cost= 1000
         build_time = 2500
         ai_creation_factor = 100
 
         retinuesize_perc = 0.1
-        fort_level = 1.25
-        tax_income = 10
+        fort_level = 1
+        tax_income = 50
     }
     fo_drg_heart_3 = {
         add_number_to_name = no
@@ -727,13 +735,13 @@ fort = {
         }
         upgrades_from = fo_drg_heart_2
 
-        gold_cost= 3000
+        gold_cost= 1500
         build_time = 5000
         ai_creation_factor = 100
 
         retinuesize_perc = 0.2
         fort_level = 2
-        tax_income = 10
+        tax_income = 70
     }
 
     fo_drg_trainee = {
@@ -756,10 +764,10 @@ fort = {
         build_time = 900
         ai_creation_factor = 50
 
-        knights = 30
-        knights_offensive = 0.25
-        knights_defensive = 0.25
-        knights_morale = 0.25
+        knights = 100
+        knights_offensive = 0.5
+        knights_defensive = 0.5
+        knights_morale = 0.5
     }
 
     fo_drg_academy_1 = {
@@ -855,7 +863,7 @@ fort = {
         # upgrades_from =
         prerequisites = { fo_drg_heart_1 }
 
-        gold_cost = 750
+        gold_cost = 250
         build_time = 300
         ai_creation_factor = 120
 
@@ -878,7 +886,7 @@ fort = {
         upgrades_from = fo_drg_casus_belli_1
         prerequisites = { fo_drg_heart_2 }
 
-        gold_cost = 1250
+        gold_cost = 750
         build_time = 300
         ai_creation_factor = 120
 
@@ -901,7 +909,7 @@ fort = {
         upgrades_from = fo_drg_casus_belli_2
         prerequisites = { fo_drg_heart_3 }
 
-        gold_cost = 2000
+        gold_cost = 1500
         build_time = 300
         ai_creation_factor = 120
 

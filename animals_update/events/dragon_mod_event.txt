@@ -1,5 +1,5 @@
 #######dragon update
-### event 198 - 247
+### event 198 - 252
 
 namespace = ani_plus
 
@@ -551,78 +551,92 @@ character_event = {
 				}
 			}
 			set_character_flag = is_true_dragon_adult
-			break = yes
 		}
-
-        random_list = {
-            1 = { # snow trial
-                trigger = {
-                    NOT = {
-                        has_character_flag = snow_trial_realized
+        else_if = {
+            limit = {
+                OR = {
+                    AND = {
+                        is_ruler = yes
+                        has_assigned_minor_title = title_dragon_alternate_space_master
+                    }
+                    AND = {
+                        is_ruler = no
+                        liege = {
+                            has_assigned_minor_title = title_dragon_alternate_space_master
+                        }
                     }
                 }
-                set_character_flag = snow_trial_realized
-                character_event = { id = ani_plus.208 }
             }
-            1 = { # fire trial
-                trigger = {
-                    NOT = {
-                        has_character_flag = fire_trial_realized
+            random_list = {
+                1 = { # snow trial
+                    trigger = {
+                        NOT = {
+                            has_character_flag = snow_trial_realized
+                        }
                     }
+                    set_character_flag = snow_trial_realized
+                    character_event = { id = ani_plus.208 }
                 }
-                set_character_flag = fire_trial_realized
-                character_event = { id = ani_plus.210 }
-            }
-            1 = { # water trial
-                trigger = {
-                    NOT = {
-                        has_character_flag = water_trial_realized
+                1 = { # fire trial
+                    trigger = {
+                        NOT = {
+                            has_character_flag = fire_trial_realized
+                        }
                     }
+                    set_character_flag = fire_trial_realized
+                    character_event = { id = ani_plus.210 }
                 }
-                set_character_flag = water_trial_realized
-                character_event = { id = ani_plus.212 }
-            }
-            1 = { # sand trial
-                trigger = {
-                    NOT = {
-                        has_character_flag = sand_trial_realized
+                1 = { # water trial
+                    trigger = {
+                        NOT = {
+                            has_character_flag = water_trial_realized
+                        }
                     }
+                    set_character_flag = water_trial_realized
+                    character_event = { id = ani_plus.212 }
                 }
-                set_character_flag = sand_trial_realized
-                character_event = { id = ani_plus.214 }
-            }
-            1 = { # poison trial
-                trigger = {
-                    NOT = {
-                        has_character_flag = poison_trial_realized
+                1 = { # sand trial
+                    trigger = {
+                        NOT = {
+                            has_character_flag = sand_trial_realized
+                        }
                     }
+                    set_character_flag = sand_trial_realized
+                    character_event = { id = ani_plus.214 }
                 }
-                set_character_flag = poison_trial_realized
-                character_event = { id = ani_plus.216 }
-            }
-            fallback  = { # all trials done
-                if = {
-                    limit = {
+                1 = { # poison trial
+                    trigger = {
+                        NOT = {
+                            has_character_flag = poison_trial_realized
+                        }
+                    }
+                    set_character_flag = poison_trial_realized
+                    character_event = { id = ani_plus.216 }
+                }
+                fallback  = { # all trials done
+                    if = {
+                        limit = {
+                            father = {
+                                ai = no
+                            }
+                        }
                         father = {
-                            ai = no
+                            character_event = { id = ani_plus.218 }
                         }
                     }
-                    father = {
-                        character_event = { id = ani_plus.218 }
-                    }
-                }
-                else_if = {
-                    limit = {
+                    else_if = {
+                        limit = {
+                            mother = {
+                                ai = no
+                            }
+                        }
                         mother = {
-                            ai = no
+                            character_event = { id = ani_plus.218 }
                         }
                     }
-                    mother = {
+                    else = {
                         character_event = { id = ani_plus.218 }
                     }
-                }
-                else = {
-                    character_event = { id = ani_plus.218 }
                 }
             }
         }
@@ -2200,7 +2214,7 @@ character_event = {
     }
 
     mean_time_to_happen = {
-        years = 16 # 1 chance out of 2 to die
+        years = 32
 
         modifier = { # or delayed if hospital has incubator
             factor = 5
@@ -2239,6 +2253,8 @@ character_event = {
                 character_event = { id = ani_plus.220}
             }
         }
+        
+        character_event = { id = ani_plus.220 days = 1}
     }
 }
 
@@ -2526,7 +2542,7 @@ character_event = {
         name = OPTB_ANI_224
 
         random_list = {
-            50 = { # ROOT victory
+            100 = { # ROOT victory
                 modifier = {
                     factor = 2
                     combat_rating_diff = {
@@ -2578,8 +2594,9 @@ character_event = {
                         death_reason = death_duel
                     }
                 }
+                dragon_add_hidden_random_stat_effect = yes
             }
-            50 = { # target_dragon_2nd_fighter victory
+            100 = { # target_dragon_2nd_fighter victory
                 modifier = {
                     factor = 0.5
                     combat_rating_diff = {
@@ -2634,6 +2651,9 @@ character_event = {
                     }
                 }
 
+                event_target:target_dragon_2nd_fighter = {
+                    dragon_add_hidden_random_stat_effect = yes
+                }
                 abdicate_to = event_target:target_dragon_2nd_fighter
                 death = {
                     killer = event_target:target_dragon_2nd_fighter
@@ -3303,13 +3323,27 @@ province_event = {
     }
 
     mean_time_to_happen = {
-        months = 6
+        years = 1
+        modifier = {
+            factor = 0.5
+
+            NOR = {
+                fort_has_building = fo_drg_guardian_01
+                fort_is_building  = fo_drg_guardian_01
+            }
+        }
+        modifier = {
+            factor = 5
+
+            holder_scope = {
+                wealth = 500
+            }
+        }
         modifier = {
             factor = 10
 
-            OR = {
-                fort_has_building = fo_drg_guardian_01
-                fort_is_building  = fo_drg_guardian_01
+            holder_scope = {
+                wealth = 0
             }
         }
         modifier = {
@@ -3321,7 +3355,7 @@ province_event = {
             }
         }
         modifier = {
-            factor = 2.5
+            factor = 3
 
             OR = {
                 fort_has_building = fo_drg_guardian_03
@@ -3329,7 +3363,7 @@ province_event = {
             }
         }
         modifier = {
-            factor = 2
+            factor = 4
 
             OR = {
                 fort_has_building = fo_drg_guardian_04
@@ -3337,7 +3371,7 @@ province_event = {
             }
         }
         modifier = {
-            factor = 2
+            factor = 5
 
             OR = {
                 fort_has_building = fo_drg_guardian_05
@@ -3345,7 +3379,7 @@ province_event = {
             }
         }
         modifier = {
-            factor = 2
+            factor = 6
 
             OR = {
                 fort_has_building = fo_drg_guardian_06
@@ -3353,7 +3387,7 @@ province_event = {
             }
         }
         modifier = {
-            factor = 2
+            factor = 7
 
             OR = {
                 fort_has_building = fo_drg_guardian_07
@@ -3361,7 +3395,7 @@ province_event = {
             }
         }
         modifier = {
-            factor = 2
+            factor = 8
 
             OR = {
                 fort_has_building = fo_drg_guardian_08
@@ -3369,7 +3403,7 @@ province_event = {
             }
         }
         modifier = {
-            factor = 2
+            factor = 9
 
             OR = {
                 fort_has_building = fo_drg_guardian_09
@@ -3731,13 +3765,13 @@ character_event = {
                     stewardship > event_target:dragon_vassal_unsatisfied
                 }
 
+                dragon_add_hidden_random_stat_effect = yes
                 event_target:dragon_vassal_unsatisfied = {
                     custom_tooltip = {
                         text = TT_dragon_looses_death_duel
                         set_character_flag = dragon_looses_death_duel
                         character_event = { id = ani_plus.241 }
                     }
-                    
                 }
             }
             100 = { # dragon_vassal_unsatisfied victory
@@ -3815,6 +3849,7 @@ character_event = {
 
                     event_target:dragon_vassal_unsatisfied = {
                         set_character_flag = dragon_wins_death_duel
+                        dragon_add_hidden_random_stat_effect = yes
                         character_event = { id = ani_plus.241 }
                     }
 
@@ -4025,5 +4060,224 @@ character_event = {
             has_character_flag = dragon_wins_contest
         }
         clr_character_flag = dragon_wins_contest
+    }
+}
+
+#### event 248 - 251: prisoner interaction event
+## event 248: enslaved human event -- 80% of chance to gain 100 gold // 20% chance to make the slave die
+## event 249: liege notification for slave death
+## event 250: dragon judgment event
+## event 251: result liege notification
+## event 252: prisoner notification (if alive)
+
+# event 248
+character_event = {
+    id = ani_plus.248
+
+    is_triggered_only = yes
+    hide_window = yes
+    trigger = {
+        event_target:slave = {
+            is_alive = yes
+        }
+    }
+
+    immediate = {
+        event_target:slave = {
+            if = {
+                limit = {
+                    prisoner = no
+                }
+                
+                remove_character_modifier = dragon_enslaved
+                break = yes
+            }
+        }
+        random_list = {
+            9 = {
+                wealth = 50
+                character_event = { id = ani_plus.248 months = 1}
+            }
+            1 = {
+                event_target:slave = {
+                    death = {
+                        death_reason = death_slavery
+                        killer = ROOT
+                    }
+                }
+                character_event = { id = ani_plus.249 }
+            }
+        }
+    }
+}
+
+# event 249
+character_event = {
+    id = ani_plus.249
+
+    is_triggered_only = yes
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = DESC_ANI_249
+    
+    option = {
+        name = OPT_ANI_249
+
+        show_portrait = event_target:slave
+    }
+}
+
+# event 250
+character_event = {
+    id = ani_plus.250
+
+    is_triggered_only = yes
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = DESC_ANI_250
+
+    trigger = {
+        prisoner = yes
+        culture_group = dragon_group
+    }
+
+    option = {
+        name = OPT_ANI_250
+
+        custom_tooltip = {
+            text = TT_dragon_trial
+        }
+
+        hidden_effect = {
+
+            set_variable = {
+                which = local_number_of_sub_trial_successed
+                value = 0
+            }
+
+            while = {
+                limit = {
+                    NOT = { has_character_flag = dragon_fail_in_trial }
+                }
+
+                random_list = {
+                    80 = { # sub-trial success
+                        additive_modifier = {
+                            value = 15
+                            trait = genius
+                        }
+                        additive_modifier = {
+                            value = 10
+                            trait = quick
+                        }
+                        additive_modifier = {
+                            value = -20
+                            trait = slow
+                        }
+                        additive_modifier = {
+                            value = -30
+                            trait = imbecile
+                        }
+
+                        wealth = 100
+                        change_variable = {
+                            which = local_number_of_sub_trial_successed
+                            value = 1
+                        }
+                    }
+                    20 = { # sub-trial failed
+                        additive_modifier = {
+                            value = -15
+                            trait = genius
+                        }
+                        additive_modifier = {
+                            value = -10
+                            trait = quick
+                        }
+                        additive_modifier = {
+                            value = 20
+                            trait = slow
+                        }
+                        additive_modifier = {
+                            value = 30
+                            trait = imbecile
+                        }
+
+                        set_character_flag = dragon_fail_in_trial
+                    }
+                }
+            }
+        }
+
+        host = {
+            character_event = { id = ani_plus.251 }
+        }
+    }
+}
+
+# event 251
+character_event = {
+    id = ani_plus.251
+
+    is_triggered_only = yes
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = DESC_ANI_251
+
+    option = {
+        name = OPT_ANI_251
+
+        FROM = {
+            if = {
+                limit = {
+                    check_variable = {
+                        which = local_number_of_sub_trial_successed
+                        value = 25
+                    }
+                }
+
+                imprison = no
+                # character_event = { id = ani_plus.252 }
+            }
+            else = {
+                hidden_tooltip = {
+                    transfer_scaled_wealth = {
+                        to = ROOT
+                        value = all
+                    }
+                }
+                death = {
+                    death_reason = death_slavery
+                    killer = ROOT
+                }
+            }
+        }
+    }
+}
+
+# event 252
+character_event = {
+    id = ani_plus.252
+
+    is_triggered_only = yes
+
+    border = GFX_event_normal_frame_diplomacy
+    picture = GFX_evt_council
+    desc = DESC_ANI_252
+
+    option = {
+        name = OPT_ANI_252
+
+        hidden_tooltip = {
+            clr_character_flag = dragon_judgment_in_motion
+            clr_character_flag = dragon_fail_in_trial
+            set_variable = {
+                which = local_number_of_sub_trial_successed
+                value = 0
+            }
+        }
     }
 }

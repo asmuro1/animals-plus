@@ -192,6 +192,7 @@ decisions = {
         potential = {
             government = dragon_tribal_gov
             NOT = { has_character_flag = formed_dragon_retinue }
+            independent = yes
         }
         allow = {
             ruled_years = 1
@@ -325,6 +326,42 @@ title_decisions = {
                 factor = 0.05
                 always = yes
             }
+        }
+    }
+
+    dragon_convert_to_culture = {
+        is_high_prio = yes
+        ai_check_interval = 12
+
+        filter = owned
+        ai_target_filter = owned
+
+        potential = {
+            tier = COUNT
+            FROM = { culture_group = dragon_group }
+            FROM = { is_adult = yes }
+            location = {
+                NOT = {
+                    culture = FROM
+                }
+                culture_group = dragon_group
+            }
+            holder_scope = {
+                character = FROM
+            }
+        }
+        allow = {
+            always = yes
+        }
+
+        effect = {
+            location = {
+                culture = FROM
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
         }
     }
 }
@@ -697,6 +734,129 @@ targetted_decisions = {
                     who = FROM
                     value = -90
                 }
+            }
+        }
+    }
+
+    dragon_enslave_human = {
+        is_high_prio = no
+        ai_check_interval = 6
+
+        filter = court
+        ai_target_filter = court
+
+        from_potential = {
+            government = dragon_tribal_gov
+            higher_tier_than = BARON
+        }
+        potential = {
+            NOT = { culture_group = dragon_group }
+            prisoner = yes
+            host = {
+                character = FROM
+            }
+            NOT = {
+                has_character_modifier = dragon_enslaved
+            }
+        }
+        allow = {
+            FROM = {
+                OR = {
+                    has_law = tribal_organization_3
+                    has_law = tribal_organization_4
+                }
+                trigger_if = {
+                    limit = {
+                        has_dlc = "Zeus"
+                    }
+                    has_law = banish_voting_power_0
+                }
+
+                dragon_is_adult_trigger = yes
+                has_assigned_minor_title = title_dragon_alternate_space_master
+                has_regent = no
+                war = no
+            }
+
+            NOT = { culture_group = dragon_group }
+            prisoner = yes
+            is_adult = yes
+        }
+        effect = {
+            add_character_modifier = {
+                name = dragon_enslaved
+                duration = -1
+            }
+            save_event_target_as = slave
+
+            FROM = {
+                custom_tooltip = {
+                    text = TT_dragon_slave_revenue
+                    character_event = { id = ani_plus.248 months = 1 }
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+
+    dragon_judgement_dragon = {
+        is_high_prio = no
+        ai_check_interval = 12
+
+        filter = court
+        ai_target_filter = court
+
+        from_potential = {
+            government = dragon_tribal_gov
+            higher_tier_than = BARON
+        }
+        potential = {
+            culture_group = dragon_group
+            prisoner = yes
+            host = {
+                character = FROM
+            }
+            NOT = {
+                has_character_flag = dragon_judgment_in_motion
+            }
+        }
+        allow = {
+            FROM = {
+                has_law = tribal_organization_4
+                trigger_if = {
+                    limit = {
+                        has_dlc = "Zeus"
+                    }
+                    has_law = execution_voting_power_0
+                }
+
+                dragon_is_adult_trigger = yes
+                has_assigned_minor_title = title_dragon_alternate_space_master
+                has_regent = no
+                war = no
+            }
+
+            culture_group = dragon_group
+            prisoner = yes
+            is_adult = yes
+        }
+
+        effect = {
+            set_character_flag = dragon_judgment_in_motion
+
+            custom_tooltip = {
+                text = TT_dragon_judgement_start
+                character_event = { id = ani_plus.250 days = 1 }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0.1
+                always = yes
             }
         }
     }

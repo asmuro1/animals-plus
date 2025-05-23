@@ -361,6 +361,12 @@ dragon_vassal_take_independence;take my independence;Prendre son indépendance;;;
 dragon_vassal_take_independence_desc;As I have nothing to do with a dragon, i can proclam my independence. Even the dragon will agreed, but at what price?;En n'ayant rien a voir avec les dragons, je peux prendre mon indépendance sans que cela pose de problème à quiquonque. Cependant, à quel prix ce sera?;;;;;;;;;;;;x
 dragon_vassal_unsatisfied;Affirm my unsatisfaction;Contester la gouvernance de [Root.GetTitledFirstName];;;;;;;;;;;;x
 dragon_vassal_unsatisfied_desc;As [Root.GetTitledFirstName] is a bad ruler, I can try to weaken it's administration. But that can come with a price;Avec l'administration médiocre de [Root.GetTitledFirstName], je peux tenter d'affaiblir son administration. Cependant, ce sera à mes risques et périls;;;;;;;;;;;;x
+dragon_convert_to_culture;Let [From.Culture.GetName] install here;Laisser les [From.Culture.GetName] s'installer;;;;;;;;;;;;x
+dragon_convert_to_culture_desc; ; ;;;;;;;;;;;;x
+dragon_enslave_human;Enslave [Root.GetHerHim];En faire un esclave;;;;;;;;;;;;x
+dragon_enslave_human_desc;As any human, or even animal, [Root.getSheHe] is weak. The best use of them is to make them a personnal slave. As a slave, [Root.getSheHe] regurlarly give you money, even if it may cost [Root.GetHerHis] live soon;Comme n'importe quel humain ou animal, [Root.getSheHe] est faible. Pour cette raison il est possible d'en faire un de mes esclaves personnels. Cette nouvelle position me permet des revenu d'argent constant, même si ça peut lui coûter sa vie;;;;;;;;;;;;x
+dragon_judgement_dragon;Judge [Root.GetDynName];Juger [Root.GetDynName];;;;;;;;;;;;x
+dragon_judgement_dragon_desc;When a dragon end up in prison, it is because of a sin. So instead of letting [Root.GetHerHim] rotting in prison, [Root.getSheHe] can be sent into an alternative space to freed himself;Lorsqu'un dragon est en prison, c'est qu'il a commis un acte de faiblesse. Seul un jugement peut régler ce problème.;;;;;;;;;;;;x
 
 TT_dragon_did_not_lay_egg_recently;Did not lay an egg recently;N'a pas pondu d'œuf récemment;;;;;;;;;;;;x
 TT_is_an_adult_dragon;Has finished its dragon education;A fini son éducation de dragon;;;;;;;;;;;;x
@@ -369,3 +375,5 @@ TT_force_to_become_tributary;can force you to become [Root.GetHerHis] tributary;
 TT_dragon_not_done_in_1_years;Did not take decision since §Y1§! year;N'a pas pris la décision depuis §Y1§! an;;;;;;;;;;;;x
 TT_dragon_receive_ultimatum;get an ultimatum;reçoit un ultimatum;;;;;;;;;;;x
 TT_dragon_did_not_take_decision_in_year;Did not increase influence in the last year;N'a pas augmenté l'influence dans la dernière année;;;;;;;;;;;;x
+TT_dragon_slave_revenue;gain of 50 gold per months until [Root.GetHerHis] death;augmentation du revenu mensuel de 50 d'or par mois jusqu'à sa mort;;;;;;;;;;;;x
+TT_dragon_judgement_start;is being sent to the judgment alternative space;est envoyé dans l'espace du jugement;;;;;;;;;;;;x
