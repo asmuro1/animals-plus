@@ -2214,7 +2214,7 @@ character_event = {
     }
 
     mean_time_to_happen = {
-        years = 22 # ~ 51 - 51% chance to die without incubator
+        years = 32
 
         modifier = { # or delayed if hospital has incubator
             factor = 5
@@ -3323,13 +3323,27 @@ province_event = {
     }
 
     mean_time_to_happen = {
-        months = 6
+        years = 1
+        modifier = {
+            factor = 0.5
+
+            NOR = {
+                fort_has_building = fo_drg_guardian_01
+                fort_is_building  = fo_drg_guardian_01
+            }
+        }
+        modifier = {
+            factor = 5
+
+            holder_scope = {
+                wealth = 500
+            }
+        }
         modifier = {
             factor = 10
 
-            OR = {
-                fort_has_building = fo_drg_guardian_01
-                fort_is_building  = fo_drg_guardian_01
+            holder_scope = {
+                wealth = 0
             }
         }
         modifier = {
@@ -3341,7 +3355,7 @@ province_event = {
             }
         }
         modifier = {
-            factor = 2.5
+            factor = 3
 
             OR = {
                 fort_has_building = fo_drg_guardian_03
@@ -3349,7 +3363,7 @@ province_event = {
             }
         }
         modifier = {
-            factor = 2
+            factor = 4
 
             OR = {
                 fort_has_building = fo_drg_guardian_04
@@ -3357,7 +3371,7 @@ province_event = {
             }
         }
         modifier = {
-            factor = 2
+            factor = 5
 
             OR = {
                 fort_has_building = fo_drg_guardian_05
@@ -3365,7 +3379,7 @@ province_event = {
             }
         }
         modifier = {
-            factor = 2
+            factor = 6
 
             OR = {
                 fort_has_building = fo_drg_guardian_06
@@ -3373,7 +3387,7 @@ province_event = {
             }
         }
         modifier = {
-            factor = 2
+            factor = 7
 
             OR = {
                 fort_has_building = fo_drg_guardian_07
@@ -3381,7 +3395,7 @@ province_event = {
             }
         }
         modifier = {
-            factor = 2
+            factor = 8
 
             OR = {
                 fort_has_building = fo_drg_guardian_08
@@ -3389,7 +3403,7 @@ province_event = {
             }
         }
         modifier = {
-            factor = 2
+            factor = 9
 
             OR = {
                 fort_has_building = fo_drg_guardian_09

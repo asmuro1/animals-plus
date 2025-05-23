@@ -3245,6 +3245,8 @@ tribal = {
         extra_tech_building_start = 0.8
 
         monthly_character_prestige = 0.15
+        fort_level = 0.2
+        retinuesize = 20
     }
     tb_ani_tribal_tower_2 = {
         add_number_to_name = no
@@ -3258,7 +3260,7 @@ tribal = {
         trigger = {
             Is_really_animal_trigger = yes
             TECH_CASTLE_CONSTRUCTION = 1
-            TECH_CITY_CONSTRUCTION = 1
+            # TECH_CITY_CONSTRUCTION = 1
             # TECH_FORTIFICATIONS_CONSTRUCTION = 1
         }
         is_active_trigger = {
@@ -3276,6 +3278,8 @@ tribal = {
         extra_tech_building_start = 1.0
 
         monthly_character_piety = 0.15
+        fort_level = 0.2
+        retinuesize = 20
     }
     tb_ani_tribal_tower_3 = {
         # desc = ca_ani_castle_tower_desc
@@ -3305,6 +3309,8 @@ tribal = {
         extra_tech_building_start = 0.8
 
         monthly_character_prestige = 0.35
+        fort_level = 0.2
+        retinuesize = 20
     }
     tb_ani_tribal_tower_4 = {
         # desc = ca_ani_castle_tower_desc
@@ -3337,6 +3343,8 @@ tribal = {
         extra_tech_building_start = 1.0
 
         monthly_character_piety = 0.25
+        fort_level = 0.2
+        retinuesize = 20
     }
 
     tb_ani_fort_1 = {
