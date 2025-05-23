@@ -192,7 +192,6 @@ decisions = {
         potential = {
             government = dragon_tribal_gov
             NOT = { has_character_flag = formed_dragon_retinue }
-            independent = yes
         }
         allow = {
             ruled_years = 1
