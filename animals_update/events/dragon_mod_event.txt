@@ -4240,7 +4240,7 @@ character_event = {
                 }
 
                 imprison = no
-                # character_event = { id = ani_plus.252 }
+                character_event = { id = ani_plus.252 }
             }
             else = {
                 hidden_tooltip = {

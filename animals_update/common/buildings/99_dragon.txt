@@ -716,7 +716,7 @@ fort = {
 
         retinuesize_perc = 0.1
         fort_level = 1
-        tax_income = 50
+        tax_income = 40
     }
     fo_drg_heart_3 = {
         add_number_to_name = no
@@ -741,7 +741,7 @@ fort = {
 
         retinuesize_perc = 0.2
         fort_level = 2
-        tax_income = 70
+        tax_income = 50
     }
 
     fo_drg_trainee = {
